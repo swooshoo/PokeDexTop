@@ -1,0 +1,5127 @@
+{
+    "1": {
+      "id": 1,
+      "name": "Bulbasaur",
+      "local_sprite": "/assets/sprites/1.png"
+    },
+    "2": {
+      "id": 2,
+      "name": "Ivysaur",
+      "local_sprite": "/assets/sprites/2.png"
+    },
+    "3": {
+      "id": 3,
+      "name": "Venusaur",
+      "local_sprite": "/assets/sprites/3.png"
+    },
+    "4": {
+      "id": 4,
+      "name": "Charmander",
+      "local_sprite": "/assets/sprites/4.png"
+    },
+    "5": {
+      "id": 5,
+      "name": "Charmeleon",
+      "local_sprite": "/assets/sprites/5.png"
+    },
+    "6": {
+      "id": 6,
+      "name": "Charizard",
+      "local_sprite": "/assets/sprites/6.png"
+    },
+    "7": {
+      "id": 7,
+      "name": "Squirtle",
+      "local_sprite": "/assets/sprites/7.png"
+    },
+    "8": {
+      "id": 8,
+      "name": "Wartortle",
+      "local_sprite": "/assets/sprites/8.png"
+    },
+    "9": {
+      "id": 9,
+      "name": "Blastoise",
+      "local_sprite": "/assets/sprites/9.png"
+    },
+    "10": {
+      "id": 10,
+      "name": "Caterpie",
+      "local_sprite": "/assets/sprites/10.png"
+    },
+    "11": {
+      "id": 11,
+      "name": "Metapod",
+      "local_sprite": "/assets/sprites/11.png"
+    },
+    "12": {
+      "id": 12,
+      "name": "Butterfree",
+      "local_sprite": "/assets/sprites/12.png"
+    },
+    "13": {
+      "id": 13,
+      "name": "Weedle",
+      "local_sprite": "/assets/sprites/13.png"
+    },
+    "14": {
+      "id": 14,
+      "name": "Kakuna",
+      "local_sprite": "/assets/sprites/14.png"
+    },
+    "15": {
+      "id": 15,
+      "name": "Beedrill",
+      "local_sprite": "/assets/sprites/15.png"
+    },
+    "16": {
+      "id": 16,
+      "name": "Pidgey",
+      "local_sprite": "/assets/sprites/16.png"
+    },
+    "17": {
+      "id": 17,
+      "name": "Pidgeotto",
+      "local_sprite": "/assets/sprites/17.png"
+    },
+    "18": {
+      "id": 18,
+      "name": "Pidgeot",
+      "local_sprite": "/assets/sprites/18.png"
+    },
+    "19": {
+      "id": 19,
+      "name": "Rattata",
+      "local_sprite": "/assets/sprites/19.png"
+    },
+    "20": {
+      "id": 20,
+      "name": "Raticate",
+      "local_sprite": "/assets/sprites/20.png"
+    },
+    "21": {
+      "id": 21,
+      "name": "Spearow",
+      "local_sprite": "/assets/sprites/21.png"
+    },
+    "22": {
+      "id": 22,
+      "name": "Fearow",
+      "local_sprite": "/assets/sprites/22.png"
+    },
+    "23": {
+      "id": 23,
+      "name": "Ekans",
+      "local_sprite": "/assets/sprites/23.png"
+    },
+    "24": {
+      "id": 24,
+      "name": "Arbok",
+      "local_sprite": "/assets/sprites/24.png"
+    },
+    "25": {
+      "id": 25,
+      "name": "Pikachu",
+      "local_sprite": "/assets/sprites/25.png"
+    },
+    "26": {
+      "id": 26,
+      "name": "Raichu",
+      "local_sprite": "/assets/sprites/26.png"
+    },
+    "27": {
+      "id": 27,
+      "name": "Sandshrew",
+      "local_sprite": "/assets/sprites/27.png"
+    },
+    "28": {
+      "id": 28,
+      "name": "Sandslash",
+      "local_sprite": "/assets/sprites/28.png"
+    },
+    "29": {
+      "id": 29,
+      "name": "Nidoran-f",
+      "local_sprite": "/assets/sprites/29.png"
+    },
+    "30": {
+      "id": 30,
+      "name": "Nidorina",
+      "local_sprite": "/assets/sprites/30.png"
+    },
+    "31": {
+      "id": 31,
+      "name": "Nidoqueen",
+      "local_sprite": "/assets/sprites/31.png"
+    },
+    "32": {
+      "id": 32,
+      "name": "Nidoran-m",
+      "local_sprite": "/assets/sprites/32.png"
+    },
+    "33": {
+      "id": 33,
+      "name": "Nidorino",
+      "local_sprite": "/assets/sprites/33.png"
+    },
+    "34": {
+      "id": 34,
+      "name": "Nidoking",
+      "local_sprite": "/assets/sprites/34.png"
+    },
+    "35": {
+      "id": 35,
+      "name": "Clefairy",
+      "local_sprite": "/assets/sprites/35.png"
+    },
+    "36": {
+      "id": 36,
+      "name": "Clefable",
+      "local_sprite": "/assets/sprites/36.png"
+    },
+    "37": {
+      "id": 37,
+      "name": "Vulpix",
+      "local_sprite": "/assets/sprites/37.png"
+    },
+    "38": {
+      "id": 38,
+      "name": "Ninetales",
+      "local_sprite": "/assets/sprites/38.png"
+    },
+    "39": {
+      "id": 39,
+      "name": "Jigglypuff",
+      "local_sprite": "/assets/sprites/39.png"
+    },
+    "40": {
+      "id": 40,
+      "name": "Wigglytuff",
+      "local_sprite": "/assets/sprites/40.png"
+    },
+    "41": {
+      "id": 41,
+      "name": "Zubat",
+      "local_sprite": "/assets/sprites/41.png"
+    },
+    "42": {
+      "id": 42,
+      "name": "Golbat",
+      "local_sprite": "/assets/sprites/42.png"
+    },
+    "43": {
+      "id": 43,
+      "name": "Oddish",
+      "local_sprite": "/assets/sprites/43.png"
+    },
+    "44": {
+      "id": 44,
+      "name": "Gloom",
+      "local_sprite": "/assets/sprites/44.png"
+    },
+    "45": {
+      "id": 45,
+      "name": "Vileplume",
+      "local_sprite": "/assets/sprites/45.png"
+    },
+    "46": {
+      "id": 46,
+      "name": "Paras",
+      "local_sprite": "/assets/sprites/46.png"
+    },
+    "47": {
+      "id": 47,
+      "name": "Parasect",
+      "local_sprite": "/assets/sprites/47.png"
+    },
+    "48": {
+      "id": 48,
+      "name": "Venonat",
+      "local_sprite": "/assets/sprites/48.png"
+    },
+    "49": {
+      "id": 49,
+      "name": "Venomoth",
+      "local_sprite": "/assets/sprites/49.png"
+    },
+    "50": {
+      "id": 50,
+      "name": "Diglett",
+      "local_sprite": "/assets/sprites/50.png"
+    },
+    "51": {
+      "id": 51,
+      "name": "Dugtrio",
+      "local_sprite": "/assets/sprites/51.png"
+    },
+    "52": {
+      "id": 52,
+      "name": "Meowth",
+      "local_sprite": "/assets/sprites/52.png"
+    },
+    "53": {
+      "id": 53,
+      "name": "Persian",
+      "local_sprite": "/assets/sprites/53.png"
+    },
+    "54": {
+      "id": 54,
+      "name": "Psyduck",
+      "local_sprite": "/assets/sprites/54.png"
+    },
+    "55": {
+      "id": 55,
+      "name": "Golduck",
+      "local_sprite": "/assets/sprites/55.png"
+    },
+    "56": {
+      "id": 56,
+      "name": "Mankey",
+      "local_sprite": "/assets/sprites/56.png"
+    },
+    "57": {
+      "id": 57,
+      "name": "Primeape",
+      "local_sprite": "/assets/sprites/57.png"
+    },
+    "58": {
+      "id": 58,
+      "name": "Growlithe",
+      "local_sprite": "/assets/sprites/58.png"
+    },
+    "59": {
+      "id": 59,
+      "name": "Arcanine",
+      "local_sprite": "/assets/sprites/59.png"
+    },
+    "60": {
+      "id": 60,
+      "name": "Poliwag",
+      "local_sprite": "/assets/sprites/60.png"
+    },
+    "61": {
+      "id": 61,
+      "name": "Poliwhirl",
+      "local_sprite": "/assets/sprites/61.png"
+    },
+    "62": {
+      "id": 62,
+      "name": "Poliwrath",
+      "local_sprite": "/assets/sprites/62.png"
+    },
+    "63": {
+      "id": 63,
+      "name": "Abra",
+      "local_sprite": "/assets/sprites/63.png"
+    },
+    "64": {
+      "id": 64,
+      "name": "Kadabra",
+      "local_sprite": "/assets/sprites/64.png"
+    },
+    "65": {
+      "id": 65,
+      "name": "Alakazam",
+      "local_sprite": "/assets/sprites/65.png"
+    },
+    "66": {
+      "id": 66,
+      "name": "Machop",
+      "local_sprite": "/assets/sprites/66.png"
+    },
+    "67": {
+      "id": 67,
+      "name": "Machoke",
+      "local_sprite": "/assets/sprites/67.png"
+    },
+    "68": {
+      "id": 68,
+      "name": "Machamp",
+      "local_sprite": "/assets/sprites/68.png"
+    },
+    "69": {
+      "id": 69,
+      "name": "Bellsprout",
+      "local_sprite": "/assets/sprites/69.png"
+    },
+    "70": {
+      "id": 70,
+      "name": "Weepinbell",
+      "local_sprite": "/assets/sprites/70.png"
+    },
+    "71": {
+      "id": 71,
+      "name": "Victreebel",
+      "local_sprite": "/assets/sprites/71.png"
+    },
+    "72": {
+      "id": 72,
+      "name": "Tentacool",
+      "local_sprite": "/assets/sprites/72.png"
+    },
+    "73": {
+      "id": 73,
+      "name": "Tentacruel",
+      "local_sprite": "/assets/sprites/73.png"
+    },
+    "74": {
+      "id": 74,
+      "name": "Geodude",
+      "local_sprite": "/assets/sprites/74.png"
+    },
+    "75": {
+      "id": 75,
+      "name": "Graveler",
+      "local_sprite": "/assets/sprites/75.png"
+    },
+    "76": {
+      "id": 76,
+      "name": "Golem",
+      "local_sprite": "/assets/sprites/76.png"
+    },
+    "77": {
+      "id": 77,
+      "name": "Ponyta",
+      "local_sprite": "/assets/sprites/77.png"
+    },
+    "78": {
+      "id": 78,
+      "name": "Rapidash",
+      "local_sprite": "/assets/sprites/78.png"
+    },
+    "79": {
+      "id": 79,
+      "name": "Slowpoke",
+      "local_sprite": "/assets/sprites/79.png"
+    },
+    "80": {
+      "id": 80,
+      "name": "Slowbro",
+      "local_sprite": "/assets/sprites/80.png"
+    },
+    "81": {
+      "id": 81,
+      "name": "Magnemite",
+      "local_sprite": "/assets/sprites/81.png"
+    },
+    "82": {
+      "id": 82,
+      "name": "Magneton",
+      "local_sprite": "/assets/sprites/82.png"
+    },
+    "83": {
+      "id": 83,
+      "name": "Farfetchd",
+      "local_sprite": "/assets/sprites/83.png"
+    },
+    "84": {
+      "id": 84,
+      "name": "Doduo",
+      "local_sprite": "/assets/sprites/84.png"
+    },
+    "85": {
+      "id": 85,
+      "name": "Dodrio",
+      "local_sprite": "/assets/sprites/85.png"
+    },
+    "86": {
+      "id": 86,
+      "name": "Seel",
+      "local_sprite": "/assets/sprites/86.png"
+    },
+    "87": {
+      "id": 87,
+      "name": "Dewgong",
+      "local_sprite": "/assets/sprites/87.png"
+    },
+    "88": {
+      "id": 88,
+      "name": "Grimer",
+      "local_sprite": "/assets/sprites/88.png"
+    },
+    "89": {
+      "id": 89,
+      "name": "Muk",
+      "local_sprite": "/assets/sprites/89.png"
+    },
+    "90": {
+      "id": 90,
+      "name": "Shellder",
+      "local_sprite": "/assets/sprites/90.png"
+    },
+    "91": {
+      "id": 91,
+      "name": "Cloyster",
+      "local_sprite": "/assets/sprites/91.png"
+    },
+    "92": {
+      "id": 92,
+      "name": "Gastly",
+      "local_sprite": "/assets/sprites/92.png"
+    },
+    "93": {
+      "id": 93,
+      "name": "Haunter",
+      "local_sprite": "/assets/sprites/93.png"
+    },
+    "94": {
+      "id": 94,
+      "name": "Gengar",
+      "local_sprite": "/assets/sprites/94.png"
+    },
+    "95": {
+      "id": 95,
+      "name": "Onix",
+      "local_sprite": "/assets/sprites/95.png"
+    },
+    "96": {
+      "id": 96,
+      "name": "Drowzee",
+      "local_sprite": "/assets/sprites/96.png"
+    },
+    "97": {
+      "id": 97,
+      "name": "Hypno",
+      "local_sprite": "/assets/sprites/97.png"
+    },
+    "98": {
+      "id": 98,
+      "name": "Krabby",
+      "local_sprite": "/assets/sprites/98.png"
+    },
+    "99": {
+      "id": 99,
+      "name": "Kingler",
+      "local_sprite": "/assets/sprites/99.png"
+    },
+    "100": {
+      "id": 100,
+      "name": "Voltorb",
+      "local_sprite": "/assets/sprites/100.png"
+    },
+    "101": {
+      "id": 101,
+      "name": "Electrode",
+      "local_sprite": "/assets/sprites/101.png"
+    },
+    "102": {
+      "id": 102,
+      "name": "Exeggcute",
+      "local_sprite": "/assets/sprites/102.png"
+    },
+    "103": {
+      "id": 103,
+      "name": "Exeggutor",
+      "local_sprite": "/assets/sprites/103.png"
+    },
+    "104": {
+      "id": 104,
+      "name": "Cubone",
+      "local_sprite": "/assets/sprites/104.png"
+    },
+    "105": {
+      "id": 105,
+      "name": "Marowak",
+      "local_sprite": "/assets/sprites/105.png"
+    },
+    "106": {
+      "id": 106,
+      "name": "Hitmonlee",
+      "local_sprite": "/assets/sprites/106.png"
+    },
+    "107": {
+      "id": 107,
+      "name": "Hitmonchan",
+      "local_sprite": "/assets/sprites/107.png"
+    },
+    "108": {
+      "id": 108,
+      "name": "Lickitung",
+      "local_sprite": "/assets/sprites/108.png"
+    },
+    "109": {
+      "id": 109,
+      "name": "Koffing",
+      "local_sprite": "/assets/sprites/109.png"
+    },
+    "110": {
+      "id": 110,
+      "name": "Weezing",
+      "local_sprite": "/assets/sprites/110.png"
+    },
+    "111": {
+      "id": 111,
+      "name": "Rhyhorn",
+      "local_sprite": "/assets/sprites/111.png"
+    },
+    "112": {
+      "id": 112,
+      "name": "Rhydon",
+      "local_sprite": "/assets/sprites/112.png"
+    },
+    "113": {
+      "id": 113,
+      "name": "Chansey",
+      "local_sprite": "/assets/sprites/113.png"
+    },
+    "114": {
+      "id": 114,
+      "name": "Tangela",
+      "local_sprite": "/assets/sprites/114.png"
+    },
+    "115": {
+      "id": 115,
+      "name": "Kangaskhan",
+      "local_sprite": "/assets/sprites/115.png"
+    },
+    "116": {
+      "id": 116,
+      "name": "Horsea",
+      "local_sprite": "/assets/sprites/116.png"
+    },
+    "117": {
+      "id": 117,
+      "name": "Seadra",
+      "local_sprite": "/assets/sprites/117.png"
+    },
+    "118": {
+      "id": 118,
+      "name": "Goldeen",
+      "local_sprite": "/assets/sprites/118.png"
+    },
+    "119": {
+      "id": 119,
+      "name": "Seaking",
+      "local_sprite": "/assets/sprites/119.png"
+    },
+    "120": {
+      "id": 120,
+      "name": "Staryu",
+      "local_sprite": "/assets/sprites/120.png"
+    },
+    "121": {
+      "id": 121,
+      "name": "Starmie",
+      "local_sprite": "/assets/sprites/121.png"
+    },
+    "122": {
+      "id": 122,
+      "name": "Mr-mime",
+      "local_sprite": "/assets/sprites/122.png"
+    },
+    "123": {
+      "id": 123,
+      "name": "Scyther",
+      "local_sprite": "/assets/sprites/123.png"
+    },
+    "124": {
+      "id": 124,
+      "name": "Jynx",
+      "local_sprite": "/assets/sprites/124.png"
+    },
+    "125": {
+      "id": 125,
+      "name": "Electabuzz",
+      "local_sprite": "/assets/sprites/125.png"
+    },
+    "126": {
+      "id": 126,
+      "name": "Magmar",
+      "local_sprite": "/assets/sprites/126.png"
+    },
+    "127": {
+      "id": 127,
+      "name": "Pinsir",
+      "local_sprite": "/assets/sprites/127.png"
+    },
+    "128": {
+      "id": 128,
+      "name": "Tauros",
+      "local_sprite": "/assets/sprites/128.png"
+    },
+    "129": {
+      "id": 129,
+      "name": "Magikarp",
+      "local_sprite": "/assets/sprites/129.png"
+    },
+    "130": {
+      "id": 130,
+      "name": "Gyarados",
+      "local_sprite": "/assets/sprites/130.png"
+    },
+    "131": {
+      "id": 131,
+      "name": "Lapras",
+      "local_sprite": "/assets/sprites/131.png"
+    },
+    "132": {
+      "id": 132,
+      "name": "Ditto",
+      "local_sprite": "/assets/sprites/132.png"
+    },
+    "133": {
+      "id": 133,
+      "name": "Eevee",
+      "local_sprite": "/assets/sprites/133.png"
+    },
+    "134": {
+      "id": 134,
+      "name": "Vaporeon",
+      "local_sprite": "/assets/sprites/134.png"
+    },
+    "135": {
+      "id": 135,
+      "name": "Jolteon",
+      "local_sprite": "/assets/sprites/135.png"
+    },
+    "136": {
+      "id": 136,
+      "name": "Flareon",
+      "local_sprite": "/assets/sprites/136.png"
+    },
+    "137": {
+      "id": 137,
+      "name": "Porygon",
+      "local_sprite": "/assets/sprites/137.png"
+    },
+    "138": {
+      "id": 138,
+      "name": "Omanyte",
+      "local_sprite": "/assets/sprites/138.png"
+    },
+    "139": {
+      "id": 139,
+      "name": "Omastar",
+      "local_sprite": "/assets/sprites/139.png"
+    },
+    "140": {
+      "id": 140,
+      "name": "Kabuto",
+      "local_sprite": "/assets/sprites/140.png"
+    },
+    "141": {
+      "id": 141,
+      "name": "Kabutops",
+      "local_sprite": "/assets/sprites/141.png"
+    },
+    "142": {
+      "id": 142,
+      "name": "Aerodactyl",
+      "local_sprite": "/assets/sprites/142.png"
+    },
+    "143": {
+      "id": 143,
+      "name": "Snorlax",
+      "local_sprite": "/assets/sprites/143.png"
+    },
+    "144": {
+      "id": 144,
+      "name": "Articuno",
+      "local_sprite": "/assets/sprites/144.png"
+    },
+    "145": {
+      "id": 145,
+      "name": "Zapdos",
+      "local_sprite": "/assets/sprites/145.png"
+    },
+    "146": {
+      "id": 146,
+      "name": "Moltres",
+      "local_sprite": "/assets/sprites/146.png"
+    },
+    "147": {
+      "id": 147,
+      "name": "Dratini",
+      "local_sprite": "/assets/sprites/147.png"
+    },
+    "148": {
+      "id": 148,
+      "name": "Dragonair",
+      "local_sprite": "/assets/sprites/148.png"
+    },
+    "149": {
+      "id": 149,
+      "name": "Dragonite",
+      "local_sprite": "/assets/sprites/149.png"
+    },
+    "150": {
+      "id": 150,
+      "name": "Mewtwo",
+      "local_sprite": "/assets/sprites/150.png"
+    },
+    "151": {
+      "id": 151,
+      "name": "Mew",
+      "local_sprite": "/assets/sprites/151.png"
+    },
+    "152": {
+      "id": 152,
+      "name": "Chikorita",
+      "local_sprite": "/assets/sprites/152.png"
+    },
+    "153": {
+      "id": 153,
+      "name": "Bayleef",
+      "local_sprite": "/assets/sprites/153.png"
+    },
+    "154": {
+      "id": 154,
+      "name": "Meganium",
+      "local_sprite": "/assets/sprites/154.png"
+    },
+    "155": {
+      "id": 155,
+      "name": "Cyndaquil",
+      "local_sprite": "/assets/sprites/155.png"
+    },
+    "156": {
+      "id": 156,
+      "name": "Quilava",
+      "local_sprite": "/assets/sprites/156.png"
+    },
+    "157": {
+      "id": 157,
+      "name": "Typhlosion",
+      "local_sprite": "/assets/sprites/157.png"
+    },
+    "158": {
+      "id": 158,
+      "name": "Totodile",
+      "local_sprite": "/assets/sprites/158.png"
+    },
+    "159": {
+      "id": 159,
+      "name": "Croconaw",
+      "local_sprite": "/assets/sprites/159.png"
+    },
+    "160": {
+      "id": 160,
+      "name": "Feraligatr",
+      "local_sprite": "/assets/sprites/160.png"
+    },
+    "161": {
+      "id": 161,
+      "name": "Sentret",
+      "local_sprite": "/assets/sprites/161.png"
+    },
+    "162": {
+      "id": 162,
+      "name": "Furret",
+      "local_sprite": "/assets/sprites/162.png"
+    },
+    "163": {
+      "id": 163,
+      "name": "Hoothoot",
+      "local_sprite": "/assets/sprites/163.png"
+    },
+    "164": {
+      "id": 164,
+      "name": "Noctowl",
+      "local_sprite": "/assets/sprites/164.png"
+    },
+    "165": {
+      "id": 165,
+      "name": "Ledyba",
+      "local_sprite": "/assets/sprites/165.png"
+    },
+    "166": {
+      "id": 166,
+      "name": "Ledian",
+      "local_sprite": "/assets/sprites/166.png"
+    },
+    "167": {
+      "id": 167,
+      "name": "Spinarak",
+      "local_sprite": "/assets/sprites/167.png"
+    },
+    "168": {
+      "id": 168,
+      "name": "Ariados",
+      "local_sprite": "/assets/sprites/168.png"
+    },
+    "169": {
+      "id": 169,
+      "name": "Crobat",
+      "local_sprite": "/assets/sprites/169.png"
+    },
+    "170": {
+      "id": 170,
+      "name": "Chinchou",
+      "local_sprite": "/assets/sprites/170.png"
+    },
+    "171": {
+      "id": 171,
+      "name": "Lanturn",
+      "local_sprite": "/assets/sprites/171.png"
+    },
+    "172": {
+      "id": 172,
+      "name": "Pichu",
+      "local_sprite": "/assets/sprites/172.png"
+    },
+    "173": {
+      "id": 173,
+      "name": "Cleffa",
+      "local_sprite": "/assets/sprites/173.png"
+    },
+    "174": {
+      "id": 174,
+      "name": "Igglybuff",
+      "local_sprite": "/assets/sprites/174.png"
+    },
+    "175": {
+      "id": 175,
+      "name": "Togepi",
+      "local_sprite": "/assets/sprites/175.png"
+    },
+    "176": {
+      "id": 176,
+      "name": "Togetic",
+      "local_sprite": "/assets/sprites/176.png"
+    },
+    "177": {
+      "id": 177,
+      "name": "Natu",
+      "local_sprite": "/assets/sprites/177.png"
+    },
+    "178": {
+      "id": 178,
+      "name": "Xatu",
+      "local_sprite": "/assets/sprites/178.png"
+    },
+    "179": {
+      "id": 179,
+      "name": "Mareep",
+      "local_sprite": "/assets/sprites/179.png"
+    },
+    "180": {
+      "id": 180,
+      "name": "Flaaffy",
+      "local_sprite": "/assets/sprites/180.png"
+    },
+    "181": {
+      "id": 181,
+      "name": "Ampharos",
+      "local_sprite": "/assets/sprites/181.png"
+    },
+    "182": {
+      "id": 182,
+      "name": "Bellossom",
+      "local_sprite": "/assets/sprites/182.png"
+    },
+    "183": {
+      "id": 183,
+      "name": "Marill",
+      "local_sprite": "/assets/sprites/183.png"
+    },
+    "184": {
+      "id": 184,
+      "name": "Azumarill",
+      "local_sprite": "/assets/sprites/184.png"
+    },
+    "185": {
+      "id": 185,
+      "name": "Sudowoodo",
+      "local_sprite": "/assets/sprites/185.png"
+    },
+    "186": {
+      "id": 186,
+      "name": "Politoed",
+      "local_sprite": "/assets/sprites/186.png"
+    },
+    "187": {
+      "id": 187,
+      "name": "Hoppip",
+      "local_sprite": "/assets/sprites/187.png"
+    },
+    "188": {
+      "id": 188,
+      "name": "Skiploom",
+      "local_sprite": "/assets/sprites/188.png"
+    },
+    "189": {
+      "id": 189,
+      "name": "Jumpluff",
+      "local_sprite": "/assets/sprites/189.png"
+    },
+    "190": {
+      "id": 190,
+      "name": "Aipom",
+      "local_sprite": "/assets/sprites/190.png"
+    },
+    "191": {
+      "id": 191,
+      "name": "Sunkern",
+      "local_sprite": "/assets/sprites/191.png"
+    },
+    "192": {
+      "id": 192,
+      "name": "Sunflora",
+      "local_sprite": "/assets/sprites/192.png"
+    },
+    "193": {
+      "id": 193,
+      "name": "Yanma",
+      "local_sprite": "/assets/sprites/193.png"
+    },
+    "194": {
+      "id": 194,
+      "name": "Wooper",
+      "local_sprite": "/assets/sprites/194.png"
+    },
+    "195": {
+      "id": 195,
+      "name": "Quagsire",
+      "local_sprite": "/assets/sprites/195.png"
+    },
+    "196": {
+      "id": 196,
+      "name": "Espeon",
+      "local_sprite": "/assets/sprites/196.png"
+    },
+    "197": {
+      "id": 197,
+      "name": "Umbreon",
+      "local_sprite": "/assets/sprites/197.png"
+    },
+    "198": {
+      "id": 198,
+      "name": "Murkrow",
+      "local_sprite": "/assets/sprites/198.png"
+    },
+    "199": {
+      "id": 199,
+      "name": "Slowking",
+      "local_sprite": "/assets/sprites/199.png"
+    },
+    "200": {
+      "id": 200,
+      "name": "Misdreavus",
+      "local_sprite": "/assets/sprites/200.png"
+    },
+    "201": {
+      "id": 201,
+      "name": "Unown",
+      "local_sprite": "/assets/sprites/201.png"
+    },
+    "202": {
+      "id": 202,
+      "name": "Wobbuffet",
+      "local_sprite": "/assets/sprites/202.png"
+    },
+    "203": {
+      "id": 203,
+      "name": "Girafarig",
+      "local_sprite": "/assets/sprites/203.png"
+    },
+    "204": {
+      "id": 204,
+      "name": "Pineco",
+      "local_sprite": "/assets/sprites/204.png"
+    },
+    "205": {
+      "id": 205,
+      "name": "Forretress",
+      "local_sprite": "/assets/sprites/205.png"
+    },
+    "206": {
+      "id": 206,
+      "name": "Dunsparce",
+      "local_sprite": "/assets/sprites/206.png"
+    },
+    "207": {
+      "id": 207,
+      "name": "Gligar",
+      "local_sprite": "/assets/sprites/207.png"
+    },
+    "208": {
+      "id": 208,
+      "name": "Steelix",
+      "local_sprite": "/assets/sprites/208.png"
+    },
+    "209": {
+      "id": 209,
+      "name": "Snubbull",
+      "local_sprite": "/assets/sprites/209.png"
+    },
+    "210": {
+      "id": 210,
+      "name": "Granbull",
+      "local_sprite": "/assets/sprites/210.png"
+    },
+    "211": {
+      "id": 211,
+      "name": "Qwilfish",
+      "local_sprite": "/assets/sprites/211.png"
+    },
+    "212": {
+      "id": 212,
+      "name": "Scizor",
+      "local_sprite": "/assets/sprites/212.png"
+    },
+    "213": {
+      "id": 213,
+      "name": "Shuckle",
+      "local_sprite": "/assets/sprites/213.png"
+    },
+    "214": {
+      "id": 214,
+      "name": "Heracross",
+      "local_sprite": "/assets/sprites/214.png"
+    },
+    "215": {
+      "id": 215,
+      "name": "Sneasel",
+      "local_sprite": "/assets/sprites/215.png"
+    },
+    "216": {
+      "id": 216,
+      "name": "Teddiursa",
+      "local_sprite": "/assets/sprites/216.png"
+    },
+    "217": {
+      "id": 217,
+      "name": "Ursaring",
+      "local_sprite": "/assets/sprites/217.png"
+    },
+    "218": {
+      "id": 218,
+      "name": "Slugma",
+      "local_sprite": "/assets/sprites/218.png"
+    },
+    "219": {
+      "id": 219,
+      "name": "Magcargo",
+      "local_sprite": "/assets/sprites/219.png"
+    },
+    "220": {
+      "id": 220,
+      "name": "Swinub",
+      "local_sprite": "/assets/sprites/220.png"
+    },
+    "221": {
+      "id": 221,
+      "name": "Piloswine",
+      "local_sprite": "/assets/sprites/221.png"
+    },
+    "222": {
+      "id": 222,
+      "name": "Corsola",
+      "local_sprite": "/assets/sprites/222.png"
+    },
+    "223": {
+      "id": 223,
+      "name": "Remoraid",
+      "local_sprite": "/assets/sprites/223.png"
+    },
+    "224": {
+      "id": 224,
+      "name": "Octillery",
+      "local_sprite": "/assets/sprites/224.png"
+    },
+    "225": {
+      "id": 225,
+      "name": "Delibird",
+      "local_sprite": "/assets/sprites/225.png"
+    },
+    "226": {
+      "id": 226,
+      "name": "Mantine",
+      "local_sprite": "/assets/sprites/226.png"
+    },
+    "227": {
+      "id": 227,
+      "name": "Skarmory",
+      "local_sprite": "/assets/sprites/227.png"
+    },
+    "228": {
+      "id": 228,
+      "name": "Houndour",
+      "local_sprite": "/assets/sprites/228.png"
+    },
+    "229": {
+      "id": 229,
+      "name": "Houndoom",
+      "local_sprite": "/assets/sprites/229.png"
+    },
+    "230": {
+      "id": 230,
+      "name": "Kingdra",
+      "local_sprite": "/assets/sprites/230.png"
+    },
+    "231": {
+      "id": 231,
+      "name": "Phanpy",
+      "local_sprite": "/assets/sprites/231.png"
+    },
+    "232": {
+      "id": 232,
+      "name": "Donphan",
+      "local_sprite": "/assets/sprites/232.png"
+    },
+    "233": {
+      "id": 233,
+      "name": "Porygon2",
+      "local_sprite": "/assets/sprites/233.png"
+    },
+    "234": {
+      "id": 234,
+      "name": "Stantler",
+      "local_sprite": "/assets/sprites/234.png"
+    },
+    "235": {
+      "id": 235,
+      "name": "Smeargle",
+      "local_sprite": "/assets/sprites/235.png"
+    },
+    "236": {
+      "id": 236,
+      "name": "Tyrogue",
+      "local_sprite": "/assets/sprites/236.png"
+    },
+    "237": {
+      "id": 237,
+      "name": "Hitmontop",
+      "local_sprite": "/assets/sprites/237.png"
+    },
+    "238": {
+      "id": 238,
+      "name": "Smoochum",
+      "local_sprite": "/assets/sprites/238.png"
+    },
+    "239": {
+      "id": 239,
+      "name": "Elekid",
+      "local_sprite": "/assets/sprites/239.png"
+    },
+    "240": {
+      "id": 240,
+      "name": "Magby",
+      "local_sprite": "/assets/sprites/240.png"
+    },
+    "241": {
+      "id": 241,
+      "name": "Miltank",
+      "local_sprite": "/assets/sprites/241.png"
+    },
+    "242": {
+      "id": 242,
+      "name": "Blissey",
+      "local_sprite": "/assets/sprites/242.png"
+    },
+    "243": {
+      "id": 243,
+      "name": "Raikou",
+      "local_sprite": "/assets/sprites/243.png"
+    },
+    "244": {
+      "id": 244,
+      "name": "Entei",
+      "local_sprite": "/assets/sprites/244.png"
+    },
+    "245": {
+      "id": 245,
+      "name": "Suicune",
+      "local_sprite": "/assets/sprites/245.png"
+    },
+    "246": {
+      "id": 246,
+      "name": "Larvitar",
+      "local_sprite": "/assets/sprites/246.png"
+    },
+    "247": {
+      "id": 247,
+      "name": "Pupitar",
+      "local_sprite": "/assets/sprites/247.png"
+    },
+    "248": {
+      "id": 248,
+      "name": "Tyranitar",
+      "local_sprite": "/assets/sprites/248.png"
+    },
+    "249": {
+      "id": 249,
+      "name": "Lugia",
+      "local_sprite": "/assets/sprites/249.png"
+    },
+    "250": {
+      "id": 250,
+      "name": "Ho-oh",
+      "local_sprite": "/assets/sprites/250.png"
+    },
+    "251": {
+      "id": 251,
+      "name": "Celebi",
+      "local_sprite": "/assets/sprites/251.png"
+    },
+    "252": {
+      "id": 252,
+      "name": "Treecko",
+      "local_sprite": "/assets/sprites/252.png"
+    },
+    "253": {
+      "id": 253,
+      "name": "Grovyle",
+      "local_sprite": "/assets/sprites/253.png"
+    },
+    "254": {
+      "id": 254,
+      "name": "Sceptile",
+      "local_sprite": "/assets/sprites/254.png"
+    },
+    "255": {
+      "id": 255,
+      "name": "Torchic",
+      "local_sprite": "/assets/sprites/255.png"
+    },
+    "256": {
+      "id": 256,
+      "name": "Combusken",
+      "local_sprite": "/assets/sprites/256.png"
+    },
+    "257": {
+      "id": 257,
+      "name": "Blaziken",
+      "local_sprite": "/assets/sprites/257.png"
+    },
+    "258": {
+      "id": 258,
+      "name": "Mudkip",
+      "local_sprite": "/assets/sprites/258.png"
+    },
+    "259": {
+      "id": 259,
+      "name": "Marshtomp",
+      "local_sprite": "/assets/sprites/259.png"
+    },
+    "260": {
+      "id": 260,
+      "name": "Swampert",
+      "local_sprite": "/assets/sprites/260.png"
+    },
+    "261": {
+      "id": 261,
+      "name": "Poochyena",
+      "local_sprite": "/assets/sprites/261.png"
+    },
+    "262": {
+      "id": 262,
+      "name": "Mightyena",
+      "local_sprite": "/assets/sprites/262.png"
+    },
+    "263": {
+      "id": 263,
+      "name": "Zigzagoon",
+      "local_sprite": "/assets/sprites/263.png"
+    },
+    "264": {
+      "id": 264,
+      "name": "Linoone",
+      "local_sprite": "/assets/sprites/264.png"
+    },
+    "265": {
+      "id": 265,
+      "name": "Wurmple",
+      "local_sprite": "/assets/sprites/265.png"
+    },
+    "266": {
+      "id": 266,
+      "name": "Silcoon",
+      "local_sprite": "/assets/sprites/266.png"
+    },
+    "267": {
+      "id": 267,
+      "name": "Beautifly",
+      "local_sprite": "/assets/sprites/267.png"
+    },
+    "268": {
+      "id": 268,
+      "name": "Cascoon",
+      "local_sprite": "/assets/sprites/268.png"
+    },
+    "269": {
+      "id": 269,
+      "name": "Dustox",
+      "local_sprite": "/assets/sprites/269.png"
+    },
+    "270": {
+      "id": 270,
+      "name": "Lotad",
+      "local_sprite": "/assets/sprites/270.png"
+    },
+    "271": {
+      "id": 271,
+      "name": "Lombre",
+      "local_sprite": "/assets/sprites/271.png"
+    },
+    "272": {
+      "id": 272,
+      "name": "Ludicolo",
+      "local_sprite": "/assets/sprites/272.png"
+    },
+    "273": {
+      "id": 273,
+      "name": "Seedot",
+      "local_sprite": "/assets/sprites/273.png"
+    },
+    "274": {
+      "id": 274,
+      "name": "Nuzleaf",
+      "local_sprite": "/assets/sprites/274.png"
+    },
+    "275": {
+      "id": 275,
+      "name": "Shiftry",
+      "local_sprite": "/assets/sprites/275.png"
+    },
+    "276": {
+      "id": 276,
+      "name": "Taillow",
+      "local_sprite": "/assets/sprites/276.png"
+    },
+    "277": {
+      "id": 277,
+      "name": "Swellow",
+      "local_sprite": "/assets/sprites/277.png"
+    },
+    "278": {
+      "id": 278,
+      "name": "Wingull",
+      "local_sprite": "/assets/sprites/278.png"
+    },
+    "279": {
+      "id": 279,
+      "name": "Pelipper",
+      "local_sprite": "/assets/sprites/279.png"
+    },
+    "280": {
+      "id": 280,
+      "name": "Ralts",
+      "local_sprite": "/assets/sprites/280.png"
+    },
+    "281": {
+      "id": 281,
+      "name": "Kirlia",
+      "local_sprite": "/assets/sprites/281.png"
+    },
+    "282": {
+      "id": 282,
+      "name": "Gardevoir",
+      "local_sprite": "/assets/sprites/282.png"
+    },
+    "283": {
+      "id": 283,
+      "name": "Surskit",
+      "local_sprite": "/assets/sprites/283.png"
+    },
+    "284": {
+      "id": 284,
+      "name": "Masquerain",
+      "local_sprite": "/assets/sprites/284.png"
+    },
+    "285": {
+      "id": 285,
+      "name": "Shroomish",
+      "local_sprite": "/assets/sprites/285.png"
+    },
+    "286": {
+      "id": 286,
+      "name": "Breloom",
+      "local_sprite": "/assets/sprites/286.png"
+    },
+    "287": {
+      "id": 287,
+      "name": "Slakoth",
+      "local_sprite": "/assets/sprites/287.png"
+    },
+    "288": {
+      "id": 288,
+      "name": "Vigoroth",
+      "local_sprite": "/assets/sprites/288.png"
+    },
+    "289": {
+      "id": 289,
+      "name": "Slaking",
+      "local_sprite": "/assets/sprites/289.png"
+    },
+    "290": {
+      "id": 290,
+      "name": "Nincada",
+      "local_sprite": "/assets/sprites/290.png"
+    },
+    "291": {
+      "id": 291,
+      "name": "Ninjask",
+      "local_sprite": "/assets/sprites/291.png"
+    },
+    "292": {
+      "id": 292,
+      "name": "Shedinja",
+      "local_sprite": "/assets/sprites/292.png"
+    },
+    "293": {
+      "id": 293,
+      "name": "Whismur",
+      "local_sprite": "/assets/sprites/293.png"
+    },
+    "294": {
+      "id": 294,
+      "name": "Loudred",
+      "local_sprite": "/assets/sprites/294.png"
+    },
+    "295": {
+      "id": 295,
+      "name": "Exploud",
+      "local_sprite": "/assets/sprites/295.png"
+    },
+    "296": {
+      "id": 296,
+      "name": "Makuhita",
+      "local_sprite": "/assets/sprites/296.png"
+    },
+    "297": {
+      "id": 297,
+      "name": "Hariyama",
+      "local_sprite": "/assets/sprites/297.png"
+    },
+    "298": {
+      "id": 298,
+      "name": "Azurill",
+      "local_sprite": "/assets/sprites/298.png"
+    },
+    "299": {
+      "id": 299,
+      "name": "Nosepass",
+      "local_sprite": "/assets/sprites/299.png"
+    },
+    "300": {
+      "id": 300,
+      "name": "Skitty",
+      "local_sprite": "/assets/sprites/300.png"
+    },
+    "301": {
+      "id": 301,
+      "name": "Delcatty",
+      "local_sprite": "/assets/sprites/301.png"
+    },
+    "302": {
+      "id": 302,
+      "name": "Sableye",
+      "local_sprite": "/assets/sprites/302.png"
+    },
+    "303": {
+      "id": 303,
+      "name": "Mawile",
+      "local_sprite": "/assets/sprites/303.png"
+    },
+    "304": {
+      "id": 304,
+      "name": "Aron",
+      "local_sprite": "/assets/sprites/304.png"
+    },
+    "305": {
+      "id": 305,
+      "name": "Lairon",
+      "local_sprite": "/assets/sprites/305.png"
+    },
+    "306": {
+      "id": 306,
+      "name": "Aggron",
+      "local_sprite": "/assets/sprites/306.png"
+    },
+    "307": {
+      "id": 307,
+      "name": "Meditite",
+      "local_sprite": "/assets/sprites/307.png"
+    },
+    "308": {
+      "id": 308,
+      "name": "Medicham",
+      "local_sprite": "/assets/sprites/308.png"
+    },
+    "309": {
+      "id": 309,
+      "name": "Electrike",
+      "local_sprite": "/assets/sprites/309.png"
+    },
+    "310": {
+      "id": 310,
+      "name": "Manectric",
+      "local_sprite": "/assets/sprites/310.png"
+    },
+    "311": {
+      "id": 311,
+      "name": "Plusle",
+      "local_sprite": "/assets/sprites/311.png"
+    },
+    "312": {
+      "id": 312,
+      "name": "Minun",
+      "local_sprite": "/assets/sprites/312.png"
+    },
+    "313": {
+      "id": 313,
+      "name": "Volbeat",
+      "local_sprite": "/assets/sprites/313.png"
+    },
+    "314": {
+      "id": 314,
+      "name": "Illumise",
+      "local_sprite": "/assets/sprites/314.png"
+    },
+    "315": {
+      "id": 315,
+      "name": "Roselia",
+      "local_sprite": "/assets/sprites/315.png"
+    },
+    "316": {
+      "id": 316,
+      "name": "Gulpin",
+      "local_sprite": "/assets/sprites/316.png"
+    },
+    "317": {
+      "id": 317,
+      "name": "Swalot",
+      "local_sprite": "/assets/sprites/317.png"
+    },
+    "318": {
+      "id": 318,
+      "name": "Carvanha",
+      "local_sprite": "/assets/sprites/318.png"
+    },
+    "319": {
+      "id": 319,
+      "name": "Sharpedo",
+      "local_sprite": "/assets/sprites/319.png"
+    },
+    "320": {
+      "id": 320,
+      "name": "Wailmer",
+      "local_sprite": "/assets/sprites/320.png"
+    },
+    "321": {
+      "id": 321,
+      "name": "Wailord",
+      "local_sprite": "/assets/sprites/321.png"
+    },
+    "322": {
+      "id": 322,
+      "name": "Numel",
+      "local_sprite": "/assets/sprites/322.png"
+    },
+    "323": {
+      "id": 323,
+      "name": "Camerupt",
+      "local_sprite": "/assets/sprites/323.png"
+    },
+    "324": {
+      "id": 324,
+      "name": "Torkoal",
+      "local_sprite": "/assets/sprites/324.png"
+    },
+    "325": {
+      "id": 325,
+      "name": "Spoink",
+      "local_sprite": "/assets/sprites/325.png"
+    },
+    "326": {
+      "id": 326,
+      "name": "Grumpig",
+      "local_sprite": "/assets/sprites/326.png"
+    },
+    "327": {
+      "id": 327,
+      "name": "Spinda",
+      "local_sprite": "/assets/sprites/327.png"
+    },
+    "328": {
+      "id": 328,
+      "name": "Trapinch",
+      "local_sprite": "/assets/sprites/328.png"
+    },
+    "329": {
+      "id": 329,
+      "name": "Vibrava",
+      "local_sprite": "/assets/sprites/329.png"
+    },
+    "330": {
+      "id": 330,
+      "name": "Flygon",
+      "local_sprite": "/assets/sprites/330.png"
+    },
+    "331": {
+      "id": 331,
+      "name": "Cacnea",
+      "local_sprite": "/assets/sprites/331.png"
+    },
+    "332": {
+      "id": 332,
+      "name": "Cacturne",
+      "local_sprite": "/assets/sprites/332.png"
+    },
+    "333": {
+      "id": 333,
+      "name": "Swablu",
+      "local_sprite": "/assets/sprites/333.png"
+    },
+    "334": {
+      "id": 334,
+      "name": "Altaria",
+      "local_sprite": "/assets/sprites/334.png"
+    },
+    "335": {
+      "id": 335,
+      "name": "Zangoose",
+      "local_sprite": "/assets/sprites/335.png"
+    },
+    "336": {
+      "id": 336,
+      "name": "Seviper",
+      "local_sprite": "/assets/sprites/336.png"
+    },
+    "337": {
+      "id": 337,
+      "name": "Lunatone",
+      "local_sprite": "/assets/sprites/337.png"
+    },
+    "338": {
+      "id": 338,
+      "name": "Solrock",
+      "local_sprite": "/assets/sprites/338.png"
+    },
+    "339": {
+      "id": 339,
+      "name": "Barboach",
+      "local_sprite": "/assets/sprites/339.png"
+    },
+    "340": {
+      "id": 340,
+      "name": "Whiscash",
+      "local_sprite": "/assets/sprites/340.png"
+    },
+    "341": {
+      "id": 341,
+      "name": "Corphish",
+      "local_sprite": "/assets/sprites/341.png"
+    },
+    "342": {
+      "id": 342,
+      "name": "Crawdaunt",
+      "local_sprite": "/assets/sprites/342.png"
+    },
+    "343": {
+      "id": 343,
+      "name": "Baltoy",
+      "local_sprite": "/assets/sprites/343.png"
+    },
+    "344": {
+      "id": 344,
+      "name": "Claydol",
+      "local_sprite": "/assets/sprites/344.png"
+    },
+    "345": {
+      "id": 345,
+      "name": "Lileep",
+      "local_sprite": "/assets/sprites/345.png"
+    },
+    "346": {
+      "id": 346,
+      "name": "Cradily",
+      "local_sprite": "/assets/sprites/346.png"
+    },
+    "347": {
+      "id": 347,
+      "name": "Anorith",
+      "local_sprite": "/assets/sprites/347.png"
+    },
+    "348": {
+      "id": 348,
+      "name": "Armaldo",
+      "local_sprite": "/assets/sprites/348.png"
+    },
+    "349": {
+      "id": 349,
+      "name": "Feebas",
+      "local_sprite": "/assets/sprites/349.png"
+    },
+    "350": {
+      "id": 350,
+      "name": "Milotic",
+      "local_sprite": "/assets/sprites/350.png"
+    },
+    "351": {
+      "id": 351,
+      "name": "Castform",
+      "local_sprite": "/assets/sprites/351.png"
+    },
+    "352": {
+      "id": 352,
+      "name": "Kecleon",
+      "local_sprite": "/assets/sprites/352.png"
+    },
+    "353": {
+      "id": 353,
+      "name": "Shuppet",
+      "local_sprite": "/assets/sprites/353.png"
+    },
+    "354": {
+      "id": 354,
+      "name": "Banette",
+      "local_sprite": "/assets/sprites/354.png"
+    },
+    "355": {
+      "id": 355,
+      "name": "Duskull",
+      "local_sprite": "/assets/sprites/355.png"
+    },
+    "356": {
+      "id": 356,
+      "name": "Dusclops",
+      "local_sprite": "/assets/sprites/356.png"
+    },
+    "357": {
+      "id": 357,
+      "name": "Tropius",
+      "local_sprite": "/assets/sprites/357.png"
+    },
+    "358": {
+      "id": 358,
+      "name": "Chimecho",
+      "local_sprite": "/assets/sprites/358.png"
+    },
+    "359": {
+      "id": 359,
+      "name": "Absol",
+      "local_sprite": "/assets/sprites/359.png"
+    },
+    "360": {
+      "id": 360,
+      "name": "Wynaut",
+      "local_sprite": "/assets/sprites/360.png"
+    },
+    "361": {
+      "id": 361,
+      "name": "Snorunt",
+      "local_sprite": "/assets/sprites/361.png"
+    },
+    "362": {
+      "id": 362,
+      "name": "Glalie",
+      "local_sprite": "/assets/sprites/362.png"
+    },
+    "363": {
+      "id": 363,
+      "name": "Spheal",
+      "local_sprite": "/assets/sprites/363.png"
+    },
+    "364": {
+      "id": 364,
+      "name": "Sealeo",
+      "local_sprite": "/assets/sprites/364.png"
+    },
+    "365": {
+      "id": 365,
+      "name": "Walrein",
+      "local_sprite": "/assets/sprites/365.png"
+    },
+    "366": {
+      "id": 366,
+      "name": "Clamperl",
+      "local_sprite": "/assets/sprites/366.png"
+    },
+    "367": {
+      "id": 367,
+      "name": "Huntail",
+      "local_sprite": "/assets/sprites/367.png"
+    },
+    "368": {
+      "id": 368,
+      "name": "Gorebyss",
+      "local_sprite": "/assets/sprites/368.png"
+    },
+    "369": {
+      "id": 369,
+      "name": "Relicanth",
+      "local_sprite": "/assets/sprites/369.png"
+    },
+    "370": {
+      "id": 370,
+      "name": "Luvdisc",
+      "local_sprite": "/assets/sprites/370.png"
+    },
+    "371": {
+      "id": 371,
+      "name": "Bagon",
+      "local_sprite": "/assets/sprites/371.png"
+    },
+    "372": {
+      "id": 372,
+      "name": "Shelgon",
+      "local_sprite": "/assets/sprites/372.png"
+    },
+    "373": {
+      "id": 373,
+      "name": "Salamence",
+      "local_sprite": "/assets/sprites/373.png"
+    },
+    "374": {
+      "id": 374,
+      "name": "Beldum",
+      "local_sprite": "/assets/sprites/374.png"
+    },
+    "375": {
+      "id": 375,
+      "name": "Metang",
+      "local_sprite": "/assets/sprites/375.png"
+    },
+    "376": {
+      "id": 376,
+      "name": "Metagross",
+      "local_sprite": "/assets/sprites/376.png"
+    },
+    "377": {
+      "id": 377,
+      "name": "Regirock",
+      "local_sprite": "/assets/sprites/377.png"
+    },
+    "378": {
+      "id": 378,
+      "name": "Regice",
+      "local_sprite": "/assets/sprites/378.png"
+    },
+    "379": {
+      "id": 379,
+      "name": "Registeel",
+      "local_sprite": "/assets/sprites/379.png"
+    },
+    "380": {
+      "id": 380,
+      "name": "Latias",
+      "local_sprite": "/assets/sprites/380.png"
+    },
+    "381": {
+      "id": 381,
+      "name": "Latios",
+      "local_sprite": "/assets/sprites/381.png"
+    },
+    "382": {
+      "id": 382,
+      "name": "Kyogre",
+      "local_sprite": "/assets/sprites/382.png"
+    },
+    "383": {
+      "id": 383,
+      "name": "Groudon",
+      "local_sprite": "/assets/sprites/383.png"
+    },
+    "384": {
+      "id": 384,
+      "name": "Rayquaza",
+      "local_sprite": "/assets/sprites/384.png"
+    },
+    "385": {
+      "id": 385,
+      "name": "Jirachi",
+      "local_sprite": "/assets/sprites/385.png"
+    },
+    "386": {
+      "id": 386,
+      "name": "Deoxys-normal",
+      "local_sprite": "/assets/sprites/386.png"
+    },
+    "387": {
+      "id": 387,
+      "name": "Turtwig",
+      "local_sprite": "/assets/sprites/387.png"
+    },
+    "388": {
+      "id": 388,
+      "name": "Grotle",
+      "local_sprite": "/assets/sprites/388.png"
+    },
+    "389": {
+      "id": 389,
+      "name": "Torterra",
+      "local_sprite": "/assets/sprites/389.png"
+    },
+    "390": {
+      "id": 390,
+      "name": "Chimchar",
+      "local_sprite": "/assets/sprites/390.png"
+    },
+    "391": {
+      "id": 391,
+      "name": "Monferno",
+      "local_sprite": "/assets/sprites/391.png"
+    },
+    "392": {
+      "id": 392,
+      "name": "Infernape",
+      "local_sprite": "/assets/sprites/392.png"
+    },
+    "393": {
+      "id": 393,
+      "name": "Piplup",
+      "local_sprite": "/assets/sprites/393.png"
+    },
+    "394": {
+      "id": 394,
+      "name": "Prinplup",
+      "local_sprite": "/assets/sprites/394.png"
+    },
+    "395": {
+      "id": 395,
+      "name": "Empoleon",
+      "local_sprite": "/assets/sprites/395.png"
+    },
+    "396": {
+      "id": 396,
+      "name": "Starly",
+      "local_sprite": "/assets/sprites/396.png"
+    },
+    "397": {
+      "id": 397,
+      "name": "Staravia",
+      "local_sprite": "/assets/sprites/397.png"
+    },
+    "398": {
+      "id": 398,
+      "name": "Staraptor",
+      "local_sprite": "/assets/sprites/398.png"
+    },
+    "399": {
+      "id": 399,
+      "name": "Bidoof",
+      "local_sprite": "/assets/sprites/399.png"
+    },
+    "400": {
+      "id": 400,
+      "name": "Bibarel",
+      "local_sprite": "/assets/sprites/400.png"
+    },
+    "401": {
+      "id": 401,
+      "name": "Kricketot",
+      "local_sprite": "/assets/sprites/401.png"
+    },
+    "402": {
+      "id": 402,
+      "name": "Kricketune",
+      "local_sprite": "/assets/sprites/402.png"
+    },
+    "403": {
+      "id": 403,
+      "name": "Shinx",
+      "local_sprite": "/assets/sprites/403.png"
+    },
+    "404": {
+      "id": 404,
+      "name": "Luxio",
+      "local_sprite": "/assets/sprites/404.png"
+    },
+    "405": {
+      "id": 405,
+      "name": "Luxray",
+      "local_sprite": "/assets/sprites/405.png"
+    },
+    "406": {
+      "id": 406,
+      "name": "Budew",
+      "local_sprite": "/assets/sprites/406.png"
+    },
+    "407": {
+      "id": 407,
+      "name": "Roserade",
+      "local_sprite": "/assets/sprites/407.png"
+    },
+    "408": {
+      "id": 408,
+      "name": "Cranidos",
+      "local_sprite": "/assets/sprites/408.png"
+    },
+    "409": {
+      "id": 409,
+      "name": "Rampardos",
+      "local_sprite": "/assets/sprites/409.png"
+    },
+    "410": {
+      "id": 410,
+      "name": "Shieldon",
+      "local_sprite": "/assets/sprites/410.png"
+    },
+    "411": {
+      "id": 411,
+      "name": "Bastiodon",
+      "local_sprite": "/assets/sprites/411.png"
+    },
+    "412": {
+      "id": 412,
+      "name": "Burmy",
+      "local_sprite": "/assets/sprites/412.png"
+    },
+    "413": {
+      "id": 413,
+      "name": "Wormadam-plant",
+      "local_sprite": "/assets/sprites/413.png"
+    },
+    "414": {
+      "id": 414,
+      "name": "Mothim",
+      "local_sprite": "/assets/sprites/414.png"
+    },
+    "415": {
+      "id": 415,
+      "name": "Combee",
+      "local_sprite": "/assets/sprites/415.png"
+    },
+    "416": {
+      "id": 416,
+      "name": "Vespiquen",
+      "local_sprite": "/assets/sprites/416.png"
+    },
+    "417": {
+      "id": 417,
+      "name": "Pachirisu",
+      "local_sprite": "/assets/sprites/417.png"
+    },
+    "418": {
+      "id": 418,
+      "name": "Buizel",
+      "local_sprite": "/assets/sprites/418.png"
+    },
+    "419": {
+      "id": 419,
+      "name": "Floatzel",
+      "local_sprite": "/assets/sprites/419.png"
+    },
+    "420": {
+      "id": 420,
+      "name": "Cherubi",
+      "local_sprite": "/assets/sprites/420.png"
+    },
+    "421": {
+      "id": 421,
+      "name": "Cherrim",
+      "local_sprite": "/assets/sprites/421.png"
+    },
+    "422": {
+      "id": 422,
+      "name": "Shellos",
+      "local_sprite": "/assets/sprites/422.png"
+    },
+    "423": {
+      "id": 423,
+      "name": "Gastrodon",
+      "local_sprite": "/assets/sprites/423.png"
+    },
+    "424": {
+      "id": 424,
+      "name": "Ambipom",
+      "local_sprite": "/assets/sprites/424.png"
+    },
+    "425": {
+      "id": 425,
+      "name": "Drifloon",
+      "local_sprite": "/assets/sprites/425.png"
+    },
+    "426": {
+      "id": 426,
+      "name": "Drifblim",
+      "local_sprite": "/assets/sprites/426.png"
+    },
+    "427": {
+      "id": 427,
+      "name": "Buneary",
+      "local_sprite": "/assets/sprites/427.png"
+    },
+    "428": {
+      "id": 428,
+      "name": "Lopunny",
+      "local_sprite": "/assets/sprites/428.png"
+    },
+    "429": {
+      "id": 429,
+      "name": "Mismagius",
+      "local_sprite": "/assets/sprites/429.png"
+    },
+    "430": {
+      "id": 430,
+      "name": "Honchkrow",
+      "local_sprite": "/assets/sprites/430.png"
+    },
+    "431": {
+      "id": 431,
+      "name": "Glameow",
+      "local_sprite": "/assets/sprites/431.png"
+    },
+    "432": {
+      "id": 432,
+      "name": "Purugly",
+      "local_sprite": "/assets/sprites/432.png"
+    },
+    "433": {
+      "id": 433,
+      "name": "Chingling",
+      "local_sprite": "/assets/sprites/433.png"
+    },
+    "434": {
+      "id": 434,
+      "name": "Stunky",
+      "local_sprite": "/assets/sprites/434.png"
+    },
+    "435": {
+      "id": 435,
+      "name": "Skuntank",
+      "local_sprite": "/assets/sprites/435.png"
+    },
+    "436": {
+      "id": 436,
+      "name": "Bronzor",
+      "local_sprite": "/assets/sprites/436.png"
+    },
+    "437": {
+      "id": 437,
+      "name": "Bronzong",
+      "local_sprite": "/assets/sprites/437.png"
+    },
+    "438": {
+      "id": 438,
+      "name": "Bonsly",
+      "local_sprite": "/assets/sprites/438.png"
+    },
+    "439": {
+      "id": 439,
+      "name": "Mime-jr",
+      "local_sprite": "/assets/sprites/439.png"
+    },
+    "440": {
+      "id": 440,
+      "name": "Happiny",
+      "local_sprite": "/assets/sprites/440.png"
+    },
+    "441": {
+      "id": 441,
+      "name": "Chatot",
+      "local_sprite": "/assets/sprites/441.png"
+    },
+    "442": {
+      "id": 442,
+      "name": "Spiritomb",
+      "local_sprite": "/assets/sprites/442.png"
+    },
+    "443": {
+      "id": 443,
+      "name": "Gible",
+      "local_sprite": "/assets/sprites/443.png"
+    },
+    "444": {
+      "id": 444,
+      "name": "Gabite",
+      "local_sprite": "/assets/sprites/444.png"
+    },
+    "445": {
+      "id": 445,
+      "name": "Garchomp",
+      "local_sprite": "/assets/sprites/445.png"
+    },
+    "446": {
+      "id": 446,
+      "name": "Munchlax",
+      "local_sprite": "/assets/sprites/446.png"
+    },
+    "447": {
+      "id": 447,
+      "name": "Riolu",
+      "local_sprite": "/assets/sprites/447.png"
+    },
+    "448": {
+      "id": 448,
+      "name": "Lucario",
+      "local_sprite": "/assets/sprites/448.png"
+    },
+    "449": {
+      "id": 449,
+      "name": "Hippopotas",
+      "local_sprite": "/assets/sprites/449.png"
+    },
+    "450": {
+      "id": 450,
+      "name": "Hippowdon",
+      "local_sprite": "/assets/sprites/450.png"
+    },
+    "451": {
+      "id": 451,
+      "name": "Skorupi",
+      "local_sprite": "/assets/sprites/451.png"
+    },
+    "452": {
+      "id": 452,
+      "name": "Drapion",
+      "local_sprite": "/assets/sprites/452.png"
+    },
+    "453": {
+      "id": 453,
+      "name": "Croagunk",
+      "local_sprite": "/assets/sprites/453.png"
+    },
+    "454": {
+      "id": 454,
+      "name": "Toxicroak",
+      "local_sprite": "/assets/sprites/454.png"
+    },
+    "455": {
+      "id": 455,
+      "name": "Carnivine",
+      "local_sprite": "/assets/sprites/455.png"
+    },
+    "456": {
+      "id": 456,
+      "name": "Finneon",
+      "local_sprite": "/assets/sprites/456.png"
+    },
+    "457": {
+      "id": 457,
+      "name": "Lumineon",
+      "local_sprite": "/assets/sprites/457.png"
+    },
+    "458": {
+      "id": 458,
+      "name": "Mantyke",
+      "local_sprite": "/assets/sprites/458.png"
+    },
+    "459": {
+      "id": 459,
+      "name": "Snover",
+      "local_sprite": "/assets/sprites/459.png"
+    },
+    "460": {
+      "id": 460,
+      "name": "Abomasnow",
+      "local_sprite": "/assets/sprites/460.png"
+    },
+    "461": {
+      "id": 461,
+      "name": "Weavile",
+      "local_sprite": "/assets/sprites/461.png"
+    },
+    "462": {
+      "id": 462,
+      "name": "Magnezone",
+      "local_sprite": "/assets/sprites/462.png"
+    },
+    "463": {
+      "id": 463,
+      "name": "Lickilicky",
+      "local_sprite": "/assets/sprites/463.png"
+    },
+    "464": {
+      "id": 464,
+      "name": "Rhyperior",
+      "local_sprite": "/assets/sprites/464.png"
+    },
+    "465": {
+      "id": 465,
+      "name": "Tangrowth",
+      "local_sprite": "/assets/sprites/465.png"
+    },
+    "466": {
+      "id": 466,
+      "name": "Electivire",
+      "local_sprite": "/assets/sprites/466.png"
+    },
+    "467": {
+      "id": 467,
+      "name": "Magmortar",
+      "local_sprite": "/assets/sprites/467.png"
+    },
+    "468": {
+      "id": 468,
+      "name": "Togekiss",
+      "local_sprite": "/assets/sprites/468.png"
+    },
+    "469": {
+      "id": 469,
+      "name": "Yanmega",
+      "local_sprite": "/assets/sprites/469.png"
+    },
+    "470": {
+      "id": 470,
+      "name": "Leafeon",
+      "local_sprite": "/assets/sprites/470.png"
+    },
+    "471": {
+      "id": 471,
+      "name": "Glaceon",
+      "local_sprite": "/assets/sprites/471.png"
+    },
+    "472": {
+      "id": 472,
+      "name": "Gliscor",
+      "local_sprite": "/assets/sprites/472.png"
+    },
+    "473": {
+      "id": 473,
+      "name": "Mamoswine",
+      "local_sprite": "/assets/sprites/473.png"
+    },
+    "474": {
+      "id": 474,
+      "name": "Porygon-z",
+      "local_sprite": "/assets/sprites/474.png"
+    },
+    "475": {
+      "id": 475,
+      "name": "Gallade",
+      "local_sprite": "/assets/sprites/475.png"
+    },
+    "476": {
+      "id": 476,
+      "name": "Probopass",
+      "local_sprite": "/assets/sprites/476.png"
+    },
+    "477": {
+      "id": 477,
+      "name": "Dusknoir",
+      "local_sprite": "/assets/sprites/477.png"
+    },
+    "478": {
+      "id": 478,
+      "name": "Froslass",
+      "local_sprite": "/assets/sprites/478.png"
+    },
+    "479": {
+      "id": 479,
+      "name": "Rotom",
+      "local_sprite": "/assets/sprites/479.png"
+    },
+    "480": {
+      "id": 480,
+      "name": "Uxie",
+      "local_sprite": "/assets/sprites/480.png"
+    },
+    "481": {
+      "id": 481,
+      "name": "Mesprit",
+      "local_sprite": "/assets/sprites/481.png"
+    },
+    "482": {
+      "id": 482,
+      "name": "Azelf",
+      "local_sprite": "/assets/sprites/482.png"
+    },
+    "483": {
+      "id": 483,
+      "name": "Dialga",
+      "local_sprite": "/assets/sprites/483.png"
+    },
+    "484": {
+      "id": 484,
+      "name": "Palkia",
+      "local_sprite": "/assets/sprites/484.png"
+    },
+    "485": {
+      "id": 485,
+      "name": "Heatran",
+      "local_sprite": "/assets/sprites/485.png"
+    },
+    "486": {
+      "id": 486,
+      "name": "Regigigas",
+      "local_sprite": "/assets/sprites/486.png"
+    },
+    "487": {
+      "id": 487,
+      "name": "Giratina-altered",
+      "local_sprite": "/assets/sprites/487.png"
+    },
+    "488": {
+      "id": 488,
+      "name": "Cresselia",
+      "local_sprite": "/assets/sprites/488.png"
+    },
+    "489": {
+      "id": 489,
+      "name": "Phione",
+      "local_sprite": "/assets/sprites/489.png"
+    },
+    "490": {
+      "id": 490,
+      "name": "Manaphy",
+      "local_sprite": "/assets/sprites/490.png"
+    },
+    "491": {
+      "id": 491,
+      "name": "Darkrai",
+      "local_sprite": "/assets/sprites/491.png"
+    },
+    "492": {
+      "id": 492,
+      "name": "Shaymin-land",
+      "local_sprite": "/assets/sprites/492.png"
+    },
+    "493": {
+      "id": 493,
+      "name": "Arceus",
+      "local_sprite": "/assets/sprites/493.png"
+    },
+    "494": {
+      "id": 494,
+      "name": "Victini",
+      "local_sprite": "/assets/sprites/494.png"
+    },
+    "495": {
+      "id": 495,
+      "name": "Snivy",
+      "local_sprite": "/assets/sprites/495.png"
+    },
+    "496": {
+      "id": 496,
+      "name": "Servine",
+      "local_sprite": "/assets/sprites/496.png"
+    },
+    "497": {
+      "id": 497,
+      "name": "Serperior",
+      "local_sprite": "/assets/sprites/497.png"
+    },
+    "498": {
+      "id": 498,
+      "name": "Tepig",
+      "local_sprite": "/assets/sprites/498.png"
+    },
+    "499": {
+      "id": 499,
+      "name": "Pignite",
+      "local_sprite": "/assets/sprites/499.png"
+    },
+    "500": {
+      "id": 500,
+      "name": "Emboar",
+      "local_sprite": "/assets/sprites/500.png"
+    },
+    "501": {
+      "id": 501,
+      "name": "Oshawott",
+      "local_sprite": "/assets/sprites/501.png"
+    },
+    "502": {
+      "id": 502,
+      "name": "Dewott",
+      "local_sprite": "/assets/sprites/502.png"
+    },
+    "503": {
+      "id": 503,
+      "name": "Samurott",
+      "local_sprite": "/assets/sprites/503.png"
+    },
+    "504": {
+      "id": 504,
+      "name": "Patrat",
+      "local_sprite": "/assets/sprites/504.png"
+    },
+    "505": {
+      "id": 505,
+      "name": "Watchog",
+      "local_sprite": "/assets/sprites/505.png"
+    },
+    "506": {
+      "id": 506,
+      "name": "Lillipup",
+      "local_sprite": "/assets/sprites/506.png"
+    },
+    "507": {
+      "id": 507,
+      "name": "Herdier",
+      "local_sprite": "/assets/sprites/507.png"
+    },
+    "508": {
+      "id": 508,
+      "name": "Stoutland",
+      "local_sprite": "/assets/sprites/508.png"
+    },
+    "509": {
+      "id": 509,
+      "name": "Purrloin",
+      "local_sprite": "/assets/sprites/509.png"
+    },
+    "510": {
+      "id": 510,
+      "name": "Liepard",
+      "local_sprite": "/assets/sprites/510.png"
+    },
+    "511": {
+      "id": 511,
+      "name": "Pansage",
+      "local_sprite": "/assets/sprites/511.png"
+    },
+    "512": {
+      "id": 512,
+      "name": "Simisage",
+      "local_sprite": "/assets/sprites/512.png"
+    },
+    "513": {
+      "id": 513,
+      "name": "Pansear",
+      "local_sprite": "/assets/sprites/513.png"
+    },
+    "514": {
+      "id": 514,
+      "name": "Simisear",
+      "local_sprite": "/assets/sprites/514.png"
+    },
+    "515": {
+      "id": 515,
+      "name": "Panpour",
+      "local_sprite": "/assets/sprites/515.png"
+    },
+    "516": {
+      "id": 516,
+      "name": "Simipour",
+      "local_sprite": "/assets/sprites/516.png"
+    },
+    "517": {
+      "id": 517,
+      "name": "Munna",
+      "local_sprite": "/assets/sprites/517.png"
+    },
+    "518": {
+      "id": 518,
+      "name": "Musharna",
+      "local_sprite": "/assets/sprites/518.png"
+    },
+    "519": {
+      "id": 519,
+      "name": "Pidove",
+      "local_sprite": "/assets/sprites/519.png"
+    },
+    "520": {
+      "id": 520,
+      "name": "Tranquill",
+      "local_sprite": "/assets/sprites/520.png"
+    },
+    "521": {
+      "id": 521,
+      "name": "Unfezant",
+      "local_sprite": "/assets/sprites/521.png"
+    },
+    "522": {
+      "id": 522,
+      "name": "Blitzle",
+      "local_sprite": "/assets/sprites/522.png"
+    },
+    "523": {
+      "id": 523,
+      "name": "Zebstrika",
+      "local_sprite": "/assets/sprites/523.png"
+    },
+    "524": {
+      "id": 524,
+      "name": "Roggenrola",
+      "local_sprite": "/assets/sprites/524.png"
+    },
+    "525": {
+      "id": 525,
+      "name": "Boldore",
+      "local_sprite": "/assets/sprites/525.png"
+    },
+    "526": {
+      "id": 526,
+      "name": "Gigalith",
+      "local_sprite": "/assets/sprites/526.png"
+    },
+    "527": {
+      "id": 527,
+      "name": "Woobat",
+      "local_sprite": "/assets/sprites/527.png"
+    },
+    "528": {
+      "id": 528,
+      "name": "Swoobat",
+      "local_sprite": "/assets/sprites/528.png"
+    },
+    "529": {
+      "id": 529,
+      "name": "Drilbur",
+      "local_sprite": "/assets/sprites/529.png"
+    },
+    "530": {
+      "id": 530,
+      "name": "Excadrill",
+      "local_sprite": "/assets/sprites/530.png"
+    },
+    "531": {
+      "id": 531,
+      "name": "Audino",
+      "local_sprite": "/assets/sprites/531.png"
+    },
+    "532": {
+      "id": 532,
+      "name": "Timburr",
+      "local_sprite": "/assets/sprites/532.png"
+    },
+    "533": {
+      "id": 533,
+      "name": "Gurdurr",
+      "local_sprite": "/assets/sprites/533.png"
+    },
+    "534": {
+      "id": 534,
+      "name": "Conkeldurr",
+      "local_sprite": "/assets/sprites/534.png"
+    },
+    "535": {
+      "id": 535,
+      "name": "Tympole",
+      "local_sprite": "/assets/sprites/535.png"
+    },
+    "536": {
+      "id": 536,
+      "name": "Palpitoad",
+      "local_sprite": "/assets/sprites/536.png"
+    },
+    "537": {
+      "id": 537,
+      "name": "Seismitoad",
+      "local_sprite": "/assets/sprites/537.png"
+    },
+    "538": {
+      "id": 538,
+      "name": "Throh",
+      "local_sprite": "/assets/sprites/538.png"
+    },
+    "539": {
+      "id": 539,
+      "name": "Sawk",
+      "local_sprite": "/assets/sprites/539.png"
+    },
+    "540": {
+      "id": 540,
+      "name": "Sewaddle",
+      "local_sprite": "/assets/sprites/540.png"
+    },
+    "541": {
+      "id": 541,
+      "name": "Swadloon",
+      "local_sprite": "/assets/sprites/541.png"
+    },
+    "542": {
+      "id": 542,
+      "name": "Leavanny",
+      "local_sprite": "/assets/sprites/542.png"
+    },
+    "543": {
+      "id": 543,
+      "name": "Venipede",
+      "local_sprite": "/assets/sprites/543.png"
+    },
+    "544": {
+      "id": 544,
+      "name": "Whirlipede",
+      "local_sprite": "/assets/sprites/544.png"
+    },
+    "545": {
+      "id": 545,
+      "name": "Scolipede",
+      "local_sprite": "/assets/sprites/545.png"
+    },
+    "546": {
+      "id": 546,
+      "name": "Cottonee",
+      "local_sprite": "/assets/sprites/546.png"
+    },
+    "547": {
+      "id": 547,
+      "name": "Whimsicott",
+      "local_sprite": "/assets/sprites/547.png"
+    },
+    "548": {
+      "id": 548,
+      "name": "Petilil",
+      "local_sprite": "/assets/sprites/548.png"
+    },
+    "549": {
+      "id": 549,
+      "name": "Lilligant",
+      "local_sprite": "/assets/sprites/549.png"
+    },
+    "550": {
+      "id": 550,
+      "name": "Basculin-red-striped",
+      "local_sprite": "/assets/sprites/550.png"
+    },
+    "551": {
+      "id": 551,
+      "name": "Sandile",
+      "local_sprite": "/assets/sprites/551.png"
+    },
+    "552": {
+      "id": 552,
+      "name": "Krokorok",
+      "local_sprite": "/assets/sprites/552.png"
+    },
+    "553": {
+      "id": 553,
+      "name": "Krookodile",
+      "local_sprite": "/assets/sprites/553.png"
+    },
+    "554": {
+      "id": 554,
+      "name": "Darumaka",
+      "local_sprite": "/assets/sprites/554.png"
+    },
+    "555": {
+      "id": 555,
+      "name": "Darmanitan-standard",
+      "local_sprite": "/assets/sprites/555.png"
+    },
+    "556": {
+      "id": 556,
+      "name": "Maractus",
+      "local_sprite": "/assets/sprites/556.png"
+    },
+    "557": {
+      "id": 557,
+      "name": "Dwebble",
+      "local_sprite": "/assets/sprites/557.png"
+    },
+    "558": {
+      "id": 558,
+      "name": "Crustle",
+      "local_sprite": "/assets/sprites/558.png"
+    },
+    "559": {
+      "id": 559,
+      "name": "Scraggy",
+      "local_sprite": "/assets/sprites/559.png"
+    },
+    "560": {
+      "id": 560,
+      "name": "Scrafty",
+      "local_sprite": "/assets/sprites/560.png"
+    },
+    "561": {
+      "id": 561,
+      "name": "Sigilyph",
+      "local_sprite": "/assets/sprites/561.png"
+    },
+    "562": {
+      "id": 562,
+      "name": "Yamask",
+      "local_sprite": "/assets/sprites/562.png"
+    },
+    "563": {
+      "id": 563,
+      "name": "Cofagrigus",
+      "local_sprite": "/assets/sprites/563.png"
+    },
+    "564": {
+      "id": 564,
+      "name": "Tirtouga",
+      "local_sprite": "/assets/sprites/564.png"
+    },
+    "565": {
+      "id": 565,
+      "name": "Carracosta",
+      "local_sprite": "/assets/sprites/565.png"
+    },
+    "566": {
+      "id": 566,
+      "name": "Archen",
+      "local_sprite": "/assets/sprites/566.png"
+    },
+    "567": {
+      "id": 567,
+      "name": "Archeops",
+      "local_sprite": "/assets/sprites/567.png"
+    },
+    "568": {
+      "id": 568,
+      "name": "Trubbish",
+      "local_sprite": "/assets/sprites/568.png"
+    },
+    "569": {
+      "id": 569,
+      "name": "Garbodor",
+      "local_sprite": "/assets/sprites/569.png"
+    },
+    "570": {
+      "id": 570,
+      "name": "Zorua",
+      "local_sprite": "/assets/sprites/570.png"
+    },
+    "571": {
+      "id": 571,
+      "name": "Zoroark",
+      "local_sprite": "/assets/sprites/571.png"
+    },
+    "572": {
+      "id": 572,
+      "name": "Minccino",
+      "local_sprite": "/assets/sprites/572.png"
+    },
+    "573": {
+      "id": 573,
+      "name": "Cinccino",
+      "local_sprite": "/assets/sprites/573.png"
+    },
+    "574": {
+      "id": 574,
+      "name": "Gothita",
+      "local_sprite": "/assets/sprites/574.png"
+    },
+    "575": {
+      "id": 575,
+      "name": "Gothorita",
+      "local_sprite": "/assets/sprites/575.png"
+    },
+    "576": {
+      "id": 576,
+      "name": "Gothitelle",
+      "local_sprite": "/assets/sprites/576.png"
+    },
+    "577": {
+      "id": 577,
+      "name": "Solosis",
+      "local_sprite": "/assets/sprites/577.png"
+    },
+    "578": {
+      "id": 578,
+      "name": "Duosion",
+      "local_sprite": "/assets/sprites/578.png"
+    },
+    "579": {
+      "id": 579,
+      "name": "Reuniclus",
+      "local_sprite": "/assets/sprites/579.png"
+    },
+    "580": {
+      "id": 580,
+      "name": "Ducklett",
+      "local_sprite": "/assets/sprites/580.png"
+    },
+    "581": {
+      "id": 581,
+      "name": "Swanna",
+      "local_sprite": "/assets/sprites/581.png"
+    },
+    "582": {
+      "id": 582,
+      "name": "Vanillite",
+      "local_sprite": "/assets/sprites/582.png"
+    },
+    "583": {
+      "id": 583,
+      "name": "Vanillish",
+      "local_sprite": "/assets/sprites/583.png"
+    },
+    "584": {
+      "id": 584,
+      "name": "Vanilluxe",
+      "local_sprite": "/assets/sprites/584.png"
+    },
+    "585": {
+      "id": 585,
+      "name": "Deerling",
+      "local_sprite": "/assets/sprites/585.png"
+    },
+    "586": {
+      "id": 586,
+      "name": "Sawsbuck",
+      "local_sprite": "/assets/sprites/586.png"
+    },
+    "587": {
+      "id": 587,
+      "name": "Emolga",
+      "local_sprite": "/assets/sprites/587.png"
+    },
+    "588": {
+      "id": 588,
+      "name": "Karrablast",
+      "local_sprite": "/assets/sprites/588.png"
+    },
+    "589": {
+      "id": 589,
+      "name": "Escavalier",
+      "local_sprite": "/assets/sprites/589.png"
+    },
+    "590": {
+      "id": 590,
+      "name": "Foongus",
+      "local_sprite": "/assets/sprites/590.png"
+    },
+    "591": {
+      "id": 591,
+      "name": "Amoonguss",
+      "local_sprite": "/assets/sprites/591.png"
+    },
+    "592": {
+      "id": 592,
+      "name": "Frillish",
+      "local_sprite": "/assets/sprites/592.png"
+    },
+    "593": {
+      "id": 593,
+      "name": "Jellicent",
+      "local_sprite": "/assets/sprites/593.png"
+    },
+    "594": {
+      "id": 594,
+      "name": "Alomomola",
+      "local_sprite": "/assets/sprites/594.png"
+    },
+    "595": {
+      "id": 595,
+      "name": "Joltik",
+      "local_sprite": "/assets/sprites/595.png"
+    },
+    "596": {
+      "id": 596,
+      "name": "Galvantula",
+      "local_sprite": "/assets/sprites/596.png"
+    },
+    "597": {
+      "id": 597,
+      "name": "Ferroseed",
+      "local_sprite": "/assets/sprites/597.png"
+    },
+    "598": {
+      "id": 598,
+      "name": "Ferrothorn",
+      "local_sprite": "/assets/sprites/598.png"
+    },
+    "599": {
+      "id": 599,
+      "name": "Klink",
+      "local_sprite": "/assets/sprites/599.png"
+    },
+    "600": {
+      "id": 600,
+      "name": "Klang",
+      "local_sprite": "/assets/sprites/600.png"
+    },
+    "601": {
+      "id": 601,
+      "name": "Klinklang",
+      "local_sprite": "/assets/sprites/601.png"
+    },
+    "602": {
+      "id": 602,
+      "name": "Tynamo",
+      "local_sprite": "/assets/sprites/602.png"
+    },
+    "603": {
+      "id": 603,
+      "name": "Eelektrik",
+      "local_sprite": "/assets/sprites/603.png"
+    },
+    "604": {
+      "id": 604,
+      "name": "Eelektross",
+      "local_sprite": "/assets/sprites/604.png"
+    },
+    "605": {
+      "id": 605,
+      "name": "Elgyem",
+      "local_sprite": "/assets/sprites/605.png"
+    },
+    "606": {
+      "id": 606,
+      "name": "Beheeyem",
+      "local_sprite": "/assets/sprites/606.png"
+    },
+    "607": {
+      "id": 607,
+      "name": "Litwick",
+      "local_sprite": "/assets/sprites/607.png"
+    },
+    "608": {
+      "id": 608,
+      "name": "Lampent",
+      "local_sprite": "/assets/sprites/608.png"
+    },
+    "609": {
+      "id": 609,
+      "name": "Chandelure",
+      "local_sprite": "/assets/sprites/609.png"
+    },
+    "610": {
+      "id": 610,
+      "name": "Axew",
+      "local_sprite": "/assets/sprites/610.png"
+    },
+    "611": {
+      "id": 611,
+      "name": "Fraxure",
+      "local_sprite": "/assets/sprites/611.png"
+    },
+    "612": {
+      "id": 612,
+      "name": "Haxorus",
+      "local_sprite": "/assets/sprites/612.png"
+    },
+    "613": {
+      "id": 613,
+      "name": "Cubchoo",
+      "local_sprite": "/assets/sprites/613.png"
+    },
+    "614": {
+      "id": 614,
+      "name": "Beartic",
+      "local_sprite": "/assets/sprites/614.png"
+    },
+    "615": {
+      "id": 615,
+      "name": "Cryogonal",
+      "local_sprite": "/assets/sprites/615.png"
+    },
+    "616": {
+      "id": 616,
+      "name": "Shelmet",
+      "local_sprite": "/assets/sprites/616.png"
+    },
+    "617": {
+      "id": 617,
+      "name": "Accelgor",
+      "local_sprite": "/assets/sprites/617.png"
+    },
+    "618": {
+      "id": 618,
+      "name": "Stunfisk",
+      "local_sprite": "/assets/sprites/618.png"
+    },
+    "619": {
+      "id": 619,
+      "name": "Mienfoo",
+      "local_sprite": "/assets/sprites/619.png"
+    },
+    "620": {
+      "id": 620,
+      "name": "Mienshao",
+      "local_sprite": "/assets/sprites/620.png"
+    },
+    "621": {
+      "id": 621,
+      "name": "Druddigon",
+      "local_sprite": "/assets/sprites/621.png"
+    },
+    "622": {
+      "id": 622,
+      "name": "Golett",
+      "local_sprite": "/assets/sprites/622.png"
+    },
+    "623": {
+      "id": 623,
+      "name": "Golurk",
+      "local_sprite": "/assets/sprites/623.png"
+    },
+    "624": {
+      "id": 624,
+      "name": "Pawniard",
+      "local_sprite": "/assets/sprites/624.png"
+    },
+    "625": {
+      "id": 625,
+      "name": "Bisharp",
+      "local_sprite": "/assets/sprites/625.png"
+    },
+    "626": {
+      "id": 626,
+      "name": "Bouffalant",
+      "local_sprite": "/assets/sprites/626.png"
+    },
+    "627": {
+      "id": 627,
+      "name": "Rufflet",
+      "local_sprite": "/assets/sprites/627.png"
+    },
+    "628": {
+      "id": 628,
+      "name": "Braviary",
+      "local_sprite": "/assets/sprites/628.png"
+    },
+    "629": {
+      "id": 629,
+      "name": "Vullaby",
+      "local_sprite": "/assets/sprites/629.png"
+    },
+    "630": {
+      "id": 630,
+      "name": "Mandibuzz",
+      "local_sprite": "/assets/sprites/630.png"
+    },
+    "631": {
+      "id": 631,
+      "name": "Heatmor",
+      "local_sprite": "/assets/sprites/631.png"
+    },
+    "632": {
+      "id": 632,
+      "name": "Durant",
+      "local_sprite": "/assets/sprites/632.png"
+    },
+    "633": {
+      "id": 633,
+      "name": "Deino",
+      "local_sprite": "/assets/sprites/633.png"
+    },
+    "634": {
+      "id": 634,
+      "name": "Zweilous",
+      "local_sprite": "/assets/sprites/634.png"
+    },
+    "635": {
+      "id": 635,
+      "name": "Hydreigon",
+      "local_sprite": "/assets/sprites/635.png"
+    },
+    "636": {
+      "id": 636,
+      "name": "Larvesta",
+      "local_sprite": "/assets/sprites/636.png"
+    },
+    "637": {
+      "id": 637,
+      "name": "Volcarona",
+      "local_sprite": "/assets/sprites/637.png"
+    },
+    "638": {
+      "id": 638,
+      "name": "Cobalion",
+      "local_sprite": "/assets/sprites/638.png"
+    },
+    "639": {
+      "id": 639,
+      "name": "Terrakion",
+      "local_sprite": "/assets/sprites/639.png"
+    },
+    "640": {
+      "id": 640,
+      "name": "Virizion",
+      "local_sprite": "/assets/sprites/640.png"
+    },
+    "641": {
+      "id": 641,
+      "name": "Tornadus-incarnate",
+      "local_sprite": "/assets/sprites/641.png"
+    },
+    "642": {
+      "id": 642,
+      "name": "Thundurus-incarnate",
+      "local_sprite": "/assets/sprites/642.png"
+    },
+    "643": {
+      "id": 643,
+      "name": "Reshiram",
+      "local_sprite": "/assets/sprites/643.png"
+    },
+    "644": {
+      "id": 644,
+      "name": "Zekrom",
+      "local_sprite": "/assets/sprites/644.png"
+    },
+    "645": {
+      "id": 645,
+      "name": "Landorus-incarnate",
+      "local_sprite": "/assets/sprites/645.png"
+    },
+    "646": {
+      "id": 646,
+      "name": "Kyurem",
+      "local_sprite": "/assets/sprites/646.png"
+    },
+    "647": {
+      "id": 647,
+      "name": "Keldeo-ordinary",
+      "local_sprite": "/assets/sprites/647.png"
+    },
+    "648": {
+      "id": 648,
+      "name": "Meloetta-aria",
+      "local_sprite": "/assets/sprites/648.png"
+    },
+    "649": {
+      "id": 649,
+      "name": "Genesect",
+      "local_sprite": "/assets/sprites/649.png"
+    },
+    "650": {
+      "id": 650,
+      "name": "Chespin",
+      "local_sprite": "/assets/sprites/650.png"
+    },
+    "651": {
+      "id": 651,
+      "name": "Quilladin",
+      "local_sprite": "/assets/sprites/651.png"
+    },
+    "652": {
+      "id": 652,
+      "name": "Chesnaught",
+      "local_sprite": "/assets/sprites/652.png"
+    },
+    "653": {
+      "id": 653,
+      "name": "Fennekin",
+      "local_sprite": "/assets/sprites/653.png"
+    },
+    "654": {
+      "id": 654,
+      "name": "Braixen",
+      "local_sprite": "/assets/sprites/654.png"
+    },
+    "655": {
+      "id": 655,
+      "name": "Delphox",
+      "local_sprite": "/assets/sprites/655.png"
+    },
+    "656": {
+      "id": 656,
+      "name": "Froakie",
+      "local_sprite": "/assets/sprites/656.png"
+    },
+    "657": {
+      "id": 657,
+      "name": "Frogadier",
+      "local_sprite": "/assets/sprites/657.png"
+    },
+    "658": {
+      "id": 658,
+      "name": "Greninja",
+      "local_sprite": "/assets/sprites/658.png"
+    },
+    "659": {
+      "id": 659,
+      "name": "Bunnelby",
+      "local_sprite": "/assets/sprites/659.png"
+    },
+    "660": {
+      "id": 660,
+      "name": "Diggersby",
+      "local_sprite": "/assets/sprites/660.png"
+    },
+    "661": {
+      "id": 661,
+      "name": "Fletchling",
+      "local_sprite": "/assets/sprites/661.png"
+    },
+    "662": {
+      "id": 662,
+      "name": "Fletchinder",
+      "local_sprite": "/assets/sprites/662.png"
+    },
+    "663": {
+      "id": 663,
+      "name": "Talonflame",
+      "local_sprite": "/assets/sprites/663.png"
+    },
+    "664": {
+      "id": 664,
+      "name": "Scatterbug",
+      "local_sprite": "/assets/sprites/664.png"
+    },
+    "665": {
+      "id": 665,
+      "name": "Spewpa",
+      "local_sprite": "/assets/sprites/665.png"
+    },
+    "666": {
+      "id": 666,
+      "name": "Vivillon",
+      "local_sprite": "/assets/sprites/666.png"
+    },
+    "667": {
+      "id": 667,
+      "name": "Litleo",
+      "local_sprite": "/assets/sprites/667.png"
+    },
+    "668": {
+      "id": 668,
+      "name": "Pyroar",
+      "local_sprite": "/assets/sprites/668.png"
+    },
+    "669": {
+      "id": 669,
+      "name": "Flabebe",
+      "local_sprite": "/assets/sprites/669.png"
+    },
+    "670": {
+      "id": 670,
+      "name": "Floette",
+      "local_sprite": "/assets/sprites/670.png"
+    },
+    "671": {
+      "id": 671,
+      "name": "Florges",
+      "local_sprite": "/assets/sprites/671.png"
+    },
+    "672": {
+      "id": 672,
+      "name": "Skiddo",
+      "local_sprite": "/assets/sprites/672.png"
+    },
+    "673": {
+      "id": 673,
+      "name": "Gogoat",
+      "local_sprite": "/assets/sprites/673.png"
+    },
+    "674": {
+      "id": 674,
+      "name": "Pancham",
+      "local_sprite": "/assets/sprites/674.png"
+    },
+    "675": {
+      "id": 675,
+      "name": "Pangoro",
+      "local_sprite": "/assets/sprites/675.png"
+    },
+    "676": {
+      "id": 676,
+      "name": "Furfrou",
+      "local_sprite": "/assets/sprites/676.png"
+    },
+    "677": {
+      "id": 677,
+      "name": "Espurr",
+      "local_sprite": "/assets/sprites/677.png"
+    },
+    "678": {
+      "id": 678,
+      "name": "Meowstic-male",
+      "local_sprite": "/assets/sprites/678.png"
+    },
+    "679": {
+      "id": 679,
+      "name": "Honedge",
+      "local_sprite": "/assets/sprites/679.png"
+    },
+    "680": {
+      "id": 680,
+      "name": "Doublade",
+      "local_sprite": "/assets/sprites/680.png"
+    },
+    "681": {
+      "id": 681,
+      "name": "Aegislash-shield",
+      "local_sprite": "/assets/sprites/681.png"
+    },
+    "682": {
+      "id": 682,
+      "name": "Spritzee",
+      "local_sprite": "/assets/sprites/682.png"
+    },
+    "683": {
+      "id": 683,
+      "name": "Aromatisse",
+      "local_sprite": "/assets/sprites/683.png"
+    },
+    "684": {
+      "id": 684,
+      "name": "Swirlix",
+      "local_sprite": "/assets/sprites/684.png"
+    },
+    "685": {
+      "id": 685,
+      "name": "Slurpuff",
+      "local_sprite": "/assets/sprites/685.png"
+    },
+    "686": {
+      "id": 686,
+      "name": "Inkay",
+      "local_sprite": "/assets/sprites/686.png"
+    },
+    "687": {
+      "id": 687,
+      "name": "Malamar",
+      "local_sprite": "/assets/sprites/687.png"
+    },
+    "688": {
+      "id": 688,
+      "name": "Binacle",
+      "local_sprite": "/assets/sprites/688.png"
+    },
+    "689": {
+      "id": 689,
+      "name": "Barbaracle",
+      "local_sprite": "/assets/sprites/689.png"
+    },
+    "690": {
+      "id": 690,
+      "name": "Skrelp",
+      "local_sprite": "/assets/sprites/690.png"
+    },
+    "691": {
+      "id": 691,
+      "name": "Dragalge",
+      "local_sprite": "/assets/sprites/691.png"
+    },
+    "692": {
+      "id": 692,
+      "name": "Clauncher",
+      "local_sprite": "/assets/sprites/692.png"
+    },
+    "693": {
+      "id": 693,
+      "name": "Clawitzer",
+      "local_sprite": "/assets/sprites/693.png"
+    },
+    "694": {
+      "id": 694,
+      "name": "Helioptile",
+      "local_sprite": "/assets/sprites/694.png"
+    },
+    "695": {
+      "id": 695,
+      "name": "Heliolisk",
+      "local_sprite": "/assets/sprites/695.png"
+    },
+    "696": {
+      "id": 696,
+      "name": "Tyrunt",
+      "local_sprite": "/assets/sprites/696.png"
+    },
+    "697": {
+      "id": 697,
+      "name": "Tyrantrum",
+      "local_sprite": "/assets/sprites/697.png"
+    },
+    "698": {
+      "id": 698,
+      "name": "Amaura",
+      "local_sprite": "/assets/sprites/698.png"
+    },
+    "699": {
+      "id": 699,
+      "name": "Aurorus",
+      "local_sprite": "/assets/sprites/699.png"
+    },
+    "700": {
+      "id": 700,
+      "name": "Sylveon",
+      "local_sprite": "/assets/sprites/700.png"
+    },
+    "701": {
+      "id": 701,
+      "name": "Hawlucha",
+      "local_sprite": "/assets/sprites/701.png"
+    },
+    "702": {
+      "id": 702,
+      "name": "Dedenne",
+      "local_sprite": "/assets/sprites/702.png"
+    },
+    "703": {
+      "id": 703,
+      "name": "Carbink",
+      "local_sprite": "/assets/sprites/703.png"
+    },
+    "704": {
+      "id": 704,
+      "name": "Goomy",
+      "local_sprite": "/assets/sprites/704.png"
+    },
+    "705": {
+      "id": 705,
+      "name": "Sliggoo",
+      "local_sprite": "/assets/sprites/705.png"
+    },
+    "706": {
+      "id": 706,
+      "name": "Goodra",
+      "local_sprite": "/assets/sprites/706.png"
+    },
+    "707": {
+      "id": 707,
+      "name": "Klefki",
+      "local_sprite": "/assets/sprites/707.png"
+    },
+    "708": {
+      "id": 708,
+      "name": "Phantump",
+      "local_sprite": "/assets/sprites/708.png"
+    },
+    "709": {
+      "id": 709,
+      "name": "Trevenant",
+      "local_sprite": "/assets/sprites/709.png"
+    },
+    "710": {
+      "id": 710,
+      "name": "Pumpkaboo-average",
+      "local_sprite": "/assets/sprites/710.png"
+    },
+    "711": {
+      "id": 711,
+      "name": "Gourgeist-average",
+      "local_sprite": "/assets/sprites/711.png"
+    },
+    "712": {
+      "id": 712,
+      "name": "Bergmite",
+      "local_sprite": "/assets/sprites/712.png"
+    },
+    "713": {
+      "id": 713,
+      "name": "Avalugg",
+      "local_sprite": "/assets/sprites/713.png"
+    },
+    "714": {
+      "id": 714,
+      "name": "Noibat",
+      "local_sprite": "/assets/sprites/714.png"
+    },
+    "715": {
+      "id": 715,
+      "name": "Noivern",
+      "local_sprite": "/assets/sprites/715.png"
+    },
+    "716": {
+      "id": 716,
+      "name": "Xerneas",
+      "local_sprite": "/assets/sprites/716.png"
+    },
+    "717": {
+      "id": 717,
+      "name": "Yveltal",
+      "local_sprite": "/assets/sprites/717.png"
+    },
+    "718": {
+      "id": 718,
+      "name": "Zygarde-50",
+      "local_sprite": "/assets/sprites/718.png"
+    },
+    "719": {
+      "id": 719,
+      "name": "Diancie",
+      "local_sprite": "/assets/sprites/719.png"
+    },
+    "720": {
+      "id": 720,
+      "name": "Hoopa",
+      "local_sprite": "/assets/sprites/720.png"
+    },
+    "721": {
+      "id": 721,
+      "name": "Volcanion",
+      "local_sprite": "/assets/sprites/721.png"
+    },
+    "722": {
+      "id": 722,
+      "name": "Rowlet",
+      "local_sprite": "/assets/sprites/722.png"
+    },
+    "723": {
+      "id": 723,
+      "name": "Dartrix",
+      "local_sprite": "/assets/sprites/723.png"
+    },
+    "724": {
+      "id": 724,
+      "name": "Decidueye",
+      "local_sprite": "/assets/sprites/724.png"
+    },
+    "725": {
+      "id": 725,
+      "name": "Litten",
+      "local_sprite": "/assets/sprites/725.png"
+    },
+    "726": {
+      "id": 726,
+      "name": "Torracat",
+      "local_sprite": "/assets/sprites/726.png"
+    },
+    "727": {
+      "id": 727,
+      "name": "Incineroar",
+      "local_sprite": "/assets/sprites/727.png"
+    },
+    "728": {
+      "id": 728,
+      "name": "Popplio",
+      "local_sprite": "/assets/sprites/728.png"
+    },
+    "729": {
+      "id": 729,
+      "name": "Brionne",
+      "local_sprite": "/assets/sprites/729.png"
+    },
+    "730": {
+      "id": 730,
+      "name": "Primarina",
+      "local_sprite": "/assets/sprites/730.png"
+    },
+    "731": {
+      "id": 731,
+      "name": "Pikipek",
+      "local_sprite": "/assets/sprites/731.png"
+    },
+    "732": {
+      "id": 732,
+      "name": "Trumbeak",
+      "local_sprite": "/assets/sprites/732.png"
+    },
+    "733": {
+      "id": 733,
+      "name": "Toucannon",
+      "local_sprite": "/assets/sprites/733.png"
+    },
+    "734": {
+      "id": 734,
+      "name": "Yungoos",
+      "local_sprite": "/assets/sprites/734.png"
+    },
+    "735": {
+      "id": 735,
+      "name": "Gumshoos",
+      "local_sprite": "/assets/sprites/735.png"
+    },
+    "736": {
+      "id": 736,
+      "name": "Grubbin",
+      "local_sprite": "/assets/sprites/736.png"
+    },
+    "737": {
+      "id": 737,
+      "name": "Charjabug",
+      "local_sprite": "/assets/sprites/737.png"
+    },
+    "738": {
+      "id": 738,
+      "name": "Vikavolt",
+      "local_sprite": "/assets/sprites/738.png"
+    },
+    "739": {
+      "id": 739,
+      "name": "Crabrawler",
+      "local_sprite": "/assets/sprites/739.png"
+    },
+    "740": {
+      "id": 740,
+      "name": "Crabominable",
+      "local_sprite": "/assets/sprites/740.png"
+    },
+    "741": {
+      "id": 741,
+      "name": "Oricorio-baile",
+      "local_sprite": "/assets/sprites/741.png"
+    },
+    "742": {
+      "id": 742,
+      "name": "Cutiefly",
+      "local_sprite": "/assets/sprites/742.png"
+    },
+    "743": {
+      "id": 743,
+      "name": "Ribombee",
+      "local_sprite": "/assets/sprites/743.png"
+    },
+    "744": {
+      "id": 744,
+      "name": "Rockruff",
+      "local_sprite": "/assets/sprites/744.png"
+    },
+    "745": {
+      "id": 745,
+      "name": "Lycanroc-midday",
+      "local_sprite": "/assets/sprites/745.png"
+    },
+    "746": {
+      "id": 746,
+      "name": "Wishiwashi-solo",
+      "local_sprite": "/assets/sprites/746.png"
+    },
+    "747": {
+      "id": 747,
+      "name": "Mareanie",
+      "local_sprite": "/assets/sprites/747.png"
+    },
+    "748": {
+      "id": 748,
+      "name": "Toxapex",
+      "local_sprite": "/assets/sprites/748.png"
+    },
+    "749": {
+      "id": 749,
+      "name": "Mudbray",
+      "local_sprite": "/assets/sprites/749.png"
+    },
+    "750": {
+      "id": 750,
+      "name": "Mudsdale",
+      "local_sprite": "/assets/sprites/750.png"
+    },
+    "751": {
+      "id": 751,
+      "name": "Dewpider",
+      "local_sprite": "/assets/sprites/751.png"
+    },
+    "752": {
+      "id": 752,
+      "name": "Araquanid",
+      "local_sprite": "/assets/sprites/752.png"
+    },
+    "753": {
+      "id": 753,
+      "name": "Fomantis",
+      "local_sprite": "/assets/sprites/753.png"
+    },
+    "754": {
+      "id": 754,
+      "name": "Lurantis",
+      "local_sprite": "/assets/sprites/754.png"
+    },
+    "755": {
+      "id": 755,
+      "name": "Morelull",
+      "local_sprite": "/assets/sprites/755.png"
+    },
+    "756": {
+      "id": 756,
+      "name": "Shiinotic",
+      "local_sprite": "/assets/sprites/756.png"
+    },
+    "757": {
+      "id": 757,
+      "name": "Salandit",
+      "local_sprite": "/assets/sprites/757.png"
+    },
+    "758": {
+      "id": 758,
+      "name": "Salazzle",
+      "local_sprite": "/assets/sprites/758.png"
+    },
+    "759": {
+      "id": 759,
+      "name": "Stufful",
+      "local_sprite": "/assets/sprites/759.png"
+    },
+    "760": {
+      "id": 760,
+      "name": "Bewear",
+      "local_sprite": "/assets/sprites/760.png"
+    },
+    "761": {
+      "id": 761,
+      "name": "Bounsweet",
+      "local_sprite": "/assets/sprites/761.png"
+    },
+    "762": {
+      "id": 762,
+      "name": "Steenee",
+      "local_sprite": "/assets/sprites/762.png"
+    },
+    "763": {
+      "id": 763,
+      "name": "Tsareena",
+      "local_sprite": "/assets/sprites/763.png"
+    },
+    "764": {
+      "id": 764,
+      "name": "Comfey",
+      "local_sprite": "/assets/sprites/764.png"
+    },
+    "765": {
+      "id": 765,
+      "name": "Oranguru",
+      "local_sprite": "/assets/sprites/765.png"
+    },
+    "766": {
+      "id": 766,
+      "name": "Passimian",
+      "local_sprite": "/assets/sprites/766.png"
+    },
+    "767": {
+      "id": 767,
+      "name": "Wimpod",
+      "local_sprite": "/assets/sprites/767.png"
+    },
+    "768": {
+      "id": 768,
+      "name": "Golisopod",
+      "local_sprite": "/assets/sprites/768.png"
+    },
+    "769": {
+      "id": 769,
+      "name": "Sandygast",
+      "local_sprite": "/assets/sprites/769.png"
+    },
+    "770": {
+      "id": 770,
+      "name": "Palossand",
+      "local_sprite": "/assets/sprites/770.png"
+    },
+    "771": {
+      "id": 771,
+      "name": "Pyukumuku",
+      "local_sprite": "/assets/sprites/771.png"
+    },
+    "772": {
+      "id": 772,
+      "name": "Type-null",
+      "local_sprite": "/assets/sprites/772.png"
+    },
+    "773": {
+      "id": 773,
+      "name": "Silvally",
+      "local_sprite": "/assets/sprites/773.png"
+    },
+    "774": {
+      "id": 774,
+      "name": "Minior-red-meteor",
+      "local_sprite": "/assets/sprites/774.png"
+    },
+    "775": {
+      "id": 775,
+      "name": "Komala",
+      "local_sprite": "/assets/sprites/775.png"
+    },
+    "776": {
+      "id": 776,
+      "name": "Turtonator",
+      "local_sprite": "/assets/sprites/776.png"
+    },
+    "777": {
+      "id": 777,
+      "name": "Togedemaru",
+      "local_sprite": "/assets/sprites/777.png"
+    },
+    "778": {
+      "id": 778,
+      "name": "Mimikyu-disguised",
+      "local_sprite": "/assets/sprites/778.png"
+    },
+    "779": {
+      "id": 779,
+      "name": "Bruxish",
+      "local_sprite": "/assets/sprites/779.png"
+    },
+    "780": {
+      "id": 780,
+      "name": "Drampa",
+      "local_sprite": "/assets/sprites/780.png"
+    },
+    "781": {
+      "id": 781,
+      "name": "Dhelmise",
+      "local_sprite": "/assets/sprites/781.png"
+    },
+    "782": {
+      "id": 782,
+      "name": "Jangmo-o",
+      "local_sprite": "/assets/sprites/782.png"
+    },
+    "783": {
+      "id": 783,
+      "name": "Hakamo-o",
+      "local_sprite": "/assets/sprites/783.png"
+    },
+    "784": {
+      "id": 784,
+      "name": "Kommo-o",
+      "local_sprite": "/assets/sprites/784.png"
+    },
+    "785": {
+      "id": 785,
+      "name": "Tapu-koko",
+      "local_sprite": "/assets/sprites/785.png"
+    },
+    "786": {
+      "id": 786,
+      "name": "Tapu-lele",
+      "local_sprite": "/assets/sprites/786.png"
+    },
+    "787": {
+      "id": 787,
+      "name": "Tapu-bulu",
+      "local_sprite": "/assets/sprites/787.png"
+    },
+    "788": {
+      "id": 788,
+      "name": "Tapu-fini",
+      "local_sprite": "/assets/sprites/788.png"
+    },
+    "789": {
+      "id": 789,
+      "name": "Cosmog",
+      "local_sprite": "/assets/sprites/789.png"
+    },
+    "790": {
+      "id": 790,
+      "name": "Cosmoem",
+      "local_sprite": "/assets/sprites/790.png"
+    },
+    "791": {
+      "id": 791,
+      "name": "Solgaleo",
+      "local_sprite": "/assets/sprites/791.png"
+    },
+    "792": {
+      "id": 792,
+      "name": "Lunala",
+      "local_sprite": "/assets/sprites/792.png"
+    },
+    "793": {
+      "id": 793,
+      "name": "Nihilego",
+      "local_sprite": "/assets/sprites/793.png"
+    },
+    "794": {
+      "id": 794,
+      "name": "Buzzwole",
+      "local_sprite": "/assets/sprites/794.png"
+    },
+    "795": {
+      "id": 795,
+      "name": "Pheromosa",
+      "local_sprite": "/assets/sprites/795.png"
+    },
+    "796": {
+      "id": 796,
+      "name": "Xurkitree",
+      "local_sprite": "/assets/sprites/796.png"
+    },
+    "797": {
+      "id": 797,
+      "name": "Celesteela",
+      "local_sprite": "/assets/sprites/797.png"
+    },
+    "798": {
+      "id": 798,
+      "name": "Kartana",
+      "local_sprite": "/assets/sprites/798.png"
+    },
+    "799": {
+      "id": 799,
+      "name": "Guzzlord",
+      "local_sprite": "/assets/sprites/799.png"
+    },
+    "800": {
+      "id": 800,
+      "name": "Necrozma",
+      "local_sprite": "/assets/sprites/800.png"
+    },
+    "801": {
+      "id": 801,
+      "name": "Magearna",
+      "local_sprite": "/assets/sprites/801.png"
+    },
+    "802": {
+      "id": 802,
+      "name": "Marshadow",
+      "local_sprite": "/assets/sprites/802.png"
+    },
+    "803": {
+      "id": 803,
+      "name": "Poipole",
+      "local_sprite": "/assets/sprites/803.png"
+    },
+    "804": {
+      "id": 804,
+      "name": "Naganadel",
+      "local_sprite": "/assets/sprites/804.png"
+    },
+    "805": {
+      "id": 805,
+      "name": "Stakataka",
+      "local_sprite": "/assets/sprites/805.png"
+    },
+    "806": {
+      "id": 806,
+      "name": "Blacephalon",
+      "local_sprite": "/assets/sprites/806.png"
+    },
+    "807": {
+      "id": 807,
+      "name": "Zeraora",
+      "local_sprite": "/assets/sprites/807.png"
+    },
+    "808": {
+      "id": 808,
+      "name": "Meltan",
+      "local_sprite": "/assets/sprites/808.png"
+    },
+    "809": {
+      "id": 809,
+      "name": "Melmetal",
+      "local_sprite": "/assets/sprites/809.png"
+    },
+    "810": {
+      "id": 810,
+      "name": "Grookey",
+      "local_sprite": "/assets/sprites/810.png"
+    },
+    "811": {
+      "id": 811,
+      "name": "Thwackey",
+      "local_sprite": "/assets/sprites/811.png"
+    },
+    "812": {
+      "id": 812,
+      "name": "Rillaboom",
+      "local_sprite": "/assets/sprites/812.png"
+    },
+    "813": {
+      "id": 813,
+      "name": "Scorbunny",
+      "local_sprite": "/assets/sprites/813.png"
+    },
+    "814": {
+      "id": 814,
+      "name": "Raboot",
+      "local_sprite": "/assets/sprites/814.png"
+    },
+    "815": {
+      "id": 815,
+      "name": "Cinderace",
+      "local_sprite": "/assets/sprites/815.png"
+    },
+    "816": {
+      "id": 816,
+      "name": "Sobble",
+      "local_sprite": "/assets/sprites/816.png"
+    },
+    "817": {
+      "id": 817,
+      "name": "Drizzile",
+      "local_sprite": "/assets/sprites/817.png"
+    },
+    "818": {
+      "id": 818,
+      "name": "Inteleon",
+      "local_sprite": "/assets/sprites/818.png"
+    },
+    "819": {
+      "id": 819,
+      "name": "Skwovet",
+      "local_sprite": "/assets/sprites/819.png"
+    },
+    "820": {
+      "id": 820,
+      "name": "Greedent",
+      "local_sprite": "/assets/sprites/820.png"
+    },
+    "821": {
+      "id": 821,
+      "name": "Rookidee",
+      "local_sprite": "/assets/sprites/821.png"
+    },
+    "822": {
+      "id": 822,
+      "name": "Corvisquire",
+      "local_sprite": "/assets/sprites/822.png"
+    },
+    "823": {
+      "id": 823,
+      "name": "Corviknight",
+      "local_sprite": "/assets/sprites/823.png"
+    },
+    "824": {
+      "id": 824,
+      "name": "Blipbug",
+      "local_sprite": "/assets/sprites/824.png"
+    },
+    "825": {
+      "id": 825,
+      "name": "Dottler",
+      "local_sprite": "/assets/sprites/825.png"
+    },
+    "826": {
+      "id": 826,
+      "name": "Orbeetle",
+      "local_sprite": "/assets/sprites/826.png"
+    },
+    "827": {
+      "id": 827,
+      "name": "Nickit",
+      "local_sprite": "/assets/sprites/827.png"
+    },
+    "828": {
+      "id": 828,
+      "name": "Thievul",
+      "local_sprite": "/assets/sprites/828.png"
+    },
+    "829": {
+      "id": 829,
+      "name": "Gossifleur",
+      "local_sprite": "/assets/sprites/829.png"
+    },
+    "830": {
+      "id": 830,
+      "name": "Eldegoss",
+      "local_sprite": "/assets/sprites/830.png"
+    },
+    "831": {
+      "id": 831,
+      "name": "Wooloo",
+      "local_sprite": "/assets/sprites/831.png"
+    },
+    "832": {
+      "id": 832,
+      "name": "Dubwool",
+      "local_sprite": "/assets/sprites/832.png"
+    },
+    "833": {
+      "id": 833,
+      "name": "Chewtle",
+      "local_sprite": "/assets/sprites/833.png"
+    },
+    "834": {
+      "id": 834,
+      "name": "Drednaw",
+      "local_sprite": "/assets/sprites/834.png"
+    },
+    "835": {
+      "id": 835,
+      "name": "Yamper",
+      "local_sprite": "/assets/sprites/835.png"
+    },
+    "836": {
+      "id": 836,
+      "name": "Boltund",
+      "local_sprite": "/assets/sprites/836.png"
+    },
+    "837": {
+      "id": 837,
+      "name": "Rolycoly",
+      "local_sprite": "/assets/sprites/837.png"
+    },
+    "838": {
+      "id": 838,
+      "name": "Carkol",
+      "local_sprite": "/assets/sprites/838.png"
+    },
+    "839": {
+      "id": 839,
+      "name": "Coalossal",
+      "local_sprite": "/assets/sprites/839.png"
+    },
+    "840": {
+      "id": 840,
+      "name": "Applin",
+      "local_sprite": "/assets/sprites/840.png"
+    },
+    "841": {
+      "id": 841,
+      "name": "Flapple",
+      "local_sprite": "/assets/sprites/841.png"
+    },
+    "842": {
+      "id": 842,
+      "name": "Appletun",
+      "local_sprite": "/assets/sprites/842.png"
+    },
+    "843": {
+      "id": 843,
+      "name": "Silicobra",
+      "local_sprite": "/assets/sprites/843.png"
+    },
+    "844": {
+      "id": 844,
+      "name": "Sandaconda",
+      "local_sprite": "/assets/sprites/844.png"
+    },
+    "845": {
+      "id": 845,
+      "name": "Cramorant",
+      "local_sprite": "/assets/sprites/845.png"
+    },
+    "846": {
+      "id": 846,
+      "name": "Arrokuda",
+      "local_sprite": "/assets/sprites/846.png"
+    },
+    "847": {
+      "id": 847,
+      "name": "Barraskewda",
+      "local_sprite": "/assets/sprites/847.png"
+    },
+    "848": {
+      "id": 848,
+      "name": "Toxel",
+      "local_sprite": "/assets/sprites/848.png"
+    },
+    "849": {
+      "id": 849,
+      "name": "Toxtricity-amped",
+      "local_sprite": "/assets/sprites/849.png"
+    },
+    "850": {
+      "id": 850,
+      "name": "Sizzlipede",
+      "local_sprite": "/assets/sprites/850.png"
+    },
+    "851": {
+      "id": 851,
+      "name": "Centiskorch",
+      "local_sprite": "/assets/sprites/851.png"
+    },
+    "852": {
+      "id": 852,
+      "name": "Clobbopus",
+      "local_sprite": "/assets/sprites/852.png"
+    },
+    "853": {
+      "id": 853,
+      "name": "Grapploct",
+      "local_sprite": "/assets/sprites/853.png"
+    },
+    "854": {
+      "id": 854,
+      "name": "Sinistea",
+      "local_sprite": "/assets/sprites/854.png"
+    },
+    "855": {
+      "id": 855,
+      "name": "Polteageist",
+      "local_sprite": "/assets/sprites/855.png"
+    },
+    "856": {
+      "id": 856,
+      "name": "Hatenna",
+      "local_sprite": "/assets/sprites/856.png"
+    },
+    "857": {
+      "id": 857,
+      "name": "Hattrem",
+      "local_sprite": "/assets/sprites/857.png"
+    },
+    "858": {
+      "id": 858,
+      "name": "Hatterene",
+      "local_sprite": "/assets/sprites/858.png"
+    },
+    "859": {
+      "id": 859,
+      "name": "Impidimp",
+      "local_sprite": "/assets/sprites/859.png"
+    },
+    "860": {
+      "id": 860,
+      "name": "Morgrem",
+      "local_sprite": "/assets/sprites/860.png"
+    },
+    "861": {
+      "id": 861,
+      "name": "Grimmsnarl",
+      "local_sprite": "/assets/sprites/861.png"
+    },
+    "862": {
+      "id": 862,
+      "name": "Obstagoon",
+      "local_sprite": "/assets/sprites/862.png"
+    },
+    "863": {
+      "id": 863,
+      "name": "Perrserker",
+      "local_sprite": "/assets/sprites/863.png"
+    },
+    "864": {
+      "id": 864,
+      "name": "Cursola",
+      "local_sprite": "/assets/sprites/864.png"
+    },
+    "865": {
+      "id": 865,
+      "name": "Sirfetchd",
+      "local_sprite": "/assets/sprites/865.png"
+    },
+    "866": {
+      "id": 866,
+      "name": "Mr-rime",
+      "local_sprite": "/assets/sprites/866.png"
+    },
+    "867": {
+      "id": 867,
+      "name": "Runerigus",
+      "local_sprite": "/assets/sprites/867.png"
+    },
+    "868": {
+      "id": 868,
+      "name": "Milcery",
+      "local_sprite": "/assets/sprites/868.png"
+    },
+    "869": {
+      "id": 869,
+      "name": "Alcremie",
+      "local_sprite": "/assets/sprites/869.png"
+    },
+    "870": {
+      "id": 870,
+      "name": "Falinks",
+      "local_sprite": "/assets/sprites/870.png"
+    },
+    "871": {
+      "id": 871,
+      "name": "Pincurchin",
+      "local_sprite": "/assets/sprites/871.png"
+    },
+    "872": {
+      "id": 872,
+      "name": "Snom",
+      "local_sprite": "/assets/sprites/872.png"
+    },
+    "873": {
+      "id": 873,
+      "name": "Frosmoth",
+      "local_sprite": "/assets/sprites/873.png"
+    },
+    "874": {
+      "id": 874,
+      "name": "Stonjourner",
+      "local_sprite": "/assets/sprites/874.png"
+    },
+    "875": {
+      "id": 875,
+      "name": "Eiscue-ice",
+      "local_sprite": "/assets/sprites/875.png"
+    },
+    "876": {
+      "id": 876,
+      "name": "Indeedee-male",
+      "local_sprite": "/assets/sprites/876.png"
+    },
+    "877": {
+      "id": 877,
+      "name": "Morpeko-full-belly",
+      "local_sprite": "/assets/sprites/877.png"
+    },
+    "878": {
+      "id": 878,
+      "name": "Cufant",
+      "local_sprite": "/assets/sprites/878.png"
+    },
+    "879": {
+      "id": 879,
+      "name": "Copperajah",
+      "local_sprite": "/assets/sprites/879.png"
+    },
+    "880": {
+      "id": 880,
+      "name": "Dracozolt",
+      "local_sprite": "/assets/sprites/880.png"
+    },
+    "881": {
+      "id": 881,
+      "name": "Arctozolt",
+      "local_sprite": "/assets/sprites/881.png"
+    },
+    "882": {
+      "id": 882,
+      "name": "Dracovish",
+      "local_sprite": "/assets/sprites/882.png"
+    },
+    "883": {
+      "id": 883,
+      "name": "Arctovish",
+      "local_sprite": "/assets/sprites/883.png"
+    },
+    "884": {
+      "id": 884,
+      "name": "Duraludon",
+      "local_sprite": "/assets/sprites/884.png"
+    },
+    "885": {
+      "id": 885,
+      "name": "Dreepy",
+      "local_sprite": "/assets/sprites/885.png"
+    },
+    "886": {
+      "id": 886,
+      "name": "Drakloak",
+      "local_sprite": "/assets/sprites/886.png"
+    },
+    "887": {
+      "id": 887,
+      "name": "Dragapult",
+      "local_sprite": "/assets/sprites/887.png"
+    },
+    "888": {
+      "id": 888,
+      "name": "Zacian",
+      "local_sprite": "/assets/sprites/888.png"
+    },
+    "889": {
+      "id": 889,
+      "name": "Zamazenta",
+      "local_sprite": "/assets/sprites/889.png"
+    },
+    "890": {
+      "id": 890,
+      "name": "Eternatus",
+      "local_sprite": "/assets/sprites/890.png"
+    },
+    "891": {
+      "id": 891,
+      "name": "Kubfu",
+      "local_sprite": "/assets/sprites/891.png"
+    },
+    "892": {
+      "id": 892,
+      "name": "Urshifu-single-strike",
+      "local_sprite": "/assets/sprites/892.png"
+    },
+    "893": {
+      "id": 893,
+      "name": "Zarude",
+      "local_sprite": "/assets/sprites/893.png"
+    },
+    "894": {
+      "id": 894,
+      "name": "Regieleki",
+      "local_sprite": "/assets/sprites/894.png"
+    },
+    "895": {
+      "id": 895,
+      "name": "Regidrago",
+      "local_sprite": "/assets/sprites/895.png"
+    },
+    "896": {
+      "id": 896,
+      "name": "Glastrier",
+      "local_sprite": "/assets/sprites/896.png"
+    },
+    "897": {
+      "id": 897,
+      "name": "Spectrier",
+      "local_sprite": "/assets/sprites/897.png"
+    },
+    "898": {
+      "id": 898,
+      "name": "Calyrex",
+      "local_sprite": "/assets/sprites/898.png"
+    },
+    "899": {
+      "id": 899,
+      "name": "Wyrdeer",
+      "local_sprite": "/assets/sprites/899.png"
+    },
+    "900": {
+      "id": 900,
+      "name": "Kleavor",
+      "local_sprite": "/assets/sprites/900.png"
+    },
+    "901": {
+      "id": 901,
+      "name": "Ursaluna",
+      "local_sprite": "/assets/sprites/901.png"
+    },
+    "902": {
+      "id": 902,
+      "name": "Basculegion-male",
+      "local_sprite": "/assets/sprites/902.png"
+    },
+    "903": {
+      "id": 903,
+      "name": "Sneasler",
+      "local_sprite": "/assets/sprites/903.png"
+    },
+    "904": {
+      "id": 904,
+      "name": "Overqwil",
+      "local_sprite": "/assets/sprites/904.png"
+    },
+    "905": {
+      "id": 905,
+      "name": "Enamorus-incarnate",
+      "local_sprite": "/assets/sprites/905.png"
+    },
+    "906": {
+      "id": 906,
+      "name": "Sprigatito",
+      "local_sprite": "/assets/sprites/906.png"
+    },
+    "907": {
+      "id": 907,
+      "name": "Floragato",
+      "local_sprite": "/assets/sprites/907.png"
+    },
+    "908": {
+      "id": 908,
+      "name": "Meowscarada",
+      "local_sprite": "/assets/sprites/908.png"
+    },
+    "909": {
+      "id": 909,
+      "name": "Fuecoco",
+      "local_sprite": "/assets/sprites/909.png"
+    },
+    "910": {
+      "id": 910,
+      "name": "Crocalor",
+      "local_sprite": "/assets/sprites/910.png"
+    },
+    "911": {
+      "id": 911,
+      "name": "Skeledirge",
+      "local_sprite": "/assets/sprites/911.png"
+    },
+    "912": {
+      "id": 912,
+      "name": "Quaxly",
+      "local_sprite": "/assets/sprites/912.png"
+    },
+    "913": {
+      "id": 913,
+      "name": "Quaxwell",
+      "local_sprite": "/assets/sprites/913.png"
+    },
+    "914": {
+      "id": 914,
+      "name": "Quaquaval",
+      "local_sprite": "/assets/sprites/914.png"
+    },
+    "915": {
+      "id": 915,
+      "name": "Lechonk",
+      "local_sprite": "/assets/sprites/915.png"
+    },
+    "916": {
+      "id": 916,
+      "name": "Oinkologne-male",
+      "local_sprite": "/assets/sprites/916.png"
+    },
+    "917": {
+      "id": 917,
+      "name": "Tarountula",
+      "local_sprite": "/assets/sprites/917.png"
+    },
+    "918": {
+      "id": 918,
+      "name": "Spidops",
+      "local_sprite": "/assets/sprites/918.png"
+    },
+    "919": {
+      "id": 919,
+      "name": "Nymble",
+      "local_sprite": "/assets/sprites/919.png"
+    },
+    "920": {
+      "id": 920,
+      "name": "Lokix",
+      "local_sprite": "/assets/sprites/920.png"
+    },
+    "921": {
+      "id": 921,
+      "name": "Pawmi",
+      "local_sprite": "/assets/sprites/921.png"
+    },
+    "922": {
+      "id": 922,
+      "name": "Pawmo",
+      "local_sprite": "/assets/sprites/922.png"
+    },
+    "923": {
+      "id": 923,
+      "name": "Pawmot",
+      "local_sprite": "/assets/sprites/923.png"
+    },
+    "924": {
+      "id": 924,
+      "name": "Tandemaus",
+      "local_sprite": "/assets/sprites/924.png"
+    },
+    "925": {
+      "id": 925,
+      "name": "Maushold-family-of-four",
+      "local_sprite": "/assets/sprites/925.png"
+    },
+    "926": {
+      "id": 926,
+      "name": "Fidough",
+      "local_sprite": "/assets/sprites/926.png"
+    },
+    "927": {
+      "id": 927,
+      "name": "Dachsbun",
+      "local_sprite": "/assets/sprites/927.png"
+    },
+    "928": {
+      "id": 928,
+      "name": "Smoliv",
+      "local_sprite": "/assets/sprites/928.png"
+    },
+    "929": {
+      "id": 929,
+      "name": "Dolliv",
+      "local_sprite": "/assets/sprites/929.png"
+    },
+    "930": {
+      "id": 930,
+      "name": "Arboliva",
+      "local_sprite": "/assets/sprites/930.png"
+    },
+    "931": {
+      "id": 931,
+      "name": "Squawkabilly-green-plumage",
+      "local_sprite": "/assets/sprites/931.png"
+    },
+    "932": {
+      "id": 932,
+      "name": "Nacli",
+      "local_sprite": "/assets/sprites/932.png"
+    },
+    "933": {
+      "id": 933,
+      "name": "Naclstack",
+      "local_sprite": "/assets/sprites/933.png"
+    },
+    "934": {
+      "id": 934,
+      "name": "Garganacl",
+      "local_sprite": "/assets/sprites/934.png"
+    },
+    "935": {
+      "id": 935,
+      "name": "Charcadet",
+      "local_sprite": "/assets/sprites/935.png"
+    },
+    "936": {
+      "id": 936,
+      "name": "Armarouge",
+      "local_sprite": "/assets/sprites/936.png"
+    },
+    "937": {
+      "id": 937,
+      "name": "Ceruledge",
+      "local_sprite": "/assets/sprites/937.png"
+    },
+    "938": {
+      "id": 938,
+      "name": "Tadbulb",
+      "local_sprite": "/assets/sprites/938.png"
+    },
+    "939": {
+      "id": 939,
+      "name": "Bellibolt",
+      "local_sprite": "/assets/sprites/939.png"
+    },
+    "940": {
+      "id": 940,
+      "name": "Wattrel",
+      "local_sprite": "/assets/sprites/940.png"
+    },
+    "941": {
+      "id": 941,
+      "name": "Kilowattrel",
+      "local_sprite": "/assets/sprites/941.png"
+    },
+    "942": {
+      "id": 942,
+      "name": "Maschiff",
+      "local_sprite": "/assets/sprites/942.png"
+    },
+    "943": {
+      "id": 943,
+      "name": "Mabosstiff",
+      "local_sprite": "/assets/sprites/943.png"
+    },
+    "944": {
+      "id": 944,
+      "name": "Shroodle",
+      "local_sprite": "/assets/sprites/944.png"
+    },
+    "945": {
+      "id": 945,
+      "name": "Grafaiai",
+      "local_sprite": "/assets/sprites/945.png"
+    },
+    "946": {
+      "id": 946,
+      "name": "Bramblin",
+      "local_sprite": "/assets/sprites/946.png"
+    },
+    "947": {
+      "id": 947,
+      "name": "Brambleghast",
+      "local_sprite": "/assets/sprites/947.png"
+    },
+    "948": {
+      "id": 948,
+      "name": "Toedscool",
+      "local_sprite": "/assets/sprites/948.png"
+    },
+    "949": {
+      "id": 949,
+      "name": "Toedscruel",
+      "local_sprite": "/assets/sprites/949.png"
+    },
+    "950": {
+      "id": 950,
+      "name": "Klawf",
+      "local_sprite": "/assets/sprites/950.png"
+    },
+    "951": {
+      "id": 951,
+      "name": "Capsakid",
+      "local_sprite": "/assets/sprites/951.png"
+    },
+    "952": {
+      "id": 952,
+      "name": "Scovillain",
+      "local_sprite": "/assets/sprites/952.png"
+    },
+    "953": {
+      "id": 953,
+      "name": "Rellor",
+      "local_sprite": "/assets/sprites/953.png"
+    },
+    "954": {
+      "id": 954,
+      "name": "Rabsca",
+      "local_sprite": "/assets/sprites/954.png"
+    },
+    "955": {
+      "id": 955,
+      "name": "Flittle",
+      "local_sprite": "/assets/sprites/955.png"
+    },
+    "956": {
+      "id": 956,
+      "name": "Espathra",
+      "local_sprite": "/assets/sprites/956.png"
+    },
+    "957": {
+      "id": 957,
+      "name": "Tinkatink",
+      "local_sprite": "/assets/sprites/957.png"
+    },
+    "958": {
+      "id": 958,
+      "name": "Tinkatuff",
+      "local_sprite": "/assets/sprites/958.png"
+    },
+    "959": {
+      "id": 959,
+      "name": "Tinkaton",
+      "local_sprite": "/assets/sprites/959.png"
+    },
+    "960": {
+      "id": 960,
+      "name": "Wiglett",
+      "local_sprite": "/assets/sprites/960.png"
+    },
+    "961": {
+      "id": 961,
+      "name": "Wugtrio",
+      "local_sprite": "/assets/sprites/961.png"
+    },
+    "962": {
+      "id": 962,
+      "name": "Bombirdier",
+      "local_sprite": "/assets/sprites/962.png"
+    },
+    "963": {
+      "id": 963,
+      "name": "Finizen",
+      "local_sprite": "/assets/sprites/963.png"
+    },
+    "964": {
+      "id": 964,
+      "name": "Palafin-zero",
+      "local_sprite": "/assets/sprites/964.png"
+    },
+    "965": {
+      "id": 965,
+      "name": "Varoom",
+      "local_sprite": "/assets/sprites/965.png"
+    },
+    "966": {
+      "id": 966,
+      "name": "Revavroom",
+      "local_sprite": "/assets/sprites/966.png"
+    },
+    "967": {
+      "id": 967,
+      "name": "Cyclizar",
+      "local_sprite": "/assets/sprites/967.png"
+    },
+    "968": {
+      "id": 968,
+      "name": "Orthworm",
+      "local_sprite": "/assets/sprites/968.png"
+    },
+    "969": {
+      "id": 969,
+      "name": "Glimmet",
+      "local_sprite": "/assets/sprites/969.png"
+    },
+    "970": {
+      "id": 970,
+      "name": "Glimmora",
+      "local_sprite": "/assets/sprites/970.png"
+    },
+    "971": {
+      "id": 971,
+      "name": "Greavard",
+      "local_sprite": "/assets/sprites/971.png"
+    },
+    "972": {
+      "id": 972,
+      "name": "Houndstone",
+      "local_sprite": "/assets/sprites/972.png"
+    },
+    "973": {
+      "id": 973,
+      "name": "Flamigo",
+      "local_sprite": "/assets/sprites/973.png"
+    },
+    "974": {
+      "id": 974,
+      "name": "Cetoddle",
+      "local_sprite": "/assets/sprites/974.png"
+    },
+    "975": {
+      "id": 975,
+      "name": "Cetitan",
+      "local_sprite": "/assets/sprites/975.png"
+    },
+    "976": {
+      "id": 976,
+      "name": "Veluza",
+      "local_sprite": "/assets/sprites/976.png"
+    },
+    "977": {
+      "id": 977,
+      "name": "Dondozo",
+      "local_sprite": "/assets/sprites/977.png"
+    },
+    "978": {
+      "id": 978,
+      "name": "Tatsugiri-curly",
+      "local_sprite": "/assets/sprites/978.png"
+    },
+    "979": {
+      "id": 979,
+      "name": "Annihilape",
+      "local_sprite": "/assets/sprites/979.png"
+    },
+    "980": {
+      "id": 980,
+      "name": "Clodsire",
+      "local_sprite": "/assets/sprites/980.png"
+    },
+    "981": {
+      "id": 981,
+      "name": "Farigiraf",
+      "local_sprite": "/assets/sprites/981.png"
+    },
+    "982": {
+      "id": 982,
+      "name": "Dudunsparce-two-segment",
+      "local_sprite": "/assets/sprites/982.png"
+    },
+    "983": {
+      "id": 983,
+      "name": "Kingambit",
+      "local_sprite": "/assets/sprites/983.png"
+    },
+    "984": {
+      "id": 984,
+      "name": "Great-tusk",
+      "local_sprite": "/assets/sprites/984.png"
+    },
+    "985": {
+      "id": 985,
+      "name": "Scream-tail",
+      "local_sprite": "/assets/sprites/985.png"
+    },
+    "986": {
+      "id": 986,
+      "name": "Brute-bonnet",
+      "local_sprite": "/assets/sprites/986.png"
+    },
+    "987": {
+      "id": 987,
+      "name": "Flutter-mane",
+      "local_sprite": "/assets/sprites/987.png"
+    },
+    "988": {
+      "id": 988,
+      "name": "Slither-wing",
+      "local_sprite": "/assets/sprites/988.png"
+    },
+    "989": {
+      "id": 989,
+      "name": "Sandy-shocks",
+      "local_sprite": "/assets/sprites/989.png"
+    },
+    "990": {
+      "id": 990,
+      "name": "Iron-treads",
+      "local_sprite": "/assets/sprites/990.png"
+    },
+    "991": {
+      "id": 991,
+      "name": "Iron-bundle",
+      "local_sprite": "/assets/sprites/991.png"
+    },
+    "992": {
+      "id": 992,
+      "name": "Iron-hands",
+      "local_sprite": "/assets/sprites/992.png"
+    },
+    "993": {
+      "id": 993,
+      "name": "Iron-jugulis",
+      "local_sprite": "/assets/sprites/993.png"
+    },
+    "994": {
+      "id": 994,
+      "name": "Iron-moth",
+      "local_sprite": "/assets/sprites/994.png"
+    },
+    "995": {
+      "id": 995,
+      "name": "Iron-thorns",
+      "local_sprite": "/assets/sprites/995.png"
+    },
+    "996": {
+      "id": 996,
+      "name": "Frigibax",
+      "local_sprite": "/assets/sprites/996.png"
+    },
+    "997": {
+      "id": 997,
+      "name": "Arctibax",
+      "local_sprite": "/assets/sprites/997.png"
+    },
+    "998": {
+      "id": 998,
+      "name": "Baxcalibur",
+      "local_sprite": "/assets/sprites/998.png"
+    },
+    "999": {
+      "id": 999,
+      "name": "Gimmighoul",
+      "local_sprite": "/assets/sprites/999.png"
+    },
+    "1000": {
+      "id": 1000,
+      "name": "Gholdengo",
+      "local_sprite": "/assets/sprites/1000.png"
+    },
+    "1001": {
+      "id": 1001,
+      "name": "Wo-chien",
+      "local_sprite": "/assets/sprites/1001.png"
+    },
+    "1002": {
+      "id": 1002,
+      "name": "Chien-pao",
+      "local_sprite": "/assets/sprites/1002.png"
+    },
+    "1003": {
+      "id": 1003,
+      "name": "Ting-lu",
+      "local_sprite": "/assets/sprites/1003.png"
+    },
+    "1004": {
+      "id": 1004,
+      "name": "Chi-yu",
+      "local_sprite": "/assets/sprites/1004.png"
+    },
+    "1005": {
+      "id": 1005,
+      "name": "Roaring-moon",
+      "local_sprite": "/assets/sprites/1005.png"
+    },
+    "1006": {
+      "id": 1006,
+      "name": "Iron-valiant",
+      "local_sprite": "/assets/sprites/1006.png"
+    },
+    "1007": {
+      "id": 1007,
+      "name": "Koraidon",
+      "local_sprite": "/assets/sprites/1007.png"
+    },
+    "1008": {
+      "id": 1008,
+      "name": "Miraidon",
+      "local_sprite": "/assets/sprites/1008.png"
+    },
+    "1009": {
+      "id": 1009,
+      "name": "Walking-wake",
+      "local_sprite": "/assets/sprites/1009.png"
+    },
+    "1010": {
+      "id": 1010,
+      "name": "Iron-leaves",
+      "local_sprite": "/assets/sprites/1010.png"
+    },
+    "1011": {
+      "id": 1011,
+      "name": "Dipplin",
+      "local_sprite": "/assets/sprites/1011.png"
+    },
+    "1012": {
+      "id": 1012,
+      "name": "Poltchageist",
+      "local_sprite": "/assets/sprites/1012.png"
+    },
+    "1013": {
+      "id": 1013,
+      "name": "Sinistcha",
+      "local_sprite": "/assets/sprites/1013.png"
+    },
+    "1014": {
+      "id": 1014,
+      "name": "Okidogi",
+      "local_sprite": "/assets/sprites/1014.png"
+    },
+    "1015": {
+      "id": 1015,
+      "name": "Munkidori",
+      "local_sprite": "/assets/sprites/1015.png"
+    },
+    "1016": {
+      "id": 1016,
+      "name": "Fezandipiti",
+      "local_sprite": "/assets/sprites/1016.png"
+    },
+    "1017": {
+      "id": 1017,
+      "name": "Ogerpon",
+      "local_sprite": "/assets/sprites/1017.png"
+    },
+    "1018": {
+      "id": 1018,
+      "name": "Archaludon",
+      "local_sprite": "/assets/sprites/1018.png"
+    },
+    "1019": {
+      "id": 1019,
+      "name": "Hydrapple",
+      "local_sprite": "/assets/sprites/1019.png"
+    },
+    "1020": {
+      "id": 1020,
+      "name": "Gouging-fire",
+      "local_sprite": "/assets/sprites/1020.png"
+    },
+    "1021": {
+      "id": 1021,
+      "name": "Raging-bolt",
+      "local_sprite": "/assets/sprites/1021.png"
+    },
+    "1022": {
+      "id": 1022,
+      "name": "Iron-boulder",
+      "local_sprite": "/assets/sprites/1022.png"
+    },
+    "1023": {
+      "id": 1023,
+      "name": "Iron-crown",
+      "local_sprite": "/assets/sprites/1023.png"
+    },
+    "1024": {
+      "id": 1024,
+      "name": "Terapagos",
+      "local_sprite": "/assets/sprites/1024.png"
+    },
+    "1025": {
+      "id": 1025,
+      "name": "Pecharunt",
+      "local_sprite": "/assets/sprites/1025.png"
+    }
+  }

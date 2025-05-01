@@ -1,0 +1,1798 @@
+{
+  "sets": {
+    "journey_together": {
+      "name": "Journey Together",
+      "total_cards": 168,
+      "cards": {
+        "46 Alolan Golem": {
+          "id": "46 Alolan Golem",
+          "name": "Card #46 Alolan Golem",
+          "image_path": "/assets/tcg_cards/journey_together/46 Alolan Golem.png",
+          "artist": "Unknown"
+        },
+        "56 Lillie's Clefairy ex": {
+          "id": "56 Lillie's Clefairy ex",
+          "name": "Card #56 Lillie's Clefairy ex",
+          "image_path": "/assets/tcg_cards/journey_together/56 Lillie's Clefairy ex.png",
+          "artist": "Unknown"
+        },
+        "29 Volcarona": {
+          "id": "29 Volcarona",
+          "name": "Card #29 Volcarona",
+          "image_path": "/assets/tcg_cards/journey_together/29 Volcarona.png",
+          "artist": "Unknown"
+        },
+        "133 Hop's Rookidee": {
+          "id": "133 Hop's Rookidee",
+          "name": "Card #133 Hop's Rookidee",
+          "image_path": "/assets/tcg_cards/journey_together/133 Hop's Rookidee.png",
+          "artist": "Unknown"
+        },
+        "11 Amoonguss ex": {
+          "id": "11 Amoonguss ex",
+          "name": "Card #11 Amoonguss ex",
+          "image_path": "/assets/tcg_cards/journey_together/11 Amoonguss ex.png",
+          "artist": "Unknown"
+        },
+        "25 Torkoal": {
+          "id": "25 Torkoal",
+          "name": "Card #25 Torkoal",
+          "image_path": "/assets/tcg_cards/journey_together/25 Torkoal.png",
+          "artist": "Unknown"
+        },
+        "160 Maractus": {
+          "id": "160 Maractus",
+          "name": "Card #160 Maractus",
+          "image_path": "/assets/tcg_cards/journey_together/160 Maractus.png",
+          "artist": "Unknown"
+        },
+        "96 N's Purrloin": {
+          "id": "96 N's Purrloin",
+          "name": "Card #96 N's Purrloin",
+          "image_path": "/assets/tcg_cards/journey_together/96 N's Purrloin.png",
+          "artist": "Unknown"
+        },
+        "163 Iono's Kilowattrel": {
+          "id": "163 Iono's Kilowattrel",
+          "name": "Card #163 Iono's Kilowattrel",
+          "image_path": "/assets/tcg_cards/journey_together/163 Iono's Kilowattrel.png",
+          "artist": "Unknown"
+        },
+        "47 Iono's Voltorb": {
+          "id": "47 Iono's Voltorb",
+          "name": "Card #47 Iono's Voltorb",
+          "image_path": "/assets/tcg_cards/journey_together/47 Iono's Voltorb.png",
+          "artist": "Unknown"
+        },
+        "103 N's Klink": {
+          "id": "103 N's Klink",
+          "name": "Card #103 N's Klink",
+          "image_path": "/assets/tcg_cards/journey_together/103 N's Klink.png",
+          "artist": "Unknown"
+        },
+        "40 Wailmer": {
+          "id": "40 Wailmer",
+          "name": "Card #40 Wailmer",
+          "image_path": "/assets/tcg_cards/journey_together/40 Wailmer.png",
+          "artist": "Unknown"
+        },
+        "58 Mr": {
+          "id": "58 Mr",
+          "name": "Card #58 Mr",
+          "image_path": "/assets/tcg_cards/journey_together/58 Mr. Mime.png",
+          "artist": "Unknown"
+        },
+        "91 Koffing": {
+          "id": "91 Koffing",
+          "name": "Card #91 Koffing",
+          "image_path": "/assets/tcg_cards/journey_together/91 Koffing.png",
+          "artist": "Unknown"
+        },
+        "98 N's Zoroark ex": {
+          "id": "98 N's Zoroark ex",
+          "name": "Card #98 N's Zoroark ex",
+          "image_path": "/assets/tcg_cards/journey_together/98 N's Zoroark ex.png",
+          "artist": "Unknown"
+        },
+        "108 Hop's Corviknight": {
+          "id": "108 Hop's Corviknight",
+          "name": "Card #108 Hop's Corviknight",
+          "image_path": "/assets/tcg_cards/journey_together/108 Hop's Corviknight.png",
+          "artist": "Unknown"
+        },
+        "127 Noibat": {
+          "id": "127 Noibat",
+          "name": "Card #127 Noibat",
+          "image_path": "/assets/tcg_cards/journey_together/127 Noibat.png",
+          "artist": "Unknown"
+        },
+        "70 Dhelmise": {
+          "id": "70 Dhelmise",
+          "name": "Card #70 Dhelmise",
+          "image_path": "/assets/tcg_cards/journey_together/70 Dhelmise.png",
+          "artist": "Unknown"
+        },
+        "53 Iono's Bellibolt ex": {
+          "id": "53 Iono's Bellibolt ex",
+          "name": "Card #53 Iono's Bellibolt ex",
+          "image_path": "/assets/tcg_cards/journey_together/53 Iono's Bellibolt ex.png",
+          "artist": "Unknown"
+        },
+        "60 Banette": {
+          "id": "60 Banette",
+          "name": "Card #60 Banette",
+          "image_path": "/assets/tcg_cards/journey_together/60 Banette.png",
+          "artist": "Unknown"
+        },
+        "166 Lycanroc": {
+          "id": "166 Lycanroc",
+          "name": "Card #166 Lycanroc",
+          "image_path": "/assets/tcg_cards/journey_together/166 Lycanroc.png",
+          "artist": "Unknown"
+        },
+        "78 Piloswine": {
+          "id": "78 Piloswine",
+          "name": "Card #78 Piloswine",
+          "image_path": "/assets/tcg_cards/journey_together/78 Piloswine.png",
+          "artist": "Unknown"
+        },
+        "170 Hop's Wooloo": {
+          "id": "170 Hop's Wooloo",
+          "name": "Card #170 Hop's Wooloo",
+          "image_path": "/assets/tcg_cards/journey_together/170 Hop's Wooloo.png",
+          "artist": "Unknown"
+        },
+        "80 Larvitar": {
+          "id": "80 Larvitar",
+          "name": "Card #80 Larvitar",
+          "image_path": "/assets/tcg_cards/journey_together/80 Larvitar.png",
+          "artist": "Unknown"
+        },
+        "104 N's Klang": {
+          "id": "104 N's Klang",
+          "name": "Card #104 N's Klang",
+          "image_path": "/assets/tcg_cards/journey_together/104 N's Klang.png",
+          "artist": "Unknown"
+        },
+        "164 Lillie's Ribombee": {
+          "id": "164 Lillie's Ribombee",
+          "name": "Card #164 Lillie's Ribombee",
+          "image_path": "/assets/tcg_cards/journey_together/164 Lillie's Ribombee.png",
+          "artist": "Unknown"
+        },
+        "88 Toedscool": {
+          "id": "88 Toedscool",
+          "name": "Card #88 Toedscool",
+          "image_path": "/assets/tcg_cards/journey_together/88 Toedscool.png",
+          "artist": "Unknown"
+        },
+        "36 Lombre": {
+          "id": "36 Lombre",
+          "name": "Card #36 Lombre",
+          "image_path": "/assets/tcg_cards/journey_together/36 Lombre.png",
+          "artist": "Unknown"
+        },
+        "2 Metapod": {
+          "id": "2 Metapod",
+          "name": "Card #2 Metapod",
+          "image_path": "/assets/tcg_cards/journey_together/2 Metapod.png",
+          "artist": "Unknown"
+        },
+        "185 N's Zoroark ex": {
+          "id": "185 N's Zoroark ex",
+          "name": "Card #185 N's Zoroark ex",
+          "image_path": "/assets/tcg_cards/journey_together/185 N's Zoroark ex.png",
+          "artist": "Unknown"
+        },
+        "115 Druddigon": {
+          "id": "115 Druddigon",
+          "name": "Card #115 Druddigon",
+          "image_path": "/assets/tcg_cards/journey_together/115 Druddigon.png",
+          "artist": "Unknown"
+        },
+        "81 Pupitar": {
+          "id": "81 Pupitar",
+          "name": "Card #81 Pupitar",
+          "image_path": "/assets/tcg_cards/journey_together/81 Pupitar.png",
+          "artist": "Unknown"
+        },
+        "129 Komala": {
+          "id": "129 Komala",
+          "name": "Card #129 Komala",
+          "image_path": "/assets/tcg_cards/journey_together/129 Komala.png",
+          "artist": "Unknown"
+        },
+        "19 Nymble": {
+          "id": "19 Nymble",
+          "name": "Card #19 Nymble",
+          "image_path": "/assets/tcg_cards/journey_together/19 Nymble.png",
+          "artist": "Unknown"
+        },
+        "24 Blaziken ex": {
+          "id": "24 Blaziken ex",
+          "name": "Card #24 Blaziken ex",
+          "image_path": "/assets/tcg_cards/journey_together/24 Blaziken ex.png",
+          "artist": "Unknown"
+        },
+        "110 Copperajah": {
+          "id": "110 Copperajah",
+          "name": "Card #110 Copperajah",
+          "image_path": "/assets/tcg_cards/journey_together/110 Copperajah.png",
+          "artist": "Unknown"
+        },
+        "128 Noivern": {
+          "id": "128 Noivern",
+          "name": "Card #128 Noivern",
+          "image_path": "/assets/tcg_cards/journey_together/128 Noivern.png",
+          "artist": "Unknown"
+        },
+        "79 Mamoswine ex": {
+          "id": "79 Mamoswine ex",
+          "name": "Card #79 Mamoswine ex",
+          "image_path": "/assets/tcg_cards/journey_together/79 Mamoswine ex.png",
+          "artist": "Unknown"
+        },
+        "134 Hop's Corvisquire": {
+          "id": "134 Hop's Corvisquire",
+          "name": "Card #134 Hop's Corvisquire",
+          "image_path": "/assets/tcg_cards/journey_together/134 Hop's Corvisquire.png",
+          "artist": "Unknown"
+        },
+        "106 Galarian Stunfisk": {
+          "id": "106 Galarian Stunfisk",
+          "name": "Card #106 Galarian Stunfisk",
+          "image_path": "/assets/tcg_cards/journey_together/106 Galarian Stunfisk.png",
+          "artist": "Unknown"
+        },
+        "119 Furret": {
+          "id": "119 Furret",
+          "name": "Card #119 Furret",
+          "image_path": "/assets/tcg_cards/journey_together/119 Furret.png",
+          "artist": "Unknown"
+        },
+        "162 Wailord": {
+          "id": "162 Wailord",
+          "name": "Card #162 Wailord",
+          "image_path": "/assets/tcg_cards/journey_together/162 Wailord.png",
+          "artist": "Unknown"
+        },
+        "52 Iono's Tadbulb": {
+          "id": "52 Iono's Tadbulb",
+          "name": "Card #52 Iono's Tadbulb",
+          "image_path": "/assets/tcg_cards/journey_together/52 Iono's Tadbulb.png",
+          "artist": "Unknown"
+        },
+        "68 Lillie's Comfey": {
+          "id": "68 Lillie's Comfey",
+          "name": "Card #68 Lillie's Comfey",
+          "image_path": "/assets/tcg_cards/journey_together/68 Lillie's Comfey.png",
+          "artist": "Unknown"
+        },
+        "77 Swinub": {
+          "id": "77 Swinub",
+          "name": "Card #77 Swinub",
+          "image_path": "/assets/tcg_cards/journey_together/77 Swinub.png",
+          "artist": "Unknown"
+        },
+        "111 Hop's Zacian ex": {
+          "id": "111 Hop's Zacian ex",
+          "name": "Card #111 Hop's Zacian ex",
+          "image_path": "/assets/tcg_cards/journey_together/111 Hop's Zacian ex.png",
+          "artist": "Unknown"
+        },
+        "177 Salamence ex": {
+          "id": "177 Salamence ex",
+          "name": "Card #177 Salamence ex",
+          "image_path": "/assets/tcg_cards/journey_together/177 Salamence ex.png",
+          "artist": "Unknown"
+        },
+        "131 Skwovet": {
+          "id": "131 Skwovet",
+          "name": "Card #131 Skwovet",
+          "image_path": "/assets/tcg_cards/journey_together/131 Skwovet.png",
+          "artist": "Unknown"
+        },
+        "94 Paldean Clodsire ex": {
+          "id": "94 Paldean Clodsire ex",
+          "name": "Card #94 Paldean Clodsire ex",
+          "image_path": "/assets/tcg_cards/journey_together/94 Paldean Clodsire ex.png",
+          "artist": "Unknown"
+        },
+        "31 Volcanion ex": {
+          "id": "31 Volcanion ex",
+          "name": "Card #31 Volcanion ex",
+          "image_path": "/assets/tcg_cards/journey_together/31 Volcanion ex.png",
+          "artist": "Unknown"
+        },
+        "99 Pangoro": {
+          "id": "99 Pangoro",
+          "name": "Card #99 Pangoro",
+          "image_path": "/assets/tcg_cards/journey_together/99 Pangoro.png",
+          "artist": "Unknown"
+        },
+        "5 Parasect": {
+          "id": "5 Parasect",
+          "name": "Card #5 Parasect",
+          "image_path": "/assets/tcg_cards/journey_together/5 Parasect.png",
+          "artist": "Unknown"
+        },
+        "112 Bagon": {
+          "id": "112 Bagon",
+          "name": "Card #112 Bagon",
+          "image_path": "/assets/tcg_cards/journey_together/112 Bagon.png",
+          "artist": "Unknown"
+        },
+        "95 Tyranitar": {
+          "id": "95 Tyranitar",
+          "name": "Card #95 Tyranitar",
+          "image_path": "/assets/tcg_cards/journey_together/95 Tyranitar.png",
+          "artist": "Unknown"
+        },
+        "32 Articuno": {
+          "id": "32 Articuno",
+          "name": "Card #32 Articuno",
+          "image_path": "/assets/tcg_cards/journey_together/32 Articuno.png",
+          "artist": "Unknown"
+        },
+        "157 Ruffian": {
+          "id": "157 Ruffian",
+          "name": "Card #157 Ruffian",
+          "image_path": "/assets/tcg_cards/journey_together/157 Ruffian.png",
+          "artist": "Unknown"
+        },
+        "175 N's Zoroark ex": {
+          "id": "175 N's Zoroark ex",
+          "name": "Card #175 N's Zoroark ex",
+          "image_path": "/assets/tcg_cards/journey_together/175 N's Zoroark ex.png",
+          "artist": "Unknown"
+        },
+        "44 Alolan Geodude": {
+          "id": "44 Alolan Geodude",
+          "name": "Card #44 Alolan Geodude",
+          "image_path": "/assets/tcg_cards/journey_together/44 Alolan Geodude.png",
+          "artist": "Unknown"
+        },
+        "123 Tropius": {
+          "id": "123 Tropius",
+          "name": "Card #123 Tropius",
+          "image_path": "/assets/tcg_cards/journey_together/123 Tropius.png",
+          "artist": "Unknown"
+        },
+        "90 Klawf": {
+          "id": "90 Klawf",
+          "name": "Card #90 Klawf",
+          "image_path": "/assets/tcg_cards/journey_together/90 Klawf.png",
+          "artist": "Unknown"
+        },
+        "165 Swinub": {
+          "id": "165 Swinub",
+          "name": "Card #165 Swinub",
+          "image_path": "/assets/tcg_cards/journey_together/165 Swinub.png",
+          "artist": "Unknown"
+        },
+        "23 Combusken": {
+          "id": "23 Combusken",
+          "name": "Card #23 Combusken",
+          "image_path": "/assets/tcg_cards/journey_together/23 Combusken.png",
+          "artist": "Unknown"
+        },
+        "122 Kecleon": {
+          "id": "122 Kecleon",
+          "name": "Card #122 Kecleon",
+          "image_path": "/assets/tcg_cards/journey_together/122 Kecleon.png",
+          "artist": "Unknown"
+        },
+        "84 Rockruff": {
+          "id": "84 Rockruff",
+          "name": "Card #84 Rockruff",
+          "image_path": "/assets/tcg_cards/journey_together/84 Rockruff.png",
+          "artist": "Unknown"
+        },
+        "59 Shuppet": {
+          "id": "59 Shuppet",
+          "name": "Card #59 Shuppet",
+          "image_path": "/assets/tcg_cards/journey_together/59 Shuppet.png",
+          "artist": "Unknown"
+        },
+        "135 Hop's Wooloo": {
+          "id": "135 Hop's Wooloo",
+          "name": "Card #135 Hop's Wooloo",
+          "image_path": "/assets/tcg_cards/journey_together/135 Hop's Wooloo.png",
+          "artist": "Unknown"
+        },
+        "26 N's Darumaka": {
+          "id": "26 N's Darumaka",
+          "name": "Card #26 N's Darumaka",
+          "image_path": "/assets/tcg_cards/journey_together/26 N's Darumaka.png",
+          "artist": "Unknown"
+        },
+        "83 Pancham": {
+          "id": "83 Pancham",
+          "name": "Card #83 Pancham",
+          "image_path": "/assets/tcg_cards/journey_together/83 Pancham.png",
+          "artist": "Unknown"
+        },
+        "89 Toedscruel": {
+          "id": "89 Toedscruel",
+          "name": "Card #89 Toedscruel",
+          "image_path": "/assets/tcg_cards/journey_together/89 Toedscruel.png",
+          "artist": "Unknown"
+        },
+        "57 Alolan Marowak": {
+          "id": "57 Alolan Marowak",
+          "name": "Card #57 Alolan Marowak",
+          "image_path": "/assets/tcg_cards/journey_together/57 Alolan Marowak.png",
+          "artist": "Unknown"
+        },
+        "168 Furret": {
+          "id": "168 Furret",
+          "name": "Card #168 Furret",
+          "image_path": "/assets/tcg_cards/journey_together/168 Furret.png",
+          "artist": "Unknown"
+        },
+        "121 Dudunsparce ex": {
+          "id": "121 Dudunsparce ex",
+          "name": "Card #121 Dudunsparce ex",
+          "image_path": "/assets/tcg_cards/journey_together/121 Dudunsparce ex.png",
+          "artist": "Unknown"
+        },
+        "73 Grimmsnarl": {
+          "id": "73 Grimmsnarl",
+          "name": "Card #73 Grimmsnarl",
+          "image_path": "/assets/tcg_cards/journey_together/73 Grimmsnarl.png",
+          "artist": "Unknown"
+        },
+        "85 Lycanroc": {
+          "id": "85 Lycanroc",
+          "name": "Card #85 Lycanroc",
+          "image_path": "/assets/tcg_cards/journey_together/85 Lycanroc.png",
+          "artist": "Unknown"
+        },
+        "173 Lillie's Clefairy ex": {
+          "id": "173 Lillie's Clefairy ex",
+          "name": "Card #173 Lillie's Clefairy ex",
+          "image_path": "/assets/tcg_cards/journey_together/173 Lillie's Clefairy ex.png",
+          "artist": "Unknown"
+        },
+        "3 Butterfree": {
+          "id": "3 Butterfree",
+          "name": "Card #3 Butterfree",
+          "image_path": "/assets/tcg_cards/journey_together/3 Butterfree.png",
+          "artist": "Unknown"
+        },
+        "4 Paras": {
+          "id": "4 Paras",
+          "name": "Card #4 Paras",
+          "image_path": "/assets/tcg_cards/journey_together/4 Paras.png",
+          "artist": "Unknown"
+        },
+        "76 Cubone": {
+          "id": "76 Cubone",
+          "name": "Card #76 Cubone",
+          "image_path": "/assets/tcg_cards/journey_together/76 Cubone.png",
+          "artist": "Unknown"
+        },
+        "167 N's Reshiram": {
+          "id": "167 N's Reshiram",
+          "name": "Card #167 N's Reshiram",
+          "image_path": "/assets/tcg_cards/journey_together/167 N's Reshiram.png",
+          "artist": "Unknown"
+        },
+        "54 Iono's Wattrel": {
+          "id": "54 Iono's Wattrel",
+          "name": "Card #54 Iono's Wattrel",
+          "image_path": "/assets/tcg_cards/journey_together/54 Iono's Wattrel.png",
+          "artist": "Unknown"
+        },
+        "169 Noibat": {
+          "id": "169 Noibat",
+          "name": "Card #169 Noibat",
+          "image_path": "/assets/tcg_cards/journey_together/169 Noibat.png",
+          "artist": "Unknown"
+        },
+        "48 Iono's Electrode": {
+          "id": "48 Iono's Electrode",
+          "name": "Card #48 Iono's Electrode",
+          "image_path": "/assets/tcg_cards/journey_together/48 Iono's Electrode.png",
+          "artist": "Unknown"
+        },
+        "15 Virizion": {
+          "id": "15 Virizion",
+          "name": "Card #15 Virizion",
+          "image_path": "/assets/tcg_cards/journey_together/15 Virizion.png",
+          "artist": "Unknown"
+        },
+        "100 Lokix": {
+          "id": "100 Lokix",
+          "name": "Card #100 Lokix",
+          "image_path": "/assets/tcg_cards/journey_together/100 Lokix.png",
+          "artist": "Unknown"
+        },
+        "45 Alolan Graveler": {
+          "id": "45 Alolan Graveler",
+          "name": "Card #45 Alolan Graveler",
+          "image_path": "/assets/tcg_cards/journey_together/45 Alolan Graveler.png",
+          "artist": "Unknown"
+        },
+        "16 Sprigatito": {
+          "id": "16 Sprigatito",
+          "name": "Card #16 Sprigatito",
+          "image_path": "/assets/tcg_cards/journey_together/16 Sprigatito.png",
+          "artist": "Unknown"
+        },
+        "64 N's Sigilyph": {
+          "id": "64 N's Sigilyph",
+          "name": "Card #64 N's Sigilyph",
+          "image_path": "/assets/tcg_cards/journey_together/64 N's Sigilyph.png",
+          "artist": "Unknown"
+        },
+        "116 N's Reshiram": {
+          "id": "116 N's Reshiram",
+          "name": "Card #116 N's Reshiram",
+          "image_path": "/assets/tcg_cards/journey_together/116 N's Reshiram.png",
+          "artist": "Unknown"
+        },
+        "101 Bombirdier": {
+          "id": "101 Bombirdier",
+          "name": "Card #101 Bombirdier",
+          "image_path": "/assets/tcg_cards/journey_together/101 Bombirdier.png",
+          "artist": "Unknown"
+        },
+        "21 Magmortar": {
+          "id": "21 Magmortar",
+          "name": "Card #21 Magmortar",
+          "image_path": "/assets/tcg_cards/journey_together/21 Magmortar.png",
+          "artist": "Unknown"
+        },
+        "10 Foongus": {
+          "id": "10 Foongus",
+          "name": "Card #10 Foongus",
+          "image_path": "/assets/tcg_cards/journey_together/10 Foongus.png",
+          "artist": "Unknown"
+        },
+        "63 Metagross": {
+          "id": "63 Metagross",
+          "name": "Card #63 Metagross",
+          "image_path": "/assets/tcg_cards/journey_together/63 Metagross.png",
+          "artist": "Unknown"
+        },
+        "174 Mamoswine ex": {
+          "id": "174 Mamoswine ex",
+          "name": "Card #174 Mamoswine ex",
+          "image_path": "/assets/tcg_cards/journey_together/174 Mamoswine ex.png",
+          "artist": "Unknown"
+        },
+        "42 Regice": {
+          "id": "42 Regice",
+          "name": "Card #42 Regice",
+          "image_path": "/assets/tcg_cards/journey_together/42 Regice.png",
+          "artist": "Unknown"
+        },
+        "41 Wailord": {
+          "id": "41 Wailord",
+          "name": "Card #41 Wailord",
+          "image_path": "/assets/tcg_cards/journey_together/41 Wailord.png",
+          "artist": "Unknown"
+        },
+        "118 Sentret": {
+          "id": "118 Sentret",
+          "name": "Card #118 Sentret",
+          "image_path": "/assets/tcg_cards/journey_together/118 Sentret.png",
+          "artist": "Unknown"
+        },
+        "20 Magmar": {
+          "id": "20 Magmar",
+          "name": "Card #20 Magmar",
+          "image_path": "/assets/tcg_cards/journey_together/20 Magmar.png",
+          "artist": "Unknown"
+        },
+        "38 Wingull": {
+          "id": "38 Wingull",
+          "name": "Card #38 Wingull",
+          "image_path": "/assets/tcg_cards/journey_together/38 Wingull.png",
+          "artist": "Unknown"
+        },
+        "139 Lechonk": {
+          "id": "139 Lechonk",
+          "name": "Card #139 Lechonk",
+          "image_path": "/assets/tcg_cards/journey_together/139 Lechonk.png",
+          "artist": "Unknown"
+        },
+        "102 Escavalier": {
+          "id": "102 Escavalier",
+          "name": "Card #102 Escavalier",
+          "image_path": "/assets/tcg_cards/journey_together/102 Escavalier.png",
+          "artist": "Unknown"
+        },
+        "67 Lillie's Ribombee": {
+          "id": "67 Lillie's Ribombee",
+          "name": "Card #67 Lillie's Ribombee",
+          "image_path": "/assets/tcg_cards/journey_together/67 Lillie's Ribombee.png",
+          "artist": "Unknown"
+        },
+        "93 Paldean Wooper": {
+          "id": "93 Paldean Wooper",
+          "name": "Card #93 Paldean Wooper",
+          "image_path": "/assets/tcg_cards/journey_together/93 Paldean Wooper.png",
+          "artist": "Unknown"
+        },
+        "97 N's Zorua": {
+          "id": "97 N's Zorua",
+          "name": "Card #97 N's Zorua",
+          "image_path": "/assets/tcg_cards/journey_together/97 N's Zorua.png",
+          "artist": "Unknown"
+        },
+        "55 Iono's Kilowattrel": {
+          "id": "55 Iono's Kilowattrel",
+          "name": "Card #55 Iono's Kilowattrel",
+          "image_path": "/assets/tcg_cards/journey_together/55 Iono's Kilowattrel.png",
+          "artist": "Unknown"
+        },
+        "71 Impidimp": {
+          "id": "71 Impidimp",
+          "name": "Card #71 Impidimp",
+          "image_path": "/assets/tcg_cards/journey_together/71 Impidimp.png",
+          "artist": "Unknown"
+        },
+        "65 Oricorio": {
+          "id": "65 Oricorio",
+          "name": "Card #65 Oricorio",
+          "image_path": "/assets/tcg_cards/journey_together/65 Oricorio.png",
+          "artist": "Unknown"
+        },
+        "171 Volcanion ex": {
+          "id": "171 Volcanion ex",
+          "name": "Card #171 Volcanion ex",
+          "image_path": "/assets/tcg_cards/journey_together/171 Volcanion ex.png",
+          "artist": "Unknown"
+        },
+        "51 Tapu Koko ex": {
+          "id": "51 Tapu Koko ex",
+          "name": "Card #51 Tapu Koko ex",
+          "image_path": "/assets/tcg_cards/journey_together/51 Tapu Koko ex.png",
+          "artist": "Unknown"
+        },
+        "22 Torchic": {
+          "id": "22 Torchic",
+          "name": "Card #22 Torchic",
+          "image_path": "/assets/tcg_cards/journey_together/22 Torchic.png",
+          "artist": "Unknown"
+        },
+        "69 Mimikyu ex": {
+          "id": "69 Mimikyu ex",
+          "name": "Card #69 Mimikyu ex",
+          "image_path": "/assets/tcg_cards/journey_together/69 Mimikyu ex.png",
+          "artist": "Unknown"
+        },
+        "124 Audino": {
+          "id": "124 Audino",
+          "name": "Card #124 Audino",
+          "image_path": "/assets/tcg_cards/journey_together/124 Audino.png",
+          "artist": "Unknown"
+        },
+        "34 Octillery": {
+          "id": "34 Octillery",
+          "name": "Card #34 Octillery",
+          "image_path": "/assets/tcg_cards/journey_together/34 Octillery.png",
+          "artist": "Unknown"
+        },
+        "86 Hop's Silicobra": {
+          "id": "86 Hop's Silicobra",
+          "name": "Card #86 Hop's Silicobra",
+          "image_path": "/assets/tcg_cards/journey_together/86 Hop's Silicobra.png",
+          "artist": "Unknown"
+        },
+        "7 Lilligant": {
+          "id": "7 Lilligant",
+          "name": "Card #7 Lilligant",
+          "image_path": "/assets/tcg_cards/journey_together/7 Lilligant.png",
+          "artist": "Unknown"
+        },
+        "87 Hop's Sandaconda": {
+          "id": "87 Hop's Sandaconda",
+          "name": "Card #87 Hop's Sandaconda",
+          "image_path": "/assets/tcg_cards/journey_together/87 Hop's Sandaconda.png",
+          "artist": "Unknown"
+        },
+        "39 Pelipper": {
+          "id": "39 Pelipper",
+          "name": "Card #39 Pelipper",
+          "image_path": "/assets/tcg_cards/journey_together/39 Pelipper.png",
+          "artist": "Unknown"
+        },
+        "114 Salamence ex": {
+          "id": "114 Salamence ex",
+          "name": "Card #114 Salamence ex",
+          "image_path": "/assets/tcg_cards/journey_together/114 Salamence ex.png",
+          "artist": "Unknown"
+        },
+        "137 Cramorant": {
+          "id": "137 Cramorant",
+          "name": "Card #137 Cramorant",
+          "image_path": "/assets/tcg_cards/journey_together/137 Cramorant.png",
+          "artist": "Unknown"
+        },
+        "30 Reshiram ex": {
+          "id": "30 Reshiram ex",
+          "name": "Card #30 Reshiram ex",
+          "image_path": "/assets/tcg_cards/journey_together/30 Reshiram ex.png",
+          "artist": "Unknown"
+        },
+        "161 Articuno": {
+          "id": "161 Articuno",
+          "name": "Card #161 Articuno",
+          "image_path": "/assets/tcg_cards/journey_together/161 Articuno.png",
+          "artist": "Unknown"
+        },
+        "14 Durant": {
+          "id": "14 Durant",
+          "name": "Card #14 Durant",
+          "image_path": "/assets/tcg_cards/journey_together/14 Durant.png",
+          "artist": "Unknown"
+        },
+        "18 Meowscarada": {
+          "id": "18 Meowscarada",
+          "name": "Card #18 Meowscarada",
+          "image_path": "/assets/tcg_cards/journey_together/18 Meowscarada.png",
+          "artist": "Unknown"
+        },
+        "8 Maractus": {
+          "id": "8 Maractus",
+          "name": "Card #8 Maractus",
+          "image_path": "/assets/tcg_cards/journey_together/8 Maractus.png",
+          "artist": "Unknown"
+        },
+        "187 Salamence ex": {
+          "id": "187 Salamence ex",
+          "name": "Card #187 Salamence ex",
+          "image_path": "/assets/tcg_cards/journey_together/187 Salamence ex.png",
+          "artist": "Unknown"
+        },
+        "130 Drampa": {
+          "id": "130 Drampa",
+          "name": "Card #130 Drampa",
+          "image_path": "/assets/tcg_cards/journey_together/130 Drampa.png",
+          "artist": "Unknown"
+        },
+        "62 Metang": {
+          "id": "62 Metang",
+          "name": "Card #62 Metang",
+          "image_path": "/assets/tcg_cards/journey_together/62 Metang.png",
+          "artist": "Unknown"
+        },
+        "28 Larvesta": {
+          "id": "28 Larvesta",
+          "name": "Card #28 Larvesta",
+          "image_path": "/assets/tcg_cards/journey_together/28 Larvesta.png",
+          "artist": "Unknown"
+        },
+        "82 Regirock": {
+          "id": "82 Regirock",
+          "name": "Card #82 Regirock",
+          "image_path": "/assets/tcg_cards/journey_together/82 Regirock.png",
+          "artist": "Unknown"
+        },
+        "37 Ludicolo": {
+          "id": "37 Ludicolo",
+          "name": "Card #37 Ludicolo",
+          "image_path": "/assets/tcg_cards/journey_together/37 Ludicolo.png",
+          "artist": "Unknown"
+        },
+        "13 Accelgor": {
+          "id": "13 Accelgor",
+          "name": "Card #13 Accelgor",
+          "image_path": "/assets/tcg_cards/journey_together/13 Accelgor.png",
+          "artist": "Unknown"
+        },
+        "172 Iono's Bellibolt ex": {
+          "id": "172 Iono's Bellibolt ex",
+          "name": "Card #172 Iono's Bellibolt ex",
+          "image_path": "/assets/tcg_cards/journey_together/172 Iono's Bellibolt ex.png",
+          "artist": "Unknown"
+        },
+        "17 Floragato": {
+          "id": "17 Floragato",
+          "name": "Card #17 Floragato",
+          "image_path": "/assets/tcg_cards/journey_together/17 Floragato.png",
+          "artist": "Unknown"
+        },
+        "189 N's Zoroark ex": {
+          "id": "189 N's Zoroark ex",
+          "name": "Card #189 N's Zoroark ex",
+          "image_path": "/assets/tcg_cards/journey_together/189 N's Zoroark ex.png",
+          "artist": "Unknown"
+        },
+        "120 Dunsparce": {
+          "id": "120 Dunsparce",
+          "name": "Card #120 Dunsparce",
+          "image_path": "/assets/tcg_cards/journey_together/120 Dunsparce.png",
+          "artist": "Unknown"
+        },
+        "138 Hop's Cramorant": {
+          "id": "138 Hop's Cramorant",
+          "name": "Card #138 Hop's Cramorant",
+          "image_path": "/assets/tcg_cards/journey_together/138 Hop's Cramorant.png",
+          "artist": "Unknown"
+        },
+        "107 Magearna": {
+          "id": "107 Magearna",
+          "name": "Card #107 Magearna",
+          "image_path": "/assets/tcg_cards/journey_together/107 Magearna.png",
+          "artist": "Unknown"
+        },
+        "117 Hop's Snorlax": {
+          "id": "117 Hop's Snorlax",
+          "name": "Card #117 Hop's Snorlax",
+          "image_path": "/assets/tcg_cards/journey_together/117 Hop's Snorlax.png",
+          "artist": "Unknown"
+        },
+        "50 Togedemaru": {
+          "id": "50 Togedemaru",
+          "name": "Card #50 Togedemaru",
+          "image_path": "/assets/tcg_cards/journey_together/50 Togedemaru.png",
+          "artist": "Unknown"
+        },
+        "125 Minccino": {
+          "id": "125 Minccino",
+          "name": "Card #125 Minccino",
+          "image_path": "/assets/tcg_cards/journey_together/125 Minccino.png",
+          "artist": "Unknown"
+        },
+        "183 Iono's Bellibolt ex": {
+          "id": "183 Iono's Bellibolt ex",
+          "name": "Card #183 Iono's Bellibolt ex",
+          "image_path": "/assets/tcg_cards/journey_together/183 Iono's Bellibolt ex.png",
+          "artist": "Unknown"
+        },
+        "6 Petilil": {
+          "id": "6 Petilil",
+          "name": "Card #6 Petilil",
+          "image_path": "/assets/tcg_cards/journey_together/6 Petilil.png",
+          "artist": "Unknown"
+        },
+        "105 N's Klinklang": {
+          "id": "105 N's Klinklang",
+          "name": "Card #105 N's Klinklang",
+          "image_path": "/assets/tcg_cards/journey_together/105 N's Klinklang.png",
+          "artist": "Unknown"
+        },
+        "182 Volcanion ex": {
+          "id": "182 Volcanion ex",
+          "name": "Card #182 Volcanion ex",
+          "image_path": "/assets/tcg_cards/journey_together/182 Volcanion ex.png",
+          "artist": "Unknown"
+        },
+        "178 Dudunsparce ex": {
+          "id": "178 Dudunsparce ex",
+          "name": "Card #178 Dudunsparce ex",
+          "image_path": "/assets/tcg_cards/journey_together/178 Dudunsparce ex.png",
+          "artist": "Unknown"
+        },
+        "186 Hop's Zacian ex": {
+          "id": "186 Hop's Zacian ex",
+          "name": "Card #186 Hop's Zacian ex",
+          "image_path": "/assets/tcg_cards/journey_together/186 Hop's Zacian ex.png",
+          "artist": "Unknown"
+        },
+        "136 Hop's Dubwool": {
+          "id": "136 Hop's Dubwool",
+          "name": "Card #136 Hop's Dubwool",
+          "image_path": "/assets/tcg_cards/journey_together/136 Hop's Dubwool.png",
+          "artist": "Unknown"
+        },
+        "126 Cinccino": {
+          "id": "126 Cinccino",
+          "name": "Card #126 Cinccino",
+          "image_path": "/assets/tcg_cards/journey_together/126 Cinccino.png",
+          "artist": "Unknown"
+        },
+        "184 Lillie's Clefairy ex": {
+          "id": "184 Lillie's Clefairy ex",
+          "name": "Card #184 Lillie's Clefairy ex",
+          "image_path": "/assets/tcg_cards/journey_together/184 Lillie's Clefairy ex.png",
+          "artist": "Unknown"
+        },
+        "9 Karrablast": {
+          "id": "9 Karrablast",
+          "name": "Card #9 Karrablast",
+          "image_path": "/assets/tcg_cards/journey_together/9 Karrablast.png",
+          "artist": "Unknown"
+        },
+        "74 Milcery": {
+          "id": "74 Milcery",
+          "name": "Card #74 Milcery",
+          "image_path": "/assets/tcg_cards/journey_together/74 Milcery.png",
+          "artist": "Unknown"
+        },
+        "109 Cufant": {
+          "id": "109 Cufant",
+          "name": "Card #109 Cufant",
+          "image_path": "/assets/tcg_cards/journey_together/109 Cufant.png",
+          "artist": "Unknown"
+        },
+        "27 N's Darmanitan": {
+          "id": "27 N's Darmanitan",
+          "name": "Card #27 N's Darmanitan",
+          "image_path": "/assets/tcg_cards/journey_together/27 N's Darmanitan.png",
+          "artist": "Unknown"
+        },
+        "49 N's Joltik": {
+          "id": "49 N's Joltik",
+          "name": "Card #49 N's Joltik",
+          "image_path": "/assets/tcg_cards/journey_together/49 N's Joltik.png",
+          "artist": "Unknown"
+        },
+        "75 Alcremie ex": {
+          "id": "75 Alcremie ex",
+          "name": "Card #75 Alcremie ex",
+          "image_path": "/assets/tcg_cards/journey_together/75 Alcremie ex.png",
+          "artist": "Unknown"
+        },
+        "72 Morgrem": {
+          "id": "72 Morgrem",
+          "name": "Card #72 Morgrem",
+          "image_path": "/assets/tcg_cards/journey_together/72 Morgrem.png",
+          "artist": "Unknown"
+        },
+        "61 Beldum": {
+          "id": "61 Beldum",
+          "name": "Card #61 Beldum",
+          "image_path": "/assets/tcg_cards/journey_together/61 Beldum.png",
+          "artist": "Unknown"
+        },
+        "35 Lotad": {
+          "id": "35 Lotad",
+          "name": "Card #35 Lotad",
+          "image_path": "/assets/tcg_cards/journey_together/35 Lotad.png",
+          "artist": "Unknown"
+        },
+        "132 Greedent": {
+          "id": "132 Greedent",
+          "name": "Card #132 Greedent",
+          "image_path": "/assets/tcg_cards/journey_together/132 Greedent.png",
+          "artist": "Unknown"
+        },
+        "66 Lillie's Cutiefly": {
+          "id": "66 Lillie's Cutiefly",
+          "name": "Card #66 Lillie's Cutiefly",
+          "image_path": "/assets/tcg_cards/journey_together/66 Lillie's Cutiefly.png",
+          "artist": "Unknown"
+        },
+        "141 Squawkabilly": {
+          "id": "141 Squawkabilly",
+          "name": "Card #141 Squawkabilly",
+          "image_path": "/assets/tcg_cards/journey_together/141 Squawkabilly.png",
+          "artist": "Unknown"
+        },
+        "92 Weezing": {
+          "id": "92 Weezing",
+          "name": "Card #92 Weezing",
+          "image_path": "/assets/tcg_cards/journey_together/92 Weezing.png",
+          "artist": "Unknown"
+        },
+        "188 Iono's Bellibolt ex": {
+          "id": "188 Iono's Bellibolt ex",
+          "name": "Card #188 Iono's Bellibolt ex",
+          "image_path": "/assets/tcg_cards/journey_together/188 Iono's Bellibolt ex.png",
+          "artist": "Unknown"
+        },
+        "12 Shelmet": {
+          "id": "12 Shelmet",
+          "name": "Card #12 Shelmet",
+          "image_path": "/assets/tcg_cards/journey_together/12 Shelmet.png",
+          "artist": "Unknown"
+        },
+        "33 Remoraid": {
+          "id": "33 Remoraid",
+          "name": "Card #33 Remoraid",
+          "image_path": "/assets/tcg_cards/journey_together/33 Remoraid.png",
+          "artist": "Unknown"
+        },
+        "113 Shelgon": {
+          "id": "113 Shelgon",
+          "name": "Card #113 Shelgon",
+          "image_path": "/assets/tcg_cards/journey_together/113 Shelgon.png",
+          "artist": "Unknown"
+        },
+        "140 Oinkologne": {
+          "id": "140 Oinkologne",
+          "name": "Card #140 Oinkologne",
+          "image_path": "/assets/tcg_cards/journey_together/140 Oinkologne.png",
+          "artist": "Unknown"
+        },
+        "43 Veluza ex": {
+          "id": "43 Veluza ex",
+          "name": "Card #43 Veluza ex",
+          "image_path": "/assets/tcg_cards/journey_together/43 Veluza ex.png",
+          "artist": "Unknown"
+        },
+        "176 Hop's Zacian ex": {
+          "id": "176 Hop's Zacian ex",
+          "name": "Card #176 Hop's Zacian ex",
+          "image_path": "/assets/tcg_cards/journey_together/176 Hop's Zacian ex.png",
+          "artist": "Unknown"
+        }
+      }
+    },
+    "prismatic_evolutions": {
+      "name": "Prismatic Evolutions",
+      "total_cards": 129,
+      "cards": {
+        "175 Lacey": {
+          "id": "175 Lacey",
+          "name": "Card #175 Lacey",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/175 Lacey.png",
+          "artist": "Unknown"
+        },
+        "92 Terapagos ex": {
+          "id": "92 Terapagos ex",
+          "name": "Card #92 Terapagos ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/92 Terapagos ex.png",
+          "artist": "Unknown"
+        },
+        "16 Pyroar": {
+          "id": "16 Pyroar",
+          "name": "Card #16 Pyroar",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/16 Pyroar.png",
+          "artist": "Unknown"
+        },
+        "178 Walking Wake ex": {
+          "id": "178 Walking Wake ex",
+          "name": "Card #178 Walking Wake ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/178 Walking Wake ex.png",
+          "artist": "Unknown"
+        },
+        "52 Hippopotas": {
+          "id": "52 Hippopotas",
+          "name": "Card #52 Hippopotas",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/52 Hippopotas.png",
+          "artist": "Unknown"
+        },
+        "151 Palafin ex": {
+          "id": "151 Palafin ex",
+          "name": "Card #151 Palafin ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/151 Palafin ex.png",
+          "artist": "Unknown"
+        },
+        "19 Slowking": {
+          "id": "19 Slowking",
+          "name": "Card #19 Slowking",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/19 Slowking.png",
+          "artist": "Unknown"
+        },
+        "72 Drakloak": {
+          "id": "72 Drakloak",
+          "name": "Card #72 Drakloak",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/72 Drakloak.png",
+          "artist": "Unknown"
+        },
+        "42 Scream Tail": {
+          "id": "42 Scream Tail",
+          "name": "Card #42 Scream Tail",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/42 Scream Tail.png",
+          "artist": "Unknown"
+        },
+        "163 Pecharunt ex": {
+          "id": "163 Pecharunt ex",
+          "name": "Card #163 Pecharunt ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/163 Pecharunt ex.png",
+          "artist": "Unknown"
+        },
+        "170 Amarys": {
+          "id": "170 Amarys",
+          "name": "Card #170 Amarys",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/170 Amarys.png",
+          "artist": "Unknown"
+        },
+        "166 Raging Bolt ex": {
+          "id": "166 Raging Bolt ex",
+          "name": "Card #166 Raging Bolt ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/166 Raging Bolt ex.png",
+          "artist": "Unknown"
+        },
+        "18 Slowpoke": {
+          "id": "18 Slowpoke",
+          "name": "Card #18 Slowpoke",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/18 Slowpoke.png",
+          "artist": "Unknown"
+        },
+        "78 Noctowl": {
+          "id": "78 Noctowl",
+          "name": "Card #78 Noctowl",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/78 Noctowl.png",
+          "artist": "Unknown"
+        },
+        "11 Hydrapple ex": {
+          "id": "11 Hydrapple ex",
+          "name": "Card #11 Hydrapple ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/11 Hydrapple ex.png",
+          "artist": "Unknown"
+        },
+        "79 Dunsparce": {
+          "id": "79 Dunsparce",
+          "name": "Card #79 Dunsparce",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/79 Dunsparce.png",
+          "artist": "Unknown"
+        },
+        "177 Teal Mask Ogerpon ex": {
+          "id": "177 Teal Mask Ogerpon ex",
+          "name": "Card #177 Teal Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/177 Teal Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "44 Munkidori": {
+          "id": "44 Munkidori",
+          "name": "Card #44 Munkidori",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/44 Munkidori.png",
+          "artist": "Unknown"
+        },
+        "86 Regigigas": {
+          "id": "86 Regigigas",
+          "name": "Card #86 Regigigas",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/86 Regigigas.png",
+          "artist": "Unknown"
+        },
+        "155 Espeon ex": {
+          "id": "155 Espeon ex",
+          "name": "Card #155 Espeon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/155 Espeon ex.png",
+          "artist": "Unknown"
+        },
+        "167 Eevee ex": {
+          "id": "167 Eevee ex",
+          "name": "Card #167 Eevee ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/167 Eevee ex.png",
+          "artist": "Unknown"
+        },
+        "90 Noibat": {
+          "id": "90 Noibat",
+          "name": "Card #90 Noibat",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/90 Noibat.png",
+          "artist": "Unknown"
+        },
+        "164 Gholdengo ex": {
+          "id": "164 Gholdengo ex",
+          "name": "Card #164 Gholdengo ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/164 Gholdengo ex.png",
+          "artist": "Unknown"
+        },
+        "1 Exeggcute": {
+          "id": "1 Exeggcute",
+          "name": "Card #1 Exeggcute",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/1 Exeggcute.png",
+          "artist": "Unknown"
+        },
+        "39 Aromatisse": {
+          "id": "39 Aromatisse",
+          "name": "Card #39 Aromatisse",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/39 Aromatisse.png",
+          "artist": "Unknown"
+        },
+        "157 Iron Valiant ex": {
+          "id": "157 Iron Valiant ex",
+          "name": "Card #157 Iron Valiant ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/157 Iron Valiant ex.png",
+          "artist": "Unknown"
+        },
+        "22 Vaporeon": {
+          "id": "22 Vaporeon",
+          "name": "Card #22 Vaporeon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/22 Vaporeon.png",
+          "artist": "Unknown"
+        },
+        "34 Espeon ex": {
+          "id": "34 Espeon ex",
+          "name": "Card #34 Espeon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/34 Espeon ex.png",
+          "artist": "Unknown"
+        },
+        "144 Leafeon ex": {
+          "id": "144 Leafeon ex",
+          "name": "Card #144 Leafeon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/144 Leafeon ex.png",
+          "artist": "Unknown"
+        },
+        "180 Terapagos ex": {
+          "id": "180 Terapagos ex",
+          "name": "Card #180 Terapagos ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/180 Terapagos ex.png",
+          "artist": "Unknown"
+        },
+        "25 Glaceon": {
+          "id": "25 Glaceon",
+          "name": "Card #25 Glaceon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/25 Glaceon.png",
+          "artist": "Unknown"
+        },
+        "77 Hoothoot": {
+          "id": "77 Hoothoot",
+          "name": "Card #77 Hoothoot",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/77 Hoothoot.png",
+          "artist": "Unknown"
+        },
+        "89 Hawlucha": {
+          "id": "89 Hawlucha",
+          "name": "Card #89 Hawlucha",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/89 Hawlucha.png",
+          "artist": "Unknown"
+        },
+        "27 Wellspring Mask Ogerpon ex": {
+          "id": "27 Wellspring Mask Ogerpon ex",
+          "name": "Card #27 Wellspring Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/27 Wellspring Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "145 Teal Mask Ogerpon ex": {
+          "id": "145 Teal Mask Ogerpon ex",
+          "name": "Card #145 Teal Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/145 Teal Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "84 Lopunny": {
+          "id": "84 Lopunny",
+          "name": "Card #84 Lopunny",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/84 Lopunny.png",
+          "artist": "Unknown"
+        },
+        "8 Whimsicott": {
+          "id": "8 Whimsicott",
+          "name": "Card #8 Whimsicott",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/8 Whimsicott.png",
+          "artist": "Unknown"
+        },
+        "21 Seaking": {
+          "id": "21 Seaking",
+          "name": "Card #21 Seaking",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/21 Seaking.png",
+          "artist": "Unknown"
+        },
+        "81 Miltank": {
+          "id": "81 Miltank",
+          "name": "Card #81 Miltank",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/81 Miltank.png",
+          "artist": "Unknown"
+        },
+        "179 Pikachu ex": {
+          "id": "179 Pikachu ex",
+          "name": "Card #179 Pikachu ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/179 Pikachu ex.png",
+          "artist": "Unknown"
+        },
+        "71 Dreepy": {
+          "id": "71 Dreepy",
+          "name": "Card #71 Dreepy",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/71 Dreepy.png",
+          "artist": "Unknown"
+        },
+        "65 Roaring Moon": {
+          "id": "65 Roaring Moon",
+          "name": "Card #65 Roaring Moon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/65 Roaring Moon.png",
+          "artist": "Unknown"
+        },
+        "46 Iron Boulder": {
+          "id": "46 Iron Boulder",
+          "name": "Card #46 Iron Boulder",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/46 Iron Boulder.png",
+          "artist": "Unknown"
+        },
+        "147 Ceruledge ex": {
+          "id": "147 Ceruledge ex",
+          "name": "Card #147 Ceruledge ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/147 Ceruledge ex.png",
+          "artist": "Unknown"
+        },
+        "10 Dipplin": {
+          "id": "10 Dipplin",
+          "name": "Card #10 Dipplin",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/10 Dipplin.png",
+          "artist": "Unknown"
+        },
+        "5 Leafeon": {
+          "id": "5 Leafeon",
+          "name": "Card #5 Leafeon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/5 Leafeon.png",
+          "artist": "Unknown"
+        },
+        "48 Pupitar": {
+          "id": "48 Pupitar",
+          "name": "Card #48 Pupitar",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/48 Pupitar.png",
+          "artist": "Unknown"
+        },
+        "30 Jolteon ex": {
+          "id": "30 Jolteon ex",
+          "name": "Card #30 Jolteon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/30 Jolteon ex.png",
+          "artist": "Unknown"
+        },
+        "35 Duskull": {
+          "id": "35 Duskull",
+          "name": "Card #35 Duskull",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/35 Duskull.png",
+          "artist": "Unknown"
+        },
+        "146 Flareon ex": {
+          "id": "146 Flareon ex",
+          "name": "Card #146 Flareon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/146 Flareon ex.png",
+          "artist": "Unknown"
+        },
+        "169 Terapagos ex": {
+          "id": "169 Terapagos ex",
+          "name": "Card #169 Terapagos ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/169 Terapagos ex.png",
+          "artist": "Unknown"
+        },
+        "82 Lugia ex": {
+          "id": "82 Lugia ex",
+          "name": "Card #82 Lugia ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/82 Lugia ex.png",
+          "artist": "Unknown"
+        },
+        "40 Sylveon": {
+          "id": "40 Sylveon",
+          "name": "Card #40 Sylveon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/40 Sylveon.png",
+          "artist": "Unknown"
+        },
+        "162 Roaring Moon ex": {
+          "id": "162 Roaring Moon ex",
+          "name": "Card #162 Roaring Moon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/162 Roaring Moon ex.png",
+          "artist": "Unknown"
+        },
+        "6 Leafeon ex": {
+          "id": "6 Leafeon ex",
+          "name": "Card #6 Leafeon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/6 Leafeon ex.png",
+          "artist": "Unknown"
+        },
+        "33 Espeon": {
+          "id": "33 Espeon",
+          "name": "Card #33 Espeon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/33 Espeon.png",
+          "artist": "Unknown"
+        },
+        "9 Applin": {
+          "id": "9 Applin",
+          "name": "Card #9 Applin",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/9 Applin.png",
+          "artist": "Unknown"
+        },
+        "13 Flareon": {
+          "id": "13 Flareon",
+          "name": "Card #13 Flareon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/13 Flareon.png",
+          "artist": "Unknown"
+        },
+        "153 Jolteon ex": {
+          "id": "153 Jolteon ex",
+          "name": "Card #153 Jolteon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/153 Jolteon ex.png",
+          "artist": "Unknown"
+        },
+        "17 Hearthflame Mask Ogerpon ex": {
+          "id": "17 Hearthflame Mask Ogerpon ex",
+          "name": "Card #17 Hearthflame Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/17 Hearthflame Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "76 Snorlax ex": {
+          "id": "76 Snorlax ex",
+          "name": "Card #76 Snorlax ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/76 Snorlax ex.png",
+          "artist": "Unknown"
+        },
+        "54 Bloodmoon Ursaluna": {
+          "id": "54 Bloodmoon Ursaluna",
+          "name": "Card #54 Bloodmoon Ursaluna",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/54 Bloodmoon Ursaluna.png",
+          "artist": "Unknown"
+        },
+        "37 Dusknoir": {
+          "id": "37 Dusknoir",
+          "name": "Card #37 Dusknoir",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/37 Dusknoir.png",
+          "artist": "Unknown"
+        },
+        "57 Okidogi": {
+          "id": "57 Okidogi",
+          "name": "Card #57 Okidogi",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/57 Okidogi.png",
+          "artist": "Unknown"
+        },
+        "32 Iron Thorns ex": {
+          "id": "32 Iron Thorns ex",
+          "name": "Card #32 Iron Thorns ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/32 Iron Thorns ex.png",
+          "artist": "Unknown"
+        },
+        "28 Pikachu ex": {
+          "id": "28 Pikachu ex",
+          "name": "Card #28 Pikachu ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/28 Pikachu ex.png",
+          "artist": "Unknown"
+        },
+        "159 Sandy Shocks ex": {
+          "id": "159 Sandy Shocks ex",
+          "name": "Card #159 Sandy Shocks ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/159 Sandy Shocks ex.png",
+          "artist": "Unknown"
+        },
+        "49 Groudon": {
+          "id": "49 Groudon",
+          "name": "Card #49 Groudon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/49 Groudon.png",
+          "artist": "Unknown"
+        },
+        "83 Buneary": {
+          "id": "83 Buneary",
+          "name": "Card #83 Buneary",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/83 Buneary.png",
+          "artist": "Unknown"
+        },
+        "149 Vaporeon ex": {
+          "id": "149 Vaporeon ex",
+          "name": "Card #149 Vaporeon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/149 Vaporeon ex.png",
+          "artist": "Unknown"
+        },
+        "172 Drayton": {
+          "id": "172 Drayton",
+          "name": "Card #172 Drayton",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/172 Drayton.png",
+          "artist": "Unknown"
+        },
+        "7 Cottonee": {
+          "id": "7 Cottonee",
+          "name": "Card #7 Cottonee",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/7 Cottonee.png",
+          "artist": "Unknown"
+        },
+        "20 Goldeen": {
+          "id": "20 Goldeen",
+          "name": "Card #20 Goldeen",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/20 Goldeen.png",
+          "artist": "Unknown"
+        },
+        "171 Crispin": {
+          "id": "171 Crispin",
+          "name": "Card #171 Crispin",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/171 Crispin.png",
+          "artist": "Unknown"
+        },
+        "69 Duraludon": {
+          "id": "69 Duraludon",
+          "name": "Card #69 Duraludon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/69 Duraludon.png",
+          "artist": "Unknown"
+        },
+        "60 Umbreon ex": {
+          "id": "60 Umbreon ex",
+          "name": "Card #60 Umbreon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/60 Umbreon ex.png",
+          "artist": "Unknown"
+        },
+        "150 Glaceon ex": {
+          "id": "150 Glaceon ex",
+          "name": "Card #150 Glaceon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/150 Glaceon ex.png",
+          "artist": "Unknown"
+        },
+        "36 Dusclops": {
+          "id": "36 Dusclops",
+          "name": "Card #36 Dusclops",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/36 Dusclops.png",
+          "artist": "Unknown"
+        },
+        "24 Suicune": {
+          "id": "24 Suicune",
+          "name": "Card #24 Suicune",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/24 Suicune.png",
+          "artist": "Unknown"
+        },
+        "161 Umbreon ex": {
+          "id": "161 Umbreon ex",
+          "name": "Card #161 Umbreon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/161 Umbreon ex.png",
+          "artist": "Unknown"
+        },
+        "73 Dragapult ex": {
+          "id": "73 Dragapult ex",
+          "name": "Card #73 Dragapult ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/73 Dragapult ex.png",
+          "artist": "Unknown"
+        },
+        "59 Umbreon": {
+          "id": "59 Umbreon",
+          "name": "Card #59 Umbreon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/59 Umbreon.png",
+          "artist": "Unknown"
+        },
+        "68 Heatran": {
+          "id": "68 Heatran",
+          "name": "Card #68 Heatran",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/68 Heatran.png",
+          "artist": "Unknown"
+        },
+        "2 Exeggutor": {
+          "id": "2 Exeggutor",
+          "name": "Card #2 Exeggutor",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/2 Exeggutor.png",
+          "artist": "Unknown"
+        },
+        "173 Janine's Secret Art": {
+          "id": "173 Janine's Secret Art",
+          "name": "Card #173 Janine's Secret Art",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/173 Janine's Secret Art.png",
+          "artist": "Unknown"
+        },
+        "47 Larvitar": {
+          "id": "47 Larvitar",
+          "name": "Card #47 Larvitar",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/47 Larvitar.png",
+          "artist": "Unknown"
+        },
+        "176 Iron Leaves ex": {
+          "id": "176 Iron Leaves ex",
+          "name": "Card #176 Iron Leaves ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/176 Iron Leaves ex.png",
+          "artist": "Unknown"
+        },
+        "3 Pinsir": {
+          "id": "3 Pinsir",
+          "name": "Card #3 Pinsir",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/3 Pinsir.png",
+          "artist": "Unknown"
+        },
+        "156 Sylveon ex": {
+          "id": "156 Sylveon ex",
+          "name": "Card #156 Sylveon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/156 Sylveon ex.png",
+          "artist": "Unknown"
+        },
+        "154 Iron Hands ex": {
+          "id": "154 Iron Hands ex",
+          "name": "Card #154 Iron Hands ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/154 Iron Hands ex.png",
+          "artist": "Unknown"
+        },
+        "26 Glaceon ex": {
+          "id": "26 Glaceon ex",
+          "name": "Card #26 Glaceon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/26 Glaceon ex.png",
+          "artist": "Unknown"
+        },
+        "43 Flutter Mane": {
+          "id": "43 Flutter Mane",
+          "name": "Card #43 Flutter Mane",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/43 Flutter Mane.png",
+          "artist": "Unknown"
+        },
+        "29 Jolteon": {
+          "id": "29 Jolteon",
+          "name": "Card #29 Jolteon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/29 Jolteon.png",
+          "artist": "Unknown"
+        },
+        "15 Litleo": {
+          "id": "15 Litleo",
+          "name": "Card #15 Litleo",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/15 Litleo.png",
+          "artist": "Unknown"
+        },
+        "41 Sylveon ex": {
+          "id": "41 Sylveon ex",
+          "name": "Card #41 Sylveon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/41 Sylveon ex.png",
+          "artist": "Unknown"
+        },
+        "58 Cornerstone Mask Ogerpon ex": {
+          "id": "58 Cornerstone Mask Ogerpon ex",
+          "name": "Card #58 Cornerstone Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/58 Cornerstone Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "148 Hearthflame Mask Ogerpon ex": {
+          "id": "148 Hearthflame Mask Ogerpon ex",
+          "name": "Card #148 Hearthflame Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/148 Hearthflame Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "174 Kieran": {
+          "id": "174 Kieran",
+          "name": "Card #174 Kieran",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/174 Kieran.png",
+          "artist": "Unknown"
+        },
+        "12 Teal Mask Ogerpon ex": {
+          "id": "12 Teal Mask Ogerpon ex",
+          "name": "Card #12 Teal Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/12 Teal Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "87 Shaymin": {
+          "id": "87 Shaymin",
+          "name": "Card #87 Shaymin",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/87 Shaymin.png",
+          "artist": "Unknown"
+        },
+        "168 Bloodmoon Ursaluna ex": {
+          "id": "168 Bloodmoon Ursaluna ex",
+          "name": "Card #168 Bloodmoon Ursaluna ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/168 Bloodmoon Ursaluna ex.png",
+          "artist": "Unknown"
+        },
+        "62 Houndour": {
+          "id": "62 Houndour",
+          "name": "Card #62 Houndour",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/62 Houndour.png",
+          "artist": "Unknown"
+        },
+        "64 Tyranitar ex": {
+          "id": "64 Tyranitar ex",
+          "name": "Card #64 Tyranitar ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/64 Tyranitar ex.png",
+          "artist": "Unknown"
+        },
+        "67 Bronzong": {
+          "id": "67 Bronzong",
+          "name": "Card #67 Bronzong",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/67 Bronzong.png",
+          "artist": "Unknown"
+        },
+        "80 Dudunsparce": {
+          "id": "80 Dudunsparce",
+          "name": "Card #80 Dudunsparce",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/80 Dudunsparce.png",
+          "artist": "Unknown"
+        },
+        "38 Spritzee": {
+          "id": "38 Spritzee",
+          "name": "Card #38 Spritzee",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/38 Spritzee.png",
+          "artist": "Unknown"
+        },
+        "56 Sandy Shocks ex": {
+          "id": "56 Sandy Shocks ex",
+          "name": "Card #56 Sandy Shocks ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/56 Sandy Shocks ex.png",
+          "artist": "Unknown"
+        },
+        "165 Dragapult ex": {
+          "id": "165 Dragapult ex",
+          "name": "Card #165 Dragapult ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/165 Dragapult ex.png",
+          "artist": "Unknown"
+        },
+        "63 Houndoom": {
+          "id": "63 Houndoom",
+          "name": "Card #63 Houndoom",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/63 Houndoom.png",
+          "artist": "Unknown"
+        },
+        "66 Bronzor": {
+          "id": "66 Bronzor",
+          "name": "Card #66 Bronzor",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/66 Bronzor.png",
+          "artist": "Unknown"
+        },
+        "53 Hippowdon": {
+          "id": "53 Hippowdon",
+          "name": "Card #53 Hippowdon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/53 Hippowdon.png",
+          "artist": "Unknown"
+        },
+        "74 Eevee": {
+          "id": "74 Eevee",
+          "name": "Card #74 Eevee",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/74 Eevee.png",
+          "artist": "Unknown"
+        },
+        "160 Cornerstone Mask Ogerpon ex": {
+          "id": "160 Cornerstone Mask Ogerpon ex",
+          "name": "Card #160 Cornerstone Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/160 Cornerstone Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "23 Vaporeon ex": {
+          "id": "23 Vaporeon ex",
+          "name": "Card #23 Vaporeon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/23 Vaporeon ex.png",
+          "artist": "Unknown"
+        },
+        "51 Lucario ex": {
+          "id": "51 Lucario ex",
+          "name": "Card #51 Lucario ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/51 Lucario ex.png",
+          "artist": "Unknown"
+        },
+        "45 Fezandipiti": {
+          "id": "45 Fezandipiti",
+          "name": "Card #45 Fezandipiti",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/45 Fezandipiti.png",
+          "artist": "Unknown"
+        },
+        "31 Iron Hands ex": {
+          "id": "31 Iron Hands ex",
+          "name": "Card #31 Iron Hands ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/31 Iron Hands ex.png",
+          "artist": "Unknown"
+        },
+        "88 Furfrou": {
+          "id": "88 Furfrou",
+          "name": "Card #88 Furfrou",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/88 Furfrou.png",
+          "artist": "Unknown"
+        },
+        "158 Iron Crown ex": {
+          "id": "158 Iron Crown ex",
+          "name": "Card #158 Iron Crown ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/158 Iron Crown ex.png",
+          "artist": "Unknown"
+        },
+        "91 Noivern ex": {
+          "id": "91 Noivern ex",
+          "name": "Card #91 Noivern ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/91 Noivern ex.png",
+          "artist": "Unknown"
+        },
+        "50 Riolu": {
+          "id": "50 Riolu",
+          "name": "Card #50 Riolu",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/50 Riolu.png",
+          "artist": "Unknown"
+        },
+        "70 Archaludon": {
+          "id": "70 Archaludon",
+          "name": "Card #70 Archaludon",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/70 Archaludon.png",
+          "artist": "Unknown"
+        },
+        "14 Flareon ex": {
+          "id": "14 Flareon ex",
+          "name": "Card #14 Flareon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/14 Flareon ex.png",
+          "artist": "Unknown"
+        },
+        "4 Budew": {
+          "id": "4 Budew",
+          "name": "Card #4 Budew",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/4 Budew.png",
+          "artist": "Unknown"
+        },
+        "61 Sneasel": {
+          "id": "61 Sneasel",
+          "name": "Card #61 Sneasel",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/61 Sneasel.png",
+          "artist": "Unknown"
+        },
+        "152 Wellspring Mask Ogerpon ex": {
+          "id": "152 Wellspring Mask Ogerpon ex",
+          "name": "Card #152 Wellspring Mask Ogerpon ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/152 Wellspring Mask Ogerpon ex.png",
+          "artist": "Unknown"
+        },
+        "85 Fan Rotom": {
+          "id": "85 Fan Rotom",
+          "name": "Card #85 Fan Rotom",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/85 Fan Rotom.png",
+          "artist": "Unknown"
+        },
+        "75 Eevee ex": {
+          "id": "75 Eevee ex",
+          "name": "Card #75 Eevee ex",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/75 Eevee ex.png",
+          "artist": "Unknown"
+        },
+        "55 Great Tusk": {
+          "id": "55 Great Tusk",
+          "name": "Card #55 Great Tusk",
+          "image_path": "/assets/tcg_cards/prismatic_evolutions/55 Great Tusk.png",
+          "artist": "Unknown"
+        }
+      }
+    }
+  }
+}
