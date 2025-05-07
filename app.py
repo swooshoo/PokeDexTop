@@ -27,12 +27,12 @@ class PokemonCard(QFrame):
         self.setLineWidth(1)
         self.setStyleSheet("""
             PokemonCard {
-                background-color: white;
+                background-color: darkgray;
                 border-radius: 8px;
                 margin: 5px;
             }
             PokemonCard:hover {
-                background-color: #f0f0f0;
+                background-color: gray;
             }
         """)
         self.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -74,12 +74,12 @@ class TCGCard(QFrame):
         self.setLineWidth(1)
         self.setStyleSheet("""
             TCGCard {
-                background-color: white;
+                background-color: darkgray;
                 border-radius: 8px;
                 margin: 5px;
             }
             TCGCard:hover {
-                background-color: #f0f0f0;
+                background-color: gray;
             }
         """)
         self.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -97,7 +97,7 @@ class TCGCard(QFrame):
             layout.addWidget(card_label)
         
         # Add card name and ID
-        name_label = QLabel(f"#{self.card_id} - {self.card_name}")
+        name_label = QLabel(f"#{self.card_id}")
         name_label.setAlignment(Qt.AlignCenter)
         name_label.setFont(QFont('Arial', 10, QFont.Bold))
         layout.addWidget(name_label)
