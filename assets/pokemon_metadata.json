@@ -156,7 +156,7 @@
     },
     "32": {
       "id": 32,
-      "name": "Nidoran-m",
+      "name": "Nidoran",
       "local_sprite": "/assets/sprites/32.png"
     },
     "33": {
@@ -606,7 +606,7 @@
     },
     "122": {
       "id": 122,
-      "name": "Mr-mime",
+      "name": "Mr Mime",
       "local_sprite": "/assets/sprites/122.png"
     },
     "123": {
@@ -1246,7 +1246,7 @@
     },
     "250": {
       "id": 250,
-      "name": "Ho-oh",
+      "name": "Ho-Oh",
       "local_sprite": "/assets/sprites/250.png"
     },
     "251": {
@@ -1926,7 +1926,7 @@
     },
     "386": {
       "id": 386,
-      "name": "Deoxys-normal",
+      "name": "Deoxys",
       "local_sprite": "/assets/sprites/386.png"
     },
     "387": {
@@ -2061,7 +2061,7 @@
     },
     "413": {
       "id": 413,
-      "name": "Wormadam-plant",
+      "name": "Wormadam",
       "local_sprite": "/assets/sprites/413.png"
     },
     "414": {
@@ -2191,7 +2191,7 @@
     },
     "439": {
       "id": 439,
-      "name": "Mime-jr",
+      "name": "Mime Jr",
       "local_sprite": "/assets/sprites/439.png"
     },
     "440": {
@@ -2366,7 +2366,7 @@
     },
     "474": {
       "id": 474,
-      "name": "Porygon-z",
+      "name": "Porygon-Z",
       "local_sprite": "/assets/sprites/474.png"
     },
     "475": {
@@ -2431,7 +2431,7 @@
     },
     "487": {
       "id": 487,
-      "name": "Giratina-altered",
+      "name": "Giratina",
       "local_sprite": "/assets/sprites/487.png"
     },
     "488": {
@@ -2456,7 +2456,7 @@
     },
     "492": {
       "id": 492,
-      "name": "Shaymin-land",
+      "name": "Shaymin",
       "local_sprite": "/assets/sprites/492.png"
     },
     "493": {
@@ -2746,7 +2746,7 @@
     },
     "550": {
       "id": 550,
-      "name": "Basculin-red-striped",
+      "name": "Basculin",
       "local_sprite": "/assets/sprites/550.png"
     },
     "551": {
@@ -2771,7 +2771,7 @@
     },
     "555": {
       "id": 555,
-      "name": "Darmanitan-standard",
+      "name": "Darmanitan",
       "local_sprite": "/assets/sprites/555.png"
     },
     "556": {
@@ -3201,12 +3201,12 @@
     },
     "641": {
       "id": 641,
-      "name": "Tornadus-incarnate",
+      "name": "Tornadus",
       "local_sprite": "/assets/sprites/641.png"
     },
     "642": {
       "id": 642,
-      "name": "Thundurus-incarnate",
+      "name": "Thundurus",
       "local_sprite": "/assets/sprites/642.png"
     },
     "643": {
@@ -3221,7 +3221,7 @@
     },
     "645": {
       "id": 645,
-      "name": "Landorus-incarnate",
+      "name": "Landorus",
       "local_sprite": "/assets/sprites/645.png"
     },
     "646": {
@@ -3231,12 +3231,12 @@
     },
     "647": {
       "id": 647,
-      "name": "Keldeo-ordinary",
+      "name": "Keldeo",
       "local_sprite": "/assets/sprites/647.png"
     },
     "648": {
       "id": 648,
-      "name": "Meloetta-aria",
+      "name": "Meloetta",
       "local_sprite": "/assets/sprites/648.png"
     },
     "649": {
@@ -3386,7 +3386,7 @@
     },
     "678": {
       "id": 678,
-      "name": "Meowstic-male",
+      "name": "Meowstic",
       "local_sprite": "/assets/sprites/678.png"
     },
     "679": {
@@ -3401,7 +3401,7 @@
     },
     "681": {
       "id": 681,
-      "name": "Aegislash-shield",
+      "name": "Aegislash",
       "local_sprite": "/assets/sprites/681.png"
     },
     "682": {
@@ -3546,12 +3546,12 @@
     },
     "710": {
       "id": 710,
-      "name": "Pumpkaboo-average",
+      "name": "Pumpkaboo",
       "local_sprite": "/assets/sprites/710.png"
     },
     "711": {
       "id": 711,
-      "name": "Gourgeist-average",
+      "name": "Gourgeiste",
       "local_sprite": "/assets/sprites/711.png"
     },
     "712": {
@@ -3586,7 +3586,7 @@
     },
     "718": {
       "id": 718,
-      "name": "Zygarde-50",
+      "name": "Zygarde",
       "local_sprite": "/assets/sprites/718.png"
     },
     "719": {
@@ -3701,7 +3701,7 @@
     },
     "741": {
       "id": 741,
-      "name": "Oricorio-baile",
+      "name": "Oricorio",
       "local_sprite": "/assets/sprites/741.png"
     },
     "742": {
@@ -3721,12 +3721,12 @@
     },
     "745": {
       "id": 745,
-      "name": "Lycanroc-midday",
+      "name": "Lycanroc",
       "local_sprite": "/assets/sprites/745.png"
     },
     "746": {
       "id": 746,
-      "name": "Wishiwashi-solo",
+      "name": "Wishiwashi",
       "local_sprite": "/assets/sprites/746.png"
     },
     "747": {
@@ -3856,7 +3856,7 @@
     },
     "772": {
       "id": 772,
-      "name": "Type-null",
+      "name": "Type: Null",
       "local_sprite": "/assets/sprites/772.png"
     },
     "773": {
@@ -3866,7 +3866,7 @@
     },
     "774": {
       "id": 774,
-      "name": "Minior-red-meteor",
+      "name": "Minior",
       "local_sprite": "/assets/sprites/774.png"
     },
     "775": {
@@ -3886,7 +3886,7 @@
     },
     "778": {
       "id": 778,
-      "name": "Mimikyu-disguised",
+      "name": "Mimikyu",
       "local_sprite": "/assets/sprites/778.png"
     },
     "779": {
@@ -3921,22 +3921,22 @@
     },
     "785": {
       "id": 785,
-      "name": "Tapu-koko",
+      "name": "Tapu Koko",
       "local_sprite": "/assets/sprites/785.png"
     },
     "786": {
       "id": 786,
-      "name": "Tapu-lele",
+      "name": "Tapu Lele",
       "local_sprite": "/assets/sprites/786.png"
     },
     "787": {
       "id": 787,
-      "name": "Tapu-bulu",
+      "name": "Tapu Bulu",
       "local_sprite": "/assets/sprites/787.png"
     },
     "788": {
       "id": 788,
-      "name": "Tapu-fini",
+      "name": "Tapu Fini",
       "local_sprite": "/assets/sprites/788.png"
     },
     "789": {
@@ -4241,7 +4241,7 @@
     },
     "849": {
       "id": 849,
-      "name": "Toxtricity-amped",
+      "name": "Toxtricity",
       "local_sprite": "/assets/sprites/849.png"
     },
     "850": {
@@ -4321,12 +4321,12 @@
     },
     "865": {
       "id": 865,
-      "name": "Sirfetchd",
+      "name": "Sirfetch'd",
       "local_sprite": "/assets/sprites/865.png"
     },
     "866": {
       "id": 866,
-      "name": "Mr-rime",
+      "name": "Mr Rime",
       "local_sprite": "/assets/sprites/866.png"
     },
     "867": {
@@ -4371,17 +4371,17 @@
     },
     "875": {
       "id": 875,
-      "name": "Eiscue-ice",
+      "name": "Eiscue",
       "local_sprite": "/assets/sprites/875.png"
     },
     "876": {
       "id": 876,
-      "name": "Indeedee-male",
+      "name": "Indeedee",
       "local_sprite": "/assets/sprites/876.png"
     },
     "877": {
       "id": 877,
-      "name": "Morpeko-full-belly",
+      "name": "Morpeko",
       "local_sprite": "/assets/sprites/877.png"
     },
     "878": {
@@ -4456,7 +4456,7 @@
     },
     "892": {
       "id": 892,
-      "name": "Urshifu-single-strike",
+      "name": "Urshifu",
       "local_sprite": "/assets/sprites/892.png"
     },
     "893": {
@@ -4506,7 +4506,7 @@
     },
     "902": {
       "id": 902,
-      "name": "Basculegion-male",
+      "name": "Basculegion",
       "local_sprite": "/assets/sprites/902.png"
     },
     "903": {
@@ -4521,7 +4521,7 @@
     },
     "905": {
       "id": 905,
-      "name": "Enamorus-incarnate",
+      "name": "Enamorus",
       "local_sprite": "/assets/sprites/905.png"
     },
     "906": {
@@ -4576,7 +4576,7 @@
     },
     "916": {
       "id": 916,
-      "name": "Oinkologne-male",
+      "name": "Oinkologne",
       "local_sprite": "/assets/sprites/916.png"
     },
     "917": {
@@ -4621,7 +4621,7 @@
     },
     "925": {
       "id": 925,
-      "name": "Maushold-family-of-four",
+      "name": "Maushold",
       "local_sprite": "/assets/sprites/925.png"
     },
     "926": {
@@ -4651,7 +4651,7 @@
     },
     "931": {
       "id": 931,
-      "name": "Squawkabilly-green-plumage",
+      "name": "Squawkabilly",
       "local_sprite": "/assets/sprites/931.png"
     },
     "932": {
@@ -4816,7 +4816,7 @@
     },
     "964": {
       "id": 964,
-      "name": "Palafin-zero",
+      "name": "Palafin",
       "local_sprite": "/assets/sprites/964.png"
     },
     "965": {
@@ -4886,7 +4886,7 @@
     },
     "978": {
       "id": 978,
-      "name": "Tatsugiri-curly",
+      "name": "Tatsugiri",
       "local_sprite": "/assets/sprites/978.png"
     },
     "979": {
@@ -4906,7 +4906,7 @@
     },
     "982": {
       "id": 982,
-      "name": "Dudunsparce-two-segment",
+      "name": "Dudunsparce",
       "local_sprite": "/assets/sprites/982.png"
     },
     "983": {
@@ -4916,62 +4916,62 @@
     },
     "984": {
       "id": 984,
-      "name": "Great-tusk",
+      "name": "Great Tusk",
       "local_sprite": "/assets/sprites/984.png"
     },
     "985": {
       "id": 985,
-      "name": "Scream-tail",
+      "name": "Scream Tail",
       "local_sprite": "/assets/sprites/985.png"
     },
     "986": {
       "id": 986,
-      "name": "Brute-bonnet",
+      "name": "Brute Bonnet",
       "local_sprite": "/assets/sprites/986.png"
     },
     "987": {
       "id": 987,
-      "name": "Flutter-mane",
+      "name": "Flutter Mane",
       "local_sprite": "/assets/sprites/987.png"
     },
     "988": {
       "id": 988,
-      "name": "Slither-wing",
+      "name": "Slither Wing",
       "local_sprite": "/assets/sprites/988.png"
     },
     "989": {
       "id": 989,
-      "name": "Sandy-shocks",
+      "name": "Sandy Shocks",
       "local_sprite": "/assets/sprites/989.png"
     },
     "990": {
       "id": 990,
-      "name": "Iron-treads",
+      "name": "Iron Treads",
       "local_sprite": "/assets/sprites/990.png"
     },
     "991": {
       "id": 991,
-      "name": "Iron-bundle",
+      "name": "Iron Bundle",
       "local_sprite": "/assets/sprites/991.png"
     },
     "992": {
       "id": 992,
-      "name": "Iron-hands",
+      "name": "Iron Hands",
       "local_sprite": "/assets/sprites/992.png"
     },
     "993": {
       "id": 993,
-      "name": "Iron-jugulis",
+      "name": "Iron Jugulis",
       "local_sprite": "/assets/sprites/993.png"
     },
     "994": {
       "id": 994,
-      "name": "Iron-moth",
+      "name": "Iron Moth",
       "local_sprite": "/assets/sprites/994.png"
     },
     "995": {
       "id": 995,
-      "name": "Iron-thorns",
+      "name": "Iron Thorns",
       "local_sprite": "/assets/sprites/995.png"
     },
     "996": {
@@ -5001,32 +5001,32 @@
     },
     "1001": {
       "id": 1001,
-      "name": "Wo-chien",
+      "name": "Wo-Chien",
       "local_sprite": "/assets/sprites/1001.png"
     },
     "1002": {
       "id": 1002,
-      "name": "Chien-pao",
+      "name": "Chien-Pao",
       "local_sprite": "/assets/sprites/1002.png"
     },
     "1003": {
       "id": 1003,
-      "name": "Ting-lu",
+      "name": "Ting-Lu",
       "local_sprite": "/assets/sprites/1003.png"
     },
     "1004": {
       "id": 1004,
-      "name": "Chi-yu",
+      "name": "Chi-Yu",
       "local_sprite": "/assets/sprites/1004.png"
     },
     "1005": {
       "id": 1005,
-      "name": "Roaring-moon",
+      "name": "Roaring Moon",
       "local_sprite": "/assets/sprites/1005.png"
     },
     "1006": {
       "id": 1006,
-      "name": "Iron-valiant",
+      "name": "Iron Valiant",
       "local_sprite": "/assets/sprites/1006.png"
     },
     "1007": {
@@ -5041,12 +5041,12 @@
     },
     "1009": {
       "id": 1009,
-      "name": "Walking-wake",
+      "name": "Walking Wake",
       "local_sprite": "/assets/sprites/1009.png"
     },
     "1010": {
       "id": 1010,
-      "name": "Iron-leaves",
+      "name": "Iron Leaves",
       "local_sprite": "/assets/sprites/1010.png"
     },
     "1011": {
@@ -5096,22 +5096,22 @@
     },
     "1020": {
       "id": 1020,
-      "name": "Gouging-fire",
+      "name": "Gouging Fire",
       "local_sprite": "/assets/sprites/1020.png"
     },
     "1021": {
       "id": 1021,
-      "name": "Raging-bolt",
+      "name": "Raging Bolt",
       "local_sprite": "/assets/sprites/1021.png"
     },
     "1022": {
       "id": 1022,
-      "name": "Iron-boulder",
+      "name": "Iron Boulder",
       "local_sprite": "/assets/sprites/1022.png"
     },
     "1023": {
       "id": 1023,
-      "name": "Iron-crown",
+      "name": "Iron Crown",
       "local_sprite": "/assets/sprites/1023.png"
     },
     "1024": {
