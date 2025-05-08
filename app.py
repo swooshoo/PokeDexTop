@@ -6,9 +6,9 @@ import glob
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QHBoxLayout, QLabel, QPushButton, QScrollArea,
                             QGridLayout, QTabWidget, QSizePolicy, QFrame,
-                            QSplitter)
+                            QSplitter, QComboBox, QLineEdit, QCompleter)
 from PyQt5.QtGui import QPixmap, QFont, QIcon
-from PyQt5.QtCore import Qt, QSize
+from PyQt5.QtCore import Qt, QSize, QStringListModel
 
 # Path to metadata files
 POKEMON_METADATA_FILE = os.path.join('assets', 'pokemon_metadata.json')
@@ -60,12 +60,13 @@ class PokemonCard(QFrame):
         
 class TCGCard(QFrame):
     """A custom widget to display a TCG card"""
-    def __init__(self, card_path, card_id, card_name="Unknown", artist="Unknown"):
+    def __init__(self, card_path, card_id, card_name="Unknown", artist="Unknown", set_name="Unknown"):
         super().__init__()
         self.card_path = card_path
         self.card_id = card_id
         self.card_name = card_name
         self.artist = artist
+        self.set_name = set_name
         self.initUI()
         
     def initUI(self):
@@ -101,6 +102,12 @@ class TCGCard(QFrame):
         name_label.setAlignment(Qt.AlignCenter)
         name_label.setFont(QFont('Arial', 10, QFont.Bold))
         layout.addWidget(name_label)
+        
+        # Add set name if provided
+        if self.set_name and self.set_name != "Unknown":
+            set_label = QLabel(f"Set: {self.set_name}")
+            set_label.setAlignment(Qt.AlignCenter)
+            layout.addWidget(set_label)
         
         # Add artist if known
         if self.artist and self.artist != "Unknown":
@@ -263,7 +270,7 @@ class TCGSetTab(QWidget):
             except (IndexError, ValueError):
                 card_number = filename
                 
-            tcg_card = TCGCard(card_file, card_number, card_name, artist)
+            tcg_card = TCGCard(card_file, card_number, card_name, artist, self.set_name)
             grid_layout.addWidget(tcg_card, row, col)
             
             # Move to the next column or row
@@ -278,6 +285,200 @@ class TCGSetTab(QWidget):
         main_layout.addWidget(scroll_area)
         
         self.setLayout(main_layout)
+
+class PokemonSearchTab(QWidget):
+    """A tab for searching TCG cards by Pokemon name"""
+    def __init__(self, pokemon_metadata, tcg_metadata):
+        super().__init__()
+        self.pokemon_metadata = pokemon_metadata
+        self.tcg_metadata = tcg_metadata
+        # Extract all Pokemon names from metadata
+        self.pokemon_names = self.get_pokemon_names()
+        self.current_search_results = []
+        self.initUI()
+        
+    def get_pokemon_names(self):
+        """Extract all Pokemon names from the metadata"""
+        pokemon_names = []
+        for pokemon_id, pokemon_data in self.pokemon_metadata.items():
+            if 'name' in pokemon_data:
+                pokemon_names.append(pokemon_data['name'])
+        return sorted(pokemon_names)
+        
+    def initUI(self):
+        # Main layout
+        main_layout = QVBoxLayout()
+        
+        # Title
+        title_label = QLabel("Search TCG Cards by Pokémon")
+        title_label.setFont(QFont('Arial', 16, QFont.Bold))
+        title_label.setAlignment(Qt.AlignCenter)
+        main_layout.addWidget(title_label)
+        
+        # Search section
+        search_layout = QHBoxLayout()
+        
+        # Search input with autocomplete
+        self.search_input = QLineEdit()
+        self.search_input.setPlaceholderText("Enter a Pokémon name...")
+        
+        # Set up autocomplete
+        completer = QCompleter(self.pokemon_names)
+        completer.setCaseSensitivity(Qt.CaseInsensitive)
+        self.search_input.setCompleter(completer)
+        
+        search_layout.addWidget(self.search_input, 3)
+        
+        # Search button
+        search_button = QPushButton("Search")
+        search_button.clicked.connect(self.search_cards)
+        search_layout.addWidget(search_button, 1)
+        
+        main_layout.addLayout(search_layout)
+        
+        # Quick selection dropdown
+        dropdown_layout = QHBoxLayout()
+        dropdown_label = QLabel("Or select a Pokémon:")
+        dropdown_layout.addWidget(dropdown_label)
+        
+        self.pokemon_dropdown = QComboBox()
+        self.pokemon_dropdown.addItems([""] + self.pokemon_names)  # Add empty option first
+        self.pokemon_dropdown.currentTextChanged.connect(self.on_dropdown_changed)
+        dropdown_layout.addWidget(self.pokemon_dropdown)
+        
+        main_layout.addLayout(dropdown_layout)
+        
+        # Separator line
+        line = QFrame()
+        line.setFrameShape(QFrame.HLine)
+        line.setFrameShadow(QFrame.Sunken)
+        main_layout.addWidget(line)
+        
+        # Results section
+        self.results_layout = QVBoxLayout()
+        
+        # Results count label
+        self.results_count_label = QLabel("Enter a Pokémon name to see matching TCG cards")
+        self.results_count_label.setAlignment(Qt.AlignCenter)
+        self.results_layout.addWidget(self.results_count_label)
+        
+        # Create a scroll area for search results
+        self.results_scroll = QScrollArea()
+        self.results_scroll.setWidgetResizable(True)
+        
+        # Create a container for the results grid
+        self.results_container = QWidget()
+        self.results_grid = QGridLayout(self.results_container)
+        
+        self.results_scroll.setWidget(self.results_container)
+        self.results_layout.addWidget(self.results_scroll)
+        
+        main_layout.addLayout(self.results_layout)
+        
+        self.setLayout(main_layout)
+    
+    def on_dropdown_changed(self, text):
+        """Handle dropdown selection change"""
+        if text:
+            self.search_input.setText(text)
+            self.search_cards()
+            
+    def search_cards(self):
+        """Search for TCG cards containing the specified Pokemon name"""
+        # Get the search term
+        search_term = self.search_input.text().strip()
+        
+        if not search_term:
+            self.results_count_label.setText("Please enter a Pokémon name to search")
+            self.clear_results()
+            return
+            
+        # Find matching cards
+        matching_cards = self.find_matching_cards(search_term)
+        self.current_search_results = matching_cards
+        
+        # Update results count
+        if matching_cards:
+            self.results_count_label.setText(f"Found {len(matching_cards)} TCG cards featuring {search_term}")
+        else:
+            self.results_count_label.setText(f"No TCG cards found for {search_term}")
+            
+        # Display results
+        self.display_results(matching_cards)
+    
+    def find_matching_cards(self, pokemon_name):
+        """Find all TCG cards that contain the Pokemon name in their card_name"""
+        matching_cards = []
+        
+        # If no TCG metadata, return empty list
+        if not self.tcg_metadata or 'sets' not in self.tcg_metadata:
+            return matching_cards
+        
+        # Search through all sets and their cards
+        for set_id, set_data in self.tcg_metadata['sets'].items():
+            if 'cards' not in set_data:
+                continue
+                
+            for card_id, card_data in set_data['cards'].items():
+                card_name = card_data.get('name', '')
+                
+                # Check if Pokemon name is in the card name (case insensitive)
+                if pokemon_name.lower() in card_name.lower():
+                    # Add card path, set name and set ID for reference
+                    card_info = {
+                        'set_id': set_id,
+                        'set_name': set_data.get('name', set_id),
+                        'card_id': card_id,
+                        'card_name': card_name,
+                        'artist': card_data.get('artist', 'Unknown'),
+                        'card_path': card_data.get('image_path', '').lstrip('/')
+                    }
+                    
+                    matching_cards.append(card_info)
+        
+        return matching_cards
+    
+    def clear_results(self):
+        """Clear all search results"""
+        # Remove all widgets from the grid
+        for i in reversed(range(self.results_grid.count())):
+            widget = self.results_grid.itemAt(i).widget()
+            if widget is not None:
+                widget.deleteLater()
+    
+    def display_results(self, cards):
+        """Display the search results in a grid"""
+        # Clear previous results
+        self.clear_results()
+        
+        if not cards:
+            return
+            
+        # Set up the grid
+        columns = 4
+        row, col = 0, 0
+        
+        # Add cards to the grid
+        for card_info in cards:
+            # Create TCG card widget
+            card_path = card_info.get('card_path', '')
+            if os.path.exists(card_path):
+                tcg_card = TCGCard(
+                    card_path, 
+                    card_info.get('card_id', ''), 
+                    card_info.get('card_name', ''),
+                    card_info.get('artist', 'Unknown'),
+                    card_info.get('set_name', 'Unknown')
+                )
+                self.results_grid.addWidget(tcg_card, row, col)
+                
+                # Move to the next column or row
+                col += 1
+                if col >= columns:
+                    col = 0
+                    row += 1
+            else:
+                print(f"Card image not found: {card_path}")
 
 class PokemonDashboard(QMainWindow):
     """Main application window"""
@@ -370,6 +571,10 @@ class PokemonDashboard(QMainWindow):
         
         # Add the TCG tab to main tabs
         main_tabs.addTab(tcg_tab, "TCG Cards")
+        
+        # Create Search by Pokemon Tab
+        search_tab = PokemonSearchTab(self.pokemon_metadata, self.tcg_metadata)
+        main_tabs.addTab(search_tab, "Search by Pokémon")
         
         # Add the main tab widget to the layout
         main_layout.addWidget(main_tabs)
