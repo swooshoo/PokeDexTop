@@ -220,26 +220,50 @@ class TCGSetTab(QWidget):
         grid_layout = QGridLayout(grid_widget)
         
         # Number of columns for the grid
-        columns = 3  # Fewer columns for TCG cards as they're larger
+        columns = 4  # Fewer columns for TCG cards as they're larger
         
         # Find all PNG images in the set directory
-        card_files = sorted(glob.glob(os.path.join(self.set_path, "*.png")))
+        card_files = glob.glob(os.path.join(self.set_path, "*.png"))
+        
+        # Sort card files by the numeric part at the beginning of the filename
+        def get_card_number(file_path):
+            filename = os.path.basename(file_path).split('.')[0]
+            # Extract the number from the start of the filename
+            # This handles filenames like "46 Alolan Golem"
+            try:
+                # Split by space and get the first part as number
+                num_part = filename.split(' ')[0]
+                return int(num_part)  # Convert to int for proper sorting
+            except (ValueError, IndexError):
+                # If parsing fails, return the original filename
+                return filename
+        
+        # Sort the files numerically by the number at the start of the filename
+        card_files = sorted(card_files, key=get_card_number)
         
         # Add TCG cards to the grid
         row, col = 0, 0
         for card_file in card_files:
-            card_id = os.path.basename(card_file).split('.')[0]
+            # Get the full filename without extension
+            filename = os.path.basename(card_file).split('.')[0]
             
             # Try to get metadata if available
-            card_name = f"Card #{card_id}"
+            card_name = f"Card #{filename}"
             artist = "Unknown"
             
-            if self.set_metadata and 'cards' in self.set_metadata and card_id in self.set_metadata['cards']:
-                card_data = self.set_metadata['cards'][card_id]
+            # Check if this exact filename is in the metadata
+            if self.set_metadata and 'cards' in self.set_metadata and filename in self.set_metadata['cards']:
+                card_data = self.set_metadata['cards'][filename]
                 card_name = card_data.get('name', card_name)
                 artist = card_data.get('artist', artist)
             
-            tcg_card = TCGCard(card_file, card_id, card_name, artist)
+            # Extract the card number for display
+            try:
+                card_number = filename.split(' ')[0]
+            except (IndexError, ValueError):
+                card_number = filename
+                
+            tcg_card = TCGCard(card_file, card_number, card_name, artist)
             grid_layout.addWidget(tcg_card, row, col)
             
             # Move to the next column or row
