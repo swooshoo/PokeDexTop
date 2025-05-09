@@ -60,13 +60,13 @@ class PokemonCard(QFrame):
         
 class TCGCard(QFrame):
     """A custom widget to display a TCG card"""
-    def __init__(self, card_path, card_id, card_name="Unknown", artist="Unknown", set_name="Unknown"):
+    def __init__(self, card_path, card_id, card_name="Unknown", artist="Unknown", set_name=None):
         super().__init__()
         self.card_path = card_path
         self.card_id = card_id
         self.card_name = card_name
         self.artist = artist
-        self.set_name = set_name
+        self.set_name = set_name  # Only display if not None
         self.initUI()
         
     def initUI(self):
@@ -83,10 +83,14 @@ class TCGCard(QFrame):
                 background-color: gray;
             }
         """)
-        self.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        
+        # Set fixed size policy to prevent stretching
+        self.setFixedWidth(280)  # Set a fixed width that looks good for TCG cards
+        self.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         
         # Create layout
         layout = QVBoxLayout()
+        layout.setContentsMargins(10, 10, 10, 10)
         
         # Add card image
         if os.path.exists(self.card_path):
@@ -101,18 +105,21 @@ class TCGCard(QFrame):
         name_label = QLabel(f"#{self.card_id}")
         name_label.setAlignment(Qt.AlignCenter)
         name_label.setFont(QFont('Arial', 10, QFont.Bold))
+        name_label.setWordWrap(True)  # Allow text to wrap
         layout.addWidget(name_label)
         
-        # Add set name if provided
-        if self.set_name and self.set_name != "Unknown":
+        # Add set name if provided AND not None (None means explicitly don't show it)
+        if self.set_name is not None and self.set_name != "Unknown":
             set_label = QLabel(f"Set: {self.set_name}")
             set_label.setAlignment(Qt.AlignCenter)
+            set_label.setWordWrap(True)  # Allow text to wrap
             layout.addWidget(set_label)
         
         # Add artist if known
         if self.artist and self.artist != "Unknown":
             artist_label = QLabel(f"Artist: {self.artist}")
             artist_label.setAlignment(Qt.AlignCenter)
+            artist_label.setWordWrap(True)  # Allow text to wrap
             layout.addWidget(artist_label)
         
         self.setLayout(layout)
@@ -270,7 +277,8 @@ class TCGSetTab(QWidget):
             except (IndexError, ValueError):
                 card_number = filename
                 
-            tcg_card = TCGCard(card_file, card_number, card_name, artist, self.set_name)
+            # Create TCG card without passing set_name (set to None to ensure it's not displayed)
+            tcg_card = TCGCard(card_file, card_number, card_name, artist, None)
             grid_layout.addWidget(tcg_card, row, col)
             
             # Move to the next column or row
@@ -318,14 +326,31 @@ class PokemonSearchTab(QWidget):
         # Search section
         search_layout = QHBoxLayout()
         
+        # Create a custom SearchInput that handles Enter key
+        class SearchInput(QLineEdit):
+            def __init__(self, parent=None):
+                super().__init__(parent)
+                
+            def keyPressEvent(self, event):
+                if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+                    # If parent is PokemonSearchTab, call its search_cards method
+                    if isinstance(self.parent(), PokemonSearchTab):
+                        self.parent().search_cards()
+                    event.accept()  # Mark event as handled
+                else:
+                    super().keyPressEvent(event)  # Handle other keys normally
+        
         # Search input with autocomplete
-        self.search_input = QLineEdit()
+        self.search_input = SearchInput(self)
         self.search_input.setPlaceholderText("Enter a Pokémon name...")
         
         # Set up autocomplete
         completer = QCompleter(self.pokemon_names)
         completer.setCaseSensitivity(Qt.CaseInsensitive)
         self.search_input.setCompleter(completer)
+        
+        # Connect enter key to search function (belt and suspenders approach)
+        self.search_input.returnPressed.connect(self.search_cards)
         
         search_layout.addWidget(self.search_input, 3)
         
@@ -369,6 +394,10 @@ class PokemonSearchTab(QWidget):
         # Create a container for the results grid
         self.results_container = QWidget()
         self.results_grid = QGridLayout(self.results_container)
+        
+        # Configure grid layout to maintain fixed card sizes
+        self.results_grid.setSpacing(10)  # Set spacing between cards
+        self.results_grid.setContentsMargins(20, 20, 20, 20)  # Add margins around the grid
         
         self.results_scroll.setWidget(self.results_container)
         self.results_layout.addWidget(self.results_scroll)
@@ -455,8 +484,12 @@ class PokemonSearchTab(QWidget):
             return
             
         # Set up the grid
-        columns = 4
+        columns = 4  # Using 4 columns to match other tabs
         row, col = 0, 0
+        
+        # Configure the grid to prevent stretching
+        for i in range(columns):
+            self.results_grid.setColumnStretch(i, 1)
         
         # Add cards to the grid
         for card_info in cards:
@@ -470,6 +503,8 @@ class PokemonSearchTab(QWidget):
                     card_info.get('artist', 'Unknown'),
                     card_info.get('set_name', 'Unknown')
                 )
+                # Fix the size policy to prevent stretching
+                tcg_card.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
                 self.results_grid.addWidget(tcg_card, row, col)
                 
                 # Move to the next column or row
