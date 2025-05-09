@@ -3,22 +3,38 @@ import os
 import json
 import math
 import glob
+import re
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QHBoxLayout, QLabel, QPushButton, QScrollArea,
                             QGridLayout, QTabWidget, QSizePolicy, QFrame,
-                            QSplitter, QComboBox, QLineEdit, QCompleter)
+                            QSplitter, QComboBox, QLineEdit, QCompleter,
+                            QToolButton, QMessageBox)
 from PyQt5.QtGui import QPixmap, QFont, QIcon
-from PyQt5.QtCore import Qt, QSize, QStringListModel
+from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject
 
 # Path to metadata files
 POKEMON_METADATA_FILE = os.path.join('assets', 'pokemon_metadata.json')
 TCG_METADATA_FILE = os.path.join('assets', 'tcg_cards', 'index.json')
+IMPORTED_CARDS_FILE = os.path.join('assets', 'imported_cards.json')
+
+# Global dashboard reference that will be set when the dashboard is created
+# This is a simple approach for immediate functionality
+DASHBOARD = None
+
+# Signal hub for passing messages between components
+class SignalHub(QObject):
+    # Signal for when a card should be imported
+    import_card_signal = pyqtSignal(str, str)  # (pokemon_name, card_path)
+    
+# Create a global signal hub instance
+SIGNAL_HUB = SignalHub()
 
 class PokemonCard(QFrame):
     """A custom widget to display a Pokémon card"""
-    def __init__(self, pokemon_data):
+    def __init__(self, pokemon_data, imported_cards=None):
         super().__init__()
         self.pokemon_data = pokemon_data
+        self.imported_cards = imported_cards or {}  # Dictionary of imported card paths
         self.initUI()
         
     def initUI(self):
@@ -40,15 +56,36 @@ class PokemonCard(QFrame):
         # Create layout
         layout = QVBoxLayout()
         
-        # Add Pokémon sprite
-        sprite_path = self.pokemon_data.get('local_sprite', '').lstrip('/')
-        if os.path.exists(sprite_path):
-            sprite_label = QLabel()
-            pixmap = QPixmap(sprite_path)
-            pixmap = pixmap.scaled(120, 120, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-            sprite_label.setPixmap(pixmap)
-            sprite_label.setAlignment(Qt.AlignCenter)
-            layout.addWidget(sprite_label)
+        # Check if this Pokémon has an imported card
+        pokemon_id = str(self.pokemon_data['id'])
+        imported_card_path = self.imported_cards.get(pokemon_id)
+        
+        # Add either the imported card image or the default sprite
+        if imported_card_path and os.path.exists(imported_card_path):
+            # Use imported TCG card image
+            card_label = QLabel()
+            pixmap = QPixmap(imported_card_path)
+            # Scale it slightly larger for better viewing
+            pixmap = pixmap.scaled(180, 252, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            card_label.setPixmap(pixmap)
+            card_label.setAlignment(Qt.AlignCenter)
+            layout.addWidget(card_label)
+            
+            # Add a small indicator that this is an imported card
+            indicator = QLabel("📥 Imported TCG Card")
+            indicator.setStyleSheet("color: blue; font-size: 10px;")
+            indicator.setAlignment(Qt.AlignCenter)
+            layout.addWidget(indicator)
+        else:
+            # Use default sprite
+            sprite_path = self.pokemon_data.get('local_sprite', '').lstrip('/')
+            if os.path.exists(sprite_path):
+                sprite_label = QLabel()
+                pixmap = QPixmap(sprite_path)
+                pixmap = pixmap.scaled(120, 120, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                sprite_label.setPixmap(pixmap)
+                sprite_label.setAlignment(Qt.AlignCenter)
+                layout.addWidget(sprite_label)
         
         # Add Pokémon name and number
         name_label = QLabel(f"#{self.pokemon_data['id']} {self.pokemon_data['name']}")
@@ -57,11 +94,40 @@ class PokemonCard(QFrame):
         layout.addWidget(name_label)
         
         self.setLayout(layout)
+
+class ImportButton(QToolButton):
+    """A button for importing TCG cards as Pokémon sprites"""
+    def __init__(self, card_info, parent=None):
+        super().__init__(parent)
+        self.card_info = card_info
+        self.initUI()
+        
+    def initUI(self):
+        # Set button properties
+        self.setText("+")
+        self.setToolTip("Import this card to My Pokédex")
+        self.setFixedSize(30, 30)
+        self.setStyleSheet("""
+            QToolButton {
+                background-color: rgba(0, 128, 0, 180);
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                border-radius: 15px;
+                border: 2px solid white;
+            }
+            QToolButton:hover {
+                background-color: rgba(0, 150, 0, 220);
+            }
+            QToolButton:pressed {
+                background-color: rgba(0, 100, 0, 200);
+            }
+        """)
         
 class TCGCard(QFrame):
     """A custom widget to display a TCG card"""
-    def __init__(self, card_path, card_id, card_name="Unknown", artist="Unknown", set_name=None):
-        super().__init__()
+    def __init__(self, card_path, card_id, card_name="Unknown", artist="Unknown", set_name=None, parent=None):
+        super().__init__(parent)
         self.card_path = card_path
         self.card_id = card_id
         self.card_name = card_name
@@ -78,6 +144,7 @@ class TCGCard(QFrame):
                 background-color: darkgray;
                 border-radius: 8px;
                 margin: 5px;
+                position: relative;  /* For positioning the import button */
             }
             TCGCard:hover {
                 background-color: gray;
@@ -89,8 +156,8 @@ class TCGCard(QFrame):
         self.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         
         # Create layout
-        layout = QVBoxLayout()
-        layout.setContentsMargins(10, 10, 10, 10)
+        self.main_layout = QVBoxLayout()
+        self.main_layout.setContentsMargins(10, 10, 10, 10)
         
         # Add card image
         if os.path.exists(self.card_path):
@@ -99,39 +166,142 @@ class TCGCard(QFrame):
             pixmap = pixmap.scaled(240, 336, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             card_label.setPixmap(pixmap)
             card_label.setAlignment(Qt.AlignCenter)
-            layout.addWidget(card_label)
+            self.main_layout.addWidget(card_label)
         
         # Add card name and ID
         name_label = QLabel(f"#{self.card_id}")
         name_label.setAlignment(Qt.AlignCenter)
         name_label.setFont(QFont('Arial', 10, QFont.Bold))
         name_label.setWordWrap(True)  # Allow text to wrap
-        layout.addWidget(name_label)
+        self.main_layout.addWidget(name_label)
         
         # Add set name if provided AND not None (None means explicitly don't show it)
         if self.set_name is not None and self.set_name != "Unknown":
             set_label = QLabel(f"Set: {self.set_name}")
             set_label.setAlignment(Qt.AlignCenter)
             set_label.setWordWrap(True)  # Allow text to wrap
-            layout.addWidget(set_label)
+            self.main_layout.addWidget(set_label)
         
         # Add artist if known
         if self.artist and self.artist != "Unknown":
             artist_label = QLabel(f"Artist: {self.artist}")
             artist_label.setAlignment(Qt.AlignCenter)
             artist_label.setWordWrap(True)  # Allow text to wrap
-            layout.addWidget(artist_label)
+            self.main_layout.addWidget(artist_label)
         
-        self.setLayout(layout)
+        # Create a container widget to position the card content and import button
+        container = QWidget()
+        container_layout = QVBoxLayout(container)
+        container_layout.setContentsMargins(0, 0, 0, 0)
+        container_layout.addLayout(self.main_layout)
         
+        # Create import button (positioned at bottom right)
+        card_info = {
+            'path': self.card_path,
+            'name': self.card_name,
+            'id': self.card_id,
+            'set': self.set_name
+        }
+        
+        self.import_button = ImportButton(card_info, self)
+        self.import_button.clicked.connect(self.import_card)
+        
+        # Set fixed position for the import button (bottom right)
+        self.import_button.setParent(self)
+        
+        self.setLayout(container_layout)
+        
+    def resizeEvent(self, event):
+        """Handle resize events to reposition the import button"""
+        super().resizeEvent(event)
+        # Position the import button at the bottom right with some margin
+        button_x = self.width() - self.import_button.width() - 10
+        button_y = self.height() - self.import_button.height() - 10
+        self.import_button.move(button_x, button_y)
+        
+    def import_card(self):
+        """Import this card to replace a Pokémon sprite"""
+        # Extract Pokémon name from card name
+        pokemon_name = self.extract_pokemon_name(self.card_name)
+        
+        if not pokemon_name:
+            QMessageBox.warning(self, "Import Failed", 
+                               f"Could not determine which Pokémon this card represents.\n\nCard name: {self.card_name}")
+            return
+            
+        # HYBRID APPROACH:
+        # 1. Try the signal/slot method first if connected
+        SIGNAL_HUB.import_card_signal.emit(pokemon_name, self.card_path)
+        
+        # 2. Fallback to direct dashboard reference if available
+        if DASHBOARD is not None:
+            success = DASHBOARD.import_card_for_pokemon(pokemon_name, self.card_path)
+            
+            if success:
+                QMessageBox.information(self, "Import Successful", 
+                                      f"Successfully imported card as {pokemon_name}!")
+            else:
+                QMessageBox.warning(self, "Import Failed", 
+                                   f"Could not find a matching Pokémon for '{pokemon_name}' in your Pokédex.")
+        else:
+            # If we get here, neither method worked
+            QMessageBox.critical(self, "Import Failed", 
+                               "Could not connect to the dashboard. Please try again.")
+    
+    def extract_pokemon_name(self, card_name):
+        """Extract the Pokémon name from a card name"""
+        # Example: "Card #56 Lillie's Clefairy ex" -> "Clefairy"
+        
+        # Try to match common patterns in card names
+        if not card_name:
+            return None
+            
+        # Remove "Card #XX " prefix if present
+        card_name = re.sub(r'^Card #\d+\s+', '', card_name)
+        
+        # Define patterns to match
+        patterns = [
+            # Pattern for character's Pokémon: "Character's PokemonName"
+            r"(?:\w+\'s\s+)(\w+(?:\s+\w+)?)",
+            # Pattern for regional forms: "Region PokemonName"
+            r"(?:Alolan|Galarian|Paldean|Hisuian)\s+(\w+(?:\s+\w+)?)",
+            # Pattern for Pokémon with form/variant suffixes
+            r"(\w+(?:\s+\w+)?)\s+(?:ex|GX|V|VMAX|VSTAR)"
+        ]
+        
+        # Try each pattern
+        for pattern in patterns:
+            match = re.search(pattern, card_name)
+            if match:
+                return match.group(1)
+        
+        # If no specific pattern matches, try to get the first part before any suffix
+        # Remove suffixes like "ex", "GX", etc.
+        name = re.sub(r'\s+(?:ex|GX|V|VMAX|VSTAR).*$', '', card_name)
+        
+        # For remaining cards, remove character possessives (e.g., "Hop's", "N's", etc.)
+        name = re.sub(r'^(?:\w+\'s\s+)', '', name)
+        
+        # Special case handling
+        if "Mr. Mime" in name:
+            return "Mr. Mime"
+        if "Mime Jr" in name or "Mime Jr." in name:
+            return "Mime Jr."
+        if "Tapu " in name:  # Handle Tapu Koko, Tapu Lele, etc.
+            return name
+            
+        # Otherwise, return the processed name
+        return name
+
 class GenerationTab(QWidget):
     """A widget representing a single generation tab"""
-    def __init__(self, gen_name, start_id, end_id, pokemon_metadata):
+    def __init__(self, gen_name, start_id, end_id, pokemon_metadata, imported_cards=None):
         super().__init__()
         self.gen_name = gen_name
         self.start_id = start_id
         self.end_id = end_id
         self.pokemon_metadata = pokemon_metadata
+        self.imported_cards = imported_cards or {}
         self.initUI()
         
     def initUI(self):
@@ -171,7 +341,7 @@ class GenerationTab(QWidget):
         for pokemon_id in range(self.start_id, self.end_id + 1):
             pokemon_data = self.get_pokemon_data(pokemon_id)
             if pokemon_data:
-                pokemon_card = PokemonCard(pokemon_data)
+                pokemon_card = PokemonCard(pokemon_data, self.imported_cards)
                 grid_layout.addWidget(pokemon_card, row, col)
                 
                 # Move to the next column or row
@@ -519,8 +689,16 @@ class PokemonDashboard(QMainWindow):
     """Main application window"""
     def __init__(self):
         super().__init__()
+        # Set up global dashboard reference
+        global DASHBOARD
+        DASHBOARD = self
+        
+        # Load data
         self.pokemon_metadata = self.load_pokemon_metadata()
         self.tcg_metadata = self.load_tcg_metadata()
+        self.imported_cards = self.load_imported_cards()
+        
+        # Set up generations
         self.generations = {
             "Generation 1": (1, 151),      # Kanto
             "Generation 2": (152, 251),    # Johto
@@ -532,7 +710,16 @@ class PokemonDashboard(QMainWindow):
             "Generation 8": (810, 905),    # Galar
             "Generation 9": (906, 1025)    # Paldea
         }
+        
+        # Connect to the signal hub
+        SIGNAL_HUB.import_card_signal.connect(self.handle_import_signal)
+        
         self.initUI()
+    
+    def handle_import_signal(self, pokemon_name, card_path):
+        """Handle the import card signal"""
+        # This method is called when a card is imported via the signal system
+        self.import_card_for_pokemon(pokemon_name, card_path)
         
     def initUI(self):
         self.setWindowTitle('Pokémon Dashboard')
@@ -546,26 +733,26 @@ class PokemonDashboard(QMainWindow):
         main_layout = QVBoxLayout(central_widget)
         
         # Create main tab widget
-        main_tabs = QTabWidget()
+        self.main_tabs = QTabWidget()
         
-        # Create Pokémon Sprites Tab
+        # Create My Pokédex Tab (formerly Pokémon Sprites)
         sprites_tab = QWidget()
         sprites_layout = QVBoxLayout(sprites_tab)
         
         # Create a tab widget for generations
-        gen_tabs = QTabWidget()
+        self.gen_tabs = QTabWidget()
         
         # Add tabs for each generation
         for gen_name, (start_id, end_id) in self.generations.items():
-            gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata)
-            gen_tabs.addTab(gen_tab, gen_name)
+            gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata, self.imported_cards)
+            self.gen_tabs.addTab(gen_tab, gen_name)
         
-        sprites_layout.addWidget(gen_tabs)
+        sprites_layout.addWidget(self.gen_tabs)
         
-        # Add the sprites tab to main tabs
-        main_tabs.addTab(sprites_tab, "Pokémon Sprites")
+        # Add the sprites tab to main tabs with the new name
+        self.main_tabs.addTab(sprites_tab, "My Pokédex")
         
-        # Create TCG Cards Tab
+        # Create Search by Set Tab (formerly TCG Cards Tab)
         tcg_tab = QWidget()
         tcg_layout = QVBoxLayout(tcg_tab)
         
@@ -604,23 +791,99 @@ class PokemonDashboard(QMainWindow):
         
         tcg_layout.addWidget(tcg_tabs)
         
-        # Add the TCG tab to main tabs
-        main_tabs.addTab(tcg_tab, "TCG Cards")
+        # Add the TCG tab to main tabs with the new name
+        self.main_tabs.addTab(tcg_tab, "Search by Set")
         
         # Create Search by Pokemon Tab
         search_tab = PokemonSearchTab(self.pokemon_metadata, self.tcg_metadata)
-        main_tabs.addTab(search_tab, "Search by Pokémon")
+        self.main_tabs.addTab(search_tab, "Search by Pokémon")
         
         # Add the main tab widget to the layout
-        main_layout.addWidget(main_tabs)
+        main_layout.addWidget(self.main_tabs)
         
         # Set up status bar
         pokemon_count = len(self.pokemon_metadata)
         tcg_set_count = len(set_dirs) if 'set_dirs' in locals() else 0
+        imported_count = len(self.imported_cards)
         
         self.statusBar().showMessage(
-            f"Pokémon: {pokemon_count} | TCG Sets: {tcg_set_count}"
+            f"Pokémon: {pokemon_count} | TCG Sets: {tcg_set_count} | Imported Cards: {imported_count}"
         )
+        
+    def import_card_for_pokemon(self, pokemon_name, card_path):
+        """Import a TCG card to replace a Pokémon sprite"""
+        # Find Pokémon ID by name
+        pokemon_id = None
+        for pid, data in self.pokemon_metadata.items():
+            if data.get('name', '').lower() == pokemon_name.lower():
+                pokemon_id = pid
+                break
+                
+        if not pokemon_id:
+            # Try fuzzy matching if exact match fails
+            best_match = None
+            best_score = 0
+            for pid, data in self.pokemon_metadata.items():
+                name = data.get('name', '')
+                # Simple similarity score: length of common substring
+                if pokemon_name.lower() in name.lower() or name.lower() in pokemon_name.lower():
+                    score = len(name) / max(len(name), len(pokemon_name))
+                    if score > best_score:
+                        best_score = score
+                        best_match = pid
+                        
+            # Use best match if score is good enough
+            if best_score > 0.5:
+                pokemon_id = best_match
+        
+        if not pokemon_id:
+            return False
+            
+        # Update imported cards dictionary
+        self.imported_cards[pokemon_id] = card_path
+        
+        # Save to file
+        self.save_imported_cards()
+        
+        # Update the UI
+        self.refresh_pokedex()
+        
+        # Update status bar
+        pokemon_count = len(self.pokemon_metadata)
+        tcg_set_count = sum(1 for _ in os.listdir(os.path.join('assets', 'tcg_cards')) 
+                          if os.path.isdir(os.path.join('assets', 'tcg_cards', _))) if os.path.exists(os.path.join('assets', 'tcg_cards')) else 0
+        imported_count = len(self.imported_cards)
+        
+        self.statusBar().showMessage(
+            f"Pokémon: {pokemon_count} | TCG Sets: {tcg_set_count} | Imported Cards: {imported_count}"
+        )
+        
+        return True
+        
+    def refresh_pokedex(self):
+        """Refresh the Pokédex tab to show updated imported cards"""
+        # Create a new Gen tabs widget
+        new_gen_tabs = QTabWidget()
+        
+        # Add tabs for each generation with updated imported cards
+        for gen_name, (start_id, end_id) in self.generations.items():
+            gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata, self.imported_cards)
+            new_gen_tabs.addTab(gen_tab, gen_name)
+            
+        # Get the My Pokédex tab widget
+        pokedex_tab = self.main_tabs.widget(0)
+        
+        # Find the layout of the My Pokédex tab
+        pokedex_layout = pokedex_tab.layout()
+        
+        # Remove the old gen tabs widget
+        old_gen_tabs = pokedex_layout.itemAt(0).widget()
+        pokedex_layout.removeWidget(old_gen_tabs)
+        old_gen_tabs.deleteLater()
+        
+        # Add the new gen tabs widget
+        pokedex_layout.addWidget(new_gen_tabs)
+        self.gen_tabs = new_gen_tabs
         
     def load_pokemon_metadata(self):
         """Load Pokémon metadata from file"""
@@ -652,6 +915,28 @@ class PokemonDashboard(QMainWindow):
             print(f"TCG metadata file not found: {TCG_METADATA_FILE}")
         
         return {}
+        
+    def load_imported_cards(self):
+        """Load imported cards data from file"""
+        if os.path.exists(IMPORTED_CARDS_FILE):
+            try:
+                with open(IMPORTED_CARDS_FILE, 'r') as f:
+                    imported_cards = json.load(f)
+                    print(f"Loaded {len(imported_cards)} imported cards")
+                    return imported_cards
+            except Exception as e:
+                print(f"Error loading imported cards: {e}")
+        
+        return {}
+        
+    def save_imported_cards(self):
+        """Save imported cards data to file"""
+        try:
+            with open(IMPORTED_CARDS_FILE, 'w') as f:
+                json.dump(self.imported_cards, f, indent=2)
+                print(f"Saved {len(self.imported_cards)} imported cards")
+        except Exception as e:
+            print(f"Error saving imported cards: {e}")
 
 def main():
     app = QApplication(sys.argv)
