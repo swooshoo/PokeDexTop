@@ -433,11 +433,16 @@ class TCGSetTab(QWidget):
                 num_part = filename.split(' ')[0]
                 return int(num_part)  # Convert to int for proper sorting
             except (ValueError, IndexError):
-                # If parsing fails, return the original filename
-                return filename
+                # If parsing fails, return a large number to sort to the end
+                return float('inf')  # This will sort non-numeric names to the end
         
         # Sort the files numerically by the number at the start of the filename
-        card_files = sorted(card_files, key=get_card_number)
+        try:
+            card_files = sorted(card_files, key=get_card_number)
+        except TypeError:
+            # Fallback to simple sorting if the key function causes issues
+            print(f"Warning: Using fallback sorting for {self.set_name}")
+            card_files = sorted(card_files)
         
         # Add TCG cards to the grid
         row, col = 0, 0
@@ -470,13 +475,13 @@ class TCGSetTab(QWidget):
             if col >= columns:
                 col = 0
                 row += 1
-        
-        # Set the grid widget as the scroll area's content
-        grid_widget.setLayout(grid_layout)
-        scroll_area.setWidget(grid_widget)
-        main_layout.addWidget(scroll_area)
-        
-        self.setLayout(main_layout)
+            
+            # Set the grid widget as the scroll area's content
+            grid_widget.setLayout(grid_layout)
+            scroll_area.setWidget(grid_widget)
+            main_layout.addWidget(scroll_area)
+            
+            self.setLayout(main_layout)
 
 class PokemonSearchTab(QWidget):
     """A tab for searching TCG cards by Pokemon name"""
