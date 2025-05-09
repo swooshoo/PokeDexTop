@@ -2,7 +2,7 @@
   "sets": {
     "journey_together": {
       "name": "Journey Together",
-      "total_cards": 168,
+      "total_cards": 169,
       "cards": {
         "46 Alolan Golem": {
           "id": "46 Alolan Golem",
@@ -1011,6 +1011,13 @@
           "name": "Card #176 Hop's Zacian ex",
           "image_path": "/assets/tcg_cards/journey_together/176 Hop's Zacian ex.png",
           "artist": "Unknown"
+        },
+        "1 Caterpie": {
+          "id": "1",
+          "name": "Caterpie",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/journey_together/1 Caterpie.png"
         }
       }
     },
@@ -1793,6 +1800,1765 @@
           "artist": "Unknown"
         }
       }
+    },
+    "surging_sparks": {
+      "name": "Surging Sparks",
+      "path": "assets/tcg_cards/surging_sparks",
+      "cards": {
+        "6 Spewpa": {
+          "id": "6",
+          "name": "Spewpa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/6 Spewpa.png"
+        },
+        "39 Paldean Tauros": {
+          "id": "39",
+          "name": "Paldean Tauros",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/39 Paldean Tauros.png"
+        },
+        "247 Pikachu ex": {
+          "id": "247",
+          "name": "Pikachu ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/247 Pikachu ex.png"
+        },
+        "205 Phanpy": {
+          "id": "205",
+          "name": "Phanpy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/205 Phanpy.png"
+        },
+        "113 Grapploct": {
+          "id": "113",
+          "name": "Grapploct",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/113 Grapploct.png"
+        },
+        "177 Gravity Mountain": {
+          "id": "177",
+          "name": "Gravity Mountain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/177 Gravity Mountain.png"
+        },
+        "9 Shiinotic": {
+          "id": "9",
+          "name": "Shiinotic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/9 Shiinotic.png"
+        },
+        "2 Exeggcute": {
+          "id": "2",
+          "name": "Exeggcute",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/2 Exeggcute.png"
+        },
+        "129 Duraludon": {
+          "id": "129",
+          "name": "Duraludon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/129 Duraludon.png"
+        },
+        "192 Exeggcute": {
+          "id": "192",
+          "name": "Exeggcute",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/192 Exeggcute.png"
+        },
+        "62 Blitzle": {
+          "id": "62",
+          "name": "Blitzle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/62 Blitzle.png"
+        },
+        "61 Rotom": {
+          "id": "61",
+          "name": "Rotom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/61 Rotom.png"
+        },
+        "186 Scramble Switch": {
+          "id": "186",
+          "name": "Scramble Switch",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/186 Scramble Switch.png"
+        },
+        "96 Flutter Mane": {
+          "id": "96",
+          "name": "Flutter Mane",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/96 Flutter Mane.png"
+        },
+        "84 Espurr": {
+          "id": "84",
+          "name": "Espurr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/84 Espurr.png"
+        },
+        "210 Flapple": {
+          "id": "210",
+          "name": "Flapple",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/210 Flapple.png"
+        },
+        "159 Cyclizar ex": {
+          "id": "159",
+          "name": "Cyclizar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/159 Cyclizar ex.png"
+        },
+        "213 Kecleon": {
+          "id": "213",
+          "name": "Kecleon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/213 Kecleon.png"
+        },
+        "239 Latias ex": {
+          "id": "239",
+          "name": "Latias ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/239 Latias ex.png"
+        },
+        "155 Heliolisk": {
+          "id": "155",
+          "name": "Heliolisk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/155 Heliolisk.png"
+        },
+        "148 Swablu": {
+          "id": "148",
+          "name": "Swablu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/148 Swablu.png"
+        },
+        "83 Cofagrigus": {
+          "id": "83",
+          "name": "Cofagrigus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/83 Cofagrigus.png"
+        },
+        "44 Sealeo": {
+          "id": "44",
+          "name": "Sealeo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/44 Sealeo.png"
+        },
+        "77 Latios": {
+          "id": "77",
+          "name": "Latios",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/77 Latios.png"
+        },
+        "190 Tyme": {
+          "id": "190",
+          "name": "Tyme",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/190 Tyme.png"
+        },
+        "56 Chien-Pao": {
+          "id": "56",
+          "name": "Chien-Pao",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/56 Chien-Pao.png"
+        },
+        "98 Mankey": {
+          "id": "98",
+          "name": "Mankey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/98 Mankey.png"
+        },
+        "245 Jasmine's Gaze": {
+          "id": "245",
+          "name": "Jasmine's Gaze",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/245 Jasmine's Gaze.png"
+        },
+        "127 Bronzong": {
+          "id": "127",
+          "name": "Bronzong",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/127 Bronzong.png"
+        },
+        "32 Charcadet": {
+          "id": "32",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/32 Charcadet.png"
+        },
+        "90 Sandygast": {
+          "id": "90",
+          "name": "Sandygast",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/90 Sandygast.png"
+        },
+        "91 Palossand ex": {
+          "id": "91",
+          "name": "Palossand ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/91 Palossand ex.png"
+        },
+        "67 Kilowattrel": {
+          "id": "67",
+          "name": "Kilowattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/67 Kilowattrel.png"
+        },
+        "197 Ceruledge": {
+          "id": "197",
+          "name": "Ceruledge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/197 Ceruledge.png"
+        },
+        "206 Vibrava": {
+          "id": "206",
+          "name": "Vibrava",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/206 Vibrava.png"
+        },
+        "238 Pikachu ex": {
+          "id": "238",
+          "name": "Pikachu ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/238 Pikachu ex.png"
+        },
+        "112 Clobbopus": {
+          "id": "112",
+          "name": "Clobbopus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/112 Clobbopus.png"
+        },
+        "165 Call Bell": {
+          "id": "165",
+          "name": "Call Bell",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/165 Call Bell.png"
+        },
+        "19 Ho-Oh": {
+          "id": "19",
+          "name": "Ho-Oh",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/19 Ho-Oh.png"
+        },
+        "75 Smoochum": {
+          "id": "75",
+          "name": "Smoochum",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/75 Smoochum.png"
+        },
+        "123 Alolan Dugtrio": {
+          "id": "123",
+          "name": "Alolan Dugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/123 Alolan Dugtrio.png"
+        },
+        "244 Drayton": {
+          "id": "244",
+          "name": "Drayton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/244 Drayton.png"
+        },
+        "204 Mesprit": {
+          "id": "204",
+          "name": "Mesprit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/204 Mesprit.png"
+        },
+        "140 Appletun": {
+          "id": "140",
+          "name": "Appletun",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/140 Appletun.png"
+        },
+        "125 Registeel": {
+          "id": "125",
+          "name": "Registeel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/125 Registeel.png"
+        },
+        "107 Gastrodon": {
+          "id": "107",
+          "name": "Gastrodon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/107 Gastrodon.png"
+        },
+        "160 Flamigo ex": {
+          "id": "160",
+          "name": "Flamigo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/160 Flamigo ex.png"
+        },
+        "217 Milotic ex": {
+          "id": "217",
+          "name": "Milotic ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/217 Milotic ex.png"
+        },
+        "81 Sigilyph": {
+          "id": "81",
+          "name": "Sigilyph",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/81 Sigilyph.png"
+        },
+        "99 Primeape": {
+          "id": "99",
+          "name": "Primeape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/99 Primeape.png"
+        },
+        "235 Surfer": {
+          "id": "235",
+          "name": "Surfer",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/235 Surfer.png"
+        },
+        "71 Togetic": {
+          "id": "71",
+          "name": "Togetic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/71 Togetic.png"
+        },
+        "17 Ninetales": {
+          "id": "17",
+          "name": "Ninetales",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/17 Ninetales.png"
+        },
+        "209 Skarmory": {
+          "id": "209",
+          "name": "Skarmory",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/209 Skarmory.png"
+        },
+        "58 Magnemite": {
+          "id": "58",
+          "name": "Magnemite",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/58 Magnemite.png"
+        },
+        "1 Exeggcute": {
+          "id": "1",
+          "name": "Exeggcute",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/1 Exeggcute.png"
+        },
+        "162 Amulet of Hope": {
+          "id": "162",
+          "name": "Amulet of Hope",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/162 Amulet of Hope.png"
+        },
+        "203 Latios": {
+          "id": "203",
+          "name": "Latios",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/203 Latios.png"
+        },
+        "70 Togepi": {
+          "id": "70",
+          "name": "Togepi",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/70 Togepi.png"
+        },
+        "226 Tatsugiri ex": {
+          "id": "226",
+          "name": "Tatsugiri ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/226 Tatsugiri ex.png"
+        },
+        "172 Dragon Elixir": {
+          "id": "172",
+          "name": "Dragon Elixir",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/172 Dragon Elixir.png"
+        },
+        "136 Palkia": {
+          "id": "136",
+          "name": "Palkia",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/136 Palkia.png"
+        },
+        "34 Armarouge": {
+          "id": "34",
+          "name": "Armarouge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/34 Armarouge.png"
+        },
+        "11 Zarude": {
+          "id": "11",
+          "name": "Zarude",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/11 Zarude.png"
+        },
+        "194 Shiinotic": {
+          "id": "194",
+          "name": "Shiinotic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/194 Shiinotic.png"
+        },
+        "35 Ceruledge": {
+          "id": "35",
+          "name": "Ceruledge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/35 Ceruledge.png"
+        },
+        "142 Tatsugiri ex": {
+          "id": "142",
+          "name": "Tatsugiri ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/142 Tatsugiri ex.png"
+        },
+        "88 Xerneas": {
+          "id": "88",
+          "name": "Xerneas",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/88 Xerneas.png"
+        },
+        "26 Oricorio": {
+          "id": "26",
+          "name": "Oricorio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/26 Oricorio.png"
+        },
+        "103 Donphan": {
+          "id": "103",
+          "name": "Donphan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/103 Donphan.png"
+        },
+        "52 Quaquaval": {
+          "id": "52",
+          "name": "Quaquaval",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/52 Quaquaval.png"
+        },
+        "225 Alolan Exeggutor ex": {
+          "id": "225",
+          "name": "Alolan Exeggutor ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/225 Alolan Exeggutor ex.png"
+        },
+        "13 Rellor": {
+          "id": "13",
+          "name": "Rellor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/13 Rellor.png"
+        },
+        "200 Bruxish": {
+          "id": "200",
+          "name": "Bruxish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/200 Bruxish.png"
+        },
+        "221 Palossand ex": {
+          "id": "221",
+          "name": "Palossand ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/221 Palossand ex.png"
+        },
+        "207 Clobbopus": {
+          "id": "207",
+          "name": "Clobbopus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/207 Clobbopus.png"
+        },
+        "68 Kilowattrel ex": {
+          "id": "68",
+          "name": "Kilowattrel ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/68 Kilowattrel ex.png"
+        },
+        "40 Mantine": {
+          "id": "40",
+          "name": "Mantine",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/40 Mantine.png"
+        },
+        "216 Scovillain ex": {
+          "id": "216",
+          "name": "Scovillain ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/216 Scovillain ex.png"
+        },
+        "227 Slaking ex": {
+          "id": "227",
+          "name": "Slaking ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/227 Slaking ex.png"
+        },
+        "82 Yamask": {
+          "id": "82",
+          "name": "Yamask",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/82 Yamask.png"
+        },
+        "248 Alolan Exeggutor ex": {
+          "id": "248",
+          "name": "Alolan Exeggutor ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/248 Alolan Exeggutor ex.png"
+        },
+        "79 Mesprit": {
+          "id": "79",
+          "name": "Mesprit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/79 Mesprit.png"
+        },
+        "188 Technical Machine: Fluorite": {
+          "id": "188",
+          "name": "Technical Machine: Fluorite",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/188 Technical Machine: Fluorite.png"
+        },
+        "196 Larvesta": {
+          "id": "196",
+          "name": "Larvesta",
+          "width": 460,
+          "height": 640,
+          "image_path": "assets/tcg_cards/surging_sparks/196 Larvesta.png"
+        },
+        "130 Archaludon ex": {
+          "id": "130",
+          "name": "Archaludon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/130 Archaludon ex.png"
+        },
+        "233 Jasmine's Gaze": {
+          "id": "233",
+          "name": "Jasmine's Gaze",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/233 Jasmine's Gaze.png"
+        },
+        "87 Dedenne": {
+          "id": "87",
+          "name": "Dedenne",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/87 Dedenne.png"
+        },
+        "134 Altaria": {
+          "id": "134",
+          "name": "Altaria",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/134 Altaria.png"
+        },
+        "184 Passho Berry": {
+          "id": "184",
+          "name": "Passho Berry",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/184 Passho Berry.png"
+        },
+        "246 Lisia's Appeal": {
+          "id": "246",
+          "name": "Lisia's Appeal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/246 Lisia's Appeal.png"
+        },
+        "198 Feebas": {
+          "id": "198",
+          "name": "Feebas",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/198 Feebas.png"
+        },
+        "3 Exeggutor": {
+          "id": "3",
+          "name": "Exeggutor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/3 Exeggutor.png"
+        },
+        "220 Latias ex": {
+          "id": "220",
+          "name": "Latias ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/220 Latias ex.png"
+        },
+        "97 Gimmighoul": {
+          "id": "97",
+          "name": "Gimmighoul",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/97 Gimmighoul.png"
+        },
+        "222 Flygon ex": {
+          "id": "222",
+          "name": "Flygon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/222 Flygon ex.png"
+        },
+        "187 Surfer": {
+          "id": "187",
+          "name": "Surfer",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/187 Surfer.png"
+        },
+        "232 Drayton": {
+          "id": "232",
+          "name": "Drayton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/232 Drayton.png"
+        },
+        "69 Miraidon": {
+          "id": "69",
+          "name": "Miraidon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/69 Miraidon.png"
+        },
+        "195 Castform Sunny Form": {
+          "id": "195",
+          "name": "Castform Sunny Form",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/195 Castform Sunny Form.png"
+        },
+        "49 Bruxish": {
+          "id": "49",
+          "name": "Bruxish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/49 Bruxish.png"
+        },
+        "86 Sylveon ex": {
+          "id": "86",
+          "name": "Sylveon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/86 Sylveon ex.png"
+        },
+        "121 Grafaiai": {
+          "id": "121",
+          "name": "Grafaiai",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/121 Grafaiai.png"
+        },
+        "151 Bouffalant": {
+          "id": "151",
+          "name": "Bouffalant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/151 Bouffalant.png"
+        },
+        "23 Simisear": {
+          "id": "23",
+          "name": "Simisear",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/23 Simisear.png"
+        },
+        "66 Wattrel": {
+          "id": "66",
+          "name": "Wattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/66 Wattrel.png"
+        },
+        "176 Energy Search Pro": {
+          "id": "176",
+          "name": "Energy Search Pro",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/176 Energy Search Pro.png"
+        },
+        "105 Vibrava": {
+          "id": "105",
+          "name": "Vibrava",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/105 Vibrava.png"
+        },
+        "179 Lisia's Appeal": {
+          "id": "179",
+          "name": "Lisia's Appeal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/179 Lisia's Appeal.png"
+        },
+        "101 Paldean Tauros": {
+          "id": "101",
+          "name": "Paldean Tauros",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/101 Paldean Tauros.png"
+        },
+        "128 Klefki": {
+          "id": "128",
+          "name": "Klefki",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/128 Klefki.png"
+        },
+        "218 Black Kyurem ex": {
+          "id": "218",
+          "name": "Black Kyurem ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/218 Black Kyurem ex.png"
+        },
+        "240 Hydreigon ex": {
+          "id": "240",
+          "name": "Hydreigon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/240 Hydreigon ex.png"
+        },
+        "42 Milotic ex": {
+          "id": "42",
+          "name": "Milotic ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/42 Milotic ex.png"
+        },
+        "92 Tapu Lele": {
+          "id": "92",
+          "name": "Tapu Lele",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/92 Tapu Lele.png"
+        },
+        "12 Capsakid": {
+          "id": "12",
+          "name": "Capsakid",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/12 Capsakid.png"
+        },
+        "168 Colbur Berry": {
+          "id": "168",
+          "name": "Colbur Berry",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/168 Colbur Berry.png"
+        },
+        "29 Fuecoco": {
+          "id": "29",
+          "name": "Fuecoco",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/29 Fuecoco.png"
+        },
+        "138 Applin": {
+          "id": "138",
+          "name": "Applin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/138 Applin.png"
+        },
+        "27 Sizzlipede": {
+          "id": "27",
+          "name": "Sizzlipede",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/27 Sizzlipede.png"
+        },
+        "183 Miracle Headset": {
+          "id": "183",
+          "name": "Miracle Headset",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/183 Miracle Headset.png"
+        },
+        "50 Quaxly": {
+          "id": "50",
+          "name": "Quaxly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/50 Quaxly.png"
+        },
+        "31 Skeledirge": {
+          "id": "31",
+          "name": "Skeledirge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/31 Skeledirge.png"
+        },
+        "133 Alolan Exeggutor ex": {
+          "id": "133",
+          "name": "Alolan Exeggutor ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/133 Alolan Exeggutor ex.png"
+        },
+        "152 Rufflet": {
+          "id": "152",
+          "name": "Rufflet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/152 Rufflet.png"
+        },
+        "51 Quaxwell": {
+          "id": "51",
+          "name": "Quaxwell",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/51 Quaxwell.png"
+        },
+        "80 Azelf": {
+          "id": "80",
+          "name": "Azelf",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/80 Azelf.png"
+        },
+        "157 Tandemaus": {
+          "id": "157",
+          "name": "Tandemaus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/157 Tandemaus.png"
+        },
+        "158 Maushold": {
+          "id": "158",
+          "name": "Maushold",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/158 Maushold.png"
+        },
+        "45 Walrein": {
+          "id": "45",
+          "name": "Walrein",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/45 Walrein.png"
+        },
+        "43 Spheal": {
+          "id": "43",
+          "name": "Spheal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/43 Spheal.png"
+        },
+        "243 Clemont's Quick Wit": {
+          "id": "243",
+          "name": "Clemont's Quick Wit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/243 Clemont's Quick Wit.png"
+        },
+        "114 Glimmet": {
+          "id": "114",
+          "name": "Glimmet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/114 Glimmet.png"
+        },
+        "143 Eevee": {
+          "id": "143",
+          "name": "Eevee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/143 Eevee.png"
+        },
+        "30 Crocalor": {
+          "id": "30",
+          "name": "Crocalor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/30 Crocalor.png"
+        },
+        "36 Ceruledge ex": {
+          "id": "36",
+          "name": "Ceruledge ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/36 Ceruledge ex.png"
+        },
+        "141 Eternatus": {
+          "id": "141",
+          "name": "Eternatus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/141 Eternatus.png"
+        },
+        "37 Scovillain ex": {
+          "id": "37",
+          "name": "Scovillain ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/37 Scovillain ex.png"
+        },
+        "8 Morelull": {
+          "id": "8",
+          "name": "Morelull",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/8 Morelull.png"
+        },
+        "170 Cyrano": {
+          "id": "170",
+          "name": "Cyrano",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/170 Cyrano.png"
+        },
+        "149 Zangoose": {
+          "id": "149",
+          "name": "Zangoose",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/149 Zangoose.png"
+        },
+        "150 Kecleon": {
+          "id": "150",
+          "name": "Kecleon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/150 Kecleon.png"
+        },
+        "72 Togekiss": {
+          "id": "72",
+          "name": "Togekiss",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/72 Togekiss.png"
+        },
+        "135 Dialga": {
+          "id": "135",
+          "name": "Dialga",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/135 Dialga.png"
+        },
+        "38 Gouging Fire": {
+          "id": "38",
+          "name": "Gouging Fire",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/38 Gouging Fire.png"
+        },
+        "181 Meddling Memo": {
+          "id": "181",
+          "name": "Meddling Memo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/181 Meddling Memo.png"
+        },
+        "201 Cetitan": {
+          "id": "201",
+          "name": "Cetitan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/201 Cetitan.png"
+        },
+        "212 Slakoth": {
+          "id": "212",
+          "name": "Slakoth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/212 Slakoth.png"
+        },
+        "22 Pansear": {
+          "id": "22",
+          "name": "Pansear",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/22 Pansear.png"
+        },
+        "21 Victini": {
+          "id": "21",
+          "name": "Victini",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/21 Victini.png"
+        },
+        "94 Flittle": {
+          "id": "94",
+          "name": "Flittle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/94 Flittle.png"
+        },
+        "131 Gholdengo": {
+          "id": "131",
+          "name": "Gholdengo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/131 Gholdengo.png"
+        },
+        "224 Archaludon ex": {
+          "id": "224",
+          "name": "Archaludon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/224 Archaludon ex.png"
+        },
+        "5 Scatterbug": {
+          "id": "5",
+          "name": "Scatterbug",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/5 Scatterbug.png"
+        },
+        "146 Vigoroth": {
+          "id": "146",
+          "name": "Vigoroth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/146 Vigoroth.png"
+        },
+        "78 Uxie": {
+          "id": "78",
+          "name": "Uxie",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/78 Uxie.png"
+        },
+        "54 Cetitan": {
+          "id": "54",
+          "name": "Cetitan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/54 Cetitan.png"
+        },
+        "249 Counter Gain": {
+          "id": "249",
+          "name": "Counter Gain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/249 Counter Gain.png"
+        },
+        "153 Braviary": {
+          "id": "153",
+          "name": "Braviary",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/153 Braviary.png"
+        },
+        "175 Dusk Ball": {
+          "id": "175",
+          "name": "Dusk Ball",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/175 Dusk Ball.png"
+        },
+        "25 Volcarona": {
+          "id": "25",
+          "name": "Volcarona",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/25 Volcarona.png"
+        },
+        "89 Oricorio": {
+          "id": "89",
+          "name": "Oricorio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/89 Oricorio.png"
+        },
+        "120 Shroodle": {
+          "id": "120",
+          "name": "Shroodle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/120 Shroodle.png"
+        },
+        "185 Precious Trolley": {
+          "id": "185",
+          "name": "Precious Trolley",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/185 Precious Trolley.png"
+        },
+        "46 Shellos": {
+          "id": "46",
+          "name": "Shellos",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/46 Shellos.png"
+        },
+        "211 Appletun": {
+          "id": "211",
+          "name": "Appletun",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/211 Appletun.png"
+        },
+        "182 Megaton Blower": {
+          "id": "182",
+          "name": "Megaton Blower",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/182 Megaton Blower.png"
+        },
+        "117 Deino": {
+          "id": "117",
+          "name": "Deino",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/117 Deino.png"
+        },
+        "55 Iron Bundle": {
+          "id": "55",
+          "name": "Iron Bundle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/55 Iron Bundle.png"
+        },
+        "15 Wo-Chien": {
+          "id": "15",
+          "name": "Wo-Chien",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/15 Wo-Chien.png"
+        },
+        "106 Flygon ex": {
+          "id": "106",
+          "name": "Flygon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/106 Flygon ex.png"
+        },
+        "57 Pikachu ex": {
+          "id": "57",
+          "name": "Pikachu ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/57 Pikachu ex.png"
+        },
+        "189 Tera Orb": {
+          "id": "189",
+          "name": "Tera Orb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/189 Tera Orb.png"
+        },
+        "208 Alolan Dugtrio": {
+          "id": "208",
+          "name": "Alolan Dugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/208 Alolan Dugtrio.png"
+        },
+        "93 Indeedee": {
+          "id": "93",
+          "name": "Indeedee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/93 Indeedee.png"
+        },
+        "236 Durant ex": {
+          "id": "236",
+          "name": "Durant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/236 Durant ex.png"
+        },
+        "102 Phanpy": {
+          "id": "102",
+          "name": "Phanpy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/102 Phanpy.png"
+        },
+        "76 Latias ex": {
+          "id": "76",
+          "name": "Latias ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/76 Latias ex.png"
+        },
+        "64 Stunfisk": {
+          "id": "64",
+          "name": "Stunfisk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/64 Stunfisk.png"
+        },
+        "47 Cryogonal": {
+          "id": "47",
+          "name": "Cryogonal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/47 Cryogonal.png"
+        },
+        "16 Vulpix": {
+          "id": "16",
+          "name": "Vulpix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/16 Vulpix.png"
+        },
+        "193 Vivillon": {
+          "id": "193",
+          "name": "Vivillon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/193 Vivillon.png"
+        },
+        "250 Gravity Mountain": {
+          "id": "250",
+          "name": "Gravity Mountain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/250 Gravity Mountain.png"
+        },
+        "60 Magnezone": {
+          "id": "60",
+          "name": "Magnezone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/60 Magnezone.png"
+        },
+        "59 Magneton": {
+          "id": "59",
+          "name": "Magneton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/59 Magneton.png"
+        },
+        "234 Lisia's Appeal": {
+          "id": "234",
+          "name": "Lisia's Appeal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/234 Lisia's Appeal.png"
+        },
+        "4 Durant ex": {
+          "id": "4",
+          "name": "Durant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/4 Durant ex.png"
+        },
+        "145 Slakoth": {
+          "id": "145",
+          "name": "Slakoth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/145 Slakoth.png"
+        },
+        "154 Helioptile": {
+          "id": "154",
+          "name": "Helioptile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/154 Helioptile.png"
+        },
+        "115 Glimmora": {
+          "id": "115",
+          "name": "Glimmora",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/115 Glimmora.png"
+        },
+        "14 Rabsca": {
+          "id": "14",
+          "name": "Rabsca",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/14 Rabsca.png"
+        },
+        "41 Feebas": {
+          "id": "41",
+          "name": "Feebas",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/41 Feebas.png"
+        },
+        "110 Landorus": {
+          "id": "110",
+          "name": "Landorus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/110 Landorus.png"
+        },
+        "100 Annihilape": {
+          "id": "100",
+          "name": "Annihilape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/100 Annihilape.png"
+        },
+        "242 Alolan Exeggutor ex": {
+          "id": "242",
+          "name": "Alolan Exeggutor ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/242 Alolan Exeggutor ex.png"
+        },
+        "144 Snorlax": {
+          "id": "144",
+          "name": "Snorlax",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/144 Snorlax.png"
+        },
+        "104 Trapinch": {
+          "id": "104",
+          "name": "Trapinch",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/104 Trapinch.png"
+        },
+        "173 Drasna": {
+          "id": "173",
+          "name": "Drasna",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/173 Drasna.png"
+        },
+        "122 Alolan Diglett": {
+          "id": "122",
+          "name": "Alolan Diglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/122 Alolan Diglett.png"
+        },
+        "126 Bronzor": {
+          "id": "126",
+          "name": "Bronzor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/126 Bronzor.png"
+        },
+        "74 Azumarill": {
+          "id": "74",
+          "name": "Azumarill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/74 Azumarill.png"
+        },
+        "10 Dhelmise": {
+          "id": "10",
+          "name": "Dhelmise",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/10 Dhelmise.png"
+        },
+        "95 Espathra": {
+          "id": "95",
+          "name": "Espathra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/95 Espathra.png"
+        },
+        "7 Vivillon": {
+          "id": "7",
+          "name": "Vivillon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/7 Vivillon.png"
+        },
+        "202 Stunfisk": {
+          "id": "202",
+          "name": "Stunfisk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/202 Stunfisk.png"
+        },
+        "167 Clemont's Quick Wit": {
+          "id": "167",
+          "name": "Clemont's Quick Wit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/167 Clemont's Quick Wit.png"
+        },
+        "63 Zebstrika": {
+          "id": "63",
+          "name": "Zebstrika",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/63 Zebstrika.png"
+        },
+        "230 Cyrano": {
+          "id": "230",
+          "name": "Cyrano",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/230 Cyrano.png"
+        },
+        "229 Clemont's Quick Wit": {
+          "id": "229",
+          "name": "Clemont's Quick Wit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/229 Clemont's Quick Wit.png"
+        },
+        "231 Drasna": {
+          "id": "231",
+          "name": "Drasna",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/231 Drasna.png"
+        },
+        "111 Passimian": {
+          "id": "111",
+          "name": "Passimian",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/111 Passimian.png"
+        },
+        "119 Hydreigon ex": {
+          "id": "119",
+          "name": "Hydreigon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/119 Hydreigon ex.png"
+        },
+        "147 Slaking ex": {
+          "id": "147",
+          "name": "Slaking ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/147 Slaking ex.png"
+        },
+        "124 Skarmory": {
+          "id": "124",
+          "name": "Skarmory",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/124 Skarmory.png"
+        },
+        "223 Hydreigon ex": {
+          "id": "223",
+          "name": "Hydreigon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/223 Hydreigon ex.png"
+        },
+        "174 Drayton": {
+          "id": "174",
+          "name": "Drayton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/174 Drayton.png"
+        },
+        "164 Brilliant Blender": {
+          "id": "164",
+          "name": "Brilliant Blender",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/164 Brilliant Blender.png"
+        },
+        "85 Meowstic": {
+          "id": "85",
+          "name": "Meowstic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/85 Meowstic.png"
+        },
+        "219 Pikachu ex": {
+          "id": "219",
+          "name": "Pikachu ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/219 Pikachu ex.png"
+        },
+        "139 Flapple": {
+          "id": "139",
+          "name": "Flapple",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/139 Flapple.png"
+        },
+        "161 Terapagos": {
+          "id": "161",
+          "name": "Terapagos",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/161 Terapagos.png"
+        },
+        "109 Excadrill": {
+          "id": "109",
+          "name": "Excadrill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/109 Excadrill.png"
+        },
+        "108 Drilbur": {
+          "id": "108",
+          "name": "Drilbur",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/108 Drilbur.png"
+        },
+        "53 Cetoddle": {
+          "id": "53",
+          "name": "Cetoddle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/53 Cetoddle.png"
+        },
+        "169 Counter Gain": {
+          "id": "169",
+          "name": "Counter Gain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/169 Counter Gain.png"
+        },
+        "163 Babiri Berry": {
+          "id": "163",
+          "name": "Babiri Berry",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/163 Babiri Berry.png"
+        },
+        "137 Turtonator": {
+          "id": "137",
+          "name": "Turtonator",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/137 Turtonator.png"
+        },
+        "73 Marill": {
+          "id": "73",
+          "name": "Marill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/73 Marill.png"
+        },
+        "214 Braviary": {
+          "id": "214",
+          "name": "Braviary",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/214 Braviary.png"
+        },
+        "191 Enriching Energy": {
+          "id": "191",
+          "name": "Enriching Energy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/191 Enriching Energy.png"
+        },
+        "48 Black Kyurem ex": {
+          "id": "48",
+          "name": "Black Kyurem ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/48 Black Kyurem ex.png"
+        },
+        "20 Castform Sunny Form": {
+          "id": "20",
+          "name": "Castform Sunny Form",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/20 Castform Sunny Form.png"
+        },
+        "24 Larvesta": {
+          "id": "24",
+          "name": "Larvesta",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/24 Larvesta.png"
+        },
+        "215 Durant ex": {
+          "id": "215",
+          "name": "Durant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/215 Durant ex.png"
+        },
+        "33 Charcadet": {
+          "id": "33",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/33 Charcadet.png"
+        },
+        "199 Spheal": {
+          "id": "199",
+          "name": "Spheal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/199 Spheal.png"
+        },
+        "65 Tapu Koko": {
+          "id": "65",
+          "name": "Tapu Koko",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/65 Tapu Koko.png"
+        },
+        "118 Zweilous": {
+          "id": "118",
+          "name": "Zweilous",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/118 Zweilous.png"
+        },
+        "166 Chill Teaser Toy": {
+          "id": "166",
+          "name": "Chill Teaser Toy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/166 Chill Teaser Toy.png"
+        },
+        "116 Koraidon": {
+          "id": "116",
+          "name": "Koraidon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/116 Koraidon.png"
+        },
+        "178 Jasmine's Gaze": {
+          "id": "178",
+          "name": "Jasmine's Gaze",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/178 Jasmine's Gaze.png"
+        },
+        "180 Lively Stadium": {
+          "id": "180",
+          "name": "Lively Stadium",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/180 Lively Stadium.png"
+        },
+        "171 Deduction Kit": {
+          "id": "171",
+          "name": "Deduction Kit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/171 Deduction Kit.png"
+        },
+        "237 Milotic ex": {
+          "id": "237",
+          "name": "Milotic ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/237 Milotic ex.png"
+        },
+        "241 Archaludon ex": {
+          "id": "241",
+          "name": "Archaludon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/241 Archaludon ex.png"
+        },
+        "18 Paldean Tauros": {
+          "id": "18",
+          "name": "Paldean Tauros",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/18 Paldean Tauros.png"
+        },
+        "28 Centiskorch": {
+          "id": "28",
+          "name": "Centiskorch",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/28 Centiskorch.png"
+        },
+        "156 Oranguru": {
+          "id": "156",
+          "name": "Oranguru",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/156 Oranguru.png"
+        },
+        "132 Iron Crown": {
+          "id": "132",
+          "name": "Iron Crown",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/132 Iron Crown.png"
+        },
+        "228 Cyclizar ex": {
+          "id": "228",
+          "name": "Cyclizar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/surging_sparks/228 Cyclizar ex.png"
+        }
+      },
+      "total_cards": 250
     }
-  }
+  },
+  "total_sets": 3,
+  "total_cards": 548
 }

@@ -43,12 +43,12 @@ class PokemonCard(QFrame):
         self.setLineWidth(1)
         self.setStyleSheet("""
             PokemonCard {
-                background-color: darkgray;
+                background-color: gray;
                 border-radius: 8px;
                 margin: 5px;
             }
             PokemonCard:hover {
-                background-color: gray;
+                background-color: darkgray;
             }
         """)
         
@@ -152,13 +152,13 @@ class TCGCard(QFrame):
         self.setLineWidth(1)
         self.setStyleSheet("""
             TCGCard {
-                background-color: darkgray;
+                background-color: gray;
                 border-radius: 8px;
                 margin: 5px;
                 position: relative;  /* For positioning the import button */
             }
             TCGCard:hover {
-                background-color: gray;
+                background-color: darkgray;
             }
         """)
         
