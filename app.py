@@ -30,7 +30,7 @@ class SignalHub(QObject):
 SIGNAL_HUB = SignalHub()
 
 class PokemonCard(QFrame):
-    """A custom widget to display a Pokémon card"""
+    """A custom widget to display a Pokémon card with dimensions matching TCGCard"""
     def __init__(self, pokemon_data, imported_cards=None):
         super().__init__()
         self.pokemon_data = pokemon_data
@@ -38,7 +38,7 @@ class PokemonCard(QFrame):
         self.initUI()
         
     def initUI(self):
-        # Set frame properties
+        # Set frame properties - match TCGCard styling
         self.setFrameStyle(QFrame.Box | QFrame.Raised)
         self.setLineWidth(1)
         self.setStyleSheet("""
@@ -51,10 +51,14 @@ class PokemonCard(QFrame):
                 background-color: gray;
             }
         """)
-        self.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         
-        # Create layout
+        # Set fixed width to match TCGCard
+        self.setFixedWidth(280)  # Same as TCGCard
+        self.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        
+        # Create layout with same margins as TCGCard
         layout = QVBoxLayout()
+        layout.setContentsMargins(10, 10, 10, 10)  # Same as TCGCard
         
         # Check if this Pokémon has an imported card
         pokemon_id = str(self.pokemon_data['id'])
@@ -62,35 +66,42 @@ class PokemonCard(QFrame):
         
         # Add either the imported card image or the default sprite
         if imported_card_path and os.path.exists(imported_card_path):
-            # Use imported TCG card image
+            # Use imported TCG card image - same scale as TCGCard
             card_label = QLabel()
             pixmap = QPixmap(imported_card_path)
-            # Scale it slightly larger for better viewing
-            pixmap = pixmap.scaled(180, 252, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            # Scale to match TCGCard dimensions
+            pixmap = pixmap.scaled(240, 336, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             card_label.setPixmap(pixmap)
             card_label.setAlignment(Qt.AlignCenter)
             layout.addWidget(card_label)
-            
-            # Add a small indicator that this is an imported card
-            indicator = QLabel("📥 Imported TCG Card")
-            indicator.setStyleSheet("color: blue; font-size: 10px;")
-            indicator.setAlignment(Qt.AlignCenter)
-            layout.addWidget(indicator)
         else:
-            # Use default sprite
+            # Use default sprite - scaled to similar proportions as TCG cards
             sprite_path = self.pokemon_data.get('local_sprite', '').lstrip('/')
             if os.path.exists(sprite_path):
+                sprite_container = QWidget()
+                sprite_layout = QVBoxLayout(sprite_container)
+                sprite_layout.setContentsMargins(0, 0, 0, 0)
+                
                 sprite_label = QLabel()
                 pixmap = QPixmap(sprite_path)
-                pixmap = pixmap.scaled(120, 120, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                # Scale sprite larger to better match TCG card dimensions
+                # Using same aspect ratio scaling as TCGCard but slightly smaller
+                pixmap = pixmap.scaled(200, 200, Qt.KeepAspectRatio, Qt.SmoothTransformation)
                 sprite_label.setPixmap(pixmap)
                 sprite_label.setAlignment(Qt.AlignCenter)
-                layout.addWidget(sprite_label)
+                sprite_layout.addWidget(sprite_label)
+                
+                # Add the sprite container with some vertical padding to center it
+                layout.addWidget(sprite_container, 1, Qt.AlignCenter)
+                
+                # Add spacer to help align with TCG card proportions
+                layout.addSpacing(20)
         
-        # Add Pokémon name and number
+        # Add Pokémon name and ID in the same format as TCGCard
         name_label = QLabel(f"#{self.pokemon_data['id']} {self.pokemon_data['name']}")
         name_label.setAlignment(Qt.AlignCenter)
         name_label.setFont(QFont('Arial', 10, QFont.Bold))
+        name_label.setWordWrap(True)  # Allow text to wrap
         layout.addWidget(name_label)
         
         self.setLayout(layout)
@@ -294,7 +305,7 @@ class TCGCard(QFrame):
         return name
 
 class GenerationTab(QWidget):
-    """A widget representing a single generation tab"""
+    """A widget representing a single generation tab with fixed-dimension cards"""
     def __init__(self, gen_name, start_id, end_id, pokemon_metadata, imported_cards=None):
         super().__init__()
         self.gen_name = gen_name
@@ -332,9 +343,12 @@ class GenerationTab(QWidget):
         # Create the grid
         grid_widget = QWidget()
         grid_layout = QGridLayout(grid_widget)
+        grid_layout.setSpacing(15)  # Add spacing between cards
         
-        # Number of columns for the grid
+        # Set equal column stretching to maintain alignment
         columns = 4
+        for i in range(columns):
+            grid_layout.setColumnStretch(i, 1)
         
         # Add Pokémon cards to the grid
         row, col = 0, 0
@@ -342,7 +356,7 @@ class GenerationTab(QWidget):
             pokemon_data = self.get_pokemon_data(pokemon_id)
             if pokemon_data:
                 pokemon_card = PokemonCard(pokemon_data, self.imported_cards)
-                grid_layout.addWidget(pokemon_card, row, col)
+                grid_layout.addWidget(pokemon_card, row, col, Qt.AlignCenter)
                 
                 # Move to the next column or row
                 col += 1
