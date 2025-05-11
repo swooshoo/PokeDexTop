@@ -118,9 +118,14 @@ class ImportButton(QToolButton):
         self.setText("+")
         self.setToolTip("Import this card to My Pokédex")
         self.setFixedSize(30, 30)
+        
+        # Set cursor to pointing hand (this is the key fix for cursor)
+        self.setCursor(Qt.PointingHandCursor)
+        
+        # Set stylesheet with distinct colors for normal/hover/pressed states
         self.setStyleSheet("""
             QToolButton {
-                background-color: rgba(0, 128, 0, 180);
+                background-color: #00AA00;
                 color: white;
                 font-weight: bold;
                 font-size: 16px;
@@ -128,10 +133,11 @@ class ImportButton(QToolButton):
                 border: 2px solid white;
             }
             QToolButton:hover {
-                background-color: rgba(0, 150, 0, 220);
+                background-color: #FF8C00;
+                border: 2px solid #FFD700;
             }
             QToolButton:pressed {
-                background-color: rgba(0, 100, 0, 200);
+                background-color: #FF0000;
             }
         """)
         
@@ -741,7 +747,7 @@ class PokemonDashboard(QMainWindow):
         self.import_card_for_pokemon(pokemon_name, card_path)
         
     def initUI(self):
-        self.setWindowTitle('Pokémon Dashboard')
+        self.setWindowTitle('PokéDextop')
         self.setGeometry(100, 100, 1200, 800)
         
         # Create the central widget
