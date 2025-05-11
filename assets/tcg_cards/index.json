@@ -3557,8 +3557,1639 @@
         }
       },
       "total_cards": 250
+    },
+    "stellar_crown": {
+      "name": "Stellar Crown",
+      "path": "assets/tcg_cards/stellar_crown",
+      "cards": {
+        "1 Venusaur ex": {
+          "id": "1",
+          "name": "Venusaur ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/1 Venusaur ex.png"
+        },
+        "10 Gossifleur": {
+          "id": "10",
+          "name": "Gossifleur",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/10 Gossifleur.png"
+        },
+        "100 Klang": {
+          "id": "100",
+          "name": "Klang",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/100 Klang.png"
+        },
+        "101 Klinklang": {
+          "id": "101",
+          "name": "Klinklang",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/101 Klinklang.png"
+        },
+        "102 Meltan": {
+          "id": "102",
+          "name": "Meltan",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/102 Meltan.png"
+        },
+        "103 Meltan": {
+          "id": "103",
+          "name": "Meltan",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/103 Meltan.png"
+        },
+        "104 Melmetal": {
+          "id": "104",
+          "name": "Melmetal",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/104 Melmetal.png"
+        },
+        "105 Melmetal ex": {
+          "id": "105",
+          "name": "Melmetal ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/105 Melmetal ex.png"
+        },
+        "106 Duraludon": {
+          "id": "106",
+          "name": "Duraludon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/106 Duraludon.png"
+        },
+        "107 Archaludon": {
+          "id": "107",
+          "name": "Archaludon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/107 Archaludon.png"
+        },
+        "108 Varoom": {
+          "id": "108",
+          "name": "Varoom",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/108 Varoom.png"
+        },
+        "109 Revavroom": {
+          "id": "109",
+          "name": "Revavroom",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/109 Revavroom.png"
+        },
+        "11 Eldegoss": {
+          "id": "11",
+          "name": "Eldegoss",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/11 Eldegoss.png"
+        },
+        "110 Orthworm ex": {
+          "id": "110",
+          "name": "Orthworm ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/110 Orthworm ex.png"
+        },
+        "111 Raging Bolt": {
+          "id": "111",
+          "name": "Raging Bolt",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/111 Raging Bolt.png"
+        },
+        "112 Tauros": {
+          "id": "112",
+          "name": "Tauros",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/112 Tauros.png"
+        },
+        "113 Eevee": {
+          "id": "113",
+          "name": "Eevee",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/113 Eevee.png"
+        },
+        "114 Hoothoot": {
+          "id": "114",
+          "name": "Hoothoot",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/114 Hoothoot.png"
+        },
+        "115 Noctowl": {
+          "id": "115",
+          "name": "Noctowl",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/115 Noctowl.png"
+        },
+        "116 Glameow": {
+          "id": "116",
+          "name": "Glameow",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/116 Glameow.png"
+        },
+        "117 Purugly": {
+          "id": "117",
+          "name": "Purugly",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/117 Purugly.png"
+        },
+        "118 Fan Rotom": {
+          "id": "118",
+          "name": "Fan Rotom",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/118 Fan Rotom.png"
+        },
+        "119 Bouffalant": {
+          "id": "119",
+          "name": "Bouffalant",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/119 Bouffalant.png"
+        },
+        "12 Applin": {
+          "id": "12",
+          "name": "Applin",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/12 Applin.png"
+        },
+        "120 Tornadus": {
+          "id": "120",
+          "name": "Tornadus",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/120 Tornadus.png"
+        },
+        "121 Fletchling": {
+          "id": "121",
+          "name": "Fletchling",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/121 Fletchling.png"
+        },
+        "122 Fletchinder": {
+          "id": "122",
+          "name": "Fletchinder",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/122 Fletchinder.png"
+        },
+        "123 Talonflame": {
+          "id": "123",
+          "name": "Talonflame",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/123 Talonflame.png"
+        },
+        "124 Wooloo": {
+          "id": "124",
+          "name": "Wooloo",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/124 Wooloo.png"
+        },
+        "125 Dubwool": {
+          "id": "125",
+          "name": "Dubwool",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/125 Dubwool.png"
+        },
+        "126 Lechonk": {
+          "id": "126",
+          "name": "Lechonk",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/126 Lechonk.png"
+        },
+        "127 Cyclizar": {
+          "id": "127",
+          "name": "Cyclizar",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/127 Cyclizar.png"
+        },
+        "128 Terapagos ex": {
+          "id": "128",
+          "name": "Terapagos ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/128 Terapagos ex.png"
+        },
+        "13 Dipplin": {
+          "id": "13",
+          "name": "Dipplin",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/13 Dipplin.png"
+        },
+        "14 Hydrapple ex": {
+          "id": "14",
+          "name": "Hydrapple ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/14 Hydrapple ex.png"
+        },
+        "143 Bulbasaur": {
+          "id": "143",
+          "name": "Bulbasaur",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/143 Bulbasaur.png"
+        },
+        "144 Ledian": {
+          "id": "144",
+          "name": "Ledian",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/144 Ledian.png"
+        },
+        "145 Lileep": {
+          "id": "145",
+          "name": "Lileep",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/145 Lileep.png"
+        },
+        "146 Turtonator": {
+          "id": "146",
+          "name": "Turtonator",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/146 Turtonator.png"
+        },
+        "147 Raboot": {
+          "id": "147",
+          "name": "Raboot",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/147 Raboot.png"
+        },
+        "148 Squirtle": {
+          "id": "148",
+          "name": "Squirtle",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/148 Squirtle.png"
+        },
+        "149 Crabominable": {
+          "id": "149",
+          "name": "Crabominable",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/149 Crabominable.png"
+        },
+        "15 Nymble": {
+          "id": "15",
+          "name": "Nymble",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/15 Nymble.png"
+        },
+        "150 Joltik": {
+          "id": "150",
+          "name": "Joltik",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/150 Joltik.png"
+        },
+        "151 Zeraora": {
+          "id": "151",
+          "name": "Zeraora",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/151 Zeraora.png"
+        },
+        "152 Milcery": {
+          "id": "152",
+          "name": "Milcery",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/152 Milcery.png"
+        },
+        "153 Meditite": {
+          "id": "153",
+          "name": "Meditite",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/153 Meditite.png"
+        },
+        "154 Gulpin": {
+          "id": "154",
+          "name": "Gulpin",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/154 Gulpin.png"
+        },
+        "155 Archaludon": {
+          "id": "155",
+          "name": "Archaludon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/155 Archaludon.png"
+        },
+        "156 Hydrapple ex": {
+          "id": "156",
+          "name": "Hydrapple ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/156 Hydrapple ex.png"
+        },
+        "157 Cinderace ex": {
+          "id": "157",
+          "name": "Cinderace ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/157 Cinderace ex.png"
+        },
+        "158 Lapras ex": {
+          "id": "158",
+          "name": "Lapras ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/158 Lapras ex.png"
+        },
+        "159 Galvantula ex": {
+          "id": "159",
+          "name": "Galvantula ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/159 Galvantula ex.png"
+        },
+        "16 Lokix": {
+          "id": "16",
+          "name": "Lokix",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/16 Lokix.png"
+        },
+        "160 Dachsbun ex": {
+          "id": "160",
+          "name": "Dachsbun ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/160 Dachsbun ex.png"
+        },
+        "161 Medicham ex": {
+          "id": "161",
+          "name": "Medicham ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/161 Medicham ex.png"
+        },
+        "162 Orthworm ex": {
+          "id": "162",
+          "name": "Orthworm ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/162 Orthworm ex.png"
+        },
+        "167 Hydrapple ex": {
+          "id": "167",
+          "name": "Hydrapple ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/167 Hydrapple ex.png"
+        },
+        "168 Galvantula ex": {
+          "id": "168",
+          "name": "Galvantula ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/168 Galvantula ex.png"
+        },
+        "169 Dachsbun ex": {
+          "id": "169",
+          "name": "Dachsbun ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/169 Dachsbun ex.png"
+        },
+        "17 Toedscool": {
+          "id": "17",
+          "name": "Toedscool",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/17 Toedscool.png"
+        },
+        "170 Terapagos ex": {
+          "id": "170",
+          "name": "Terapagos ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/170 Terapagos ex.png"
+        },
+        "173 Terapagos ex": {
+          "id": "173",
+          "name": "Terapagos ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/173 Terapagos ex.png"
+        },
+        "18 Toedscruel": {
+          "id": "18",
+          "name": "Toedscruel",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/18 Toedscruel.png"
+        },
+        "19 Ponyta": {
+          "id": "19",
+          "name": "Ponyta",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/19 Ponyta.png"
+        },
+        "2 Ledyba": {
+          "id": "2",
+          "name": "Ledyba",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/2 Ledyba.png"
+        },
+        "20 Rapidash": {
+          "id": "20",
+          "name": "Rapidash",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/20 Rapidash.png"
+        },
+        "21 Pansear": {
+          "id": "21",
+          "name": "Pansear",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/21 Pansear.png"
+        },
+        "22 Reshiram": {
+          "id": "22",
+          "name": "Reshiram",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/22 Reshiram.png"
+        },
+        "23 Salandit": {
+          "id": "23",
+          "name": "Salandit",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/23 Salandit.png"
+        },
+        "24 Salazzle": {
+          "id": "24",
+          "name": "Salazzle",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/24 Salazzle.png"
+        },
+        "25 Turtonator": {
+          "id": "25",
+          "name": "Turtonator",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/25 Turtonator.png"
+        },
+        "26 Scorbunny": {
+          "id": "26",
+          "name": "Scorbunny",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/26 Scorbunny.png"
+        },
+        "27 Raboot": {
+          "id": "27",
+          "name": "Raboot",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/27 Raboot.png"
+        },
+        "28 Cinderace ex": {
+          "id": "28",
+          "name": "Cinderace ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/28 Cinderace ex.png"
+        },
+        "29 Charcadet": {
+          "id": "29",
+          "name": "Charcadet",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/29 Charcadet.png"
+        },
+        "3 Ledian": {
+          "id": "3",
+          "name": "Ledian",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/3 Ledian.png"
+        },
+        "30 Blastoise ex": {
+          "id": "30",
+          "name": "Blastoise ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/30 Blastoise ex.png"
+        },
+        "31 Lapras": {
+          "id": "31",
+          "name": "Lapras",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/31 Lapras.png"
+        },
+        "32 Lapras ex": {
+          "id": "32",
+          "name": "Lapras ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/32 Lapras ex.png"
+        },
+        "33 Marill": {
+          "id": "33",
+          "name": "Marill",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/33 Marill.png"
+        },
+        "34 Azumarill": {
+          "id": "34",
+          "name": "Azumarill",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/34 Azumarill.png"
+        },
+        "35 Finneon": {
+          "id": "35",
+          "name": "Finneon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/35 Finneon.png"
+        },
+        "36 Lumineon": {
+          "id": "36",
+          "name": "Lumineon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/36 Lumineon.png"
+        },
+        "38 Carracosta": {
+          "id": "38",
+          "name": "Carracosta",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/38 Carracosta.png"
+        },
+        "39 Froakie": {
+          "id": "39",
+          "name": "Froakie",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/39 Froakie.png"
+        },
+        "4 Celebi": {
+          "id": "4",
+          "name": "Celebi",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/4 Celebi.png"
+        },
+        "40 Frogadier": {
+          "id": "40",
+          "name": "Frogadier",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/40 Frogadier.png"
+        },
+        "41 Greninja ex": {
+          "id": "41",
+          "name": "Greninja ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/41 Greninja ex.png"
+        },
+        "42 Crabominable": {
+          "id": "42",
+          "name": "Crabominable",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/42 Crabominable.png"
+        },
+        "43 Chewtle": {
+          "id": "43",
+          "name": "Chewtle",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/43 Chewtle.png"
+        },
+        "44 Drednaw": {
+          "id": "44",
+          "name": "Drednaw",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/44 Drednaw.png"
+        },
+        "45 Veluza": {
+          "id": "45",
+          "name": "Veluza",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/45 Veluza.png"
+        },
+        "46 Electabuzz": {
+          "id": "46",
+          "name": "Electabuzz",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/46 Electabuzz.png"
+        },
+        "47 Electivire": {
+          "id": "47",
+          "name": "Electivire",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/47 Electivire.png"
+        },
+        "48 Chinchou": {
+          "id": "48",
+          "name": "Chinchou",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/48 Chinchou.png"
+        },
+        "49 Lanturn": {
+          "id": "49",
+          "name": "Lanturn",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/49 Lanturn.png"
+        },
+        "5 Lileep": {
+          "id": "5",
+          "name": "Lileep",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/5 Lileep.png"
+        },
+        "50 Joltik": {
+          "id": "50",
+          "name": "Joltik",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/50 Joltik.png"
+        },
+        "51 Galvantula ex": {
+          "id": "51",
+          "name": "Galvantula ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/51 Galvantula ex.png"
+        },
+        "52 Charjabug": {
+          "id": "52",
+          "name": "Charjabug",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/52 Charjabug.png"
+        },
+        "53 Vikavolt": {
+          "id": "53",
+          "name": "Vikavolt",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/53 Vikavolt.png"
+        },
+        "54 Togedemaru": {
+          "id": "54",
+          "name": "Togedemaru",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/54 Togedemaru.png"
+        },
+        "55 Zeraora": {
+          "id": "55",
+          "name": "Zeraora",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/55 Zeraora.png"
+        },
+        "56 Pawmi": {
+          "id": "56",
+          "name": "Pawmi",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/56 Pawmi.png"
+        },
+        "57 Slowpoke": {
+          "id": "57",
+          "name": "Slowpoke",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/57 Slowpoke.png"
+        },
+        "58 Slowking": {
+          "id": "58",
+          "name": "Slowking",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/58 Slowking.png"
+        },
+        "59 Mewtwo": {
+          "id": "59",
+          "name": "Mewtwo",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/59 Mewtwo.png"
+        },
+        "6 Cradily": {
+          "id": "6",
+          "name": "Cradily",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/6 Cradily.png"
+        },
+        "60 Drifloon": {
+          "id": "60",
+          "name": "Drifloon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/60 Drifloon.png"
+        },
+        "61 Drifblim": {
+          "id": "61",
+          "name": "Drifblim",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/61 Drifblim.png"
+        },
+        "62 Yamask": {
+          "id": "62",
+          "name": "Yamask",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/62 Yamask.png"
+        },
+        "63 Comfey": {
+          "id": "63",
+          "name": "Comfey",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/63 Comfey.png"
+        },
+        "64 Milcery": {
+          "id": "64",
+          "name": "Milcery",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/64 Milcery.png"
+        },
+        "65 Alcremie": {
+          "id": "65",
+          "name": "Alcremie",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/65 Alcremie.png"
+        },
+        "66 Fidough": {
+          "id": "66",
+          "name": "Fidough",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/66 Fidough.png"
+        },
+        "67 Dachsbun ex": {
+          "id": "67",
+          "name": "Dachsbun ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/67 Dachsbun ex.png"
+        },
+        "68 Flittle": {
+          "id": "68",
+          "name": "Flittle",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/68 Flittle.png"
+        },
+        "69 Espathra": {
+          "id": "69",
+          "name": "Espathra",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/69 Espathra.png"
+        },
+        "7 Carnivine": {
+          "id": "7",
+          "name": "Carnivine",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/7 Carnivine.png"
+        },
+        "70 Greavard": {
+          "id": "70",
+          "name": "Greavard",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/70 Greavard.png"
+        },
+        "71 Iron Boulder": {
+          "id": "71",
+          "name": "Iron Boulder",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/71 Iron Boulder.png"
+        },
+        "72 Cubone": {
+          "id": "72",
+          "name": "Cubone",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/72 Cubone.png"
+        },
+        "73 Marowak": {
+          "id": "73",
+          "name": "Marowak",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/73 Marowak.png"
+        },
+        "74 Rhyhorn": {
+          "id": "74",
+          "name": "Rhyhorn",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/74 Rhyhorn.png"
+        },
+        "75 Rhydon": {
+          "id": "75",
+          "name": "Rhydon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/75 Rhydon.png"
+        },
+        "76 Rhyperior": {
+          "id": "76",
+          "name": "Rhyperior",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/76 Rhyperior.png"
+        },
+        "77 Meditite": {
+          "id": "77",
+          "name": "Meditite",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/77 Meditite.png"
+        },
+        "78 Meditite": {
+          "id": "78",
+          "name": "Meditite",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/78 Meditite.png"
+        },
+        "79 Medicham": {
+          "id": "79",
+          "name": "Medicham",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/79 Medicham.png"
+        },
+        "8 Mow Rotom": {
+          "id": "8",
+          "name": "Mow Rotom",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/8 Mow Rotom.png"
+        },
+        "80 Medicham ex": {
+          "id": "80",
+          "name": "Medicham ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/80 Medicham ex.png"
+        },
+        "81 Riolu": {
+          "id": "81",
+          "name": "Riolu",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/81 Riolu.png"
+        },
+        "82 Lucario ex": {
+          "id": "82",
+          "name": "Lucario ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/82 Lucario ex.png"
+        },
+        "83 Mienfoo": {
+          "id": "83",
+          "name": "Mienfoo",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/83 Mienfoo.png"
+        },
+        "84 Mienshao": {
+          "id": "84",
+          "name": "Mienshao",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/84 Mienshao.png"
+        },
+        "85 Pancham": {
+          "id": "85",
+          "name": "Pancham",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/85 Pancham.png"
+        },
+        "86 Diancie": {
+          "id": "86",
+          "name": "Diancie",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/86 Diancie.png"
+        },
+        "87 Crabrawler": {
+          "id": "87",
+          "name": "Crabrawler",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/87 Crabrawler.png"
+        },
+        "88 Falinks": {
+          "id": "88",
+          "name": "Falinks",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/88 Falinks.png"
+        },
+        "89 Garganacl ex": {
+          "id": "89",
+          "name": "Garganacl ex",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/89 Garganacl ex.png"
+        },
+        "9 Grubbin": {
+          "id": "9",
+          "name": "Grubbin",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/9 Grubbin.png"
+        },
+        "90 Koraidon": {
+          "id": "90",
+          "name": "Koraidon",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/90 Koraidon.png"
+        },
+        "91 Gulpin": {
+          "id": "91",
+          "name": "Gulpin",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/91 Gulpin.png"
+        },
+        "92 Swalot": {
+          "id": "92",
+          "name": "Swalot",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/92 Swalot.png"
+        },
+        "93 Pangoro": {
+          "id": "93",
+          "name": "Pangoro",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/93 Pangoro.png"
+        },
+        "94 Impidimp": {
+          "id": "94",
+          "name": "Impidimp",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/94 Impidimp.png"
+        },
+        "95 Morgrem": {
+          "id": "95",
+          "name": "Morgrem",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/95 Morgrem.png"
+        },
+        "96 Grimmsnarl": {
+          "id": "96",
+          "name": "Grimmsnarl",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/96 Grimmsnarl.png"
+        },
+        "97 Bombirdier": {
+          "id": "97",
+          "name": "Bombirdier",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/97 Bombirdier.png"
+        },
+        "98 Jirachi": {
+          "id": "98",
+          "name": "Jirachi",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/98 Jirachi.png"
+        },
+        "99 Klink": {
+          "id": "99",
+          "name": "Klink",
+          "width": 1423,
+          "height": 1984,
+          "image_path": "assets/tcg_cards/stellar_crown/99 Klink.png"
+        }
+      },
+      "total_cards": 152
+    },
+    "shrouded_fable": {
+      "name": "Shrouded Fable",
+      "path": "assets/tcg_cards/shrouded_fable",
+      "cards": {
+        "1 Joltik": {
+          "id": "1",
+          "name": "Joltik",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/1 Joltik.png"
+        },
+        "10 Horsea": {
+          "id": "10",
+          "name": "Horsea",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/10 Horsea.png"
+        },
+        "11 Seadra": {
+          "id": "11",
+          "name": "Seadra",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/11 Seadra.png"
+        },
+        "12 Kingdra ex": {
+          "id": "12",
+          "name": "Kingdra ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/12 Kingdra ex.png"
+        },
+        "13 Sneasel": {
+          "id": "13",
+          "name": "Sneasel",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/13 Sneasel.png"
+        },
+        "14 Weavile": {
+          "id": "14",
+          "name": "Weavile",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/14 Weavile.png"
+        },
+        "15 Revavroom ex": {
+          "id": "15",
+          "name": "Revavroom ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/15 Revavroom ex.png"
+        },
+        "16 Drowzee": {
+          "id": "16",
+          "name": "Drowzee",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/16 Drowzee.png"
+        },
+        "17 Hypno": {
+          "id": "17",
+          "name": "Hypno",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/17 Hypno.png"
+        },
+        "18 Duskull": {
+          "id": "18",
+          "name": "Duskull",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/18 Duskull.png"
+        },
+        "19 Dusclops": {
+          "id": "19",
+          "name": "Dusclops",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/19 Dusclops.png"
+        },
+        "2 Galvantula": {
+          "id": "2",
+          "name": "Galvantula",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/2 Galvantula.png"
+        },
+        "20 Dusknoir": {
+          "id": "20",
+          "name": "Dusknoir",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/20 Dusknoir.png"
+        },
+        "21 Cresselia": {
+          "id": "21",
+          "name": "Cresselia",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/21 Cresselia.png"
+        },
+        "22 Sylveon": {
+          "id": "22",
+          "name": "Sylveon",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/22 Sylveon.png"
+        },
+        "23 Croagunk": {
+          "id": "23",
+          "name": "Croagunk",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/23 Croagunk.png"
+        },
+        "24 Toxicroak": {
+          "id": "24",
+          "name": "Toxicroak",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/24 Toxicroak.png"
+        },
+        "25 Bloodmoon Ursaluna": {
+          "id": "25",
+          "name": "Bloodmoon Ursaluna",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/25 Bloodmoon Ursaluna.png"
+        },
+        "26 Slither Wing": {
+          "id": "26",
+          "name": "Slither Wing",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/26 Slither Wing.png"
+        },
+        "27 Zubat": {
+          "id": "27",
+          "name": "Zubat",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/27 Zubat.png"
+        },
+        "28 Golbat": {
+          "id": "28",
+          "name": "Golbat",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/28 Golbat.png"
+        },
+        "29 Crobat": {
+          "id": "29",
+          "name": "Crobat",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/29 Crobat.png"
+        },
+        "3 Rowlet": {
+          "id": "3",
+          "name": "Rowlet",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/3 Rowlet.png"
+        },
+        "30 Absol": {
+          "id": "30",
+          "name": "Absol",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/30 Absol.png"
+        },
+        "31 Zorua": {
+          "id": "31",
+          "name": "Zorua",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/31 Zorua.png"
+        },
+        "32 Zoroark": {
+          "id": "32",
+          "name": "Zoroark",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/32 Zoroark.png"
+        },
+        "33 Inkay": {
+          "id": "33",
+          "name": "Inkay",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/33 Inkay.png"
+        },
+        "34 Malamar": {
+          "id": "34",
+          "name": "Malamar",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/34 Malamar.png"
+        },
+        "35 Yveltal": {
+          "id": "35",
+          "name": "Yveltal",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/35 Yveltal.png"
+        },
+        "36 Okidogi ex": {
+          "id": "36",
+          "name": "Okidogi ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/36 Okidogi ex.png"
+        },
+        "37 Munkidori ex": {
+          "id": "37",
+          "name": "Munkidori ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/37 Munkidori ex.png"
+        },
+        "38 Fezandipiti ex": {
+          "id": "38",
+          "name": "Fezandipiti ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/38 Fezandipiti ex.png"
+        },
+        "39 Pecharunt ex": {
+          "id": "39",
+          "name": "Pecharunt ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/39 Pecharunt ex.png"
+        },
+        "4 Dartrix": {
+          "id": "4",
+          "name": "Dartrix",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/4 Dartrix.png"
+        },
+        "40 Genesect": {
+          "id": "40",
+          "name": "Genesect",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/40 Genesect.png"
+        },
+        "41 Cufant": {
+          "id": "41",
+          "name": "Cufant",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/41 Cufant.png"
+        },
+        "42 Copperajah": {
+          "id": "42",
+          "name": "Copperajah",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/42 Copperajah.png"
+        },
+        "43 Varoom": {
+          "id": "43",
+          "name": "Varoom",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/43 Varoom.png"
+        },
+        "44 Axew": {
+          "id": "44",
+          "name": "Axew",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/44 Axew.png"
+        },
+        "45 Fraxure": {
+          "id": "45",
+          "name": "Fraxure",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/45 Fraxure.png"
+        },
+        "46 Haxorus": {
+          "id": "46",
+          "name": "Haxorus",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/46 Haxorus.png"
+        },
+        "47 Kyurem": {
+          "id": "47",
+          "name": "Kyurem",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/47 Kyurem.png"
+        },
+        "48 Meowth": {
+          "id": "48",
+          "name": "Meowth",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/48 Meowth.png"
+        },
+        "49 Persian": {
+          "id": "49",
+          "name": "Persian",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/49 Persian.png"
+        },
+        "5 Decidueye": {
+          "id": "5",
+          "name": "Decidueye",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/5 Decidueye.png"
+        },
+        "50 Eevee": {
+          "id": "50",
+          "name": "Eevee",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/50 Eevee.png"
+        },
+        "51 Furfrou": {
+          "id": "51",
+          "name": "Furfrou",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/51 Furfrou.png"
+        },
+        "52 Stufful": {
+          "id": "52",
+          "name": "Stufful",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/52 Stufful.png"
+        },
+        "53 Bewear": {
+          "id": "53",
+          "name": "Bewear",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/53 Bewear.png"
+        },
+        "6 Tapu Bulu": {
+          "id": "6",
+          "name": "Tapu Bulu",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/6 Tapu Bulu.png"
+        },
+        "65 Tapu Bulu": {
+          "id": "65",
+          "name": "Tapu Bulu",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/65 Tapu Bulu.png"
+        },
+        "66 Houndoom": {
+          "id": "66",
+          "name": "Houndoom",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/66 Houndoom.png"
+        },
+        "67 Horsea": {
+          "id": "67",
+          "name": "Horsea",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/67 Horsea.png"
+        },
+        "68 Duskull": {
+          "id": "68",
+          "name": "Duskull",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/68 Duskull.png"
+        },
+        "69 Dusclops": {
+          "id": "69",
+          "name": "Dusclops",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/69 Dusclops.png"
+        },
+        "7 Houndour": {
+          "id": "7",
+          "name": "Houndour",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/7 Houndour.png"
+        },
+        "70 Dusknoir": {
+          "id": "70",
+          "name": "Dusknoir",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/70 Dusknoir.png"
+        },
+        "71 Cresselia": {
+          "id": "71",
+          "name": "Cresselia",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/71 Cresselia.png"
+        },
+        "72 Munkidori": {
+          "id": "72",
+          "name": "Munkidori",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/72 Munkidori.png"
+        },
+        "73 Fezandipiti": {
+          "id": "73",
+          "name": "Fezandipiti",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/73 Fezandipiti.png"
+        },
+        "74 Okidogi": {
+          "id": "74",
+          "name": "Okidogi",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/74 Okidogi.png"
+        },
+        "75 Zorua": {
+          "id": "75",
+          "name": "Zorua",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/75 Zorua.png"
+        },
+        "76 Cufant": {
+          "id": "76",
+          "name": "Cufant",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/76 Cufant.png"
+        },
+        "77 Fraxure": {
+          "id": "77",
+          "name": "Fraxure",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/77 Fraxure.png"
+        },
+        "78 Persian": {
+          "id": "78",
+          "name": "Persian",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/78 Persian.png"
+        },
+        "79 Bewear": {
+          "id": "79",
+          "name": "Bewear",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/79 Bewear.png"
+        },
+        "8 Houndoom": {
+          "id": "8",
+          "name": "Houndoom",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/8 Houndoom.png"
+        },
+        "80 Kingdra ex": {
+          "id": "80",
+          "name": "Kingdra ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/80 Kingdra ex.png"
+        },
+        "81 Revavroom ex": {
+          "id": "81",
+          "name": "Revavroom ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/81 Revavroom ex.png"
+        },
+        "82 Okidogi ex": {
+          "id": "82",
+          "name": "Okidogi ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/82 Okidogi ex.png"
+        },
+        "83 Munkidori ex": {
+          "id": "83",
+          "name": "Munkidori ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/83 Munkidori ex.png"
+        },
+        "84 Fezandipiti ex": {
+          "id": "84",
+          "name": "Fezandipiti ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/84 Fezandipiti ex.png"
+        },
+        "85 Pecharunt ex": {
+          "id": "85",
+          "name": "Pecharunt ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/85 Pecharunt ex.png"
+        },
+        "9 Iron Moth": {
+          "id": "9",
+          "name": "Iron Moth",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/9 Iron Moth.png"
+        },
+        "90 Okidogi ex": {
+          "id": "90",
+          "name": "Okidogi ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/90 Okidogi ex.png"
+        },
+        "91 Munkidori ex": {
+          "id": "91",
+          "name": "Munkidori ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/91 Munkidori ex.png"
+        },
+        "92 Fezandipiti ex": {
+          "id": "92",
+          "name": "Fezandipiti ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/92 Fezandipiti ex.png"
+        },
+        "93 Pecharunt ex": {
+          "id": "93",
+          "name": "Pecharunt ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/93 Pecharunt ex.png"
+        },
+        "95 Pecharunt ex": {
+          "id": "95",
+          "name": "Pecharunt ex",
+          "width": 658,
+          "height": 918,
+          "image_path": "assets/tcg_cards/shrouded_fable/95 Pecharunt ex.png"
+        }
+      },
+      "total_cards": 79
     }
   },
-  "total_sets": 3,
-  "total_cards": 548
+  "total_sets": 5,
+  "total_cards": 779
 }
