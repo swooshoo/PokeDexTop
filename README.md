@@ -1,6 +1,6 @@
-## PokeDexTop
+# PokeDexTop : A Desktop National Pokedex
 
-# Advantages of a Desktop Application
+## Advantages of a Desktop Application
 
 Better Performance: Direct access to system resources. No HTTP overhead or browser rendering limitations. Faster image loading and display
 
@@ -10,7 +10,7 @@ Offline Functionality: Works completely offline with no web server needed. Simpl
 
 Enhanced Features: Direct filesystem integration for importing/exporting data. Ability to use system dialogs for file selection. Potentially faster image processing and caching
 
-# Potential New Challenges
+## Potential New Challenges
 
 Cross-Platform Compatibility: Ensuring consistent look and behavior across operating systems. May need to handle platform-specific quirks
 
