@@ -5188,8 +5188,1310 @@
         }
       },
       "total_cards": 79
+    },
+    "twilight_masquerade": {
+      "name": "Twilight Masquerade",
+      "path": "assets/tcg_cards/twilight_masquerade",
+      "cards": {
+        "186 Tatsugiri": {
+          "id": "186",
+          "name": "Tatsugiri",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/186 Tatsugiri.png"
+        },
+        "48 Crawdaunt": {
+          "id": "48",
+          "name": "Crawdaunt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/48 Crawdaunt.png"
+        },
+        "31 Chimchar": {
+          "id": "31",
+          "name": "Chimchar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/31 Chimchar.png"
+        },
+        "136 Snorlax": {
+          "id": "136",
+          "name": "Snorlax",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/136 Snorlax.png"
+        },
+        "173 Infernape": {
+          "id": "173",
+          "name": "Infernape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/173 Infernape.png"
+        },
+        "37 Lampent": {
+          "id": "37",
+          "name": "Lampent",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/37 Lampent.png"
+        },
+        "125 Revavroom": {
+          "id": "125",
+          "name": "Revavroom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/125 Revavroom.png"
+        },
+        "51 Snorunt": {
+          "id": "51",
+          "name": "Snorunt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/51 Snorunt.png"
+        },
+        "76 Kilowattrel": {
+          "id": "76",
+          "name": "Kilowattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/76 Kilowattrel.png"
+        },
+        "188 Eevee": {
+          "id": "188",
+          "name": "Eevee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/188 Eevee.png"
+        },
+        "184 Lairon": {
+          "id": "184",
+          "name": "Lairon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/184 Lairon.png"
+        },
+        "176 Cramorant": {
+          "id": "176",
+          "name": "Cramorant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/176 Cramorant.png"
+        },
+        "194 Wellspring Mask Ogerpon ex": {
+          "id": "194",
+          "name": "Wellspring Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/194 Wellspring Mask Ogerpon ex.png"
+        },
+        "213 Wellspring Mask Ogerpon ex": {
+          "id": "213",
+          "name": "Wellspring Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/213 Wellspring Mask Ogerpon ex.png"
+        },
+        "30 Torkoal": {
+          "id": "30",
+          "name": "Torkoal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/30 Torkoal.png"
+        },
+        "140 Swanna": {
+          "id": "140",
+          "name": "Swanna",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/140 Swanna.png"
+        },
+        "1 Tangela": {
+          "id": "1",
+          "name": "Tangela",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/1 Tangela.png"
+        },
+        "88 Florges": {
+          "id": "88",
+          "name": "Florges",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/88 Florges.png"
+        },
+        "169 Sunflora": {
+          "id": "169",
+          "name": "Sunflora",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/169 Sunflora.png"
+        },
+        "28 Slugma": {
+          "id": "28",
+          "name": "Slugma",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/28 Slugma.png"
+        },
+        "124 Varoom": {
+          "id": "124",
+          "name": "Varoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/124 Varoom.png"
+        },
+        "38 Chandelure": {
+          "id": "38",
+          "name": "Chandelure",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/38 Chandelure.png"
+        },
+        "20 Poltchageist": {
+          "id": "20",
+          "name": "Poltchageist",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/20 Poltchageist.png"
+        },
+        "187 Chansey": {
+          "id": "187",
+          "name": "Chansey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/187 Chansey.png"
+        },
+        "14 Grookey": {
+          "id": "14",
+          "name": "Grookey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/14 Grookey.png"
+        },
+        "104 Gurdurr": {
+          "id": "104",
+          "name": "Gurdurr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/104 Gurdurr.png"
+        },
+        "112 Cornerstone Mask Ogerpon ex": {
+          "id": "112",
+          "name": "Cornerstone Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/112 Cornerstone Mask Ogerpon ex.png"
+        },
+        "70 Helioptile": {
+          "id": "70",
+          "name": "Helioptile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/70 Helioptile.png"
+        },
+        "181 Hisuian Growlithe": {
+          "id": "181",
+          "name": "Hisuian Growlithe",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/181 Hisuian Growlithe.png"
+        },
+        "221 Teal Mask Ogerpon ex": {
+          "id": "221",
+          "name": "Teal Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/221 Teal Mask Ogerpon ex.png"
+        },
+        "80 Abra": {
+          "id": "80",
+          "name": "Abra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/80 Abra.png"
+        },
+        "120 Aron": {
+          "id": "120",
+          "name": "Aron",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/120 Aron.png"
+        },
+        "36 Litwick": {
+          "id": "36",
+          "name": "Litwick",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/36 Litwick.png"
+        },
+        "35 Darmanitan": {
+          "id": "35",
+          "name": "Darmanitan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/35 Darmanitan.png"
+        },
+        "6 Sunkern": {
+          "id": "6",
+          "name": "Sunkern",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/6 Sunkern.png"
+        },
+        "202 Bloodmoon Ursaluna ex": {
+          "id": "202",
+          "name": "Bloodmoon Ursaluna ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/202 Bloodmoon Ursaluna ex.png"
+        },
+        "10 Illumise": {
+          "id": "10",
+          "name": "Illumise",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/10 Illumise.png"
+        },
+        "137 Aipom": {
+          "id": "137",
+          "name": "Aipom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/137 Aipom.png"
+        },
+        "100 Hisuian Arcanine": {
+          "id": "100",
+          "name": "Hisuian Arcanine",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/100 Hisuian Arcanine.png"
+        },
+        "126 Applin": {
+          "id": "126",
+          "name": "Applin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/126 Applin.png"
+        },
+        "75 Wattrel": {
+          "id": "75",
+          "name": "Wattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/75 Wattrel.png"
+        },
+        "44 Goldeen": {
+          "id": "44",
+          "name": "Goldeen",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/44 Goldeen.png"
+        },
+        "196 Iron Thorns ex": {
+          "id": "196",
+          "name": "Iron Thorns ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/196 Iron Thorns ex.png"
+        },
+        "15 Thwackey": {
+          "id": "15",
+          "name": "Thwackey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/15 Thwackey.png"
+        },
+        "180 Enamorus": {
+          "id": "180",
+          "name": "Enamorus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/180 Enamorus.png"
+        },
+        "198 Greninja ex": {
+          "id": "198",
+          "name": "Greninja ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/198 Greninja ex.png"
+        },
+        "81 Kadabra": {
+          "id": "81",
+          "name": "Kadabra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/81 Kadabra.png"
+        },
+        "2 Tangrowth": {
+          "id": "2",
+          "name": "Tangrowth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/2 Tangrowth.png"
+        },
+        "139 Ducklett": {
+          "id": "139",
+          "name": "Ducklett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/139 Ducklett.png"
+        },
+        "122 Aggron": {
+          "id": "122",
+          "name": "Aggron",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/122 Aggron.png"
+        },
+        "64 Wellspring Mask Ogerpon ex": {
+          "id": "64",
+          "name": "Wellspring Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/64 Wellspring Mask Ogerpon ex.png"
+        },
+        "9 Volbeat": {
+          "id": "9",
+          "name": "Volbeat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/9 Volbeat.png"
+        },
+        "73 Tadbulb": {
+          "id": "73",
+          "name": "Tadbulb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/73 Tadbulb.png"
+        },
+        "84 Farigiraf": {
+          "id": "84",
+          "name": "Farigiraf",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/84 Farigiraf.png"
+        },
+        "214 Greninja ex": {
+          "id": "214",
+          "name": "Greninja ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/214 Greninja ex.png"
+        },
+        "121 Lairon": {
+          "id": "121",
+          "name": "Lairon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/121 Lairon.png"
+        },
+        "199 Cornerstone Mask Ogerpon ex": {
+          "id": "199",
+          "name": "Cornerstone Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/199 Cornerstone Mask Ogerpon ex.png"
+        },
+        "190 Teal Mask Ogerpon ex": {
+          "id": "190",
+          "name": "Teal Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/190 Teal Mask Ogerpon ex.png"
+        },
+        "99 Hisuian Growlithe": {
+          "id": "99",
+          "name": "Hisuian Growlithe",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/99 Hisuian Growlithe.png"
+        },
+        "62 Iron Bundle": {
+          "id": "62",
+          "name": "Iron Bundle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/62 Iron Bundle.png"
+        },
+        "90 Slurpuff": {
+          "id": "90",
+          "name": "Slurpuff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/90 Slurpuff.png"
+        },
+        "103 Timburr": {
+          "id": "103",
+          "name": "Timburr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/103 Timburr.png"
+        },
+        "118 Brute Bonnet": {
+          "id": "118",
+          "name": "Brute Bonnet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/118 Brute Bonnet.png"
+        },
+        "129 Drakloak": {
+          "id": "129",
+          "name": "Drakloak",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/129 Drakloak.png"
+        },
+        "17 Applin": {
+          "id": "17",
+          "name": "Applin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/17 Applin.png"
+        },
+        "11 Leafeon": {
+          "id": "11",
+          "name": "Leafeon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/11 Leafeon.png"
+        },
+        "128 Dreepy": {
+          "id": "128",
+          "name": "Dreepy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/128 Dreepy.png"
+        },
+        "72 Morpeko": {
+          "id": "72",
+          "name": "Morpeko",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/72 Morpeko.png"
+        },
+        "123 Heatran": {
+          "id": "123",
+          "name": "Heatran",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/123 Heatran.png"
+        },
+        "115 Venipede": {
+          "id": "115",
+          "name": "Venipede",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/115 Venipede.png"
+        },
+        "59 Finizen": {
+          "id": "59",
+          "name": "Finizen",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/59 Finizen.png"
+        },
+        "24 Teal Mask Ogerpon": {
+          "id": "24",
+          "name": "Teal Mask Ogerpon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/24 Teal Mask Ogerpon.png"
+        },
+        "21 Poltchageist": {
+          "id": "21",
+          "name": "Poltchageist",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/21 Poltchageist.png"
+        },
+        "69 Emolga": {
+          "id": "69",
+          "name": "Emolga",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/69 Emolga.png"
+        },
+        "32 Monferno": {
+          "id": "32",
+          "name": "Monferno",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/32 Monferno.png"
+        },
+        "12 Phantump": {
+          "id": "12",
+          "name": "Phantump",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/12 Phantump.png"
+        },
+        "101 Nosepass": {
+          "id": "101",
+          "name": "Nosepass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/101 Nosepass.png"
+        },
+        "63 Walking Wake": {
+          "id": "63",
+          "name": "Walking Wake",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/63 Walking Wake.png"
+        },
+        "27 Ninetales": {
+          "id": "27",
+          "name": "Ninetales",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/27 Ninetales.png"
+        },
+        "50 Milotic": {
+          "id": "50",
+          "name": "Milotic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/50 Milotic.png"
+        },
+        "29 Magcargo ex": {
+          "id": "29",
+          "name": "Magcargo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/29 Magcargo ex.png"
+        },
+        "116 Whirlipede": {
+          "id": "116",
+          "name": "Whirlipede",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/116 Whirlipede.png"
+        },
+        "113 Poochyena": {
+          "id": "113",
+          "name": "Poochyena",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/113 Poochyena.png"
+        },
+        "197 Scream Tail ex": {
+          "id": "197",
+          "name": "Scream Tail ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/197 Scream Tail ex.png"
+        },
+        "191 Magcargo ex": {
+          "id": "191",
+          "name": "Magcargo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/191 Magcargo ex.png"
+        },
+        "131 Tatsugiri": {
+          "id": "131",
+          "name": "Tatsugiri",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/131 Tatsugiri.png"
+        },
+        "178 Wattrel": {
+          "id": "178",
+          "name": "Wattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/178 Wattrel.png"
+        },
+        "94 Scream Tail ex": {
+          "id": "94",
+          "name": "Scream Tail ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/94 Scream Tail ex.png"
+        },
+        "68 Luxray ex": {
+          "id": "68",
+          "name": "Luxray ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/68 Luxray ex.png"
+        },
+        "109 Glimmora": {
+          "id": "109",
+          "name": "Glimmora",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/109 Glimmora.png"
+        },
+        "19 Iron Leaves": {
+          "id": "19",
+          "name": "Iron Leaves",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/19 Iron Leaves.png"
+        },
+        "171 Poltchageist": {
+          "id": "171",
+          "name": "Poltchageist",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/171 Poltchageist.png"
+        },
+        "127 Dipplin": {
+          "id": "127",
+          "name": "Dipplin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/127 Dipplin.png"
+        },
+        "40 Hearthflame Mask Ogerpon ex": {
+          "id": "40",
+          "name": "Hearthflame Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/40 Hearthflame Mask Ogerpon ex.png"
+        },
+        "83 Girafarig": {
+          "id": "83",
+          "name": "Girafarig",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/83 Girafarig.png"
+        },
+        "7 Sunflora": {
+          "id": "7",
+          "name": "Sunflora",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/7 Sunflora.png"
+        },
+        "212 Hearthflame Mask Ogerpon ex": {
+          "id": "212",
+          "name": "Hearthflame Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/212 Hearthflame Mask Ogerpon ex.png"
+        },
+        "46 Jynx": {
+          "id": "46",
+          "name": "Jynx",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/46 Jynx.png"
+        },
+        "108 Glimmet": {
+          "id": "108",
+          "name": "Glimmet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/108 Glimmet.png"
+        },
+        "5 Ariados": {
+          "id": "5",
+          "name": "Ariados",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/5 Ariados.png"
+        },
+        "22 Sinistcha": {
+          "id": "22",
+          "name": "Sinistcha",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/22 Sinistcha.png"
+        },
+        "52 Glalie": {
+          "id": "52",
+          "name": "Glalie",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/52 Glalie.png"
+        },
+        "211 Teal Mask Ogerpon ex": {
+          "id": "211",
+          "name": "Teal Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/211 Teal Mask Ogerpon ex.png"
+        },
+        "56 Froakie": {
+          "id": "56",
+          "name": "Froakie",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/56 Froakie.png"
+        },
+        "107 Hawlucha": {
+          "id": "107",
+          "name": "Hawlucha",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/107 Hawlucha.png"
+        },
+        "170 Dipplin": {
+          "id": "170",
+          "name": "Dipplin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/170 Dipplin.png"
+        },
+        "39 Chi-Yu": {
+          "id": "39",
+          "name": "Chi-Yu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/39 Chi-Yu.png"
+        },
+        "57 Frogadier": {
+          "id": "57",
+          "name": "Frogadier",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/57 Frogadier.png"
+        },
+        "33 Infernape": {
+          "id": "33",
+          "name": "Infernape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/33 Infernape.png"
+        },
+        "43 Poliwrath": {
+          "id": "43",
+          "name": "Poliwrath",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/43 Poliwrath.png"
+        },
+        "66 Shinx": {
+          "id": "66",
+          "name": "Shinx",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/66 Shinx.png"
+        },
+        "119 Skarmory": {
+          "id": "119",
+          "name": "Skarmory",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/119 Skarmory.png"
+        },
+        "71 Heliolisk": {
+          "id": "71",
+          "name": "Heliolisk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/71 Heliolisk.png"
+        },
+        "93 Enamorus": {
+          "id": "93",
+          "name": "Enamorus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/93 Enamorus.png"
+        },
+        "61 Palafin ex": {
+          "id": "61",
+          "name": "Palafin ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/61 Palafin ex.png"
+        },
+        "102 Probopass": {
+          "id": "102",
+          "name": "Probopass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/102 Probopass.png"
+        },
+        "175 Phione": {
+          "id": "175",
+          "name": "Phione",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/175 Phione.png"
+        },
+        "114 Mightyena": {
+          "id": "114",
+          "name": "Mightyena",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/114 Mightyena.png"
+        },
+        "182 Probopass": {
+          "id": "182",
+          "name": "Probopass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/182 Probopass.png"
+        },
+        "89 Swirlix": {
+          "id": "89",
+          "name": "Swirlix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/89 Swirlix.png"
+        },
+        "130 Dragapult ex": {
+          "id": "130",
+          "name": "Dragapult ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/130 Dragapult ex.png"
+        },
+        "106 Greninja ex": {
+          "id": "106",
+          "name": "Greninja ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/106 Greninja ex.png"
+        },
+        "3 Pinsir": {
+          "id": "3",
+          "name": "Pinsir",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/3 Pinsir.png"
+        },
+        "95 Munkidori": {
+          "id": "95",
+          "name": "Munkidori",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/95 Munkidori.png"
+        },
+        "210 Sinistcha ex": {
+          "id": "210",
+          "name": "Sinistcha ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/210 Sinistcha ex.png"
+        },
+        "185 Applin": {
+          "id": "185",
+          "name": "Applin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/185 Applin.png"
+        },
+        "110 Ting-Lu": {
+          "id": "110",
+          "name": "Ting-Lu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/110 Ting-Lu.png"
+        },
+        "65 Zapdos": {
+          "id": "65",
+          "name": "Zapdos",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/65 Zapdos.png"
+        },
+        "87 Floette": {
+          "id": "87",
+          "name": "Floette",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/87 Floette.png"
+        },
+        "60 Palafin": {
+          "id": "60",
+          "name": "Palafin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/60 Palafin.png"
+        },
+        "177 Heliolisk": {
+          "id": "177",
+          "name": "Heliolisk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/177 Heliolisk.png"
+        },
+        "47 Corphish": {
+          "id": "47",
+          "name": "Corphish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/47 Corphish.png"
+        },
+        "34 Darumaka": {
+          "id": "34",
+          "name": "Darumaka",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/34 Darumaka.png"
+        },
+        "74 Bellibolt": {
+          "id": "74",
+          "name": "Bellibolt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/74 Bellibolt.png"
+        },
+        "26 Vulpix": {
+          "id": "26",
+          "name": "Vulpix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/26 Vulpix.png"
+        },
+        "172 Torkoal": {
+          "id": "172",
+          "name": "Torkoal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/172 Torkoal.png"
+        },
+        "92 Palossand": {
+          "id": "92",
+          "name": "Palossand",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/92 Palossand.png"
+        },
+        "18 Dipplin": {
+          "id": "18",
+          "name": "Dipplin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/18 Dipplin.png"
+        },
+        "23 Sinistcha ex": {
+          "id": "23",
+          "name": "Sinistcha ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/23 Sinistcha ex.png"
+        },
+        "117 Scolipede": {
+          "id": "117",
+          "name": "Scolipede",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/117 Scolipede.png"
+        },
+        "174 Froslass": {
+          "id": "174",
+          "name": "Froslass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/174 Froslass.png"
+        },
+        "192 Hearthflame Mask Ogerpon ex": {
+          "id": "192",
+          "name": "Hearthflame Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/192 Hearthflame Mask Ogerpon ex.png"
+        },
+        "25 Teal Mask Ogerpon ex": {
+          "id": "25",
+          "name": "Teal Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/25 Teal Mask Ogerpon ex.png"
+        },
+        "193 Palafin ex": {
+          "id": "193",
+          "name": "Palafin ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/193 Palafin ex.png"
+        },
+        "4 Spinarak": {
+          "id": "4",
+          "name": "Spinarak",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/4 Spinarak.png"
+        },
+        "216 Bloodmoon Ursaluna ex": {
+          "id": "216",
+          "name": "Bloodmoon Ursaluna ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/216 Bloodmoon Ursaluna ex.png"
+        },
+        "111 Okidogi": {
+          "id": "111",
+          "name": "Okidogi",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/111 Okidogi.png"
+        },
+        "53 Froslass": {
+          "id": "53",
+          "name": "Froslass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/53 Froslass.png"
+        },
+        "82 Alakazam": {
+          "id": "82",
+          "name": "Alakazam",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/82 Alakazam.png"
+        },
+        "135 Eevee": {
+          "id": "135",
+          "name": "Eevee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/135 Eevee.png"
+        },
+        "41 Poliwag": {
+          "id": "41",
+          "name": "Poliwag",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/41 Poliwag.png"
+        },
+        "67 Luxio": {
+          "id": "67",
+          "name": "Luxio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/67 Luxio.png"
+        },
+        "13 Trevenant": {
+          "id": "13",
+          "name": "Trevenant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/13 Trevenant.png"
+        },
+        "86 Flab\u00e9b\u00e9": {
+          "id": "86",
+          "name": "Flab\u00e9b\u00e9",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/86 Flab\u00e9b\u00e9.png"
+        },
+        "58 Cramorant": {
+          "id": "58",
+          "name": "Cramorant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/58 Cramorant.png"
+        },
+        "49 Feebas": {
+          "id": "49",
+          "name": "Feebas",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/49 Feebas.png"
+        },
+        "179 Chimecho": {
+          "id": "179",
+          "name": "Chimecho",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/179 Chimecho.png"
+        },
+        "98 Sandslash": {
+          "id": "98",
+          "name": "Sandslash",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/98 Sandslash.png"
+        },
+        "97 Sandshrew": {
+          "id": "97",
+          "name": "Sandshrew",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/97 Sandshrew.png"
+        },
+        "85 Chimecho": {
+          "id": "85",
+          "name": "Chimecho",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/85 Chimecho.png"
+        },
+        "42 Poliwhirl": {
+          "id": "42",
+          "name": "Poliwhirl",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/42 Poliwhirl.png"
+        },
+        "55 Phione": {
+          "id": "55",
+          "name": "Phione",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/55 Phione.png"
+        },
+        "200 Dragapult ex": {
+          "id": "200",
+          "name": "Dragapult ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/200 Dragapult ex.png"
+        },
+        "45 Seaking": {
+          "id": "45",
+          "name": "Seaking",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/45 Seaking.png"
+        },
+        "168 Pinsir": {
+          "id": "168",
+          "name": "Pinsir",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/168 Pinsir.png"
+        },
+        "141 Bloodmoon Ursaluna ex": {
+          "id": "141",
+          "name": "Bloodmoon Ursaluna ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/141 Bloodmoon Ursaluna ex.png"
+        },
+        "105 Conkeldurr": {
+          "id": "105",
+          "name": "Conkeldurr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/105 Conkeldurr.png"
+        },
+        "195 Luxray ex": {
+          "id": "195",
+          "name": "Luxray ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/195 Luxray ex.png"
+        },
+        "16 Rillaboom": {
+          "id": "16",
+          "name": "Rillaboom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/16 Rillaboom.png"
+        },
+        "201 Blissey ex": {
+          "id": "201",
+          "name": "Blissey ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/201 Blissey ex.png"
+        },
+        "8 Heracross": {
+          "id": "8",
+          "name": "Heracross",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/8 Heracross.png"
+        },
+        "132 Farfetch'd": {
+          "id": "132",
+          "name": "Farfetch'd",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/132 Farfetch'd.png"
+        },
+        "91 Sandygast": {
+          "id": "91",
+          "name": "Sandygast",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/91 Sandygast.png"
+        },
+        "77 Iron Thorns ex": {
+          "id": "77",
+          "name": "Iron Thorns ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/77 Iron Thorns ex.png"
+        },
+        "134 Blissey ex": {
+          "id": "134",
+          "name": "Blissey ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/134 Blissey ex.png"
+        },
+        "215 Cornerstone Mask Ogerpon ex": {
+          "id": "215",
+          "name": "Cornerstone Mask Ogerpon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/215 Cornerstone Mask Ogerpon ex.png"
+        },
+        "79 Clefable": {
+          "id": "79",
+          "name": "Clefable",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/79 Clefable.png"
+        },
+        "54 Glaceon": {
+          "id": "54",
+          "name": "Glaceon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/54 Glaceon.png"
+        },
+        "96 Fezandipiti": {
+          "id": "96",
+          "name": "Fezandipiti",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/96 Fezandipiti.png"
+        },
+        "222 Bloodmoon Ursaluna ex": {
+          "id": "222",
+          "name": "Bloodmoon Ursaluna ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/222 Bloodmoon Ursaluna ex.png"
+        },
+        "183 Timburr": {
+          "id": "183",
+          "name": "Timburr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/183 Timburr.png"
+        },
+        "138 Ambipom": {
+          "id": "138",
+          "name": "Ambipom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/138 Ambipom.png"
+        },
+        "78 Clefairy": {
+          "id": "78",
+          "name": "Clefairy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/78 Clefairy.png"
+        },
+        "189 Sinistcha ex": {
+          "id": "189",
+          "name": "Sinistcha ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/189 Sinistcha ex.png"
+        },
+        "133 Chansey": {
+          "id": "133",
+          "name": "Chansey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/twilight_masquerade/133 Chansey.png"
+        }
+      },
+      "total_cards": 185
     }
   },
-  "total_sets": 5,
-  "total_cards": 779
+  "total_sets": 6,
+  "total_cards": 964
 }
