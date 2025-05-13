@@ -67,11 +67,7 @@ def extract_card_info(filename):
             'SV': 'Scarlet & Violet',
             'TG': 'Trainer Gallery',
             'SWSH': 'Sword & Shield',
-            'SM': 'Sun & Moon',
-            'XY': 'XY Series',
-            'BW': 'Black & White',
-            'DP': 'Diamond & Pearl',
-            'GG': 'Let\'s Go',
+            'GG': 'Crown Zenith Galarian Gallery',
             # Add more mappings as needed
         }
         
@@ -137,7 +133,7 @@ def main():
             set_name = set_dir.replace('_', ' ').title()
             new_metadata['sets'][set_dir] = {
                 'name': set_name,
-                'path': set_path.replace('\\', '/'),  # Use forward slashes for cross-platform compatibility
+                'path': set_path,
                 'cards': {},
                 'total_cards': 0
             }

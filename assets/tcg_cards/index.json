@@ -12692,8 +12692,1485 @@
         }
       },
       "total_cards": 70
+    },
+    "obsidian_flames": {
+      "name": "Obsidian Flames",
+      "path": "assets/tcg_cards/obsidian_flames",
+      "cards": {
+        "53 Cubchoo": {
+          "id": "53",
+          "name": "Cubchoo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/53 Cubchoo.png"
+        },
+        "103 Diglett": {
+          "id": "103",
+          "name": "Diglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/103 Diglett.png"
+        },
+        "90 Spoink": {
+          "id": "90",
+          "name": "Spoink",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/90 Spoink.png"
+        },
+        "124 Koraidon ex": {
+          "id": "124",
+          "name": "Koraidon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/124 Koraidon ex.png"
+        },
+        "165 Kangaskhan": {
+          "id": "165",
+          "name": "Kangaskhan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/165 Kangaskhan.png"
+        },
+        "122 Glimmet": {
+          "id": "122",
+          "name": "Glimmet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/122 Glimmet.png"
+        },
+        "29 Ninetales": {
+          "id": "29",
+          "name": "Ninetales",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/29 Ninetales.png"
+        },
+        "183 Oinkologne": {
+          "id": "183",
+          "name": "Oinkologne",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/183 Oinkologne.png"
+        },
+        "37 Lampent": {
+          "id": "37",
+          "name": "Lampent",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/37 Lampent.png"
+        },
+        "1 Oddish": {
+          "id": "1",
+          "name": "Oddish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/1 Oddish.png"
+        },
+        "87 Snubbull": {
+          "id": "87",
+          "name": "Snubbull",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/87 Snubbull.png"
+        },
+        "85 Togekiss": {
+          "id": "85",
+          "name": "Togekiss",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/85 Togekiss.png"
+        },
+        "61 Finizen": {
+          "id": "61",
+          "name": "Finizen",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/61 Finizen.png"
+        },
+        "138 Malamar": {
+          "id": "138",
+          "name": "Malamar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/138 Malamar.png"
+        },
+        "117 Lycanroc": {
+          "id": "117",
+          "name": "Lycanroc",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/117 Lycanroc.png"
+        },
+        "214 Absol ex": {
+          "id": "214",
+          "name": "Absol ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/214 Absol ex.png"
+        },
+        "100 Greavard": {
+          "id": "100",
+          "name": "Greavard",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/100 Greavard.png"
+        },
+        "68 Eelektrik": {
+          "id": "68",
+          "name": "Eelektrik",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/68 Eelektrik.png"
+        },
+        "47 Sharpedo": {
+          "id": "47",
+          "name": "Sharpedo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/47 Sharpedo.png"
+        },
+        "137 Inkay": {
+          "id": "137",
+          "name": "Inkay",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/137 Inkay.png"
+        },
+        "207 Pidgey": {
+          "id": "207",
+          "name": "Pidgey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/207 Pidgey.png"
+        },
+        "148 Pawniard": {
+          "id": "148",
+          "name": "Pawniard",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/148 Pawniard.png"
+        },
+        "184 Oinkologne": {
+          "id": "184",
+          "name": "Oinkologne",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/184 Oinkologne.png"
+        },
+        "113 Diggersby": {
+          "id": "113",
+          "name": "Diggersby",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/113 Diggersby.png"
+        },
+        "38 Chandelure": {
+          "id": "38",
+          "name": "Chandelure",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/38 Chandelure.png"
+        },
+        "75 Tadbulb": {
+          "id": "75",
+          "name": "Tadbulb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/75 Tadbulb.png"
+        },
+        "119 Toedscruel": {
+          "id": "119",
+          "name": "Toedscruel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/119 Toedscruel.png"
+        },
+        "170 Lillipup": {
+          "id": "170",
+          "name": "Lillipup",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/170 Lillipup.png"
+        },
+        "14 Dartrix": {
+          "id": "14",
+          "name": "Dartrix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/14 Dartrix.png"
+        },
+        "144 Bronzor": {
+          "id": "144",
+          "name": "Bronzor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/144 Bronzor.png"
+        },
+        "94 Baltoy": {
+          "id": "94",
+          "name": "Baltoy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/94 Baltoy.png"
+        },
+        "175 Bunnelby": {
+          "id": "175",
+          "name": "Bunnelby",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/175 Bunnelby.png"
+        },
+        "3 Bellossom": {
+          "id": "3",
+          "name": "Bellossom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/3 Bellossom.png"
+        },
+        "161 Drampa": {
+          "id": "161",
+          "name": "Drampa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/161 Drampa.png"
+        },
+        "99 Greavard": {
+          "id": "99",
+          "name": "Greavard",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/99 Greavard.png"
+        },
+        "215 Charizard ex": {
+          "id": "215",
+          "name": "Charizard ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/215 Charizard ex.png"
+        },
+        "166 Eevee": {
+          "id": "166",
+          "name": "Eevee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/166 Eevee.png"
+        },
+        "36 Litwick": {
+          "id": "36",
+          "name": "Litwick",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/36 Litwick.png"
+        },
+        "142 Skarmory": {
+          "id": "142",
+          "name": "Skarmory",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/142 Skarmory.png"
+        },
+        "143 Mawile": {
+          "id": "143",
+          "name": "Mawile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/143 Mawile.png"
+        },
+        "159 Dragonite ex": {
+          "id": "159",
+          "name": "Dragonite ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/159 Dragonite ex.png"
+        },
+        "145 Bronzong": {
+          "id": "145",
+          "name": "Bronzong",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/145 Bronzong.png"
+        },
+        "54 Beartic": {
+          "id": "54",
+          "name": "Beartic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/54 Beartic.png"
+        },
+        "35 Darmanitan": {
+          "id": "35",
+          "name": "Darmanitan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/35 Darmanitan.png"
+        },
+        "12 Trevenant": {
+          "id": "12",
+          "name": "Trevenant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/12 Trevenant.png"
+        },
+        "167 Zigzagoon": {
+          "id": "167",
+          "name": "Zigzagoon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/167 Zigzagoon.png"
+        },
+        "211 Tyranitar ex": {
+          "id": "211",
+          "name": "Tyranitar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/211 Tyranitar ex.png"
+        },
+        "160 Altaria": {
+          "id": "160",
+          "name": "Altaria",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/160 Altaria.png"
+        },
+        "225 Pidgeot ex": {
+          "id": "225",
+          "name": "Pidgeot ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/225 Pidgeot ex.png"
+        },
+        "224 Revavroom ex": {
+          "id": "224",
+          "name": "Revavroom ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/224 Revavroom ex.png"
+        },
+        "180 Lechonk": {
+          "id": "180",
+          "name": "Lechonk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/180 Lechonk.png"
+        },
+        "28 Vulpix": {
+          "id": "28",
+          "name": "Vulpix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/28 Vulpix.png"
+        },
+        "116 Rockruff": {
+          "id": "116",
+          "name": "Rockruff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/116 Rockruff.png"
+        },
+        "131 Houndour": {
+          "id": "131",
+          "name": "Houndour",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/131 Houndour.png"
+        },
+        "164 Pidgeot ex": {
+          "id": "164",
+          "name": "Pidgeot ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/164 Pidgeot ex.png"
+        },
+        "31 Numel": {
+          "id": "31",
+          "name": "Numel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/31 Numel.png"
+        },
+        "21 Arboliva": {
+          "id": "21",
+          "name": "Arboliva",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/21 Arboliva.png"
+        },
+        "98 Polteageist": {
+          "id": "98",
+          "name": "Polteageist",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/98 Polteageist.png"
+        },
+        "70 Thundurus": {
+          "id": "70",
+          "name": "Thundurus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/70 Thundurus.png"
+        },
+        "155 Varoom": {
+          "id": "155",
+          "name": "Varoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/155 Varoom.png"
+        },
+        "130 Umbreon": {
+          "id": "130",
+          "name": "Umbreon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/130 Umbreon.png"
+        },
+        "202 Cleffa": {
+          "id": "202",
+          "name": "Cleffa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/202 Cleffa.png"
+        },
+        "72 Toxtricity": {
+          "id": "72",
+          "name": "Toxtricity",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/72 Toxtricity.png"
+        },
+        "66 Tyranitar ex": {
+          "id": "66",
+          "name": "Tyranitar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/66 Tyranitar ex.png"
+        },
+        "177 Gumshoos": {
+          "id": "177",
+          "name": "Gumshoos",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/177 Gumshoos.png"
+        },
+        "44 Armarouge": {
+          "id": "44",
+          "name": "Armarouge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/44 Armarouge.png"
+        },
+        "201 Bellibolt": {
+          "id": "201",
+          "name": "Bellibolt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/201 Bellibolt.png"
+        },
+        "123 Glimmora ex": {
+          "id": "123",
+          "name": "Glimmora ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/123 Glimmora ex.png"
+        },
+        "65 Magnezone": {
+          "id": "65",
+          "name": "Magnezone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/65 Magnezone.png"
+        },
+        "141 Scizor": {
+          "id": "141",
+          "name": "Scizor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/141 Scizor.png"
+        },
+        "107 Nosepass": {
+          "id": "107",
+          "name": "Nosepass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/107 Nosepass.png"
+        },
+        "55 Cryogonal": {
+          "id": "55",
+          "name": "Cryogonal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/55 Cryogonal.png"
+        },
+        "127 Paldean Wooper": {
+          "id": "127",
+          "name": "Paldean Wooper",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/127 Paldean Wooper.png"
+        },
+        "206 Varoom": {
+          "id": "206",
+          "name": "Varoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/206 Varoom.png"
+        },
+        "76 Tadbulb": {
+          "id": "76",
+          "name": "Tadbulb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/76 Tadbulb.png"
+        },
+        "79 Miraidon ex": {
+          "id": "79",
+          "name": "Miraidon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/79 Miraidon ex.png"
+        },
+        "15 Decidueye ex": {
+          "id": "15",
+          "name": "Decidueye ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/15 Decidueye ex.png"
+        },
+        "5 Shuckle": {
+          "id": "5",
+          "name": "Shuckle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/5 Shuckle.png"
+        },
+        "23 Capsakid": {
+          "id": "23",
+          "name": "Capsakid",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/23 Capsakid.png"
+        },
+        "163 Pidgeotto": {
+          "id": "163",
+          "name": "Pidgeotto",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/163 Pidgeotto.png"
+        },
+        "78 Bellibolt": {
+          "id": "78",
+          "name": "Bellibolt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/78 Bellibolt.png"
+        },
+        "112 Stunfisk": {
+          "id": "112",
+          "name": "Stunfisk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/112 Stunfisk.png"
+        },
+        "210 Eiscue ex": {
+          "id": "210",
+          "name": "Eiscue ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/210 Eiscue ex.png"
+        },
+        "33 Victini ex": {
+          "id": "33",
+          "name": "Victini ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/33 Victini ex.png"
+        },
+        "24 Capsakid": {
+          "id": "24",
+          "name": "Capsakid",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/24 Capsakid.png"
+        },
+        "153 Melmetal ex": {
+          "id": "153",
+          "name": "Melmetal ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/153 Melmetal ex.png"
+        },
+        "4 Scyther": {
+          "id": "4",
+          "name": "Scyther",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/4 Scyther.png"
+        },
+        "73 Pawmot ex": {
+          "id": "73",
+          "name": "Pawmot ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/73 Pawmot ex.png"
+        },
+        "20 Dolliv": {
+          "id": "20",
+          "name": "Dolliv",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/20 Dolliv.png"
+        },
+        "69 Eelektross": {
+          "id": "69",
+          "name": "Eelektross",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/69 Eelektross.png"
+        },
+        "109 Whiscash": {
+          "id": "109",
+          "name": "Whiscash",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/109 Whiscash.png"
+        },
+        "46 Carvanha": {
+          "id": "46",
+          "name": "Carvanha",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/46 Carvanha.png"
+        },
+        "25 Scovillain": {
+          "id": "25",
+          "name": "Scovillain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/25 Scovillain.png"
+        },
+        "125 Charizard ex": {
+          "id": "125",
+          "name": "Charizard ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/125 Charizard ex.png"
+        },
+        "169 Swablu": {
+          "id": "169",
+          "name": "Swablu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/169 Swablu.png"
+        },
+        "48 Buizel": {
+          "id": "48",
+          "name": "Buizel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/48 Buizel.png"
+        },
+        "62 Palafin": {
+          "id": "62",
+          "name": "Palafin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/62 Palafin.png"
+        },
+        "121 Glimmet": {
+          "id": "121",
+          "name": "Glimmet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/121 Glimmet.png"
+        },
+        "134 Houndoom ex": {
+          "id": "134",
+          "name": "Houndoom ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/134 Houndoom ex.png"
+        },
+        "59 Wugtrio": {
+          "id": "59",
+          "name": "Wugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/59 Wugtrio.png"
+        },
+        "200 Palafin": {
+          "id": "200",
+          "name": "Palafin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/200 Palafin.png"
+        },
+        "208 Pidgeotto": {
+          "id": "208",
+          "name": "Pidgeotto",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/208 Pidgeotto.png"
+        },
+        "7 Masquerain": {
+          "id": "7",
+          "name": "Masquerain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/7 Masquerain.png"
+        },
+        "93 Solrock": {
+          "id": "93",
+          "name": "Solrock",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/93 Solrock.png"
+        },
+        "140 Salazzle": {
+          "id": "140",
+          "name": "Salazzle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/140 Salazzle.png"
+        },
+        "209 Lechonk": {
+          "id": "209",
+          "name": "Lechonk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/209 Lechonk.png"
+        },
+        "2 Gloom": {
+          "id": "2",
+          "name": "Gloom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/2 Gloom.png"
+        },
+        "149 Bisharp": {
+          "id": "149",
+          "name": "Bisharp",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/149 Bisharp.png"
+        },
+        "88 Granbull": {
+          "id": "88",
+          "name": "Granbull",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/88 Granbull.png"
+        },
+        "181 Lechonk": {
+          "id": "181",
+          "name": "Lechonk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/181 Lechonk.png"
+        },
+        "83 Togepi": {
+          "id": "83",
+          "name": "Togepi",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/83 Togepi.png"
+        },
+        "205 Scizor": {
+          "id": "205",
+          "name": "Scizor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/205 Scizor.png"
+        },
+        "41 Volcarona": {
+          "id": "41",
+          "name": "Volcarona",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/41 Volcarona.png"
+        },
+        "199 Ninetales": {
+          "id": "199",
+          "name": "Ninetales",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/199 Ninetales.png"
+        },
+        "82 Clefable ex": {
+          "id": "82",
+          "name": "Clefable ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/82 Clefable ex.png"
+        },
+        "152 Meltan": {
+          "id": "152",
+          "name": "Meltan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/152 Meltan.png"
+        },
+        "56 Froakie": {
+          "id": "56",
+          "name": "Froakie",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/56 Froakie.png"
+        },
+        "84 Togetic": {
+          "id": "84",
+          "name": "Togetic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/84 Togetic.png"
+        },
+        "106 Pupitar": {
+          "id": "106",
+          "name": "Pupitar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/106 Pupitar.png"
+        },
+        "57 Frogadier": {
+          "id": "57",
+          "name": "Frogadier",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/57 Frogadier.png"
+        },
+        "129 Paldean Clodsire": {
+          "id": "129",
+          "name": "Paldean Clodsire",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/129 Paldean Clodsire.png"
+        },
+        "45 Lapras": {
+          "id": "45",
+          "name": "Lapras",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/45 Lapras.png"
+        },
+        "86 Espeon": {
+          "id": "86",
+          "name": "Espeon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/86 Espeon.png"
+        },
+        "115 Crabominable": {
+          "id": "115",
+          "name": "Crabominable",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/115 Crabominable.png"
+        },
+        "105 Larvitar": {
+          "id": "105",
+          "name": "Larvitar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/105 Larvitar.png"
+        },
+        "10 Amoonguss": {
+          "id": "10",
+          "name": "Amoonguss",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/10 Amoonguss.png"
+        },
+        "102 Houndstone ex": {
+          "id": "102",
+          "name": "Houndstone ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/102 Houndstone ex.png"
+        },
+        "110 Bonsly": {
+          "id": "110",
+          "name": "Bonsly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/110 Bonsly.png"
+        },
+        "168 Linoone": {
+          "id": "168",
+          "name": "Linoone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/168 Linoone.png"
+        },
+        "204 Houndour": {
+          "id": "204",
+          "name": "Houndour",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/204 Houndour.png"
+        },
+        "74 Tadbulb": {
+          "id": "74",
+          "name": "Tadbulb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/74 Tadbulb.png"
+        },
+        "26 Charmander": {
+          "id": "26",
+          "name": "Charmander",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/26 Charmander.png"
+        },
+        "108 Barboach": {
+          "id": "108",
+          "name": "Barboach",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/108 Barboach.png"
+        },
+        "162 Pidgey": {
+          "id": "162",
+          "name": "Pidgey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/162 Pidgey.png"
+        },
+        "92 Lunatone": {
+          "id": "92",
+          "name": "Lunatone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/92 Lunatone.png"
+        },
+        "22 Toedscruel ex": {
+          "id": "22",
+          "name": "Toedscruel ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/22 Toedscruel ex.png"
+        },
+        "27 Charmeleon": {
+          "id": "27",
+          "name": "Charmeleon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/27 Charmeleon.png"
+        },
+        "135 Absol ex": {
+          "id": "135",
+          "name": "Absol ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/135 Absol ex.png"
+        },
+        "198 Gloom": {
+          "id": "198",
+          "name": "Gloom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/198 Gloom.png"
+        },
+        "50 Tympole": {
+          "id": "50",
+          "name": "Tympole",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/50 Tympole.png"
+        },
+        "42 Eiscue ex": {
+          "id": "42",
+          "name": "Eiscue ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/42 Eiscue ex.png"
+        },
+        "60 Finizen": {
+          "id": "60",
+          "name": "Finizen",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/60 Finizen.png"
+        },
+        "176 Yungoos": {
+          "id": "176",
+          "name": "Yungoos",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/176 Yungoos.png"
+        },
+        "71 Toxel": {
+          "id": "71",
+          "name": "Toxel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/71 Toxel.png"
+        },
+        "126 Paldean Wooper": {
+          "id": "126",
+          "name": "Paldean Wooper",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/126 Paldean Wooper.png"
+        },
+        "52 Seismitoad": {
+          "id": "52",
+          "name": "Seismitoad",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/52 Seismitoad.png"
+        },
+        "136 Darkrai": {
+          "id": "136",
+          "name": "Darkrai",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/136 Darkrai.png"
+        },
+        "11 Phantump": {
+          "id": "11",
+          "name": "Phantump",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/11 Phantump.png"
+        },
+        "34 Darumaka": {
+          "id": "34",
+          "name": "Darumaka",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/34 Darumaka.png"
+        },
+        "67 Tynamo": {
+          "id": "67",
+          "name": "Tynamo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/67 Tynamo.png"
+        },
+        "95 Claydol": {
+          "id": "95",
+          "name": "Claydol",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/95 Claydol.png"
+        },
+        "173 Audino": {
+          "id": "173",
+          "name": "Audino",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/173 Audino.png"
+        },
+        "128 Paldean Clodsire": {
+          "id": "128",
+          "name": "Paldean Clodsire",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/128 Paldean Clodsire.png"
+        },
+        "171 Herdier": {
+          "id": "171",
+          "name": "Herdier",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/171 Herdier.png"
+        },
+        "114 Crabrawler": {
+          "id": "114",
+          "name": "Crabrawler",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/114 Crabrawler.png"
+        },
+        "174 Bouffalant": {
+          "id": "174",
+          "name": "Bouffalant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/174 Bouffalant.png"
+        },
+        "216 Revavroom ex": {
+          "id": "216",
+          "name": "Revavroom ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/216 Revavroom ex.png"
+        },
+        "58 Wiglett": {
+          "id": "58",
+          "name": "Wiglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/58 Wiglett.png"
+        },
+        "212 Vespiquen ex": {
+          "id": "212",
+          "name": "Vespiquen ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/212 Vespiquen ex.png"
+        },
+        "39 Heatmor": {
+          "id": "39",
+          "name": "Heatmor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/39 Heatmor.png"
+        },
+        "150 Kingambit": {
+          "id": "150",
+          "name": "Kingambit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/150 Kingambit.png"
+        },
+        "156 Revavroom ex": {
+          "id": "156",
+          "name": "Revavroom ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/156 Revavroom ex.png"
+        },
+        "179 Greedent ex": {
+          "id": "179",
+          "name": "Greedent ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/179 Greedent ex.png"
+        },
+        "13 Rowlet": {
+          "id": "13",
+          "name": "Rowlet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/13 Rowlet.png"
+        },
+        "91 Grumpig": {
+          "id": "91",
+          "name": "Grumpig",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/91 Grumpig.png"
+        },
+        "49 Floatzel": {
+          "id": "49",
+          "name": "Floatzel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/49 Floatzel.png"
+        },
+        "81 Clefairy": {
+          "id": "81",
+          "name": "Clefairy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/81 Clefairy.png"
+        },
+        "120 Klawf ex": {
+          "id": "120",
+          "name": "Klawf ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/120 Klawf ex.png"
+        },
+        "17 Steenee": {
+          "id": "17",
+          "name": "Steenee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/17 Steenee.png"
+        },
+        "118 Toedscool": {
+          "id": "118",
+          "name": "Toedscool",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/118 Toedscool.png"
+        },
+        "158 Dragonair": {
+          "id": "158",
+          "name": "Dragonair",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/158 Dragonair.png"
+        },
+        "19 Smoliv": {
+          "id": "19",
+          "name": "Smoliv",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/19 Smoliv.png"
+        },
+        "157 Dratini": {
+          "id": "157",
+          "name": "Dratini",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/157 Dratini.png"
+        },
+        "96 Vespiquen ex": {
+          "id": "96",
+          "name": "Vespiquen ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/96 Vespiquen ex.png"
+        },
+        "111 Drilbur": {
+          "id": "111",
+          "name": "Drilbur",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/111 Drilbur.png"
+        },
+        "51 Palpitoad": {
+          "id": "51",
+          "name": "Palpitoad",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/51 Palpitoad.png"
+        },
+        "172 Stoutland": {
+          "id": "172",
+          "name": "Stoutland",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/172 Stoutland.png"
+        },
+        "217 Pidgeot ex": {
+          "id": "217",
+          "name": "Pidgeot ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/217 Pidgeot ex.png"
+        },
+        "43 Charcadet": {
+          "id": "43",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/43 Charcadet.png"
+        },
+        "80 Cleffa": {
+          "id": "80",
+          "name": "Cleffa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/80 Cleffa.png"
+        },
+        "178 Skwovet": {
+          "id": "178",
+          "name": "Skwovet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/178 Skwovet.png"
+        },
+        "6 Surskit": {
+          "id": "6",
+          "name": "Surskit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/6 Surskit.png"
+        },
+        "63 Magnemite": {
+          "id": "63",
+          "name": "Magnemite",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/63 Magnemite.png"
+        },
+        "213 Glimmora ex": {
+          "id": "213",
+          "name": "Glimmora ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/213 Glimmora ex.png"
+        },
+        "32 Camerupt": {
+          "id": "32",
+          "name": "Camerupt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/32 Camerupt.png"
+        },
+        "89 Mawile": {
+          "id": "89",
+          "name": "Mawile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/89 Mawile.png"
+        },
+        "185 Flamigo": {
+          "id": "185",
+          "name": "Flamigo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/185 Flamigo.png"
+        },
+        "223 Charizard ex": {
+          "id": "223",
+          "name": "Charizard ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/223 Charizard ex.png"
+        },
+        "139 Salandit": {
+          "id": "139",
+          "name": "Salandit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/139 Salandit.png"
+        },
+        "151 Togedemaru": {
+          "id": "151",
+          "name": "Togedemaru",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/151 Togedemaru.png"
+        },
+        "154 Varoom": {
+          "id": "154",
+          "name": "Varoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/154 Varoom.png"
+        },
+        "9 Foongus": {
+          "id": "9",
+          "name": "Foongus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/9 Foongus.png"
+        },
+        "146 Probopass": {
+          "id": "146",
+          "name": "Probopass",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/146 Probopass.png"
+        },
+        "77 Bellibolt": {
+          "id": "77",
+          "name": "Bellibolt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/77 Bellibolt.png"
+        },
+        "132 Houndour": {
+          "id": "132",
+          "name": "Houndour",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/132 Houndour.png"
+        },
+        "16 Bounsweet": {
+          "id": "16",
+          "name": "Bounsweet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/16 Bounsweet.png"
+        },
+        "101 Houndstone": {
+          "id": "101",
+          "name": "Houndstone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/101 Houndstone.png"
+        },
+        "40 Larvesta": {
+          "id": "40",
+          "name": "Larvesta",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/40 Larvesta.png"
+        },
+        "147 Excadrill": {
+          "id": "147",
+          "name": "Excadrill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/147 Excadrill.png"
+        },
+        "64 Magneton": {
+          "id": "64",
+          "name": "Magneton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/64 Magneton.png"
+        },
+        "104 Dugtrio": {
+          "id": "104",
+          "name": "Dugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/104 Dugtrio.png"
+        },
+        "97 Sinistea": {
+          "id": "97",
+          "name": "Sinistea",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/97 Sinistea.png"
+        },
+        "30 Entei": {
+          "id": "30",
+          "name": "Entei",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/30 Entei.png"
+        },
+        "133 Houndoom": {
+          "id": "133",
+          "name": "Houndoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/133 Houndoom.png"
+        },
+        "8 Combee": {
+          "id": "8",
+          "name": "Combee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/8 Combee.png"
+        },
+        "182 Lechonk": {
+          "id": "182",
+          "name": "Lechonk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/182 Lechonk.png"
+        },
+        "18 Tsareena": {
+          "id": "18",
+          "name": "Tsareena",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/18 Tsareena.png"
+        },
+        "222 Eiscue ex": {
+          "id": "222",
+          "name": "Eiscue ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/222 Eiscue ex.png"
+        },
+        "203 Larvitar": {
+          "id": "203",
+          "name": "Larvitar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/203 Larvitar.png"
+        },
+        "228 Charizard ex": {
+          "id": "228",
+          "name": "Charizard ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/obsidian_flames/228 Charizard ex.png"
+        }
+      },
+      "total_cards": 210
     }
   },
-  "total_sets": 11,
-  "total_cards": 1845
+  "total_sets": 12,
+  "total_cards": 2055
 }
