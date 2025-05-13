@@ -2,7 +2,7 @@
 # PokeDexTop : A Desktop National Pokedex 
 
 <img align="right" width="100" height="100" src="assets/pokeball.png">
-<p>A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redudndant websites and information. <br>  
+<p>A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redundant websites. <br>  
 
 Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p>
 
