@@ -16112,8 +16112,932 @@
         }
       },
       "total_cards": 242
+    },
+    "silver_tempest_trainer_gallery": {
+      "name": "Silver Tempest Trainer Gallery",
+      "path": "assets/tcg_cards/silver_tempest_trainer_gallery",
+      "cards": {
+        "TG04 Jynx": {
+          "id": "TG04",
+          "name": "Jynx",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG04 Jynx.png"
+        },
+        "TG12 Kricketune V": {
+          "id": "TG12",
+          "name": "Kricketune V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG12 Kricketune V.png"
+        },
+        "TG29 Rayquaza VMAX": {
+          "id": "TG29",
+          "name": "Rayquaza VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG29 Rayquaza VMAX.png"
+        },
+        "TG02 Milotic": {
+          "id": "TG02",
+          "name": "Milotic",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG02 Milotic.png"
+        },
+        "TG11 Altaria": {
+          "id": "TG11",
+          "name": "Altaria",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG11 Altaria.png"
+        },
+        "TG13 Serperior V": {
+          "id": "TG13",
+          "name": "Serperior V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG13 Serperior V.png"
+        },
+        "TG19 Corviknight VMAX": {
+          "id": "TG19",
+          "name": "Corviknight VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG19 Corviknight VMAX.png"
+        },
+        "TG10 Smeargle": {
+          "id": "TG10",
+          "name": "Smeargle",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG10 Smeargle.png"
+        },
+        "TG30 Duraludon VMAX": {
+          "id": "TG30",
+          "name": "Duraludon VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG30 Duraludon VMAX.png"
+        },
+        "TG07 Rockruff": {
+          "id": "TG07",
+          "name": "Rockruff",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG07 Rockruff.png"
+        },
+        "TG03 Flaaffy": {
+          "id": "TG03",
+          "name": "Flaaffy",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG03 Flaaffy.png"
+        },
+        "TG21 Duraludon VMAX": {
+          "id": "TG21",
+          "name": "Duraludon VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG21 Duraludon VMAX.png"
+        },
+        "TG22 Blissey V": {
+          "id": "TG22",
+          "name": "Blissey V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG22 Blissey V.png"
+        },
+        "TG14 Blaziken V": {
+          "id": "TG14",
+          "name": "Blaziken V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG14 Blaziken V.png"
+        },
+        "TG16 Zeraora V": {
+          "id": "TG16",
+          "name": "Zeraora V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG16 Zeraora V.png"
+        },
+        "TG20 Rayquaza VMAX": {
+          "id": "TG20",
+          "name": "Rayquaza VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG20 Rayquaza VMAX.png"
+        },
+        "TG09 Druddigon": {
+          "id": "TG09",
+          "name": "Druddigon",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG09 Druddigon.png"
+        },
+        "TG15 Blaziken VMAX": {
+          "id": "TG15",
+          "name": "Blaziken VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG15 Blaziken VMAX.png"
+        },
+        "TG01 Braixen": {
+          "id": "TG01",
+          "name": "Braixen",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG01 Braixen.png"
+        },
+        "TG08 Passimian": {
+          "id": "TG08",
+          "name": "Passimian",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG08 Passimian.png"
+        },
+        "TG18 Corviknight V": {
+          "id": "TG18",
+          "name": "Corviknight V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG18 Corviknight V.png"
+        },
+        "TG17 Mawile V": {
+          "id": "TG17",
+          "name": "Mawile V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG17 Mawile V.png"
+        },
+        "TG05 Gardevoir": {
+          "id": "TG05",
+          "name": "Gardevoir",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG05 Gardevoir.png"
+        },
+        "TG06 Malamar": {
+          "id": "TG06",
+          "name": "Malamar",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest_trainer_gallery/TG06 Malamar.png"
+        }
+      },
+      "total_cards": 24
+    },
+    "astral_radiance_trainer_gallery": {
+      "name": "Astral Radiance Trainer Gallery",
+      "path": "assets/tcg_cards/astral_radiance_trainer_gallery",
+      "cards": {
+        "TG07 Falinks": {
+          "id": "TG07",
+          "name": "Falinks",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG07 Falinks.png"
+        },
+        "TG10 Galarian Obstagoon": {
+          "id": "TG10",
+          "name": "Galarian Obstagoon",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG10 Galarian Obstagoon.png"
+        },
+        "TG02 Flapple": {
+          "id": "TG02",
+          "name": "Flapple",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG02 Flapple.png"
+        },
+        "TG19 Galarian Zapdos V": {
+          "id": "TG19",
+          "name": "Galarian Zapdos V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG19 Galarian Zapdos V.png"
+        },
+        "TG28 Piers": {
+          "id": "TG28",
+          "name": "Piers",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG28 Piers.png"
+        },
+        "TG15 Ice Rider Calyrex VMAX": {
+          "id": "TG15",
+          "name": "Ice Rider Calyrex VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG15 Ice Rider Calyrex VMAX.png"
+        },
+        "TG26 Melony": {
+          "id": "TG26",
+          "name": "Melony",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG26 Melony.png"
+        },
+        "TG01 Abomasnow": {
+          "id": "TG01",
+          "name": "Abomasnow",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG01 Abomasnow.png"
+        },
+        "TG12 Hoothoot": {
+          "id": "TG12",
+          "name": "Hoothoot",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG12 Hoothoot.png"
+        },
+        "TG24 Allister": {
+          "id": "TG24",
+          "name": "Allister",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG24 Allister.png"
+        },
+        "TG22 Zamazenta V": {
+          "id": "TG22",
+          "name": "Zamazenta V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG22 Zamazenta V.png"
+        },
+        "TG18 Shadow Rider Calyrex VMAX": {
+          "id": "TG18",
+          "name": "Shadow Rider Calyrex VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG18 Shadow Rider Calyrex VMAX.png"
+        },
+        "TG21 Zacian V": {
+          "id": "TG21",
+          "name": "Zacian V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG21 Zacian V.png"
+        },
+        "TG11 Bronzong": {
+          "id": "TG11",
+          "name": "Bronzong",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG11 Bronzong.png"
+        },
+        "TG03 Kingdra": {
+          "id": "TG03",
+          "name": "Kingdra",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG03 Kingdra.png"
+        },
+        "TG08 Kleavor": {
+          "id": "TG08",
+          "name": "Kleavor",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG08 Kleavor.png"
+        },
+        "TG04 Frosmoth": {
+          "id": "TG04",
+          "name": "Frosmoth",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG04 Frosmoth.png"
+        },
+        "TG16 Galarian Articuno V": {
+          "id": "TG16",
+          "name": "Galarian Articuno V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG16 Galarian Articuno V.png"
+        },
+        "TG14 Ice Rider Calyrex V": {
+          "id": "TG14",
+          "name": "Ice Rider Calyrex V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG14 Ice Rider Calyrex V.png"
+        },
+        "TG09 Mightyena": {
+          "id": "TG09",
+          "name": "Mightyena",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG09 Mightyena.png"
+        },
+        "TG27 Milo": {
+          "id": "TG27",
+          "name": "Milo",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG27 Milo.png"
+        },
+        "TG17 Shadow Rider Calyrex V": {
+          "id": "TG17",
+          "name": "Shadow Rider Calyrex V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG17 Shadow Rider Calyrex V.png"
+        },
+        "TG29 Ice Rider Calyrex VMAX": {
+          "id": "TG29",
+          "name": "Ice Rider Calyrex VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG29 Ice Rider Calyrex VMAX.png"
+        },
+        "TG05 Gardevoir": {
+          "id": "TG05",
+          "name": "Gardevoir",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG05 Gardevoir.png"
+        },
+        "TG20 Galarian Moltres V": {
+          "id": "TG20",
+          "name": "Galarian Moltres V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG20 Galarian Moltres V.png"
+        },
+        "TG25 Bea": {
+          "id": "TG25",
+          "name": "Bea",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG25 Bea.png"
+        },
+        "TG23 Garchomp V": {
+          "id": "TG23",
+          "name": "Garchomp V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG23 Garchomp V.png"
+        },
+        "TG06 Wyrdeer": {
+          "id": "TG06",
+          "name": "Wyrdeer",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG06 Wyrdeer.png"
+        },
+        "TG30 Shadow Rider Calyrex VMAX": {
+          "id": "TG30",
+          "name": "Shadow Rider Calyrex VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG30 Shadow Rider Calyrex VMAX.png"
+        },
+        "TG13 Starmie V": {
+          "id": "TG13",
+          "name": "Starmie V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance_trainer_gallery/TG13 Starmie V.png"
+        }
+      },
+      "total_cards": 30
+    },
+    "brilliant_stars_trainer_gallery": {
+      "name": "Brilliant Stars Trainer Gallery",
+      "path": "assets/tcg_cards/brilliant_stars_trainer_gallery",
+      "cards": {
+        "TG23 Umbreon VMAX": {
+          "id": "TG23",
+          "name": "Umbreon VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG23 Umbreon VMAX.png"
+        },
+        "TG24 Acerola's Premonition": {
+          "id": "TG24",
+          "name": "Acerola's Premonition",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG24 Acerola's Premonition.png"
+        },
+        "TG13 Boltund V": {
+          "id": "TG13",
+          "name": "Boltund V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG13 Boltund V.png"
+        },
+        "TG28 Single Strike Style Mustard": {
+          "id": "TG28",
+          "name": "Single Strike Style Mustard",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG28 Single Strike Style Mustard.png"
+        },
+        "TG09 Ariados": {
+          "id": "TG09",
+          "name": "Ariados",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG09 Ariados.png"
+        },
+        "TG15 Sylveon VMAX": {
+          "id": "TG15",
+          "name": "Sylveon VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG15 Sylveon VMAX.png"
+        },
+        "TG26 Gloria": {
+          "id": "TG26",
+          "name": "Gloria",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG26 Gloria.png"
+        },
+        "TG19 Single Strike Urshifu VMAX": {
+          "id": "TG19",
+          "name": "Single Strike Urshifu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG19 Single Strike Urshifu VMAX.png"
+        },
+        "TG17 Mimikyu VMAX": {
+          "id": "TG17",
+          "name": "Mimikyu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG17 Mimikyu VMAX.png"
+        },
+        "TG11 Eevee": {
+          "id": "TG11",
+          "name": "Eevee",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG11 Eevee.png"
+        },
+        "TG03 Octillery": {
+          "id": "TG03",
+          "name": "Octillery",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG03 Octillery.png"
+        },
+        "TG29 Single Strike Urshifu VMAX": {
+          "id": "TG29",
+          "name": "Single Strike Urshifu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG29 Single Strike Urshifu VMAX.png"
+        },
+        "TG22 Umbreon V": {
+          "id": "TG22",
+          "name": "Umbreon V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG22 Umbreon V.png"
+        },
+        "TG05 Zekrom": {
+          "id": "TG05",
+          "name": "Zekrom",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG05 Zekrom.png"
+        },
+        "TG10 Houndoom": {
+          "id": "TG10",
+          "name": "Houndoom",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG10 Houndoom.png"
+        },
+        "TG18 Single Strike Urshifu V": {
+          "id": "TG18",
+          "name": "Single Strike Urshifu V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG18 Single Strike Urshifu V.png"
+        },
+        "TG01 Flareon": {
+          "id": "TG01",
+          "name": "Flareon",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG01 Flareon.png"
+        },
+        "TG27 Rapid Strike Style Mustard": {
+          "id": "TG27",
+          "name": "Rapid Strike Style Mustard",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG27 Rapid Strike Style Mustard.png"
+        },
+        "TG02 Vaporeon": {
+          "id": "TG02",
+          "name": "Vaporeon",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG02 Vaporeon.png"
+        },
+        "TG30 Rapid Strike Urshifu VMAX": {
+          "id": "TG30",
+          "name": "Rapid Strike Urshifu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG30 Rapid Strike Urshifu VMAX.png"
+        },
+        "TG16 Mimikyu V": {
+          "id": "TG16",
+          "name": "Mimikyu V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG16 Mimikyu V.png"
+        },
+        "TG12 Oranguru": {
+          "id": "TG12",
+          "name": "Oranguru",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG12 Oranguru.png"
+        },
+        "TG21 Rapid Strike Urshifu VMAX": {
+          "id": "TG21",
+          "name": "Rapid Strike Urshifu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG21 Rapid Strike Urshifu VMAX.png"
+        },
+        "TG25 Caf\u00e9 Master": {
+          "id": "TG25",
+          "name": "Caf\u00e9 Master",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG25 Caf\u00e9 Master.png"
+        },
+        "TG20 Rapid Strike Urshifu V": {
+          "id": "TG20",
+          "name": "Rapid Strike Urshifu V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG20 Rapid Strike Urshifu V.png"
+        },
+        "TG08 Alcremie": {
+          "id": "TG08",
+          "name": "Alcremie",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG08 Alcremie.png"
+        },
+        "TG06 Dusknoir": {
+          "id": "TG06",
+          "name": "Dusknoir",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG06 Dusknoir.png"
+        },
+        "TG07 Dedenne": {
+          "id": "TG07",
+          "name": "Dedenne",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG07 Dedenne.png"
+        },
+        "TG04 Jolteon": {
+          "id": "TG04",
+          "name": "Jolteon",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG04 Jolteon.png"
+        },
+        "TG14 Sylveon V": {
+          "id": "TG14",
+          "name": "Sylveon V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars_trainer_gallery/TG14 Sylveon V.png"
+        }
+      },
+      "total_cards": 30
+    },
+    "lost_origin_trainer_gallery": {
+      "name": "Lost Origin Trainer Gallery",
+      "path": "assets/tcg_cards/lost_origin_trainer_gallery",
+      "cards": {
+        "TG26 Kabu": {
+          "id": "TG26",
+          "name": "Kabu",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG26 Kabu.png"
+        },
+        "TG21 Eternatus V": {
+          "id": "TG21",
+          "name": "Eternatus V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG21 Eternatus V.png"
+        },
+        "TG14 Centiskorch V": {
+          "id": "TG14",
+          "name": "Centiskorch V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG14 Centiskorch V.png"
+        },
+        "TG05 Pikachu": {
+          "id": "TG05",
+          "name": "Pikachu",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG05 Pikachu.png"
+        },
+        "TG16 Pikachu V": {
+          "id": "TG16",
+          "name": "Pikachu V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG16 Pikachu V.png"
+        },
+        "TG22 Eternatus VMAX": {
+          "id": "TG22",
+          "name": "Eternatus VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG22 Eternatus VMAX.png"
+        },
+        "TG11 Castform": {
+          "id": "TG11",
+          "name": "Castform",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG11 Castform.png"
+        },
+        "TG06 Gengar": {
+          "id": "TG06",
+          "name": "Gengar",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG06 Gengar.png"
+        },
+        "TG20 Crobat V": {
+          "id": "TG20",
+          "name": "Crobat V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG20 Crobat V.png"
+        },
+        "TG27 Nessa": {
+          "id": "TG27",
+          "name": "Nessa",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG27 Nessa.png"
+        },
+        "TG18 Enamorus V": {
+          "id": "TG18",
+          "name": "Enamorus V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG18 Enamorus V.png"
+        },
+        "TG28 Opal": {
+          "id": "TG28",
+          "name": "Opal",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG28 Opal.png"
+        },
+        "TG10 Snorlax": {
+          "id": "TG10",
+          "name": "Snorlax",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG10 Snorlax.png"
+        },
+        "TG03 Charizard": {
+          "id": "TG03",
+          "name": "Charizard",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG03 Charizard.png"
+        },
+        "TG02 Roserade": {
+          "id": "TG02",
+          "name": "Roserade",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG02 Roserade.png"
+        },
+        "TG12 Orbeetle V": {
+          "id": "TG12",
+          "name": "Orbeetle V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG12 Orbeetle V.png"
+        },
+        "TG15 Centiskorch VMAX": {
+          "id": "TG15",
+          "name": "Centiskorch VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG15 Centiskorch VMAX.png"
+        },
+        "TG04 Chandelure": {
+          "id": "TG04",
+          "name": "Chandelure",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG04 Chandelure.png"
+        },
+        "TG23 Adventurer's Discovery": {
+          "id": "TG23",
+          "name": "Adventurer's Discovery",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG23 Adventurer's Discovery.png"
+        },
+        "TG30 Mew VMAX": {
+          "id": "TG30",
+          "name": "Mew VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG30 Mew VMAX.png"
+        },
+        "TG19 Gallade V": {
+          "id": "TG19",
+          "name": "Gallade V",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG19 Gallade V.png"
+        },
+        "TG07 Banette": {
+          "id": "TG07",
+          "name": "Banette",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG07 Banette.png"
+        },
+        "TG09 Spiritomb": {
+          "id": "TG09",
+          "name": "Spiritomb",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG09 Spiritomb.png"
+        },
+        "TG17 Pikachu VMAX": {
+          "id": "TG17",
+          "name": "Pikachu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG17 Pikachu VMAX.png"
+        },
+        "TG29 Pikachu VMAX": {
+          "id": "TG29",
+          "name": "Pikachu VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG29 Pikachu VMAX.png"
+        },
+        "TG13 Orbeetle VMAX": {
+          "id": "TG13",
+          "name": "Orbeetle VMAX",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG13 Orbeetle VMAX.png"
+        },
+        "TG01 Parasect": {
+          "id": "TG01",
+          "name": "Parasect",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG01 Parasect.png"
+        },
+        "TG08 Hisuian Arcanine": {
+          "id": "TG08",
+          "name": "Hisuian Arcanine",
+          "set_series": "Trainer Gallery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG08 Hisuian Arcanine.png"
+        }
+      },
+      "total_cards": 30
     }
   },
-  "total_sets": 13,
-  "total_cards": 2297
+  "total_sets": 17,
+  "total_cards": 2411
 }
