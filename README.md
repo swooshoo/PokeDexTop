@@ -38,4 +38,3 @@ Distribution and Updates: Need to build separate executables for different platf
 Deployment Size: Executable size will be larger as it includes Python and all dependencies
 May require an installer for proper setup
 
-
