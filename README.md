@@ -1,4 +1,6 @@
-# <img src="assets/pokeball.png" alt="Pokeball Logo" width="80"> PokeDexTop : A Desktop National Pokedex
+![Pokeball Logo](assets/pokeball.png)
+
+# PokeDexTop : A Desktop National Pokedex
 
 A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redudndant websites and information.
 
