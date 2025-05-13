@@ -402,12 +402,12 @@ def get_card_number(file_path):
                 # Lower numbers appear first
                 "SV": 1,    # Scarlet & Violet
                 "TG": 2,    # Trainer Gallery
-                "SWSH": 3,  # Sword & Shield
+                "SWSH": 3,  # Sword And Shield Black Star Promos
                 "SM": 4,    # Sun & Moon
                 "XY": 5,    # X & Y
                 "BW": 6,    # Black & White
                 "DP": 7,    # Diamond & Pearl
-                "GG": 8,    # Let's Go
+                "GG": 8,    # Crown Zenith Galarian Gallery
                 # Add more prefixes as needed
             }
             

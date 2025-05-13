@@ -64,9 +64,8 @@ def extract_card_info(filename):
     if prefix_match:
         prefix = prefix_match.group(1)
         set_mappings = {
-            'SV': 'Scarlet & Violet',
             'TG': 'Trainer Gallery',
-            'SWSH': 'Sword & Shield',
+            'SWSH': 'Sword and Shield Black Star Promos',
             'GG': 'Crown Zenith Galarian Gallery',
             # Add more mappings as needed
         }

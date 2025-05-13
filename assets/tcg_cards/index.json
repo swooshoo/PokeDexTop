@@ -14169,8 +14169,1951 @@
         }
       },
       "total_cards": 210
+    },
+    "sword_and_shield_black_star_promos": {
+      "name": "Sword And Shield Black Star Promos",
+      "path": "assets/tcg_cards/sword_and_shield_black_star_promos",
+      "cards": {
+        "SWSH164 Zacian V-UNION": {
+          "id": "SWSH164",
+          "name": "Zacian V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH164 Zacian V-UNION.png"
+        },
+        "SWSH147 Rayquaza V": {
+          "id": "SWSH147",
+          "name": "Rayquaza V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH147 Rayquaza V.png"
+        },
+        "SWSH055 Hatterene V": {
+          "id": "SWSH055",
+          "name": "Hatterene V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH055 Hatterene V.png"
+        },
+        "SWSH183 Jolteon V": {
+          "id": "SWSH183",
+          "name": "Jolteon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH183 Jolteon V.png"
+        },
+        "SWSH102 Venusaur VMAX": {
+          "id": "SWSH102",
+          "name": "Venusaur VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH102 Venusaur VMAX.png"
+        },
+        "SWSH049 Dubwool V": {
+          "id": "SWSH049",
+          "name": "Dubwool V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH049 Dubwool V.png"
+        },
+        "SWSH177 Special Delivery Bidoof": {
+          "id": "SWSH177",
+          "name": "Special Delivery Bidoof",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH177 Special Delivery Bidoof.png"
+        },
+        "SWSH135 Zacian LV": {
+          "id": "SWSH135",
+          "name": "Zacian LV",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH135 Zacian LV.X.png"
+        },
+        "SWSH104 Victini V": {
+          "id": "SWSH104",
+          "name": "Victini V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH104 Victini V.png"
+        },
+        "SWSH117 Phanpy": {
+          "id": "SWSH117",
+          "name": "Phanpy",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH117 Phanpy.png"
+        },
+        "SWSH204 Arceus V": {
+          "id": "SWSH204",
+          "name": "Arceus V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH204 Arceus V.png"
+        },
+        "SWSH243 Machamp": {
+          "id": "SWSH243",
+          "name": "Machamp",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH243 Machamp.png"
+        },
+        "SWSH159 Mewtwo V-UNION": {
+          "id": "SWSH159",
+          "name": "Mewtwo V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH159 Mewtwo V-UNION.png"
+        },
+        "SWSH023 Luxray": {
+          "id": "SWSH023",
+          "name": "Luxray",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH023 Luxray.png"
+        },
+        "SWSH172 Tepig": {
+          "id": "SWSH172",
+          "name": "Tepig",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH172 Tepig.png"
+        },
+        "SWSH153 Pikachu": {
+          "id": "SWSH153",
+          "name": "Pikachu",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH153 Pikachu.png"
+        },
+        "SWSH144 Greninja \u2605": {
+          "id": "SWSH144",
+          "name": "Greninja \u2605",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH144 Greninja \u2605.png"
+        },
+        "SWSH003 Sobble": {
+          "id": "SWSH003",
+          "name": "Sobble",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH003 Sobble.png"
+        },
+        "SWSH208 Magnezone": {
+          "id": "SWSH208",
+          "name": "Magnezone",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH208 Magnezone.png"
+        },
+        "SWSH064 Eternatus V": {
+          "id": "SWSH064",
+          "name": "Eternatus V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH064 Eternatus V.png"
+        },
+        "SWSH094 Jolteon": {
+          "id": "SWSH094",
+          "name": "Jolteon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH094 Jolteon.png"
+        },
+        "SWSH035 Decidueye": {
+          "id": "SWSH035",
+          "name": "Decidueye",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH035 Decidueye.png"
+        },
+        "SWSH018 Zacian V": {
+          "id": "SWSH018",
+          "name": "Zacian V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH018 Zacian V.png"
+        },
+        "SWSH241 Gengar": {
+          "id": "SWSH241",
+          "name": "Gengar",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH241 Gengar.png"
+        },
+        "SWSH173 Blitzle": {
+          "id": "SWSH173",
+          "name": "Blitzle",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH173 Blitzle.png"
+        },
+        "SWSH108 Empoleon V": {
+          "id": "SWSH108",
+          "name": "Empoleon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH108 Empoleon V.png"
+        },
+        "SWSH222 Oshawott": {
+          "id": "SWSH222",
+          "name": "Oshawott",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH222 Oshawott.png"
+        },
+        "SWSH092 Charmander": {
+          "id": "SWSH092",
+          "name": "Charmander",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH092 Charmander.png"
+        },
+        "SWSH127 Eevee": {
+          "id": "SWSH127",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH127 Eevee.png"
+        },
+        "SWSH196 Glaceon V": {
+          "id": "SWSH196",
+          "name": "Glaceon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH196 Glaceon V.png"
+        },
+        "SWSH090 Houndoom": {
+          "id": "SWSH090",
+          "name": "Houndoom",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH090 Houndoom.png"
+        },
+        "SWSH034 Zamazenta": {
+          "id": "SWSH034",
+          "name": "Zamazenta",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH034 Zamazenta.png"
+        },
+        "SWSH065 Eevee V": {
+          "id": "SWSH065",
+          "name": "Eevee V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH065 Eevee V.png"
+        },
+        "SWSH051 Lapras": {
+          "id": "SWSH051",
+          "name": "Lapras",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH051 Lapras.png"
+        },
+        "SWSH014 Rillaboom V": {
+          "id": "SWSH014",
+          "name": "Rillaboom V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH014 Rillaboom V.png"
+        },
+        "SWSH129 Umbreon": {
+          "id": "SWSH129",
+          "name": "Umbreon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH129 Umbreon.png"
+        },
+        "SWSH132 Dragapult": {
+          "id": "SWSH132",
+          "name": "Dragapult",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH132 Dragapult.png"
+        },
+        "SWSH087 Eevee VMAX": {
+          "id": "SWSH087",
+          "name": "Eevee VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH087 Eevee VMAX.png"
+        },
+        "SWSH012 Morpeko": {
+          "id": "SWSH012",
+          "name": "Morpeko",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH012 Morpeko.png"
+        },
+        "SWSH174 Espeon": {
+          "id": "SWSH174",
+          "name": "Espeon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH174 Espeon.png"
+        },
+        "SWSH041 Flareon": {
+          "id": "SWSH041",
+          "name": "Flareon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH041 Flareon.png"
+        },
+        "SWSH088 Cherrim": {
+          "id": "SWSH088",
+          "name": "Cherrim",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH088 Cherrim.png"
+        },
+        "SWSH099 Crobat VMAX": {
+          "id": "SWSH099",
+          "name": "Crobat VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH099 Crobat VMAX.png"
+        },
+        "SWSH130 Ice Rider Calyrex V": {
+          "id": "SWSH130",
+          "name": "Ice Rider Calyrex V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH130 Ice Rider Calyrex V.png"
+        },
+        "SWSH155 Greninja V-UNION": {
+          "id": "SWSH155",
+          "name": "Greninja V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH155 Greninja V-UNION.png"
+        },
+        "SWSH112 Cinderace": {
+          "id": "SWSH112",
+          "name": "Cinderace",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH112 Cinderace.png"
+        },
+        "SWSH010 Gossifleur": {
+          "id": "SWSH010",
+          "name": "Gossifleur",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH010 Gossifleur.png"
+        },
+        "SWSH036 Arctozolt": {
+          "id": "SWSH036",
+          "name": "Arctozolt",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH036 Arctozolt.png"
+        },
+        "SWSH060 Duraludon": {
+          "id": "SWSH060",
+          "name": "Duraludon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH060 Duraludon.png"
+        },
+        "SWSH170 Deoxys": {
+          "id": "SWSH170",
+          "name": "Deoxys",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH170 Deoxys.png"
+        },
+        "SWSH006 Rillaboom": {
+          "id": "SWSH006",
+          "name": "Rillaboom",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH006 Rillaboom.png"
+        },
+        "SWSH017 Toxtricity V": {
+          "id": "SWSH017",
+          "name": "Toxtricity V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH017 Toxtricity V.png"
+        },
+        "SWSH239 Hisuian Samurott V": {
+          "id": "SWSH239",
+          "name": "Hisuian Samurott V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH239 Hisuian Samurott V.png"
+        },
+        "SWSH220 Rowlet": {
+          "id": "SWSH220",
+          "name": "Rowlet",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH220 Rowlet.png"
+        },
+        "SWSH229 Mewtwo V": {
+          "id": "SWSH229",
+          "name": "Mewtwo V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH229 Mewtwo V.png"
+        },
+        "SWSH032 Snorlax": {
+          "id": "SWSH032",
+          "name": "Snorlax",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH032 Snorlax.png"
+        },
+        "SWSH004 Meowth V": {
+          "id": "SWSH004",
+          "name": "Meowth V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH004 Meowth V.png"
+        },
+        "SWSH250 Lumineon V": {
+          "id": "SWSH250",
+          "name": "Lumineon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH250 Lumineon V.png"
+        },
+        "SWSH221 Cyndaquil": {
+          "id": "SWSH221",
+          "name": "Cyndaquil",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH221 Cyndaquil.png"
+        },
+        "SWSH113 Inteleon": {
+          "id": "SWSH113",
+          "name": "Inteleon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH113 Inteleon.png"
+        },
+        "SWSH079 Galarian Mr": {
+          "id": "SWSH079",
+          "name": "Galarian Mr",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH079 Galarian Mr. Rime.png"
+        },
+        "SWSH223 Mewtwo V": {
+          "id": "SWSH223",
+          "name": "Mewtwo V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH223 Mewtwo V.png"
+        },
+        "SWSH037 Hydreigon": {
+          "id": "SWSH037",
+          "name": "Hydreigon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH037 Hydreigon.png"
+        },
+        "SWSH145 Pikachu V": {
+          "id": "SWSH145",
+          "name": "Pikachu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH145 Pikachu V.png"
+        },
+        "SWSH138 Hydreigon C": {
+          "id": "SWSH138",
+          "name": "Hydreigon C",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH138 Hydreigon C.png"
+        },
+        "SWSH116 Morpeko": {
+          "id": "SWSH116",
+          "name": "Morpeko",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH116 Morpeko.png"
+        },
+        "SWSH232 Charmander": {
+          "id": "SWSH232",
+          "name": "Charmander",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH232 Charmander.png"
+        },
+        "SWSH103 Blastoise VMAX": {
+          "id": "SWSH103",
+          "name": "Blastoise VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH103 Blastoise VMAX.png"
+        },
+        "SWSH001 Grookey": {
+          "id": "SWSH001",
+          "name": "Grookey",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH001 Grookey.png"
+        },
+        "SWSH069 Lugia": {
+          "id": "SWSH069",
+          "name": "Lugia",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH069 Lugia.png"
+        },
+        "SWSH235 Dragonite V": {
+          "id": "SWSH235",
+          "name": "Dragonite V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH235 Dragonite V.png"
+        },
+        "SWSH118 Eevee": {
+          "id": "SWSH118",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH118 Eevee.png"
+        },
+        "SWSH061 Pikachu V": {
+          "id": "SWSH061",
+          "name": "Pikachu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH061 Pikachu V.png"
+        },
+        "SWSH186 Lucario": {
+          "id": "SWSH186",
+          "name": "Lucario",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH186 Lucario.png"
+        },
+        "SWSH212 Eevee": {
+          "id": "SWSH212",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH212 Eevee.png"
+        },
+        "SWSH026 Mantine": {
+          "id": "SWSH026",
+          "name": "Mantine",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH026 Mantine.png"
+        },
+        "SWSH062 Pikachu VMAX": {
+          "id": "SWSH062",
+          "name": "Pikachu VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH062 Pikachu VMAX.png"
+        },
+        "SWSH182 Vaporeon VMAX": {
+          "id": "SWSH182",
+          "name": "Vaporeon VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH182 Vaporeon VMAX.png"
+        },
+        "SWSH238 Hisuian Decidueye V": {
+          "id": "SWSH238",
+          "name": "Hisuian Decidueye V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH238 Hisuian Decidueye V.png"
+        },
+        "SWSH203 Umbreon V": {
+          "id": "SWSH203",
+          "name": "Umbreon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH203 Umbreon V.png"
+        },
+        "SWSH240 Finneon": {
+          "id": "SWSH240",
+          "name": "Finneon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH240 Finneon.png"
+        },
+        "SWSH252 Infernape V": {
+          "id": "SWSH252",
+          "name": "Infernape V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH252 Infernape V.png"
+        },
+        "SWSH169 Pyukumuku": {
+          "id": "SWSH169",
+          "name": "Pyukumuku",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH169 Pyukumuku.png"
+        },
+        "SWSH114 Cresselia": {
+          "id": "SWSH114",
+          "name": "Cresselia",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH114 Cresselia.png"
+        },
+        "SWSH206 Wyrdeer": {
+          "id": "SWSH206",
+          "name": "Wyrdeer",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH206 Wyrdeer.png"
+        },
+        "SWSH125 Galarian Moltres": {
+          "id": "SWSH125",
+          "name": "Galarian Moltres",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH125 Galarian Moltres.png"
+        },
+        "SWSH161 Mewtwo V-UNION": {
+          "id": "SWSH161",
+          "name": "Mewtwo V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH161 Mewtwo V-UNION.png"
+        },
+        "SWSH067 Donphan": {
+          "id": "SWSH067",
+          "name": "Donphan",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH067 Donphan.png"
+        },
+        "SWSH230 Radiant Eevee": {
+          "id": "SWSH230",
+          "name": "Radiant Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH230 Radiant Eevee.png"
+        },
+        "SWSH192 Glaceon": {
+          "id": "SWSH192",
+          "name": "Glaceon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH192 Glaceon.png"
+        },
+        "SWSH185 Moltres": {
+          "id": "SWSH185",
+          "name": "Moltres",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH185 Moltres.png"
+        },
+        "SWSH139 Pikachu V-UNION": {
+          "id": "SWSH139",
+          "name": "Pikachu V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH139 Pikachu V-UNION.png"
+        },
+        "SWSH231 Bulbasaur": {
+          "id": "SWSH231",
+          "name": "Bulbasaur",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH231 Bulbasaur.png"
+        },
+        "SWSH162 Mewtwo V-UNION": {
+          "id": "SWSH162",
+          "name": "Mewtwo V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH162 Mewtwo V-UNION.png"
+        },
+        "SWSH050 Charizard V": {
+          "id": "SWSH050",
+          "name": "Charizard V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH050 Charizard V.png"
+        },
+        "SWSH198 Pikachu V": {
+          "id": "SWSH198",
+          "name": "Pikachu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH198 Pikachu V.png"
+        },
+        "SWSH109 Tyranitar V": {
+          "id": "SWSH109",
+          "name": "Tyranitar V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH109 Tyranitar V.png"
+        },
+        "SWSH057 Grimmsnarl V": {
+          "id": "SWSH057",
+          "name": "Grimmsnarl V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH057 Grimmsnarl V.png"
+        },
+        "SWSH059 Galarian Obstagoon": {
+          "id": "SWSH059",
+          "name": "Galarian Obstagoon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH059 Galarian Obstagoon.png"
+        },
+        "SWSH168 Oricorio": {
+          "id": "SWSH168",
+          "name": "Oricorio",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH168 Oricorio.png"
+        },
+        "SWSH024 Coalossal": {
+          "id": "SWSH024",
+          "name": "Coalossal",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH024 Coalossal.png"
+        },
+        "SWSH181 Vaporeon V": {
+          "id": "SWSH181",
+          "name": "Vaporeon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH181 Vaporeon V.png"
+        },
+        "SWSH011 Wooloo": {
+          "id": "SWSH011",
+          "name": "Wooloo",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH011 Wooloo.png"
+        },
+        "SWSH089 Octillery": {
+          "id": "SWSH089",
+          "name": "Octillery",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH089 Octillery.png"
+        },
+        "SWSH201 Espeon V": {
+          "id": "SWSH201",
+          "name": "Espeon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH201 Espeon V.png"
+        },
+        "SWSH077 Zamazenta V": {
+          "id": "SWSH077",
+          "name": "Zamazenta V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH077 Zamazenta V.png"
+        },
+        "SWSH245 Croagunk": {
+          "id": "SWSH245",
+          "name": "Croagunk",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH245 Croagunk.png"
+        },
+        "SWSH137 Light Toxtricity": {
+          "id": "SWSH137",
+          "name": "Light Toxtricity",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH137 Light Toxtricity.png"
+        },
+        "SWSH233 Squirtle": {
+          "id": "SWSH233",
+          "name": "Squirtle",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH233 Squirtle.png"
+        },
+        "SWSH193 Galarian Obstagoon": {
+          "id": "SWSH193",
+          "name": "Galarian Obstagoon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH193 Galarian Obstagoon.png"
+        },
+        "SWSH146 Pok\u00e9 Ball": {
+          "id": "SWSH146",
+          "name": "Pok\u00e9 Ball",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH146 Pok\u00e9 Ball.png"
+        },
+        "SWSH072 Vaporeon": {
+          "id": "SWSH072",
+          "name": "Vaporeon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH072 Vaporeon.png"
+        },
+        "SWSH191 Leafeon": {
+          "id": "SWSH191",
+          "name": "Leafeon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH191 Leafeon.png"
+        },
+        "SWSH248 Kleavor V": {
+          "id": "SWSH248",
+          "name": "Kleavor V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH248 Kleavor V.png"
+        },
+        "SWSH054 Coalossal": {
+          "id": "SWSH054",
+          "name": "Coalossal",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH054 Coalossal.png"
+        },
+        "SWSH209 Toxel": {
+          "id": "SWSH209",
+          "name": "Toxel",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH209 Toxel.png"
+        },
+        "SWSH076 Zacian V": {
+          "id": "SWSH076",
+          "name": "Zacian V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH076 Zacian V.png"
+        },
+        "SWSH133 Lance's Charizard V": {
+          "id": "SWSH133",
+          "name": "Lance's Charizard V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH133 Lance's Charizard V.png"
+        },
+        "SWSH194 Leafeon V": {
+          "id": "SWSH194",
+          "name": "Leafeon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH194 Leafeon V.png"
+        },
+        "SWSH150 Vaporeon V": {
+          "id": "SWSH150",
+          "name": "Vaporeon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH150 Vaporeon V.png"
+        },
+        "SWSH142 Pikachu V-UNION": {
+          "id": "SWSH142",
+          "name": "Pikachu V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH142 Pikachu V-UNION.png"
+        },
+        "SWSH236 Dragonite VSTAR": {
+          "id": "SWSH236",
+          "name": "Dragonite VSTAR",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH236 Dragonite VSTAR.png"
+        },
+        "SWSH190 Eevee": {
+          "id": "SWSH190",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH190 Eevee.png"
+        },
+        "SWSH021 Polteageist V": {
+          "id": "SWSH021",
+          "name": "Polteageist V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH021 Polteageist V.png"
+        },
+        "SWSH047 Drednaw": {
+          "id": "SWSH047",
+          "name": "Drednaw",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH047 Drednaw.png"
+        },
+        "SWSH205 Hisuian Basculegion": {
+          "id": "SWSH205",
+          "name": "Hisuian Basculegion",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH205 Hisuian Basculegion.png"
+        },
+        "SWSH020 Pikachu": {
+          "id": "SWSH020",
+          "name": "Pikachu",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH020 Pikachu.png"
+        },
+        "SWSH158 Greninja V-UNION": {
+          "id": "SWSH158",
+          "name": "Greninja V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH158 Greninja V-UNION.png"
+        },
+        "SWSH044 Eternatus V": {
+          "id": "SWSH044",
+          "name": "Eternatus V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH044 Eternatus V.png"
+        },
+        "SWSH063 Pikachu V": {
+          "id": "SWSH063",
+          "name": "Pikachu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH063 Pikachu V.png"
+        },
+        "SWSH207 Hisuian Samurott": {
+          "id": "SWSH207",
+          "name": "Hisuian Samurott",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH207 Hisuian Samurott.png"
+        },
+        "SWSH184 Jolteon VMAX": {
+          "id": "SWSH184",
+          "name": "Jolteon VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH184 Jolteon VMAX.png"
+        },
+        "SWSH111 Galarian Rapidash V": {
+          "id": "SWSH111",
+          "name": "Galarian Rapidash V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH111 Galarian Rapidash V.png"
+        },
+        "SWSH124 Galarian Zapdos": {
+          "id": "SWSH124",
+          "name": "Galarian Zapdos",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH124 Galarian Zapdos.png"
+        },
+        "SWSH097 Dragapult VMAX": {
+          "id": "SWSH097",
+          "name": "Dragapult VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH097 Dragapult VMAX.png"
+        },
+        "SWSH199 Lycanroc V": {
+          "id": "SWSH199",
+          "name": "Lycanroc V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH199 Lycanroc V.png"
+        },
+        "SWSH210 Oricorio": {
+          "id": "SWSH210",
+          "name": "Oricorio",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH210 Oricorio.png"
+        },
+        "SWSH002 Scorbunny": {
+          "id": "SWSH002",
+          "name": "Scorbunny",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH002 Scorbunny.png"
+        },
+        "SWSH202 Sylveon V": {
+          "id": "SWSH202",
+          "name": "Sylveon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH202 Sylveon V.png"
+        },
+        "SWSH149 Flareon V": {
+          "id": "SWSH149",
+          "name": "Flareon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH149 Flareon V.png"
+        },
+        "SWSH249 Kleavor VSTAR": {
+          "id": "SWSH249",
+          "name": "Kleavor VSTAR",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH249 Kleavor VSTAR.png"
+        },
+        "SWSH126 Galarian Slowpoke": {
+          "id": "SWSH126",
+          "name": "Galarian Slowpoke",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH126 Galarian Slowpoke.png"
+        },
+        "SWSH029 Rayquaza": {
+          "id": "SWSH029",
+          "name": "Rayquaza",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH029 Rayquaza.png"
+        },
+        "SWSH213 Lucario V": {
+          "id": "SWSH213",
+          "name": "Lucario V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH213 Lucario V.png"
+        },
+        "SWSH140 Pikachu V-UNION": {
+          "id": "SWSH140",
+          "name": "Pikachu V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH140 Pikachu V-UNION.png"
+        },
+        "SWSH115 Passimian": {
+          "id": "SWSH115",
+          "name": "Passimian",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH115 Passimian.png"
+        },
+        "SWSH157 Greninja V-UNION": {
+          "id": "SWSH157",
+          "name": "Greninja V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH157 Greninja V-UNION.png"
+        },
+        "SWSH143 Pikachu V": {
+          "id": "SWSH143",
+          "name": "Pikachu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH143 Pikachu V.png"
+        },
+        "SWSH175 Eevee": {
+          "id": "SWSH175",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH175 Eevee.png"
+        },
+        "SWSH163 Zacian V-UNION": {
+          "id": "SWSH163",
+          "name": "Zacian V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH163 Zacian V-UNION.png"
+        },
+        "SWSH045 Eternatus VMAX": {
+          "id": "SWSH045",
+          "name": "Eternatus VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH045 Eternatus VMAX.png"
+        },
+        "SWSH211 Sylveon": {
+          "id": "SWSH211",
+          "name": "Sylveon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH211 Sylveon.png"
+        },
+        "SWSH141 Pikachu V-UNION": {
+          "id": "SWSH141",
+          "name": "Pikachu V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH141 Pikachu V-UNION.png"
+        },
+        "SWSH022 Flapple": {
+          "id": "SWSH022",
+          "name": "Flapple",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH022 Flapple.png"
+        },
+        "SWSH048 Centiskorch": {
+          "id": "SWSH048",
+          "name": "Centiskorch",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH048 Centiskorch.png"
+        },
+        "SWSH033 Zacian": {
+          "id": "SWSH033",
+          "name": "Zacian",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH033 Zacian.png"
+        },
+        "SWSH247 Regigigas": {
+          "id": "SWSH247",
+          "name": "Regigigas",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH247 Regigigas.png"
+        },
+        "SWSH043 Galarian Sirfetch'd V": {
+          "id": "SWSH043",
+          "name": "Galarian Sirfetch'd V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH043 Galarian Sirfetch'd V.png"
+        },
+        "SWSH171 Latias": {
+          "id": "SWSH171",
+          "name": "Latias",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH171 Latias.png"
+        },
+        "SWSH042 Eevee": {
+          "id": "SWSH042",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH042 Eevee.png"
+        },
+        "SWSH085 Boltund V": {
+          "id": "SWSH085",
+          "name": "Boltund V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH085 Boltund V.png"
+        },
+        "SWSH084 Eldegoss V": {
+          "id": "SWSH084",
+          "name": "Eldegoss V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH084 Eldegoss V.png"
+        },
+        "SWSH078 Orbeetle V": {
+          "id": "SWSH078",
+          "name": "Orbeetle V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH078 Orbeetle V.png"
+        },
+        "SWSH123 Galarian Articuno": {
+          "id": "SWSH123",
+          "name": "Galarian Articuno",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH123 Galarian Articuno.png"
+        },
+        "SWSH015 Cinderace V": {
+          "id": "SWSH015",
+          "name": "Cinderace V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH015 Cinderace V.png"
+        },
+        "SWSH052 Gengar": {
+          "id": "SWSH052",
+          "name": "Gengar",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH052 Gengar.png"
+        },
+        "SWSH246 Weavile": {
+          "id": "SWSH246",
+          "name": "Weavile",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH246 Weavile.png"
+        },
+        "SWSH071 Scorbunny": {
+          "id": "SWSH071",
+          "name": "Scorbunny",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH071 Scorbunny.png"
+        },
+        "SWSH107 Rapid Strike Urshifu V": {
+          "id": "SWSH107",
+          "name": "Rapid Strike Urshifu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH107 Rapid Strike Urshifu V.png"
+        },
+        "SWSH128 Eiscue": {
+          "id": "SWSH128",
+          "name": "Eiscue",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH128 Eiscue.png"
+        },
+        "SWSH237 Hisuian Typhlosion V": {
+          "id": "SWSH237",
+          "name": "Hisuian Typhlosion V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH237 Hisuian Typhlosion V.png"
+        },
+        "SWSH093 Arrokuda": {
+          "id": "SWSH093",
+          "name": "Arrokuda",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH093 Arrokuda.png"
+        },
+        "SWSH007 Frosmoth": {
+          "id": "SWSH007",
+          "name": "Frosmoth",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH007 Frosmoth.png"
+        },
+        "SWSH086 Cramorant V": {
+          "id": "SWSH086",
+          "name": "Cramorant V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH086 Cramorant V.png"
+        },
+        "SWSH068 Snorlax": {
+          "id": "SWSH068",
+          "name": "Snorlax",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH068 Snorlax.png"
+        },
+        "SWSH081 Polteageist": {
+          "id": "SWSH081",
+          "name": "Polteageist",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH081 Polteageist.png"
+        },
+        "SWSH160 Mewtwo V-UNION": {
+          "id": "SWSH160",
+          "name": "Mewtwo V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH160 Mewtwo V-UNION.png"
+        },
+        "SWSH019 Zamazenta V": {
+          "id": "SWSH019",
+          "name": "Zamazenta V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH019 Zamazenta V.png"
+        },
+        "SWSH151 Jolteon V": {
+          "id": "SWSH151",
+          "name": "Jolteon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH151 Jolteon V.png"
+        },
+        "SWSH005 Meowth VMAX": {
+          "id": "SWSH005",
+          "name": "Meowth VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH005 Meowth VMAX.png"
+        },
+        "SWSH031 Morpeko": {
+          "id": "SWSH031",
+          "name": "Morpeko",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH031 Morpeko.png"
+        },
+        "SWSH218 Morpeko V-UNION": {
+          "id": "SWSH218",
+          "name": "Morpeko V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH218 Morpeko V-UNION.png"
+        },
+        "SWSH122 Flaaffy": {
+          "id": "SWSH122",
+          "name": "Flaaffy",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH122 Flaaffy.png"
+        },
+        "SWSH110 Crobat V": {
+          "id": "SWSH110",
+          "name": "Crobat V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH110 Crobat V.png"
+        },
+        "SWSH098 Crobat V": {
+          "id": "SWSH098",
+          "name": "Crobat V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH098 Crobat V.png"
+        },
+        "SWSH039 Pikachu": {
+          "id": "SWSH039",
+          "name": "Pikachu",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH039 Pikachu.png"
+        },
+        "SWSH214 Lucario VSTAR": {
+          "id": "SWSH214",
+          "name": "Lucario VSTAR",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH214 Lucario VSTAR.png"
+        },
+        "SWSH056 Morpeko V": {
+          "id": "SWSH056",
+          "name": "Morpeko V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH056 Morpeko V.png"
+        },
+        "SWSH134 Dark Sylveon V": {
+          "id": "SWSH134",
+          "name": "Dark Sylveon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH134 Dark Sylveon V.png"
+        },
+        "SWSH096 Dragapult V": {
+          "id": "SWSH096",
+          "name": "Dragapult V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH096 Dragapult V.png"
+        },
+        "SWSH215 Morpeko V-UNION": {
+          "id": "SWSH215",
+          "name": "Morpeko V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH215 Morpeko V-UNION.png"
+        },
+        "SWSH083 Alakazam V": {
+          "id": "SWSH083",
+          "name": "Alakazam V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH083 Alakazam V.png"
+        },
+        "SWSH080 Dedenne": {
+          "id": "SWSH080",
+          "name": "Dedenne",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH080 Dedenne.png"
+        },
+        "SWSH038 Kangaskhan": {
+          "id": "SWSH038",
+          "name": "Kangaskhan",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH038 Kangaskhan.png"
+        },
+        "SWSH058 Alcremie": {
+          "id": "SWSH058",
+          "name": "Alcremie",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH058 Alcremie.png"
+        },
+        "SWSH008 Galarian Perrserker": {
+          "id": "SWSH008",
+          "name": "Galarian Perrserker",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH008 Galarian Perrserker.png"
+        },
+        "SWSH046 Eldegoss": {
+          "id": "SWSH046",
+          "name": "Eldegoss",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH046 Eldegoss.png"
+        },
+        "SWSH091 Bronzong": {
+          "id": "SWSH091",
+          "name": "Bronzong",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH091 Bronzong.png"
+        },
+        "SWSH156 Greninja V-UNION": {
+          "id": "SWSH156",
+          "name": "Greninja V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH156 Greninja V-UNION.png"
+        },
+        "SWSH009 Cinccino": {
+          "id": "SWSH009",
+          "name": "Cinccino",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH009 Cinccino.png"
+        },
+        "SWSH136 Mimikyu \u03b4": {
+          "id": "SWSH136",
+          "name": "Mimikyu \u03b4",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH136 Mimikyu \u03b4.png"
+        },
+        "SWSH030 Copperajah V": {
+          "id": "SWSH030",
+          "name": "Copperajah V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH030 Copperajah V.png"
+        },
+        "SWSH028 Duraludon": {
+          "id": "SWSH028",
+          "name": "Duraludon",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH028 Duraludon.png"
+        },
+        "SWSH027 Noctowl": {
+          "id": "SWSH027",
+          "name": "Noctowl",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH027 Noctowl.png"
+        },
+        "SWSH040 Hatenna": {
+          "id": "SWSH040",
+          "name": "Hatenna",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH040 Hatenna.png"
+        },
+        "SWSH082 Bunnelby": {
+          "id": "SWSH082",
+          "name": "Bunnelby",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH082 Bunnelby.png"
+        },
+        "SWSH188 Bibarel": {
+          "id": "SWSH188",
+          "name": "Bibarel",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH188 Bibarel.png"
+        },
+        "SWSH244 Scorbunny": {
+          "id": "SWSH244",
+          "name": "Scorbunny",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH244 Scorbunny.png"
+        },
+        "SWSH217 Morpeko V-UNION": {
+          "id": "SWSH217",
+          "name": "Morpeko V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH217 Morpeko V-UNION.png"
+        },
+        "SWSH166 Zacian V-UNION": {
+          "id": "SWSH166",
+          "name": "Zacian V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH166 Zacian V-UNION.png"
+        },
+        "SWSH131 Shadow Rider Calyrex V": {
+          "id": "SWSH131",
+          "name": "Shadow Rider Calyrex V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH131 Shadow Rider Calyrex V.png"
+        },
+        "SWSH224 Melmetal V": {
+          "id": "SWSH224",
+          "name": "Melmetal V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH224 Melmetal V.png"
+        },
+        "SWSH216 Morpeko V-UNION": {
+          "id": "SWSH216",
+          "name": "Morpeko V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH216 Morpeko V-UNION.png"
+        },
+        "SWSH105 Gardevoir V": {
+          "id": "SWSH105",
+          "name": "Gardevoir V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH105 Gardevoir V.png"
+        },
+        "SWSH242 Comfey": {
+          "id": "SWSH242",
+          "name": "Comfey",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH242 Comfey.png"
+        },
+        "SWSH176 Hoopa V": {
+          "id": "SWSH176",
+          "name": "Hoopa V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH176 Hoopa V.png"
+        },
+        "SWSH025 Garbodor": {
+          "id": "SWSH025",
+          "name": "Garbodor",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH025 Garbodor.png"
+        },
+        "SWSH189 Flapple": {
+          "id": "SWSH189",
+          "name": "Flapple",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH189 Flapple.png"
+        },
+        "SWSH179 Flareon V": {
+          "id": "SWSH179",
+          "name": "Flareon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH179 Flareon V.png"
+        },
+        "SWSH095 Eevee": {
+          "id": "SWSH095",
+          "name": "Eevee",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH095 Eevee.png"
+        },
+        "SWSH013 Galarian Ponyta": {
+          "id": "SWSH013",
+          "name": "Galarian Ponyta",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH013 Galarian Ponyta.png"
+        },
+        "SWSH106 Single Strike Urshifu V": {
+          "id": "SWSH106",
+          "name": "Single Strike Urshifu V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH106 Single Strike Urshifu V.png"
+        },
+        "SWSH180 Flareon VMAX": {
+          "id": "SWSH180",
+          "name": "Flareon VMAX",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH180 Flareon VMAX.png"
+        },
+        "SWSH119 Snorlax": {
+          "id": "SWSH119",
+          "name": "Snorlax",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH119 Snorlax.png"
+        },
+        "SWSH197 Glaceon VSTAR": {
+          "id": "SWSH197",
+          "name": "Glaceon VSTAR",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH197 Glaceon VSTAR.png"
+        },
+        "SWSH148 Noivern V": {
+          "id": "SWSH148",
+          "name": "Noivern V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH148 Noivern V.png"
+        },
+        "SWSH225 Alolan Exeggutor V": {
+          "id": "SWSH225",
+          "name": "Alolan Exeggutor V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH225 Alolan Exeggutor V.png"
+        },
+        "SWSH100 Venusaur V": {
+          "id": "SWSH100",
+          "name": "Venusaur V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH100 Venusaur V.png"
+        },
+        "SWSH073 Sobble": {
+          "id": "SWSH073",
+          "name": "Sobble",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH073 Sobble.png"
+        },
+        "SWSH165 Zacian V-UNION": {
+          "id": "SWSH165",
+          "name": "Zacian V-UNION",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH165 Zacian V-UNION.png"
+        },
+        "SWSH101 Blastoise V": {
+          "id": "SWSH101",
+          "name": "Blastoise V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH101 Blastoise V.png"
+        },
+        "SWSH070 Grookey": {
+          "id": "SWSH070",
+          "name": "Grookey",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH070 Grookey.png"
+        },
+        "SWSH016 Inteleon V": {
+          "id": "SWSH016",
+          "name": "Inteleon V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH016 Inteleon V.png"
+        },
+        "SWSH066 Charizard": {
+          "id": "SWSH066",
+          "name": "Charizard",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH066 Charizard.png"
+        },
+        "SWSH154 Dragonite V": {
+          "id": "SWSH154",
+          "name": "Dragonite V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH154 Dragonite V.png"
+        },
+        "SWSH074 Special Delivery Pikachu": {
+          "id": "SWSH074",
+          "name": "Special Delivery Pikachu",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH074 Special Delivery Pikachu.png"
+        },
+        "SWSH219 Boltund V": {
+          "id": "SWSH219",
+          "name": "Boltund V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH219 Boltund V.png"
+        },
+        "SWSH200 Corviknight V": {
+          "id": "SWSH200",
+          "name": "Corviknight V",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH200 Corviknight V.png"
+        },
+        "SWSH053 Machamp": {
+          "id": "SWSH053",
+          "name": "Machamp",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH053 Machamp.png"
+        },
+        "SWSH187 Liepard": {
+          "id": "SWSH187",
+          "name": "Liepard",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH187 Liepard.png"
+        },
+        "SWSH195 Leafeon VSTAR": {
+          "id": "SWSH195",
+          "name": "Leafeon VSTAR",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH195 Leafeon VSTAR.png"
+        },
+        "SWSH234 Pikachu": {
+          "id": "SWSH234",
+          "name": "Pikachu",
+          "set_series": "Sword & Shield Black Star Promos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/sword_and_shield_black_star_promos/SWSH234 Pikachu.png"
+        }
+      },
+      "total_cards": 242
     }
   },
-  "total_sets": 12,
-  "total_cards": 2055
+  "total_sets": 13,
+  "total_cards": 2297
 }
