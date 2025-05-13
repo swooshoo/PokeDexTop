@@ -9332,8 +9332,1569 @@
         }
       },
       "total_cards": 219
+    },
+    "paradox_rift": {
+      "name": "Paradox Rift",
+      "path": "assets/tcg_cards/paradox_rift",
+      "cards": {
+        "1 Surskit": {
+          "id": "1",
+          "name": "Surskit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/1 Surskit.png"
+        },
+        "10 Blipbug": {
+          "id": "10",
+          "name": "Blipbug",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/10 Blipbug.png"
+        },
+        "100 Toxtricity ex": {
+          "id": "100",
+          "name": "Toxtricity ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/100 Toxtricity ex.png"
+        },
+        "101 Nacli": {
+          "id": "101",
+          "name": "Nacli",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/101 Nacli.png"
+        },
+        "102 Nacli": {
+          "id": "102",
+          "name": "Nacli",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/102 Nacli.png"
+        },
+        "103 Naclstack": {
+          "id": "103",
+          "name": "Naclstack",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/103 Naclstack.png"
+        },
+        "104 Garganacl": {
+          "id": "104",
+          "name": "Garganacl",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/104 Garganacl.png"
+        },
+        "105 Klawf": {
+          "id": "105",
+          "name": "Klawf",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/105 Klawf.png"
+        },
+        "106 Flamigo": {
+          "id": "106",
+          "name": "Flamigo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/106 Flamigo.png"
+        },
+        "107 Slither Wing": {
+          "id": "107",
+          "name": "Slither Wing",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/107 Slither Wing.png"
+        },
+        "108 Sandy Shocks ex": {
+          "id": "108",
+          "name": "Sandy Shocks ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/108 Sandy Shocks ex.png"
+        },
+        "109 Ting-Lu": {
+          "id": "109",
+          "name": "Ting-Lu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/109 Ting-Lu.png"
+        },
+        "11 Dottler": {
+          "id": "11",
+          "name": "Dottler",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/11 Dottler.png"
+        },
+        "110 Zubat": {
+          "id": "110",
+          "name": "Zubat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/110 Zubat.png"
+        },
+        "111 Golbat": {
+          "id": "111",
+          "name": "Golbat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/111 Golbat.png"
+        },
+        "112 Crobat": {
+          "id": "112",
+          "name": "Crobat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/112 Crobat.png"
+        },
+        "113 Absol": {
+          "id": "113",
+          "name": "Absol",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/113 Absol.png"
+        },
+        "114 Purrloin": {
+          "id": "114",
+          "name": "Purrloin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/114 Purrloin.png"
+        },
+        "115 Liepard": {
+          "id": "115",
+          "name": "Liepard",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/115 Liepard.png"
+        },
+        "116 Trubbish": {
+          "id": "116",
+          "name": "Trubbish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/116 Trubbish.png"
+        },
+        "117 Garbodor": {
+          "id": "117",
+          "name": "Garbodor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/117 Garbodor.png"
+        },
+        "118 Yveltal": {
+          "id": "118",
+          "name": "Yveltal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/118 Yveltal.png"
+        },
+        "119 Nickit": {
+          "id": "119",
+          "name": "Nickit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/119 Nickit.png"
+        },
+        "12 Orbeetle": {
+          "id": "12",
+          "name": "Orbeetle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/12 Orbeetle.png"
+        },
+        "120 Thievul": {
+          "id": "120",
+          "name": "Thievul",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/120 Thievul.png"
+        },
+        "121 Morpeko": {
+          "id": "121",
+          "name": "Morpeko",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/121 Morpeko.png"
+        },
+        "122 Lokix": {
+          "id": "122",
+          "name": "Lokix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/122 Lokix.png"
+        },
+        "123 Brute Bonnet": {
+          "id": "123",
+          "name": "Brute Bonnet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/123 Brute Bonnet.png"
+        },
+        "124 Roaring Moon ex": {
+          "id": "124",
+          "name": "Roaring Moon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/124 Roaring Moon ex.png"
+        },
+        "125 Steelix": {
+          "id": "125",
+          "name": "Steelix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/125 Steelix.png"
+        },
+        "126 Jirachi": {
+          "id": "126",
+          "name": "Jirachi",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/126 Jirachi.png"
+        },
+        "127 Ferroseed": {
+          "id": "127",
+          "name": "Ferroseed",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/127 Ferroseed.png"
+        },
+        "128 Ferrothorn": {
+          "id": "128",
+          "name": "Ferrothorn",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/128 Ferrothorn.png"
+        },
+        "129 Durant": {
+          "id": "129",
+          "name": "Durant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/129 Durant.png"
+        },
+        "13 Nymble": {
+          "id": "13",
+          "name": "Nymble",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/13 Nymble.png"
+        },
+        "130 Honedge": {
+          "id": "130",
+          "name": "Honedge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/130 Honedge.png"
+        },
+        "131 Honedge": {
+          "id": "131",
+          "name": "Honedge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/131 Honedge.png"
+        },
+        "132 Doublade": {
+          "id": "132",
+          "name": "Doublade",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/132 Doublade.png"
+        },
+        "133 Doublade": {
+          "id": "133",
+          "name": "Doublade",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/133 Doublade.png"
+        },
+        "134 Aegislash": {
+          "id": "134",
+          "name": "Aegislash",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/134 Aegislash.png"
+        },
+        "135 Aegislash ex": {
+          "id": "135",
+          "name": "Aegislash ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/135 Aegislash ex.png"
+        },
+        "136 Zacian": {
+          "id": "136",
+          "name": "Zacian",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/136 Zacian.png"
+        },
+        "137 Skeledirge ex": {
+          "id": "137",
+          "name": "Skeledirge ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/137 Skeledirge ex.png"
+        },
+        "138 Orthworm": {
+          "id": "138",
+          "name": "Orthworm",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/138 Orthworm.png"
+        },
+        "139 Gholdengo ex": {
+          "id": "139",
+          "name": "Gholdengo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/139 Gholdengo ex.png"
+        },
+        "14 Nymble": {
+          "id": "14",
+          "name": "Nymble",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/14 Nymble.png"
+        },
+        "140 Altaria ex": {
+          "id": "140",
+          "name": "Altaria ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/140 Altaria ex.png"
+        },
+        "141 Tatsugiri": {
+          "id": "141",
+          "name": "Tatsugiri",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/141 Tatsugiri.png"
+        },
+        "142 Porygon": {
+          "id": "142",
+          "name": "Porygon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/142 Porygon.png"
+        },
+        "143 Porygon2": {
+          "id": "143",
+          "name": "Porygon2",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/143 Porygon2.png"
+        },
+        "144 Porygon-Z": {
+          "id": "144",
+          "name": "Porygon-Z",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/144 Porygon-Z.png"
+        },
+        "145 Aipom": {
+          "id": "145",
+          "name": "Aipom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/145 Aipom.png"
+        },
+        "146 Ambipom": {
+          "id": "146",
+          "name": "Ambipom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/146 Ambipom.png"
+        },
+        "147 Miltank": {
+          "id": "147",
+          "name": "Miltank",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/147 Miltank.png"
+        },
+        "148 Whismur": {
+          "id": "148",
+          "name": "Whismur",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/148 Whismur.png"
+        },
+        "149 Loudred": {
+          "id": "149",
+          "name": "Loudred",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/149 Loudred.png"
+        },
+        "15 Toedscool": {
+          "id": "15",
+          "name": "Toedscool",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/15 Toedscool.png"
+        },
+        "150 Exploud": {
+          "id": "150",
+          "name": "Exploud",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/150 Exploud.png"
+        },
+        "151 Spinda": {
+          "id": "151",
+          "name": "Spinda",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/151 Spinda.png"
+        },
+        "152 Swablu": {
+          "id": "152",
+          "name": "Swablu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/152 Swablu.png"
+        },
+        "153 Tandemaus": {
+          "id": "153",
+          "name": "Tandemaus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/153 Tandemaus.png"
+        },
+        "154 Tandemaus": {
+          "id": "154",
+          "name": "Tandemaus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/154 Tandemaus.png"
+        },
+        "155 Maushold ex": {
+          "id": "155",
+          "name": "Maushold ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/155 Maushold ex.png"
+        },
+        "156 Bombirdier ex": {
+          "id": "156",
+          "name": "Bombirdier ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/156 Bombirdier ex.png"
+        },
+        "157 Cyclizar": {
+          "id": "157",
+          "name": "Cyclizar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/157 Cyclizar.png"
+        },
+        "158 Iron Jugulis": {
+          "id": "158",
+          "name": "Iron Jugulis",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/158 Iron Jugulis.png"
+        },
+        "16 Toedscool": {
+          "id": "16",
+          "name": "Toedscool",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/16 Toedscool.png"
+        },
+        "17 Toedscruel": {
+          "id": "17",
+          "name": "Toedscruel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/17 Toedscruel.png"
+        },
+        "18 Wo-Chien": {
+          "id": "18",
+          "name": "Wo-Chien",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/18 Wo-Chien.png"
+        },
+        "183 Crustle": {
+          "id": "183",
+          "name": "Crustle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/183 Crustle.png"
+        },
+        "184 Dottler": {
+          "id": "184",
+          "name": "Dottler",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/184 Dottler.png"
+        },
+        "185 Toedscruel": {
+          "id": "185",
+          "name": "Toedscruel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/185 Toedscruel.png"
+        },
+        "186 Magby": {
+          "id": "186",
+          "name": "Magby",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/186 Magby.png"
+        },
+        "187 Iron Moth": {
+          "id": "187",
+          "name": "Iron Moth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/187 Iron Moth.png"
+        },
+        "188 Snorunt": {
+          "id": "188",
+          "name": "Snorunt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/188 Snorunt.png"
+        },
+        "189 Mantyke": {
+          "id": "189",
+          "name": "Mantyke",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/189 Mantyke.png"
+        },
+        "19 Magby": {
+          "id": "19",
+          "name": "Magby",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/19 Magby.png"
+        },
+        "190 Vanillish": {
+          "id": "190",
+          "name": "Vanillish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/190 Vanillish.png"
+        },
+        "191 Wimpod": {
+          "id": "191",
+          "name": "Wimpod",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/191 Wimpod.png"
+        },
+        "192 Veluza": {
+          "id": "192",
+          "name": "Veluza",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/192 Veluza.png"
+        },
+        "193 Plusle": {
+          "id": "193",
+          "name": "Plusle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/193 Plusle.png"
+        },
+        "194 Minun": {
+          "id": "194",
+          "name": "Minun",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/194 Minun.png"
+        },
+        "195 Blitzle": {
+          "id": "195",
+          "name": "Blitzle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/195 Blitzle.png"
+        },
+        "196 Joltik": {
+          "id": "196",
+          "name": "Joltik",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/196 Joltik.png"
+        },
+        "197 Espathra": {
+          "id": "197",
+          "name": "Espathra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/197 Espathra.png"
+        },
+        "198 Gimmighoul": {
+          "id": "198",
+          "name": "Gimmighoul",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/198 Gimmighoul.png"
+        },
+        "199 Groudon": {
+          "id": "199",
+          "name": "Groudon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/199 Groudon.png"
+        },
+        "2 Masquerain": {
+          "id": "2",
+          "name": "Masquerain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/2 Masquerain.png"
+        },
+        "20 Pansear": {
+          "id": "20",
+          "name": "Pansear",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/20 Pansear.png"
+        },
+        "200 Mienshao": {
+          "id": "200",
+          "name": "Mienshao",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/200 Mienshao.png"
+        },
+        "201 Minior": {
+          "id": "201",
+          "name": "Minior",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/201 Minior.png"
+        },
+        "202 Garganacl": {
+          "id": "202",
+          "name": "Garganacl",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/202 Garganacl.png"
+        },
+        "203 Slither Wing": {
+          "id": "203",
+          "name": "Slither Wing",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/203 Slither Wing.png"
+        },
+        "204 Garbodor": {
+          "id": "204",
+          "name": "Garbodor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/204 Garbodor.png"
+        },
+        "205 Yveltal": {
+          "id": "205",
+          "name": "Yveltal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/205 Yveltal.png"
+        },
+        "206 Morpeko": {
+          "id": "206",
+          "name": "Morpeko",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/206 Morpeko.png"
+        },
+        "207 Brute Bonnet": {
+          "id": "207",
+          "name": "Brute Bonnet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/207 Brute Bonnet.png"
+        },
+        "208 Steelix": {
+          "id": "208",
+          "name": "Steelix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/208 Steelix.png"
+        },
+        "209 Ferrothorn": {
+          "id": "209",
+          "name": "Ferrothorn",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/209 Ferrothorn.png"
+        },
+        "21 Simisear": {
+          "id": "21",
+          "name": "Simisear",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/21 Simisear.png"
+        },
+        "210 Aegislash": {
+          "id": "210",
+          "name": "Aegislash",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/210 Aegislash.png"
+        },
+        "211 Aipom": {
+          "id": "211",
+          "name": "Aipom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/211 Aipom.png"
+        },
+        "212 Loudred": {
+          "id": "212",
+          "name": "Loudred",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/212 Loudred.png"
+        },
+        "213 Swablu": {
+          "id": "213",
+          "name": "Swablu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/213 Swablu.png"
+        },
+        "214 Porygon-Z": {
+          "id": "214",
+          "name": "Porygon-Z",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/214 Porygon-Z.png"
+        },
+        "215 Cyclizar": {
+          "id": "215",
+          "name": "Cyclizar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/215 Cyclizar.png"
+        },
+        "216 Iron Jugulis": {
+          "id": "216",
+          "name": "Iron Jugulis",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/216 Iron Jugulis.png"
+        },
+        "217 Froslass ex": {
+          "id": "217",
+          "name": "Froslass ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/217 Froslass ex.png"
+        },
+        "218 Armarouge ex": {
+          "id": "218",
+          "name": "Armarouge ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/218 Armarouge ex.png"
+        },
+        "219 Garchomp ex": {
+          "id": "219",
+          "name": "Garchomp ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/219 Garchomp ex.png"
+        },
+        "22 Volcanion": {
+          "id": "22",
+          "name": "Volcanion",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/22 Volcanion.png"
+        },
+        "220 Tsareena ex": {
+          "id": "220",
+          "name": "Tsareena ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/220 Tsareena ex.png"
+        },
+        "221 Golisopod ex": {
+          "id": "221",
+          "name": "Golisopod ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/221 Golisopod ex.png"
+        },
+        "222 Tapu Koko ex": {
+          "id": "222",
+          "name": "Tapu Koko ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/222 Tapu Koko ex.png"
+        },
+        "223 Iron Hands ex": {
+          "id": "223",
+          "name": "Iron Hands ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/223 Iron Hands ex.png"
+        },
+        "224 Cofagrigus ex": {
+          "id": "224",
+          "name": "Cofagrigus ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/224 Cofagrigus ex.png"
+        },
+        "225 Iron Valiant ex": {
+          "id": "225",
+          "name": "Iron Valiant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/225 Iron Valiant ex.png"
+        },
+        "226 Hoopa ex": {
+          "id": "226",
+          "name": "Hoopa ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/226 Hoopa ex.png"
+        },
+        "227 Toxtricity ex": {
+          "id": "227",
+          "name": "Toxtricity ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/227 Toxtricity ex.png"
+        },
+        "228 Sandy Shocks ex": {
+          "id": "228",
+          "name": "Sandy Shocks ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/228 Sandy Shocks ex.png"
+        },
+        "229 Roaring Moon ex": {
+          "id": "229",
+          "name": "Roaring Moon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/229 Roaring Moon ex.png"
+        },
+        "23 Fuecoco": {
+          "id": "23",
+          "name": "Fuecoco",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/23 Fuecoco.png"
+        },
+        "230 Aegislash ex": {
+          "id": "230",
+          "name": "Aegislash ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/230 Aegislash ex.png"
+        },
+        "231 Gholdengo ex": {
+          "id": "231",
+          "name": "Gholdengo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/231 Gholdengo ex.png"
+        },
+        "232 Altaria ex": {
+          "id": "232",
+          "name": "Altaria ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/232 Altaria ex.png"
+        },
+        "233 Maushold ex": {
+          "id": "233",
+          "name": "Maushold ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/233 Maushold ex.png"
+        },
+        "234 Bombirdier ex": {
+          "id": "234",
+          "name": "Bombirdier ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/234 Bombirdier ex.png"
+        },
+        "24 Crocalor": {
+          "id": "24",
+          "name": "Crocalor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/24 Crocalor.png"
+        },
+        "245 Garchomp ex": {
+          "id": "245",
+          "name": "Garchomp ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/245 Garchomp ex.png"
+        },
+        "246 Golisopod ex": {
+          "id": "246",
+          "name": "Golisopod ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/246 Golisopod ex.png"
+        },
+        "247 Tapu Koko ex": {
+          "id": "247",
+          "name": "Tapu Koko ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/247 Tapu Koko ex.png"
+        },
+        "248 Iron Hands ex": {
+          "id": "248",
+          "name": "Iron Hands ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/248 Iron Hands ex.png"
+        },
+        "249 Iron Valiant ex": {
+          "id": "249",
+          "name": "Iron Valiant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/249 Iron Valiant ex.png"
+        },
+        "25 Charcadet": {
+          "id": "25",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/25 Charcadet.png"
+        },
+        "250 Sandy Shocks ex": {
+          "id": "250",
+          "name": "Sandy Shocks ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/250 Sandy Shocks ex.png"
+        },
+        "26 Charcadet": {
+          "id": "26",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/26 Charcadet.png"
+        },
+        "27 Armarouge ex": {
+          "id": "27",
+          "name": "Armarouge ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/27 Armarouge ex.png"
+        },
+        "28 Iron Moth": {
+          "id": "28",
+          "name": "Iron Moth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/28 Iron Moth.png"
+        },
+        "29 Chi-Yu": {
+          "id": "29",
+          "name": "Chi-Yu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/29 Chi-Yu.png"
+        },
+        "3 Froslass ex": {
+          "id": "3",
+          "name": "Froslass ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/3 Froslass ex.png"
+        },
+        "30 Horsea": {
+          "id": "30",
+          "name": "Horsea",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/30 Horsea.png"
+        },
+        "31 Seadra": {
+          "id": "31",
+          "name": "Seadra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/31 Seadra.png"
+        },
+        "32 Kingdra": {
+          "id": "32",
+          "name": "Kingdra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/32 Kingdra.png"
+        },
+        "33 Remoraid": {
+          "id": "33",
+          "name": "Remoraid",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/33 Remoraid.png"
+        },
+        "34 Octillery": {
+          "id": "34",
+          "name": "Octillery",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/34 Octillery.png"
+        },
+        "35 Feebas": {
+          "id": "35",
+          "name": "Feebas",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/35 Feebas.png"
+        },
+        "36 Milotic": {
+          "id": "36",
+          "name": "Milotic",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/36 Milotic.png"
+        },
+        "37 Snorunt": {
+          "id": "37",
+          "name": "Snorunt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/37 Snorunt.png"
+        },
+        "38 Garchomp ex": {
+          "id": "38",
+          "name": "Garchomp ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/38 Garchomp ex.png"
+        },
+        "39 Mantyke": {
+          "id": "39",
+          "name": "Mantyke",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/39 Mantyke.png"
+        },
+        "4 Pansage": {
+          "id": "4",
+          "name": "Pansage",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/4 Pansage.png"
+        },
+        "40 Palkia": {
+          "id": "40",
+          "name": "Palkia",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/40 Palkia.png"
+        },
+        "41 Panpour": {
+          "id": "41",
+          "name": "Panpour",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/41 Panpour.png"
+        },
+        "42 Simipour": {
+          "id": "42",
+          "name": "Simipour",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/42 Simipour.png"
+        },
+        "43 Vanillite": {
+          "id": "43",
+          "name": "Vanillite",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/43 Vanillite.png"
+        },
+        "44 Vanillish": {
+          "id": "44",
+          "name": "Vanillish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/44 Vanillish.png"
+        },
+        "45 Vanilluxe": {
+          "id": "45",
+          "name": "Vanilluxe",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/45 Vanilluxe.png"
+        },
+        "46 Tsareena ex": {
+          "id": "46",
+          "name": "Tsareena ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/46 Tsareena ex.png"
+        },
+        "47 Wimpod": {
+          "id": "47",
+          "name": "Wimpod",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/47 Wimpod.png"
+        },
+        "48 Wimpod": {
+          "id": "48",
+          "name": "Wimpod",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/48 Wimpod.png"
+        },
+        "49 Golisopod": {
+          "id": "49",
+          "name": "Golisopod",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/49 Golisopod.png"
+        },
+        "5 Simisage": {
+          "id": "5",
+          "name": "Simisage",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/5 Simisage.png"
+        },
+        "50 Golisopod ex": {
+          "id": "50",
+          "name": "Golisopod ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/50 Golisopod ex.png"
+        },
+        "51 Wiglett": {
+          "id": "51",
+          "name": "Wiglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/51 Wiglett.png"
+        },
+        "52 Wiglett": {
+          "id": "52",
+          "name": "Wiglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/52 Wiglett.png"
+        },
+        "53 Wugtrio": {
+          "id": "53",
+          "name": "Wugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/53 Wugtrio.png"
+        },
+        "54 Veluza": {
+          "id": "54",
+          "name": "Veluza",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/54 Veluza.png"
+        },
+        "55 Dondozo": {
+          "id": "55",
+          "name": "Dondozo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/55 Dondozo.png"
+        },
+        "56 Iron Bundle": {
+          "id": "56",
+          "name": "Iron Bundle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/56 Iron Bundle.png"
+        },
+        "57 Chien-Pao": {
+          "id": "57",
+          "name": "Chien-Pao",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/57 Chien-Pao.png"
+        },
+        "58 Mewtwo ex": {
+          "id": "58",
+          "name": "Mewtwo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/58 Mewtwo ex.png"
+        },
+        "59 Elekid": {
+          "id": "59",
+          "name": "Elekid",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/59 Elekid.png"
+        },
+        "6 Dwebble": {
+          "id": "6",
+          "name": "Dwebble",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/6 Dwebble.png"
+        },
+        "60 Plusle": {
+          "id": "60",
+          "name": "Plusle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/60 Plusle.png"
+        },
+        "61 Minun": {
+          "id": "61",
+          "name": "Minun",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/61 Minun.png"
+        },
+        "62 Blitzle": {
+          "id": "62",
+          "name": "Blitzle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/62 Blitzle.png"
+        },
+        "63 Zebstrika": {
+          "id": "63",
+          "name": "Zebstrika",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/63 Zebstrika.png"
+        },
+        "64 Joltik": {
+          "id": "64",
+          "name": "Joltik",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/64 Joltik.png"
+        },
+        "65 Galvantula": {
+          "id": "65",
+          "name": "Galvantula",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/65 Galvantula.png"
+        },
+        "66 Zekrom": {
+          "id": "66",
+          "name": "Zekrom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/66 Zekrom.png"
+        },
+        "67 Oricorio": {
+          "id": "67",
+          "name": "Oricorio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/67 Oricorio.png"
+        },
+        "68 Tapu Koko ex": {
+          "id": "68",
+          "name": "Tapu Koko ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/68 Tapu Koko ex.png"
+        },
+        "69 Toxel": {
+          "id": "69",
+          "name": "Toxel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/69 Toxel.png"
+        },
+        "7 Crustle": {
+          "id": "7",
+          "name": "Crustle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/7 Crustle.png"
+        },
+        "70 Iron Hands ex": {
+          "id": "70",
+          "name": "Iron Hands ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/70 Iron Hands ex.png"
+        },
+        "71 Natu": {
+          "id": "71",
+          "name": "Natu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/71 Natu.png"
+        },
+        "72 Xatu": {
+          "id": "72",
+          "name": "Xatu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/72 Xatu.png"
+        },
+        "73 Latios": {
+          "id": "73",
+          "name": "Latios",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/73 Latios.png"
+        },
+        "74 Deoxys": {
+          "id": "74",
+          "name": "Deoxys",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/74 Deoxys.png"
+        },
+        "75 Yamask": {
+          "id": "75",
+          "name": "Yamask",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/75 Yamask.png"
+        },
+        "76 Cofagrigus ex": {
+          "id": "76",
+          "name": "Cofagrigus ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/76 Cofagrigus ex.png"
+        },
+        "77 Pumpkaboo": {
+          "id": "77",
+          "name": "Pumpkaboo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/77 Pumpkaboo.png"
+        },
+        "78 Gourgeist": {
+          "id": "78",
+          "name": "Gourgeist",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/78 Gourgeist.png"
+        },
+        "79 Flittle": {
+          "id": "79",
+          "name": "Flittle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/79 Flittle.png"
+        },
+        "8 Bounsweet": {
+          "id": "8",
+          "name": "Bounsweet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/8 Bounsweet.png"
+        },
+        "80 Flittle": {
+          "id": "80",
+          "name": "Flittle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/80 Flittle.png"
+        },
+        "81 Espathra": {
+          "id": "81",
+          "name": "Espathra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/81 Espathra.png"
+        },
+        "82 Tinkatink": {
+          "id": "82",
+          "name": "Tinkatink",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/82 Tinkatink.png"
+        },
+        "83 Tinkatink": {
+          "id": "83",
+          "name": "Tinkatink",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/83 Tinkatink.png"
+        },
+        "84 Tinkatuff": {
+          "id": "84",
+          "name": "Tinkatuff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/84 Tinkatuff.png"
+        },
+        "85 Tinkaton": {
+          "id": "85",
+          "name": "Tinkaton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/85 Tinkaton.png"
+        },
+        "86 Scream Tail": {
+          "id": "86",
+          "name": "Scream Tail",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/86 Scream Tail.png"
+        },
+        "87 Gimmighoul": {
+          "id": "87",
+          "name": "Gimmighoul",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/87 Gimmighoul.png"
+        },
+        "88 Gimmighoul": {
+          "id": "88",
+          "name": "Gimmighoul",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/88 Gimmighoul.png"
+        },
+        "89 Iron Valiant ex": {
+          "id": "89",
+          "name": "Iron Valiant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/89 Iron Valiant ex.png"
+        },
+        "9 Steenee": {
+          "id": "9",
+          "name": "Steenee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/9 Steenee.png"
+        },
+        "90 Onix": {
+          "id": "90",
+          "name": "Onix",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/90 Onix.png"
+        },
+        "91 Gligar": {
+          "id": "91",
+          "name": "Gligar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/91 Gligar.png"
+        },
+        "92 Gliscor": {
+          "id": "92",
+          "name": "Gliscor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/92 Gliscor.png"
+        },
+        "93 Groudon": {
+          "id": "93",
+          "name": "Groudon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/93 Groudon.png"
+        },
+        "94 Gible": {
+          "id": "94",
+          "name": "Gible",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/94 Gible.png"
+        },
+        "95 Gabite": {
+          "id": "95",
+          "name": "Gabite",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/95 Gabite.png"
+        },
+        "96 Mienfoo": {
+          "id": "96",
+          "name": "Mienfoo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/96 Mienfoo.png"
+        },
+        "97 Mienshao": {
+          "id": "97",
+          "name": "Mienshao",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/97 Mienshao.png"
+        },
+        "98 Hoopa ex": {
+          "id": "98",
+          "name": "Hoopa ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/98 Hoopa ex.png"
+        },
+        "99 Minior": {
+          "id": "99",
+          "name": "Minior",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/99 Minior.png"
+        },
+        "251 Roaring Moon ex": {
+          "id": "251",
+          "name": "Roaring Moon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/251 Roaring Moon ex.png"
+        },
+        "252 Altaria ex": {
+          "id": "252",
+          "name": "Altaria ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/252 Altaria ex.png"
+        },
+        "252 Gholdengo ex": {
+          "id": "252",
+          "name": "Gholdengo ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/252 Gholdengo ex.png"
+        },
+        "260 Garchomp ex": {
+          "id": "260",
+          "name": "Garchomp ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/260 Garchomp ex.png"
+        },
+        "261 Iron Valiant ex": {
+          "id": "261",
+          "name": "Iron Valiant ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/261 Iron Valiant ex.png"
+        },
+        "262 Roaring Moon ex": {
+          "id": "262",
+          "name": "Roaring Moon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paradox_rift/262 Roaring Moon ex.png"
+        }
+      },
+      "total_cards": 222
     }
   },
-  "total_sets": 8,
-  "total_cards": 1368
+  "total_sets": 9,
+  "total_cards": 1590
 }
