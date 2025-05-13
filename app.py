@@ -266,67 +266,96 @@ class TCGCard(QFrame):
                             "Could not connect to the dashboard. Please try again.")
 
     def extract_pokemon_name(self, card_name):
-            """
-            Extract the Pokémon name from a card name.
-            Handles various formats including complex card IDs.
-            
-            Examples:
-            - "Card #56 Lillie's Clefairy ex" -> "Clefairy"
-            - "GG01 Hisuian Voltorb" -> "Hisuian Voltorb"
-            - "SV093 Duraludon" -> "Duraludon"
-            - "TG01 Flareon" -> "Flareon"
-            - "SWSH001 Grookey" -> "Grookey"
-            """
-            # Try to match common patterns in card names
-            if not card_name:
-                return None
-            
-            # Remove "Card #XX " prefix if present
-            card_name = re.sub(r'^Card #\d+\s+', '', card_name)
-            
-            # Remove complex card ID prefixes at the beginning
-            # This handles formats like SV093, TG01, SWSH001, GG01, etc.
-            card_name = re.sub(r'^[A-Za-z0-9]+\s+', '', card_name)
-            
-            # Define patterns to match common card name formats
-            patterns = [
-                # Pattern for character's Pokémon: "Character's PokemonName"
-                r"(?:\w+\'s\s+)(\w+(?:\s+\w+)?)",
-                # Pattern for regional forms: "Region PokemonName"
-                r"(?:Alolan|Galarian|Paldean|Hisuian)\s+(\w+(?:\s+\w+)?)",
-                # Pattern for Pokémon with form/variant suffixes
-                r"(\w+(?:\s+\w+)?)\s+(?:ex|EX|GX|V|VMAX|VSTAR)"
-            ]
-            
-            # Try each pattern
-            for pattern in patterns:
-                match = re.search(pattern, card_name)
-                if match:
-                    return match.group(1)
-            
-            # Handle regional forms that might not be captured by the general pattern
-            if any(region in card_name for region in ["Alolan", "Galarian", "Paldean", "Hisuian"]):
-                # For regional forms, keep the region prefix with the Pokémon name
-                return card_name
-            
-            # If no specific pattern matches, remove suffixes like "ex", "GX", etc.
-            name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR).*$', '', card_name)
-            
-            # For remaining cards, remove character possessives (e.g., "Hop's", "N's", etc.)
-            name = re.sub(r'^(?:\w+\'s\s+)', '', name)
-            
-            # Special case handling
-            if "Mr. Mime" in name:
-                return "Mr. Mime"
-            if "Mime Jr" in name or "Mime Jr." in name:
-                return "Mime Jr."
-            if "Tapu " in name:  # Handle Tapu Koko, Tapu Lele, etc.
-                return name
-            if "Type: Null" in name:
-                return "Type: Null"
-            
-            # Otherwise, return the processed name
-            return name
+        """
+        Extract the Pokémon name from a card name.
+        Handles various formats including complex card IDs.
+        
+        Examples:
+        - "Card #56 Lillie's Clefairy ex" -> "Clefairy"
+        - "GG01 Hisuian Voltorb" -> "Hisuian Voltorb"
+        - "SV093 Duraludon" -> "Duraludon"
+        - "TG01 Flareon" -> "Flareon"
+        - "SWSH001 Grookey" -> "Grookey"
+        - "Pikachu VMAX" -> "Pikachu"
+        - "Snorlax V-UNION" -> "Snorlax"
+        - "Special Delivery Bidoof" -> "Bidoof"
+        """
+        import re
+        
+        # Return None for empty card names
+        if not card_name:
+            return None
+        
+        # Store original card_name for debugging if needed
+        original_card_name = card_name
+        
+        # Remove "Card #XX " prefix if present
+        card_name = re.sub(r'^Card #\d+\s+', '', card_name)
+        
+        # Remove complex card ID prefixes at the beginning (more specific pattern)
+        # This pattern specifically targets the alphanumeric IDs like SWSH001, GG01
+        card_name = re.sub(r'^[A-Za-z]{1,5}\d+\s+', '', card_name)
+        
+        # Special case handling for specific Pokémon with unusual names
+        special_cases = {
+            "Mr. Mime": "Mr. Mime",
+            "Mime Jr": "Mime Jr.",
+            "Mime Jr.": "Mime Jr.",
+            "Farfetch'd": "Farfetch'd",
+            "Sirfetch'd": "Sirfetch'd",
+            "Type: Null": "Type: Null",
+            "Flabébé": "Flabébé",
+            "Nidoran♀": "Nidoran♀",
+            "Nidoran♂": "Nidoran♂"
+        }
+        
+        # Check for special case matches within the name first
+        for special_name, replacement in special_cases.items():
+            if special_name in card_name:
+                return replacement
+        
+        # Handle Special Delivery cards directly
+        if card_name.startswith("Special Delivery "):
+            return card_name.replace("Special Delivery ", "", 1)
+        
+        # Handle Tapu cases directly (Tapu Koko, Tapu Lele, etc.)
+        if card_name.startswith("Tapu "):
+            # Extract just the Pokémon name without any suffixes
+            tapu_match = re.match(r'(Tapu\s+\w+)(?:\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION|V-FIGHTER|V-HERO))?', card_name)
+            if tapu_match:
+                return tapu_match.group(1)
+            return card_name.split()[0] + " " + card_name.split()[1]
+        
+        # Handle regional forms
+        regional_prefixes = ["Alolan", "Galarian", "Paldean", "Hisuian"]
+        for region in regional_prefixes:
+            if card_name.startswith(f"{region} "):
+                # Extract the Pokémon name after the region, but before any suffixes
+                region_match = re.match(f'{region}\\s+(\\w+(?:\\s+\\w+)?)(?:\\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION))?', card_name)
+                if region_match:
+                    return f"{region} {region_match.group(1)}"
+        
+        # Handle character's Pokémon (e.g., "Lillie's Clefairy")
+        possessive_match = re.match(r"(\w+\'s)\s+(\w+(?:\s+\w+)?)(?:\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION))?", card_name)
+        if possessive_match:
+            return possessive_match.group(2)
+        
+        # For VMAX, V-UNION, and similar suffixes - extract the Pokémon name before the suffix
+        vmax_match = re.match(r"(\w+(?:\s+\w+)?)\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION|V-FIGHTER|V-HERO)", card_name)
+        if vmax_match:
+            return vmax_match.group(1)
+        
+        # Handle Radiant, Ancient, Primal prefix cases
+        prefix_match = re.match(r"(?:Radiant|Ancient|Primal|Shadow|Origin|Noble|Terastal|Mega|M)\s+(\w+(?:\s+\w+)?)", card_name)
+        if prefix_match:
+            return prefix_match.group(1)
+        
+        # If we reach here, the card_name is likely just the Pokémon name or has an unknown format
+        # Remove any remaining suffixes
+        clean_name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION|V-FIGHTER|V-HERO)(?:\s+.*)?$', '', card_name)
+        
+        # Return the clean name
+        return clean_name
 
 def get_card_number(file_path):
     """
