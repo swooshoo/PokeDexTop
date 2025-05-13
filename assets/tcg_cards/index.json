@@ -6490,8 +6490,1310 @@
         }
       },
       "total_cards": 185
+    },
+    "temporal_forces": {
+      "name": "Temporal Forces",
+      "path": "assets/tcg_cards/temporal_forces",
+      "cards": {
+        "164 Grotle": {
+          "id": "164",
+          "name": "Grotle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/164 Grotle.png"
+        },
+        "85 Drilbur": {
+          "id": "85",
+          "name": "Drilbur",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/85 Drilbur.png"
+        },
+        "96 Great Tusk": {
+          "id": "96",
+          "name": "Great Tusk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/96 Great Tusk.png"
+        },
+        "163 Shiftry": {
+          "id": "163",
+          "name": "Shiftry",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/163 Shiftry.png"
+        },
+        "30 Victini": {
+          "id": "30",
+          "name": "Victini",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/30 Victini.png"
+        },
+        "62 Iron Thorns": {
+          "id": "62",
+          "name": "Iron Thorns",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/62 Iron Thorns.png"
+        },
+        "114 Metang": {
+          "id": "114",
+          "name": "Metang",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/114 Metang.png"
+        },
+        "109 Roaring Moon": {
+          "id": "109",
+          "name": "Roaring Moon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/109 Roaring Moon.png"
+        },
+        "44 Keldeo": {
+          "id": "44",
+          "name": "Keldeo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/44 Keldeo.png"
+        },
+        "217 Iron Boulder ex": {
+          "id": "217",
+          "name": "Iron Boulder ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/217 Iron Boulder ex.png"
+        },
+        "206 Iron Crown ex": {
+          "id": "206",
+          "name": "Iron Crown ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/206 Iron Crown ex.png"
+        },
+        "65 Azumarill": {
+          "id": "65",
+          "name": "Azumarill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/65 Azumarill.png"
+        },
+        "84 Relicanth": {
+          "id": "84",
+          "name": "Relicanth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/84 Relicanth.png"
+        },
+        "168 Snom": {
+          "id": "168",
+          "name": "Snom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/168 Snom.png"
+        },
+        "178 Metagross": {
+          "id": "178",
+          "name": "Metagross",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/178 Metagross.png"
+        },
+        "28 Slugma": {
+          "id": "28",
+          "name": "Slugma",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/28 Slugma.png"
+        },
+        "76 Ribombee": {
+          "id": "76",
+          "name": "Ribombee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/76 Ribombee.png"
+        },
+        "189 Walking Wake ex": {
+          "id": "189",
+          "name": "Walking Wake ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/189 Walking Wake ex.png"
+        },
+        "5 Shiftry": {
+          "id": "5",
+          "name": "Shiftry",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/5 Shiftry.png"
+        },
+        "81 Iron Crown ex": {
+          "id": "81",
+          "name": "Iron Crown ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/81 Iron Crown ex.png"
+        },
+        "137 Cinccino": {
+          "id": "137",
+          "name": "Cinccino",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/137 Cinccino.png"
+        },
+        "64 Marill": {
+          "id": "64",
+          "name": "Marill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/64 Marill.png"
+        },
+        "36 Sizzlipede": {
+          "id": "36",
+          "name": "Sizzlipede",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/36 Sizzlipede.png"
+        },
+        "95 Coalossal": {
+          "id": "95",
+          "name": "Coalossal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/95 Coalossal.png"
+        },
+        "61 Iron Hands": {
+          "id": "61",
+          "name": "Iron Hands",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/61 Iron Hands.png"
+        },
+        "39 Totodile": {
+          "id": "39",
+          "name": "Totodile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/39 Totodile.png"
+        },
+        "59 Boltund": {
+          "id": "59",
+          "name": "Boltund",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/59 Boltund.png"
+        },
+        "190 Wugtrio ex": {
+          "id": "190",
+          "name": "Wugtrio ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/190 Wugtrio ex.png"
+        },
+        "139 Iron Jugulis": {
+          "id": "139",
+          "name": "Iron Jugulis",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/139 Iron Jugulis.png"
+        },
+        "135 Unfezant": {
+          "id": "135",
+          "name": "Unfezant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/135 Unfezant.png"
+        },
+        "23 Rellor": {
+          "id": "23",
+          "name": "Rellor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/23 Rellor.png"
+        },
+        "89 Rockruff": {
+          "id": "89",
+          "name": "Rockruff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/89 Rockruff.png"
+        },
+        "2 Pineco": {
+          "id": "2",
+          "name": "Pineco",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/2 Pineco.png"
+        },
+        "180 Lickitung": {
+          "id": "180",
+          "name": "Lickitung",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/180 Lickitung.png"
+        },
+        "33 Torracat": {
+          "id": "33",
+          "name": "Torracat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/33 Torracat.png"
+        },
+        "203 Iron Leaves ex": {
+          "id": "203",
+          "name": "Iron Leaves ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/203 Iron Leaves ex.png"
+        },
+        "193 Gengar ex": {
+          "id": "193",
+          "name": "Gengar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/193 Gengar ex.png"
+        },
+        "75 Cutiefly": {
+          "id": "75",
+          "name": "Cutiefly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/75 Cutiefly.png"
+        },
+        "121 Miraidon": {
+          "id": "121",
+          "name": "Miraidon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/121 Miraidon.png"
+        },
+        "192 Iron Boulder ex": {
+          "id": "192",
+          "name": "Iron Boulder ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/192 Iron Boulder ex.png"
+        },
+        "60 Wugtrio ex": {
+          "id": "60",
+          "name": "Wugtrio ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/60 Wugtrio ex.png"
+        },
+        "103 Haunter": {
+          "id": "103",
+          "name": "Haunter",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/103 Haunter.png"
+        },
+        "77 Scream Tail": {
+          "id": "77",
+          "name": "Scream Tail",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/77 Scream Tail.png"
+        },
+        "104 Gengar ex": {
+          "id": "104",
+          "name": "Gengar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/104 Gengar ex.png"
+        },
+        "215 Walking Wake ex": {
+          "id": "215",
+          "name": "Walking Wake ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/215 Walking Wake ex.png"
+        },
+        "73 Elgyem": {
+          "id": "73",
+          "name": "Elgyem",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/73 Elgyem.png"
+        },
+        "32 Litten": {
+          "id": "32",
+          "name": "Litten",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/32 Litten.png"
+        },
+        "46 Frosmoth": {
+          "id": "46",
+          "name": "Frosmoth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/46 Frosmoth.png"
+        },
+        "97 Great Tusk": {
+          "id": "97",
+          "name": "Great Tusk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/97 Great Tusk.png"
+        },
+        "68 Bronzor": {
+          "id": "68",
+          "name": "Bronzor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/68 Bronzor.png"
+        },
+        "6 Shroomish": {
+          "id": "6",
+          "name": "Shroomish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/6 Shroomish.png"
+        },
+        "213 Iron Leaves ex": {
+          "id": "213",
+          "name": "Iron Leaves ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/213 Iron Leaves ex.png"
+        },
+        "207 Iron Boulder ex": {
+          "id": "207",
+          "name": "Iron Boulder ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/207 Iron Boulder ex.png"
+        },
+        "11 Grotle": {
+          "id": "11",
+          "name": "Grotle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/11 Grotle.png"
+        },
+        "177 Gastly": {
+          "id": "177",
+          "name": "Gastly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/177 Gastly.png"
+        },
+        "1 Scyther": {
+          "id": "1",
+          "name": "Scyther",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/1 Scyther.png"
+        },
+        "110 Forretress": {
+          "id": "110",
+          "name": "Forretress",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/110 Forretress.png"
+        },
+        "66 Girafarig": {
+          "id": "66",
+          "name": "Girafarig",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/66 Girafarig.png"
+        },
+        "72 Reuniclus": {
+          "id": "72",
+          "name": "Reuniclus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/72 Reuniclus.png"
+        },
+        "49 Palafin": {
+          "id": "49",
+          "name": "Palafin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/49 Palafin.png"
+        },
+        "126 Hoothoot": {
+          "id": "126",
+          "name": "Hoothoot",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/126 Hoothoot.png"
+        },
+        "106 Mightyena": {
+          "id": "106",
+          "name": "Mightyena",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/106 Mightyena.png"
+        },
+        "118 Iron Treads": {
+          "id": "118",
+          "name": "Iron Treads",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/118 Iron Treads.png"
+        },
+        "51 Pikachu": {
+          "id": "51",
+          "name": "Pikachu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/51 Pikachu.png"
+        },
+        "94 Carkol": {
+          "id": "94",
+          "name": "Carkol",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/94 Carkol.png"
+        },
+        "12 Torterra ex": {
+          "id": "12",
+          "name": "Torterra ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/12 Torterra ex.png"
+        },
+        "181 Chatot": {
+          "id": "181",
+          "name": "Chatot",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/181 Chatot.png"
+        },
+        "99 Iron Boulder ex": {
+          "id": "99",
+          "name": "Iron Boulder ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/99 Iron Boulder ex.png"
+        },
+        "124 Lickitung": {
+          "id": "124",
+          "name": "Lickitung",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/124 Lickitung.png"
+        },
+        "107 Sableye": {
+          "id": "107",
+          "name": "Sableye",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/107 Sableye.png"
+        },
+        "100 Ekans": {
+          "id": "100",
+          "name": "Ekans",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/100 Ekans.png"
+        },
+        "108 Farigiraf ex": {
+          "id": "108",
+          "name": "Farigiraf ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/108 Farigiraf ex.png"
+        },
+        "132 Chatot": {
+          "id": "132",
+          "name": "Chatot",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/132 Chatot.png"
+        },
+        "131 Delcatty": {
+          "id": "131",
+          "name": "Delcatty",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/131 Delcatty.png"
+        },
+        "125 Lickilicky": {
+          "id": "125",
+          "name": "Lickilicky",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/125 Lickilicky.png"
+        },
+        "31 Heatmor": {
+          "id": "31",
+          "name": "Heatmor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/31 Heatmor.png"
+        },
+        "170 Bronzor": {
+          "id": "170",
+          "name": "Bronzor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/170 Bronzor.png"
+        },
+        "17 Sawsbuck": {
+          "id": "17",
+          "name": "Sawsbuck",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/17 Sawsbuck.png"
+        },
+        "58 Yamper": {
+          "id": "58",
+          "name": "Yamper",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/58 Yamper.png"
+        },
+        "69 Bronzong": {
+          "id": "69",
+          "name": "Bronzong",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/69 Bronzong.png"
+        },
+        "53 Electabuzz": {
+          "id": "53",
+          "name": "Electabuzz",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/53 Electabuzz.png"
+        },
+        "119 Koraidon": {
+          "id": "119",
+          "name": "Koraidon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/119 Koraidon.png"
+        },
+        "54 Electivire": {
+          "id": "54",
+          "name": "Electivire",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/54 Electivire.png"
+        },
+        "194 Farigiraf ex": {
+          "id": "194",
+          "name": "Farigiraf ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/194 Farigiraf ex.png"
+        },
+        "205 Walking Wake ex": {
+          "id": "205",
+          "name": "Walking Wake ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/205 Walking Wake ex.png"
+        },
+        "4 Nuzleaf": {
+          "id": "4",
+          "name": "Nuzleaf",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/4 Nuzleaf.png"
+        },
+        "128 Dunsparce": {
+          "id": "128",
+          "name": "Dunsparce",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/128 Dunsparce.png"
+        },
+        "90 Lycanroc": {
+          "id": "90",
+          "name": "Lycanroc",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/90 Lycanroc.png"
+        },
+        "133 Pidove": {
+          "id": "133",
+          "name": "Pidove",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/133 Pidove.png"
+        },
+        "63 Mr": {
+          "id": "63",
+          "name": "Mr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/63 Mr. Mime.png"
+        },
+        "67 Latias": {
+          "id": "67",
+          "name": "Latias",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/67 Latias.png"
+        },
+        "45 Snom": {
+          "id": "45",
+          "name": "Snom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/45 Snom.png"
+        },
+        "196 Raging Bolt ex": {
+          "id": "196",
+          "name": "Raging Bolt ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/196 Raging Bolt ex.png"
+        },
+        "115 Metagross": {
+          "id": "115",
+          "name": "Metagross",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/115 Metagross.png"
+        },
+        "22 Scovillain ex": {
+          "id": "22",
+          "name": "Scovillain ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/22 Scovillain ex.png"
+        },
+        "98 Sandy Shocks": {
+          "id": "98",
+          "name": "Sandy Shocks",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/98 Sandy Shocks.png"
+        },
+        "183 Cinccino": {
+          "id": "183",
+          "name": "Cinccino",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/183 Cinccino.png"
+        },
+        "19 Dhelmise": {
+          "id": "19",
+          "name": "Dhelmise",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/19 Dhelmise.png"
+        },
+        "127 Noctowl": {
+          "id": "127",
+          "name": "Noctowl",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/127 Noctowl.png"
+        },
+        "40 Croconaw": {
+          "id": "40",
+          "name": "Croconaw",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/40 Croconaw.png"
+        },
+        "27 Rapidash": {
+          "id": "27",
+          "name": "Rapidash",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/27 Rapidash.png"
+        },
+        "123 Raging Bolt ex": {
+          "id": "123",
+          "name": "Raging Bolt ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/123 Raging Bolt ex.png"
+        },
+        "175 Mudsdale": {
+          "id": "175",
+          "name": "Mudsdale",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/175 Mudsdale.png"
+        },
+        "86 Excadrill": {
+          "id": "86",
+          "name": "Excadrill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/86 Excadrill.png"
+        },
+        "80 Iron Valiant": {
+          "id": "80",
+          "name": "Iron Valiant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/80 Iron Valiant.png"
+        },
+        "169 Charjabug": {
+          "id": "169",
+          "name": "Charjabug",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/169 Charjabug.png"
+        },
+        "16 Deerling": {
+          "id": "16",
+          "name": "Deerling",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/16 Deerling.png"
+        },
+        "179 Meltan": {
+          "id": "179",
+          "name": "Meltan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/179 Meltan.png"
+        },
+        "102 Gastly": {
+          "id": "102",
+          "name": "Gastly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/102 Gastly.png"
+        },
+        "41 Feraligatr": {
+          "id": "41",
+          "name": "Feraligatr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/41 Feraligatr.png"
+        },
+        "174 Excadrill": {
+          "id": "174",
+          "name": "Excadrill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/174 Excadrill.png"
+        },
+        "195 Scizor ex": {
+          "id": "195",
+          "name": "Scizor ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/195 Scizor ex.png"
+        },
+        "79 Iron Valiant": {
+          "id": "79",
+          "name": "Iron Valiant",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/79 Iron Valiant.png"
+        },
+        "14 Cottonee": {
+          "id": "14",
+          "name": "Cottonee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/14 Cottonee.png"
+        },
+        "111 Scizor ex": {
+          "id": "111",
+          "name": "Scizor ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/111 Scizor ex.png"
+        },
+        "29 Magcargo": {
+          "id": "29",
+          "name": "Magcargo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/29 Magcargo.png"
+        },
+        "120 Koraidon ex": {
+          "id": "120",
+          "name": "Koraidon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/120 Koraidon ex.png"
+        },
+        "116 Meltan": {
+          "id": "116",
+          "name": "Meltan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/116 Meltan.png"
+        },
+        "88 Golurk": {
+          "id": "88",
+          "name": "Golurk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/88 Golurk.png"
+        },
+        "35 Turtonator": {
+          "id": "35",
+          "name": "Turtonator",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/35 Turtonator.png"
+        },
+        "25 Iron Leaves ex": {
+          "id": "25",
+          "name": "Iron Leaves ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/25 Iron Leaves ex.png"
+        },
+        "138 Drampa": {
+          "id": "138",
+          "name": "Drampa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/138 Drampa.png"
+        },
+        "105 Poochyena": {
+          "id": "105",
+          "name": "Poochyena",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/105 Poochyena.png"
+        },
+        "70 Solosis": {
+          "id": "70",
+          "name": "Solosis",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/70 Solosis.png"
+        },
+        "20 Bramblin": {
+          "id": "20",
+          "name": "Bramblin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/20 Bramblin.png"
+        },
+        "9 Roserade": {
+          "id": "9",
+          "name": "Roserade",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/9 Roserade.png"
+        },
+        "204 Gouging Fire ex": {
+          "id": "204",
+          "name": "Gouging Fire ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/204 Gouging Fire ex.png"
+        },
+        "18 Grubbin": {
+          "id": "18",
+          "name": "Grubbin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/18 Grubbin.png"
+        },
+        "3 Seedot": {
+          "id": "3",
+          "name": "Seedot",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/3 Seedot.png"
+        },
+        "122 Miraidon ex": {
+          "id": "122",
+          "name": "Miraidon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/122 Miraidon ex.png"
+        },
+        "182 Minccino": {
+          "id": "182",
+          "name": "Minccino",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/182 Minccino.png"
+        },
+        "37 Centiskorch": {
+          "id": "37",
+          "name": "Centiskorch",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/37 Centiskorch.png"
+        },
+        "74 Beheeyem": {
+          "id": "74",
+          "name": "Beheeyem",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/74 Beheeyem.png"
+        },
+        "71 Duosion": {
+          "id": "71",
+          "name": "Duosion",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/71 Duosion.png"
+        },
+        "55 Charjabug": {
+          "id": "55",
+          "name": "Charjabug",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/55 Charjabug.png"
+        },
+        "52 Raichu": {
+          "id": "52",
+          "name": "Raichu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/52 Raichu.png"
+        },
+        "166 Sawsbuck": {
+          "id": "166",
+          "name": "Sawsbuck",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/166 Sawsbuck.png"
+        },
+        "171 Reuniclus": {
+          "id": "171",
+          "name": "Reuniclus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/171 Reuniclus.png"
+        },
+        "165 Deerling": {
+          "id": "165",
+          "name": "Deerling",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/165 Deerling.png"
+        },
+        "167 Litten": {
+          "id": "167",
+          "name": "Litten",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/167 Litten.png"
+        },
+        "42 Carvanha": {
+          "id": "42",
+          "name": "Carvanha",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/42 Carvanha.png"
+        },
+        "7 Breloom": {
+          "id": "7",
+          "name": "Breloom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/7 Breloom.png"
+        },
+        "47 Wiglett": {
+          "id": "47",
+          "name": "Wiglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/47 Wiglett.png"
+        },
+        "112 Mawile": {
+          "id": "112",
+          "name": "Mawile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/112 Mawile.png"
+        },
+        "21 Brambleghast": {
+          "id": "21",
+          "name": "Brambleghast",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/21 Brambleghast.png"
+        },
+        "24 Rabsca": {
+          "id": "24",
+          "name": "Rabsca",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/24 Rabsca.png"
+        },
+        "38 Gouging Fire ex": {
+          "id": "38",
+          "name": "Gouging Fire ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/38 Gouging Fire ex.png"
+        },
+        "93 Rolycoly": {
+          "id": "93",
+          "name": "Rolycoly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/93 Rolycoly.png"
+        },
+        "187 Incineroar ex": {
+          "id": "187",
+          "name": "Incineroar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/187 Incineroar ex.png"
+        },
+        "130 Skitty": {
+          "id": "130",
+          "name": "Skitty",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/130 Skitty.png"
+        },
+        "78 Flutter Mane": {
+          "id": "78",
+          "name": "Flutter Mane",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/78 Flutter Mane.png"
+        },
+        "92 Mudsdale": {
+          "id": "92",
+          "name": "Mudsdale",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/92 Mudsdale.png"
+        },
+        "10 Turtwig": {
+          "id": "10",
+          "name": "Turtwig",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/10 Turtwig.png"
+        },
+        "113 Beldum": {
+          "id": "113",
+          "name": "Beldum",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/113 Beldum.png"
+        },
+        "8 Roselia": {
+          "id": "8",
+          "name": "Roselia",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/8 Roselia.png"
+        },
+        "188 Gouging Fire ex": {
+          "id": "188",
+          "name": "Gouging Fire ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/188 Gouging Fire ex.png"
+        },
+        "50 Walking Wake ex": {
+          "id": "50",
+          "name": "Walking Wake ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/50 Walking Wake ex.png"
+        },
+        "26 Ponyta": {
+          "id": "26",
+          "name": "Ponyta",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/26 Ponyta.png"
+        },
+        "186 Iron Leaves ex": {
+          "id": "186",
+          "name": "Iron Leaves ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/186 Iron Leaves ex.png"
+        },
+        "87 Golett": {
+          "id": "87",
+          "name": "Golett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/87 Golett.png"
+        },
+        "43 Sharpedo": {
+          "id": "43",
+          "name": "Sharpedo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/43 Sharpedo.png"
+        },
+        "134 Tranquill": {
+          "id": "134",
+          "name": "Tranquill",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/134 Tranquill.png"
+        },
+        "185 Torterra ex": {
+          "id": "185",
+          "name": "Torterra ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/185 Torterra ex.png"
+        },
+        "56 Vikavolt": {
+          "id": "56",
+          "name": "Vikavolt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/56 Vikavolt.png"
+        },
+        "117 Melmetal": {
+          "id": "117",
+          "name": "Melmetal",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/117 Melmetal.png"
+        },
+        "208 Raging Bolt ex": {
+          "id": "208",
+          "name": "Raging Bolt ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/208 Raging Bolt ex.png"
+        },
+        "15 Whimsicott": {
+          "id": "15",
+          "name": "Whimsicott",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/15 Whimsicott.png"
+        },
+        "218 Raging Bolt ex": {
+          "id": "218",
+          "name": "Raging Bolt ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/218 Raging Bolt ex.png"
+        },
+        "101 Arbok": {
+          "id": "101",
+          "name": "Arbok",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/101 Arbok.png"
+        },
+        "83 Medicham": {
+          "id": "83",
+          "name": "Medicham",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/83 Medicham.png"
+        },
+        "34 Incineroar ex": {
+          "id": "34",
+          "name": "Incineroar ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/34 Incineroar ex.png"
+        },
+        "216 Iron Crown ex": {
+          "id": "216",
+          "name": "Iron Crown ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/216 Iron Crown ex.png"
+        },
+        "172 Cutiefly": {
+          "id": "172",
+          "name": "Cutiefly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/172 Cutiefly.png"
+        },
+        "129 Dudunsparce": {
+          "id": "129",
+          "name": "Dudunsparce",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/129 Dudunsparce.png"
+        },
+        "136 Minccino": {
+          "id": "136",
+          "name": "Minccino",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/136 Minccino.png"
+        },
+        "191 Iron Crown ex": {
+          "id": "191",
+          "name": "Iron Crown ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/191 Iron Crown ex.png"
+        },
+        "13 Shaymin": {
+          "id": "13",
+          "name": "Shaymin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/13 Shaymin.png"
+        },
+        "173 Relicanth": {
+          "id": "173",
+          "name": "Relicanth",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/173 Relicanth.png"
+        },
+        "82 Meditite": {
+          "id": "82",
+          "name": "Meditite",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/82 Meditite.png"
+        },
+        "214 Gouging Fire ex": {
+          "id": "214",
+          "name": "Gouging Fire ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/214 Gouging Fire ex.png"
+        },
+        "57 Zeraora": {
+          "id": "57",
+          "name": "Zeraora",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/57 Zeraora.png"
+        },
+        "91 Mudbray": {
+          "id": "91",
+          "name": "Mudbray",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/91 Mudbray.png"
+        },
+        "48 Finizen": {
+          "id": "48",
+          "name": "Finizen",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/48 Finizen.png"
+        },
+        "184 Drampa": {
+          "id": "184",
+          "name": "Drampa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/184 Drampa.png"
+        },
+        "176 Arbok": {
+          "id": "176",
+          "name": "Arbok",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/temporal_forces/176 Arbok.png"
+        }
+      },
+      "total_cards": 185
     }
   },
-  "total_sets": 6,
-  "total_cards": 964
+  "total_sets": 7,
+  "total_cards": 1149
 }
