@@ -1,9 +1,12 @@
 
-# PokeDexTop : A Desktop National Pokedex <img align="right" width="100" height="100" src="assets/pokeball.png">
+# PokeDexTop : A Desktop National Pokedex 
 
-A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redudndant websites and information. 
+<img align="right" width="100" height="100" src="assets/pokeball.png">
+<p>A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redudndant websites and information. <br>  
 
-### Advantages of a Desktop Application
+Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p>
+
+## Advantages of a Desktop Application
 
 Better Performance: Direct access to system resources. No HTTP overhead or browser rendering limitations. Faster image loading and display
 
@@ -13,7 +16,7 @@ Offline Functionality: Works completely offline with no web server needed. Simpl
 
 Enhanced Features: Direct filesystem integration for importing/exporting data. Ability to use system dialogs for file selection. Potentially faster image processing and caching
 
-### Potential New Challenges
+## Potential New Challenges
 
 Cross-Platform Compatibility: Ensuring consistent look and behavior across operating systems. May need to handle platform-specific quirks
 
