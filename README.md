@@ -6,6 +6,19 @@
 
 Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p>
 
+## Features
+
+- A digital binder organized by Pokedex number and split into generations.
+- A 'Search by Set' tab that allows you to browse through TCG sets.
+- A 'Search by Pokemon' tab that allows you to search for all cards pertaining to certain Pokemon.
+- A button to add cards from either Search tabs to your digital binder.
+
+## Features to Work on (Refer to Issues)
+
+- Hover and examine cards for further detail.
+- Remove existing cards in your digital binder.
+- Select and export by multiple individual cards with their names/numbers or by generation page.
+
 ## Advantages of a Desktop Application
 
 Better Performance: Direct access to system resources. No HTTP overhead or browser rendering limitations. Faster image loading and display
