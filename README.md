@@ -1,8 +1,7 @@
-![Pokeball Logo](assets/pokeball.png)
 
-# PokeDexTop : A Desktop National Pokedex
+# PokeDexTop : A Desktop National Pokedex <img align="right" width="100" height="100" src="assets/pokeball.png">
 
-A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redudndant websites and information.
+A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redudndant websites and information. 
 
 ### Advantages of a Desktop Application
 
