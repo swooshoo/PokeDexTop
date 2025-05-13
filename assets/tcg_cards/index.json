@@ -7792,8 +7792,1548 @@
         }
       },
       "total_cards": 185
+    },
+    "paldean_fates": {
+      "name": "Paldean Fates",
+      "path": "assets/tcg_cards/paldean_fates",
+      "cards": {
+        "1 Pineco": {
+          "id": "1",
+          "name": "Pineco",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/1 Pineco.png"
+        },
+        "10 Magmortar": {
+          "id": "10",
+          "name": "Magmortar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/10 Magmortar.png"
+        },
+        "100 Snover": {
+          "id": "100",
+          "name": "Snover",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/100 Snover.png"
+        },
+        "101 Abomasnow": {
+          "id": "101",
+          "name": "Abomasnow",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/101 Abomasnow.png"
+        },
+        "102 Smoliv": {
+          "id": "102",
+          "name": "Smoliv",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/102 Smoliv.png"
+        },
+        "103 Dolliv": {
+          "id": "103",
+          "name": "Dolliv",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/103 Dolliv.png"
+        },
+        "104 Arboliva": {
+          "id": "104",
+          "name": "Arboliva",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/104 Arboliva.png"
+        },
+        "105 Toedscool": {
+          "id": "105",
+          "name": "Toedscool",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/105 Toedscool.png"
+        },
+        "106 Capsakid": {
+          "id": "106",
+          "name": "Capsakid",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/106 Capsakid.png"
+        },
+        "107 Scovillain": {
+          "id": "107",
+          "name": "Scovillain",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/107 Scovillain.png"
+        },
+        "108 Rellor": {
+          "id": "108",
+          "name": "Rellor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/108 Rellor.png"
+        },
+        "109 Charmander": {
+          "id": "109",
+          "name": "Charmander",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/109 Charmander.png"
+        },
+        "11 Numel": {
+          "id": "11",
+          "name": "Numel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/11 Numel.png"
+        },
+        "110 Charmeleon": {
+          "id": "110",
+          "name": "Charmeleon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/110 Charmeleon.png"
+        },
+        "111 Paldean Tauros": {
+          "id": "111",
+          "name": "Paldean Tauros",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/111 Paldean Tauros.png"
+        },
+        "112 Entei": {
+          "id": "112",
+          "name": "Entei",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/112 Entei.png"
+        },
+        "113 Oricorio": {
+          "id": "113",
+          "name": "Oricorio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/113 Oricorio.png"
+        },
+        "114 Charcadet": {
+          "id": "114",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/114 Charcadet.png"
+        },
+        "115 Armarouge": {
+          "id": "115",
+          "name": "Armarouge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/115 Armarouge.png"
+        },
+        "116 Slowpoke": {
+          "id": "116",
+          "name": "Slowpoke",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/116 Slowpoke.png"
+        },
+        "117 Slowbro": {
+          "id": "117",
+          "name": "Slowbro",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/117 Slowbro.png"
+        },
+        "118 Staryu": {
+          "id": "118",
+          "name": "Staryu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/118 Staryu.png"
+        },
+        "119 Starmie": {
+          "id": "119",
+          "name": "Starmie",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/119 Starmie.png"
+        },
+        "12 Camerupt": {
+          "id": "12",
+          "name": "Camerupt",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/12 Camerupt.png"
+        },
+        "120 Paldean Tauros": {
+          "id": "120",
+          "name": "Paldean Tauros",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/120 Paldean Tauros.png"
+        },
+        "121 Wiglett": {
+          "id": "121",
+          "name": "Wiglett",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/121 Wiglett.png"
+        },
+        "122 Wugtrio": {
+          "id": "122",
+          "name": "Wugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/122 Wugtrio.png"
+        },
+        "123 Finizen": {
+          "id": "123",
+          "name": "Finizen",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/123 Finizen.png"
+        },
+        "124 Palafin": {
+          "id": "124",
+          "name": "Palafin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/124 Palafin.png"
+        },
+        "125 Veluza": {
+          "id": "125",
+          "name": "Veluza",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/125 Veluza.png"
+        },
+        "126 Dondozo": {
+          "id": "126",
+          "name": "Dondozo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/126 Dondozo.png"
+        },
+        "127 Tatsugiri": {
+          "id": "127",
+          "name": "Tatsugiri",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/127 Tatsugiri.png"
+        },
+        "128 Frigibax": {
+          "id": "128",
+          "name": "Frigibax",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/128 Frigibax.png"
+        },
+        "129 Arctibax": {
+          "id": "129",
+          "name": "Arctibax",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/129 Arctibax.png"
+        },
+        "13 Heat Rotom": {
+          "id": "13",
+          "name": "Heat Rotom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/13 Heat Rotom.png"
+        },
+        "130 Baxcalibur": {
+          "id": "130",
+          "name": "Baxcalibur",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/130 Baxcalibur.png"
+        },
+        "131 Pikachu": {
+          "id": "131",
+          "name": "Pikachu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/131 Pikachu.png"
+        },
+        "132 Raichu": {
+          "id": "132",
+          "name": "Raichu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/132 Raichu.png"
+        },
+        "133 Voltorb": {
+          "id": "133",
+          "name": "Voltorb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/133 Voltorb.png"
+        },
+        "134 Electrode": {
+          "id": "134",
+          "name": "Electrode",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/134 Electrode.png"
+        },
+        "135 Shinx": {
+          "id": "135",
+          "name": "Shinx",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/135 Shinx.png"
+        },
+        "136 Luxio": {
+          "id": "136",
+          "name": "Luxio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/136 Luxio.png"
+        },
+        "137 Luxray": {
+          "id": "137",
+          "name": "Luxray",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/137 Luxray.png"
+        },
+        "138 Pachirisu": {
+          "id": "138",
+          "name": "Pachirisu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/138 Pachirisu.png"
+        },
+        "139 Thundurus": {
+          "id": "139",
+          "name": "Thundurus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/139 Thundurus.png"
+        },
+        "14 Charcadet": {
+          "id": "14",
+          "name": "Charcadet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/14 Charcadet.png"
+        },
+        "140 Toxel": {
+          "id": "140",
+          "name": "Toxel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/140 Toxel.png"
+        },
+        "141 Toxtricity": {
+          "id": "141",
+          "name": "Toxtricity",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/141 Toxtricity.png"
+        },
+        "142 Pawmi": {
+          "id": "142",
+          "name": "Pawmi",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/142 Pawmi.png"
+        },
+        "143 Pawmo": {
+          "id": "143",
+          "name": "Pawmo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/143 Pawmo.png"
+        },
+        "144 Pawmot": {
+          "id": "144",
+          "name": "Pawmot",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/144 Pawmot.png"
+        },
+        "145 Wattrel": {
+          "id": "145",
+          "name": "Wattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/145 Wattrel.png"
+        },
+        "146 Kilowattrel": {
+          "id": "146",
+          "name": "Kilowattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/146 Kilowattrel.png"
+        },
+        "147 Wigglytuff": {
+          "id": "147",
+          "name": "Wigglytuff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/147 Wigglytuff.png"
+        },
+        "148 Abra": {
+          "id": "148",
+          "name": "Abra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/148 Abra.png"
+        },
+        "149 Kadabra": {
+          "id": "149",
+          "name": "Kadabra",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/149 Kadabra.png"
+        },
+        "15 Armarouge": {
+          "id": "15",
+          "name": "Armarouge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/15 Armarouge.png"
+        },
+        "150 Cleffa": {
+          "id": "150",
+          "name": "Cleffa",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/150 Cleffa.png"
+        },
+        "151 Natu": {
+          "id": "151",
+          "name": "Natu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/151 Natu.png"
+        },
+        "152 Xatu": {
+          "id": "152",
+          "name": "Xatu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/152 Xatu.png"
+        },
+        "153 Ralts": {
+          "id": "153",
+          "name": "Ralts",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/153 Ralts.png"
+        },
+        "154 Kirlia": {
+          "id": "154",
+          "name": "Kirlia",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/154 Kirlia.png"
+        },
+        "155 Drifloon": {
+          "id": "155",
+          "name": "Drifloon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/155 Drifloon.png"
+        },
+        "156 Drifblim": {
+          "id": "156",
+          "name": "Drifblim",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/156 Drifblim.png"
+        },
+        "157 Mime Jr": {
+          "id": "157",
+          "name": "Mime Jr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/157 Mime Jr..png"
+        },
+        "158 Spiritomb": {
+          "id": "158",
+          "name": "Spiritomb",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/158 Spiritomb.png"
+        },
+        "159 Klefki": {
+          "id": "159",
+          "name": "Klefki",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/159 Klefki.png"
+        },
+        "16 Lapras": {
+          "id": "16",
+          "name": "Lapras",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/16 Lapras.png"
+        },
+        "160 Mimikyu": {
+          "id": "160",
+          "name": "Mimikyu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/160 Mimikyu.png"
+        },
+        "161 Dachsbun": {
+          "id": "161",
+          "name": "Dachsbun",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/161 Dachsbun.png"
+        },
+        "162 Ceruledge": {
+          "id": "162",
+          "name": "Ceruledge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/162 Ceruledge.png"
+        },
+        "163 Rabsca": {
+          "id": "163",
+          "name": "Rabsca",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/163 Rabsca.png"
+        },
+        "164 Flittle": {
+          "id": "164",
+          "name": "Flittle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/164 Flittle.png"
+        },
+        "165 Tinkatink": {
+          "id": "165",
+          "name": "Tinkatink",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/165 Tinkatink.png"
+        },
+        "166 Tinkatuff": {
+          "id": "166",
+          "name": "Tinkatuff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/166 Tinkatuff.png"
+        },
+        "167 Tinkaton": {
+          "id": "167",
+          "name": "Tinkaton",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/167 Tinkaton.png"
+        },
+        "168 Houndstone": {
+          "id": "168",
+          "name": "Houndstone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/168 Houndstone.png"
+        },
+        "169 Mankey": {
+          "id": "169",
+          "name": "Mankey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/169 Mankey.png"
+        },
+        "17 Frigibax": {
+          "id": "17",
+          "name": "Frigibax",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/17 Frigibax.png"
+        },
+        "170 Primeape": {
+          "id": "170",
+          "name": "Primeape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/170 Primeape.png"
+        },
+        "171 Annihilape": {
+          "id": "171",
+          "name": "Annihilape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/171 Annihilape.png"
+        },
+        "172 Paldean Tauros": {
+          "id": "172",
+          "name": "Paldean Tauros",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/172 Paldean Tauros.png"
+        },
+        "173 Riolu": {
+          "id": "173",
+          "name": "Riolu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/173 Riolu.png"
+        },
+        "174 Lucario": {
+          "id": "174",
+          "name": "Lucario",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/174 Lucario.png"
+        },
+        "175 Hawlucha": {
+          "id": "175",
+          "name": "Hawlucha",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/175 Hawlucha.png"
+        },
+        "176 Nacli": {
+          "id": "176",
+          "name": "Nacli",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/176 Nacli.png"
+        },
+        "177 Naclstack": {
+          "id": "177",
+          "name": "Naclstack",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/177 Naclstack.png"
+        },
+        "178 Garganacl": {
+          "id": "178",
+          "name": "Garganacl",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/178 Garganacl.png"
+        },
+        "179 Glimmet": {
+          "id": "179",
+          "name": "Glimmet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/179 Glimmet.png"
+        },
+        "18 Pikachu": {
+          "id": "18",
+          "name": "Pikachu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/18 Pikachu.png"
+        },
+        "180 Paldean Wooper": {
+          "id": "180",
+          "name": "Paldean Wooper",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/180 Paldean Wooper.png"
+        },
+        "181 Murkrow": {
+          "id": "181",
+          "name": "Murkrow",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/181 Murkrow.png"
+        },
+        "182 Sneasel": {
+          "id": "182",
+          "name": "Sneasel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/182 Sneasel.png"
+        },
+        "183 Weavile": {
+          "id": "183",
+          "name": "Weavile",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/183 Weavile.png"
+        },
+        "184 Sableye": {
+          "id": "184",
+          "name": "Sableye",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/184 Sableye.png"
+        },
+        "185 Pawniard": {
+          "id": "185",
+          "name": "Pawniard",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/185 Pawniard.png"
+        },
+        "186 Bisharp": {
+          "id": "186",
+          "name": "Bisharp",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/186 Bisharp.png"
+        },
+        "187 Kingambit": {
+          "id": "187",
+          "name": "Kingambit",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/187 Kingambit.png"
+        },
+        "188 Mabosstiff": {
+          "id": "188",
+          "name": "Mabosstiff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/188 Mabosstiff.png"
+        },
+        "189 Shroodle": {
+          "id": "189",
+          "name": "Shroodle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/189 Shroodle.png"
+        },
+        "19 Raichu": {
+          "id": "19",
+          "name": "Raichu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/19 Raichu.png"
+        },
+        "190 Grafaiai": {
+          "id": "190",
+          "name": "Grafaiai",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/190 Grafaiai.png"
+        },
+        "191 Scizor": {
+          "id": "191",
+          "name": "Scizor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/191 Scizor.png"
+        },
+        "192 Varoom": {
+          "id": "192",
+          "name": "Varoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/192 Varoom.png"
+        },
+        "193 Revavroom": {
+          "id": "193",
+          "name": "Revavroom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/193 Revavroom.png"
+        },
+        "194 Noibat": {
+          "id": "194",
+          "name": "Noibat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/194 Noibat.png"
+        },
+        "195 Cyclizar": {
+          "id": "195",
+          "name": "Cyclizar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/195 Cyclizar.png"
+        },
+        "196 Pidgey": {
+          "id": "196",
+          "name": "Pidgey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/196 Pidgey.png"
+        },
+        "197 Pidgeotto": {
+          "id": "197",
+          "name": "Pidgeotto",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/197 Pidgeotto.png"
+        },
+        "198 Jigglypuff": {
+          "id": "198",
+          "name": "Jigglypuff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/198 Jigglypuff.png"
+        },
+        "199 Doduo": {
+          "id": "199",
+          "name": "Doduo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/199 Doduo.png"
+        },
+        "2 Forretress ex": {
+          "id": "2",
+          "name": "Forretress ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/2 Forretress ex.png"
+        },
+        "20 Chinchou": {
+          "id": "20",
+          "name": "Chinchou",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/20 Chinchou.png"
+        },
+        "200 Dodrio": {
+          "id": "200",
+          "name": "Dodrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/200 Dodrio.png"
+        },
+        "201 Ditto": {
+          "id": "201",
+          "name": "Ditto",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/201 Ditto.png"
+        },
+        "202 Snorlax": {
+          "id": "202",
+          "name": "Snorlax",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/202 Snorlax.png"
+        },
+        "203 Wingull": {
+          "id": "203",
+          "name": "Wingull",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/203 Wingull.png"
+        },
+        "204 Pelipper": {
+          "id": "204",
+          "name": "Pelipper",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/204 Pelipper.png"
+        },
+        "205 Skwovet": {
+          "id": "205",
+          "name": "Skwovet",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/205 Skwovet.png"
+        },
+        "206 Greedent": {
+          "id": "206",
+          "name": "Greedent",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/206 Greedent.png"
+        },
+        "207 Lechonk": {
+          "id": "207",
+          "name": "Lechonk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/207 Lechonk.png"
+        },
+        "208 Oinkologne": {
+          "id": "208",
+          "name": "Oinkologne",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/208 Oinkologne.png"
+        },
+        "209 Tandemaus": {
+          "id": "209",
+          "name": "Tandemaus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/209 Tandemaus.png"
+        },
+        "21 Lanturn": {
+          "id": "21",
+          "name": "Lanturn",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/21 Lanturn.png"
+        },
+        "210 Maushold": {
+          "id": "210",
+          "name": "Maushold",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/210 Maushold.png"
+        },
+        "211 Flamigo": {
+          "id": "211",
+          "name": "Flamigo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/211 Flamigo.png"
+        },
+        "212 Forretress ex": {
+          "id": "212",
+          "name": "Forretress ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/212 Forretress ex.png"
+        },
+        "213 Toedscruel ex": {
+          "id": "213",
+          "name": "Toedscruel ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/213 Toedscruel ex.png"
+        },
+        "214 Espathra ex": {
+          "id": "214",
+          "name": "Espathra ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/214 Espathra ex.png"
+        },
+        "215 Alakazam ex": {
+          "id": "215",
+          "name": "Alakazam ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/215 Alakazam ex.png"
+        },
+        "216 Mew ex": {
+          "id": "216",
+          "name": "Mew ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/216 Mew ex.png"
+        },
+        "217 Gardevoir ex": {
+          "id": "217",
+          "name": "Gardevoir ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/217 Gardevoir ex.png"
+        },
+        "218 Glimmora ex": {
+          "id": "218",
+          "name": "Glimmora ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/218 Glimmora ex.png"
+        },
+        "219 Paldean Clodsire ex": {
+          "id": "219",
+          "name": "Paldean Clodsire ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/219 Paldean Clodsire ex.png"
+        },
+        "22 Kilowattrel": {
+          "id": "22",
+          "name": "Kilowattrel",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/22 Kilowattrel.png"
+        },
+        "220 Noivern ex": {
+          "id": "220",
+          "name": "Noivern ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/220 Noivern ex.png"
+        },
+        "221 Pidgeot ex": {
+          "id": "221",
+          "name": "Pidgeot ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/221 Pidgeot ex.png"
+        },
+        "222 Wigglytuff ex": {
+          "id": "222",
+          "name": "Wigglytuff ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/222 Wigglytuff ex.png"
+        },
+        "223 Squawkabilly ex": {
+          "id": "223",
+          "name": "Squawkabilly ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/223 Squawkabilly ex.png"
+        },
+        "224 Wugtrio": {
+          "id": "224",
+          "name": "Wugtrio",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/224 Wugtrio.png"
+        },
+        "225 Palafin": {
+          "id": "225",
+          "name": "Palafin",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/225 Palafin.png"
+        },
+        "226 Pawmi": {
+          "id": "226",
+          "name": "Pawmi",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/226 Pawmi.png"
+        },
+        "23 Exeggcute": {
+          "id": "23",
+          "name": "Exeggcute",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/23 Exeggcute.png"
+        },
+        "232 Mew ex": {
+          "id": "232",
+          "name": "Mew ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/232 Mew ex.png"
+        },
+        "233 Gardevoir ex": {
+          "id": "233",
+          "name": "Gardevoir ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/233 Gardevoir ex.png"
+        },
+        "234 Charizard ex": {
+          "id": "234",
+          "name": "Charizard ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/234 Charizard ex.png"
+        },
+        "24 Exeggutor": {
+          "id": "24",
+          "name": "Exeggutor",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/24 Exeggutor.png"
+        },
+        "240 Wo-Chien ex": {
+          "id": "240",
+          "name": "Wo-Chien ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/240 Wo-Chien ex.png"
+        },
+        "241 Chi-Yu ex": {
+          "id": "241",
+          "name": "Chi-Yu ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/241 Chi-Yu ex.png"
+        },
+        "242 Chien-Pao ex": {
+          "id": "242",
+          "name": "Chien-Pao ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/242 Chien-Pao ex.png"
+        },
+        "243 Miraidon ex": {
+          "id": "243",
+          "name": "Miraidon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/243 Miraidon ex.png"
+        },
+        "244 Ting-Lu ex": {
+          "id": "244",
+          "name": "Ting-Lu ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/244 Ting-Lu ex.png"
+        },
+        "245 Koraidon ex": {
+          "id": "245",
+          "name": "Koraidon ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/245 Koraidon ex.png"
+        },
+        "25 Natu": {
+          "id": "25",
+          "name": "Natu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/25 Natu.png"
+        },
+        "26 Xatu": {
+          "id": "26",
+          "name": "Xatu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/26 Xatu.png"
+        },
+        "27 Ralts": {
+          "id": "27",
+          "name": "Ralts",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/27 Ralts.png"
+        },
+        "28 Kirlia": {
+          "id": "28",
+          "name": "Kirlia",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/28 Kirlia.png"
+        },
+        "29 Gardevoir ex": {
+          "id": "29",
+          "name": "Gardevoir ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/29 Gardevoir ex.png"
+        },
+        "3 Maractus": {
+          "id": "3",
+          "name": "Maractus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/3 Maractus.png"
+        },
+        "30 Chimecho": {
+          "id": "30",
+          "name": "Chimecho",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/30 Chimecho.png"
+        },
+        "31 Mime Jr": {
+          "id": "31",
+          "name": "Mime Jr",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/31 Mime Jr..png"
+        },
+        "32 Woobat": {
+          "id": "32",
+          "name": "Woobat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/32 Woobat.png"
+        },
+        "33 Swoobat": {
+          "id": "33",
+          "name": "Swoobat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/33 Swoobat.png"
+        },
+        "34 Cottonee": {
+          "id": "34",
+          "name": "Cottonee",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/34 Cottonee.png"
+        },
+        "35 Whimsicott": {
+          "id": "35",
+          "name": "Whimsicott",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/35 Whimsicott.png"
+        },
+        "36 Dedenne": {
+          "id": "36",
+          "name": "Dedenne",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/36 Dedenne.png"
+        },
+        "37 Mimikyu": {
+          "id": "37",
+          "name": "Mimikyu",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/37 Mimikyu.png"
+        },
+        "38 Fidough": {
+          "id": "38",
+          "name": "Fidough",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/38 Fidough.png"
+        },
+        "39 Dachsbun": {
+          "id": "39",
+          "name": "Dachsbun",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/39 Dachsbun.png"
+        },
+        "4 Toedscool": {
+          "id": "4",
+          "name": "Toedscool",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/4 Toedscool.png"
+        },
+        "40 Ceruledge": {
+          "id": "40",
+          "name": "Ceruledge",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/40 Ceruledge.png"
+        },
+        "41 Flittle": {
+          "id": "41",
+          "name": "Flittle",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/41 Flittle.png"
+        },
+        "42 Greavard": {
+          "id": "42",
+          "name": "Greavard",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/42 Greavard.png"
+        },
+        "43 Houndstone": {
+          "id": "43",
+          "name": "Houndstone",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/43 Houndstone.png"
+        },
+        "44 Gimmighoul": {
+          "id": "44",
+          "name": "Gimmighoul",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/44 Gimmighoul.png"
+        },
+        "45 Mankey": {
+          "id": "45",
+          "name": "Mankey",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/45 Mankey.png"
+        },
+        "46 Primeape": {
+          "id": "46",
+          "name": "Primeape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/46 Primeape.png"
+        },
+        "47 Annihilape": {
+          "id": "47",
+          "name": "Annihilape",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/47 Annihilape.png"
+        },
+        "48 Phanpy": {
+          "id": "48",
+          "name": "Phanpy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/48 Phanpy.png"
+        },
+        "49 Donphan": {
+          "id": "49",
+          "name": "Donphan",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/49 Donphan.png"
+        },
+        "5 Toedscruel ex": {
+          "id": "5",
+          "name": "Toedscruel ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/5 Toedscruel ex.png"
+        },
+        "50 Barboach": {
+          "id": "50",
+          "name": "Barboach",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/50 Barboach.png"
+        },
+        "51 Clobbopus": {
+          "id": "51",
+          "name": "Clobbopus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/51 Clobbopus.png"
+        },
+        "52 Grapploct": {
+          "id": "52",
+          "name": "Grapploct",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/52 Grapploct.png"
+        },
+        "53 Great Tusk ex": {
+          "id": "53",
+          "name": "Great Tusk ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/53 Great Tusk ex.png"
+        },
+        "54 Charizard ex": {
+          "id": "54",
+          "name": "Charizard ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/54 Charizard ex.png"
+        },
+        "55 Gastly": {
+          "id": "55",
+          "name": "Gastly",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/55 Gastly.png"
+        },
+        "56 Haunter": {
+          "id": "56",
+          "name": "Haunter",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/56 Haunter.png"
+        },
+        "57 Gengar": {
+          "id": "57",
+          "name": "Gengar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/57 Gengar.png"
+        },
+        "58 Paldean Wooper": {
+          "id": "58",
+          "name": "Paldean Wooper",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/58 Paldean Wooper.png"
+        },
+        "59 Paldean Clodsire ex": {
+          "id": "59",
+          "name": "Paldean Clodsire ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/59 Paldean Clodsire ex.png"
+        },
+        "6 Espathra ex": {
+          "id": "6",
+          "name": "Espathra ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/6 Espathra ex.png"
+        },
+        "60 Scraggy": {
+          "id": "60",
+          "name": "Scraggy",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/60 Scraggy.png"
+        },
+        "61 Scrafty": {
+          "id": "61",
+          "name": "Scrafty",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/61 Scrafty.png"
+        },
+        "62 Maschiff": {
+          "id": "62",
+          "name": "Maschiff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/62 Maschiff.png"
+        },
+        "63 Mabosstiff": {
+          "id": "63",
+          "name": "Mabosstiff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/63 Mabosstiff.png"
+        },
+        "64 Varoom": {
+          "id": "64",
+          "name": "Varoom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/64 Varoom.png"
+        },
+        "65 Revavroom": {
+          "id": "65",
+          "name": "Revavroom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/65 Revavroom.png"
+        },
+        "66 Iron Treads ex": {
+          "id": "66",
+          "name": "Iron Treads ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/66 Iron Treads ex.png"
+        },
+        "67 Gholdengo": {
+          "id": "67",
+          "name": "Gholdengo",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/67 Gholdengo.png"
+        },
+        "68 Noibat": {
+          "id": "68",
+          "name": "Noibat",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/68 Noibat.png"
+        },
+        "69 Noivern ex": {
+          "id": "69",
+          "name": "Noivern ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/69 Noivern ex.png"
+        },
+        "7 Charmander": {
+          "id": "7",
+          "name": "Charmander",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/7 Charmander.png"
+        },
+        "70 Cyclizar": {
+          "id": "70",
+          "name": "Cyclizar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/70 Cyclizar.png"
+        },
+        "71 Lechonk": {
+          "id": "71",
+          "name": "Lechonk",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/71 Lechonk.png"
+        },
+        "72 Oinkologne": {
+          "id": "72",
+          "name": "Oinkologne",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/72 Oinkologne.png"
+        },
+        "73 Tandemaus": {
+          "id": "73",
+          "name": "Tandemaus",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/73 Tandemaus.png"
+        },
+        "74 Maushold": {
+          "id": "74",
+          "name": "Maushold",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/74 Maushold.png"
+        },
+        "75 Squawkabilly ex": {
+          "id": "75",
+          "name": "Squawkabilly ex",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/75 Squawkabilly ex.png"
+        },
+        "8 Charmeleon": {
+          "id": "8",
+          "name": "Charmeleon",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/8 Charmeleon.png"
+        },
+        "9 Magmar": {
+          "id": "9",
+          "name": "Magmar",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/9 Magmar.png"
+        },
+        "92 Oddish": {
+          "id": "92",
+          "name": "Oddish",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/92 Oddish.png"
+        },
+        "93 Gloom": {
+          "id": "93",
+          "name": "Gloom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/93 Gloom.png"
+        },
+        "94 Vileplume": {
+          "id": "94",
+          "name": "Vileplume",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/94 Vileplume.png"
+        },
+        "95 Scyther": {
+          "id": "95",
+          "name": "Scyther",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/95 Scyther.png"
+        },
+        "96 Hoppip": {
+          "id": "96",
+          "name": "Hoppip",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/96 Hoppip.png"
+        },
+        "97 Skiploom": {
+          "id": "97",
+          "name": "Skiploom",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/97 Skiploom.png"
+        },
+        "98 Jumpluff": {
+          "id": "98",
+          "name": "Jumpluff",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/98 Jumpluff.png"
+        },
+        "99 Pineco": {
+          "id": "99",
+          "name": "Pineco",
+          "width": 733,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/paldean_fates/99 Pineco.png"
+        }
+      },
+      "total_cards": 219
     }
   },
-  "total_sets": 7,
-  "total_cards": 1149
+  "total_sets": 8,
+  "total_cards": 1368
 }
