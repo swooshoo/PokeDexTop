@@ -185,7 +185,7 @@ class TCGCard(QFrame):
             card_label.setAlignment(Qt.AlignCenter)
             self.main_layout.addWidget(card_label)
         
-        # Add card name and ID
+        # Add card ID - now properly display alphanumeric IDs
         name_label = QLabel(f"#{self.card_id}")
         name_label.setAlignment(Qt.AlignCenter)
         name_label.setFont(QFont('Arial', 10, QFont.Bold))
@@ -235,15 +235,15 @@ class TCGCard(QFrame):
         button_x = self.width() - self.import_button.width() - 10
         button_y = self.height() - self.import_button.height() - 10
         self.import_button.move(button_x, button_y)
-        
+
+
     def import_card(self):
-        """Import this card to replace a Pokémon sprite"""
         # Extract Pokémon name from card name
         pokemon_name = self.extract_pokemon_name(self.card_name)
         
         if not pokemon_name:
             QMessageBox.warning(self, "Import Failed", 
-                               f"Could not determine which Pokémon this card represents.\n\nCard name: {self.card_name}")
+                            f"Could not determine which Pokémon this card represents.\n\nCard name: {self.card_name}")
             return
             
         # HYBRID APPROACH:
@@ -256,59 +256,145 @@ class TCGCard(QFrame):
             
             if success:
                 QMessageBox.information(self, "Import Successful", 
-                                      f"Successfully imported card as {pokemon_name}!")
+                                    f"Successfully imported card as {pokemon_name}!")
             else:
                 QMessageBox.warning(self, "Import Failed", 
-                                   f"Could not find a matching Pokémon for '{pokemon_name}' in your Pokédex.")
+                                f"Could not find a matching Pokémon for '{pokemon_name}' in your Pokédex.")
         else:
             # If we get here, neither method worked
             QMessageBox.critical(self, "Import Failed", 
-                               "Could not connect to the dashboard. Please try again.")
-    
+                            "Could not connect to the dashboard. Please try again.")
+
     def extract_pokemon_name(self, card_name):
-        """Extract the Pokémon name from a card name"""
-        # Example: "Card #56 Lillie's Clefairy ex" -> "Clefairy"
-        
-        # Try to match common patterns in card names
-        if not card_name:
-            return None
+            """
+            Extract the Pokémon name from a card name.
+            Handles various formats including complex card IDs.
             
-        # Remove "Card #XX " prefix if present
-        card_name = re.sub(r'^Card #\d+\s+', '', card_name)
-        
-        # Define patterns to match
-        patterns = [
-            # Pattern for character's Pokémon: "Character's PokemonName"
-            r"(?:\w+\'s\s+)(\w+(?:\s+\w+)?)",
-            # Pattern for regional forms: "Region PokemonName"
-            r"(?:Alolan|Galarian|Paldean|Hisuian)\s+(\w+(?:\s+\w+)?)",
-            # Pattern for Pokémon with form/variant suffixes
-            r"(\w+(?:\s+\w+)?)\s+(?:ex|GX|V|VMAX|VSTAR)"
-        ]
-        
-        # Try each pattern
-        for pattern in patterns:
-            match = re.search(pattern, card_name)
-            if match:
-                return match.group(1)
-        
-        # If no specific pattern matches, try to get the first part before any suffix
-        # Remove suffixes like "ex", "GX", etc.
-        name = re.sub(r'\s+(?:ex|GX|V|VMAX|VSTAR).*$', '', card_name)
-        
-        # For remaining cards, remove character possessives (e.g., "Hop's", "N's", etc.)
-        name = re.sub(r'^(?:\w+\'s\s+)', '', name)
-        
-        # Special case handling
-        if "Mr. Mime" in name:
-            return "Mr. Mime"
-        if "Mime Jr" in name or "Mime Jr." in name:
-            return "Mime Jr."
-        if "Tapu " in name:  # Handle Tapu Koko, Tapu Lele, etc.
+            Examples:
+            - "Card #56 Lillie's Clefairy ex" -> "Clefairy"
+            - "GG01 Hisuian Voltorb" -> "Hisuian Voltorb"
+            - "SV093 Duraludon" -> "Duraludon"
+            - "TG01 Flareon" -> "Flareon"
+            - "SWSH001 Grookey" -> "Grookey"
+            """
+            # Try to match common patterns in card names
+            if not card_name:
+                return None
+            
+            # Remove "Card #XX " prefix if present
+            card_name = re.sub(r'^Card #\d+\s+', '', card_name)
+            
+            # Remove complex card ID prefixes at the beginning
+            # This handles formats like SV093, TG01, SWSH001, GG01, etc.
+            card_name = re.sub(r'^[A-Za-z0-9]+\s+', '', card_name)
+            
+            # Define patterns to match common card name formats
+            patterns = [
+                # Pattern for character's Pokémon: "Character's PokemonName"
+                r"(?:\w+\'s\s+)(\w+(?:\s+\w+)?)",
+                # Pattern for regional forms: "Region PokemonName"
+                r"(?:Alolan|Galarian|Paldean|Hisuian)\s+(\w+(?:\s+\w+)?)",
+                # Pattern for Pokémon with form/variant suffixes
+                r"(\w+(?:\s+\w+)?)\s+(?:ex|EX|GX|V|VMAX|VSTAR)"
+            ]
+            
+            # Try each pattern
+            for pattern in patterns:
+                match = re.search(pattern, card_name)
+                if match:
+                    return match.group(1)
+            
+            # Handle regional forms that might not be captured by the general pattern
+            if any(region in card_name for region in ["Alolan", "Galarian", "Paldean", "Hisuian"]):
+                # For regional forms, keep the region prefix with the Pokémon name
+                return card_name
+            
+            # If no specific pattern matches, remove suffixes like "ex", "GX", etc.
+            name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR).*$', '', card_name)
+            
+            # For remaining cards, remove character possessives (e.g., "Hop's", "N's", etc.)
+            name = re.sub(r'^(?:\w+\'s\s+)', '', name)
+            
+            # Special case handling
+            if "Mr. Mime" in name:
+                return "Mr. Mime"
+            if "Mime Jr" in name or "Mime Jr." in name:
+                return "Mime Jr."
+            if "Tapu " in name:  # Handle Tapu Koko, Tapu Lele, etc.
+                return name
+            if "Type: Null" in name:
+                return "Type: Null"
+            
+            # Otherwise, return the processed name
             return name
+
+def get_card_number(file_path):
+    """
+    Advanced card number extraction and sorting function.
+    Handles various TCG card numbering formats:
+    - Simple numeric: "1 Bulbasaur.png"
+    - Basic alphanumeric: "GG01 Hisuian Voltorb.png"
+    - Complex prefix with number: "SV093 Duraludon.png"
+    - Letter-number format: "TG01 Flareon.png" 
+    - Complex multi-part: "SWSH001 Grookey.png"
+    """
+    filename = os.path.basename(file_path).split('.')[0]
+    
+    # Extract the identifier from the start of the filename
+    try:
+        # Split by space and get the first part as identifier
+        id_part = filename.split(' ')[0]
+        
+        # For pure numeric IDs, convert to int for proper sorting
+        if id_part.isdigit():
+            return (0, "", int(id_part))  # Priority 0 for purely numeric IDs
+        
+        # For complex alphanumeric IDs, we need to break them down:
+        # 1. Extract any letter prefix (SV, TG, SWSH, etc.)
+        # 2. Extract the numeric portion
+        
+        # Match the letter prefix and numeric parts
+        prefix_match = re.match(r'^([A-Za-z]+)(\d+)$', id_part)
+        
+        if prefix_match:
+            prefix = prefix_match.group(1)  # Letter part (SV, TG, SWSH)
+            num_str = prefix_match.group(2)  # Number part (093, 01, 001)
             
-        # Otherwise, return the processed name
-        return name
+            # Convert the numeric part to int for proper sorting
+            num = int(num_str)
+            
+            # Create a tuple for sorting: (priority, prefix, number)
+            # We'll assign different priorities to different prefix types
+            # to group similar prefixes together
+            
+            # Define priority tiers based on common set prefixes
+            prefix_priority = {
+                # Define known prefix groups and their sort priority
+                # Lower numbers appear first
+                "SV": 1,    # Scarlet & Violet
+                "TG": 2,    # Trainer Gallery
+                "SWSH": 3,  # Sword & Shield
+                "SM": 4,    # Sun & Moon
+                "XY": 5,    # X & Y
+                "BW": 6,    # Black & White
+                "DP": 7,    # Diamond & Pearl
+                "GG": 8,    # Let's Go
+                # Add more prefixes as needed
+            }
+            
+            # Get the priority for this prefix, default to 100 if unknown
+            priority = prefix_priority.get(prefix, 100)
+            
+            # Return the sorting tuple
+            return (priority, prefix, num)
+            
+        # If no clear pattern, use lexicographic sorting with a high priority
+        return (999, id_part, 0)
+            
+    except (ValueError, IndexError) as e:
+        print(f"Error parsing card number from {filename}: {e}")
+        # If parsing fails, return a value that sorts to the end
+        return (999, "", float('inf'))
 
 class GenerationTab(QWidget):
     """A widget representing a single generation tab with fixed-dimension cards"""
@@ -429,25 +515,12 @@ class TCGSetTab(QWidget):
         # Find all PNG images in the set directory
         card_files = glob.glob(os.path.join(self.set_path, "*.png"))
         
-        # Sort card files by the numeric part at the beginning of the filename
-        def get_card_number(file_path):
-            filename = os.path.basename(file_path).split('.')[0]
-            # Extract the number from the start of the filename
-            # This handles filenames like "46 Alolan Golem"
-            try:
-                # Split by space and get the first part as number
-                num_part = filename.split(' ')[0]
-                return int(num_part)  # Convert to int for proper sorting
-            except (ValueError, IndexError):
-                # If parsing fails, return a large number to sort to the end
-                return float('inf')  # This will sort non-numeric names to the end
-        
-        # Sort the files numerically by the number at the start of the filename
+        # Sort card files by the enhanced card number function
         try:
             card_files = sorted(card_files, key=get_card_number)
-        except TypeError:
+        except TypeError as e:
             # Fallback to simple sorting if the key function causes issues
-            print(f"Warning: Using fallback sorting for {self.set_name}")
+            print(f"Warning: Using fallback sorting for {self.set_name} due to: {e}")
             card_files = sorted(card_files)
         
         # Add TCG cards to the grid
@@ -466,14 +539,14 @@ class TCGSetTab(QWidget):
                 card_name = card_data.get('name', card_name)
                 artist = card_data.get('artist', artist)
             
-            # Extract the card number for display
+            # Extract the card identifier for display - now handles complex IDs
             try:
-                card_number = filename.split(' ')[0]
+                card_id = filename.split(' ')[0]
             except (IndexError, ValueError):
-                card_number = filename
+                card_id = filename
                 
             # Create TCG card without passing set_name (set to None to ensure it's not displayed)
-            tcg_card = TCGCard(card_file, card_number, card_name, artist, None)
+            tcg_card = TCGCard(card_file, card_id, card_name, artist, None)
             grid_layout.addWidget(tcg_card, row, col)
             
             # Move to the next column or row
@@ -481,13 +554,13 @@ class TCGSetTab(QWidget):
             if col >= columns:
                 col = 0
                 row += 1
-            
-            # Set the grid widget as the scroll area's content
-            grid_widget.setLayout(grid_layout)
-            scroll_area.setWidget(grid_widget)
-            main_layout.addWidget(scroll_area)
-            
-            self.setLayout(main_layout)
+        
+        # Set the grid widget as the scroll area's content
+        grid_widget.setLayout(grid_layout)
+        scroll_area.setWidget(grid_widget)
+        main_layout.addWidget(scroll_area)
+        
+        self.setLayout(main_layout)
 
 class PokemonSearchTab(QWidget):
     """A tab for searching TCG cards by Pokemon name"""

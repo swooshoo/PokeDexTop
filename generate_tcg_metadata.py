@@ -26,27 +26,59 @@ TCG_CARDS_PATH = os.path.join('assets', 'tcg_cards')
 TCG_METADATA_FILE = os.path.join(TCG_CARDS_PATH, 'index.json')
 
 def extract_card_info(filename):
-    """Extract card information from filename."""
+    """
+    Extract card information from filename.
+    Handles various TCG card numbering formats:
+    - Simple numeric: "1 Bulbasaur.png"
+    - Basic alphanumeric: "GG01 Hisuian Voltorb.png"
+    - Complex prefix with number: "SV093 Duraludon.png"
+    - Letter-number format: "TG01 Flareon.png" 
+    - Complex multi-part: "SWSH001 Grookey.png"
+    """
     # Remove extension
     base_name = os.path.basename(filename).split('.')[0]
     
-    # Try to extract number at the beginning
-    card_id = None
-    card_name = base_name
+    # Try to extract identifier and name
+    # Pattern matches: any combination of letters/numbers at start, followed by space, then rest of name
+    match = re.match(r'^([A-Za-z0-9]+)\s+(.+)$', base_name)
     
-    # Match pattern: start with numbers followed by space then text
-    match = re.match(r'^(\d+)\s+(.+)$', base_name)
     if match:
-        card_id = match.group(1)
-        card_name = match.group(2)
+        card_id = match.group(1)  # The ID part (SV093, TG01, SWSH001, etc.)
+        card_name = match.group(2)  # The name part (Duraludon, Flareon, Grookey, etc.)
+    else:
+        # If no clear pattern, use the whole filename
+        card_id = base_name
+        card_name = base_name
     
     # Format card name nicely
     card_name = card_name.replace('_', ' ').strip()
     
-    return {
-        'id': card_id or base_name,
+    # Additional metadata based on card ID format
+    card_info = {
+        'id': card_id,
         'name': card_name
     }
+    
+    # Identify the set series based on card ID prefix
+    prefix_match = re.match(r'^([A-Za-z]+)', card_id)
+    if prefix_match:
+        prefix = prefix_match.group(1)
+        set_mappings = {
+            'SV': 'Scarlet & Violet',
+            'TG': 'Trainer Gallery',
+            'SWSH': 'Sword & Shield',
+            'SM': 'Sun & Moon',
+            'XY': 'XY Series',
+            'BW': 'Black & White',
+            'DP': 'Diamond & Pearl',
+            'GG': 'Let\'s Go',
+            # Add more mappings as needed
+        }
+        
+        if prefix in set_mappings:
+            card_info['set_series'] = set_mappings[prefix]
+    
+    return card_info
 
 def main():
     print("TCG Metadata Generator")

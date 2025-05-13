@@ -12195,8 +12195,505 @@
         }
       },
       "total_cards": 185
+    },
+    "crown_zenith_galarian_gallery": {
+      "name": "Crown Zenith Galarian Gallery",
+      "path": "assets/tcg_cards/crown_zenith_galarian_gallery",
+      "cards": {
+        "GG01 Hisuian Voltorb": {
+          "id": "GG01",
+          "name": "Hisuian Voltorb",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG01 Hisuian Voltorb.png"
+        },
+        "GG02 Kricketune": {
+          "id": "GG02",
+          "name": "Kricketune",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG02 Kricketune.png"
+        },
+        "GG03 Magmortar": {
+          "id": "GG03",
+          "name": "Magmortar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG03 Magmortar.png"
+        },
+        "GG04 Oricorio": {
+          "id": "GG04",
+          "name": "Oricorio",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG04 Oricorio.png"
+        },
+        "GG05 Lapras": {
+          "id": "GG05",
+          "name": "Lapras",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG05 Lapras.png"
+        },
+        "GG06 Manaphy": {
+          "id": "GG06",
+          "name": "Manaphy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG06 Manaphy.png"
+        },
+        "GG07 Keldeo": {
+          "id": "GG07",
+          "name": "Keldeo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG07 Keldeo.png"
+        },
+        "GG08 Electivire": {
+          "id": "GG08",
+          "name": "Electivire",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG08 Electivire.png"
+        },
+        "GG09 Toxtricity": {
+          "id": "GG09",
+          "name": "Toxtricity",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG09 Toxtricity.png"
+        },
+        "GG10 Mew": {
+          "id": "GG10",
+          "name": "Mew",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG10 Mew.png"
+        },
+        "GG11 Lunatone": {
+          "id": "GG11",
+          "name": "Lunatone",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG11 Lunatone.png"
+        },
+        "GG12 Deoxys": {
+          "id": "GG12",
+          "name": "Deoxys",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG12 Deoxys.png"
+        },
+        "GG13 Diancie": {
+          "id": "GG13",
+          "name": "Diancie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG13 Diancie.png"
+        },
+        "GG14 Comfey": {
+          "id": "GG14",
+          "name": "Comfey",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG14 Comfey.png"
+        },
+        "GG15 Solrock": {
+          "id": "GG15",
+          "name": "Solrock",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG15 Solrock.png"
+        },
+        "GG16 Absol": {
+          "id": "GG16",
+          "name": "Absol",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG16 Absol.png"
+        },
+        "GG17 Thievul": {
+          "id": "GG17",
+          "name": "Thievul",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG17 Thievul.png"
+        },
+        "GG18 Magnezone": {
+          "id": "GG18",
+          "name": "Magnezone",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG18 Magnezone.png"
+        },
+        "GG19 Altaria": {
+          "id": "GG19",
+          "name": "Altaria",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG19 Altaria.png"
+        },
+        "GG20 Latias": {
+          "id": "GG20",
+          "name": "Latias",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG20 Latias.png"
+        },
+        "GG21 Hisuian Goodra": {
+          "id": "GG21",
+          "name": "Hisuian Goodra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG21 Hisuian Goodra.png"
+        },
+        "GG22 Ditto": {
+          "id": "GG22",
+          "name": "Ditto",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG22 Ditto.png"
+        },
+        "GG23 Dunsparce": {
+          "id": "GG23",
+          "name": "Dunsparce",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG23 Dunsparce.png"
+        },
+        "GG24 Miltank": {
+          "id": "GG24",
+          "name": "Miltank",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG24 Miltank.png"
+        },
+        "GG25 Bibarel": {
+          "id": "GG25",
+          "name": "Bibarel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG25 Bibarel.png"
+        },
+        "GG26 Riolu": {
+          "id": "GG26",
+          "name": "Riolu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG26 Riolu.png"
+        },
+        "GG27 Swablu": {
+          "id": "GG27",
+          "name": "Swablu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG27 Swablu.png"
+        },
+        "GG28 Duskull": {
+          "id": "GG28",
+          "name": "Duskull",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG28 Duskull.png"
+        },
+        "GG29 Bidoof": {
+          "id": "GG29",
+          "name": "Bidoof",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG29 Bidoof.png"
+        },
+        "GG30 Pikachu": {
+          "id": "GG30",
+          "name": "Pikachu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG30 Pikachu.png"
+        },
+        "GG31 Turtwig": {
+          "id": "GG31",
+          "name": "Turtwig",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG31 Turtwig.png"
+        },
+        "GG32 Paras": {
+          "id": "GG32",
+          "name": "Paras",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG32 Paras.png"
+        },
+        "GG33 Poochyena": {
+          "id": "GG33",
+          "name": "Poochyena",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG33 Poochyena.png"
+        },
+        "GG34 Mareep": {
+          "id": "GG34",
+          "name": "Mareep",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG34 Mareep.png"
+        },
+        "GG35 Leafeon VSTAR": {
+          "id": "GG35",
+          "name": "Leafeon VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG35 Leafeon VSTAR.png"
+        },
+        "GG36 Entei V": {
+          "id": "GG36",
+          "name": "Entei V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG36 Entei V.png"
+        },
+        "GG37 Simisear VSTAR": {
+          "id": "GG37",
+          "name": "Simisear VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG37 Simisear VSTAR.png"
+        },
+        "GG38 Suicune V": {
+          "id": "GG38",
+          "name": "Suicune V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG38 Suicune V.png"
+        },
+        "GG39 Lumineon V": {
+          "id": "GG39",
+          "name": "Lumineon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG39 Lumineon V.png"
+        },
+        "GG40 Glaceon VSTAR": {
+          "id": "GG40",
+          "name": "Glaceon VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG40 Glaceon VSTAR.png"
+        },
+        "GG41 Raikou V": {
+          "id": "GG41",
+          "name": "Raikou V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG41 Raikou V.png"
+        },
+        "GG42 Zeraora VMAX": {
+          "id": "GG42",
+          "name": "Zeraora VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG42 Zeraora VMAX.png"
+        },
+        "GG43 Zeraora VSTAR": {
+          "id": "GG43",
+          "name": "Zeraora VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG43 Zeraora VSTAR.png"
+        },
+        "GG44 Mewtwo VSTAR": {
+          "id": "GG44",
+          "name": "Mewtwo VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG44 Mewtwo VSTAR.png"
+        },
+        "GG45 Deoxys VMAX": {
+          "id": "GG45",
+          "name": "Deoxys VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG45 Deoxys VMAX.png"
+        },
+        "GG46 Deoxys VSTAR": {
+          "id": "GG46",
+          "name": "Deoxys VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG46 Deoxys VSTAR.png"
+        },
+        "GG47 Hatterene VMAX": {
+          "id": "GG47",
+          "name": "Hatterene VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG47 Hatterene VMAX.png"
+        },
+        "GG48 Zacian V": {
+          "id": "GG48",
+          "name": "Zacian V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG48 Zacian V.png"
+        },
+        "GG49 Drapion V": {
+          "id": "GG49",
+          "name": "Drapion V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG49 Drapion V.png"
+        },
+        "GG50 Darkrai VSTAR": {
+          "id": "GG50",
+          "name": "Darkrai VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG50 Darkrai VSTAR.png"
+        },
+        "GG51 Hisuian Samurott V": {
+          "id": "GG51",
+          "name": "Hisuian Samurott V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG51 Hisuian Samurott V.png"
+        },
+        "GG52 Hisuian Samurott VSTAR": {
+          "id": "GG52",
+          "name": "Hisuian Samurott VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG52 Hisuian Samurott VSTAR.png"
+        },
+        "GG53 Hoopa V": {
+          "id": "GG53",
+          "name": "Hoopa V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG53 Hoopa V.png"
+        },
+        "GG54 Zamazenta V": {
+          "id": "GG54",
+          "name": "Zamazenta V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG54 Zamazenta V.png"
+        },
+        "GG55 Regigigas VSTAR": {
+          "id": "GG55",
+          "name": "Regigigas VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG55 Regigigas VSTAR.png"
+        },
+        "GG56 Hisuian Zoroark VSTAR": {
+          "id": "GG56",
+          "name": "Hisuian Zoroark VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG56 Hisuian Zoroark VSTAR.png"
+        },
+        "GG57 Adaman": {
+          "id": "GG57",
+          "name": "Adaman",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG57 Adaman.png"
+        },
+        "GG58 Cheren's Care": {
+          "id": "GG58",
+          "name": "Cheren's Care",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG58 Cheren's Care.png"
+        },
+        "GG59 Colress's Experiment": {
+          "id": "GG59",
+          "name": "Colress's Experiment",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG59 Colress's Experiment.png"
+        },
+        "GG60 Cynthia's Ambition": {
+          "id": "GG60",
+          "name": "Cynthia's Ambition",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG60 Cynthia's Ambition.png"
+        },
+        "GG61 Gardenia's Vigor": {
+          "id": "GG61",
+          "name": "Gardenia's Vigor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG61 Gardenia's Vigor.png"
+        },
+        "GG62 Grant": {
+          "id": "GG62",
+          "name": "Grant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG62 Grant.png"
+        },
+        "GG63 Irida": {
+          "id": "GG63",
+          "name": "Irida",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG63 Irida.png"
+        },
+        "GG64 Melony": {
+          "id": "GG64",
+          "name": "Melony",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG64 Melony.png"
+        },
+        "GG65 Raihan": {
+          "id": "GG65",
+          "name": "Raihan",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG65 Raihan.png"
+        },
+        "GG66 Roxanne": {
+          "id": "GG66",
+          "name": "Roxanne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG66 Roxanne.png"
+        },
+        "GG67 Origin Forme Palkia VSTAR": {
+          "id": "GG67",
+          "name": "Origin Forme Palkia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG67 Origin Forme Palkia VSTAR.png"
+        },
+        "GG68 Origin Forme Dialga VSTAR": {
+          "id": "GG68",
+          "name": "Origin Forme Dialga VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG68 Origin Forme Dialga VSTAR.png"
+        },
+        "GG69 Giratina VSTAR": {
+          "id": "GG69",
+          "name": "Giratina VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG69 Giratina VSTAR.png"
+        },
+        "GG70 Arceus VSTAR": {
+          "id": "GG70",
+          "name": "Arceus VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG70 Arceus VSTAR.png"
+        }
+      },
+      "total_cards": 70
     }
   },
-  "total_sets": 10,
-  "total_cards": 1775
+  "total_sets": 11,
+  "total_cards": 1845
 }
