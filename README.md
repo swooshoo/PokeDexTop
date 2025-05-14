@@ -4,33 +4,26 @@
 <img align="right" width="100" height="100" src="assets/pokeball.png">
 <p>A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redundant websites. <br>  
 
-Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p>
+Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p> 
 
-## Sets 
+## Pokémon TCG Sets
 
-#### Scarlet & Violet Era 
-- Journey Together 
-- Prismatic Evolutions 
-- Surging Sparks 
-- Stellar Crown
-- Shrouded Fable
-- Twilight Masquerade 
-- Temporal Forces
-- Paldean Fates 
-- Paradox Rift 
-- 151
-- Obsidian Flames 
-- Paldea Evolved
-- Scarlet & Violet
-- Scarlet & Violet Black Star Promos
-
-#### Sword & Shield Era (Incomplete)
-- Astral Radiance Trainer Gallery
-- Brilliant Stars Trainer Gallery
-- Lost Origin Trainer Gallery
-- Silver Tempest Trainer Gallery
-- Crown Zenith Galarian Gallery
-- Sword and Shield Black Star Promos
+| Scarlet & Violet Era | Sword & Shield Era (Incomplete) |
+|----------------------|--------------------------------|
+| Journey Together | Astral Radiance Trainer Gallery |
+| Prismatic Evolutions | Brilliant Stars Trainer Gallery |
+| Surging Sparks | Lost Origin Trainer Gallery |
+| Stellar Crown | Silver Tempest Trainer Gallery |
+| Shrouded Fable | Crown Zenith Galarian Gallery |
+| Twilight Masquerade | Sword and Shield Black Star Promos |
+| Temporal Forces | |
+| Paldean Fates | |
+| Paradox Rift | |
+| 151 | |
+| Obsidian Flames | |
+| Paldea Evolved | |
+| Scarlet & Violet | |
+| Scarlet & Violet Black Star Promos | |
 
 ## Features
 
