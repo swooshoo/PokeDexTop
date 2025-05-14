@@ -21971,8 +21971,1184 @@
         }
       },
       "total_cards": 123
+    },
+    "astral_radiance": {
+      "name": "Astral Radiance",
+      "path": "assets/tcg_cards/astral_radiance",
+      "cards": {
+        "106 Magneton": {
+          "id": "106",
+          "name": "Magneton",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/106 Magneton.png"
+        },
+        "78 Lucario V": {
+          "id": "78",
+          "name": "Lucario V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/78 Lucario V.png"
+        },
+        "171 Machamp V": {
+          "id": "171",
+          "name": "Machamp V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/171 Machamp V.png"
+        },
+        "14 Shaymin": {
+          "id": "14",
+          "name": "Shaymin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/14 Shaymin.png"
+        },
+        "108 Registeel": {
+          "id": "108",
+          "name": "Registeel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/108 Registeel.png"
+        },
+        "126 Miltank": {
+          "id": "126",
+          "name": "Miltank",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/126 Miltank.png"
+        },
+        "46 Radiant Greninja": {
+          "id": "46",
+          "name": "Radiant Greninja",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/46 Radiant Greninja.png"
+        },
+        "162 Hisuian Lilligant V": {
+          "id": "162",
+          "name": "Hisuian Lilligant V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/162 Hisuian Lilligant V.png"
+        },
+        "26 Heatran VMAX": {
+          "id": "26",
+          "name": "Heatran VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/26 Heatran VMAX.png"
+        },
+        "94 Hisuian Sneasler V": {
+          "id": "94",
+          "name": "Hisuian Sneasler V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/94 Hisuian Sneasler V.png"
+        },
+        "74 Sudowoodo": {
+          "id": "74",
+          "name": "Sudowoodo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/74 Sudowoodo.png"
+        },
+        "30 Starmie V": {
+          "id": "30",
+          "name": "Starmie V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/30 Starmie V.png"
+        },
+        "178 Garchomp V": {
+          "id": "178",
+          "name": "Garchomp V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/178 Garchomp V.png"
+        },
+        "129 Chatot": {
+          "id": "129",
+          "name": "Chatot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/129 Chatot.png"
+        },
+        "208 Origin Forme Palkia VSTAR": {
+          "id": "208",
+          "name": "Origin Forme Palkia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/208 Origin Forme Palkia VSTAR.png"
+        },
+        "190 Hisuian Lilligant VSTAR": {
+          "id": "190",
+          "name": "Hisuian Lilligant VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/190 Hisuian Lilligant VSTAR.png"
+        },
+        "36 Whiscash": {
+          "id": "36",
+          "name": "Whiscash",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/36 Whiscash.png"
+        },
+        "98 Darkrai V": {
+          "id": "98",
+          "name": "Darkrai V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/98 Darkrai V.png"
+        },
+        "82 Hisuian Decidueye": {
+          "id": "82",
+          "name": "Hisuian Decidueye",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/82 Hisuian Decidueye.png"
+        },
+        "76 Cranidos": {
+          "id": "76",
+          "name": "Cranidos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/76 Cranidos.png"
+        },
+        "43 Hisuian Basculin": {
+          "id": "43",
+          "name": "Hisuian Basculin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/43 Hisuian Basculin.png"
+        },
+        "49 Galarian Mr": {
+          "id": "49",
+          "name": "Galarian Mr",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/49 Galarian Mr. Rime V.png"
+        },
+        "75 Regirock": {
+          "id": "75",
+          "name": "Regirock",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/75 Regirock.png"
+        },
+        "54 Hisuian Typhlosion VSTAR": {
+          "id": "54",
+          "name": "Hisuian Typhlosion VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/54 Hisuian Typhlosion VSTAR.png"
+        },
+        "122 Teddiursa": {
+          "id": "122",
+          "name": "Teddiursa",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/122 Teddiursa.png"
+        },
+        "60 Ralts": {
+          "id": "60",
+          "name": "Ralts",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/60 Ralts.png"
+        },
+        "124 Ursaluna": {
+          "id": "124",
+          "name": "Ursaluna",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/124 Ursaluna.png"
+        },
+        "123 Ursaring": {
+          "id": "123",
+          "name": "Ursaring",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/123 Ursaring.png"
+        },
+        "71 Hisuian Arcanine": {
+          "id": "71",
+          "name": "Hisuian Arcanine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/71 Hisuian Arcanine.png"
+        },
+        "174 Hisuian Sneasler V": {
+          "id": "174",
+          "name": "Hisuian Sneasler V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/174 Hisuian Sneasler V.png"
+        },
+        "131 Rufflet": {
+          "id": "131",
+          "name": "Rufflet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/131 Rufflet.png"
+        },
+        "35 Barboach": {
+          "id": "35",
+          "name": "Barboach",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/35 Barboach.png"
+        },
+        "66 Mesprit": {
+          "id": "66",
+          "name": "Mesprit",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/66 Mesprit.png"
+        },
+        "15 Petilil": {
+          "id": "15",
+          "name": "Petilil",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/15 Petilil.png"
+        },
+        "56 Togetic": {
+          "id": "56",
+          "name": "Togetic",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/56 Togetic.png"
+        },
+        "24 Quilava": {
+          "id": "24",
+          "name": "Quilava",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/24 Quilava.png"
+        },
+        "97 Absol": {
+          "id": "97",
+          "name": "Absol",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/97 Absol.png"
+        },
+        "121 Noctowl": {
+          "id": "121",
+          "name": "Noctowl",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/121 Noctowl.png"
+        },
+        "192 Origin Forme Palkia VSTAR": {
+          "id": "192",
+          "name": "Origin Forme Palkia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/192 Origin Forme Palkia VSTAR.png"
+        },
+        "134 Wyrdeer V": {
+          "id": "134",
+          "name": "Wyrdeer V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/134 Wyrdeer V.png"
+        },
+        "172 Machamp V": {
+          "id": "172",
+          "name": "Machamp V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/172 Machamp V.png"
+        },
+        "68 Diancie": {
+          "id": "68",
+          "name": "Diancie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/68 Diancie.png"
+        },
+        "116 Bisharp": {
+          "id": "116",
+          "name": "Bisharp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/116 Bisharp.png"
+        },
+        "32 Piloswine": {
+          "id": "32",
+          "name": "Piloswine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/32 Piloswine.png"
+        },
+        "10 Kricketune": {
+          "id": "10",
+          "name": "Kricketune",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/10 Kricketune.png"
+        },
+        "63 Drifloon": {
+          "id": "63",
+          "name": "Drifloon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/63 Drifloon.png"
+        },
+        "92 Hisuian Sneasel": {
+          "id": "92",
+          "name": "Hisuian Sneasel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/92 Hisuian Sneasel.png"
+        },
+        "42 Dewott": {
+          "id": "42",
+          "name": "Dewott",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/42 Dewott.png"
+        },
+        "210 Origin Forme Dialga VSTAR": {
+          "id": "210",
+          "name": "Origin Forme Dialga VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/210 Origin Forme Dialga VSTAR.png"
+        },
+        "179 Oranguru V": {
+          "id": "179",
+          "name": "Oranguru V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/179 Oranguru V.png"
+        },
+        "52 Hisuian Typhlosion": {
+          "id": "52",
+          "name": "Hisuian Typhlosion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/52 Hisuian Typhlosion.png"
+        },
+        "84 Hisuian Decidueye VSTAR": {
+          "id": "84",
+          "name": "Hisuian Decidueye VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/84 Hisuian Decidueye VSTAR.png"
+        },
+        "165 Heatran V": {
+          "id": "165",
+          "name": "Heatran V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/165 Heatran V.png"
+        },
+        "117 Garchomp V": {
+          "id": "117",
+          "name": "Garchomp V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/117 Garchomp V.png"
+        },
+        "51 Regieleki": {
+          "id": "51",
+          "name": "Regieleki",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/51 Regieleki.png"
+        },
+        "44 Hisuian Basculegion": {
+          "id": "44",
+          "name": "Hisuian Basculegion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/44 Hisuian Basculegion.png"
+        },
+        "194 Machamp VMAX": {
+          "id": "194",
+          "name": "Machamp VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/194 Machamp VMAX.png"
+        },
+        "175 Hisuian Sneasler V": {
+          "id": "175",
+          "name": "Hisuian Sneasler V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/175 Hisuian Sneasler V.png"
+        },
+        "113 Origin Forme Dialga V": {
+          "id": "113",
+          "name": "Origin Forme Dialga V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/113 Origin Forme Dialga V.png"
+        },
+        "160 Beedrill V": {
+          "id": "160",
+          "name": "Beedrill V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/160 Beedrill V.png"
+        },
+        "125 Stantler": {
+          "id": "125",
+          "name": "Stantler",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/125 Stantler.png"
+        },
+        "99 Darkrai VSTAR": {
+          "id": "99",
+          "name": "Darkrai VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/99 Darkrai VSTAR.png"
+        },
+        "193 Hisuian Typhlosion VSTAR": {
+          "id": "193",
+          "name": "Hisuian Typhlosion VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/193 Hisuian Typhlosion VSTAR.png"
+        },
+        "20 Dartrix": {
+          "id": "20",
+          "name": "Dartrix",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/20 Dartrix.png"
+        },
+        "47 Bergmite": {
+          "id": "47",
+          "name": "Bergmite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/47 Bergmite.png"
+        },
+        "120 Hoothoot": {
+          "id": "120",
+          "name": "Hoothoot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/120 Hoothoot.png"
+        },
+        "95 Poochyena": {
+          "id": "95",
+          "name": "Poochyena",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/95 Poochyena.png"
+        },
+        "61 Kirlia": {
+          "id": "61",
+          "name": "Kirlia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/61 Kirlia.png"
+        },
+        "161 Beedrill V": {
+          "id": "161",
+          "name": "Beedrill V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/161 Beedrill V.png"
+        },
+        "29 Golduck": {
+          "id": "29",
+          "name": "Golduck",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/29 Golduck.png"
+        },
+        "107 Magnezone": {
+          "id": "107",
+          "name": "Magnezone",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/107 Magnezone.png"
+        },
+        "93 Hisuian Sneasler": {
+          "id": "93",
+          "name": "Hisuian Sneasler",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/93 Hisuian Sneasler.png"
+        },
+        "7 Yanmega": {
+          "id": "7",
+          "name": "Yanmega",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/7 Yanmega.png"
+        },
+        "130 Regigigas": {
+          "id": "130",
+          "name": "Regigigas",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/130 Regigigas.png"
+        },
+        "31 Swinub": {
+          "id": "31",
+          "name": "Swinub",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/31 Swinub.png"
+        },
+        "4 Scyther": {
+          "id": "4",
+          "name": "Scyther",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/4 Scyther.png"
+        },
+        "132 Hisuian Braviary": {
+          "id": "132",
+          "name": "Hisuian Braviary",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/132 Hisuian Braviary.png"
+        },
+        "166 Starmie V": {
+          "id": "166",
+          "name": "Starmie V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/166 Starmie V.png"
+        },
+        "64 Drifblim": {
+          "id": "64",
+          "name": "Drifblim",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/64 Drifblim.png"
+        },
+        "180 Wyrdeer V": {
+          "id": "180",
+          "name": "Wyrdeer V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/180 Wyrdeer V.png"
+        },
+        "33 Mamoswine": {
+          "id": "33",
+          "name": "Mamoswine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/33 Mamoswine.png"
+        },
+        "16 Hisuian Lilligant": {
+          "id": "16",
+          "name": "Hisuian Lilligant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/16 Hisuian Lilligant.png"
+        },
+        "104 Thievul": {
+          "id": "104",
+          "name": "Thievul",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/104 Thievul.png"
+        },
+        "3 Hisuian Electrode": {
+          "id": "3",
+          "name": "Hisuian Electrode",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/3 Hisuian Electrode.png"
+        },
+        "177 Origin Forme Dialga V": {
+          "id": "177",
+          "name": "Origin Forme Dialga V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/177 Origin Forme Dialga V.png"
+        },
+        "9 Kricketot": {
+          "id": "9",
+          "name": "Kricketot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/9 Kricketot.png"
+        },
+        "90 Hisuian Overqwil": {
+          "id": "90",
+          "name": "Hisuian Overqwil",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/90 Hisuian Overqwil.png"
+        },
+        "127 Glameow": {
+          "id": "127",
+          "name": "Glameow",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/127 Glameow.png"
+        },
+        "80 Hippowdon": {
+          "id": "80",
+          "name": "Hippowdon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/80 Hippowdon.png"
+        },
+        "79 Hippopotas": {
+          "id": "79",
+          "name": "Hippopotas",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/79 Hippopotas.png"
+        },
+        "110 Bastiodon": {
+          "id": "110",
+          "name": "Bastiodon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/110 Bastiodon.png"
+        },
+        "115 Pawniard": {
+          "id": "115",
+          "name": "Pawniard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/115 Pawniard.png"
+        },
+        "85 Kleavor": {
+          "id": "85",
+          "name": "Kleavor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/85 Kleavor.png"
+        },
+        "65 Uxie": {
+          "id": "65",
+          "name": "Uxie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/65 Uxie.png"
+        },
+        "1 Beedrill V": {
+          "id": "1",
+          "name": "Beedrill V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/1 Beedrill V.png"
+        },
+        "22 Rapidash": {
+          "id": "22",
+          "name": "Rapidash",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/22 Rapidash.png"
+        },
+        "11 Combee": {
+          "id": "11",
+          "name": "Combee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/11 Combee.png"
+        },
+        "198 Origin Forme Dialga VSTAR": {
+          "id": "198",
+          "name": "Origin Forme Dialga VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/198 Origin Forme Dialga VSTAR.png"
+        },
+        "101 Hisuian Samurott V": {
+          "id": "101",
+          "name": "Hisuian Samurott V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/101 Hisuian Samurott V.png"
+        },
+        "169 Hisuian Typhlosion V": {
+          "id": "169",
+          "name": "Hisuian Typhlosion V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/169 Hisuian Typhlosion V.png"
+        },
+        "87 Kleavor V": {
+          "id": "87",
+          "name": "Kleavor V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/87 Kleavor V.png"
+        },
+        "69 Wyrdeer": {
+          "id": "69",
+          "name": "Wyrdeer",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/69 Wyrdeer.png"
+        },
+        "17 Hisuian Lilligant V": {
+          "id": "17",
+          "name": "Hisuian Lilligant V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/17 Hisuian Lilligant V.png"
+        },
+        "58 Misdreavus": {
+          "id": "58",
+          "name": "Misdreavus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/58 Misdreavus.png"
+        },
+        "103 Nickit": {
+          "id": "103",
+          "name": "Nickit",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/103 Nickit.png"
+        },
+        "133 Oranguru V": {
+          "id": "133",
+          "name": "Oranguru V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/133 Oranguru V.png"
+        },
+        "128 Purugly": {
+          "id": "128",
+          "name": "Purugly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/128 Purugly.png"
+        },
+        "6 Yanma": {
+          "id": "6",
+          "name": "Yanma",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/6 Yanma.png"
+        },
+        "27 Radiant Heatran": {
+          "id": "27",
+          "name": "Radiant Heatran",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/27 Radiant Heatran.png"
+        },
+        "191 Heatran VMAX": {
+          "id": "191",
+          "name": "Heatran VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/191 Heatran VMAX.png"
+        },
+        "89 Hisuian Qwilfish": {
+          "id": "89",
+          "name": "Hisuian Qwilfish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/89 Hisuian Qwilfish.png"
+        },
+        "53 Hisuian Typhlosion V": {
+          "id": "53",
+          "name": "Hisuian Typhlosion V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/53 Hisuian Typhlosion V.png"
+        },
+        "167 Origin Forme Palkia V": {
+          "id": "167",
+          "name": "Origin Forme Palkia V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/167 Origin Forme Palkia V.png"
+        },
+        "57 Togekiss": {
+          "id": "57",
+          "name": "Togekiss",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/57 Togekiss.png"
+        },
+        "173 Hisuian Decidueye V": {
+          "id": "173",
+          "name": "Hisuian Decidueye V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/173 Hisuian Decidueye V.png"
+        },
+        "21 Ponyta": {
+          "id": "21",
+          "name": "Ponyta",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/21 Ponyta.png"
+        },
+        "13 Leafeon": {
+          "id": "13",
+          "name": "Leafeon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/13 Leafeon.png"
+        },
+        "59 Mismagius": {
+          "id": "59",
+          "name": "Mismagius",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/59 Mismagius.png"
+        },
+        "96 Mightyena": {
+          "id": "96",
+          "name": "Mightyena",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/96 Mightyena.png"
+        },
+        "163 Hisuian Lilligant V": {
+          "id": "163",
+          "name": "Hisuian Lilligant V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/163 Hisuian Lilligant V.png"
+        },
+        "196 Kleavor VSTAR": {
+          "id": "196",
+          "name": "Kleavor VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/196 Kleavor VSTAR.png"
+        },
+        "45 Keldeo": {
+          "id": "45",
+          "name": "Keldeo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/45 Keldeo.png"
+        },
+        "23 Cyndaquil": {
+          "id": "23",
+          "name": "Cyndaquil",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/23 Cyndaquil.png"
+        },
+        "168 Luxray V": {
+          "id": "168",
+          "name": "Luxray V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/168 Luxray V.png"
+        },
+        "81 Radiant Hawlucha": {
+          "id": "81",
+          "name": "Radiant Hawlucha",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/81 Radiant Hawlucha.png"
+        },
+        "83 Hisuian Decidueye V": {
+          "id": "83",
+          "name": "Hisuian Decidueye V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/83 Hisuian Decidueye V.png"
+        },
+        "19 Rowlet": {
+          "id": "19",
+          "name": "Rowlet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/19 Rowlet.png"
+        },
+        "170 Jirachi V": {
+          "id": "170",
+          "name": "Jirachi V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/170 Jirachi V.png"
+        },
+        "37 Regice": {
+          "id": "37",
+          "name": "Regice",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/37 Regice.png"
+        },
+        "40 Origin Forme Palkia VSTAR": {
+          "id": "40",
+          "name": "Origin Forme Palkia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/40 Origin Forme Palkia VSTAR.png"
+        },
+        "209 Hisuian Samurott VSTAR": {
+          "id": "209",
+          "name": "Hisuian Samurott VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/209 Hisuian Samurott VSTAR.png"
+        },
+        "39 Origin Forme Palkia V": {
+          "id": "39",
+          "name": "Origin Forme Palkia V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/39 Origin Forme Palkia V.png"
+        },
+        "25 Heatran V": {
+          "id": "25",
+          "name": "Heatran V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/25 Heatran V.png"
+        },
+        "112 Bronzong": {
+          "id": "112",
+          "name": "Bronzong",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/112 Bronzong.png"
+        },
+        "119 Eevee": {
+          "id": "119",
+          "name": "Eevee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/119 Eevee.png"
+        },
+        "5 Scyther": {
+          "id": "5",
+          "name": "Scyther",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/5 Scyther.png"
+        },
+        "102 Hisuian Samurott VSTAR": {
+          "id": "102",
+          "name": "Hisuian Samurott VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/102 Hisuian Samurott VSTAR.png"
+        },
+        "55 Togepi": {
+          "id": "55",
+          "name": "Togepi",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/55 Togepi.png"
+        },
+        "12 Vespiquen": {
+          "id": "12",
+          "name": "Vespiquen",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/12 Vespiquen.png"
+        },
+        "28 Psyduck": {
+          "id": "28",
+          "name": "Psyduck",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/28 Psyduck.png"
+        },
+        "18 Hisuian Lilligant VSTAR": {
+          "id": "18",
+          "name": "Hisuian Lilligant VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/18 Hisuian Lilligant VSTAR.png"
+        },
+        "91 Hisuian Overqwil": {
+          "id": "91",
+          "name": "Hisuian Overqwil",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/91 Hisuian Overqwil.png"
+        },
+        "176 Hisuian Samurott V": {
+          "id": "176",
+          "name": "Hisuian Samurott V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/176 Hisuian Samurott V.png"
+        },
+        "105 Magnemite": {
+          "id": "105",
+          "name": "Magnemite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/105 Magnemite.png"
+        },
+        "34 Mantine": {
+          "id": "34",
+          "name": "Mantine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/34 Mantine.png"
+        },
+        "195 Hisuian Decidueye VSTAR": {
+          "id": "195",
+          "name": "Hisuian Decidueye VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/195 Hisuian Decidueye VSTAR.png"
+        },
+        "50 Luxray V": {
+          "id": "50",
+          "name": "Luxray V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/50 Luxray V.png"
+        },
+        "100 Hisuian Samurott": {
+          "id": "100",
+          "name": "Hisuian Samurott",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/100 Hisuian Samurott.png"
+        },
+        "118 Regidrago": {
+          "id": "118",
+          "name": "Regidrago",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/118 Regidrago.png"
+        },
+        "197 Hisuian Samurott VSTAR": {
+          "id": "197",
+          "name": "Hisuian Samurott VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/197 Hisuian Samurott VSTAR.png"
+        },
+        "73 Machamp VMAX": {
+          "id": "73",
+          "name": "Machamp VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/73 Machamp VMAX.png"
+        },
+        "41 Oshawott": {
+          "id": "41",
+          "name": "Oshawott",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/41 Oshawott.png"
+        },
+        "48 Hisuian Avalugg": {
+          "id": "48",
+          "name": "Hisuian Avalugg",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/48 Hisuian Avalugg.png"
+        },
+        "114 Origin Forme Dialga VSTAR": {
+          "id": "114",
+          "name": "Origin Forme Dialga VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/114 Origin Forme Dialga VSTAR.png"
+        },
+        "62 Gallade": {
+          "id": "62",
+          "name": "Gallade",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/62 Gallade.png"
+        },
+        "67 Azelf": {
+          "id": "67",
+          "name": "Azelf",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/67 Azelf.png"
+        },
+        "109 Shieldon": {
+          "id": "109",
+          "name": "Shieldon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/109 Shieldon.png"
+        },
+        "164 Virizion V": {
+          "id": "164",
+          "name": "Virizion V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/164 Virizion V.png"
+        },
+        "77 Rampardos": {
+          "id": "77",
+          "name": "Rampardos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/77 Rampardos.png"
+        },
+        "8 Heracross": {
+          "id": "8",
+          "name": "Heracross",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/8 Heracross.png"
+        },
+        "111 Bronzor": {
+          "id": "111",
+          "name": "Bronzor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/111 Bronzor.png"
+        },
+        "86 Kleavor": {
+          "id": "86",
+          "name": "Kleavor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/86 Kleavor.png"
+        },
+        "38 Glaceon": {
+          "id": "38",
+          "name": "Glaceon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/38 Glaceon.png"
+        },
+        "70 Hisuian Growlithe": {
+          "id": "70",
+          "name": "Hisuian Growlithe",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/70 Hisuian Growlithe.png"
+        },
+        "2 Hisuian Voltorb": {
+          "id": "2",
+          "name": "Hisuian Voltorb",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/2 Hisuian Voltorb.png"
+        },
+        "72 Machamp V": {
+          "id": "72",
+          "name": "Machamp V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/72 Machamp V.png"
+        },
+        "88 Hisuian Qwilfish": {
+          "id": "88",
+          "name": "Hisuian Qwilfish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/astral_radiance/88 Hisuian Qwilfish.png"
+        }
+      },
+      "total_cards": 167
     }
   },
-  "total_sets": 21,
-  "total_cards": 3110
+  "total_sets": 22,
+  "total_cards": 3277
 }
