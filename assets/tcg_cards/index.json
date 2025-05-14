@@ -12592,76 +12592,6 @@
           "height": 1024,
           "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG56 Hisuian Zoroark VSTAR.png"
         },
-        "GG57 Adaman": {
-          "id": "GG57",
-          "name": "Adaman",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG57 Adaman.png"
-        },
-        "GG58 Cheren's Care": {
-          "id": "GG58",
-          "name": "Cheren's Care",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG58 Cheren's Care.png"
-        },
-        "GG59 Colress's Experiment": {
-          "id": "GG59",
-          "name": "Colress's Experiment",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG59 Colress's Experiment.png"
-        },
-        "GG60 Cynthia's Ambition": {
-          "id": "GG60",
-          "name": "Cynthia's Ambition",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG60 Cynthia's Ambition.png"
-        },
-        "GG61 Gardenia's Vigor": {
-          "id": "GG61",
-          "name": "Gardenia's Vigor",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG61 Gardenia's Vigor.png"
-        },
-        "GG62 Grant": {
-          "id": "GG62",
-          "name": "Grant",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG62 Grant.png"
-        },
-        "GG63 Irida": {
-          "id": "GG63",
-          "name": "Irida",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG63 Irida.png"
-        },
-        "GG64 Melony": {
-          "id": "GG64",
-          "name": "Melony",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG64 Melony.png"
-        },
-        "GG65 Raihan": {
-          "id": "GG65",
-          "name": "Raihan",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG65 Raihan.png"
-        },
-        "GG66 Roxanne": {
-          "id": "GG66",
-          "name": "Roxanne",
-          "width": 734,
-          "height": 1024,
-          "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG66 Roxanne.png"
-        },
         "GG67 Origin Forme Palkia VSTAR": {
           "id": "GG67",
           "name": "Origin Forme Palkia VSTAR",
@@ -12691,7 +12621,7 @@
           "image_path": "assets/tcg_cards/crown_zenith_galarian_gallery/GG70 Arceus VSTAR.png"
         }
       },
-      "total_cards": 70
+      "total_cards": 60
     },
     "obsidian_flames": {
       "name": "Obsidian Flames",
@@ -21173,8 +21103,876 @@
         }
       },
       "total_cards": 160
+    },
+    "crown_zenith": {
+      "name": "Crown Zenith",
+      "path": "assets/tcg_cards/crown_zenith",
+      "cards": {
+        "26 Volcanion": {
+          "id": "26",
+          "name": "Volcanion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/26 Volcanion.png"
+        },
+        "37 Kyogre V": {
+          "id": "37",
+          "name": "Kyogre V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/37 Kyogre V.png"
+        },
+        "32 Wailord": {
+          "id": "32",
+          "name": "Wailord",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/32 Wailord.png"
+        },
+        "118 Gumshoos": {
+          "id": "118",
+          "name": "Gumshoos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/118 Gumshoos.png"
+        },
+        "106 Tauros": {
+          "id": "106",
+          "name": "Tauros",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/106 Tauros.png"
+        },
+        "1 Oddish": {
+          "id": "1",
+          "name": "Oddish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/1 Oddish.png"
+        },
+        "82 Dragalge": {
+          "id": "82",
+          "name": "Dragalge",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/82 Dragalge.png"
+        },
+        "20 Radiant Charizard": {
+          "id": "20",
+          "name": "Radiant Charizard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/20 Radiant Charizard.png"
+        },
+        "28 Salazzle": {
+          "id": "28",
+          "name": "Salazzle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/28 Salazzle.png"
+        },
+        "10 Kricketot": {
+          "id": "10",
+          "name": "Kricketot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/10 Kricketot.png"
+        },
+        "121 Wooloo": {
+          "id": "121",
+          "name": "Wooloo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/121 Wooloo.png"
+        },
+        "14 Leafeon VSTAR": {
+          "id": "14",
+          "name": "Leafeon VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/14 Leafeon VSTAR.png"
+        },
+        "22 Simisear V": {
+          "id": "22",
+          "name": "Simisear V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/22 Simisear V.png"
+        },
+        "34 Snorunt": {
+          "id": "34",
+          "name": "Snorunt",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/34 Snorunt.png"
+        },
+        "35 Luvdisc": {
+          "id": "35",
+          "name": "Luvdisc",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/35 Luvdisc.png"
+        },
+        "21 Entei": {
+          "id": "21",
+          "name": "Entei",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/21 Entei.png"
+        },
+        "4 Tangela": {
+          "id": "4",
+          "name": "Tangela",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/4 Tangela.png"
+        },
+        "108 Eevee V": {
+          "id": "108",
+          "name": "Eevee V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/108 Eevee V.png"
+        },
+        "113 Regigigas V": {
+          "id": "113",
+          "name": "Regigigas V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/113 Regigigas V.png"
+        },
+        "117 Yungoos": {
+          "id": "117",
+          "name": "Yungoos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/117 Yungoos.png"
+        },
+        "91 Pawniard": {
+          "id": "91",
+          "name": "Pawniard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/91 Pawniard.png"
+        },
+        "3 Bellossom": {
+          "id": "3",
+          "name": "Bellossom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/3 Bellossom.png"
+        },
+        "110 Starly": {
+          "id": "110",
+          "name": "Starly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/110 Starly.png"
+        },
+        "65 Hatterene V": {
+          "id": "65",
+          "name": "Hatterene V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/65 Hatterene V.png"
+        },
+        "75 Koffing": {
+          "id": "75",
+          "name": "Koffing",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/75 Koffing.png"
+        },
+        "94 Zacian": {
+          "id": "94",
+          "name": "Zacian",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/94 Zacian.png"
+        },
+        "62 Lunatone": {
+          "id": "62",
+          "name": "Lunatone",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/62 Lunatone.png"
+        },
+        "88 Lairon": {
+          "id": "88",
+          "name": "Lairon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/88 Lairon.png"
+        },
+        "39 Shinx": {
+          "id": "39",
+          "name": "Shinx",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/39 Shinx.png"
+        },
+        "15 Grubbin": {
+          "id": "15",
+          "name": "Grubbin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/15 Grubbin.png"
+        },
+        "85 Galarian Perrserker": {
+          "id": "85",
+          "name": "Galarian Perrserker",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/85 Galarian Perrserker.png"
+        },
+        "50 Heliolisk": {
+          "id": "50",
+          "name": "Heliolisk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/50 Heliolisk.png"
+        },
+        "54 Zeraora VMAX": {
+          "id": "54",
+          "name": "Zeraora VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/54 Zeraora VMAX.png"
+        },
+        "16 Zarude": {
+          "id": "16",
+          "name": "Zarude",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/16 Zarude.png"
+        },
+        "33 Corphish": {
+          "id": "33",
+          "name": "Corphish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/33 Corphish.png"
+        },
+        "36 Kyogre": {
+          "id": "36",
+          "name": "Kyogre",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/36 Kyogre.png"
+        },
+        "51 Radiant Charjabug": {
+          "id": "51",
+          "name": "Radiant Charjabug",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/51 Radiant Charjabug.png"
+        },
+        "93 Bisharp": {
+          "id": "93",
+          "name": "Bisharp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/93 Bisharp.png"
+        },
+        "58 Exeggutor": {
+          "id": "58",
+          "name": "Exeggutor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/58 Exeggutor.png"
+        },
+        "47 Emolga": {
+          "id": "47",
+          "name": "Emolga",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/47 Emolga.png"
+        },
+        "12 Carnivine": {
+          "id": "12",
+          "name": "Carnivine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/12 Carnivine.png"
+        },
+        "70 Baltoy": {
+          "id": "70",
+          "name": "Baltoy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/70 Baltoy.png"
+        },
+        "48 Eelektrik": {
+          "id": "48",
+          "name": "Eelektrik",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/48 Eelektrik.png"
+        },
+        "99 Zamazenta VSTAR": {
+          "id": "99",
+          "name": "Zamazenta VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/99 Zamazenta VSTAR.png"
+        },
+        "122 Dubwool": {
+          "id": "122",
+          "name": "Dubwool",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/122 Dubwool.png"
+        },
+        "115 Shaymin": {
+          "id": "115",
+          "name": "Shaymin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/115 Shaymin.png"
+        },
+        "119 Oranguru": {
+          "id": "119",
+          "name": "Oranguru",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/119 Oranguru.png"
+        },
+        "95 Zacian V": {
+          "id": "95",
+          "name": "Zacian V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/95 Zacian V.png"
+        },
+        "5 Tangrowth": {
+          "id": "5",
+          "name": "Tangrowth",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/5 Tangrowth.png"
+        },
+        "61 Girafarig": {
+          "id": "61",
+          "name": "Girafarig",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/61 Girafarig.png"
+        },
+        "57 Exeggcute": {
+          "id": "57",
+          "name": "Exeggcute",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/57 Exeggcute.png"
+        },
+        "42 Luxio": {
+          "id": "42",
+          "name": "Luxio",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/42 Luxio.png"
+        },
+        "89 Aggron": {
+          "id": "89",
+          "name": "Aggron",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/89 Aggron.png"
+        },
+        "27 Salandit": {
+          "id": "27",
+          "name": "Salandit",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/27 Salandit.png"
+        },
+        "66 Hatterene VMAX": {
+          "id": "66",
+          "name": "Hatterene VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/66 Hatterene VMAX.png"
+        },
+        "116 Stoutland V": {
+          "id": "116",
+          "name": "Stoutland V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/116 Stoutland V.png"
+        },
+        "80 Pangoro": {
+          "id": "80",
+          "name": "Pangoro",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/80 Pangoro.png"
+        },
+        "23 Simisear VSTAR": {
+          "id": "23",
+          "name": "Simisear VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/23 Simisear VSTAR.png"
+        },
+        "8 Yanma": {
+          "id": "8",
+          "name": "Yanma",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/8 Yanma.png"
+        },
+        "72 Pancham": {
+          "id": "72",
+          "name": "Pancham",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/72 Pancham.png"
+        },
+        "83 Hoopa": {
+          "id": "83",
+          "name": "Hoopa",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/83 Hoopa.png"
+        },
+        "103 Duraludon V": {
+          "id": "103",
+          "name": "Duraludon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/103 Duraludon V.png"
+        },
+        "68 Graveler": {
+          "id": "68",
+          "name": "Graveler",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/68 Graveler.png"
+        },
+        "101 Rayquaza VMAX": {
+          "id": "101",
+          "name": "Rayquaza VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/101 Rayquaza VMAX.png"
+        },
+        "18 Charizard V": {
+          "id": "18",
+          "name": "Charizard V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/18 Charizard V.png"
+        },
+        "2 Gloom": {
+          "id": "2",
+          "name": "Gloom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/2 Gloom.png"
+        },
+        "105 Radiant Eternatus": {
+          "id": "105",
+          "name": "Radiant Eternatus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/105 Radiant Eternatus.png"
+        },
+        "86 Scizor": {
+          "id": "86",
+          "name": "Scizor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/86 Scizor.png"
+        },
+        "7 Sunkern": {
+          "id": "7",
+          "name": "Sunkern",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/7 Sunkern.png"
+        },
+        "97 Zamazenta": {
+          "id": "97",
+          "name": "Zamazenta",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/97 Zamazenta.png"
+        },
+        "9 Yanmega": {
+          "id": "9",
+          "name": "Yanmega",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/9 Yanmega.png"
+        },
+        "79 Krokorok": {
+          "id": "79",
+          "name": "Krokorok",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/79 Krokorok.png"
+        },
+        "76 Absol": {
+          "id": "76",
+          "name": "Absol",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/76 Absol.png"
+        },
+        "69 Solrock": {
+          "id": "69",
+          "name": "Solrock",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/69 Solrock.png"
+        },
+        "109 Snorlax": {
+          "id": "109",
+          "name": "Snorlax",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/109 Snorlax.png"
+        },
+        "59 Mewtwo": {
+          "id": "59",
+          "name": "Mewtwo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/59 Mewtwo.png"
+        },
+        "100 Rayquaza V": {
+          "id": "100",
+          "name": "Rayquaza V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/100 Rayquaza V.png"
+        },
+        "87 Aron": {
+          "id": "87",
+          "name": "Aron",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/87 Aron.png"
+        },
+        "63 Dusclops": {
+          "id": "63",
+          "name": "Dusclops",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/63 Dusclops.png"
+        },
+        "112 Chatot": {
+          "id": "112",
+          "name": "Chatot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/112 Chatot.png"
+        },
+        "84 Galarian Meowth": {
+          "id": "84",
+          "name": "Galarian Meowth",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/84 Galarian Meowth.png"
+        },
+        "30 Galarian Mr": {
+          "id": "30",
+          "name": "Galarian Mr",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/30 Galarian Mr. Mime.png"
+        },
+        "31 Wailmer": {
+          "id": "31",
+          "name": "Wailmer",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/31 Wailmer.png"
+        },
+        "25 Volcarona": {
+          "id": "25",
+          "name": "Volcarona",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/25 Volcarona.png"
+        },
+        "90 Metang": {
+          "id": "90",
+          "name": "Metang",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/90 Metang.png"
+        },
+        "81 Skrelp": {
+          "id": "81",
+          "name": "Skrelp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/81 Skrelp.png"
+        },
+        "38 Glaceon V": {
+          "id": "38",
+          "name": "Glaceon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/38 Glaceon V.png"
+        },
+        "49 Helioptile": {
+          "id": "49",
+          "name": "Helioptile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/49 Helioptile.png"
+        },
+        "104 Duraludon VMAX": {
+          "id": "104",
+          "name": "Duraludon VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/104 Duraludon VMAX.png"
+        },
+        "6 Scyther": {
+          "id": "6",
+          "name": "Scyther",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/6 Scyther.png"
+        },
+        "78 Liepard": {
+          "id": "78",
+          "name": "Liepard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/78 Liepard.png"
+        },
+        "41 Luxio": {
+          "id": "41",
+          "name": "Luxio",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/41 Luxio.png"
+        },
+        "96 Zacian VSTAR": {
+          "id": "96",
+          "name": "Zacian VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/96 Zacian VSTAR.png"
+        },
+        "44 Luxray": {
+          "id": "44",
+          "name": "Luxray",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/44 Luxray.png"
+        },
+        "111 Bidoof": {
+          "id": "111",
+          "name": "Bidoof",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/111 Bidoof.png"
+        },
+        "64 Tapu Lele": {
+          "id": "64",
+          "name": "Tapu Lele",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/64 Tapu Lele.png"
+        },
+        "120 Greedent V": {
+          "id": "120",
+          "name": "Greedent V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/120 Greedent V.png"
+        },
+        "43 Luxray": {
+          "id": "43",
+          "name": "Luxray",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/43 Luxray.png"
+        },
+        "53 Zeraora V": {
+          "id": "53",
+          "name": "Zeraora V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/53 Zeraora V.png"
+        },
+        "45 Rotom V": {
+          "id": "45",
+          "name": "Rotom V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/45 Rotom V.png"
+        },
+        "17 Calyrex": {
+          "id": "17",
+          "name": "Calyrex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/17 Calyrex.png"
+        },
+        "11 Cherubi": {
+          "id": "11",
+          "name": "Cherubi",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/11 Cherubi.png"
+        },
+        "73 Rockruff": {
+          "id": "73",
+          "name": "Rockruff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/73 Rockruff.png"
+        },
+        "13 Leafeon V": {
+          "id": "13",
+          "name": "Leafeon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/13 Leafeon V.png"
+        },
+        "52 Zeraora": {
+          "id": "52",
+          "name": "Zeraora",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/52 Zeraora.png"
+        },
+        "56 Pincurchin": {
+          "id": "56",
+          "name": "Pincurchin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/56 Pincurchin.png"
+        },
+        "74 Lycanroc": {
+          "id": "74",
+          "name": "Lycanroc",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/74 Lycanroc.png"
+        },
+        "46 Rotom VSTAR": {
+          "id": "46",
+          "name": "Rotom VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/46 Rotom VSTAR.png"
+        },
+        "114 Regigigas VSTAR": {
+          "id": "114",
+          "name": "Regigigas VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/114 Regigigas VSTAR.png"
+        },
+        "107 Ditto": {
+          "id": "107",
+          "name": "Ditto",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/107 Ditto.png"
+        },
+        "60 Mew V": {
+          "id": "60",
+          "name": "Mew V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/60 Mew V.png"
+        },
+        "19 Charizard VSTAR": {
+          "id": "19",
+          "name": "Charizard VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/19 Charizard VSTAR.png"
+        },
+        "102 Rayquaza VMAX": {
+          "id": "102",
+          "name": "Rayquaza VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/102 Rayquaza VMAX.png"
+        },
+        "71 Riolu": {
+          "id": "71",
+          "name": "Riolu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/71 Riolu.png"
+        },
+        "77 Purrloin": {
+          "id": "77",
+          "name": "Purrloin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/77 Purrloin.png"
+        },
+        "29 Seel": {
+          "id": "29",
+          "name": "Seel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/29 Seel.png"
+        },
+        "92 Pawniard": {
+          "id": "92",
+          "name": "Pawniard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/92 Pawniard.png"
+        },
+        "55 Zeraora VSTAR": {
+          "id": "55",
+          "name": "Zeraora VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/55 Zeraora VSTAR.png"
+        },
+        "98 Zamazenta V": {
+          "id": "98",
+          "name": "Zamazenta V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/98 Zamazenta V.png"
+        },
+        "24 Larvesta": {
+          "id": "24",
+          "name": "Larvesta",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/24 Larvesta.png"
+        },
+        "67 Enamorus": {
+          "id": "67",
+          "name": "Enamorus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/67 Enamorus.png"
+        },
+        "40 Shinx": {
+          "id": "40",
+          "name": "Shinx",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/40 Shinx.png"
+        },
+        "160 Pikachu": {
+          "id": "160",
+          "name": "Pikachu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/crown_zenith/160 Pikachu.png"
+        }
+      },
+      "total_cards": 123
     }
   },
-  "total_sets": 20,
-  "total_cards": 2997
+  "total_sets": 21,
+  "total_cards": 3110
 }
