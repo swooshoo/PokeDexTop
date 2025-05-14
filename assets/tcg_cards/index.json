@@ -17035,9 +17035,1563 @@
           "image_path": "assets/tcg_cards/lost_origin_trainer_gallery/TG08 Hisuian Arcanine.png"
         }
       },
-      "total_cards": 30
+      "total_cards": 28
+    },
+    "paldea_evolved": {
+      "name": "Paldea Evolved",
+      "path": "assets/tcg_cards/paldea_evolved",
+      "cards": {
+        "219 Sudowoodo": {
+          "id": "219",
+          "name": "Sudowoodo",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/219 Sudowoodo.png"
+        },
+        "197 Floragato": {
+          "id": "197",
+          "name": "Floragato",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/197 Floragato.png"
+        },
+        "134 Weavile": {
+          "id": "134",
+          "name": "Weavile",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/134 Weavile.png"
+        },
+        "119 Falinks": {
+          "id": "119",
+          "name": "Falinks",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/119 Falinks.png"
+        },
+        "27 Wo-Chien ex": {
+          "id": "27",
+          "name": "Wo-Chien ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/27 Wo-Chien ex.png"
+        },
+        "212 Mismagius": {
+          "id": "212",
+          "name": "Mismagius",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/212 Mismagius.png"
+        },
+        "139 Zweilous": {
+          "id": "139",
+          "name": "Zweilous",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/139 Zweilous.png"
+        },
+        "234 Chi-Yu ex": {
+          "id": "234",
+          "name": "Chi-Yu ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/234 Chi-Yu ex.png"
+        },
+        "107 Primeape": {
+          "id": "107",
+          "name": "Primeape",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/107 Primeape.png"
+        },
+        "1 Hoppip": {
+          "id": "1",
+          "name": "Hoppip",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/1 Hoppip.png"
+        },
+        "164 Rookidee": {
+          "id": "164",
+          "name": "Rookidee",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/164 Rookidee.png"
+        },
+        "69 Shinx": {
+          "id": "69",
+          "name": "Shinx",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/69 Shinx.png"
+        },
+        "156 Dunsparce": {
+          "id": "156",
+          "name": "Dunsparce",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/156 Dunsparce.png"
+        },
+        "133 Sneasel": {
+          "id": "133",
+          "name": "Sneasel",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/133 Sneasel.png"
+        },
+        "42 Magikarp": {
+          "id": "42",
+          "name": "Magikarp",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/42 Magikarp.png"
+        },
+        "154 Girafarig": {
+          "id": "154",
+          "name": "Girafarig",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/154 Girafarig.png"
+        },
+        "70 Luxio": {
+          "id": "70",
+          "name": "Luxio",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/70 Luxio.png"
+        },
+        "123 Garganacl": {
+          "id": "123",
+          "name": "Garganacl",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/123 Garganacl.png"
+        },
+        "64 Raichu": {
+          "id": "64",
+          "name": "Raichu",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/64 Raichu.png"
+        },
+        "56 Veluza": {
+          "id": "56",
+          "name": "Veluza",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/56 Veluza.png"
+        },
+        "13 Sprigatito": {
+          "id": "13",
+          "name": "Sprigatito",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/13 Sprigatito.png"
+        },
+        "26 Rellor": {
+          "id": "26",
+          "name": "Rellor",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/26 Rellor.png"
+        },
+        "43 Gyarados": {
+          "id": "43",
+          "name": "Gyarados",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/43 Gyarados.png"
+        },
+        "155 Farigiraf": {
+          "id": "155",
+          "name": "Farigiraf",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/155 Farigiraf.png"
+        },
+        "55 Cetitan": {
+          "id": "55",
+          "name": "Cetitan",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/55 Cetitan.png"
+        },
+        "60 Baxcalibur": {
+          "id": "60",
+          "name": "Baxcalibur",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/60 Baxcalibur.png"
+        },
+        "79 Bellibolt ex": {
+          "id": "79",
+          "name": "Bellibolt ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/79 Bellibolt ex.png"
+        },
+        "2 Skiploom": {
+          "id": "2",
+          "name": "Skiploom",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/2 Skiploom.png"
+        },
+        "150 Copperajah ex": {
+          "id": "150",
+          "name": "Copperajah ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/150 Copperajah ex.png"
+        },
+        "113 Hariyama": {
+          "id": "113",
+          "name": "Hariyama",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/113 Hariyama.png"
+        },
+        "67 Electrode": {
+          "id": "67",
+          "name": "Electrode",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/67 Electrode.png"
+        },
+        "204 Marill": {
+          "id": "204",
+          "name": "Marill",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/204 Marill.png"
+        },
+        "97 Mimikyu": {
+          "id": "97",
+          "name": "Mimikyu",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/97 Mimikyu.png"
+        },
+        "242 Annihilape ex": {
+          "id": "242",
+          "name": "Annihilape ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/242 Annihilape ex.png"
+        },
+        "136 Sableye": {
+          "id": "136",
+          "name": "Sableye",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/136 Sableye.png"
+        },
+        "120 Nacli": {
+          "id": "120",
+          "name": "Nacli",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/120 Nacli.png"
+        },
+        "19 Nymble": {
+          "id": "19",
+          "name": "Nymble",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/19 Nymble.png"
+        },
+        "88 Mismagius": {
+          "id": "88",
+          "name": "Mismagius",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/88 Mismagius.png"
+        },
+        "85 Slowpoke": {
+          "id": "85",
+          "name": "Slowpoke",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/85 Slowpoke.png"
+        },
+        "153 Noivern ex": {
+          "id": "153",
+          "name": "Noivern ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/153 Noivern ex.png"
+        },
+        "12 Sprigatito": {
+          "id": "12",
+          "name": "Sprigatito",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/12 Sprigatito.png"
+        },
+        "216 Tinkatink": {
+          "id": "216",
+          "name": "Tinkatink",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/216 Tinkatink.png"
+        },
+        "81 Wattrel": {
+          "id": "81",
+          "name": "Wattrel",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/81 Wattrel.png"
+        },
+        "200 Pyroar": {
+          "id": "200",
+          "name": "Pyroar",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/200 Pyroar.png"
+        },
+        "215 Rabsca": {
+          "id": "215",
+          "name": "Rabsca",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/215 Rabsca.png"
+        },
+        "247 Squawkabilly ex": {
+          "id": "247",
+          "name": "Squawkabilly ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/247 Squawkabilly ex.png"
+        },
+        "167 Tandemaus": {
+          "id": "167",
+          "name": "Tandemaus",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/167 Tandemaus.png"
+        },
+        "65 Magnemite": {
+          "id": "65",
+          "name": "Magnemite",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/65 Magnemite.png"
+        },
+        "66 Voltorb": {
+          "id": "66",
+          "name": "Voltorb",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/66 Voltorb.png"
+        },
+        "207 Quaxwell": {
+          "id": "207",
+          "name": "Quaxwell",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/207 Quaxwell.png"
+        },
+        "218 Paldean Tauros": {
+          "id": "218",
+          "name": "Paldean Tauros",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/218 Paldean Tauros.png"
+        },
+        "224 Orthworm": {
+          "id": "224",
+          "name": "Orthworm",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/224 Orthworm.png"
+        },
+        "59 Arctibax": {
+          "id": "59",
+          "name": "Arctibax",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/59 Arctibax.png"
+        },
+        "116 Rockruff": {
+          "id": "116",
+          "name": "Rockruff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/116 Rockruff.png"
+        },
+        "126 Glimmora": {
+          "id": "126",
+          "name": "Glimmora",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/126 Glimmora.png"
+        },
+        "141 Maschiff": {
+          "id": "141",
+          "name": "Maschiff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/141 Maschiff.png"
+        },
+        "239 Dedenne ex": {
+          "id": "239",
+          "name": "Dedenne ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/239 Dedenne ex.png"
+        },
+        "63 Pikachu ex": {
+          "id": "63",
+          "name": "Pikachu ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/63 Pikachu ex.png"
+        },
+        "194 Heracross": {
+          "id": "194",
+          "name": "Heracross",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/194 Heracross.png"
+        },
+        "226 Maushold": {
+          "id": "226",
+          "name": "Maushold",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/226 Maushold.png"
+        },
+        "170 Flamigo": {
+          "id": "170",
+          "name": "Flamigo",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/170 Flamigo.png"
+        },
+        "169 Squawkabilly ex": {
+          "id": "169",
+          "name": "Squawkabilly ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/169 Squawkabilly ex.png"
+        },
+        "83 Jigglypuff": {
+          "id": "83",
+          "name": "Jigglypuff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/83 Jigglypuff.png"
+        },
+        "91 Gothorita": {
+          "id": "91",
+          "name": "Gothorita",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/91 Gothorita.png"
+        },
+        "22 Bramblin": {
+          "id": "22",
+          "name": "Bramblin",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/22 Bramblin.png"
+        },
+        "49 Quaxly": {
+          "id": "49",
+          "name": "Quaxly",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/49 Quaxly.png"
+        },
+        "33 Oricorio": {
+          "id": "33",
+          "name": "Oricorio",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/33 Oricorio.png"
+        },
+        "68 Shinx": {
+          "id": "68",
+          "name": "Shinx",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/68 Shinx.png"
+        },
+        "111 Pupitar": {
+          "id": "111",
+          "name": "Pupitar",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/111 Pupitar.png"
+        },
+        "57 Frigibax": {
+          "id": "57",
+          "name": "Frigibax",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/57 Frigibax.png"
+        },
+        "140 Hydreigon": {
+          "id": "140",
+          "name": "Hydreigon",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/140 Hydreigon.png"
+        },
+        "48 Eiscue": {
+          "id": "48",
+          "name": "Eiscue",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/48 Eiscue.png"
+        },
+        "124 Glimmet": {
+          "id": "124",
+          "name": "Glimmet",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/124 Glimmet.png"
+        },
+        "32 Pyroar": {
+          "id": "32",
+          "name": "Pyroar",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/32 Pyroar.png"
+        },
+        "195 Tropius": {
+          "id": "195",
+          "name": "Tropius",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/195 Tropius.png"
+        },
+        "209 Arctibax": {
+          "id": "209",
+          "name": "Arctibax",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/209 Arctibax.png"
+        },
+        "112 Makuhita": {
+          "id": "112",
+          "name": "Makuhita",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/112 Makuhita.png"
+        },
+        "220 Nacli": {
+          "id": "220",
+          "name": "Nacli",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/220 Nacli.png"
+        },
+        "7 Tropius": {
+          "id": "7",
+          "name": "Tropius",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/7 Tropius.png"
+        },
+        "196 Sprigatito": {
+          "id": "196",
+          "name": "Sprigatito",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/196 Sprigatito.png"
+        },
+        "222 Tyranitar": {
+          "id": "222",
+          "name": "Tyranitar",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/222 Tyranitar.png"
+        },
+        "72 Pincurchin": {
+          "id": "72",
+          "name": "Pincurchin",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/72 Pincurchin.png"
+        },
+        "199 Fletchinder": {
+          "id": "199",
+          "name": "Fletchinder",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/199 Fletchinder.png"
+        },
+        "103 Tinkatuff": {
+          "id": "103",
+          "name": "Tinkatuff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/103 Tinkatuff.png"
+        },
+        "225 Rookidee": {
+          "id": "225",
+          "name": "Rookidee",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/225 Rookidee.png"
+        },
+        "30 Talonflame": {
+          "id": "30",
+          "name": "Talonflame",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/30 Talonflame.png"
+        },
+        "15 Meowscarada ex": {
+          "id": "15",
+          "name": "Meowscarada ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/15 Meowscarada ex.png"
+        },
+        "138 Deino": {
+          "id": "138",
+          "name": "Deino",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/138 Deino.png"
+        },
+        "73 Pincurchin": {
+          "id": "73",
+          "name": "Pincurchin",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/73 Pincurchin.png"
+        },
+        "149 Cufant": {
+          "id": "149",
+          "name": "Cufant",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/149 Cufant.png"
+        },
+        "117 Lycanroc ex": {
+          "id": "117",
+          "name": "Lycanroc ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/117 Lycanroc ex.png"
+        },
+        "61 Chien-Pao ex": {
+          "id": "61",
+          "name": "Chien-Pao ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/61 Chien-Pao ex.png"
+        },
+        "89 Spiritomb": {
+          "id": "89",
+          "name": "Spiritomb",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/89 Spiritomb.png"
+        },
+        "38 Charcadet": {
+          "id": "38",
+          "name": "Charcadet",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/38 Charcadet.png"
+        },
+        "104 Tinkatuff": {
+          "id": "104",
+          "name": "Tinkatuff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/104 Tinkatuff.png"
+        },
+        "130 Paldean Clodsire ex": {
+          "id": "130",
+          "name": "Paldean Clodsire ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/130 Paldean Clodsire ex.png"
+        },
+        "157 Dudunsparce": {
+          "id": "157",
+          "name": "Dudunsparce",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/157 Dudunsparce.png"
+        },
+        "129 Paldean Wooper": {
+          "id": "129",
+          "name": "Paldean Wooper",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/129 Paldean Wooper.png"
+        },
+        "263 Ting-Lu ex": {
+          "id": "263",
+          "name": "Ting-Lu ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/263 Ting-Lu ex.png"
+        },
+        "100 Tinkatink": {
+          "id": "100",
+          "name": "Tinkatink",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/100 Tinkatink.png"
+        },
+        "121 Nacli": {
+          "id": "121",
+          "name": "Nacli",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/121 Nacli.png"
+        },
+        "23 Bramblin": {
+          "id": "23",
+          "name": "Bramblin",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/23 Bramblin.png"
+        },
+        "45 Azumarill": {
+          "id": "45",
+          "name": "Azumarill",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/45 Azumarill.png"
+        },
+        "87 Misdreavus": {
+          "id": "87",
+          "name": "Misdreavus",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/87 Misdreavus.png"
+        },
+        "160 Slakoth": {
+          "id": "160",
+          "name": "Slakoth",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/160 Slakoth.png"
+        },
+        "198 Bramblin": {
+          "id": "198",
+          "name": "Bramblin",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/198 Bramblin.png"
+        },
+        "98 Ceruledge": {
+          "id": "98",
+          "name": "Ceruledge",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/98 Ceruledge.png"
+        },
+        "94 Oranguru": {
+          "id": "94",
+          "name": "Oranguru",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/94 Oranguru.png"
+        },
+        "29 Fletchinder": {
+          "id": "29",
+          "name": "Fletchinder",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/29 Fletchinder.png"
+        },
+        "106 Mankey": {
+          "id": "106",
+          "name": "Mankey",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/106 Mankey.png"
+        },
+        "10 Snover": {
+          "id": "10",
+          "name": "Snover",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/10 Snover.png"
+        },
+        "127 Ting-Lu ex": {
+          "id": "127",
+          "name": "Ting-Lu ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/127 Ting-Lu ex.png"
+        },
+        "18 Spidops": {
+          "id": "18",
+          "name": "Spidops",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/18 Spidops.png"
+        },
+        "105 Tinkaton": {
+          "id": "105",
+          "name": "Tinkaton",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/105 Tinkaton.png"
+        },
+        "35 Fuecoco": {
+          "id": "35",
+          "name": "Fuecoco",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/35 Fuecoco.png"
+        },
+        "92 Gothitelle": {
+          "id": "92",
+          "name": "Gothitelle",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/92 Gothitelle.png"
+        },
+        "40 Chi-Yu ex": {
+          "id": "40",
+          "name": "Chi-Yu ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/40 Chi-Yu ex.png"
+        },
+        "93 Dedenne ex": {
+          "id": "93",
+          "name": "Dedenne ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/93 Dedenne ex.png"
+        },
+        "41 Paldean Tauros": {
+          "id": "41",
+          "name": "Paldean Tauros",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/41 Paldean Tauros.png"
+        },
+        "50 Quaxly": {
+          "id": "50",
+          "name": "Quaxly",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/50 Quaxly.png"
+        },
+        "214 Sandygast": {
+          "id": "214",
+          "name": "Sandygast",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/214 Sandygast.png"
+        },
+        "51 Quaxwell": {
+          "id": "51",
+          "name": "Quaxwell",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/51 Quaxwell.png"
+        },
+        "99 Rabsca": {
+          "id": "99",
+          "name": "Rabsca",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/99 Rabsca.png"
+        },
+        "161 Vigoroth": {
+          "id": "161",
+          "name": "Vigoroth",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/161 Vigoroth.png"
+        },
+        "230 Forretress ex": {
+          "id": "230",
+          "name": "Forretress ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/230 Forretress ex.png"
+        },
+        "78 Tadbulb": {
+          "id": "78",
+          "name": "Tadbulb",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/78 Tadbulb.png"
+        },
+        "101 Tinkatink": {
+          "id": "101",
+          "name": "Tinkatink",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/101 Tinkatink.png"
+        },
+        "76 Pawmot": {
+          "id": "76",
+          "name": "Pawmot",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/76 Pawmot.png"
+        },
+        "162 Slaking": {
+          "id": "162",
+          "name": "Slaking",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/162 Slaking.png"
+        },
+        "165 Corvisquire": {
+          "id": "165",
+          "name": "Corvisquire",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/165 Corvisquire.png"
+        },
+        "159 Pelipper": {
+          "id": "159",
+          "name": "Pelipper",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/159 Pelipper.png"
+        },
+        "39 Charcadet": {
+          "id": "39",
+          "name": "Charcadet",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/39 Charcadet.png"
+        },
+        "128 Paldean Wooper": {
+          "id": "128",
+          "name": "Paldean Wooper",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/128 Paldean Wooper.png"
+        },
+        "237 Bellibolt ex": {
+          "id": "237",
+          "name": "Bellibolt ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/237 Bellibolt ex.png"
+        },
+        "158 Wingull": {
+          "id": "158",
+          "name": "Wingull",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/158 Wingull.png"
+        },
+        "110 Larvitar": {
+          "id": "110",
+          "name": "Larvitar",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/110 Larvitar.png"
+        },
+        "80 Wattrel": {
+          "id": "80",
+          "name": "Wattrel",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/80 Wattrel.png"
+        },
+        "31 Litleo": {
+          "id": "31",
+          "name": "Litleo",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/31 Litleo.png"
+        },
+        "109 Sudowoodo": {
+          "id": "109",
+          "name": "Sudowoodo",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/109 Sudowoodo.png"
+        },
+        "148 Corviknight": {
+          "id": "148",
+          "name": "Corviknight",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/148 Corviknight.png"
+        },
+        "118 Passimian": {
+          "id": "118",
+          "name": "Passimian",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/118 Passimian.png"
+        },
+        "90 Gothita": {
+          "id": "90",
+          "name": "Gothita",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/90 Gothita.png"
+        },
+        "211 Raichu": {
+          "id": "211",
+          "name": "Raichu",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/211 Raichu.png"
+        },
+        "145 Shroodle": {
+          "id": "145",
+          "name": "Shroodle",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/145 Shroodle.png"
+        },
+        "205 Eiscue": {
+          "id": "205",
+          "name": "Eiscue",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/205 Eiscue.png"
+        },
+        "3 Jumpluff": {
+          "id": "3",
+          "name": "Jumpluff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/3 Jumpluff.png"
+        },
+        "9 Vespiquen": {
+          "id": "9",
+          "name": "Vespiquen",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/9 Vespiquen.png"
+        },
+        "5 Forretress ex": {
+          "id": "5",
+          "name": "Forretress ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/5 Forretress ex.png"
+        },
+        "6 Heracross": {
+          "id": "6",
+          "name": "Heracross",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/6 Heracross.png"
+        },
+        "21 Lokix": {
+          "id": "21",
+          "name": "Lokix",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/21 Lokix.png"
+        },
+        "74 Pawmi": {
+          "id": "74",
+          "name": "Pawmi",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/74 Pawmi.png"
+        },
+        "261 Chien-Pao ex": {
+          "id": "261",
+          "name": "Chien-Pao ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/261 Chien-Pao ex.png"
+        },
+        "114 Croagunk": {
+          "id": "114",
+          "name": "Croagunk",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/114 Croagunk.png"
+        },
+        "243 Ting-Lu ex": {
+          "id": "243",
+          "name": "Ting-Lu ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/243 Ting-Lu ex.png"
+        },
+        "203 Magikarp": {
+          "id": "203",
+          "name": "Magikarp",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/203 Magikarp.png"
+        },
+        "36 Crocalor": {
+          "id": "36",
+          "name": "Crocalor",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/36 Crocalor.png"
+        },
+        "151 Orthworm": {
+          "id": "151",
+          "name": "Orthworm",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/151 Orthworm.png"
+        },
+        "11 Abomasnow": {
+          "id": "11",
+          "name": "Abomasnow",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/11 Abomasnow.png"
+        },
+        "163 Fletchling": {
+          "id": "163",
+          "name": "Fletchling",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/163 Fletchling.png"
+        },
+        "102 Tinkatink": {
+          "id": "102",
+          "name": "Tinkatink",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/102 Tinkatink.png"
+        },
+        "144 Shroodle": {
+          "id": "144",
+          "name": "Shroodle",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/144 Shroodle.png"
+        },
+        "168 Maushold": {
+          "id": "168",
+          "name": "Maushold",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/168 Maushold.png"
+        },
+        "82 Kilowattrel": {
+          "id": "82",
+          "name": "Kilowattrel",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/82 Kilowattrel.png"
+        },
+        "257 Wo-Chien ex": {
+          "id": "257",
+          "name": "Wo-Chien ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/257 Wo-Chien ex.png"
+        },
+        "256 Meowscarada ex": {
+          "id": "256",
+          "name": "Meowscarada ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/256 Meowscarada ex.png"
+        },
+        "208 Frigibax": {
+          "id": "208",
+          "name": "Frigibax",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/208 Frigibax.png"
+        },
+        "235 Quaquaval ex": {
+          "id": "235",
+          "name": "Quaquaval ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/235 Quaquaval ex.png"
+        },
+        "146 Grafaiai": {
+          "id": "146",
+          "name": "Grafaiai",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/146 Grafaiai.png"
+        },
+        "217 Tinkatuff": {
+          "id": "217",
+          "name": "Tinkatuff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/217 Tinkatuff.png"
+        },
+        "34 Fuecoco": {
+          "id": "34",
+          "name": "Fuecoco",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/34 Fuecoco.png"
+        },
+        "223 Grafaiai": {
+          "id": "223",
+          "name": "Grafaiai",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/223 Grafaiai.png"
+        },
+        "17 Tarountula": {
+          "id": "17",
+          "name": "Tarountula",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/17 Tarountula.png"
+        },
+        "75 Pawmo": {
+          "id": "75",
+          "name": "Pawmo",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/75 Pawmo.png"
+        },
+        "245 Copperajah ex": {
+          "id": "245",
+          "name": "Copperajah ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/245 Copperajah ex.png"
+        },
+        "24 Brambleghast": {
+          "id": "24",
+          "name": "Brambleghast",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/24 Brambleghast.png"
+        },
+        "108 Paldean Tauros": {
+          "id": "108",
+          "name": "Paldean Tauros",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/108 Paldean Tauros.png"
+        },
+        "131 Murkrow": {
+          "id": "131",
+          "name": "Murkrow",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/131 Murkrow.png"
+        },
+        "84 Wigglytuff": {
+          "id": "84",
+          "name": "Wigglytuff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/84 Wigglytuff.png"
+        },
+        "132 Honchkrow": {
+          "id": "132",
+          "name": "Honchkrow",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/132 Honchkrow.png"
+        },
+        "147 Bombirdier": {
+          "id": "147",
+          "name": "Bombirdier",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/147 Bombirdier.png"
+        },
+        "96 Palossand": {
+          "id": "96",
+          "name": "Palossand",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/96 Palossand.png"
+        },
+        "201 Fuecoco": {
+          "id": "201",
+          "name": "Fuecoco",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/201 Fuecoco.png"
+        },
+        "238 Slowking ex": {
+          "id": "238",
+          "name": "Slowking ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/238 Slowking ex.png"
+        },
+        "47 Luvdisc": {
+          "id": "47",
+          "name": "Luvdisc",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/47 Luvdisc.png"
+        },
+        "20 Nymble": {
+          "id": "20",
+          "name": "Nymble",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/20 Nymble.png"
+        },
+        "221 Paldean Wooper": {
+          "id": "221",
+          "name": "Paldean Wooper",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/221 Paldean Wooper.png"
+        },
+        "46 Delibird": {
+          "id": "46",
+          "name": "Delibird",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/46 Delibird.png"
+        },
+        "58 Frigibax": {
+          "id": "58",
+          "name": "Frigibax",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/58 Frigibax.png"
+        },
+        "77 Tadbulb": {
+          "id": "77",
+          "name": "Tadbulb",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/77 Tadbulb.png"
+        },
+        "54 Cetoddle": {
+          "id": "54",
+          "name": "Cetoddle",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/54 Cetoddle.png"
+        },
+        "122 Naclstack": {
+          "id": "122",
+          "name": "Naclstack",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/122 Naclstack.png"
+        },
+        "53 Cetoddle": {
+          "id": "53",
+          "name": "Cetoddle",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/53 Cetoddle.png"
+        },
+        "202 Crocalor": {
+          "id": "202",
+          "name": "Crocalor",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/202 Crocalor.png"
+        },
+        "260 Quaquaval ex": {
+          "id": "260",
+          "name": "Quaquaval ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/260 Quaquaval ex.png"
+        },
+        "166 Tandemaus": {
+          "id": "166",
+          "name": "Tandemaus",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/166 Tandemaus.png"
+        },
+        "152 Noibat": {
+          "id": "152",
+          "name": "Noibat",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/152 Noibat.png"
+        },
+        "206 Quaxly": {
+          "id": "206",
+          "name": "Quaxly",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/206 Quaxly.png"
+        },
+        "137 Seviper": {
+          "id": "137",
+          "name": "Seviper",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/137 Seviper.png"
+        },
+        "62 Pikachu": {
+          "id": "62",
+          "name": "Pikachu",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/62 Pikachu.png"
+        },
+        "44 Marill": {
+          "id": "44",
+          "name": "Marill",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/44 Marill.png"
+        },
+        "52 Quaquaval ex": {
+          "id": "52",
+          "name": "Quaquaval ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/52 Quaquaval ex.png"
+        },
+        "228 Farigiraf": {
+          "id": "228",
+          "name": "Farigiraf",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/228 Farigiraf.png"
+        },
+        "115 Toxicroak": {
+          "id": "115",
+          "name": "Toxicroak",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/115 Toxicroak.png"
+        },
+        "232 Wo-Chien ex": {
+          "id": "232",
+          "name": "Wo-Chien ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/232 Wo-Chien ex.png"
+        },
+        "28 Paldean Tauros": {
+          "id": "28",
+          "name": "Paldean Tauros",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/28 Paldean Tauros.png"
+        },
+        "86 Slowking ex": {
+          "id": "86",
+          "name": "Slowking ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/86 Slowking ex.png"
+        },
+        "37 Skeledirge ex": {
+          "id": "37",
+          "name": "Skeledirge ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/37 Skeledirge ex.png"
+        },
+        "213 Gothorita": {
+          "id": "213",
+          "name": "Gothorita",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/213 Gothorita.png"
+        },
+        "210 Baxcalibur": {
+          "id": "210",
+          "name": "Baxcalibur",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/210 Baxcalibur.png"
+        },
+        "142 Maschiff": {
+          "id": "142",
+          "name": "Maschiff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/142 Maschiff.png"
+        },
+        "71 Luxray": {
+          "id": "71",
+          "name": "Luxray",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/71 Luxray.png"
+        },
+        "25 Rellor": {
+          "id": "25",
+          "name": "Rellor",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/25 Rellor.png"
+        },
+        "14 Floragato": {
+          "id": "14",
+          "name": "Floragato",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/14 Floragato.png"
+        },
+        "125 Glimmet": {
+          "id": "125",
+          "name": "Glimmet",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/125 Glimmet.png"
+        },
+        "4 Pineco": {
+          "id": "4",
+          "name": "Pineco",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/4 Pineco.png"
+        },
+        "135 Tyranitar": {
+          "id": "135",
+          "name": "Tyranitar",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/135 Tyranitar.png"
+        },
+        "16 Tarountula": {
+          "id": "16",
+          "name": "Tarountula",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/16 Tarountula.png"
+        },
+        "95 Sandygast": {
+          "id": "95",
+          "name": "Sandygast",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/95 Sandygast.png"
+        },
+        "8 Combee": {
+          "id": "8",
+          "name": "Combee",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/8 Combee.png"
+        },
+        "246 Noivern ex": {
+          "id": "246",
+          "name": "Noivern ex",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/246 Noivern ex.png"
+        },
+        "143 Mabosstiff": {
+          "id": "143",
+          "name": "Mabosstiff",
+          "width": 734,
+          "height": 1021,
+          "image_path": "assets/tcg_cards/paldea_evolved/143 Mabosstiff.png"
+        }
+      },
+      "total_cards": 221
     }
   },
-  "total_sets": 17,
-  "total_cards": 2411
+  "total_sets": 18,
+  "total_cards": 2630
 }

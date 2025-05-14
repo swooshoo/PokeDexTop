@@ -272,13 +272,14 @@ class TCGCard(QFrame):
         
         Examples:
         - "Card #56 Lillie's Clefairy ex" -> "Clefairy"
-        - "GG01 Hisuian Voltorb" -> "Hisuian Voltorb"
+        - "GG01 Hisuian Voltorb" -> "Voltorb"  # Regional prefix removed
         - "SV093 Duraludon" -> "Duraludon"
         - "TG01 Flareon" -> "Flareon"
         - "SWSH001 Grookey" -> "Grookey"
         - "Pikachu VMAX" -> "Pikachu"
         - "Snorlax V-UNION" -> "Snorlax"
         - "Special Delivery Bidoof" -> "Bidoof"
+        - "Paldean Tauros" -> "Tauros"  # Regional prefix removed
         """
         import re
         
@@ -326,14 +327,14 @@ class TCGCard(QFrame):
                 return tapu_match.group(1)
             return card_name.split()[0] + " " + card_name.split()[1]
         
-        # Handle regional forms
+        # Handle regional forms - EXTRACT JUST THE BASE POKÉMON NAME
         regional_prefixes = ["Alolan", "Galarian", "Paldean", "Hisuian"]
         for region in regional_prefixes:
             if card_name.startswith(f"{region} "):
-                # Extract the Pokémon name after the region, but before any suffixes
+                # Extract only the Pokémon name after the region, excluding the region prefix
                 region_match = re.match(f'{region}\\s+(\\w+(?:\\s+\\w+)?)(?:\\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION))?', card_name)
                 if region_match:
-                    return f"{region} {region_match.group(1)}"
+                    return region_match.group(1)  # Return just the Pokémon name without regional prefix
         
         # Handle character's Pokémon (e.g., "Lillie's Clefairy")
         possessive_match = re.match(r"(\w+\'s)\s+(\w+(?:\s+\w+)?)(?:\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION))?", card_name)
