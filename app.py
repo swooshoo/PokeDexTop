@@ -272,14 +272,15 @@ class TCGCard(QFrame):
         
         Examples:
         - "Card #56 Lillie's Clefairy ex" -> "Clefairy"
-        - "GG01 Hisuian Voltorb" -> "Voltorb"  # Regional prefix removed
+        - "GG01 Hisuian Voltorb" -> "Voltorb"
         - "SV093 Duraludon" -> "Duraludon"
         - "TG01 Flareon" -> "Flareon"
         - "SWSH001 Grookey" -> "Grookey"
         - "Pikachu VMAX" -> "Pikachu"
         - "Snorlax V-UNION" -> "Snorlax"
         - "Special Delivery Bidoof" -> "Bidoof"
-        - "Paldean Tauros" -> "Tauros"  # Regional prefix removed
+        - "Paldean Tauros" -> "Tauros"
+        - "Pikachu with Grey Felt Hat" -> "Pikachu"
         """
         import re
         
@@ -297,6 +298,23 @@ class TCGCard(QFrame):
         # This pattern specifically targets the alphanumeric IDs like SWSH001, GG01
         card_name = re.sub(r'^[A-Za-z]{1,5}\d+\s+', '', card_name)
         
+        # Handle specific costume or variant Pokémon first
+        # These are direct matches for special cards with descriptive titles
+        costume_variants = {
+            "Pikachu with Grey Felt Hat": "Pikachu",
+            "Pikachu with Red Cap": "Pikachu",
+            "Pikachu with Blue Hat": "Pikachu",
+            "Flying Pikachu": "Pikachu",
+            "Surfing Pikachu": "Pikachu",
+            "Detective Pikachu": "Pikachu",
+            "Pikachu in Charizard Costume": "Pikachu"
+            # Add other costume/variant cards as needed
+        }
+        
+        # Check for exact matches in costume variants
+        if card_name in costume_variants:
+            return costume_variants[card_name]
+        
         # Special case handling for specific Pokémon with unusual names
         special_cases = {
             "Mr. Mime": "Mr. Mime",
@@ -310,10 +328,16 @@ class TCGCard(QFrame):
             "Nidoran♂": "Nidoran♂"
         }
         
-        # Check for special case matches within the name first
+        # Check for special case matches within the name
         for special_name, replacement in special_cases.items():
             if special_name in card_name:
                 return replacement
+        
+        # Generic pattern for Pokémon with costume/descriptive suffixes
+        # This handles cases like "Pikachu with [something]" that aren't in the direct mapping
+        costume_match = re.match(r"(\w+)(?:\s+with\s+.+)", card_name)
+        if costume_match:
+            return costume_match.group(1)
         
         # Handle Special Delivery cards directly
         if card_name.startswith("Special Delivery "):
