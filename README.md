@@ -16,7 +16,7 @@ Upon a friend group challenging eachother to cultivate a TCG national pokedex ge
 | Stellar Crown | Silver Tempest Trainer Gallery |
 | Shrouded Fable | Crown Zenith Galarian Gallery |
 | Twilight Masquerade | Sword and Shield Black Star Promos |
-| Temporal Forces | |
+| Temporal Forces | Astral Radiance |
 | Paldean Fates | |
 | Paradox Rift | |
 | 151 | |
