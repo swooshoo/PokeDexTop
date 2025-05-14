@@ -18590,8 +18590,1464 @@
         }
       },
       "total_cards": 221
+    },
+    "scarlet_and_violet": {
+      "name": "Scarlet And Violet",
+      "path": "assets/tcg_cards/scarlet_and_violet",
+      "cards": {
+        "201 Toedscool": {
+          "id": "201",
+          "name": "Toedscool",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/201 Toedscool.png"
+        },
+        "116 Krokorok": {
+          "id": "116",
+          "name": "Krokorok",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/116 Krokorok.png"
+        },
+        "161 Maushold": {
+          "id": "161",
+          "name": "Maushold",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/161 Maushold.png"
+        },
+        "36 Fuecoco": {
+          "id": "36",
+          "name": "Fuecoco",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/36 Fuecoco.png"
+        },
+        "136 Maschiff": {
+          "id": "136",
+          "name": "Maschiff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/136 Maschiff.png"
+        },
+        "215 Riolu": {
+          "id": "215",
+          "name": "Riolu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/215 Riolu.png"
+        },
+        "131 Toxicroak ex": {
+          "id": "131",
+          "name": "Toxicroak ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/131 Toxicroak ex.png"
+        },
+        "160 Tandemaus": {
+          "id": "160",
+          "name": "Tandemaus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/160 Tandemaus.png"
+        },
+        "48 Alomomola": {
+          "id": "48",
+          "name": "Alomomola",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/48 Alomomola.png"
+        },
+        "94 Dedenne": {
+          "id": "94",
+          "name": "Dedenne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/94 Dedenne.png"
+        },
+        "144 Chansey": {
+          "id": "144",
+          "name": "Chansey",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/144 Chansey.png"
+        },
+        "156 Lechonk": {
+          "id": "156",
+          "name": "Lechonk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/156 Lechonk.png"
+        },
+        "146 Zangoose": {
+          "id": "146",
+          "name": "Zangoose",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/146 Zangoose.png"
+        },
+        "159 Tandemaus": {
+          "id": "159",
+          "name": "Tandemaus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/159 Tandemaus.png"
+        },
+        "11 Skiddo": {
+          "id": "11",
+          "name": "Skiddo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/11 Skiddo.png"
+        },
+        "43 Slowbro": {
+          "id": "43",
+          "name": "Slowbro",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/43 Slowbro.png"
+        },
+        "246 Great Tusk ex": {
+          "id": "246",
+          "name": "Great Tusk ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/246 Great Tusk ex.png"
+        },
+        "79 Kilowattrel": {
+          "id": "79",
+          "name": "Kilowattrel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/79 Kilowattrel.png"
+        },
+        "86 Gardevoir ex": {
+          "id": "86",
+          "name": "Gardevoir ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/86 Gardevoir ex.png"
+        },
+        "248 Iron Treads ex": {
+          "id": "248",
+          "name": "Iron Treads ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/248 Iron Treads ex.png"
+        },
+        "112 Riolu": {
+          "id": "112",
+          "name": "Riolu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/112 Riolu.png"
+        },
+        "85 Kirlia": {
+          "id": "85",
+          "name": "Kirlia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/85 Kirlia.png"
+        },
+        "151 Skwovet": {
+          "id": "151",
+          "name": "Skwovet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/151 Skwovet.png"
+        },
+        "13 Sprigatito": {
+          "id": "13",
+          "name": "Sprigatito",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/13 Sprigatito.png"
+        },
+        "10 Vivillon": {
+          "id": "10",
+          "name": "Vivillon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/10 Vivillon.png"
+        },
+        "82 Drowzee": {
+          "id": "82",
+          "name": "Drowzee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/82 Drowzee.png"
+        },
+        "142 Revavroom": {
+          "id": "142",
+          "name": "Revavroom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/142 Revavroom.png"
+        },
+        "68 Pachirisu": {
+          "id": "68",
+          "name": "Pachirisu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/68 Pachirisu.png"
+        },
+        "25 Toedscool": {
+          "id": "25",
+          "name": "Toedscool",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/25 Toedscool.png"
+        },
+        "33 Houndour": {
+          "id": "33",
+          "name": "Houndour",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/33 Houndour.png"
+        },
+        "149 Staravia": {
+          "id": "149",
+          "name": "Staravia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/149 Staravia.png"
+        },
+        "35 Torkoal": {
+          "id": "35",
+          "name": "Torkoal",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/35 Torkoal.png"
+        },
+        "124 Koraidon": {
+          "id": "124",
+          "name": "Koraidon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/124 Koraidon.png"
+        },
+        "152 Greedent": {
+          "id": "152",
+          "name": "Greedent",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/152 Greedent.png"
+        },
+        "147 Zangoose": {
+          "id": "147",
+          "name": "Zangoose",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/147 Zangoose.png"
+        },
+        "206 Wiglett": {
+          "id": "206",
+          "name": "Wiglett",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/206 Wiglett.png"
+        },
+        "20 Smoliv": {
+          "id": "20",
+          "name": "Smoliv",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/20 Smoliv.png"
+        },
+        "228 Gardevoir ex": {
+          "id": "228",
+          "name": "Gardevoir ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/228 Gardevoir ex.png"
+        },
+        "44 Magikarp": {
+          "id": "44",
+          "name": "Magikarp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/44 Magikarp.png"
+        },
+        "29 Scovillain": {
+          "id": "29",
+          "name": "Scovillain",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/29 Scovillain.png"
+        },
+        "204 Slowpoke": {
+          "id": "204",
+          "name": "Slowpoke",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/204 Slowpoke.png"
+        },
+        "56 Wiglett": {
+          "id": "56",
+          "name": "Wiglett",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/56 Wiglett.png"
+        },
+        "90 Drifblim": {
+          "id": "90",
+          "name": "Drifblim",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/90 Drifblim.png"
+        },
+        "225 Gyarados ex": {
+          "id": "225",
+          "name": "Gyarados ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/225 Gyarados ex.png"
+        },
+        "227 Miraidon ex": {
+          "id": "227",
+          "name": "Miraidon ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/227 Miraidon ex.png"
+        },
+        "126 Grimer": {
+          "id": "126",
+          "name": "Grimer",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/126 Grimer.png"
+        },
+        "212 Kirlia": {
+          "id": "212",
+          "name": "Kirlia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/212 Kirlia.png"
+        },
+        "52 Quaxly": {
+          "id": "52",
+          "name": "Quaxly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/52 Quaxly.png"
+        },
+        "50 Clawitzer": {
+          "id": "50",
+          "name": "Clawitzer",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/50 Clawitzer.png"
+        },
+        "117 Krookodile": {
+          "id": "117",
+          "name": "Krookodile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/117 Krookodile.png"
+        },
+        "22 Dolliv": {
+          "id": "22",
+          "name": "Dolliv",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/22 Dolliv.png"
+        },
+        "244 Miraidon ex": {
+          "id": "244",
+          "name": "Miraidon ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/244 Miraidon ex.png"
+        },
+        "221 Starly": {
+          "id": "221",
+          "name": "Starly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/221 Starly.png"
+        },
+        "28 Capsakid": {
+          "id": "28",
+          "name": "Capsakid",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/28 Capsakid.png"
+        },
+        "148 Starly": {
+          "id": "148",
+          "name": "Starly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/148 Starly.png"
+        },
+        "34 Houndoom": {
+          "id": "34",
+          "name": "Houndoom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/34 Houndoom.png"
+        },
+        "150 Staraptor": {
+          "id": "150",
+          "name": "Staraptor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/150 Staraptor.png"
+        },
+        "38 Skeledirge": {
+          "id": "38",
+          "name": "Skeledirge",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/38 Skeledirge.png"
+        },
+        "89 Drifloon": {
+          "id": "89",
+          "name": "Drifloon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/89 Drifloon.png"
+        },
+        "72 Toxtricity": {
+          "id": "72",
+          "name": "Toxtricity",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/72 Toxtricity.png"
+        },
+        "226 Magnezone ex": {
+          "id": "226",
+          "name": "Magnezone ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/226 Magnezone ex.png"
+        },
+        "113 Riolu": {
+          "id": "113",
+          "name": "Riolu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/113 Riolu.png"
+        },
+        "203 Armarouge": {
+          "id": "203",
+          "name": "Armarouge",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/203 Armarouge.png"
+        },
+        "233 Iron Treads ex": {
+          "id": "233",
+          "name": "Iron Treads ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/233 Iron Treads ex.png"
+        },
+        "7 Tropius": {
+          "id": "7",
+          "name": "Tropius",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/7 Tropius.png"
+        },
+        "207 Dondozo": {
+          "id": "207",
+          "name": "Dondozo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/207 Dondozo.png"
+        },
+        "132 Pawniard": {
+          "id": "132",
+          "name": "Pawniard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/132 Pawniard.png"
+        },
+        "208 Pachirisu": {
+          "id": "208",
+          "name": "Pachirisu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/208 Pachirisu.png"
+        },
+        "55 Wiglett": {
+          "id": "55",
+          "name": "Wiglett",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/55 Wiglett.png"
+        },
+        "222 Skwovet": {
+          "id": "222",
+          "name": "Skwovet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/222 Skwovet.png"
+        },
+        "234 Oinkologne ex": {
+          "id": "234",
+          "name": "Oinkologne ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/234 Oinkologne ex.png"
+        },
+        "165 Flamigo": {
+          "id": "165",
+          "name": "Flamigo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/165 Flamigo.png"
+        },
+        "9 Spewpa": {
+          "id": "9",
+          "name": "Spewpa",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/9 Spewpa.png"
+        },
+        "49 Clauncher": {
+          "id": "49",
+          "name": "Clauncher",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/49 Clauncher.png"
+        },
+        "141 Varoom": {
+          "id": "141",
+          "name": "Varoom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/141 Varoom.png"
+        },
+        "31 Growlithe": {
+          "id": "31",
+          "name": "Growlithe",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/31 Growlithe.png"
+        },
+        "162 Squawkabilly": {
+          "id": "162",
+          "name": "Squawkabilly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/162 Squawkabilly.png"
+        },
+        "213 Fidough": {
+          "id": "213",
+          "name": "Fidough",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/213 Fidough.png"
+        },
+        "47 Floatzel": {
+          "id": "47",
+          "name": "Floatzel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/47 Floatzel.png"
+        },
+        "15 Meowscarada": {
+          "id": "15",
+          "name": "Meowscarada",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/15 Meowscarada.png"
+        },
+        "125 Koraidon ex": {
+          "id": "125",
+          "name": "Koraidon ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/125 Koraidon ex.png"
+        },
+        "209 Pawmot": {
+          "id": "209",
+          "name": "Pawmot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/209 Pawmot.png"
+        },
+        "247 Koraidon ex": {
+          "id": "247",
+          "name": "Koraidon ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/247 Koraidon ex.png"
+        },
+        "123 Great Tusk ex": {
+          "id": "123",
+          "name": "Great Tusk ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/123 Great Tusk ex.png"
+        },
+        "103 Espathra": {
+          "id": "103",
+          "name": "Espathra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/103 Espathra.png"
+        },
+        "81 Miraidon ex": {
+          "id": "81",
+          "name": "Miraidon ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/81 Miraidon ex.png"
+        },
+        "220 Kingambit": {
+          "id": "220",
+          "name": "Kingambit",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/220 Kingambit.png"
+        },
+        "65 Magnezone ex": {
+          "id": "65",
+          "name": "Magnezone ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/65 Magnezone ex.png"
+        },
+        "155 Lechonk": {
+          "id": "155",
+          "name": "Lechonk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/155 Lechonk.png"
+        },
+        "100 Flittle": {
+          "id": "100",
+          "name": "Flittle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/100 Flittle.png"
+        },
+        "84 Ralts": {
+          "id": "84",
+          "name": "Ralts",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/84 Ralts.png"
+        },
+        "114 Lucario": {
+          "id": "114",
+          "name": "Lucario",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/114 Lucario.png"
+        },
+        "214 Greavard": {
+          "id": "214",
+          "name": "Greavard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/214 Greavard.png"
+        },
+        "202 Scovillain": {
+          "id": "202",
+          "name": "Scovillain",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/202 Scovillain.png"
+        },
+        "21 Smoliv": {
+          "id": "21",
+          "name": "Smoliv",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/21 Smoliv.png"
+        },
+        "164 Cyclizar": {
+          "id": "164",
+          "name": "Cyclizar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/164 Cyclizar.png"
+        },
+        "76 Pawmot": {
+          "id": "76",
+          "name": "Pawmot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/76 Pawmot.png"
+        },
+        "42 Slowpoke": {
+          "id": "42",
+          "name": "Slowpoke",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/42 Slowpoke.png"
+        },
+        "163 Cyclizar": {
+          "id": "163",
+          "name": "Cyclizar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/163 Cyclizar.png"
+        },
+        "210 Drowzee": {
+          "id": "210",
+          "name": "Drowzee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/210 Drowzee.png"
+        },
+        "111 Medicham": {
+          "id": "111",
+          "name": "Medicham",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/111 Medicham.png"
+        },
+        "211 Ralts": {
+          "id": "211",
+          "name": "Ralts",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/211 Ralts.png"
+        },
+        "37 Crocalor": {
+          "id": "37",
+          "name": "Crocalor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/37 Crocalor.png"
+        },
+        "216 Sandile": {
+          "id": "216",
+          "name": "Sandile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/216 Sandile.png"
+        },
+        "39 Charcadet": {
+          "id": "39",
+          "name": "Charcadet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/39 Charcadet.png"
+        },
+        "58 Cetoddle": {
+          "id": "58",
+          "name": "Cetoddle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/58 Cetoddle.png"
+        },
+        "157 Oinkologne": {
+          "id": "157",
+          "name": "Oinkologne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/157 Oinkologne.png"
+        },
+        "30 Growlithe": {
+          "id": "30",
+          "name": "Growlithe",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/30 Growlithe.png"
+        },
+        "46 Buizel": {
+          "id": "46",
+          "name": "Buizel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/46 Buizel.png"
+        },
+        "243 Spidops ex": {
+          "id": "243",
+          "name": "Spidops ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/243 Spidops ex.png"
+        },
+        "99 Dachsbun": {
+          "id": "99",
+          "name": "Dachsbun",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/99 Dachsbun.png"
+        },
+        "2 Heracross": {
+          "id": "2",
+          "name": "Heracross",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/2 Heracross.png"
+        },
+        "127 Muk": {
+          "id": "127",
+          "name": "Muk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/127 Muk.png"
+        },
+        "5 Cacnea": {
+          "id": "5",
+          "name": "Cacnea",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/5 Cacnea.png"
+        },
+        "108 Primeape": {
+          "id": "108",
+          "name": "Primeape",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/108 Primeape.png"
+        },
+        "218 Mabosstiff": {
+          "id": "218",
+          "name": "Mabosstiff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/218 Mabosstiff.png"
+        },
+        "54 Quaquaval": {
+          "id": "54",
+          "name": "Quaquaval",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/54 Quaquaval.png"
+        },
+        "57 Wugtrio": {
+          "id": "57",
+          "name": "Wugtrio",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/57 Wugtrio.png"
+        },
+        "53 Quaxwell": {
+          "id": "53",
+          "name": "Quaxwell",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/53 Quaxwell.png"
+        },
+        "97 Fidough": {
+          "id": "97",
+          "name": "Fidough",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/97 Fidough.png"
+        },
+        "217 Klawf": {
+          "id": "217",
+          "name": "Klawf",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/217 Klawf.png"
+        },
+        "143 Iron Treads ex": {
+          "id": "143",
+          "name": "Iron Treads ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/143 Iron Treads ex.png"
+        },
+        "110 Meditite": {
+          "id": "110",
+          "name": "Meditite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/110 Meditite.png"
+        },
+        "137 Mabosstiff": {
+          "id": "137",
+          "name": "Mabosstiff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/137 Mabosstiff.png"
+        },
+        "74 Pawmi": {
+          "id": "74",
+          "name": "Pawmi",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/74 Pawmi.png"
+        },
+        "59 Cetoddle": {
+          "id": "59",
+          "name": "Cetoddle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/59 Cetoddle.png"
+        },
+        "92 Floette": {
+          "id": "92",
+          "name": "Floette",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/92 Floette.png"
+        },
+        "80 Miraidon": {
+          "id": "80",
+          "name": "Miraidon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/80 Miraidon.png"
+        },
+        "78 Wattrel": {
+          "id": "78",
+          "name": "Wattrel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/78 Wattrel.png"
+        },
+        "27 Capsakid": {
+          "id": "27",
+          "name": "Capsakid",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/27 Capsakid.png"
+        },
+        "23 Arboliva": {
+          "id": "23",
+          "name": "Arboliva",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/23 Arboliva.png"
+        },
+        "32 Arcanine ex": {
+          "id": "32",
+          "name": "Arcanine ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/32 Arcanine ex.png"
+        },
+        "128 Seviper": {
+          "id": "128",
+          "name": "Seviper",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/128 Seviper.png"
+        },
+        "26 Toedscruel": {
+          "id": "26",
+          "name": "Toedscruel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/26 Toedscruel.png"
+        },
+        "130 Croagunk": {
+          "id": "130",
+          "name": "Croagunk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/130 Croagunk.png"
+        },
+        "41 Armarouge": {
+          "id": "41",
+          "name": "Armarouge",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/41 Armarouge.png"
+        },
+        "71 Toxel": {
+          "id": "71",
+          "name": "Toxel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/71 Toxel.png"
+        },
+        "95 Dedenne": {
+          "id": "95",
+          "name": "Dedenne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/95 Dedenne.png"
+        },
+        "139 Forretress": {
+          "id": "139",
+          "name": "Forretress",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/139 Forretress.png"
+        },
+        "102 Flittle": {
+          "id": "102",
+          "name": "Flittle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/102 Flittle.png"
+        },
+        "199 Tarountula": {
+          "id": "199",
+          "name": "Tarountula",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/199 Tarountula.png"
+        },
+        "229 Banette ex": {
+          "id": "229",
+          "name": "Banette ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/229 Banette ex.png"
+        },
+        "1 Pineco": {
+          "id": "1",
+          "name": "Pineco",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/1 Pineco.png"
+        },
+        "17 Tarountula": {
+          "id": "17",
+          "name": "Tarountula",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/17 Tarountula.png"
+        },
+        "87 Shuppet": {
+          "id": "87",
+          "name": "Shuppet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/87 Shuppet.png"
+        },
+        "101 Flittle": {
+          "id": "101",
+          "name": "Flittle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/101 Flittle.png"
+        },
+        "67 Flaaffy": {
+          "id": "67",
+          "name": "Flaaffy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/67 Flaaffy.png"
+        },
+        "115 Sandile": {
+          "id": "115",
+          "name": "Sandile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/115 Sandile.png"
+        },
+        "75 Pawmo": {
+          "id": "75",
+          "name": "Pawmo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/75 Pawmo.png"
+        },
+        "88 Banette ex": {
+          "id": "88",
+          "name": "Banette ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/88 Banette ex.png"
+        },
+        "98 Fidough": {
+          "id": "98",
+          "name": "Fidough",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/98 Fidough.png"
+        },
+        "140 Varoom": {
+          "id": "140",
+          "name": "Varoom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/140 Varoom.png"
+        },
+        "4 Breloom": {
+          "id": "4",
+          "name": "Breloom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/4 Breloom.png"
+        },
+        "96 Klefki": {
+          "id": "96",
+          "name": "Klefki",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/96 Klefki.png"
+        },
+        "6 Cacturne": {
+          "id": "6",
+          "name": "Cacturne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/6 Cacturne.png"
+        },
+        "154 Lechonk": {
+          "id": "154",
+          "name": "Lechonk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/154 Lechonk.png"
+        },
+        "45 Gyarados ex": {
+          "id": "45",
+          "name": "Gyarados ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/45 Gyarados ex.png"
+        },
+        "135 Maschiff": {
+          "id": "135",
+          "name": "Maschiff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/135 Maschiff.png"
+        },
+        "205 Clauncher": {
+          "id": "205",
+          "name": "Clauncher",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/205 Clauncher.png"
+        },
+        "73 Pawmi": {
+          "id": "73",
+          "name": "Pawmi",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/73 Pawmi.png"
+        },
+        "219 Bombirdier": {
+          "id": "219",
+          "name": "Bombirdier",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/219 Bombirdier.png"
+        },
+        "40 Charcadet": {
+          "id": "40",
+          "name": "Charcadet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/40 Charcadet.png"
+        },
+        "158 Oinkologne ex": {
+          "id": "158",
+          "name": "Oinkologne ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/158 Oinkologne ex.png"
+        },
+        "19 Spidops ex": {
+          "id": "19",
+          "name": "Spidops ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/19 Spidops ex.png"
+        },
+        "223 Spidops ex": {
+          "id": "223",
+          "name": "Spidops ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/223 Spidops ex.png"
+        },
+        "129 Spiritomb": {
+          "id": "129",
+          "name": "Spiritomb",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/129 Spiritomb.png"
+        },
+        "107 Mankey": {
+          "id": "107",
+          "name": "Mankey",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/107 Mankey.png"
+        },
+        "153 Indeedee": {
+          "id": "153",
+          "name": "Indeedee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/153 Indeedee.png"
+        },
+        "231 Koraidon ex": {
+          "id": "231",
+          "name": "Koraidon ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/231 Koraidon ex.png"
+        },
+        "3 Shroomish": {
+          "id": "3",
+          "name": "Shroomish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/3 Shroomish.png"
+        },
+        "120 Sandaconda": {
+          "id": "120",
+          "name": "Sandaconda",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/120 Sandaconda.png"
+        },
+        "104 Greavard": {
+          "id": "104",
+          "name": "Greavard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/104 Greavard.png"
+        },
+        "61 Dondozo": {
+          "id": "61",
+          "name": "Dondozo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/61 Dondozo.png"
+        },
+        "91 Flab\u00e9b\u00e9": {
+          "id": "91",
+          "name": "Flab\u00e9b\u00e9",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/91 Flab\u00e9b\u00e9.png"
+        },
+        "18 Tarountula": {
+          "id": "18",
+          "name": "Tarountula",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/18 Tarountula.png"
+        },
+        "60 Cetitan": {
+          "id": "60",
+          "name": "Cetitan",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/60 Cetitan.png"
+        },
+        "118 Hawlucha": {
+          "id": "118",
+          "name": "Hawlucha",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/118 Hawlucha.png"
+        },
+        "232 Toxicroak ex": {
+          "id": "232",
+          "name": "Toxicroak ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/232 Toxicroak ex.png"
+        },
+        "63 Magnemite": {
+          "id": "63",
+          "name": "Magnemite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/63 Magnemite.png"
+        },
+        "245 Gardevoir ex": {
+          "id": "245",
+          "name": "Gardevoir ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/245 Gardevoir ex.png"
+        },
+        "93 Florges": {
+          "id": "93",
+          "name": "Florges",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/93 Florges.png"
+        },
+        "51 Bruxish": {
+          "id": "51",
+          "name": "Bruxish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/51 Bruxish.png"
+        },
+        "106 Houndstone": {
+          "id": "106",
+          "name": "Houndstone",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/106 Houndstone.png"
+        },
+        "62 Tatsugiri": {
+          "id": "62",
+          "name": "Tatsugiri",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/62 Tatsugiri.png"
+        },
+        "83 Hypno": {
+          "id": "83",
+          "name": "Hypno",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/83 Hypno.png"
+        },
+        "133 Bisharp": {
+          "id": "133",
+          "name": "Bisharp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/133 Bisharp.png"
+        },
+        "122 Klawf": {
+          "id": "122",
+          "name": "Klawf",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/122 Klawf.png"
+        },
+        "12 Gogoat": {
+          "id": "12",
+          "name": "Gogoat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/12 Gogoat.png"
+        },
+        "224 Arcanine ex": {
+          "id": "224",
+          "name": "Arcanine ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/224 Arcanine ex.png"
+        },
+        "121 Stonjourner": {
+          "id": "121",
+          "name": "Stonjourner",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/121 Stonjourner.png"
+        },
+        "134 Kingambit": {
+          "id": "134",
+          "name": "Kingambit",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/134 Kingambit.png"
+        },
+        "70 Rotom": {
+          "id": "70",
+          "name": "Rotom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/70 Rotom.png"
+        },
+        "138 Bombirdier": {
+          "id": "138",
+          "name": "Bombirdier",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/138 Bombirdier.png"
+        },
+        "119 Silicobra": {
+          "id": "119",
+          "name": "Silicobra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/119 Silicobra.png"
+        },
+        "14 Floragato": {
+          "id": "14",
+          "name": "Floragato",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/14 Floragato.png"
+        },
+        "8 Scatterbug": {
+          "id": "8",
+          "name": "Scatterbug",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/8 Scatterbug.png"
+        },
+        "24 Toedscool": {
+          "id": "24",
+          "name": "Toedscool",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/24 Toedscool.png"
+        },
+        "109 Annihilape": {
+          "id": "109",
+          "name": "Annihilape",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/109 Annihilape.png"
+        },
+        "105 Greavard": {
+          "id": "105",
+          "name": "Greavard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/105 Greavard.png"
+        },
+        "64 Magneton": {
+          "id": "64",
+          "name": "Magneton",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/64 Magneton.png"
+        },
+        "16 Tarountula": {
+          "id": "16",
+          "name": "Tarountula",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/16 Tarountula.png"
+        },
+        "77 Wattrel": {
+          "id": "77",
+          "name": "Wattrel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/77 Wattrel.png"
+        },
+        "69 Rotom": {
+          "id": "69",
+          "name": "Rotom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/69 Rotom.png"
+        },
+        "145 Blissey": {
+          "id": "145",
+          "name": "Blissey",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/145 Blissey.png"
+        },
+        "66 Mareep": {
+          "id": "66",
+          "name": "Mareep",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/66 Mareep.png"
+        },
+        "230 Great Tusk ex": {
+          "id": "230",
+          "name": "Great Tusk ex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/230 Great Tusk ex.png"
+        },
+        "200 Dolliv": {
+          "id": "200",
+          "name": "Dolliv",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/scarlet_and_violet/200 Dolliv.png"
+        }
+      },
+      "total_cards": 207
     }
   },
-  "total_sets": 18,
-  "total_cards": 2630
+  "total_sets": 19,
+  "total_cards": 2837
 }
