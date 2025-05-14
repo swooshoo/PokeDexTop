@@ -11,10 +11,9 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QSplitter, QComboBox, QLineEdit, QCompleter,
                             QToolButton, QMessageBox, QDialog, QGroupBox, QRadioButton, 
                             QCheckBox, QButtonGroup, QDialogButtonBox, QFileDialog)
-from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen # QPainter and QPen should be in QtGui, not QtCore
-from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF # QRectF is in QtCore
-from PyQt5.QtPrintSupport import QPrinter # Only QPrinter is in QtPrintSupport
-import datetime
+from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen, QColor
+from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF 
+from PyQt5.QtPrintSupport import QPrinter 
 
 
 # Path to metadata files
@@ -517,6 +516,11 @@ class ExportDialog(QDialog):
             lambda state: self.collection_name.setEnabled(state == Qt.Checked)
         )
         
+        # Add Pokémon name labels toggle
+        self.show_pokemon_names = QCheckBox("Show Pokémon names under cards")
+        self.show_pokemon_names.setChecked(True)  # Enabled by default
+        content_layout.addWidget(self.show_pokemon_names)
+        
         content_group.setLayout(content_layout)
         layout.addWidget(content_group)
         
@@ -543,7 +547,8 @@ class ExportDialog(QDialog):
             "include_all": self.include_all.isChecked(),
             "include_tcg_only": self.include_tcg_only.isChecked(),
             "include_collection_name": self.include_collection_name.isChecked(),
-            "collection_name": self.collection_name.text()
+            "collection_name": self.collection_name.text(),
+            "show_pokemon_names": self.show_pokemon_names.isChecked()
         }
         
 class GenerationTab(QWidget):
@@ -630,6 +635,7 @@ class GenerationTab(QWidget):
         if pokemon_id in self.pokemon_metadata:
             return self.pokemon_metadata[pokemon_id]
         return None
+    
     def export_generation(self):
         """Open export dialog and handle the export process"""
         # Create and show the export dialog
@@ -663,25 +669,31 @@ class GenerationTab(QWidget):
         export_widget = QWidget()
         export_layout = QVBoxLayout(export_widget)
         export_layout.setSpacing(20)
-        export_widget.setStyleSheet("background-color: white;")
+        
+        # Set dark-gray background color
+        export_widget.setStyleSheet("background-color: #282b30;")
         
         # Add header with collection name if enabled
         if config["include_collection_name"]:
             header_widget = QWidget()
             header_layout = QVBoxLayout(header_widget)
+            header_widget.setStyleSheet("background-color: transparent;")
             
             title = QLabel(f"{config['collection_name']}")
             title.setFont(QFont('Arial', 20, QFont.Bold))
+            title.setStyleSheet("color: #F8F8FF;")  # Ghost white color for text
             title.setAlignment(Qt.AlignCenter)
             header_layout.addWidget(title)
             
             subtitle = QLabel(f"{self.gen_name} - Pokémon #{self.start_id} - #{self.end_id}")
             subtitle.setFont(QFont('Arial', 14))
+            subtitle.setStyleSheet("color: #F8F8FF;")  # Ghost white color for text
             subtitle.setAlignment(Qt.AlignCenter)
             header_layout.addWidget(subtitle)
             
             # Add date
             date_label = QLabel(f"Exported on {datetime.datetime.now().strftime('%Y-%m-%d')}")
+            date_label.setStyleSheet("color: #F8F8FF;")  # Ghost white color for text
             date_label.setAlignment(Qt.AlignCenter)
             header_layout.addWidget(date_label)
             
@@ -691,9 +703,10 @@ class GenerationTab(QWidget):
         grid_widget = QWidget()
         grid_layout = QGridLayout(grid_widget)
         grid_layout.setSpacing(15)
+        grid_widget.setStyleSheet("background-color: transparent;")
         
         # Set equal column stretching
-        columns = 4  # Use 5 columns for export
+        columns = 5  # Use 5 columns for export
         for i in range(columns):
             grid_layout.setColumnStretch(i, 1)
         
@@ -712,9 +725,37 @@ class GenerationTab(QWidget):
             if config["include_tcg_only"] and not has_tcg_card:
                 continue
             
+            # Create a container widget for card and its name label
+            card_container = QWidget()
+            card_container.setStyleSheet("background-color: transparent;")
+            card_layout = QVBoxLayout(card_container)
+            card_layout.setContentsMargins(0, 0, 0, 0)
+            
             # Create a PokemonCard
             pokemon_card = PokemonCard(pokemon_data, self.imported_cards)
-            grid_layout.addWidget(pokemon_card, row, col, Qt.AlignCenter)
+            
+            # Override the PokemonCard styling to match the binder theme
+            pokemon_card.setStyleSheet("""
+                PokemonCard {
+                    background-color: #282b30;
+                    border-radius: 8px;
+                    margin: 5px;
+                }
+                PokemonCard:hover {
+                    background-color: #282b30;
+                }
+            """)
+            
+            card_layout.addWidget(pokemon_card, alignment=Qt.AlignCenter)
+            
+            # Add Pokémon name label if enabled
+            if config["show_pokemon_names"]:
+                name_label = QLabel(f"#{pokemon_id} {pokemon_data['name']}")
+                name_label.setStyleSheet("color: #F8F8FF; background-color: transparent; border: none;")
+                name_label.setAlignment(Qt.AlignCenter)
+                card_layout.addWidget(name_label)
+            
+            grid_layout.addWidget(card_container, row, col, Qt.AlignCenter)
             cards_added += 1
             
             # Move to the next column or row
@@ -728,7 +769,13 @@ class GenerationTab(QWidget):
         # Add footer
         footer = QLabel("Generated by PokéDextop")
         footer.setAlignment(Qt.AlignCenter)
-        footer.setFont(QFont('Arial', 10, QFont.StyleItalic))
+        footer.setFont(QFont('Arial', 10))
+        footer.setStyleSheet("color: #F8F8FF;")  # Ghost white color for text
+        footer.setFont(QFont('Arial', 10))
+        try:
+            footer.font().setItalic(True)  # Alternative way to set italic
+        except:
+            pass  # If setItalic fails, continue without italic
         export_layout.addWidget(footer)
         
         if cards_added == 0:
@@ -739,7 +786,7 @@ class GenerationTab(QWidget):
         # Render the widget to a pixmap
         size = export_widget.sizeHint()
         pixmap = QPixmap(size)
-        pixmap.fill(Qt.white)
+        pixmap.fill(QColor("#282b30"))  # Fill with dark-gray background
         
         # Make the widget visible in order to render it correctly
         export_widget.setVisible(True)
@@ -754,7 +801,7 @@ class GenerationTab(QWidget):
             QMessageBox.warning(self, "Export Failed", 
                             f"Failed to save export to {file_path}")
             return False
-
+    
     def export_as_pdf(self, file_path, config):
         """Export the generation as a PDF document with pagination (4x4 grid per page)"""
         try:
@@ -807,8 +854,11 @@ class GenerationTab(QWidget):
             header_height = 100 if config["include_collection_name"] else 0
             footer_height = 30
             
+            # Calculate card size, including space for name label if enabled
+            name_label_height = 20 if config["show_pokemon_names"] else 0
+            
             card_width = usable_width / columns
-            card_height = (usable_height - header_height - footer_height) / rows
+            card_height = (usable_height - header_height - footer_height) / rows - name_label_height
             
             # Calculate number of pages
             total_pages = (len(cards_to_render) + cards_per_page - 1) // cards_per_page
@@ -819,6 +869,9 @@ class GenerationTab(QWidget):
                     # Add a new page for subsequent pages
                     printer.newPage()
                 
+                # Fill background with dark gray
+                painter.fillRect(page_rect, QColor("#282b30"))
+                
                 # Current page starting position
                 x_start = margin
                 y_start = margin
@@ -826,6 +879,9 @@ class GenerationTab(QWidget):
                 # Draw header if enabled
                 if config["include_collection_name"]:
                     painter.save()
+                    
+                    # Set text color to ghost white
+                    painter.setPen(QColor("#F8F8FF"))
                     
                     # Draw collection name
                     font = QFont('Arial', 14, QFont.Bold)
@@ -865,14 +921,26 @@ class GenerationTab(QWidget):
                     col = i % columns
                     
                     x = x_start + (col * card_width)
-                    y = y_start + (row * card_height)
+                    y = y_start + (row * (card_height + name_label_height))
                     
                     # Create a PokemonCard
                     pokemon_card = PokemonCard(pokemon_data, self.imported_cards)
                     
+                    # Override card styling for dark background
+                    pokemon_card.setStyleSheet("""
+                        PokemonCard {
+                            background-color: #282b30;
+                            border-radius: 8px;
+                            margin: 5px;
+                        }
+                        PokemonCard:hover {
+                            background-color: #282b30;
+                        }
+                    """)
+                    
                     # Render the card to a pixmap
                     card_pixmap = QPixmap(pokemon_card.size())
-                    card_pixmap.fill(Qt.transparent)
+                    card_pixmap.fill(QColor("#282b30"))  # Fill with dark-gray
                     pokemon_card.render(card_pixmap)
                     
                     # Calculate scaling for the card to fit in the allocated space
@@ -892,16 +960,30 @@ class GenerationTab(QWidget):
                     source_rect = QRectF(0, 0, card_pixmap.width(), card_pixmap.height())
                     painter.drawPixmap(target_rect, card_pixmap, source_rect)
                     
-                    # # Draw a border around the card
-                    # painter.setPen(QPen(Qt.white, 1))
-                    # painter.drawRect(target_rect)
+                    # No gray border - we want a dark background style
+                    
+                    # Draw Pokémon name if enabled
+                    if config["show_pokemon_names"]:
+                        painter.save()
+                        painter.setPen(QColor("#F8F8FF"))  # Ghost white color
+                        font = QFont('Arial', 8, QFont.Bold)
+                        painter.setFont(font)
+                        
+                        name_rect = QRectF(x, y + card_height * 0.95, card_width, name_label_height)
+                        pokemon_name = f"#{pokemon_id} {pokemon_data['name']}"
+                        painter.drawText(name_rect, Qt.AlignCenter, pokemon_name)
+                        painter.restore()
                 
                 # Draw footer
-                font = QFont('Arial', 9, QFont.StyleItalic)
+                painter.save()
+                painter.setPen(QColor("#F8F8FF"))  # Ghost white color
+                font = QFont('Arial', 9)
+                font.setItalic(True)  # Alternative way to set italic
                 painter.setFont(font)
                 footer_rect = QRectF(x_start, page_rect.height() - margin - footer_height, 
                                     usable_width, footer_height)
                 painter.drawText(footer_rect, Qt.AlignCenter, "Generated by PokéDextop")
+                painter.restore()
             
             # End the painter
             painter.end()
