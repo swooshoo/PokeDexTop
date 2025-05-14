@@ -4,13 +4,18 @@ import json
 import math
 import glob
 import re
+import datetime
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QHBoxLayout, QLabel, QPushButton, QScrollArea,
                             QGridLayout, QTabWidget, QSizePolicy, QFrame,
                             QSplitter, QComboBox, QLineEdit, QCompleter,
-                            QToolButton, QMessageBox)
-from PyQt5.QtGui import QPixmap, QFont, QIcon
-from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject
+                            QToolButton, QMessageBox, QDialog, QGroupBox, QRadioButton, 
+                            QCheckBox, QButtonGroup, QDialogButtonBox, QFileDialog)
+from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen # QPainter and QPen should be in QtGui, not QtCore
+from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF # QRectF is in QtCore
+from PyQt5.QtPrintSupport import QPrinter # Only QPrinter is in QtPrintSupport
+import datetime
+
 
 # Path to metadata files
 POKEMON_METADATA_FILE = os.path.join('assets', 'pokemon_metadata.json')
@@ -449,7 +454,98 @@ def get_card_number(file_path):
         print(f"Error parsing card number from {filename}: {e}")
         # If parsing fails, return a value that sorts to the end
         return (999, "", float('inf'))
-
+    
+class ExportDialog(QDialog):
+    """Dialog for configuring generation export options"""
+    def __init__(self, gen_name, parent=None):
+        super().__init__(parent)
+        self.gen_name = gen_name
+        self.setWindowTitle(f"Export {gen_name}")
+        self.setMinimumWidth(400)
+        
+        # Main layout
+        layout = QVBoxLayout(self)
+        
+        # Format options section
+        format_group = QGroupBox("Export Format")
+        format_layout = QVBoxLayout()
+        
+        self.format_group = QButtonGroup()
+        formats = [
+            ("PNG Image Grid", "png"),
+            ("PDF Document", "pdf"),
+        ]
+        
+        for i, (format_name, format_id) in enumerate(formats):
+            radio = QRadioButton(format_name)
+            self.format_group.addButton(radio, i)
+            format_layout.addWidget(radio)
+            if i == 0:  # Select first option by default
+                radio.setChecked(True)
+        
+        format_group.setLayout(format_layout)
+        layout.addWidget(format_group)
+        
+        # Content options section
+        content_group = QGroupBox("Export Options")
+        content_layout = QVBoxLayout()
+        
+        self.include_all = QCheckBox("Include all Pokémon")
+        self.include_all.setChecked(True)
+        content_layout.addWidget(self.include_all)
+        
+        self.include_tcg_only = QCheckBox("Only Pokémon with TCG cards")
+        self.include_tcg_only.setEnabled(False)  # Disabled by default
+        content_layout.addWidget(self.include_tcg_only)
+        
+        # Connect the include_all checkbox to update include_tcg_only
+        self.include_all.stateChanged.connect(self.update_tcg_option)
+        
+        # Collection name section
+        self.include_collection_name = QCheckBox("Include collection name")
+        self.include_collection_name.setChecked(True)
+        content_layout.addWidget(self.include_collection_name)
+        
+        name_layout = QHBoxLayout()
+        name_layout.addWidget(QLabel("Collection Name:"))
+        self.collection_name = QLineEdit("My Pokédex Collection")
+        name_layout.addWidget(self.collection_name)
+        content_layout.addLayout(name_layout)
+        
+        # Connect collection name checkbox
+        self.include_collection_name.stateChanged.connect(
+            lambda state: self.collection_name.setEnabled(state == Qt.Checked)
+        )
+        
+        content_group.setLayout(content_layout)
+        layout.addWidget(content_group)
+        
+        # Dialog buttons
+        button_box = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        button_box.accepted.connect(self.accept)
+        button_box.rejected.connect(self.reject)
+        layout.addWidget(button_box)
+    
+    def update_tcg_option(self, state):
+        """Update the TCG-only option based on the include_all state"""
+        if state == Qt.Checked:
+            self.include_tcg_only.setChecked(False)
+            self.include_tcg_only.setEnabled(False)
+        else:
+            self.include_tcg_only.setEnabled(True)
+    
+    def get_export_config(self):
+        """Get the selected export configuration"""
+        format_id = ["png", "pdf"][self.format_group.checkedId()]
+        
+        return {
+            "format": format_id,
+            "include_all": self.include_all.isChecked(),
+            "include_tcg_only": self.include_tcg_only.isChecked(),
+            "include_collection_name": self.include_collection_name.isChecked(),
+            "collection_name": self.collection_name.text()
+        }
+        
 class GenerationTab(QWidget):
     """A widget representing a single generation tab with fixed-dimension cards"""
     def __init__(self, gen_name, start_id, end_id, pokemon_metadata, imported_cards=None):
@@ -465,11 +561,22 @@ class GenerationTab(QWidget):
         # Main layout
         main_layout = QVBoxLayout()
         
+        # Header layout with title and export button
+        header_layout = QHBoxLayout()
+        
         # Title
         title_label = QLabel(self.gen_name)
         title_label.setFont(QFont('Arial', 16, QFont.Bold))
         title_label.setAlignment(Qt.AlignCenter)
-        main_layout.addWidget(title_label)
+        header_layout.addWidget(title_label, 3)  # Give title more space
+        
+        # Export button
+        export_button = QPushButton("Export")
+        export_button.setToolTip(f"Export {self.gen_name} collection")
+        export_button.clicked.connect(self.export_generation)
+        header_layout.addWidget(export_button, 1)
+        
+        main_layout.addLayout(header_layout)
         
         # Range label
         range_label = QLabel(f"Pokémon #{self.start_id} - #{self.end_id}")
@@ -523,6 +630,293 @@ class GenerationTab(QWidget):
         if pokemon_id in self.pokemon_metadata:
             return self.pokemon_metadata[pokemon_id]
         return None
+    def export_generation(self):
+        """Open export dialog and handle the export process"""
+        # Create and show the export dialog
+        dialog = ExportDialog(self.gen_name, self)
+        
+        if dialog.exec_() == QDialog.Accepted:
+            # Get export configuration
+            config = dialog.get_export_config()
+            
+            # Choose file location for export
+            default_name = f"{self.gen_name.replace(' ', '_')}_Collection"
+            file_filter = {
+                "png": "Images (*.png)",
+                "pdf": "PDF Documents (*.pdf)",
+            }[config["format"]]
+            
+            file_path, _ = QFileDialog.getSaveFileName(
+                self, "Save Export", default_name, file_filter
+            )
+            
+            if file_path:
+                # Handle export based on format
+                if config["format"] == "png":
+                    self.export_as_image(file_path, config)
+                elif config["format"] == "pdf":
+                    self.export_as_pdf(file_path, config)
+
+    def export_as_image(self, file_path, config):
+        """Export the generation as a PNG image"""
+        # Create a temporary widget to render
+        export_widget = QWidget()
+        export_layout = QVBoxLayout(export_widget)
+        export_layout.setSpacing(20)
+        export_widget.setStyleSheet("background-color: white;")
+        
+        # Add header with collection name if enabled
+        if config["include_collection_name"]:
+            header_widget = QWidget()
+            header_layout = QVBoxLayout(header_widget)
+            
+            title = QLabel(f"{config['collection_name']}")
+            title.setFont(QFont('Arial', 20, QFont.Bold))
+            title.setAlignment(Qt.AlignCenter)
+            header_layout.addWidget(title)
+            
+            subtitle = QLabel(f"{self.gen_name} - Pokémon #{self.start_id} - #{self.end_id}")
+            subtitle.setFont(QFont('Arial', 14))
+            subtitle.setAlignment(Qt.AlignCenter)
+            header_layout.addWidget(subtitle)
+            
+            # Add date
+            date_label = QLabel(f"Exported on {datetime.datetime.now().strftime('%Y-%m-%d')}")
+            date_label.setAlignment(Qt.AlignCenter)
+            header_layout.addWidget(date_label)
+            
+            export_layout.addWidget(header_widget)
+        
+        # Create grid for Pokémon cards
+        grid_widget = QWidget()
+        grid_layout = QGridLayout(grid_widget)
+        grid_layout.setSpacing(15)
+        
+        # Set equal column stretching
+        columns = 4  # Use 5 columns for export
+        for i in range(columns):
+            grid_layout.setColumnStretch(i, 1)
+        
+        # Add Pokémon cards to the grid
+        row, col = 0, 0
+        cards_added = 0
+        
+        for pokemon_id in range(self.start_id, self.end_id + 1):
+            pokemon_data = self.get_pokemon_data(pokemon_id)
+            if not pokemon_data:
+                continue
+            
+            # Check if we should include this Pokémon
+            has_tcg_card = str(pokemon_id) in self.imported_cards
+            
+            if config["include_tcg_only"] and not has_tcg_card:
+                continue
+            
+            # Create a PokemonCard
+            pokemon_card = PokemonCard(pokemon_data, self.imported_cards)
+            grid_layout.addWidget(pokemon_card, row, col, Qt.AlignCenter)
+            cards_added += 1
+            
+            # Move to the next column or row
+            col += 1
+            if col >= columns:
+                col = 0
+                row += 1
+        
+        export_layout.addWidget(grid_widget)
+        
+        # Add footer
+        footer = QLabel("Generated by PokéDextop")
+        footer.setAlignment(Qt.AlignCenter)
+        footer.setFont(QFont('Arial', 10, QFont.StyleItalic))
+        export_layout.addWidget(footer)
+        
+        if cards_added == 0:
+            QMessageBox.warning(self, "Export Warning", 
+                            "No Pokémon cards match your export criteria.")
+            return False
+        
+        # Render the widget to a pixmap
+        size = export_widget.sizeHint()
+        pixmap = QPixmap(size)
+        pixmap.fill(Qt.white)
+        
+        # Make the widget visible in order to render it correctly
+        export_widget.setVisible(True)
+        export_widget.render(pixmap)
+        
+        # Save the pixmap
+        if pixmap.save(file_path):
+            QMessageBox.information(self, "Export Successful", 
+                                f"Successfully exported {self.gen_name} to {file_path}")
+            return True
+        else:
+            QMessageBox.warning(self, "Export Failed", 
+                            f"Failed to save export to {file_path}")
+            return False
+
+    def export_as_pdf(self, file_path, config):
+        """Export the generation as a PDF document with pagination (4x4 grid per page)"""
+        try:
+            # Create a printer
+            printer = QPrinter(QPrinter.HighResolution)
+            printer.setOutputFormat(QPrinter.PdfFormat)
+            printer.setOutputFileName(file_path)
+            printer.setPageSize(QPrinter.A4)
+            
+            # Start the painter
+            painter = QPainter()
+            if not painter.begin(printer):
+                QMessageBox.warning(self, "Export Failed", "Failed to initialize PDF printer")
+                return False
+            
+            # Calculate the cards to include
+            cards_to_render = []
+            for pokemon_id in range(self.start_id, self.end_id + 1):
+                pokemon_data = self.get_pokemon_data(pokemon_id)
+                if not pokemon_data:
+                    continue
+                
+                # Check if we should include this Pokémon
+                has_tcg_card = str(pokemon_id) in self.imported_cards
+                
+                if config["include_tcg_only"] and not has_tcg_card:
+                    continue
+                
+                cards_to_render.append((pokemon_id, pokemon_data, has_tcg_card))
+            
+            if not cards_to_render:
+                painter.end()
+                QMessageBox.warning(self, "Export Warning", "No Pokémon cards match your export criteria.")
+                return False
+            
+            # Get page rectangle (in device pixels)
+            page_rect = printer.pageRect(QPrinter.DevicePixel)
+            
+            # Define grid parameters - 4x4 grid
+            columns = 4
+            rows = 4
+            cards_per_page = columns * rows
+            
+            # Calculate card size
+            margin = 50  # margin in pixels
+            usable_width = page_rect.width() - (2 * margin)
+            usable_height = page_rect.height() - (2 * margin)
+            
+            # Reserve space for header and footer
+            header_height = 100 if config["include_collection_name"] else 0
+            footer_height = 30
+            
+            card_width = usable_width / columns
+            card_height = (usable_height - header_height - footer_height) / rows
+            
+            # Calculate number of pages
+            total_pages = (len(cards_to_render) + cards_per_page - 1) // cards_per_page
+            
+            # Draw each page
+            for page in range(total_pages):
+                if page > 0:
+                    # Add a new page for subsequent pages
+                    printer.newPage()
+                
+                # Current page starting position
+                x_start = margin
+                y_start = margin
+                
+                # Draw header if enabled
+                if config["include_collection_name"]:
+                    painter.save()
+                    
+                    # Draw collection name
+                    font = QFont('Arial', 14, QFont.Bold)
+                    painter.setFont(font)
+                    header_rect = QRectF(x_start, y_start, usable_width, 30)
+                    painter.drawText(header_rect, Qt.AlignCenter, config["collection_name"])
+                    
+                    # Draw generation info
+                    font = QFont('Arial', 12)
+                    painter.setFont(font)
+                    gen_rect = QRectF(x_start, y_start + 30, usable_width, 25)
+                    painter.drawText(gen_rect, Qt.AlignCenter, 
+                                f"{self.gen_name} - Page {page + 1} of {total_pages}")
+                    
+                    # Draw date
+                    font = QFont('Arial', 10)
+                    painter.setFont(font)
+                    date_rect = QRectF(x_start, y_start + 55, usable_width, 20)
+                    painter.drawText(date_rect, Qt.AlignCenter, 
+                                f"Exported on {datetime.datetime.now().strftime('%Y-%m-%d')}")
+                    
+                    painter.restore()
+                    
+                    # Update starting position for cards
+                    y_start += header_height
+                
+                # Draw cards for this page
+                for i in range(cards_per_page):
+                    card_index = page * cards_per_page + i
+                    if card_index >= len(cards_to_render):
+                        break
+                    
+                    pokemon_id, pokemon_data, has_tcg_card = cards_to_render[card_index]
+                    
+                    # Calculate card position
+                    row = i // columns
+                    col = i % columns
+                    
+                    x = x_start + (col * card_width)
+                    y = y_start + (row * card_height)
+                    
+                    # Create a PokemonCard
+                    pokemon_card = PokemonCard(pokemon_data, self.imported_cards)
+                    
+                    # Render the card to a pixmap
+                    card_pixmap = QPixmap(pokemon_card.size())
+                    card_pixmap.fill(Qt.transparent)
+                    pokemon_card.render(card_pixmap)
+                    
+                    # Calculate scaling for the card to fit in the allocated space
+                    scale_width = card_width * 0.9 / card_pixmap.width()
+                    scale_height = card_height * 0.9 / card_pixmap.height()
+                    scale = min(scale_width, scale_height)
+                    
+                    # Center the card in its cell
+                    card_scaled_width = card_pixmap.width() * scale
+                    card_scaled_height = card_pixmap.height() * scale
+                    
+                    x_centered = x + (card_width - card_scaled_width) / 2
+                    y_centered = y + (card_height - card_scaled_height) / 2
+                    
+                    # Draw the card
+                    target_rect = QRectF(x_centered, y_centered, card_scaled_width, card_scaled_height)
+                    source_rect = QRectF(0, 0, card_pixmap.width(), card_pixmap.height())
+                    painter.drawPixmap(target_rect, card_pixmap, source_rect)
+                    
+                    # # Draw a border around the card
+                    # painter.setPen(QPen(Qt.white, 1))
+                    # painter.drawRect(target_rect)
+                
+                # Draw footer
+                font = QFont('Arial', 9, QFont.StyleItalic)
+                painter.setFont(font)
+                footer_rect = QRectF(x_start, page_rect.height() - margin - footer_height, 
+                                    usable_width, footer_height)
+                painter.drawText(footer_rect, Qt.AlignCenter, "Generated by PokéDextop")
+            
+            # End the painter
+            painter.end()
+            
+            QMessageBox.information(self, "Export Successful", 
+                                f"Successfully exported {self.gen_name} to {file_path} " +
+                                f"({total_pages} pages)")
+            return True
+            
+        except Exception as e:
+            # Catch any errors that might occur during the PDF creation
+            QMessageBox.critical(self, "Export Failed", 
+                            f"Failed to create PDF: {str(e)}\n"
+                            "Please make sure you have the necessary PyQt5 modules installed.")
+            return False
 
 class TCGSetTab(QWidget):
     """A widget representing a TCG set tab"""
