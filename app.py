@@ -706,7 +706,7 @@ class GenerationTab(QWidget):
         grid_widget.setStyleSheet("background-color: transparent;")
         
         # Set equal column stretching
-        columns = 5  # Use 5 columns for export
+        columns = 4  # Use 5 columns for export
         for i in range(columns):
             grid_layout.setColumnStretch(i, 1)
         
