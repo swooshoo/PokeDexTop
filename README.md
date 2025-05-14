@@ -8,7 +8,7 @@ Upon a friend group challenging eachother to cultivate a TCG national pokedex ge
 
 ## Pokémon TCG Sets
 
-| Scarlet & Violet Era | Sword & Shield Era (Incomplete) |
+| Scarlet & Violet Era | Sword & Shield Era (Incomplete) | 
 |----------------------|--------------------------------|
 | Journey Together | Astral Radiance Trainer Gallery |
 | Prismatic Evolutions | Brilliant Stars Trainer Gallery |
