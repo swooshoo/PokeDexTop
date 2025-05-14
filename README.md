@@ -6,6 +6,32 @@
 
 Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p>
 
+## Sets 
+
+#### Scarlet & Violet Era 
+- Journey Together 
+- Prismatic Evolutions 
+- Surging Sparks 
+- Stellar Crown
+- Shrouded Fable
+- Twilight Masquerade 
+- Temporal Forces
+- Paldean Fates 
+- Paradox Rift 
+- 151
+- Obsidian Flames 
+- Paldea Evolved
+- Scarlet & Violet
+- Scarlet & Violet Black Star Promos
+
+#### Sword & Shield Era (Incomplete)
+- Astral Radiance Trainer Gallery
+- Brilliant Stars Trainer Gallery
+- Lost Origin Trainer Gallery
+- Silver Tempest Trainer Gallery
+- Crown Zenith Galarian Gallery
+- Sword and Shield Black Star Promos
+
 ## Features
 
 - A digital binder organized by Pokedex number and split into generations.
