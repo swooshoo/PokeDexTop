@@ -17,9 +17,9 @@ Upon a friend group challenging eachother to cultivate a TCG national pokedex ge
 | Shrouded Fable | Crown Zenith Galarian Gallery |
 | Twilight Masquerade | Sword and Shield Black Star Promos |
 | Temporal Forces | Astral Radiance |
-| Paldean Fates | |
-| Paradox Rift | |
-| 151 | |
+| Paldean Fates | Brilliant Stars |
+| Paradox Rift | Lost Origin |
+| 151 | Silver Tempest |
 | Obsidian Flames | |
 | Paldea Evolved | |
 | Scarlet & Violet | |
