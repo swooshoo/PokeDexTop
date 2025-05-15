@@ -23147,8 +23147,3557 @@
         }
       },
       "total_cards": 167
+    },
+    "brilliant_stars": {
+      "name": "Brilliant Stars",
+      "path": "assets/tcg_cards/brilliant_stars",
+      "cards": {
+        "6 Turtwig": {
+          "id": "6",
+          "name": "Turtwig",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/6 Turtwig.png"
+        },
+        "36 Prinplup": {
+          "id": "36",
+          "name": "Prinplup",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/36 Prinplup.png"
+        },
+        "94 Grimmsnarl": {
+          "id": "94",
+          "name": "Grimmsnarl",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/94 Grimmsnarl.png"
+        },
+        "162 Honchkrow V": {
+          "id": "162",
+          "name": "Honchkrow V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/162 Honchkrow V.png"
+        },
+        "160 Whimsicott V": {
+          "id": "160",
+          "name": "Whimsicott V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/160 Whimsicott V.png"
+        },
+        "71 Alcremie": {
+          "id": "71",
+          "name": "Alcremie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/71 Alcremie.png"
+        },
+        "24 Chimchar": {
+          "id": "24",
+          "name": "Chimchar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/24 Chimchar.png"
+        },
+        "153 Charizard V": {
+          "id": "153",
+          "name": "Charizard V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/153 Charizard V.png"
+        },
+        "79 Lucario": {
+          "id": "79",
+          "name": "Lucario",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/79 Lucario.png"
+        },
+        "10 Wormadam": {
+          "id": "10",
+          "name": "Wormadam",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/10 Wormadam.png"
+        },
+        "21 Moltres": {
+          "id": "21",
+          "name": "Moltres",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/21 Moltres.png"
+        },
+        "34 Snorunt": {
+          "id": "34",
+          "name": "Snorunt",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/34 Snorunt.png"
+        },
+        "164 Flygon V": {
+          "id": "164",
+          "name": "Flygon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/164 Flygon V.png"
+        },
+        "91 Liepard": {
+          "id": "91",
+          "name": "Liepard",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/91 Liepard.png"
+        },
+        "123 Arceus VSTAR": {
+          "id": "123",
+          "name": "Arceus VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/123 Arceus VSTAR.png"
+        },
+        "166 Arceus V": {
+          "id": "166",
+          "name": "Arceus V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/166 Arceus V.png"
+        },
+        "106 Flygon V": {
+          "id": "106",
+          "name": "Flygon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/106 Flygon V.png"
+        },
+        "9 Burmy": {
+          "id": "9",
+          "name": "Burmy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/9 Burmy.png"
+        },
+        "125 Cinccino": {
+          "id": "125",
+          "name": "Cinccino",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/125 Cinccino.png"
+        },
+        "37 Empoleon": {
+          "id": "37",
+          "name": "Empoleon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/37 Empoleon.png"
+        },
+        "98 Wormadam": {
+          "id": "98",
+          "name": "Wormadam",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/98 Wormadam.png"
+        },
+        "52 Pachirisu": {
+          "id": "52",
+          "name": "Pachirisu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/52 Pachirisu.png"
+        },
+        "154 Charizard V": {
+          "id": "154",
+          "name": "Charizard V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/154 Charizard V.png"
+        },
+        "48 Raikou V": {
+          "id": "48",
+          "name": "Raikou V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/48 Raikou V.png"
+        },
+        "115 Farfetch'd": {
+          "id": "115",
+          "name": "Farfetch'd",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/115 Farfetch'd.png"
+        },
+        "51 Luxray": {
+          "id": "51",
+          "name": "Luxray",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/51 Luxray.png"
+        },
+        "92 Impidimp": {
+          "id": "92",
+          "name": "Impidimp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/92 Impidimp.png"
+        },
+        "1 Exeggcute": {
+          "id": "1",
+          "name": "Exeggcute",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/1 Exeggcute.png"
+        },
+        "8 Torterra": {
+          "id": "8",
+          "name": "Torterra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/8 Torterra.png"
+        },
+        "74 Trapinch": {
+          "id": "74",
+          "name": "Trapinch",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/74 Trapinch.png"
+        },
+        "174 Charizard VSTAR": {
+          "id": "174",
+          "name": "Charizard VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/174 Charizard VSTAR.png"
+        },
+        "66 Sigilyph": {
+          "id": "66",
+          "name": "Sigilyph",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/66 Sigilyph.png"
+        },
+        "95 Morpeko V": {
+          "id": "95",
+          "name": "Morpeko V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/95 Morpeko V.png"
+        },
+        "23 Torkoal": {
+          "id": "23",
+          "name": "Torkoal",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/23 Torkoal.png"
+        },
+        "47 Electivire": {
+          "id": "47",
+          "name": "Electivire",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/47 Electivire.png"
+        },
+        "85 Muk": {
+          "id": "85",
+          "name": "Muk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/85 Muk.png"
+        },
+        "49 Shinx": {
+          "id": "49",
+          "name": "Shinx",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/49 Shinx.png"
+        },
+        "61 Dusclops": {
+          "id": "61",
+          "name": "Dusclops",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/61 Dusclops.png"
+        },
+        "81 Sawk": {
+          "id": "81",
+          "name": "Sawk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/81 Sawk.png"
+        },
+        "127 Hawlucha": {
+          "id": "127",
+          "name": "Hawlucha",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/127 Hawlucha.png"
+        },
+        "26 Infernape": {
+          "id": "26",
+          "name": "Infernape",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/26 Infernape.png"
+        },
+        "54 Clefable": {
+          "id": "54",
+          "name": "Clefable",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/54 Clefable.png"
+        },
+        "78 Riolu": {
+          "id": "78",
+          "name": "Riolu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/78 Riolu.png"
+        },
+        "117 Starly": {
+          "id": "117",
+          "name": "Starly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/117 Starly.png"
+        },
+        "119 Staraptor": {
+          "id": "119",
+          "name": "Staraptor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/119 Staraptor.png"
+        },
+        "29 Kingler VMAX": {
+          "id": "29",
+          "name": "Kingler VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/29 Kingler VMAX.png"
+        },
+        "50 Luxio": {
+          "id": "50",
+          "name": "Luxio",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/50 Luxio.png"
+        },
+        "128 Drampa V": {
+          "id": "128",
+          "name": "Drampa V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/128 Drampa V.png"
+        },
+        "83 Golurk": {
+          "id": "83",
+          "name": "Golurk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/83 Golurk.png"
+        },
+        "70 Milcery": {
+          "id": "70",
+          "name": "Milcery",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/70 Milcery.png"
+        },
+        "32 Corphish": {
+          "id": "32",
+          "name": "Corphish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/32 Corphish.png"
+        },
+        "184 Arceus VSTAR": {
+          "id": "184",
+          "name": "Arceus VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/184 Arceus VSTAR.png"
+        },
+        "89 Spiritomb": {
+          "id": "89",
+          "name": "Spiritomb",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/89 Spiritomb.png"
+        },
+        "112 Haxorus": {
+          "id": "112",
+          "name": "Haxorus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/112 Haxorus.png"
+        },
+        "120 Bidoof": {
+          "id": "120",
+          "name": "Bidoof",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/120 Bidoof.png"
+        },
+        "46 Electabuzz": {
+          "id": "46",
+          "name": "Electabuzz",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/46 Electabuzz.png"
+        },
+        "68 Mimikyu V": {
+          "id": "68",
+          "name": "Mimikyu V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/68 Mimikyu V.png"
+        },
+        "73 Nosepass": {
+          "id": "73",
+          "name": "Nosepass",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/73 Nosepass.png"
+        },
+        "97 Aggron VMAX": {
+          "id": "97",
+          "name": "Aggron VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/97 Aggron VMAX.png"
+        },
+        "53 Clefairy": {
+          "id": "53",
+          "name": "Clefairy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/53 Clefairy.png"
+        },
+        "163 Zamazenta V": {
+          "id": "163",
+          "name": "Zamazenta V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/163 Zamazenta V.png"
+        },
+        "15 Karrablast": {
+          "id": "15",
+          "name": "Karrablast",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/15 Karrablast.png"
+        },
+        "27 Simisear V": {
+          "id": "27",
+          "name": "Simisear V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/27 Simisear V.png"
+        },
+        "176 Arceus VSTAR": {
+          "id": "176",
+          "name": "Arceus VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/176 Arceus VSTAR.png"
+        },
+        "7 Grotle": {
+          "id": "7",
+          "name": "Grotle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/7 Grotle.png"
+        },
+        "183 Galarian Moltres V": {
+          "id": "183",
+          "name": "Galarian Moltres V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/183 Galarian Moltres V.png"
+        },
+        "126 Tornadus": {
+          "id": "126",
+          "name": "Tornadus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/126 Tornadus.png"
+        },
+        "35 Piplup": {
+          "id": "35",
+          "name": "Piplup",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/35 Piplup.png"
+        },
+        "159 Granbull V": {
+          "id": "159",
+          "name": "Granbull V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/159 Granbull V.png"
+        },
+        "33 Crawdaunt": {
+          "id": "33",
+          "name": "Crawdaunt",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/33 Crawdaunt.png"
+        },
+        "38 Buizel": {
+          "id": "38",
+          "name": "Buizel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/38 Buizel.png"
+        },
+        "102 Klink": {
+          "id": "102",
+          "name": "Klink",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/102 Klink.png"
+        },
+        "19 Magmar": {
+          "id": "19",
+          "name": "Magmar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/19 Magmar.png"
+        },
+        "105 Zamazenta V": {
+          "id": "105",
+          "name": "Zamazenta V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/105 Zamazenta V.png"
+        },
+        "62 Dusknoir": {
+          "id": "62",
+          "name": "Dusknoir",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/62 Dusknoir.png"
+        },
+        "114 Dracovish V": {
+          "id": "114",
+          "name": "Dracovish V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/114 Dracovish V.png"
+        },
+        "175 Whimsicott VSTAR": {
+          "id": "175",
+          "name": "Whimsicott VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/175 Whimsicott VSTAR.png"
+        },
+        "16 Zarude V": {
+          "id": "16",
+          "name": "Zarude V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/16 Zarude V.png"
+        },
+        "42 Cubchoo": {
+          "id": "42",
+          "name": "Cubchoo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/42 Cubchoo.png"
+        },
+        "84 Grimer": {
+          "id": "84",
+          "name": "Grimer",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/84 Grimer.png"
+        },
+        "5 Tropius": {
+          "id": "5",
+          "name": "Tropius",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/5 Tropius.png"
+        },
+        "110 Axew": {
+          "id": "110",
+          "name": "Axew",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/110 Axew.png"
+        },
+        "13 Shaymin V": {
+          "id": "13",
+          "name": "Shaymin V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/13 Shaymin V.png"
+        },
+        "109 Garchomp": {
+          "id": "109",
+          "name": "Garchomp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/109 Garchomp.png"
+        },
+        "30 Staryu": {
+          "id": "30",
+          "name": "Staryu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/30 Staryu.png"
+        },
+        "90 Purrloin": {
+          "id": "90",
+          "name": "Purrloin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/90 Purrloin.png"
+        },
+        "155 Lumineon V": {
+          "id": "155",
+          "name": "Lumineon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/155 Lumineon V.png"
+        },
+        "40 Lumineon V": {
+          "id": "40",
+          "name": "Lumineon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/40 Lumineon V.png"
+        },
+        "17 Charizard V": {
+          "id": "17",
+          "name": "Charizard V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/17 Charizard V.png"
+        },
+        "20 Magmortar": {
+          "id": "20",
+          "name": "Magmortar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/20 Magmortar.png"
+        },
+        "25 Monferno": {
+          "id": "25",
+          "name": "Monferno",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/25 Monferno.png"
+        },
+        "104 Klinklang": {
+          "id": "104",
+          "name": "Klinklang",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/104 Klinklang.png"
+        },
+        "161 Honchkrow V": {
+          "id": "161",
+          "name": "Honchkrow V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/161 Honchkrow V.png"
+        },
+        "57 Granbull V": {
+          "id": "57",
+          "name": "Granbull V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/57 Granbull V.png"
+        },
+        "45 Raichu V": {
+          "id": "45",
+          "name": "Raichu V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/45 Raichu V.png"
+        },
+        "2 Exeggutor": {
+          "id": "2",
+          "name": "Exeggutor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/2 Exeggutor.png"
+        },
+        "86 Sneasel": {
+          "id": "86",
+          "name": "Sneasel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/86 Sneasel.png"
+        },
+        "75 Vibrava": {
+          "id": "75",
+          "name": "Vibrava",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/75 Vibrava.png"
+        },
+        "63 Chimecho": {
+          "id": "63",
+          "name": "Chimecho",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/63 Chimecho.png"
+        },
+        "58 Baltoy": {
+          "id": "58",
+          "name": "Baltoy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/58 Baltoy.png"
+        },
+        "59 Claydol": {
+          "id": "59",
+          "name": "Claydol",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/59 Claydol.png"
+        },
+        "72 Hitmontop": {
+          "id": "72",
+          "name": "Hitmontop",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/72 Hitmontop.png"
+        },
+        "181 Galarian Articuno V": {
+          "id": "181",
+          "name": "Galarian Articuno V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/181 Galarian Articuno V.png"
+        },
+        "12 Cherubi": {
+          "id": "12",
+          "name": "Cherubi",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/12 Cherubi.png"
+        },
+        "116 Castform": {
+          "id": "116",
+          "name": "Castform",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/116 Castform.png"
+        },
+        "88 Honchkrow V": {
+          "id": "88",
+          "name": "Honchkrow V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/88 Honchkrow V.png"
+        },
+        "65 Whimsicott VSTAR": {
+          "id": "65",
+          "name": "Whimsicott VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/65 Whimsicott VSTAR.png"
+        },
+        "60 Duskull": {
+          "id": "60",
+          "name": "Duskull",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/60 Duskull.png"
+        },
+        "77 Wormadam": {
+          "id": "77",
+          "name": "Wormadam",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/77 Wormadam.png"
+        },
+        "69 Mimikyu VMAX": {
+          "id": "69",
+          "name": "Mimikyu VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/69 Mimikyu VMAX.png"
+        },
+        "4 Breloom": {
+          "id": "4",
+          "name": "Breloom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/4 Breloom.png"
+        },
+        "108 Gabite": {
+          "id": "108",
+          "name": "Gabite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/108 Gabite.png"
+        },
+        "64 Whimsicott V": {
+          "id": "64",
+          "name": "Whimsicott V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/64 Whimsicott V.png"
+        },
+        "56 Mewtwo": {
+          "id": "56",
+          "name": "Mewtwo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/56 Mewtwo.png"
+        },
+        "80 Throh": {
+          "id": "80",
+          "name": "Throh",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/80 Throh.png"
+        },
+        "11 Mothim": {
+          "id": "11",
+          "name": "Mothim",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/11 Mothim.png"
+        },
+        "99 Probopass": {
+          "id": "99",
+          "name": "Probopass",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/99 Probopass.png"
+        },
+        "182 Galarian Zapdos V": {
+          "id": "182",
+          "name": "Galarian Zapdos V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/182 Galarian Zapdos V.png"
+        },
+        "101 Escavalier": {
+          "id": "101",
+          "name": "Escavalier",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/101 Escavalier.png"
+        },
+        "111 Fraxure": {
+          "id": "111",
+          "name": "Fraxure",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/111 Fraxure.png"
+        },
+        "76 Flygon": {
+          "id": "76",
+          "name": "Flygon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/76 Flygon.png"
+        },
+        "107 Gible": {
+          "id": "107",
+          "name": "Gible",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/107 Gible.png"
+        },
+        "156 Lumineon V": {
+          "id": "156",
+          "name": "Lumineon V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/156 Lumineon V.png"
+        },
+        "3 Shroomish": {
+          "id": "3",
+          "name": "Shroomish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/3 Shroomish.png"
+        },
+        "96 Aggron V": {
+          "id": "96",
+          "name": "Aggron V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/96 Aggron V.png"
+        },
+        "173 Shaymin VSTAR": {
+          "id": "173",
+          "name": "Shaymin VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/173 Shaymin VSTAR.png"
+        },
+        "55 Starmie": {
+          "id": "55",
+          "name": "Starmie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/55 Starmie.png"
+        },
+        "121 Bibarel": {
+          "id": "121",
+          "name": "Bibarel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/121 Bibarel.png"
+        },
+        "122 Arceus V": {
+          "id": "122",
+          "name": "Arceus V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/122 Arceus V.png"
+        },
+        "157 Pikachu V": {
+          "id": "157",
+          "name": "Pikachu V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/157 Pikachu V.png"
+        },
+        "82 Golett": {
+          "id": "82",
+          "name": "Golett",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/82 Golett.png"
+        },
+        "43 Beartic": {
+          "id": "43",
+          "name": "Beartic",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/43 Beartic.png"
+        },
+        "18 Charizard VSTAR": {
+          "id": "18",
+          "name": "Charizard VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/18 Charizard VSTAR.png"
+        },
+        "39 Floatzel": {
+          "id": "39",
+          "name": "Floatzel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/39 Floatzel.png"
+        },
+        "41 Manaphy": {
+          "id": "41",
+          "name": "Manaphy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/41 Manaphy.png"
+        },
+        "67 Dedenne": {
+          "id": "67",
+          "name": "Dedenne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/67 Dedenne.png"
+        },
+        "118 Staravia": {
+          "id": "118",
+          "name": "Staravia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/118 Staravia.png"
+        },
+        "152 Shaymin V": {
+          "id": "152",
+          "name": "Shaymin V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/152 Shaymin V.png"
+        },
+        "165 Arceus V": {
+          "id": "165",
+          "name": "Arceus V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/165 Arceus V.png"
+        },
+        "113 Druddigon": {
+          "id": "113",
+          "name": "Druddigon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/113 Druddigon.png"
+        },
+        "100 Heatran": {
+          "id": "100",
+          "name": "Heatran",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/100 Heatran.png"
+        },
+        "31 Lapras": {
+          "id": "31",
+          "name": "Lapras",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/31 Lapras.png"
+        },
+        "103 Klang": {
+          "id": "103",
+          "name": "Klang",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/103 Klang.png"
+        },
+        "87 Weavile": {
+          "id": "87",
+          "name": "Weavile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/87 Weavile.png"
+        },
+        "28 Kingler V": {
+          "id": "28",
+          "name": "Kingler V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/28 Kingler V.png"
+        },
+        "22 Entei V": {
+          "id": "22",
+          "name": "Entei V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/22 Entei V.png"
+        },
+        "124 Minccino": {
+          "id": "124",
+          "name": "Minccino",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/124 Minccino.png"
+        },
+        "158 Raichu V": {
+          "id": "158",
+          "name": "Raichu V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/158 Raichu V.png"
+        },
+        "14 Shaymin VSTAR": {
+          "id": "14",
+          "name": "Shaymin VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/14 Shaymin VSTAR.png"
+        },
+        "93 Morgrem": {
+          "id": "93",
+          "name": "Morgrem",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/93 Morgrem.png"
+        },
+        "44 Eiscue": {
+          "id": "44",
+          "name": "Eiscue",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/brilliant_stars/44 Eiscue.png"
+        }
+      },
+      "total_cards": 151
+    },
+    "lost_origin": {
+      "name": "Lost Origin",
+      "path": "assets/tcg_cards/lost_origin",
+      "cards": {
+        "146 Hisuian Zoroark V": {
+          "id": "146",
+          "name": "Hisuian Zoroark V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/146 Hisuian Zoroark V.png"
+        },
+        "1 Oddish": {
+          "id": "1",
+          "name": "Oddish",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/1 Oddish.png"
+        },
+        "212 Giratina VSTAR": {
+          "id": "212",
+          "name": "Giratina VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/212 Giratina VSTAR.png"
+        },
+        "82 Enamorus V": {
+          "id": "82",
+          "name": "Enamorus V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/82 Enamorus V.png"
+        },
+        "86 Machop": {
+          "id": "86",
+          "name": "Machop",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/86 Machop.png"
+        },
+        "42 Snover": {
+          "id": "42",
+          "name": "Snover",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/42 Snover.png"
+        },
+        "137 Pidgeot V": {
+          "id": "137",
+          "name": "Pidgeot V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/137 Pidgeot V.png"
+        },
+        "11 Seedot": {
+          "id": "11",
+          "name": "Seedot",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/11 Seedot.png"
+        },
+        "79 Comfey": {
+          "id": "79",
+          "name": "Comfey",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/79 Comfey.png"
+        },
+        "110 Falinks": {
+          "id": "110",
+          "name": "Falinks",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/110 Falinks.png"
+        },
+        "98 Hariyama": {
+          "id": "98",
+          "name": "Hariyama",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/98 Hariyama.png"
+        },
+        "85 Poliwrath": {
+          "id": "85",
+          "name": "Poliwrath",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/85 Poliwrath.png"
+        },
+        "177 Rotom V": {
+          "id": "177",
+          "name": "Rotom V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/177 Rotom V.png"
+        },
+        "43 Abomasnow": {
+          "id": "43",
+          "name": "Abomasnow",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/43 Abomasnow.png"
+        },
+        "185 Giratina V": {
+          "id": "185",
+          "name": "Giratina V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/185 Giratina V.png"
+        },
+        "53 Raichu": {
+          "id": "53",
+          "name": "Raichu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/53 Raichu.png"
+        },
+        "92 Aerodactyl V": {
+          "id": "92",
+          "name": "Aerodactyl V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/92 Aerodactyl V.png"
+        },
+        "83 Hisuian Growlithe": {
+          "id": "83",
+          "name": "Hisuian Growlithe",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/83 Hisuian Growlithe.png"
+        },
+        "57 Magnezone VSTAR": {
+          "id": "57",
+          "name": "Magnezone VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/57 Magnezone VSTAR.png"
+        },
+        "114 Murkrow": {
+          "id": "114",
+          "name": "Murkrow",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/114 Murkrow.png"
+        },
+        "78 Malamar": {
+          "id": "78",
+          "name": "Malamar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/78 Malamar.png"
+        },
+        "29 Pyroar": {
+          "id": "29",
+          "name": "Pyroar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/29 Pyroar.png"
+        },
+        "94 Sudowoodo": {
+          "id": "94",
+          "name": "Sudowoodo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/94 Sudowoodo.png"
+        },
+        "46 Ducklett": {
+          "id": "46",
+          "name": "Ducklett",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/46 Ducklett.png"
+        },
+        "15 Roserade": {
+          "id": "15",
+          "name": "Roserade",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/15 Roserade.png"
+        },
+        "48 Kyurem V": {
+          "id": "48",
+          "name": "Kyurem V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/48 Kyurem V.png"
+        },
+        "52 Pikachu": {
+          "id": "52",
+          "name": "Pikachu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/52 Pikachu.png"
+        },
+        "107 Barbaracle": {
+          "id": "107",
+          "name": "Barbaracle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/107 Barbaracle.png"
+        },
+        "181 Gallade V": {
+          "id": "181",
+          "name": "Gallade V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/181 Gallade V.png"
+        },
+        "142 Porygon-Z": {
+          "id": "142",
+          "name": "Porygon-Z",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/142 Porygon-Z.png"
+        },
+        "143 Snorlax": {
+          "id": "143",
+          "name": "Snorlax",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/143 Snorlax.png"
+        },
+        "126 Bronzong": {
+          "id": "126",
+          "name": "Bronzong",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/126 Bronzong.png"
+        },
+        "201 Giratina VSTAR": {
+          "id": "201",
+          "name": "Giratina VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/201 Giratina VSTAR.png"
+        },
+        "51 Glastrier": {
+          "id": "51",
+          "name": "Glastrier",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/51 Glastrier.png"
+        },
+        "101 Relicanth": {
+          "id": "101",
+          "name": "Relicanth",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/101 Relicanth.png"
+        },
+        "88 Machamp": {
+          "id": "88",
+          "name": "Machamp",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/88 Machamp.png"
+        },
+        "148 Bouffalant": {
+          "id": "148",
+          "name": "Bouffalant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/148 Bouffalant.png"
+        },
+        "140 Porygon": {
+          "id": "140",
+          "name": "Porygon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/140 Porygon.png"
+        },
+        "104 Mienshao": {
+          "id": "104",
+          "name": "Mienshao",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/104 Mienshao.png"
+        },
+        "111 Stonjourner": {
+          "id": "111",
+          "name": "Stonjourner",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/111 Stonjourner.png"
+        },
+        "100 Medicham": {
+          "id": "100",
+          "name": "Medicham",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/100 Medicham.png"
+        },
+        "147 Hisuian Zoroark VSTAR": {
+          "id": "147",
+          "name": "Hisuian Zoroark VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/147 Hisuian Zoroark VSTAR.png"
+        },
+        "90 Rhydon": {
+          "id": "90",
+          "name": "Rhydon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/90 Rhydon.png"
+        },
+        "8 Beautifly": {
+          "id": "8",
+          "name": "Beautifly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/8 Beautifly.png"
+        },
+        "5 Parasect": {
+          "id": "5",
+          "name": "Parasect",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/5 Parasect.png"
+        },
+        "23 Torkoal": {
+          "id": "23",
+          "name": "Torkoal",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/23 Torkoal.png"
+        },
+        "36 Seadra": {
+          "id": "36",
+          "name": "Seadra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/36 Seadra.png"
+        },
+        "55 Manectric": {
+          "id": "55",
+          "name": "Manectric",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/55 Manectric.png"
+        },
+        "18 Blipbug": {
+          "id": "18",
+          "name": "Blipbug",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/18 Blipbug.png"
+        },
+        "59 Tynamo": {
+          "id": "59",
+          "name": "Tynamo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/59 Tynamo.png"
+        },
+        "99 Meditite": {
+          "id": "99",
+          "name": "Meditite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/99 Meditite.png"
+        },
+        "73 Banette": {
+          "id": "73",
+          "name": "Banette",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/73 Banette.png"
+        },
+        "197 Kyurem VMAX": {
+          "id": "197",
+          "name": "Kyurem VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/197 Kyurem VMAX.png"
+        },
+        "3 Vileplume": {
+          "id": "3",
+          "name": "Vileplume",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/3 Vileplume.png"
+        },
+        "109 Rockruff": {
+          "id": "109",
+          "name": "Rockruff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/109 Rockruff.png"
+        },
+        "139 Lickilicky": {
+          "id": "139",
+          "name": "Lickilicky",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/139 Lickilicky.png"
+        },
+        "180 Aerodactyl V": {
+          "id": "180",
+          "name": "Aerodactyl V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/180 Aerodactyl V.png"
+        },
+        "7 Silcoon": {
+          "id": "7",
+          "name": "Silcoon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/7 Silcoon.png"
+        },
+        "186 Giratina V": {
+          "id": "186",
+          "name": "Giratina V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/186 Giratina V.png"
+        },
+        "172 Hisuian Electrode V": {
+          "id": "172",
+          "name": "Hisuian Electrode V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/172 Hisuian Electrode V.png"
+        },
+        "179 Aerodactyl V": {
+          "id": "179",
+          "name": "Aerodactyl V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/179 Aerodactyl V.png"
+        },
+        "199 Aerodactyl VSTAR": {
+          "id": "199",
+          "name": "Aerodactyl VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/199 Aerodactyl VSTAR.png"
+        },
+        "26 Chandelure": {
+          "id": "26",
+          "name": "Chandelure",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/26 Chandelure.png"
+        },
+        "145 Ambipom": {
+          "id": "145",
+          "name": "Ambipom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/145 Ambipom.png"
+        },
+        "63 Clefable": {
+          "id": "63",
+          "name": "Clefable",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/63 Clefable.png"
+        },
+        "30 Poliwag": {
+          "id": "30",
+          "name": "Poliwag",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/30 Poliwag.png"
+        },
+        "77 Inkay": {
+          "id": "77",
+          "name": "Inkay",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/77 Inkay.png"
+        },
+        "124 Radiant Steelix": {
+          "id": "124",
+          "name": "Radiant Steelix",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/124 Radiant Steelix.png"
+        },
+        "62 Clefairy": {
+          "id": "62",
+          "name": "Clefairy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/62 Clefairy.png"
+        },
+        "4 Paras": {
+          "id": "4",
+          "name": "Paras",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/4 Paras.png"
+        },
+        "178 Enamorus V": {
+          "id": "178",
+          "name": "Enamorus V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/178 Enamorus V.png"
+        },
+        "72 Shuppet": {
+          "id": "72",
+          "name": "Shuppet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/72 Shuppet.png"
+        },
+        "14 Roselia": {
+          "id": "14",
+          "name": "Roselia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/14 Roselia.png"
+        },
+        "149 Komala": {
+          "id": "149",
+          "name": "Komala",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/149 Komala.png"
+        },
+        "58 Rotom V": {
+          "id": "58",
+          "name": "Rotom V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/58 Rotom V.png"
+        },
+        "70 Sableye": {
+          "id": "70",
+          "name": "Sableye",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/70 Sableye.png"
+        },
+        "50 Cramorant": {
+          "id": "50",
+          "name": "Cramorant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/50 Cramorant.png"
+        },
+        "19 Dottler": {
+          "id": "19",
+          "name": "Dottler",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/19 Dottler.png"
+        },
+        "123 Radiant Hisuian Sneasler": {
+          "id": "123",
+          "name": "Radiant Hisuian Sneasler",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/123 Radiant Hisuian Sneasler.png"
+        },
+        "173 Delphox V": {
+          "id": "173",
+          "name": "Delphox V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/173 Delphox V.png"
+        },
+        "61 Eelektross": {
+          "id": "61",
+          "name": "Eelektross",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/61 Eelektross.png"
+        },
+        "89 Rhyhorn": {
+          "id": "89",
+          "name": "Rhyhorn",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/89 Rhyhorn.png"
+        },
+        "116 Seviper": {
+          "id": "116",
+          "name": "Seviper",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/116 Seviper.png"
+        },
+        "115 Honchkrow": {
+          "id": "115",
+          "name": "Honchkrow",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/115 Honchkrow.png"
+        },
+        "2 Gloom": {
+          "id": "2",
+          "name": "Gloom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/2 Gloom.png"
+        },
+        "144 Aipom": {
+          "id": "144",
+          "name": "Aipom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/144 Aipom.png"
+        },
+        "103 Mienfoo": {
+          "id": "103",
+          "name": "Mienfoo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/103 Mienfoo.png"
+        },
+        "38 Luvdisc": {
+          "id": "38",
+          "name": "Luvdisc",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/38 Luvdisc.png"
+        },
+        "10 Dustox": {
+          "id": "10",
+          "name": "Dustox",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/10 Dustox.png"
+        },
+        "128 Magearna": {
+          "id": "128",
+          "name": "Magearna",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/128 Magearna.png"
+        },
+        "65 Haunter": {
+          "id": "65",
+          "name": "Haunter",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/65 Haunter.png"
+        },
+        "174 Kyurem V": {
+          "id": "174",
+          "name": "Kyurem V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/174 Kyurem V.png"
+        },
+        "182 Drapion V": {
+          "id": "182",
+          "name": "Drapion V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/182 Drapion V.png"
+        },
+        "64 Gastly": {
+          "id": "64",
+          "name": "Gastly",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/64 Gastly.png"
+        },
+        "133 Hisuian Sliggoo": {
+          "id": "133",
+          "name": "Hisuian Sliggoo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/133 Hisuian Sliggoo.png"
+        },
+        "6 Wurmple": {
+          "id": "6",
+          "name": "Wurmple",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/6 Wurmple.png"
+        },
+        "81 Spectrier": {
+          "id": "81",
+          "name": "Spectrier",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/81 Spectrier.png"
+        },
+        "75 Hisuian Zorua": {
+          "id": "75",
+          "name": "Hisuian Zorua",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/75 Hisuian Zorua.png"
+        },
+        "113 Ariados": {
+          "id": "113",
+          "name": "Ariados",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/113 Ariados.png"
+        },
+        "21 Slugma": {
+          "id": "21",
+          "name": "Slugma",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/21 Slugma.png"
+        },
+        "54 Electrike": {
+          "id": "54",
+          "name": "Electrike",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/54 Electrike.png"
+        },
+        "121 Inkay": {
+          "id": "121",
+          "name": "Inkay",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/121 Inkay.png"
+        },
+        "71 Mawile": {
+          "id": "71",
+          "name": "Mawile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/71 Mawile.png"
+        },
+        "12 Nuzleaf": {
+          "id": "12",
+          "name": "Nuzleaf",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/12 Nuzleaf.png"
+        },
+        "141 Porygon2": {
+          "id": "141",
+          "name": "Porygon2",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/141 Porygon2.png"
+        },
+        "34 Dewgong": {
+          "id": "34",
+          "name": "Dewgong",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/34 Dewgong.png"
+        },
+        "203 Hisuian Zoroark VSTAR": {
+          "id": "203",
+          "name": "Hisuian Zoroark VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/203 Hisuian Zoroark VSTAR.png"
+        },
+        "28 Litleo": {
+          "id": "28",
+          "name": "Litleo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/28 Litleo.png"
+        },
+        "136 Hisuian Goodra VSTAR": {
+          "id": "136",
+          "name": "Hisuian Goodra VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/136 Hisuian Goodra VSTAR.png"
+        },
+        "150 Skwovet": {
+          "id": "150",
+          "name": "Skwovet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/150 Skwovet.png"
+        },
+        "176 Rotom V": {
+          "id": "176",
+          "name": "Rotom V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/176 Rotom V.png"
+        },
+        "41 Lumineon": {
+          "id": "41",
+          "name": "Lumineon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/41 Lumineon.png"
+        },
+        "122 Hoopa": {
+          "id": "122",
+          "name": "Hoopa",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/122 Hoopa.png"
+        },
+        "106 Binacle": {
+          "id": "106",
+          "name": "Binacle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/106 Binacle.png"
+        },
+        "135 Hisuian Goodra V": {
+          "id": "135",
+          "name": "Hisuian Goodra V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/135 Hisuian Goodra V.png"
+        },
+        "202 Hisuian Goodra VSTAR": {
+          "id": "202",
+          "name": "Hisuian Goodra VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/202 Hisuian Goodra VSTAR.png"
+        },
+        "60 Eelektrik": {
+          "id": "60",
+          "name": "Eelektrik",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/60 Eelektrik.png"
+        },
+        "125 Bronzor": {
+          "id": "125",
+          "name": "Bronzor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/125 Bronzor.png"
+        },
+        "187 Hisuian Goodra V": {
+          "id": "187",
+          "name": "Hisuian Goodra V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/187 Hisuian Goodra V.png"
+        },
+        "198 Magnezone VSTAR": {
+          "id": "198",
+          "name": "Magnezone VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/198 Magnezone VSTAR.png"
+        },
+        "9 Cascoon": {
+          "id": "9",
+          "name": "Cascoon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/9 Cascoon.png"
+        },
+        "44 Hisuian Basculin": {
+          "id": "44",
+          "name": "Hisuian Basculin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/44 Hisuian Basculin.png"
+        },
+        "33 Seel": {
+          "id": "33",
+          "name": "Seel",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/33 Seel.png"
+        },
+        "91 Rhyperior": {
+          "id": "91",
+          "name": "Rhyperior",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/91 Rhyperior.png"
+        },
+        "16 Phantump": {
+          "id": "16",
+          "name": "Phantump",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/16 Phantump.png"
+        },
+        "49 Kyurem VMAX": {
+          "id": "49",
+          "name": "Kyurem VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/49 Kyurem VMAX.png"
+        },
+        "67 Mr": {
+          "id": "67",
+          "name": "Mr",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/67 Mr. Mime.png"
+        },
+        "76 Hisuian Zoroark": {
+          "id": "76",
+          "name": "Hisuian Zoroark",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/76 Hisuian Zoroark.png"
+        },
+        "95 Gligar": {
+          "id": "95",
+          "name": "Gligar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/95 Gligar.png"
+        },
+        "68 Jynx": {
+          "id": "68",
+          "name": "Jynx",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/68 Jynx.png"
+        },
+        "22 Magcargo": {
+          "id": "22",
+          "name": "Magcargo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/22 Magcargo.png"
+        },
+        "213 Hisuian Zoroark VSTAR": {
+          "id": "213",
+          "name": "Hisuian Zoroark VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/213 Hisuian Zoroark VSTAR.png"
+        },
+        "118 Drapion V": {
+          "id": "118",
+          "name": "Drapion V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/118 Drapion V.png"
+        },
+        "24 Litwick": {
+          "id": "24",
+          "name": "Litwick",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/24 Litwick.png"
+        },
+        "31 Poliwhirl": {
+          "id": "31",
+          "name": "Poliwhirl",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/31 Poliwhirl.png"
+        },
+        "105 Landorus": {
+          "id": "105",
+          "name": "Landorus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/105 Landorus.png"
+        },
+        "138 Lickitung": {
+          "id": "138",
+          "name": "Lickitung",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/138 Lickitung.png"
+        },
+        "69 Radiant Gardevoir": {
+          "id": "69",
+          "name": "Radiant Gardevoir",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/69 Radiant Gardevoir.png"
+        },
+        "183 Galarian Perrserker V": {
+          "id": "183",
+          "name": "Galarian Perrserker V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/183 Galarian Perrserker V.png"
+        },
+        "37 Kingdra": {
+          "id": "37",
+          "name": "Kingdra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/37 Kingdra.png"
+        },
+        "132 Goomy": {
+          "id": "132",
+          "name": "Goomy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/132 Goomy.png"
+        },
+        "87 Machoke": {
+          "id": "87",
+          "name": "Machoke",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/87 Machoke.png"
+        },
+        "188 Pidgeot V": {
+          "id": "188",
+          "name": "Pidgeot V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/188 Pidgeot V.png"
+        },
+        "131 Giratina VSTAR": {
+          "id": "131",
+          "name": "Giratina VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/131 Giratina VSTAR.png"
+        },
+        "13 Shiftry": {
+          "id": "13",
+          "name": "Shiftry",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/13 Shiftry.png"
+        },
+        "102 Gastrodon": {
+          "id": "102",
+          "name": "Gastrodon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/102 Gastrodon.png"
+        },
+        "17 Trevenant": {
+          "id": "17",
+          "name": "Trevenant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/17 Trevenant.png"
+        },
+        "97 Makuhita": {
+          "id": "97",
+          "name": "Makuhita",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/97 Makuhita.png"
+        },
+        "20 Orbeetle": {
+          "id": "20",
+          "name": "Orbeetle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/20 Orbeetle.png"
+        },
+        "96 Gliscor": {
+          "id": "96",
+          "name": "Gliscor",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/96 Gliscor.png"
+        },
+        "84 Hisuian Arcanine": {
+          "id": "84",
+          "name": "Hisuian Arcanine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/84 Hisuian Arcanine.png"
+        },
+        "27 Delphox V": {
+          "id": "27",
+          "name": "Delphox V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/27 Delphox V.png"
+        },
+        "129 Galarian Perrserker V": {
+          "id": "129",
+          "name": "Galarian Perrserker V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/129 Galarian Perrserker V.png"
+        },
+        "120 Darkrai": {
+          "id": "120",
+          "name": "Darkrai",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/120 Darkrai.png"
+        },
+        "66 Gengar": {
+          "id": "66",
+          "name": "Gengar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/66 Gengar.png"
+        },
+        "32 Politoed": {
+          "id": "32",
+          "name": "Politoed",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/32 Politoed.png"
+        },
+        "56 Magnezone V": {
+          "id": "56",
+          "name": "Magnezone V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/56 Magnezone V.png"
+        },
+        "112 Spinarak": {
+          "id": "112",
+          "name": "Spinarak",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/112 Spinarak.png"
+        },
+        "127 Galarian Stunfisk": {
+          "id": "127",
+          "name": "Galarian Stunfisk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/127 Galarian Stunfisk.png"
+        },
+        "117 Spiritomb": {
+          "id": "117",
+          "name": "Spiritomb",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/117 Spiritomb.png"
+        },
+        "175 Magnezone V": {
+          "id": "175",
+          "name": "Magnezone V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/175 Magnezone V.png"
+        },
+        "25 Lampent": {
+          "id": "25",
+          "name": "Lampent",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/25 Lampent.png"
+        },
+        "93 Aerodactyl VSTAR": {
+          "id": "93",
+          "name": "Aerodactyl VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/93 Aerodactyl VSTAR.png"
+        },
+        "40 Finneon": {
+          "id": "40",
+          "name": "Finneon",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/40 Finneon.png"
+        },
+        "45 Hisuian Basculegion": {
+          "id": "45",
+          "name": "Hisuian Basculegion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/45 Hisuian Basculegion.png"
+        },
+        "47 Swanna": {
+          "id": "47",
+          "name": "Swanna",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/47 Swanna.png"
+        },
+        "151 Greedent": {
+          "id": "151",
+          "name": "Greedent",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/151 Greedent.png"
+        },
+        "74 Cresselia": {
+          "id": "74",
+          "name": "Cresselia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/74 Cresselia.png"
+        },
+        "39 Shellos": {
+          "id": "39",
+          "name": "Shellos",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/39 Shellos.png"
+        },
+        "200 Drapion VSTAR": {
+          "id": "200",
+          "name": "Drapion VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/200 Drapion VSTAR.png"
+        },
+        "119 Drapion VSTAR": {
+          "id": "119",
+          "name": "Drapion VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/119 Drapion VSTAR.png"
+        },
+        "184 Galarian Perrserker V": {
+          "id": "184",
+          "name": "Galarian Perrserker V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/184 Galarian Perrserker V.png"
+        },
+        "134 Hisuian Goodra": {
+          "id": "134",
+          "name": "Hisuian Goodra",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/134 Hisuian Goodra.png"
+        },
+        "35 Horsea": {
+          "id": "35",
+          "name": "Horsea",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/35 Horsea.png"
+        },
+        "108 Carbink": {
+          "id": "108",
+          "name": "Carbink",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/108 Carbink.png"
+        },
+        "130 Giratina V": {
+          "id": "130",
+          "name": "Giratina V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/130 Giratina V.png"
+        },
+        "80 Mimikyu": {
+          "id": "80",
+          "name": "Mimikyu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/lost_origin/80 Mimikyu.png"
+        }
+      },
+      "total_cards": 177
+    },
+    "silver_tempest": {
+      "name": "Silver Tempest",
+      "path": "assets/tcg_cards/silver_tempest",
+      "cards": {
+        "129 Dratini": {
+          "id": "129",
+          "name": "Dratini",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/129 Dratini.png"
+        },
+        "110 Toxicroak": {
+          "id": "110",
+          "name": "Toxicroak",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/110 Toxicroak.png"
+        },
+        "10 Hisuian Lilligant": {
+          "id": "10",
+          "name": "Hisuian Lilligant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/10 Hisuian Lilligant.png"
+        },
+        "54 Emolga": {
+          "id": "54",
+          "name": "Emolga",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/54 Emolga.png"
+        },
+        "137 Smeargle": {
+          "id": "137",
+          "name": "Smeargle",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/137 Smeargle.png"
+        },
+        "125 Klinklang": {
+          "id": "125",
+          "name": "Klinklang",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/125 Klinklang.png"
+        },
+        "141 Spinda": {
+          "id": "141",
+          "name": "Spinda",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/141 Spinda.png"
+        },
+        "176 Unown V": {
+          "id": "176",
+          "name": "Unown V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/176 Unown V.png"
+        },
+        "15 Chesnaught V": {
+          "id": "15",
+          "name": "Chesnaught V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/15 Chesnaught V.png"
+        },
+        "183 Regidrago V": {
+          "id": "183",
+          "name": "Regidrago V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/183 Regidrago V.png"
+        },
+        "172 Reshiram V": {
+          "id": "172",
+          "name": "Reshiram V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/172 Reshiram V.png"
+        },
+        "39 Feebas": {
+          "id": "39",
+          "name": "Feebas",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/39 Feebas.png"
+        },
+        "116 Morpeko": {
+          "id": "116",
+          "name": "Morpeko",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/116 Morpeko.png"
+        },
+        "28 Fletchinder": {
+          "id": "28",
+          "name": "Fletchinder",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/28 Fletchinder.png"
+        },
+        "178 Mawile V": {
+          "id": "178",
+          "name": "Mawile V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/178 Mawile V.png"
+        },
+        "182 Magearna V": {
+          "id": "182",
+          "name": "Magearna V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/182 Magearna V.png"
+        },
+        "121 Ferroseed": {
+          "id": "121",
+          "name": "Ferroseed",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/121 Ferroseed.png"
+        },
+        "17 Vulpix": {
+          "id": "17",
+          "name": "Vulpix",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/17 Vulpix.png"
+        },
+        "211 Lugia VSTAR": {
+          "id": "211",
+          "name": "Lugia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/211 Lugia VSTAR.png"
+        },
+        "59 Radiant Alakazam": {
+          "id": "59",
+          "name": "Radiant Alakazam",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/59 Radiant Alakazam.png"
+        },
+        "134 Zygarde": {
+          "id": "134",
+          "name": "Zygarde",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/134 Zygarde.png"
+        },
+        "71 Mawile VSTAR": {
+          "id": "71",
+          "name": "Mawile VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/71 Mawile VSTAR.png"
+        },
+        "41 Snorunt": {
+          "id": "41",
+          "name": "Snorunt",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/41 Snorunt.png"
+        },
+        "102 Ursaluna V": {
+          "id": "102",
+          "name": "Ursaluna V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/102 Ursaluna V.png"
+        },
+        "48 Araquanid": {
+          "id": "48",
+          "name": "Araquanid",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/48 Araquanid.png"
+        },
+        "29 Talonflame": {
+          "id": "29",
+          "name": "Talonflame",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/29 Talonflame.png"
+        },
+        "78 Reuniclus": {
+          "id": "78",
+          "name": "Reuniclus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/78 Reuniclus.png"
+        },
+        "184 Regidrago V": {
+          "id": "184",
+          "name": "Regidrago V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/184 Regidrago V.png"
+        },
+        "42 Glalie": {
+          "id": "42",
+          "name": "Glalie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/42 Glalie.png"
+        },
+        "4 Ariados": {
+          "id": "4",
+          "name": "Ariados",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/4 Ariados.png"
+        },
+        "109 Croagunk": {
+          "id": "109",
+          "name": "Croagunk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/109 Croagunk.png"
+        },
+        "120 Radiant Jirachi": {
+          "id": "120",
+          "name": "Radiant Jirachi",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/120 Radiant Jirachi.png"
+        },
+        "148 Rufflet": {
+          "id": "148",
+          "name": "Rufflet",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/148 Rufflet.png"
+        },
+        "103 Zubat": {
+          "id": "103",
+          "name": "Zubat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/103 Zubat.png"
+        },
+        "97 Terrakion": {
+          "id": "97",
+          "name": "Terrakion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/97 Terrakion.png"
+        },
+        "81 Espurr": {
+          "id": "81",
+          "name": "Espurr",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/81 Espurr.png"
+        },
+        "32 Incineroar": {
+          "id": "32",
+          "name": "Incineroar",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/32 Incineroar.png"
+        },
+        "43 Froslass": {
+          "id": "43",
+          "name": "Froslass",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/43 Froslass.png"
+        },
+        "12 Amoonguss": {
+          "id": "12",
+          "name": "Amoonguss",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/12 Amoonguss.png"
+        },
+        "135 Regidrago V": {
+          "id": "135",
+          "name": "Regidrago V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/135 Regidrago V.png"
+        },
+        "56 Zeraora": {
+          "id": "56",
+          "name": "Zeraora",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/56 Zeraora.png"
+        },
+        "96 Armaldo": {
+          "id": "96",
+          "name": "Armaldo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/96 Armaldo.png"
+        },
+        "126 Cobalion": {
+          "id": "126",
+          "name": "Cobalion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/126 Cobalion.png"
+        },
+        "16 Radiant Tsareena": {
+          "id": "16",
+          "name": "Radiant Tsareena",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/16 Radiant Tsareena.png"
+        },
+        "111 Sandile": {
+          "id": "111",
+          "name": "Sandile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/111 Sandile.png"
+        },
+        "44 Relicanth": {
+          "id": "44",
+          "name": "Relicanth",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/44 Relicanth.png"
+        },
+        "67 Ralts": {
+          "id": "67",
+          "name": "Ralts",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/67 Ralts.png"
+        },
+        "70 Mawile V": {
+          "id": "70",
+          "name": "Mawile V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/70 Mawile V.png"
+        },
+        "63 Misdreavus": {
+          "id": "63",
+          "name": "Misdreavus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/63 Misdreavus.png"
+        },
+        "150 Fletchling": {
+          "id": "150",
+          "name": "Fletchling",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/150 Fletchling.png"
+        },
+        "147 Archeops": {
+          "id": "147",
+          "name": "Archeops",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/147 Archeops.png"
+        },
+        "130 Dragonair": {
+          "id": "130",
+          "name": "Dragonair",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/130 Dragonair.png"
+        },
+        "79 Elgyem": {
+          "id": "79",
+          "name": "Elgyem",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/79 Elgyem.png"
+        },
+        "45 Phione": {
+          "id": "45",
+          "name": "Phione",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/45 Phione.png"
+        },
+        "138 Lugia V": {
+          "id": "138",
+          "name": "Lugia V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/138 Lugia V.png"
+        },
+        "99 Sandygast": {
+          "id": "99",
+          "name": "Sandygast",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/99 Sandygast.png"
+        },
+        "8 Serperior VSTAR": {
+          "id": "8",
+          "name": "Serperior VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/8 Serperior VSTAR.png"
+        },
+        "170 Serperior V": {
+          "id": "170",
+          "name": "Serperior V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/170 Serperior V.png"
+        },
+        "93 Baltoy": {
+          "id": "93",
+          "name": "Baltoy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/93 Baltoy.png"
+        },
+        "14 Virizion": {
+          "id": "14",
+          "name": "Virizion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/14 Virizion.png"
+        },
+        "23 Victini": {
+          "id": "23",
+          "name": "Victini",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/23 Victini.png"
+        },
+        "47 Dewpider": {
+          "id": "47",
+          "name": "Dewpider",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/47 Dewpider.png"
+        },
+        "74 Chimecho": {
+          "id": "74",
+          "name": "Chimecho",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/74 Chimecho.png"
+        },
+        "40 Milotic": {
+          "id": "40",
+          "name": "Milotic",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/40 Milotic.png"
+        },
+        "117 Beldum": {
+          "id": "117",
+          "name": "Beldum",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/117 Beldum.png"
+        },
+        "27 Delphox": {
+          "id": "27",
+          "name": "Delphox",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/27 Delphox.png"
+        },
+        "46 Keldeo": {
+          "id": "46",
+          "name": "Keldeo",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/46 Keldeo.png"
+        },
+        "104 Golbat": {
+          "id": "104",
+          "name": "Golbat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/104 Golbat.png"
+        },
+        "75 Sigilyph": {
+          "id": "75",
+          "name": "Sigilyph",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/75 Sigilyph.png"
+        },
+        "107 Honchkrow": {
+          "id": "107",
+          "name": "Honchkrow",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/107 Honchkrow.png"
+        },
+        "113 Krookodile": {
+          "id": "113",
+          "name": "Krookodile",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/113 Krookodile.png"
+        },
+        "53 Rotom": {
+          "id": "53",
+          "name": "Rotom",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/53 Rotom.png"
+        },
+        "38 Wailord": {
+          "id": "38",
+          "name": "Wailord",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/38 Wailord.png"
+        },
+        "72 Meditite": {
+          "id": "72",
+          "name": "Meditite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/72 Meditite.png"
+        },
+        "60 Drowzee": {
+          "id": "60",
+          "name": "Drowzee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/60 Drowzee.png"
+        },
+        "187 Ho-Oh V": {
+          "id": "187",
+          "name": "Ho-Oh V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/187 Ho-Oh V.png"
+        },
+        "101 Stonjourner": {
+          "id": "101",
+          "name": "Stonjourner",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/101 Stonjourner.png"
+        },
+        "73 Medicham": {
+          "id": "73",
+          "name": "Medicham",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/73 Medicham.png"
+        },
+        "51 Chinchou": {
+          "id": "51",
+          "name": "Chinchou",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/51 Chinchou.png"
+        },
+        "25 Fennekin": {
+          "id": "25",
+          "name": "Fennekin",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/25 Fennekin.png"
+        },
+        "30 Litten": {
+          "id": "30",
+          "name": "Litten",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/30 Litten.png"
+        },
+        "94 Claydol": {
+          "id": "94",
+          "name": "Claydol",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/94 Claydol.png"
+        },
+        "145 Lopunny": {
+          "id": "145",
+          "name": "Lopunny",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/145 Lopunny.png"
+        },
+        "197 Alolan Vulpix VSTAR": {
+          "id": "197",
+          "name": "Alolan Vulpix VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/197 Alolan Vulpix VSTAR.png"
+        },
+        "89 Dragapult": {
+          "id": "89",
+          "name": "Dragapult",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/89 Dragapult.png"
+        },
+        "34 Alolan Vulpix VSTAR": {
+          "id": "34",
+          "name": "Alolan Vulpix VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/34 Alolan Vulpix VSTAR.png"
+        },
+        "142 Swablu": {
+          "id": "142",
+          "name": "Swablu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/142 Swablu.png"
+        },
+        "84 Slurpuff": {
+          "id": "84",
+          "name": "Slurpuff",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/84 Slurpuff.png"
+        },
+        "98 Hawlucha": {
+          "id": "98",
+          "name": "Hawlucha",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/98 Hawlucha.png"
+        },
+        "128 Magearna V": {
+          "id": "128",
+          "name": "Magearna V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/128 Magearna V.png"
+        },
+        "65 Unown V": {
+          "id": "65",
+          "name": "Unown V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/65 Unown V.png"
+        },
+        "173 Alolan Vulpix V": {
+          "id": "173",
+          "name": "Alolan Vulpix V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/173 Alolan Vulpix V.png"
+        },
+        "57 Regieleki V": {
+          "id": "57",
+          "name": "Regieleki V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/57 Regieleki V.png"
+        },
+        "36 Articuno": {
+          "id": "36",
+          "name": "Articuno",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/36 Articuno.png"
+        },
+        "123 Klink": {
+          "id": "123",
+          "name": "Klink",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/123 Klink.png"
+        },
+        "9 Petilil": {
+          "id": "9",
+          "name": "Petilil",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/9 Petilil.png"
+        },
+        "35 Omastar V": {
+          "id": "35",
+          "name": "Omastar V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/35 Omastar V.png"
+        },
+        "61 Hypno": {
+          "id": "61",
+          "name": "Hypno",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/61 Hypno.png"
+        },
+        "198 Regieleki VMAX": {
+          "id": "198",
+          "name": "Regieleki VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/198 Regieleki VMAX.png"
+        },
+        "132 Noibat": {
+          "id": "132",
+          "name": "Noibat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/132 Noibat.png"
+        },
+        "196 Serperior VSTAR": {
+          "id": "196",
+          "name": "Serperior VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/196 Serperior VSTAR.png"
+        },
+        "22 Rapidash": {
+          "id": "22",
+          "name": "Rapidash",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/22 Rapidash.png"
+        },
+        "105 Crobat": {
+          "id": "105",
+          "name": "Crobat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/105 Crobat.png"
+        },
+        "1 Venonat": {
+          "id": "1",
+          "name": "Venonat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/1 Venonat.png"
+        },
+        "92 Donphan": {
+          "id": "92",
+          "name": "Donphan",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/92 Donphan.png"
+        },
+        "185 Lugia V": {
+          "id": "185",
+          "name": "Lugia V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/185 Lugia V.png"
+        },
+        "85 Dedenne": {
+          "id": "85",
+          "name": "Dedenne",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/85 Dedenne.png"
+        },
+        "90 Hisuian Arcanine V": {
+          "id": "90",
+          "name": "Hisuian Arcanine V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/90 Hisuian Arcanine V.png"
+        },
+        "55 Stunfisk": {
+          "id": "55",
+          "name": "Stunfisk",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/55 Stunfisk.png"
+        },
+        "64 Mismagius": {
+          "id": "64",
+          "name": "Mismagius",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/64 Mismagius.png"
+        },
+        "6 Sunflora": {
+          "id": "6",
+          "name": "Sunflora",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/6 Sunflora.png"
+        },
+        "136 Regidrago VSTAR": {
+          "id": "136",
+          "name": "Regidrago VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/136 Regidrago VSTAR.png"
+        },
+        "118 Metang": {
+          "id": "118",
+          "name": "Metang",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/118 Metang.png"
+        },
+        "18 Ninetales": {
+          "id": "18",
+          "name": "Ninetales",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/18 Ninetales.png"
+        },
+        "210 Serperior VSTAR": {
+          "id": "210",
+          "name": "Serperior VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/210 Serperior VSTAR.png"
+        },
+        "2 Venomoth": {
+          "id": "2",
+          "name": "Venomoth",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/2 Venomoth.png"
+        },
+        "21 Ponyta": {
+          "id": "21",
+          "name": "Ponyta",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/21 Ponyta.png"
+        },
+        "143 Altaria": {
+          "id": "143",
+          "name": "Altaria",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/143 Altaria.png"
+        },
+        "177 Unown V": {
+          "id": "177",
+          "name": "Unown V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/177 Unown V.png"
+        },
+        "19 Growlithe": {
+          "id": "19",
+          "name": "Growlithe",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/19 Growlithe.png"
+        },
+        "115 Toxapex": {
+          "id": "115",
+          "name": "Toxapex",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/115 Toxapex.png"
+        },
+        "86 Indeedee": {
+          "id": "86",
+          "name": "Indeedee",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/86 Indeedee.png"
+        },
+        "179 Hisuian Arcanine V": {
+          "id": "179",
+          "name": "Hisuian Arcanine V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/179 Hisuian Arcanine V.png"
+        },
+        "171 Chesnaught V": {
+          "id": "171",
+          "name": "Chesnaught V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/171 Chesnaught V.png"
+        },
+        "83 Swirlix": {
+          "id": "83",
+          "name": "Swirlix",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/83 Swirlix.png"
+        },
+        "108 Skuntank V": {
+          "id": "108",
+          "name": "Skuntank V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/108 Skuntank V.png"
+        },
+        "11 Foongus": {
+          "id": "11",
+          "name": "Foongus",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/11 Foongus.png"
+        },
+        "66 Unown VSTAR": {
+          "id": "66",
+          "name": "Unown VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/66 Unown VSTAR.png"
+        },
+        "139 Lugia VSTAR": {
+          "id": "139",
+          "name": "Lugia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/139 Lugia VSTAR.png"
+        },
+        "20 Arcanine": {
+          "id": "20",
+          "name": "Arcanine",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/20 Arcanine.png"
+        },
+        "112 Krokorok": {
+          "id": "112",
+          "name": "Krokorok",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/112 Krokorok.png"
+        },
+        "133 Noivern": {
+          "id": "133",
+          "name": "Noivern",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/133 Noivern.png"
+        },
+        "91 Phanpy": {
+          "id": "91",
+          "name": "Phanpy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/91 Phanpy.png"
+        },
+        "140 Ho-Oh V": {
+          "id": "140",
+          "name": "Ho-Oh V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/140 Ho-Oh V.png"
+        },
+        "24 Reshiram V": {
+          "id": "24",
+          "name": "Reshiram V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/24 Reshiram V.png"
+        },
+        "199 Unown VSTAR": {
+          "id": "199",
+          "name": "Unown VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/199 Unown VSTAR.png"
+        },
+        "3 Spinarak": {
+          "id": "3",
+          "name": "Spinarak",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/3 Spinarak.png"
+        },
+        "13 Durant": {
+          "id": "13",
+          "name": "Durant",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/13 Durant.png"
+        },
+        "82 Meowstic": {
+          "id": "82",
+          "name": "Meowstic",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/82 Meowstic.png"
+        },
+        "124 Klang": {
+          "id": "124",
+          "name": "Klang",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/124 Klang.png"
+        },
+        "49 Pikachu": {
+          "id": "49",
+          "name": "Pikachu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/49 Pikachu.png"
+        },
+        "181 Skuntank V": {
+          "id": "181",
+          "name": "Skuntank V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/181 Skuntank V.png"
+        },
+        "76 Solosis": {
+          "id": "76",
+          "name": "Solosis",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/76 Solosis.png"
+        },
+        "31 Torracat": {
+          "id": "31",
+          "name": "Torracat",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/31 Torracat.png"
+        },
+        "201 Regidrago VSTAR": {
+          "id": "201",
+          "name": "Regidrago VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/201 Regidrago VSTAR.png"
+        },
+        "62 Jynx": {
+          "id": "62",
+          "name": "Jynx",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/62 Jynx.png"
+        },
+        "58 Regieleki VMAX": {
+          "id": "58",
+          "name": "Regieleki VMAX",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/58 Regieleki VMAX.png"
+        },
+        "26 Braixen": {
+          "id": "26",
+          "name": "Braixen",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/26 Braixen.png"
+        },
+        "119 Metagross": {
+          "id": "119",
+          "name": "Metagross",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/119 Metagross.png"
+        },
+        "149 Hisuian Braviary": {
+          "id": "149",
+          "name": "Hisuian Braviary",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/149 Hisuian Braviary.png"
+        },
+        "87 Dreepy": {
+          "id": "87",
+          "name": "Dreepy",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/87 Dreepy.png"
+        },
+        "114 Mareanie": {
+          "id": "114",
+          "name": "Mareanie",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/114 Mareanie.png"
+        },
+        "68 Kirlia": {
+          "id": "68",
+          "name": "Kirlia",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/68 Kirlia.png"
+        },
+        "37 Wailmer": {
+          "id": "37",
+          "name": "Wailmer",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/37 Wailmer.png"
+        },
+        "77 Duosion": {
+          "id": "77",
+          "name": "Duosion",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/77 Duosion.png"
+        },
+        "186 Lugia V": {
+          "id": "186",
+          "name": "Lugia V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/186 Lugia V.png"
+        },
+        "100 Palossand": {
+          "id": "100",
+          "name": "Palossand",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/100 Palossand.png"
+        },
+        "122 Ferrothorn": {
+          "id": "122",
+          "name": "Ferrothorn",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/122 Ferrothorn.png"
+        },
+        "180 Skuntank V": {
+          "id": "180",
+          "name": "Skuntank V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/180 Skuntank V.png"
+        },
+        "174 Omastar V": {
+          "id": "174",
+          "name": "Omastar V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/174 Omastar V.png"
+        },
+        "144 Buneary": {
+          "id": "144",
+          "name": "Buneary",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/144 Buneary.png"
+        },
+        "175 Regieleki V": {
+          "id": "175",
+          "name": "Regieleki V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/175 Regieleki V.png"
+        },
+        "52 Lanturn": {
+          "id": "52",
+          "name": "Lanturn",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/52 Lanturn.png"
+        },
+        "69 Gardevoir": {
+          "id": "69",
+          "name": "Gardevoir",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/69 Gardevoir.png"
+        },
+        "95 Anorith": {
+          "id": "95",
+          "name": "Anorith",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/95 Anorith.png"
+        },
+        "88 Drakloak": {
+          "id": "88",
+          "name": "Drakloak",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/88 Drakloak.png"
+        },
+        "106 Murkrow": {
+          "id": "106",
+          "name": "Murkrow",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/106 Murkrow.png"
+        },
+        "33 Alolan Vulpix V": {
+          "id": "33",
+          "name": "Alolan Vulpix V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/33 Alolan Vulpix V.png"
+        },
+        "146 Archen": {
+          "id": "146",
+          "name": "Archen",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/146 Archen.png"
+        },
+        "80 Beheeyem": {
+          "id": "80",
+          "name": "Beheeyem",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/80 Beheeyem.png"
+        },
+        "50 Raichu": {
+          "id": "50",
+          "name": "Raichu",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/50 Raichu.png"
+        },
+        "131 Dragonite": {
+          "id": "131",
+          "name": "Dragonite",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/131 Dragonite.png"
+        },
+        "127 Togedemaru": {
+          "id": "127",
+          "name": "Togedemaru",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/127 Togedemaru.png"
+        },
+        "200 Mawile VSTAR": {
+          "id": "200",
+          "name": "Mawile VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/200 Mawile VSTAR.png"
+        },
+        "202 Lugia VSTAR": {
+          "id": "202",
+          "name": "Lugia VSTAR",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/202 Lugia VSTAR.png"
+        },
+        "7 Serperior V": {
+          "id": "7",
+          "name": "Serperior V",
+          "width": 734,
+          "height": 1024,
+          "image_path": "assets/tcg_cards/silver_tempest/7 Serperior V.png"
+        }
+      },
+      "total_cards": 176
     }
   },
-  "total_sets": 22,
-  "total_cards": 3277
+  "total_sets": 25,
+  "total_cards": 3781
 }
