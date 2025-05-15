@@ -31,10 +31,12 @@ Upon a friend group challenging eachother to cultivate a TCG national pokedex ge
 - A 'Search by Set' tab that allows you to browse through TCG sets.
 - A 'Search by Pokemon' tab that allows you to search for all cards pertaining to certain Pokemon.
 - A button to add cards from either Search tabs to your digital binder.
-  
-![image](https://github.com/user-attachments/assets/42847fcf-0eff-41e4-9f5d-93a88da8eb95)
 
-- Select and export cards by generation.
+<img width="300" alt="Screenshot 2025-05-14 at 5 53 53 PM" src="https://github.com/user-attachments/assets/653f6cd3-4f99-4503-a3bc-7a9ecd918fb6" />
+
+- Select and export cards by generation, with or without complete Pokedex generations!
+
+<img width="300" alt="Screenshot 2025-05-14 at 5 54 38 PM" src="https://github.com/user-attachments/assets/e2fbdb6d-fef6-46bd-b770-9a59d4c9a9d7" />
 
 ## Features to Work on (Refer to Issues)
 
