@@ -31,12 +31,16 @@ Upon a friend group challenging eachother to cultivate a TCG national pokedex ge
 - A 'Search by Set' tab that allows you to browse through TCG sets.
 - A 'Search by Pokemon' tab that allows you to search for all cards pertaining to certain Pokemon.
 - A button to add cards from either Search tabs to your digital binder.
+  
+![image](https://github.com/user-attachments/assets/42847fcf-0eff-41e4-9f5d-93a88da8eb95)
+
+- Select and export cards by generation.
 
 ## Features to Work on (Refer to Issues)
 
 - Hover and examine cards for further detail.
 - Remove existing cards in your digital binder.
-- Select and export by multiple individual cards with their names/numbers or by generation page.
+
 
 ## Advantages of a Desktop Application
 
