@@ -15,14 +15,65 @@ from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen, QColor
 from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF 
 from PyQt5.QtPrintSupport import QPrinter 
 
+# Resource path helper function
+def get_resource_path(relative_path):
+    """
+    Get the correct resource path for both development and PyInstaller.
+    Works for both directory and file paths.
+    """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    # Make sure the path uses the correct separator for the OS
+    path = os.path.join(base_path, relative_path)
+    return path
+
+# Debug assets function
+def debug_assets():
+    """Print debug information about asset paths"""
+    print("\n----- ASSET DEBUG INFO -----")
+    print(f"Current working directory: {os.getcwd()}")
+    
+    try:
+        meipass = sys._MEIPASS
+        print(f"PyInstaller _MEIPASS: {meipass}")
+    except Exception as e:
+        print(f"Not running in PyInstaller environment: {e}")
+    
+    # Check if critical files exist
+    print("\nChecking critical files:")
+    critical_paths = [
+        POKEMON_METADATA_FILE,
+        os.path.dirname(TCG_METADATA_FILE),  # tcg_cards directory
+        IMPORTED_CARDS_FILE
+    ]
+    
+    for path in critical_paths:
+        exists = os.path.exists(path)
+        print(f"  {path}: {'EXISTS' if exists else 'MISSING'}")
+        
+        # If it's a directory and it exists, show contents
+        if exists and os.path.isdir(path):
+            print(f"  Contents of {path}:")
+            try:
+                for item in os.listdir(path):
+                    item_path = os.path.join(path, item)
+                    type_str = "dir" if os.path.isdir(item_path) else "file"
+                    print(f"    {type_str}: {item}")
+            except Exception as e:
+                print(f"    Error listing directory: {e}")
+    
+    print("----- END DEBUG INFO -----\n")
 
 # Path to metadata files
-POKEMON_METADATA_FILE = os.path.join('assets', 'pokemon_metadata.json')
-TCG_METADATA_FILE = os.path.join('assets', 'tcg_cards', 'index.json')
-IMPORTED_CARDS_FILE = os.path.join('assets', 'imported_cards.json')
+POKEMON_METADATA_FILE = get_resource_path(os.path.join('assets', 'pokemon_metadata.json'))
+TCG_METADATA_FILE = get_resource_path(os.path.join('assets', 'tcg_cards', 'index.json'))
+IMPORTED_CARDS_FILE = get_resource_path(os.path.join('assets', 'imported_cards.json'))
 
 # Global dashboard reference that will be set when the dashboard is created
-# This is a simple approach for immediate functionality
 DASHBOARD = None
 
 # Signal hub for passing messages between components
@@ -69,10 +120,10 @@ class PokemonCard(QFrame):
         imported_card_path = self.imported_cards.get(pokemon_id)
         
         # Add either the imported card image or the default sprite
-        if imported_card_path and os.path.exists(imported_card_path):
+        if imported_card_path and os.path.exists(get_resource_path(imported_card_path)):
             # Use imported TCG card image - same scale as TCGCard
             card_label = QLabel()
-            pixmap = QPixmap(imported_card_path)
+            pixmap = QPixmap(get_resource_path(imported_card_path))
             # Scale to match TCGCard dimensions
             pixmap = pixmap.scaled(240, 336, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             card_label.setPixmap(pixmap)
@@ -81,6 +132,7 @@ class PokemonCard(QFrame):
         else:
             # Use default sprite - scaled to similar proportions as TCG cards
             sprite_path = self.pokemon_data.get('local_sprite', '').lstrip('/')
+            sprite_path = get_resource_path(sprite_path)  # Use resource path helper
             if os.path.exists(sprite_path):
                 sprite_container = QWidget()
                 sprite_layout = QVBoxLayout(sprite_container)
@@ -100,6 +152,12 @@ class PokemonCard(QFrame):
                 
                 # Add spacer to help align with TCG card proportions
                 layout.addSpacing(20)
+            else:
+                # Add a placeholder if the sprite is missing
+                missing_label = QLabel("Sprite not found")
+                missing_label.setAlignment(Qt.AlignCenter)
+                layout.addWidget(missing_label)
+                print(f"Sprite not found: {sprite_path}")
         
         # Add Pokémon name and ID in the same format as TCGCard
         name_label = QLabel(f"#{self.pokemon_data['id']} {self.pokemon_data['name']}")
@@ -181,13 +239,20 @@ class TCGCard(QFrame):
         self.main_layout.setContentsMargins(10, 10, 10, 10)
         
         # Add card image
-        if os.path.exists(self.card_path):
+        card_path = get_resource_path(self.card_path)  # Use resource path helper
+        if os.path.exists(card_path):
             card_label = QLabel()
-            pixmap = QPixmap(self.card_path)
+            pixmap = QPixmap(card_path)
             pixmap = pixmap.scaled(240, 336, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             card_label.setPixmap(pixmap)
             card_label.setAlignment(Qt.AlignCenter)
             self.main_layout.addWidget(card_label)
+        else:
+            # Add a placeholder if the card image is missing
+            missing_label = QLabel("Card image not found")
+            missing_label.setAlignment(Qt.AlignCenter)
+            self.main_layout.addWidget(missing_label)
+            print(f"Card image not found: {card_path} (original path: {self.card_path})")
         
         # Add card ID - now properly display alphanumeric IDs
         name_label = QLabel(f"#{self.card_id}")
@@ -507,7 +572,7 @@ class ExportDialog(QDialog):
         
         name_layout = QHBoxLayout()
         name_layout.addWidget(QLabel("Collection Name:"))
-        self.collection_name = QLineEdit("My Pokédex Collection")
+        self.collection_name = QLineEdit(f"My {self.gen_name} Collection")
         name_layout.addWidget(self.collection_name)
         content_layout.addLayout(name_layout)
         
@@ -545,7 +610,7 @@ class ExportDialog(QDialog):
         return {
             "format": format_id,
             "include_all": self.include_all.isChecked(),
-            "include_tcg_only": self.include_tcg_only.isChecked(),
+            "include_tcg_only": not self.include_all.isChecked() and self.include_tcg_only.isChecked(),
             "include_collection_name": self.include_collection_name.isChecked(),
             "collection_name": self.collection_name.text(),
             "show_pokemon_names": self.show_pokemon_names.isChecked()
@@ -677,7 +742,7 @@ class GenerationTab(QWidget):
             if not painter.begin(printer):
                 QMessageBox.warning(self, "Export Failed", "Failed to initialize PDF printer")
                 return False
-            
+        
             # Calculate the cards to include
             cards_to_render = []
             for pokemon_id in range(self.start_id, self.end_id + 1):
@@ -688,7 +753,8 @@ class GenerationTab(QWidget):
                 # Check if we should include this Pokémon
                 has_tcg_card = str(pokemon_id) in self.imported_cards
                 
-                if config["include_tcg_only"] and not has_tcg_card:
+                # Filter based on export config
+                if not config.get("include_all", True) and not has_tcg_card and config.get("include_tcg_only", False):
                     continue
                 
                 cards_to_render.append((pokemon_id, pokemon_data, has_tcg_card))
@@ -927,7 +993,8 @@ class GenerationTab(QWidget):
             # Check if we should include this Pokémon
             has_tcg_card = str(pokemon_id) in self.imported_cards
             
-            if config["include_tcg_only"] and not has_tcg_card:
+            # Filter based on export config
+            if not config.get("include_all", True) and not has_tcg_card and config.get("include_tcg_only", False):
                 continue
             
             # Create a container widget for card and its name label
@@ -1030,7 +1097,7 @@ class GenerationTab(QWidget):
             QMessageBox.warning(self, "Export Failed", 
                             f"Failed to save export to {file_path}")
             return False
-    
+        
 class TCGSetTab(QWidget):
     """A widget representing a TCG set tab"""
     def __init__(self, set_name, set_path, set_metadata=None):
@@ -1074,7 +1141,12 @@ class TCGSetTab(QWidget):
         columns = 4  # Fewer columns for TCG cards as they're larger
         
         # Find all PNG images in the set directory
-        card_files = glob.glob(os.path.join(self.set_path, "*.png"))
+        resource_set_path = get_resource_path(self.set_path)
+        card_files = glob.glob(os.path.join(resource_set_path, "*.png"))
+        
+        # Debug output
+        print(f"Looking for cards in: {resource_set_path}")
+        print(f"Found {len(card_files)} card files")
         
         # Sort card files by the enhanced card number function
         try:
@@ -1122,7 +1194,7 @@ class TCGSetTab(QWidget):
         main_layout.addWidget(scroll_area)
         
         self.setLayout(main_layout)
-
+                
 class PokemonSearchTab(QWidget):
     """A tab for searching TCG cards by Pokemon name"""
     def __init__(self, pokemon_metadata, tcg_metadata):
@@ -1324,9 +1396,15 @@ class PokemonSearchTab(QWidget):
         for card_info in cards:
             # Create TCG card widget
             card_path = card_info.get('card_path', '')
-            if os.path.exists(card_path):
+            resource_card_path = get_resource_path(card_path)
+            
+            print(f"Checking card path: {card_path}")
+            print(f"Resource card path: {resource_card_path}")
+            print(f"Path exists: {os.path.exists(resource_card_path)}")
+            
+            if os.path.exists(resource_card_path):
                 tcg_card = TCGCard(
-                    card_path, 
+                    card_path,  # Keep original path for reference
                     card_info.get('card_id', ''), 
                     card_info.get('card_name', ''),
                     card_info.get('artist', 'Unknown'),
@@ -1342,7 +1420,7 @@ class PokemonSearchTab(QWidget):
                     col = 0
                     row += 1
             else:
-                print(f"Card image not found: {card_path}")
+                print(f"Card image not found: {resource_card_path} (original: {card_path})")
 
 class PokemonDashboard(QMainWindow):
     """Main application window"""
@@ -1381,93 +1459,172 @@ class PokemonDashboard(QMainWindow):
         self.import_card_for_pokemon(pokemon_name, card_path)
         
     def initUI(self):
-        self.setWindowTitle('PokéDextop')
-        self.setGeometry(100, 100, 1200, 800)
-        
-        # Create the central widget
-        central_widget = QWidget()
-        self.setCentralWidget(central_widget)
-        
-        # Create main layout
-        main_layout = QVBoxLayout(central_widget)
-        
-        # Create main tab widget
-        self.main_tabs = QTabWidget()
-        
-        # Create My Pokédex Tab (formerly Pokémon Sprites)
-        sprites_tab = QWidget()
-        sprites_layout = QVBoxLayout(sprites_tab)
-        
-        # Create a tab widget for generations
-        self.gen_tabs = QTabWidget()
-        
-        # Add tabs for each generation
-        for gen_name, (start_id, end_id) in self.generations.items():
-            gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata, self.imported_cards)
-            self.gen_tabs.addTab(gen_tab, gen_name)
-        
-        sprites_layout.addWidget(self.gen_tabs)
-        
-        # Add the sprites tab to main tabs with the new name
-        self.main_tabs.addTab(sprites_tab, "My Pokédex")
-        
-        # Create Search by Set Tab (formerly TCG Cards Tab)
-        tcg_tab = QWidget()
-        tcg_layout = QVBoxLayout(tcg_tab)
-        
-        # Create a tab widget for TCG sets
-        tcg_tabs = QTabWidget()
-        
-        # Add tabs for each TCG set
-        tcg_sets_path = os.path.join('assets', 'tcg_cards')
-        if os.path.exists(tcg_sets_path):
-            # Get all directories in the TCG cards folder
-            set_dirs = [d for d in os.listdir(tcg_sets_path) 
-                       if os.path.isdir(os.path.join(tcg_sets_path, d))]
+        try:
+            print("Starting PokemonDashboard.initUI()")
+            self.setWindowTitle('PokéDextop')
+            self.setGeometry(100, 100, 1200, 800)
             
-            # Sort alphabetically
-            set_dirs.sort()
+            # Create the central widget
+            central_widget = QWidget()
+            self.setCentralWidget(central_widget)
             
-            for set_dir in set_dirs:
-                set_path = os.path.join(tcg_sets_path, set_dir)
+            # Create main layout
+            main_layout = QVBoxLayout(central_widget)
+            
+            # Create main tab widget
+            self.main_tabs = QTabWidget()
+            
+            try:
+                print("Creating My Pokédex tab...")
+                # Create My Pokédex Tab (formerly Pokémon Sprites)
+                sprites_tab = QWidget()
+                sprites_layout = QVBoxLayout(sprites_tab)
                 
-                # Get set metadata if available
-                set_metadata = None
-                set_name = set_dir.replace('_', ' ').title()
+                # Create a tab widget for generations
+                self.gen_tabs = QTabWidget()
                 
-                if self.tcg_metadata and 'sets' in self.tcg_metadata and set_dir in self.tcg_metadata['sets']:
-                    set_metadata = self.tcg_metadata['sets'][set_dir]
-                    set_name = set_metadata.get('name', set_name)
+                # Add tabs for each generation
+                for gen_name, (start_id, end_id) in self.generations.items():
+                    print(f"Creating generation tab: {gen_name}...")
+                    gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata, self.imported_cards)
+                    self.gen_tabs.addTab(gen_tab, gen_name)
                 
-                # Create the set tab
-                set_tab = TCGSetTab(set_name, set_path, set_metadata)
-                tcg_tabs.addTab(set_tab, set_name)
-        else:
-            # If no TCG sets found, display a message
-            no_cards_label = QLabel("No TCG card sets found. Please add them to assets/tcg_cards/")
-            no_cards_label.setAlignment(Qt.AlignCenter)
-            tcg_layout.addWidget(no_cards_label)
-        
-        tcg_layout.addWidget(tcg_tabs)
-        
-        # Add the TCG tab to main tabs with the new name
-        self.main_tabs.addTab(tcg_tab, "Search by Set")
-        
-        # Create Search by Pokemon Tab
-        search_tab = PokemonSearchTab(self.pokemon_metadata, self.tcg_metadata)
-        self.main_tabs.addTab(search_tab, "Search by Pokémon")
-        
-        # Add the main tab widget to the layout
-        main_layout.addWidget(self.main_tabs)
-        
-        # Set up status bar
-        pokemon_count = len(self.pokemon_metadata)
-        tcg_set_count = len(set_dirs) if 'set_dirs' in locals() else 0
-        imported_count = len(self.imported_cards)
-        
-        self.statusBar().showMessage(
-            f"Pokémon: {pokemon_count} | TCG Sets: {tcg_set_count} | Imported Cards: {imported_count}"
-        )
+                sprites_layout.addWidget(self.gen_tabs)
+                
+                # Add the sprites tab to main tabs with the new name
+                self.main_tabs.addTab(sprites_tab, "My Pokédex")
+                print("My Pokédex tab created successfully")
+            except Exception as e:
+                print(f"Error creating My Pokédex tab: {e}")
+                import traceback
+                traceback.print_exc()
+                # Add a fallback tab with error message
+                error_tab = QWidget()
+                error_layout = QVBoxLayout(error_tab)
+                error_label = QLabel(f"Error loading Pokédex tab: {str(e)}")
+                error_layout.addWidget(error_label)
+                self.main_tabs.addTab(error_tab, "My Pokédex (Error)")
+            
+            try:
+                print("Creating Search by Set tab...")
+                # Create Search by Set Tab
+                tcg_tab = QWidget()
+                tcg_layout = QVBoxLayout(tcg_tab)
+                
+                # Create a tab widget for TCG sets
+                tcg_tabs = QTabWidget()
+                
+                # Add tabs for each TCG set
+                tcg_sets_path = get_resource_path(os.path.join('assets', 'tcg_cards'))
+                print(f"TCG sets path: {tcg_sets_path}")
+                print(f"Path exists: {os.path.exists(tcg_sets_path)}")
+                
+                if os.path.exists(tcg_sets_path):
+                    try:
+                        # Get all directories in the TCG cards folder
+                        set_dirs = [d for d in os.listdir(tcg_sets_path) 
+                                   if os.path.isdir(os.path.join(tcg_sets_path, d))]
+                        
+                        print(f"Found {len(set_dirs)} TCG set directories")
+                        
+                        # Sort alphabetically
+                        set_dirs.sort()
+                        
+                        for set_dir in set_dirs:
+                            print(f"Creating set tab for: {set_dir}")
+                            set_path = os.path.join(tcg_sets_path, set_dir)
+                            
+                            # Get set metadata if available
+                            set_metadata = None
+                            set_name = set_dir.replace('_', ' ').title()
+                            
+                            if self.tcg_metadata and 'sets' in self.tcg_metadata and set_dir in self.tcg_metadata['sets']:
+                                set_metadata = self.tcg_metadata['sets'][set_dir]
+                                set_name = set_metadata.get('name', set_name)
+                            
+                            # Create the set tab
+                            set_tab = TCGSetTab(set_name, set_path, set_metadata)
+                            tcg_tabs.addTab(set_tab, set_name)
+                    except Exception as e:
+                        print(f"Error reading TCG set directories: {e}")
+                        error_label = QLabel(f"Error reading TCG card sets: {e}")
+                        error_label.setAlignment(Qt.AlignCenter)
+                        tcg_layout.addWidget(error_label)
+                else:
+                    # If no TCG sets found, display a message
+                    print("No TCG card sets found")
+                    no_cards_label = QLabel("No TCG card sets found. Please add them to assets/tcg_cards/")
+                    no_cards_label.setAlignment(Qt.AlignCenter)
+                    tcg_layout.addWidget(no_cards_label)
+                
+                tcg_layout.addWidget(tcg_tabs)
+                
+                # Add the TCG tab to main tabs with the new name
+                self.main_tabs.addTab(tcg_tab, "Search by Set")
+                print("Search by Set tab created successfully")
+            except Exception as e:
+                print(f"Error creating Search by Set tab: {e}")
+                import traceback
+                traceback.print_exc()
+                # Add a fallback tab with error message
+                error_tab = QWidget()
+                error_layout = QVBoxLayout(error_tab)
+                error_label = QLabel(f"Error loading Search by Set tab: {str(e)}")
+                error_layout.addWidget(error_label)
+                self.main_tabs.addTab(error_tab, "Search by Set (Error)")
+            
+            try:
+                print("Creating Search by Pokémon tab...")
+                # Create Search by Pokemon Tab
+                search_tab = PokemonSearchTab(self.pokemon_metadata, self.tcg_metadata)
+                self.main_tabs.addTab(search_tab, "Search by Pokémon")
+                print("Search by Pokémon tab created successfully")
+            except Exception as e:
+                print(f"Error creating Search by Pokémon tab: {e}")
+                import traceback
+                traceback.print_exc()
+                # Add a fallback tab with error message
+                error_tab = QWidget()
+                error_layout = QVBoxLayout(error_tab)
+                error_label = QLabel(f"Error loading Search by Pokémon tab: {str(e)}")
+                error_layout.addWidget(error_label)
+                self.main_tabs.addTab(error_tab, "Search by Pokémon (Error)")
+            
+            # Add the main tab widget to the layout
+            main_layout.addWidget(self.main_tabs)
+            
+            # Set up status bar
+            try:
+                print("Setting up status bar...")
+                pokemon_count = len(self.pokemon_metadata)
+                set_dirs_local = locals().get('set_dirs', [])
+                tcg_set_count = len(set_dirs_local)
+                imported_count = len(self.imported_cards)
+                
+                self.statusBar().showMessage(
+                    f"Pokémon: {pokemon_count} | TCG Sets: {tcg_set_count} | Imported Cards: {imported_count}"
+                )
+                print("Status bar set up successfully")
+            except Exception as e:
+                print(f"Error setting up status bar: {e}")
+                self.statusBar().showMessage("Error loading application data")
+            
+            print("PokemonDashboard.initUI() completed")
+        except Exception as e:
+            print(f"CRITICAL ERROR in PokemonDashboard.initUI(): {e}")
+            import traceback
+            traceback.print_exc()
+            # Create a minimal fallback UI
+            try:
+                self.setWindowTitle('PokéDextop - ERROR')
+                central_widget = QWidget()
+                self.setCentralWidget(central_widget)
+                layout = QVBoxLayout(central_widget)
+                error_label = QLabel(f"Critical Error Loading Application:\n{str(e)}")
+                error_label.setStyleSheet("color: red; font-weight: bold; font-size: 16px;")
+                layout.addWidget(error_label)
+            except:
+                print("Failed to create even the fallback UI")
         
     def import_card_for_pokemon(self, pokemon_name, card_path):
         """Import a TCG card to replace a Pokémon sprite"""
@@ -1509,8 +1666,15 @@ class PokemonDashboard(QMainWindow):
         
         # Update status bar
         pokemon_count = len(self.pokemon_metadata)
-        tcg_set_count = sum(1 for _ in os.listdir(os.path.join('assets', 'tcg_cards')) 
-                          if os.path.isdir(os.path.join('assets', 'tcg_cards', _))) if os.path.exists(os.path.join('assets', 'tcg_cards')) else 0
+        tcg_sets_path = get_resource_path(os.path.join('assets', 'tcg_cards'))
+        tcg_set_count = 0
+        if os.path.exists(tcg_sets_path):
+            try:
+                tcg_set_count = sum(1 for _ in os.listdir(tcg_sets_path) 
+                                  if os.path.isdir(os.path.join(tcg_sets_path, _)))
+            except Exception as e:
+                print(f"Error counting TCG sets: {e}")
+        
         imported_count = len(self.imported_cards)
         
         self.statusBar().showMessage(
@@ -1521,34 +1685,39 @@ class PokemonDashboard(QMainWindow):
         
     def refresh_pokedex(self):
         """Refresh the Pokédex tab to show updated imported cards"""
-        # Create a new Gen tabs widget
-        new_gen_tabs = QTabWidget()
-        
-        # Add tabs for each generation with updated imported cards
-        for gen_name, (start_id, end_id) in self.generations.items():
-            gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata, self.imported_cards)
-            new_gen_tabs.addTab(gen_tab, gen_name)
+        try:
+            # Create a new Gen tabs widget
+            new_gen_tabs = QTabWidget()
             
-        # Get the My Pokédex tab widget
-        pokedex_tab = self.main_tabs.widget(0)
-        
-        # Find the layout of the My Pokédex tab
-        pokedex_layout = pokedex_tab.layout()
-        
-        # Remove the old gen tabs widget
-        old_gen_tabs = pokedex_layout.itemAt(0).widget()
-        pokedex_layout.removeWidget(old_gen_tabs)
-        old_gen_tabs.deleteLater()
-        
-        # Add the new gen tabs widget
-        pokedex_layout.addWidget(new_gen_tabs)
-        self.gen_tabs = new_gen_tabs
+            # Add tabs for each generation with updated imported cards
+            for gen_name, (start_id, end_id) in self.generations.items():
+                gen_tab = GenerationTab(gen_name, start_id, end_id, self.pokemon_metadata, self.imported_cards)
+                new_gen_tabs.addTab(gen_tab, gen_name)
+                
+            # Get the My Pokédex tab widget
+            pokedex_tab = self.main_tabs.widget(0)
+            
+            # Find the layout of the My Pokédex tab
+            pokedex_layout = pokedex_tab.layout()
+            
+            # Remove the old gen tabs widget
+            old_gen_tabs = pokedex_layout.itemAt(0).widget()
+            pokedex_layout.removeWidget(old_gen_tabs)
+            old_gen_tabs.deleteLater()
+            
+            # Add the new gen tabs widget
+            pokedex_layout.addWidget(new_gen_tabs)
+            self.gen_tabs = new_gen_tabs
+        except Exception as e:
+            print(f"Error refreshing Pokédex: {e}")
+            import traceback
+            traceback.print_exc()
         
     def load_pokemon_metadata(self):
         """Load Pokémon metadata from file"""
         if os.path.exists(POKEMON_METADATA_FILE):
             try:
-                with open(POKEMON_METADATA_FILE, 'r') as f:
+                with open(POKEMON_METADATA_FILE, 'r', encoding='utf-8') as f:
                     metadata = json.load(f)
                     print(f"Loaded metadata for {len(metadata)} Pokémon")
                     return metadata
@@ -1563,7 +1732,7 @@ class PokemonDashboard(QMainWindow):
         """Load TCG card metadata from file"""
         if os.path.exists(TCG_METADATA_FILE):
             try:
-                with open(TCG_METADATA_FILE, 'r') as f:
+                with open(TCG_METADATA_FILE, 'r', encoding='utf-8') as f:
                     metadata = json.load(f)
                     if 'sets' in metadata:
                         print(f"Loaded metadata for {len(metadata['sets'])} TCG sets")
@@ -1579,7 +1748,7 @@ class PokemonDashboard(QMainWindow):
         """Load imported cards data from file"""
         if os.path.exists(IMPORTED_CARDS_FILE):
             try:
-                with open(IMPORTED_CARDS_FILE, 'r') as f:
+                with open(IMPORTED_CARDS_FILE, 'r', encoding='utf-8') as f:
                     imported_cards = json.load(f)
                     print(f"Loaded {len(imported_cards)} imported cards")
                     return imported_cards
@@ -1590,24 +1759,92 @@ class PokemonDashboard(QMainWindow):
         
     def save_imported_cards(self):
         """Save imported cards data to file"""
+        # For writing files, we need to use a writable location
+        # First try to write to the original location
         try:
-            with open(IMPORTED_CARDS_FILE, 'w') as f:
+            with open(IMPORTED_CARDS_FILE, 'w', encoding='utf-8') as f:
                 json.dump(self.imported_cards, f, indent=2)
                 print(f"Saved {len(self.imported_cards)} imported cards")
+                return
         except Exception as e:
-            print(f"Error saving imported cards: {e}")
+            print(f"Error saving imported cards to original location: {e}")
+        
+        # If we can't write to the original location, try the user's home directory
+        try:
+            home_dir = os.path.expanduser("~")
+            app_data_dir = os.path.join(home_dir, ".pokedextop")
+            
+            # Create the directory if it doesn't exist
+            if not os.path.exists(app_data_dir):
+                os.makedirs(app_data_dir)
+                
+            user_file_path = os.path.join(app_data_dir, 'imported_cards.json')
+            
+            with open(user_file_path, 'w', encoding='utf-8') as f:
+                json.dump(self.imported_cards, f, indent=2)
+                print(f"Saved {len(self.imported_cards)} imported cards to {user_file_path}")
+        except Exception as e:
+            print(f"Error saving imported cards to user directory: {e}")
+
+def center_window(window):
+    """Center the window on the screen"""
+    frame_geometry = window.frameGeometry()
+    screen_center = QApplication.desktop().availableGeometry().center()
+    frame_geometry.moveCenter(screen_center)
+    window.move(frame_geometry.topLeft())
 
 def main():
-    app = QApplication(sys.argv)
-    
-    # Set application style
-    app.setStyle('Fusion')
-    
-    # Create and show the main window
-    mainWindow = PokemonDashboard()
-    mainWindow.show()
-    
-    sys.exit(app.exec_())
+    try:
+        print("\n\n==== STARTING POKEDEXTOP APPLICATION ====")
+        print(f"Current working directory: {os.getcwd()}")
+        
+        try:
+            print(f"Is PyInstaller environment: {'Yes' if hasattr(sys, '_MEIPASS') else 'No'}")
+            if hasattr(sys, '_MEIPASS'):
+                print(f"PyInstaller _MEIPASS: {sys._MEIPASS}")
+        except Exception as e:
+            print(f"Error checking PyInstaller environment: {e}")
+        
+        # Print PyQt version info
+        try:
+            from PyQt5.QtCore import QT_VERSION_STR, PYQT_VERSION_STR
+            print(f"Python version: {sys.version}")
+            print(f"Qt version: {QT_VERSION_STR}")
+            print(f"PyQt version: {PYQT_VERSION_STR}")
+        except Exception as e:
+            print(f"Error getting PyQt version info: {e}")
+        
+        # Call the debug function to check asset paths
+        debug_assets()
+        
+        # Create the application
+        app = QApplication(sys.argv)
+        app.setStyle('Fusion')
+        
+        # Create the main window
+        print("Creating main window...")
+        main_window = PokemonDashboard()
+        
+        # Center the window on the screen and show it
+        main_window.resize(1200, 800)
+        center_window(main_window)
+        main_window.show()
+        
+        # Enter the application main loop
+        print("Entering application main loop...")
+        sys.exit(app.exec_())
+    except Exception as e:
+        print(f"CRITICAL APPLICATION ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        
+        # Try to display a message box if UI is available
+        try:
+            app = QApplication.instance() or QApplication(sys.argv)
+            QMessageBox.critical(None, "Critical Error",
+                              f"The application encountered a critical error and cannot start:\n\n{str(e)}")
+        except:
+            pass
     
 if __name__ == '__main__':
     main()
