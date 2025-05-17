@@ -1,2 +1,6 @@
 venv/
-build_exe.py
+*.spec
+build/
+*.app/
+.DS_Store.DS_Store
+**/.DS_Store
