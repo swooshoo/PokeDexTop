@@ -1819,6 +1819,9 @@ def main():
         
         # Create the application
         app = QApplication(sys.argv)
+        app_icon = QIcon(get_resource_path(os.path.join('assets', 'icon.ico')))
+        app.setWindowIcon(app_icon)
+        app.setApplicationName("PokéDextop")
         app.setStyle('Fusion')
         
         # Create the main window
