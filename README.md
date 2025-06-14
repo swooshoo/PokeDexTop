@@ -7,7 +7,7 @@
 Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p> 
 
 ## Architecture & Data Pipeline Redesign (June 2025 - August 2025)
-Completely revamping the desktop app by ebuilding the data infrastructure to handle API integration with improved reliability, deduplication, and performance optimization. 
+Completely revamping the desktop app by rebuilding the data infrastructure to handle API integration with improved reliability, deduplication, and performance optimization. 
 
 ## Pokémon TCG Sets
 
