@@ -9,24 +9,96 @@ Upon a friend group challenging eachother to cultivate a TCG national pokedex ge
 ## Architecture & Data Pipeline Redesign (June 2025 - August 2025)
 Completely revamping the desktop app by rebuilding the data infrastructure to handle API integration with improved reliability, deduplication, and performance optimization. 
 
-## Pokémon TCG Sets
+## Advantages of the Redesigned System Architecture
 
-| Scarlet & Violet Era | Sword & Shield Era (Incomplete) | 
-|----------------------|--------------------------------|
-| Journey Together | Astral Radiance Trainer Gallery |
-| Prismatic Evolutions | Brilliant Stars Trainer Gallery |
-| Surging Sparks | Lost Origin Trainer Gallery |
-| Stellar Crown | Silver Tempest Trainer Gallery |
-| Shrouded Fable | Crown Zenith Galarian Gallery |
-| Twilight Masquerade | Sword and Shield Black Star Promos |
-| Temporal Forces | Astral Radiance |
-| Paldean Fates | Brilliant Stars |
-| Paradox Rift | Lost Origin |
-| 151 | Silver Tempest |
-| Obsidian Flames | |
-| Paldea Evolved | |
-| Scarlet & Violet | |
-| Scarlet & Violet Black Star Promos | |
+### **Scalability & Performance**
+
+- **Lightweight Client**: Frontend downloads ~50MB instead of 5GB, dramatically reducing installation time and storage requirements
+- **Dynamic Data Loading**: Real-time access to the latest Pokemon cards and sets without requiring app updates
+- **Intelligent Caching**: Local caching with background updates provides offline functionality while maintaining data freshness
+- **Horizontal Scaling**: Backend can handle thousands of users simultaneously with proper load balancing
+
+### **Data Freshness & Reliability**
+
+- **Always Current**: Users automatically get new card releases, price updates, and metadata corrections
+- **Data Quality Assurance**: Automated ETL pipelines ensure consistent, validated data across all users
+- **Backup & Recovery**: Cloud-based data storage with automated backups prevents data loss
+- **Version Control**: Complete audit trail of data changes with rollback capabilities
+
+### **Development & Maintenance**
+
+- **Separation of Concerns**: Frontend and backend can be developed, tested, and deployed independently
+- **API-First Design**: Enables future mobile apps, web interfaces, or third-party integrations
+- **Automated Testing**: CI/CD pipelines catch bugs before deployment to production
+- **Monitoring & Observability**: Real-time insights into system performance and user behavior
+
+### **User Experience Enhancements**
+
+- **Faster Initial Setup**: Quick download and installation gets users started immediately
+- **Seamless Updates**: Backend improvements and new features appear automatically
+- **Multi-Device Sync**: User collections and preferences sync across devices (future capability)
+- **Community Features**: Shared collections, trading suggestions, and market insights (future capability)
+
+### **Business Intelligence & Analytics**
+
+- **Usage Analytics**: Understanding which Pokemon and sets are most popular
+- **Performance Metrics**: Real-time monitoring of system health and user satisfaction
+- **Data-Driven Features**: Machine learning recommendations for card collecting strategies
+- **Market Integration**: Live price data and collection value tracking
+
+## Potential New Challenges
+
+### **Infrastructure Complexity**
+
+- **Multi-Service Architecture**: Requires managing databases, APIs, ETL pipelines, and monitoring systems
+- **Cloud Costs**: Ongoing operational expenses for hosting, storage, and data transfer
+- **DevOps Requirements**: Need expertise in deployment, scaling, and incident response
+- **Security Considerations**: API authentication, data encryption, and protection against attacks
+
+### **Network Dependencies**
+
+- **Internet Requirement**: Core functionality requires stable internet connection
+- **API Reliability**: System availability depends on backend service uptime
+- **Latency Considerations**: Geographic distance to servers may affect performance
+- **Graceful Degradation**: Need robust offline modes when connectivity is poor
+
+### **Development Overhead**
+
+- **Learning Curve**: Requires mastering additional technologies (databases, cloud services, ETL tools)
+- **Deployment Complexity**: Multiple services need coordinated releases and rollback strategies
+- **Testing Challenges**: Integration testing across frontend, API, and database layers
+- **Documentation Burden**: Need comprehensive API docs and system architecture diagrams
+
+### **Data Management Responsibilities**
+
+- **Privacy Compliance**: GDPR, CCPA, and other regulations for user data handling
+- **Data Retention Policies**: Managing storage costs while maintaining historical data
+- **Migration Challenges**: Moving users from local data to cloud-based system
+- **Backup Strategies**: Ensuring business continuity and disaster recovery
+
+### **User Transition Considerations**
+
+- **Feature Parity**: Ensuring redesigned system matches all current desktop functionality
+- **Migration Tool**: Helping existing users transfer their collections and preferences
+- **Backwards Compatibility**: Supporting users who prefer the standalone desktop version
+- **Change Management**: Communicating benefits and providing user support during transition
+
+## Long-Term Strategic Benefits
+
+### **Portfolio & Career Development**
+
+- **Industry-Standard Architecture**: Demonstrates proficiency with modern data engineering practices
+- **Cloud-Native Experience**: Hands-on experience with AWS, databases, and DevOps tools
+- **Full-Stack Capability**: Shows ability to design systems from data ingestion to user interface
+- **Production Mindset**: Understanding of monitoring, testing, and operational excellence
+
+### **Project Evolution Opportunities**
+
+- **Machine Learning Integration**: Recommendation engines, price prediction models, and collection optimization
+- **Mobile Application**: Native iOS/Android apps sharing the same backend infrastructure
+- **Marketplace Features**: Trading platform, auction integration, and collection valuation tools
+- **Community Platform**: User profiles, collection sharing, and social features
+
 
 ## Features
 
@@ -46,23 +118,22 @@ Completely revamping the desktop app by rebuilding the data infrastructure to ha
 - Hover and examine cards for further detail.
 - Remove existing cards in your digital binder.
 
+## Pokémon TCG Sets
 
-## Advantages of a Desktop Application
-
-Better Performance: Direct access to system resources. No HTTP overhead or browser rendering limitations. Faster image loading and display
-
-Richer User Experience: Native UI components and interactions. More responsive interface. Better integration with the operating system
-
-Offline Functionality: Works completely offline with no web server needed. Simpler deployment for end users
-
-Enhanced Features: Direct filesystem integration for importing/exporting data. Ability to use system dialogs for file selection. Potentially faster image processing and caching
-
-## Potential New Challenges
-
-Cross-Platform Compatibility: Ensuring consistent look and behavior across operating systems. May need to handle platform-specific quirks
-
-Distribution and Updates: Need to build separate executables for different platforms. Updates require users to download and install new versions. May need an auto-update system
-
-Deployment Size: Executable size will be larger as it includes Python and all dependencies
-May require an installer for proper setup
+| Scarlet & Violet Era | Sword & Shield Era (Incomplete) | 
+|----------------------|--------------------------------|
+| Journey Together | Astral Radiance Trainer Gallery |
+| Prismatic Evolutions | Brilliant Stars Trainer Gallery |
+| Surging Sparks | Lost Origin Trainer Gallery |
+| Stellar Crown | Silver Tempest Trainer Gallery |
+| Shrouded Fable | Crown Zenith Galarian Gallery |
+| Twilight Masquerade | Sword and Shield Black Star Promos |
+| Temporal Forces | Astral Radiance |
+| Paldean Fates | Brilliant Stars |
+| Paradox Rift | Lost Origin |
+| 151 | Silver Tempest |
+| Obsidian Flames | |
+| Paldea Evolved | |
+| Scarlet & Violet | |
+| Scarlet & Violet Black Star Promos | |
 
