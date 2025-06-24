@@ -1,12 +1,31 @@
 
-# PokeDexTop : A Desktop National Pokedex - REVAMP
+# PokeDexTop : A Desktop National Pokedex 
 
 <img align="right" width="100" height="100" src="assets/pokeball.png">
 <p>A National Pokedex for Pokemon TCG Collectors. Add cards to a your collection from current and vintage sets, and build your dream national pokedex collection without redundant websites. <br>  
 
 Upon a friend group challenging eachother to cultivate a TCG national pokedex generation by generation over months per gen, I was inspired to code a digital binder to track, display, search, and share admirable TCG cards and binder pages. </p> 
 
-## Architecture & Data Pipeline Redesign (June 2025 - August 2025)
+## Features
+
+- A digital binder organized by Pokedex number and split into generations.
+- A 'Search by Set' tab that allows you to browse through TCG sets.
+- A 'Search by Pokemon' tab that allows you to search for all cards pertaining to certain Pokemon.
+- A button to add cards from either Search tabs to your digital binder.
+
+<img width="300" alt="Screenshot 2025-05-14 at 5 53 53 PM" src="https://github.com/user-attachments/assets/653f6cd3-4f99-4503-a3bc-7a9ecd918fb6" />
+
+- Select and export cards by generation, with or without complete Pokedex generations!
+
+<img width="300" alt="Screenshot 2025-05-14 at 5 54 38 PM" src="https://github.com/user-attachments/assets/e2fbdb6d-fef6-46bd-b770-9a59d4c9a9d7" />
+
+## Features to Work on (Refer to Issues)
+
+- Hover and examine cards for further detail.
+- Remove existing cards in your digital binder.
+
+
+# Architecture & Data Pipeline Redesign (June 2025 - August 2025)
 Completely revamping the desktop app by rebuilding the data infrastructure to handle API integration with improved reliability, deduplication, and performance optimization. 
 
 ## Advantages of the Redesigned System Architecture
@@ -99,24 +118,6 @@ Completely revamping the desktop app by rebuilding the data infrastructure to ha
 - **Marketplace Features**: Trading platform, auction integration, and collection valuation tools
 - **Community Platform**: User profiles, collection sharing, and social features
 
-
-## Features
-
-- A digital binder organized by Pokedex number and split into generations.
-- A 'Search by Set' tab that allows you to browse through TCG sets.
-- A 'Search by Pokemon' tab that allows you to search for all cards pertaining to certain Pokemon.
-- A button to add cards from either Search tabs to your digital binder.
-
-<img width="300" alt="Screenshot 2025-05-14 at 5 53 53 PM" src="https://github.com/user-attachments/assets/653f6cd3-4f99-4503-a3bc-7a9ecd918fb6" />
-
-- Select and export cards by generation, with or without complete Pokedex generations!
-
-<img width="300" alt="Screenshot 2025-05-14 at 5 54 38 PM" src="https://github.com/user-attachments/assets/e2fbdb6d-fef6-46bd-b770-9a59d4c9a9d7" />
-
-## Features to Work on (Refer to Issues)
-
-- Hover and examine cards for further detail.
-- Remove existing cards in your digital binder.
 
 ## Pokémon TCG Sets
 
