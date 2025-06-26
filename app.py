@@ -14,13 +14,15 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QCheckBox, QButtonGroup, QDialogButtonBox, QFileDialog,
                             QProgressBar, QTextEdit, QSpinBox)
 from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen, QColor
-from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, QThread, QTimer
+from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, QThread, QTimer, QUrl
 from PyQt5.QtPrintSupport import QPrinter 
 from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+from utils import ImageLoader
 
 # Pokemon TCG SDK imports
 from pokemontcgsdk import Card, Set
 from pokemontcgsdk.restclient import RestClient, PokemonTcgException
+
 
 # =============================================================================
 # BRONZE-SILVER-GOLD DATA ARCHITECTURE
@@ -606,6 +608,108 @@ class DatabaseManager:
         
         conn.commit()
         conn.close()
+
+# =============================================================================
+# IMAGE LOADER
+# =============================================================================
+
+class ImageLoader(QObject):
+    """Centralized image loading utility for the application"""
+    
+    imageLoaded = pyqtSignal(QPixmap)
+    
+    def __init__(self):
+        super().__init__()
+        self._network_manager = QNetworkAccessManager()
+        self._loading_images = {}  # Track ongoing requests
+        self._image_cache = {}  # Simple in-memory cache
+    
+    def load_image(self, url, label, size=None):
+        """
+        Load an image from URL and set it on a QLabel
+        
+        Args:
+            url: Image URL
+            label: QLabel to set the image on
+            size: Optional tuple (width, height) to scale the image
+        """
+        if not url:
+            label.setText("No Image")
+            return
+        
+        # Check cache first
+        if url in self._image_cache:
+            self._set_image_on_label(label, self._image_cache[url], size)
+            return
+        
+        # Show loading state
+        label.setText("Loading...")
+        label.setStyleSheet("color: #7f8c8d; background-color: #2c3e50; border-radius: 4px;")
+        
+        # Create request
+        request = QNetworkRequest(QUrl(url))
+        request.setAttribute(QNetworkRequest.CacheLoadControlAttribute, 
+                           QNetworkRequest.PreferCache)
+        
+        reply = self._network_manager.get(request)
+        
+        # Store the reply with its associated data
+        self._loading_images[reply] = (label, size, url)
+        
+        # Connect signals
+        reply.finished.connect(lambda: self._on_image_loaded(reply))
+        reply.error.connect(lambda: self._on_image_error(reply))
+    
+    def _on_image_loaded(self, reply):
+        """Handle image loading completion"""
+        if reply not in self._loading_images:
+            reply.deleteLater()
+            return
+        
+        label, size, url = self._loading_images.pop(reply)
+        
+        if reply.error() == QNetworkReply.NoError:
+            data = reply.readAll()
+            pixmap = QPixmap()
+            
+            if pixmap.loadFromData(data):
+                # Cache the pixmap
+                self._image_cache[url] = pixmap
+                # Set on label
+                self._set_image_on_label(label, pixmap, size)
+            else:
+                label.setText("Invalid\nImage")
+                label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+        else:
+            self._on_image_error(reply)
+        
+        reply.deleteLater()
+    
+    def _on_image_error(self, reply):
+        """Handle image loading errors"""
+        if reply in self._loading_images:
+            label, _, _ = self._loading_images.pop(reply)
+            label.setText("Failed to\nLoad Image")
+            label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+        reply.deleteLater()
+    
+    def _set_image_on_label(self, label, pixmap, size):
+        """Set pixmap on label with optional scaling"""
+        if size:
+            scaled_pixmap = pixmap.scaled(size[0], size[1], 
+                                         Qt.KeepAspectRatio, 
+                                         Qt.SmoothTransformation)
+            label.setPixmap(scaled_pixmap)
+        else:
+            # Scale to label size
+            label_size = label.size()
+            scaled_pixmap = pixmap.scaled(label_size, 
+                                         Qt.KeepAspectRatio, 
+                                         Qt.SmoothTransformation)
+            label.setPixmap(scaled_pixmap)
+        
+        label.setStyleSheet("")  # Clear loading styles
+
 
 # =============================================================================
 # TCG API CLIENT - Pokemon TCG SDK Integration
@@ -1213,13 +1317,17 @@ class DataSyncDialog(QDialog):
         self.reset_database_btn.setEnabled(True)
 
 class PokemonCard(QFrame):
-    """Updated Pokemon card widget with S3 image support"""
+    """Updated Pokemon card widget with working image support"""
     
-    def __init__(self, pokemon_data, user_collection=None):
+    # Add a signal to notify when a card is imported
+    cardImported = pyqtSignal(str, str)  # pokemon_id, card_id
+    
+    def __init__(self, pokemon_data, user_collection=None, image_loader=None, db_manager=None):
         super().__init__()
         self.pokemon_data = pokemon_data
         self.user_collection = user_collection or {}
-        self.network_manager = QNetworkAccessManager()
+        self.image_loader = image_loader or ImageLoader()
+        self.db_manager = db_manager
         self.initUI()
     
     def initUI(self):
@@ -1248,25 +1356,12 @@ class PokemonCard(QFrame):
         self.image_label = QLabel()
         self.image_label.setAlignment(Qt.AlignCenter)
         self.image_label.setMinimumHeight(200)
+        self.image_label.setMaximumHeight(350)
+        self.image_label.setScaledContents(False)
         self.image_label.setStyleSheet("background-color: #2c3e50; border-radius: 4px;")
         
-        # Check if user has imported a card for this Pokemon
-        pokemon_id = str(self.pokemon_data['id'])
-        user_card = self.user_collection.get(pokemon_id)
-        
-        if user_card:
-            # Load TCG card image
-            self.load_image_from_url(user_card['image_url'])
-            self.image_label.setToolTip(f"TCG Card: {user_card['card_name']}")
-        else:
-            # Show placeholder for now (could load Pokemon sprite from PokeAPI)
-            self.image_label.setText("Click to\nImport Card")
-            self.image_label.setStyleSheet("""
-                background-color: #2c3e50; 
-                border-radius: 4px; 
-                color: #bdc3c7;
-                font-size: 12px;
-            """)
+        # Load the card image
+        self.refresh_card_display()
         
         layout.addWidget(self.image_label, 1, Qt.AlignCenter)
         
@@ -1291,30 +1386,24 @@ class PokemonCard(QFrame):
         # Make clickable for card selection
         self.mousePressEvent = self.show_card_selection
     
-    def load_image_from_url(self, url):
-        """Load image from URL asynchronously"""
-        if not url:
-            return
+    def refresh_card_display(self):
+        """Refresh the card display based on current collection state"""
+        pokemon_id = str(self.pokemon_data['id'])
+        user_card = self.user_collection.get(pokemon_id)
         
-        request = QNetworkRequest(url)
-        reply = self.network_manager.get(request)
-        reply.finished.connect(lambda: self.on_image_loaded(reply))
-    
-    def on_image_loaded(self, reply):
-        """Handle image loading completion"""
-        if reply.error() == QNetworkReply.NoError:
-            data = reply.readAll()
-            pixmap = QPixmap()
-            pixmap.loadFromData(data)
-            
-            if not pixmap.isNull():
-                # Scale image to fit
-                scaled_pixmap = pixmap.scaled(240, 200, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-                self.image_label.setPixmap(scaled_pixmap)
+        if user_card and user_card.get('image_url'):
+            # Load TCG card image
+            self.image_loader.load_image(user_card['image_url'], self.image_label, (240, 335))
+            self.image_label.setToolTip(f"TCG Card: {user_card['card_name']}")
         else:
-            self.image_label.setText("Image\nLoad Failed")
-        
-        reply.deleteLater()
+            # Show placeholder for now
+            self.image_label.setText("Click to\nImport Card")
+            self.image_label.setStyleSheet("""
+                background-color: #2c3e50; 
+                border-radius: 4px; 
+                color: #bdc3c7;
+                font-size: 12px;
+            """)
     
     def show_card_selection(self, event):
         """Show card selection dialog"""
@@ -1327,8 +1416,16 @@ class PokemonCard(QFrame):
                 "Use 'Sync Data' to search for cards.")
             return
         
-        # Create card selection dialog
-        dialog = CardSelectionDialog(pokemon_name, available_cards, self)
+        # Create card selection dialog with image loader and db_manager
+        dialog = CardSelectionDialog(
+            pokemon_name, 
+            available_cards,
+            pokemon_id=self.pokemon_data['id'],
+            image_loader=self.image_loader,
+            db_manager=self.db_manager,
+            parent=self
+        )
+        
         if dialog.exec_() == QDialog.Accepted:
             selected_card_id = dialog.get_selected_card()
             if selected_card_id:
@@ -1337,18 +1434,64 @@ class PokemonCard(QFrame):
     
     def import_card(self, card_id):
         """Import a card for this Pokemon"""
-        # This would update the database and refresh the UI
-        # Implementation depends on parent dashboard
-        pass
+        if not self.db_manager:
+            return
+        
+        pokemon_id = self.pokemon_data['id']
+        
+        # Add to database
+        self.db_manager.add_to_user_collection('default', pokemon_id, card_id)
+        
+        # Update our local collection data
+        self.user_collection[str(pokemon_id)] = self.get_card_details(card_id)
+        
+        # Refresh the display
+        self.refresh_card_display()
+        
+        # Emit signal for parent to know about the import
+        self.cardImported.emit(str(pokemon_id), card_id)
+    
+    def get_card_details(self, card_id):
+        """Get card details from database"""
+        if not self.db_manager:
+            return {}
+        
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT card_id, name, image_url_large, set_name
+            FROM silver_tcg_cards
+            WHERE card_id = ?
+        """, (card_id,))
+        
+        result = cursor.fetchone()
+        conn.close()
+        
+        if result:
+            return {
+                'card_id': result[0],
+                'card_name': result[1],
+                'image_url': result[2],
+                'set_name': result[3]
+            }
+        return {}
+
+
+# Updated CardSelectionDialog to accept pokemon_id and db_manager
 
 class CardSelectionDialog(QDialog):
     """Dialog for selecting which TCG card to import"""
     
-    def __init__(self, pokemon_name, card_ids, parent=None):
+    def __init__(self, pokemon_name, card_ids, pokemon_id=None, image_loader=None, db_manager=None, parent=None):
         super().__init__(parent)
         self.pokemon_name = pokemon_name
+        self.pokemon_id = pokemon_id
         self.card_ids = card_ids
         self.selected_card_id = None
+        self.image_loader = image_loader or ImageLoader()
+        self.db_manager = db_manager or DatabaseManager()
+        self.selected_widget = None
         self.setWindowTitle(f"Select Card for {pokemon_name}")
         self.setMinimumWidth(600)
         self.initUI()
@@ -1368,14 +1511,11 @@ class CardSelectionDialog(QDialog):
         grid_widget = QWidget()
         grid_layout = QGridLayout(grid_widget)
         
-        # Load card details from database and display
-        db_manager = DatabaseManager()  # Get from parent in real implementation
-        
         row, col = 0, 0
         columns = 3
         
         for card_id in self.card_ids:
-            card_info = self.get_card_info(db_manager, card_id)
+            card_info = self.get_card_info(self.db_manager, card_id)
             if card_info:
                 card_widget = self.create_card_widget(card_info)
                 grid_layout.addWidget(card_widget, row, col)
@@ -1452,12 +1592,15 @@ class CardSelectionDialog(QDialog):
         image_label = QLabel()
         image_label.setAlignment(Qt.AlignCenter)
         image_label.setFixedHeight(160)
-        image_label.setText("Loading...")
+        image_label.setScaledContents(False)
         layout.addWidget(image_label)
         
-        # Load image asynchronously
+        # Load image
         if card_info['image_url_small']:
-            self.load_card_image(image_label, card_info['image_url_small'])
+            self.image_loader.load_image(card_info['image_url_small'], 
+                                       image_label, (150, 160))
+        else:
+            image_label.setText("No Image")
         
         # Card info
         name_label = QLabel(card_info['name'])
@@ -1480,19 +1623,27 @@ class CardSelectionDialog(QDialog):
         
         # Make clickable
         widget.card_id = card_info['card_id']
+        widget.card_info = card_info
         widget.mousePressEvent = lambda event: self.select_card(widget)
         
         return widget
     
-    def load_card_image(self, label, url):
-        """Load card image from URL"""
-        # Implementation would use QNetworkAccessManager
-        # For now, show placeholder
-        label.setText("Card Image")
-    
     def select_card(self, widget):
         """Select a card"""
-        # Highlight selected widget
+        # Deselect previous
+        if self.selected_widget:
+            self.selected_widget.setStyleSheet("""
+                QFrame {
+                    background-color: #34495e;
+                    border: 2px solid #2c3e50;
+                    border-radius: 4px;
+                }
+                QFrame:hover {
+                    border: 2px solid #3498db;
+                }
+            """)
+        
+        # Select new
         widget.setStyleSheet("""
             QFrame {
                 background-color: #3498db;
@@ -1501,21 +1652,24 @@ class CardSelectionDialog(QDialog):
             }
         """)
         
+        self.selected_widget = widget
         self.selected_card_id = widget.card_id
         self.import_btn.setEnabled(True)
     
     def get_selected_card(self):
         """Get the selected card ID"""
         return self.selected_card_id
-
+    
 class GenerationTab(QWidget):
     """Generation tab with Bronze-Silver-Gold data integration"""
     
-    def __init__(self, gen_name, generation_num, db_manager):
+    def __init__(self, gen_name, generation_num, db_manager, image_loader=None):
         super().__init__()
         self.gen_name = gen_name
         self.generation_num = generation_num
         self.db_manager = db_manager
+        self.image_loader = image_loader or ImageLoader()
+        self.pokemon_cards = []  # Keep track of pokemon cards for updates
         self.initUI()
     
     def initUI(self):
@@ -1564,6 +1718,9 @@ class GenerationTab(QWidget):
     
     def refresh_data(self):
         """Refresh Pokemon data from Gold layer"""
+        # Clear existing cards
+        self.pokemon_cards.clear()
+        
         # Get Pokemon for this generation
         pokemon_data = self.db_manager.get_pokemon_by_generation(self.generation_num)
         user_collection = self.db_manager.get_user_collection()
@@ -1591,7 +1748,17 @@ class GenerationTab(QWidget):
         # Add Pokemon cards
         row, col = 0, 0
         for pokemon_id, pokemon_info in pokemon_data.items():
-            pokemon_card = PokemonCard(pokemon_info, user_collection)
+            pokemon_card = PokemonCard(
+                pokemon_info, 
+                user_collection, 
+                self.image_loader,
+                self.db_manager
+            )
+            
+            # Connect the import signal to refresh just the stats
+            pokemon_card.cardImported.connect(self.on_card_imported)
+            
+            self.pokemon_cards.append(pokemon_card)
             grid_layout.addWidget(pokemon_card, row, col, Qt.AlignCenter)
             
             col += 1
@@ -1617,6 +1784,20 @@ class GenerationTab(QWidget):
             grid_layout.addWidget(no_data_widget, 0, 0, 1, columns)
         
         self.scroll_area.setWidget(grid_widget)
+    
+    def on_card_imported(self, pokemon_id, card_id):
+        """Handle card import to update stats without full refresh"""
+        # Update just the stats
+        pokemon_data = self.db_manager.get_pokemon_by_generation(self.generation_num)
+        user_collection = self.db_manager.get_user_collection()
+        
+        total_pokemon = len(pokemon_data)
+        imported_count = len([p for p in pokemon_data.keys() if p in user_collection])
+        total_cards = sum(p.get('card_count', 0) for p in pokemon_data.values())
+        
+        self.stats_label.setText(
+            f"Pokemon: {total_pokemon} | Imported: {imported_count} | Available Cards: {total_cards}"
+        )
 
 class PokemonDashboard(QMainWindow):
     """Main dashboard with complete Bronze-Silver-Gold architecture"""
@@ -1626,6 +1807,9 @@ class PokemonDashboard(QMainWindow):
         
         # Initialize database
         self.db_manager = DatabaseManager()
+        
+        # Initialize shared image loader
+        self.image_loader = ImageLoader()
         
         # Set up generations (from database)
         self.load_generations()
@@ -1805,7 +1989,7 @@ class PokemonDashboard(QMainWindow):
         self.gen_tabs = QTabWidget()
         
         for generation, gen_name in self.generations:
-            gen_tab = GenerationTab(gen_name, generation, self.db_manager)
+            gen_tab = GenerationTab(gen_name, generation, self.db_manager, self.image_loader)
             self.gen_tabs.addTab(gen_tab, f"Gen {generation}")
         
         pokedex_layout.addWidget(self.gen_tabs)
@@ -2014,7 +2198,7 @@ class PokemonDashboard(QMainWindow):
         row, col = 0, 0
         
         for card_data in cards:
-            card_widget = self.create_tcg_card_widget(card_data)
+            card_widget = self.create_tcg_card_widget(card_data, self.image_loader)
             grid_layout.addWidget(card_widget, row, col)
             
             col += 1
@@ -2030,9 +2214,12 @@ class PokemonDashboard(QMainWindow):
         
         self.tcg_scroll.setWidget(grid_widget)
     
-    def create_tcg_card_widget(self, card_data):
+    def create_tcg_card_widget(self, card_data, image_loader=None):
         """Create a TCG card display widget"""
         card_id, name, set_name, rarity, image_url = card_data
+        
+        if not image_loader:
+            image_loader = self.image_loader
         
         widget = QFrame()
         widget.setFrameStyle(QFrame.Box | QFrame.Raised)
@@ -2055,13 +2242,15 @@ class PokemonDashboard(QMainWindow):
         image_label = QLabel()
         image_label.setAlignment(Qt.AlignCenter)
         image_label.setFixedHeight(120)
-        image_label.setText("Card Image")
-        image_label.setStyleSheet("background-color: #2c3e50; border-radius: 2px;")
+        image_label.setScaledContents(False)
         layout.addWidget(image_label)
         
         # Load image if URL exists
         if image_url:
-            self.load_card_image_async(image_label, image_url)
+            image_loader.load_image(image_url, image_label, (140, 120))
+        else:
+            image_label.setText("No Image")
+            image_label.setStyleSheet("background-color: #2c3e50; border-radius: 2px; color: #7f8c8d;")
         
         # Card name
         name_label = QLabel(name)
@@ -2082,12 +2271,6 @@ class PokemonDashboard(QMainWindow):
         widget.mousePressEvent = lambda event: self.quick_import_card(card_id, name)
         
         return widget
-    
-    def load_card_image_async(self, label, url):
-        """Load card image asynchronously"""
-        # Implementation would use QNetworkAccessManager
-        # For brevity, showing placeholder
-        label.setText("Loading...")
     
     def quick_import_card(self, card_id, card_name):
         """Quick import a card to collection"""
@@ -2110,7 +2293,6 @@ class PokemonDashboard(QMainWindow):
     
     def extract_pokemon_name(self, card_name):
         """Extract Pokemon name from card (simplified version)"""
-        # This would use the enhanced extraction logic from before
         import re
         
         # Remove prefixes and suffixes
