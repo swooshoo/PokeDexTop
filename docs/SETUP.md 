@@ -1,0 +1,24 @@
+# PokéDextop Setup Guide
+
+## Quick Start
+
+1. Install Dependencies
+    '''pip install -r requirements.txt'''
+
+2. Setup Database
+    '''python scripts/setup_database.py'''
+
+3. Test API Connection 
+    '''python scripts/test_tcg_api.py'''
+
+4. Run Application
+    '''python app.py'''
+
+# Usage
+
+## First Use
+
+#### Launch the application
+#### Click "🔄 Sync Data"
+#### Try searching for a Pokemon like "Pikachu"
+#### Browse generations to see your collection grow!

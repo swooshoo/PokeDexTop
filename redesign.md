@@ -1,4 +1,4 @@
-# 🏗️ **Complete System Architecture**
+# 🏗️ ** System Architecture Brainstorm**
 
 ## **Bronze-Silver-Gold Data Pipeline**
 
@@ -6,7 +6,7 @@
 - **Purpose**: Immutable historical record of all API responses
 - **Tables**: `bronze_tcg_cards`, `bronze_tcg_sets`
 - **Features**: 
-  - Hash-based deduplication (exactly as you requested)
+  - Hash-based deduplication
   - Timestamp tracking for every API call
   - Preserves original API response structure
   - Never modified after insertion
@@ -75,7 +75,7 @@
 - **Data Quality**: Raw data preserved, processed data clean
 - **Audit Trail**: Complete history of every API call and data change
 
-### **Enterprise Ready**:
+### **Enterprise Applications?**:
 - **Multi-User**: Each user has their own collection in `gold_user_collections`
 - **Role Management**: Ready for admin/user role separation
 - **Analytics**: Built-in reporting on collection completion, data quality
