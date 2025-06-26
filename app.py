@@ -1530,11 +1530,10 @@ class PokemonCard(QFrame):
             
             self.image_label.setToolTip(tooltip_text)
             
-            # Add a subtle border to indicate this is an imported card
+            # Clean styling for imported cards (no border)
             self.image_label.setStyleSheet("""
                 background-color: #2c3e50; 
-                border-radius: 6px; 
-                border: 2px solid #27ae60;
+                border-radius: 6px;
             """)
         else:
             # Enhanced placeholder for missing cards
