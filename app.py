@@ -1408,7 +1408,7 @@ class DataSyncDialog(QDialog):
         self.reset_database_btn.setEnabled(True)
 
 class PokemonCard(QFrame):
-    """Updated Pokemon card widget with working image support"""
+    """Updated Pokemon card widget with enhanced larger image support"""
     
     # Add a signal to notify when a card is imported
     cardImported = pyqtSignal(str, str)  # pokemon_id, card_id
@@ -1437,64 +1437,129 @@ class PokemonCard(QFrame):
             }
         """)
         
-        self.setFixedWidth(280)
+        self.setFixedWidth(300)  # Slightly increased from 280
         self.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         
         layout = QVBoxLayout()
-        layout.setContentsMargins(10, 10, 10, 10)
+        layout.setContentsMargins(12, 12, 12, 12)  # Increased padding
+        layout.setSpacing(8)
         
-        # Image container
+        # Image container - Enhanced
         self.image_label = QLabel()
         self.image_label.setAlignment(Qt.AlignCenter)
-        self.image_label.setMinimumHeight(200)
-        self.image_label.setMaximumHeight(350)
+        self.image_label.setMinimumHeight(220)  # Increased from 200
+        self.image_label.setMaximumHeight(380)  # Increased from 350
         self.image_label.setScaledContents(False)
-        self.image_label.setStyleSheet("background-color: #2c3e50; border-radius: 4px;")
+        self.image_label.setStyleSheet("background-color: #2c3e50; border-radius: 6px;")
         
         # Load the card image
         self.refresh_card_display()
         
         layout.addWidget(self.image_label, 1, Qt.AlignCenter)
         
-        # Pokemon info
+        # Pokemon info section - Enhanced
+        info_container = QWidget()
+        info_layout = QVBoxLayout(info_container)
+        info_layout.setContentsMargins(0, 0, 0, 0)
+        info_layout.setSpacing(3)
+        
+        # Pokemon name with better styling
         name_label = QLabel(f"#{self.pokemon_data['id']} {self.pokemon_data['name']}")
         name_label.setAlignment(Qt.AlignCenter)
-        name_label.setFont(QFont('Arial', 11, QFont.Bold))
-        name_label.setStyleSheet("color: white; background: transparent;")
+        name_label.setFont(QFont('Arial', 12, QFont.Bold))  # Slightly larger
+        name_label.setStyleSheet("""
+            color: white; 
+            background: transparent;
+            padding: 5px;
+            border-radius: 4px;
+        """)
         name_label.setWordWrap(True)
-        layout.addWidget(name_label)
+        info_layout.addWidget(name_label)
         
-        # Card count info
+        # Generation info
+        generation = self.pokemon_data.get('generation')
+        if generation:
+            gen_label = QLabel(f"Generation {generation}")
+            gen_label.setAlignment(Qt.AlignCenter)
+            gen_label.setStyleSheet("color: #95a5a6; font-size: 10px; background: transparent;")
+            info_layout.addWidget(gen_label)
+        
+        # Card count info with better styling
         card_count = self.pokemon_data.get('card_count', 0)
         if card_count > 0:
-            count_label = QLabel(f"{card_count} cards available")
+            count_label = QLabel(f"🃏 {card_count} cards available")
             count_label.setAlignment(Qt.AlignCenter)
-            count_label.setStyleSheet("color: #3498db; font-size: 10px; background: transparent;")
-            layout.addWidget(count_label)
+            count_label.setStyleSheet("""
+                color: #3498db; 
+                font-size: 10px; 
+                background: transparent;
+                font-weight: bold;
+            """)
+            info_layout.addWidget(count_label)
+        else:
+            no_cards_label = QLabel("🔄 No cards found")
+            no_cards_label.setAlignment(Qt.AlignCenter)
+            no_cards_label.setStyleSheet("color: #e74c3c; font-size: 10px; background: transparent;")
+            info_layout.addWidget(no_cards_label)
+        
+        layout.addWidget(info_container)
         
         self.setLayout(layout)
         
         # Make clickable for card selection
         self.mousePressEvent = self.show_card_selection
+        
+        # Enhanced cursor feedback
+        self.setCursor(Qt.PointingHandCursor)
     
     def refresh_card_display(self):
-        """Refresh the card display based on current collection state"""
+        """Refresh the card display based on current collection state - Enhanced with larger images"""
         pokemon_id = str(self.pokemon_data['id'])
         user_card = self.user_collection.get(pokemon_id)
         
         if user_card and user_card.get('image_url'):
-            # Load TCG card image
-            self.image_loader.load_image(user_card['image_url'], self.image_label, (240, 335))
-            self.image_label.setToolTip(f"TCG Card: {user_card['card_name']}")
-        else:
-            # Show placeholder for now
-            self.image_label.setText("Click to\nImport Card")
+            # Load TCG card image with larger size
+            self.image_loader.load_image(user_card['image_url'], self.image_label, (260, 360))  # Increased from (240, 335)
+            
+            # Enhanced tooltip with more card info
+            tooltip_text = f"🃏 TCG Card: {user_card['card_name']}"
+            if user_card.get('set_name'):
+                tooltip_text += f"\n📦 Set: {user_card['set_name']}"
+            tooltip_text += f"\n\n💾 Imported for #{self.pokemon_data['id']} {self.pokemon_data['name']}"
+            tooltip_text += f"\n🔄 Click to change card"
+            
+            self.image_label.setToolTip(tooltip_text)
+            
+            # Add a subtle border to indicate this is an imported card
             self.image_label.setStyleSheet("""
                 background-color: #2c3e50; 
-                border-radius: 4px; 
-                color: #bdc3c7;
-                font-size: 12px;
+                border-radius: 6px; 
+                border: 2px solid #27ae60;
             """)
+        else:
+            # Enhanced placeholder for missing cards
+            self.image_label.setText("🃏\n\nClick to\nImport Card\n\n📥")
+            self.image_label.setStyleSheet("""
+                background-color: #2c3e50; 
+                border-radius: 6px; 
+                color: #bdc3c7;
+                font-size: 14px;
+                font-weight: bold;
+                border: 2px dashed #7f8c8d;
+                padding: 10px;
+            """)
+            
+            # Enhanced tooltip for empty state
+            card_count = self.pokemon_data.get('card_count', 0)
+            if card_count > 0:
+                tooltip_text = f"📥 Import a card for #{self.pokemon_data['id']} {self.pokemon_data['name']}\n"
+                tooltip_text += f"🃏 {card_count} cards available\n\n"
+                tooltip_text += f"💡 Click to browse and select a card"
+            else:
+                tooltip_text = f"📥 No cards found for {self.pokemon_data['name']}\n"
+                tooltip_text += f"🔄 Use 'Sync Data' to search for cards"
+            
+            self.image_label.setToolTip(tooltip_text)
     
     def show_card_selection(self, event):
         """Show card selection dialog"""
@@ -1586,12 +1651,10 @@ class PokemonCard(QFrame):
                 'set_name': result[3]
             }
         return {}
-
-
 # Updated CardSelectionDialog to accept pokemon_id and db_manager
 
 class CardSelectionDialog(QDialog):
-    """Dialog for selecting which TCG card to import"""
+    """Dialog for selecting which TCG card to import - Much larger images"""
     
     def __init__(self, pokemon_name, card_ids, pokemon_id=None, image_loader=None, db_manager=None, parent=None):
         super().__init__(parent)
@@ -1603,31 +1666,45 @@ class CardSelectionDialog(QDialog):
         self.db_manager = db_manager or DatabaseManager()
         self.selected_widget = None
         self.setWindowTitle(f"Select Card for {pokemon_name}")
-        self.setMinimumWidth(600)
+        self.setMinimumWidth(1000)  # Much wider: was 800, now 1000
+        self.setMinimumHeight(800)  # Much taller: was 600, now 800
         self.initUI()
     
     def initUI(self):
         layout = QVBoxLayout(self)
         
-        # Title
+        # Title with larger font
         title = QLabel(f"Select a TCG card for {self.pokemon_name}:")
-        title.setFont(QFont('Arial', 12, QFont.Bold))
+        title.setFont(QFont('Arial', 16, QFont.Bold))  # Larger font: was 14, now 16
+        title.setStyleSheet("color: white; margin-bottom: 15px;")
         layout.addWidget(title)
+        
+        # Card count info with larger font
+        count_info = QLabel(f"Found {len(self.card_ids)} available cards")
+        count_info.setStyleSheet("color: #bdc3c7; font-size: 13px; margin-bottom: 20px;")  # Larger font
+        layout.addWidget(count_info)
         
         # Card grid
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
+        scroll_area.setStyleSheet("""
+            QScrollArea {
+                border: 1px solid #34495e;
+                background-color: #2c3e50;
+            }
+        """)
         
         grid_widget = QWidget()
         grid_layout = QGridLayout(grid_widget)
+        grid_layout.setSpacing(20)  # Much more spacing: was 15, now 20
         
         row, col = 0, 0
-        columns = 3
+        columns = 2  # Reduced from 3 to 2 for much larger cards
         
         for card_id in self.card_ids:
             card_info = self.get_card_info(self.db_manager, card_id)
             if card_info:
-                card_widget = self.create_card_widget(card_info)
+                card_widget = self.create_extra_large_card_widget(card_info)
                 grid_layout.addWidget(card_widget, row, col)
                 
                 col += 1
@@ -1635,23 +1712,186 @@ class CardSelectionDialog(QDialog):
                     col = 0
                     row += 1
         
+        # Add some padding at the bottom
+        grid_layout.setRowStretch(row + 1, 1)
+        
         scroll_area.setWidget(grid_widget)
         layout.addWidget(scroll_area)
         
-        # Buttons
+        # Buttons with larger size
         button_layout = QHBoxLayout()
         
         cancel_btn = QPushButton("Cancel")
+        cancel_btn.setMinimumHeight(40)  # Taller buttons: was 35, now 40
+        cancel_btn.setFont(QFont('Arial', 11, QFont.Bold))
         cancel_btn.clicked.connect(self.reject)
         button_layout.addWidget(cancel_btn)
         
         import_btn = QPushButton("Import Selected")
+        import_btn.setMinimumHeight(40)  # Taller buttons
+        import_btn.setFont(QFont('Arial', 11, QFont.Bold))
         import_btn.clicked.connect(self.accept)
         import_btn.setEnabled(False)
+        import_btn.setStyleSheet("""
+            QPushButton:disabled {
+                background-color: #7f8c8d;
+                color: #bdc3c7;
+            }
+        """)
         self.import_btn = import_btn
         button_layout.addWidget(import_btn)
         
         layout.addLayout(button_layout)
+    
+    def create_extra_large_card_widget(self, card_info):
+        """Create an extra large, detailed card widget"""
+        widget = QFrame()
+        widget.setFrameStyle(QFrame.Box | QFrame.Raised)
+        widget.setFixedSize(320, 500)  # Much larger: was 240x380, now 320x500
+        widget.setStyleSheet("""
+            QFrame {
+                background-color: #34495e;
+                border: 2px solid #2c3e50;
+                border-radius: 8px;
+            }
+            QFrame:hover {
+                border: 3px solid #3498db;
+                background-color: #3d5a75;
+            }
+        """)
+        
+        layout = QVBoxLayout(widget)
+        layout.setContentsMargins(12, 12, 12, 12)  # More padding
+        layout.setSpacing(8)
+        
+        # Card image - Much larger
+        image_label = QLabel()
+        image_label.setAlignment(Qt.AlignCenter)
+        image_label.setFixedHeight(320)  # Much larger: was 220, now 320
+        image_label.setScaledContents(False)
+        image_label.setStyleSheet("""
+            QLabel {
+                background-color: #2c3e50;
+                border-radius: 6px;
+                border: 1px solid #34495e;
+            }
+        """)
+        layout.addWidget(image_label)
+        
+        # Load high-quality image with much larger size
+        if card_info['image_url_large']:
+            # Use large image for best quality
+            self.image_loader.load_image(card_info['image_url_large'], 
+                                       image_label, (300, 320))  # Much larger display
+        elif card_info['image_url_small']:
+            # Fallback to small image but display larger
+            self.image_loader.load_image(card_info['image_url_small'], 
+                                       image_label, (300, 320))
+        else:
+            image_label.setText("No Image\nAvailable")
+            image_label.setStyleSheet("""
+                QLabel {
+                    background-color: #2c3e50;
+                    color: #7f8c8d;
+                    font-size: 14px;
+                    font-weight: bold;
+                    border-radius: 6px;
+                }
+            """)
+        
+        # Card info section with larger fonts
+        info_container = QWidget()
+        info_layout = QVBoxLayout(info_container)
+        info_layout.setContentsMargins(0, 0, 0, 0)
+        info_layout.setSpacing(4)
+        
+        # Card name - Larger typography
+        name_label = QLabel(card_info['name'])
+        name_label.setAlignment(Qt.AlignCenter)
+        name_label.setFont(QFont('Arial', 12, QFont.Bold))  # Larger font: was 10, now 12
+        name_label.setStyleSheet("color: white; background: transparent;")
+        name_label.setWordWrap(True)
+        name_label.setMaximumHeight(50)  # More height for long names
+        info_layout.addWidget(name_label)
+        
+        # Set info with larger styling
+        set_label = QLabel(f"📦 Set: {card_info['set_name']}")
+        set_label.setAlignment(Qt.AlignCenter)
+        set_label.setStyleSheet("color: #3498db; font-size: 11px; font-weight: bold;")  # Larger font
+        set_label.setWordWrap(True)
+        info_layout.addWidget(set_label)
+        
+        # Rarity with larger color coding
+        if card_info['rarity']:
+            rarity_label = QLabel(f"⭐ {card_info['rarity']}")
+            rarity_label.setAlignment(Qt.AlignCenter)
+            
+            # Color code rarities
+            rarity_colors = {
+                'Common': '#95a5a6',
+                'Uncommon': '#3498db', 
+                'Rare': '#e74c3c',
+                'Rare Holo': '#e67e22',
+                'Ultra Rare': '#9b59b6',
+                'Secret Rare': '#f1c40f'
+            }
+            color = rarity_colors.get(card_info['rarity'], '#f39c12')
+            rarity_label.setStyleSheet(f"color: {color}; font-size: 11px; font-weight: bold;")  # Larger font
+            info_layout.addWidget(rarity_label)
+        
+        # Artist info with larger font
+        if card_info['artist']:
+            artist_label = QLabel(f"🎨 Artist: {card_info['artist']}")
+            artist_label.setAlignment(Qt.AlignCenter)
+            artist_label.setStyleSheet("color: #95a5a6; font-size: 10px;")  # Larger font
+            info_layout.addWidget(artist_label)
+        
+        layout.addWidget(info_container)
+        
+        # Make clickable with better feedback
+        widget.card_id = card_info['card_id']
+        widget.card_info = card_info
+        widget.mousePressEvent = lambda event: self.select_card(widget)
+        
+        # Add tooltip with full card name
+        widget.setToolTip(f"{card_info['name']}\n{card_info['set_name']}\n{card_info['rarity'] or 'Unknown Rarity'}")
+        
+        return widget
+    
+    def select_card(self, widget):
+        """Select a card with improved visual feedback"""
+        # Deselect previous
+        if self.selected_widget:
+            self.selected_widget.setStyleSheet("""
+                QFrame {
+                    background-color: #34495e;
+                    border: 2px solid #2c3e50;
+                    border-radius: 8px;
+                }
+                QFrame:hover {
+                    border: 3px solid #3498db;
+                    background-color: #3d5a75;
+                }
+            """)
+        
+        # Select new with enhanced styling
+        widget.setStyleSheet("""
+            QFrame {
+                background-color: #2980b9;
+                border: 4px solid #3498db;
+                border-radius: 8px;
+            }
+        """)
+        
+        self.selected_widget = widget
+        self.selected_card_id = widget.card_id
+        self.import_btn.setEnabled(True)
+        
+        # Update button text to show selected card
+        card_name = widget.card_info['name']
+        if len(card_name) > 25:
+            card_name = card_name[:22] + "..."
+        self.import_btn.setText(f"Import '{card_name}'")
     
     def get_card_info(self, db_manager, card_id):
         """Get card information from database"""
@@ -1678,93 +1918,6 @@ class CardSelectionDialog(QDialog):
                 'image_url_small': result[6]
             }
         return None
-    
-    def create_card_widget(self, card_info):
-        """Create a clickable card widget"""
-        widget = QFrame()
-        widget.setFrameStyle(QFrame.Box | QFrame.Raised)
-        widget.setFixedSize(180, 280)
-        widget.setStyleSheet("""
-            QFrame {
-                background-color: #34495e;
-                border: 2px solid #2c3e50;
-                border-radius: 4px;
-            }
-            QFrame:hover {
-                border: 2px solid #3498db;
-            }
-        """)
-        
-        layout = QVBoxLayout(widget)
-        layout.setContentsMargins(5, 5, 5, 5)
-        
-        # Card image
-        image_label = QLabel()
-        image_label.setAlignment(Qt.AlignCenter)
-        image_label.setFixedHeight(160)
-        image_label.setScaledContents(False)
-        layout.addWidget(image_label)
-        
-        # Load image
-        if card_info['image_url_small']:
-            self.image_loader.load_image(card_info['image_url_small'], 
-                                       image_label, (150, 160))
-        else:
-            image_label.setText("No Image")
-        
-        # Card info
-        name_label = QLabel(card_info['name'])
-        name_label.setAlignment(Qt.AlignCenter)
-        name_label.setFont(QFont('Arial', 9, QFont.Bold))
-        name_label.setStyleSheet("color: white;")
-        name_label.setWordWrap(True)
-        layout.addWidget(name_label)
-        
-        set_label = QLabel(f"Set: {card_info['set_name']}")
-        set_label.setAlignment(Qt.AlignCenter)
-        set_label.setStyleSheet("color: #bdc3c7; font-size: 8px;")
-        layout.addWidget(set_label)
-        
-        if card_info['rarity']:
-            rarity_label = QLabel(f"Rarity: {card_info['rarity']}")
-            rarity_label.setAlignment(Qt.AlignCenter)
-            rarity_label.setStyleSheet("color: #f39c12; font-size: 8px;")
-            layout.addWidget(rarity_label)
-        
-        # Make clickable
-        widget.card_id = card_info['card_id']
-        widget.card_info = card_info
-        widget.mousePressEvent = lambda event: self.select_card(widget)
-        
-        return widget
-    
-    def select_card(self, widget):
-        """Select a card"""
-        # Deselect previous
-        if self.selected_widget:
-            self.selected_widget.setStyleSheet("""
-                QFrame {
-                    background-color: #34495e;
-                    border: 2px solid #2c3e50;
-                    border-radius: 4px;
-                }
-                QFrame:hover {
-                    border: 2px solid #3498db;
-                }
-            """)
-        
-        # Select new
-        widget.setStyleSheet("""
-            QFrame {
-                background-color: #3498db;
-                border: 2px solid #2980b9;
-                border-radius: 4px;
-            }
-        """)
-        
-        self.selected_widget = widget
-        self.selected_card_id = widget.card_id
-        self.import_btn.setEnabled(True)
     
     def get_selected_card(self):
         """Get the selected card ID"""
@@ -2298,18 +2451,18 @@ class PokemonDashboard(QMainWindow):
         self.display_tcg_cards(cards)
     
     def display_tcg_cards(self, cards):
-        """Display TCG cards in grid"""
+        """Display TCG cards in grid with improved layout for larger cards"""
         grid_widget = QWidget()
         grid_widget.setStyleSheet("background-color: #2c3e50;")
         grid_layout = QGridLayout(grid_widget)
-        grid_layout.setSpacing(10)
+        grid_layout.setSpacing(10)  # Increased spacing for larger cards
         
-        columns = 5
+        columns = 3 # Reduced from 5 to 4 for larger cards
         row, col = 0, 0
         
         for card_data in cards:
             card_widget = self.create_tcg_card_widget(card_data, self.image_loader)
-            grid_layout.addWidget(card_widget, row, col)
+            grid_layout.addWidget(card_widget, row, col, Qt.AlignCenter)
             
             col += 1
             if col >= columns:
@@ -2317,15 +2470,29 @@ class PokemonDashboard(QMainWindow):
                 row += 1
         
         if not cards:
-            no_cards_label = QLabel("No cards found with current filters")
+            # Enhanced empty state
+            no_cards_widget = QWidget()
+            no_cards_layout = QVBoxLayout(no_cards_widget)
+            
+            no_cards_label = QLabel("🔍 No cards found with current filters")
             no_cards_label.setAlignment(Qt.AlignCenter)
-            no_cards_label.setStyleSheet("color: #7f8c8d; font-size: 16px;")
-            grid_layout.addWidget(no_cards_label, 0, 0, 1, columns)
+            no_cards_label.setStyleSheet("color: #7f8c8d; font-size: 16px; margin: 20px;")
+            no_cards_layout.addWidget(no_cards_label)
+            
+            suggestion_label = QLabel("Try adjusting your filters or sync more data")
+            suggestion_label.setAlignment(Qt.AlignCenter)
+            suggestion_label.setStyleSheet("color: #95a5a6; font-size: 12px;")
+            no_cards_layout.addWidget(suggestion_label)
+            
+            grid_layout.addWidget(no_cards_widget, 0, 0, 1, columns)
+        
+        # Add some bottom padding
+        grid_layout.setRowStretch(row + 1, 1)
         
         self.tcg_scroll.setWidget(grid_widget)
     
     def create_tcg_card_widget(self, card_data, image_loader=None):
-        """Create a TCG card display widget"""
+        """Create a larger TCG card display widget for browsing"""
         card_id, name, set_name, rarity, image_url = card_data
         
         if not image_loader:
@@ -2333,52 +2500,114 @@ class PokemonDashboard(QMainWindow):
         
         widget = QFrame()
         widget.setFrameStyle(QFrame.Box | QFrame.Raised)
-        widget.setFixedSize(150, 220)
+        widget.setFixedSize(280, 420)  # Increased from 150x220
         widget.setStyleSheet("""
             QFrame {
                 background-color: #34495e;
-                border: 1px solid #2c3e50;
-                border-radius: 4px;
+                border: 2px solid #2c3e50;
+                border-radius: 6px;
             }
             QFrame:hover {
                 border: 2px solid #3498db;
+                background-color: #3d5a75;
             }
         """)
         
         layout = QVBoxLayout(widget)
-        layout.setContentsMargins(5, 5, 5, 5)
+        layout.setContentsMargins(12, 12, 12, 12)
+        layout.setSpacing(8)
         
-        # Card image
+        # Card image - Much larger
         image_label = QLabel()
         image_label.setAlignment(Qt.AlignCenter)
-        image_label.setFixedHeight(120)
+        image_label.setFixedHeight(320)  # Increased from 120
         image_label.setScaledContents(False)
+        image_label.setStyleSheet("""
+            QLabel {
+                background-color: #2c3e50;
+                border-radius: 6px;
+                border: 1px solid #34495e;
+            }
+        """)
         layout.addWidget(image_label)
         
-        # Load image if URL exists
+        # Load image with better quality
         if image_url:
-            image_loader.load_image(image_url, image_label, (140, 120))
+            # Try to use large image first, fallback to small
+            image_loader.load_image(image_url, image_label, (300, 320))
         else:
-            image_label.setText("No Image")
-            image_label.setStyleSheet("background-color: #2c3e50; border-radius: 2px; color: #7f8c8d;")
+            image_label.setText("No Image\nAvailable")
+            image_label.setStyleSheet("""
+                QLabel {
+                    background-color: #2c3e50; 
+                    border-radius: 4px; 
+                    color: #7f8c8d;
+                    font-size: 10px;
+                }
+            """)
         
-        # Card name
+        # Card info section with better layout
+        info_container = QWidget()
+        info_layout = QVBoxLayout(info_container)
+        info_layout.setContentsMargins(0, 0, 0, 0)
+        info_layout.setSpacing(2)
+        
+        # Card name with better typography
         name_label = QLabel(name)
         name_label.setAlignment(Qt.AlignCenter)
-        name_label.setFont(QFont('Arial', 8, QFont.Bold))
-        name_label.setStyleSheet("color: white;")
+        name_label.setFont(QFont('Arial', 11, QFont.Bold))
+        name_label.setStyleSheet("color: white; background: transparent;")
         name_label.setWordWrap(True)
-        layout.addWidget(name_label)
+        name_label.setMaximumHeight(45)  # Prevent overly tall names
+        info_layout.addWidget(name_label)
         
-        # Set and rarity
-        info_label = QLabel(f"{set_name}\n{rarity or 'Unknown'}")
-        info_label.setAlignment(Qt.AlignCenter)
-        info_label.setStyleSheet("color: #bdc3c7; font-size: 7px;")
-        layout.addWidget(info_label)
+        # Set info
+        set_label = QLabel(f"📦 {set_name}")
+        set_label.setAlignment(Qt.AlignCenter)
+        set_label.setStyleSheet("color: #3498db; font-size: 10px; font-weight: bold;")
+        set_label.setWordWrap(True)
+        set_label.setMaximumHeight(30)
+        info_layout.addWidget(set_label)
         
-        # Make clickable for import
+        # Rarity with icon and color
+        if rarity:
+            rarity_icon = "⭐" if "Rare" in rarity else "◆" if "Uncommon" in rarity else "●"
+            rarity_label = QLabel(f"{rarity_icon} {rarity}")
+            rarity_label.setAlignment(Qt.AlignCenter)
+            
+            # Color code rarities
+            rarity_colors = {
+                'Common': '#95a5a6',
+                'Uncommon': '#3498db',
+                'Rare': '#e74c3c', 
+                'Rare Holo': '#e67e22',
+                'Ultra Rare': '#9b59b6',
+                'Secret Rare': '#f1c40f'
+            }
+            color = rarity_colors.get(rarity, '#f39c12')
+            rarity_label.setStyleSheet(f"color: {color}; font-size: 8px; font-weight: bold;")
+            info_layout.addWidget(rarity_label)
+        
+        layout.addWidget(info_container)
+        
+        # Quick import hint
+        hint_label = QLabel("Quick Import")
+        hint_label.setAlignment(Qt.AlignCenter)
+        hint_label.setStyleSheet("""
+            color: #7f8c8d; 
+            font-size: 10px; 
+            background-color: #2c3e50;
+            padding: 2px;
+            border-radius: 2px;
+        """)
+        layout.addWidget(hint_label)
+        
+        # Make clickable for import with better feedback
         widget.card_id = card_id
         widget.mousePressEvent = lambda event: self.quick_import_card(card_id, name)
+        
+        # Enhanced tooltip
+        widget.setToolTip(f"🃏 {name}\n📦 Set: {set_name}\n⭐ {rarity or 'Unknown'}\n\n💾 Click to quick import this card")
         
         return widget
     
