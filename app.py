@@ -121,6 +121,18 @@ class DatabaseManager:
             )
         """)
         
+        # Add team-up card mapping table
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS silver_team_up_cards (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                card_id TEXT NOT NULL,
+                pokemon_name TEXT NOT NULL,
+                position INTEGER DEFAULT 0,  -- position in team (0 = first, 1 = second, etc.)
+                FOREIGN KEY (card_id) REFERENCES silver_tcg_cards(card_id),
+                UNIQUE(card_id, pokemon_name)
+            )
+        """)
+        
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS silver_tcg_sets (
                 set_id TEXT PRIMARY KEY,
@@ -334,7 +346,21 @@ class DatabaseManager:
             # Extract and clean card data
             card_id = card_data.get('id')
             name = card_data.get('name', '')
-            pokemon_name = self.extract_pokemon_name_from_card(name)
+            pokemon_names = self.extract_pokemon_name_from_card(name)
+            
+            # Handle team-up cards (pokemon_names will be a list)
+            primary_pokemon_name = None
+            is_team_up = False
+            
+            if isinstance(pokemon_names, list):
+                # Team-up card
+                is_team_up = True
+                primary_pokemon_name = pokemon_names[0] if pokemon_names else None
+                all_pokemon_names = pokemon_names
+            else:
+                # Single Pokemon card
+                primary_pokemon_name = pokemon_names
+                all_pokemon_names = [pokemon_names] if pokemon_names else []
             
             # Handle nested data safely
             set_data = card_data.get('set', {})
@@ -352,7 +378,7 @@ class DatabaseManager:
             """, (
                 card_id,
                 name,
-                pokemon_name,
+                primary_pokemon_name,
                 set_data.get('id'),
                 set_data.get('name'),
                 card_data.get('artist'),
@@ -370,11 +396,38 @@ class DatabaseManager:
                 bronze_id
             ))
             
-            # Update Pokemon master using the same connection
-            if pokemon_name and card_data.get('nationalPokedexNumbers'):
-                self.update_silver_pokemon_master_with_connection(
-                    cursor, pokemon_name, card_data.get('nationalPokedexNumbers')
-                )
+            # Handle team-up card mapping
+            if is_team_up:
+                # First, clear any existing team-up mappings for this card
+                cursor.execute("DELETE FROM silver_team_up_cards WHERE card_id = ?", (card_id,))
+                
+                # Insert team-up mappings
+                for position, pokemon_name in enumerate(all_pokemon_names):
+                    if pokemon_name:
+                        cursor.execute("""
+                            INSERT INTO silver_team_up_cards (card_id, pokemon_name, position)
+                            VALUES (?, ?, ?)
+                        """, (card_id, pokemon_name, position))
+            
+            # Update Pokemon master records
+            pokedex_numbers = card_data.get('nationalPokedexNumbers', [])
+            if pokedex_numbers:
+                if is_team_up and len(all_pokemon_names) > 1:
+                    # For team-ups, we need to be smarter about assigning pokedex numbers
+                    # If we have multiple pokedex numbers, try to match them to Pokemon
+                    for pokemon_name in all_pokemon_names:
+                        if pokemon_name:
+                            # For now, use all pokedex numbers for each Pokemon
+                            # In a more sophisticated system, we'd match specific numbers to specific Pokemon
+                            self.update_silver_pokemon_master_with_connection(
+                                cursor, pokemon_name, pokedex_numbers
+                            )
+                else:
+                    # Single Pokemon card
+                    if primary_pokemon_name:
+                        self.update_silver_pokemon_master_with_connection(
+                            cursor, primary_pokemon_name, pokedex_numbers
+                        )
             
             conn.commit()
             
@@ -462,8 +515,36 @@ class DatabaseManager:
         if not card_name:
             return None
         
+        # First, check for team-up cards (& symbol indicates multiple Pokemon)
+        if ' & ' in card_name:
+            # Extract all Pokemon names from team-up cards
+            # Remove any suffixes first
+            clean_team_name = re.sub(r'\s+(?:GX|TAG TEAM|LEGEND).*$', '', card_name)
+            # Split by & and clean each name
+            pokemon_names = []
+            for name in clean_team_name.split(' & '):
+                cleaned = self._clean_single_pokemon_name(name.strip())
+                if cleaned:
+                    pokemon_names.append(cleaned)
+            return pokemon_names  # Return list for team-ups
+        
+        # For single Pokemon, use existing logic
+        return self._clean_single_pokemon_name(card_name)
+    
+    def _clean_single_pokemon_name(self, card_name):
+        """Clean a single Pokemon name"""
+        import re
+        
+        if not card_name:
+            return None
+        
         # Remove card prefixes
         clean_name = re.sub(r'^(Card #\d+\s+|[A-Z]{1,5}\d+\s+)', '', card_name)
+        
+        # Remove trainer possessives (e.g., "Team Rocket's", "Brock's", "Misty's")
+        # This handles any possessive form ending with 's
+        clean_name = re.sub(r"^[A-Za-z\s]+\'s\s+", '', clean_name)
+        clean_name = re.sub(r"^Team\s+[A-Za-z\s]+\'s\s+", '', clean_name)
         
         # Handle special cases
         special_cases = {
@@ -471,7 +552,12 @@ class DatabaseManager:
             "Mime Jr.": "Mime Jr.",
             "Farfetch'd": "Farfetch'd",
             "Sirfetch'd": "Sirfetch'd",
-            "Type: Null": "Type: Null"
+            "Type: Null": "Type: Null",
+            "Ho-Oh": "Ho-Oh",
+            "Porygon-Z": "Porygon-Z",
+            "Jangmo-o": "Jangmo-o",
+            "Hakamo-o": "Hakamo-o",
+            "Kommo-o": "Kommo-o"
         }
         
         for special_name, replacement in special_cases.items():
@@ -486,12 +572,10 @@ class DatabaseManager:
                 break
         
         # Remove card suffixes
-        clean_name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION).*$', '', clean_name)
+        clean_name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION|Prime|BREAK|Prism Star|◇|LV\.X|MEGA|M|Tag Team).*$', '', clean_name)
         
-        # Handle possessive forms
-        possessive_match = re.match(r"(\w+\'s)\s+(\w+(?:\s+\w+)?)", clean_name)
-        if possessive_match:
-            return possessive_match.group(2)
+        # Remove any remaining special characters
+        clean_name = re.sub(r'[◇★]', '', clean_name)
         
         return clean_name.strip()
     
@@ -544,10 +628,17 @@ class DatabaseManager:
         
         cursor.execute("""
             SELECT p.pokemon_id, p.name, p.pokedex_numbers,
-                   COUNT(c.card_id) as card_count,
-                   GROUP_CONCAT(c.card_id) as available_cards
+                   COUNT(DISTINCT c.card_id) as card_count,
+                   GROUP_CONCAT(DISTINCT c.card_id) as available_cards
             FROM silver_pokemon_master p
-            LEFT JOIN silver_tcg_cards c ON p.name = c.pokemon_name
+            LEFT JOIN (
+                -- Get cards where Pokemon is the primary
+                SELECT card_id, pokemon_name FROM silver_tcg_cards
+                UNION
+                -- Get cards where Pokemon is in a team-up
+                SELECT t.card_id, t.pokemon_name 
+                FROM silver_team_up_cards t
+            ) c ON p.name = c.pokemon_name
             WHERE p.generation = ?
             GROUP BY p.pokemon_id, p.name
             ORDER BY p.pokemon_id
@@ -1409,6 +1500,25 @@ class PokemonCard(QFrame):
         """Show card selection dialog"""
         pokemon_name = self.pokemon_data['name']
         available_cards = self.pokemon_data.get('available_cards', [])
+        
+        if not available_cards:
+            # Try to fetch cards from database including team-ups
+            if self.db_manager:
+                conn = sqlite3.connect(self.db_manager.db_path)
+                cursor = conn.cursor()
+                
+                cursor.execute("""
+                    SELECT DISTINCT card_id FROM (
+                        SELECT card_id FROM silver_tcg_cards WHERE pokemon_name = ?
+                        UNION
+                        SELECT card_id FROM silver_team_up_cards WHERE pokemon_name = ?
+                    )
+                """, (pokemon_name, pokemon_name))
+                
+                results = cursor.fetchall()
+                conn.close()
+                
+                available_cards = [row[0] for row in results]
         
         if not available_cards:
             QMessageBox.information(self, "No Cards", 
@@ -2295,9 +2405,23 @@ class PokemonDashboard(QMainWindow):
         """Extract Pokemon name from card (simplified version)"""
         import re
         
+        if not card_name:
+            return None
+        
+        # Check for team-up cards first
+        if ' & ' in card_name:
+            # For team-ups, extract the first Pokemon name
+            clean_team_name = re.sub(r'\s+(?:GX|TAG TEAM|LEGEND).*$', '', card_name)
+            first_pokemon = clean_team_name.split(' & ')[0].strip()
+            card_name = first_pokemon
+        
+        # Remove trainer possessives
+        card_name = re.sub(r"^[A-Za-z\s]+\'s\s+", '', card_name)
+        card_name = re.sub(r"^Team\s+[A-Za-z\s]+\'s\s+", '', card_name)
+        
         # Remove prefixes and suffixes
         clean_name = re.sub(r'^(Card #\d+\s+|[A-Z]{1,5}\d+\s+)', '', card_name)
-        clean_name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION).*$', '', clean_name)
+        clean_name = re.sub(r'\s+(?:ex|EX|GX|V|VMAX|VSTAR|V-UNION|Prime|BREAK|LV\.X|MEGA|M).*$', '', clean_name)
         
         # Handle possessive forms
         possessive_match = re.match(r"(\w+\'s)\s+(\w+(?:\s+\w+)?)", clean_name)
