@@ -2181,13 +2181,13 @@ class PokemonCard(QFrame):
         name_label.setWordWrap(True)
         info_layout.addWidget(name_label)
         
-        # Generation info
-        generation = self.pokemon_data.get('generation')
-        if generation:
-            gen_label = QLabel(f"Generation {generation}")
-            gen_label.setAlignment(Qt.AlignCenter)
-            gen_label.setStyleSheet("color: #95a5a6; font-size: 10px; background: transparent;")
-            info_layout.addWidget(gen_label)
+        # # Generation info #commented out in reference to github comment 
+        # generation = self.pokemon_data.get('generation')
+        # if generation:
+        #     gen_label = QLabel(f"Generation {generation}")
+        #     gen_label.setAlignment(Qt.AlignCenter)
+        #     gen_label.setStyleSheet("color: #95a5a6; font-size: 10px; background: transparent;")
+        #     info_layout.addWidget(gen_label)
         
         # Card count info with better styling
         card_count = self.pokemon_data.get('card_count', 0)
