@@ -47,7 +47,46 @@ class DatabaseManager:
             os.makedirs(os.path.dirname(db_path), exist_ok=True)
         self.init_database()
         self.configure_database_for_concurrency()
-    
+        
+    def load_pokemon_master_data(self):
+        """Load the complete Pokémon list from JSON file"""
+        master_file = os.path.join(os.path.dirname(__file__), 'data', 'pokemon_master_data.json')
+        
+        if not os.path.exists(master_file):
+            print(f"WARNING: Pokemon master data file not found at {master_file}")
+            return []
+        
+        with open(master_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            return data['pokemon']
+        
+    def initialize_complete_pokedex(self):
+        """Pre-populate database with all 1025 Pokémon"""
+        pokemon_list = self.load_pokemon_master_data()
+        
+        if not pokemon_list:
+            print("ERROR: No Pokemon master data loaded")
+            return
+        
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        for pokemon in pokemon_list:
+            cursor.execute("""
+                INSERT OR IGNORE INTO silver_pokemon_master 
+                (pokemon_id, name, generation, pokedex_numbers)
+                VALUES (?, ?, ?, ?)
+            """, (
+                pokemon['id'], 
+                pokemon['name'], 
+                pokemon['generation'], 
+                json.dumps([pokemon['id']])
+            ))
+        
+        conn.commit()
+        conn.close()
+        print(f"✓ Pre-populated database with {len(pokemon_list)} Pokémon")
+
     def init_database(self):
         """Create Bronze-Silver-Gold data tables"""
         conn = sqlite3.connect(self.db_path)
@@ -229,6 +268,7 @@ class DatabaseManager:
         
         conn.commit()
         conn.close()
+        self.initialize_complete_pokedex()  # Add this line
     
     def initialize_generations(self, cursor):
         """Initialize Pokemon generation data"""
@@ -856,22 +896,23 @@ class DatabaseManager:
     # =============================================================================
     
     def get_pokemon_by_generation(self, generation):
-        """Get Pokemon for a generation (Gold layer query)"""
+        """Get ALL Pokémon for a generation with card availability"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
+        # This query now returns ALL Pokémon, even those without cards
         cursor.execute("""
-            SELECT p.pokemon_id, p.name, p.pokedex_numbers,
-                   COUNT(DISTINCT c.card_id) as card_count,
-                   GROUP_CONCAT(DISTINCT c.card_id) as available_cards
+            SELECT 
+                p.pokemon_id, 
+                p.name, 
+                p.pokedex_numbers,
+                COUNT(DISTINCT c.card_id) as card_count,
+                GROUP_CONCAT(DISTINCT c.card_id) as available_cards
             FROM silver_pokemon_master p
             LEFT JOIN (
-                -- Get cards where Pokemon is the primary
                 SELECT card_id, pokemon_name FROM silver_tcg_cards
                 UNION
-                -- Get cards where Pokemon is in a team-up
-                SELECT t.card_id, t.pokemon_name 
-                FROM silver_team_up_cards t
+                SELECT t.card_id, t.pokemon_name FROM silver_team_up_cards t
             ) c ON p.name = c.pokemon_name
             WHERE p.generation = ?
             GROUP BY p.pokemon_id, p.name
@@ -888,7 +929,7 @@ class DatabaseManager:
                 'name': row[1],
                 'generation': generation,
                 'pokedex_numbers': json.loads(row[2]) if row[2] else [],
-                'card_count': row[3],
+                'card_count': row[3],  # Will be 0 if no cards exist
                 'available_cards': row[4].split(',') if row[4] else []
             }
         
@@ -2181,17 +2222,11 @@ class PokemonCard(QFrame):
         name_label.setWordWrap(True)
         info_layout.addWidget(name_label)
         
-        # # Generation info #commented out in reference to github comment 
-        # generation = self.pokemon_data.get('generation')
-        # if generation:
-        #     gen_label = QLabel(f"Generation {generation}")
-        #     gen_label.setAlignment(Qt.AlignCenter)
-        #     gen_label.setStyleSheet("color: #95a5a6; font-size: 10px; background: transparent;")
-        #     info_layout.addWidget(gen_label)
-        
-        # Card count info with better styling
+       # Card availability status
         card_count = self.pokemon_data.get('card_count', 0)
+
         if card_count > 0:
+            # Cards are available
             count_label = QLabel(f"🃏 {card_count} cards available")
             count_label.setAlignment(Qt.AlignCenter)
             count_label.setStyleSheet("""
@@ -2202,20 +2237,28 @@ class PokemonCard(QFrame):
             """)
             info_layout.addWidget(count_label)
         else:
-            no_cards_label = QLabel("🔄 No cards found")
+            # No cards available
+            no_cards_label = QLabel("📭 No cards available")
             no_cards_label.setAlignment(Qt.AlignCenter)
-            no_cards_label.setStyleSheet("color: #e74c3c; font-size: 10px; background: transparent;")
+            no_cards_label.setStyleSheet("""
+                color: #7f8c8d; 
+                font-size: 10px; 
+                background: transparent;
+                font-style: italic;
+            """)
             info_layout.addWidget(no_cards_label)
         
         layout.addWidget(info_container)
         
         self.setLayout(layout)
         
-        # Make clickable for card selection
-        self.mousePressEvent = self.show_card_selection
-        
-        # Enhanced cursor feedback
-        self.setCursor(Qt.PointingHandCursor)
+        ## Make clickable only if cards are available
+        if card_count > 0:
+            self.mousePressEvent = self.show_card_selection
+            self.setCursor(Qt.PointingHandCursor)
+        else:
+            # Don't make clickable if no cards exist
+            self.setCursor(Qt.ArrowCursor)
     
     def refresh_card_display(self):
         """Refresh the card display based on current collection state - Enhanced with larger images"""
@@ -2241,32 +2284,32 @@ class PokemonCard(QFrame):
                 border-radius: 6px;
             """)
         else:
-            # Enhanced placeholder for missing cards
-            self.image_label.setText("🃏\n\nClick to\nImport Card\n\n📥")
+            # No cards exist - show Pokémon placeholder
+            pokemon_id = self.pokemon_data['id']
+            pokemon_name = self.pokemon_data['name']
+            
+            self.image_label.setText(f"#{pokemon_id}\n\n{pokemon_name}\n\n📭\nNo TCG Cards")
             self.image_label.setStyleSheet("""
                 background-color: #2c3e50; 
                 border-radius: 6px; 
-                color: #bdc3c7;
-                font-size: 14px;
-                font-weight: bold;
-                border: 2px dashed #7f8c8d;
-                padding: 10px;
+                color: #5d6d7e;
+                font-size: 12px;
+                border: 1px solid #34495e;
+                padding: 20px;
             """)
             
-            # Enhanced tooltip for empty state
-            card_count = self.pokemon_data.get('card_count', 0)
-            if card_count > 0:
-                tooltip_text = f"📥 Import a card for #{self.pokemon_data['id']} {self.pokemon_data['name']}\n"
-                tooltip_text += f"🃏 {card_count} cards available\n\n"
-                tooltip_text += f"💡 Click to browse and select a card"
-            else:
-                tooltip_text = f"📥 No cards found for {self.pokemon_data['name']}\n"
-                tooltip_text += f"🔄 Use 'Sync Data' to search for cards"
-            
+            tooltip_text = f"#{pokemon_id} {pokemon_name}\n"
+            tooltip_text += f"📭 No TCG cards exist for this Pokémon\n"
+            tooltip_text += f"🔄 Use 'Sync Data' to check for new cards"
             self.image_label.setToolTip(tooltip_text)
     
     def show_card_selection(self, event):
         """Show card selection dialog"""
+        
+        if self.pokemon_data.get('card_count', 0) == 0:
+        # No cards available - don't show dialog
+            return
+    
         pokemon_name = self.pokemon_data['name']
         available_cards = self.pokemon_data.get('available_cards', [])
         
@@ -2695,10 +2738,15 @@ class GenerationTab(QWidget):
         # Update stats
         total_pokemon = len(pokemon_data)
         imported_count = len([p for p in pokemon_data.keys() if p in user_collection])
+        
+        # Count Pokemon that have cards available
+        pokemon_with_cards = len([p for p in pokemon_data.values() if p.get('card_count', 0) > 0])
         total_cards = sum(p.get('card_count', 0) for p in pokemon_data.values())
         
+        # Enhanced stats display
         self.stats_label.setText(
-            f"Pokemon: {total_pokemon} | Imported: {imported_count} | Available Cards: {total_cards}"
+            f"Pokédex: {total_pokemon} | With TCG Cards: {pokemon_with_cards} | "
+            f"Imported: {imported_count} | Total Available Cards: {total_cards}"
         )
         
         # Create grid widget
@@ -2712,9 +2760,13 @@ class GenerationTab(QWidget):
         for i in range(columns):
             grid_layout.setColumnStretch(i, 1)
         
-        # Add Pokemon cards
+        # Add ALL Pokemon cards in Pokédex order
         row, col = 0, 0
-        for pokemon_id, pokemon_info in pokemon_data.items():
+        
+        # Ensure we show Pokemon in correct Pokédex order
+        sorted_pokemon = sorted(pokemon_data.items(), key=lambda x: int(x[0]))
+        
+        for pokemon_id, pokemon_info in sorted_pokemon:
             pokemon_card = PokemonCard(
                 pokemon_info, 
                 user_collection, 
