@@ -12,7 +12,8 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QComboBox, QLineEdit, QCompleter,
                             QToolButton, QMessageBox, QDialog, QGroupBox, QRadioButton, 
                             QCheckBox, QButtonGroup, QDialogButtonBox, QFileDialog,
-                            QProgressBar, QTextEdit, QSpinBox)
+                            QProgressBar, QTextEdit, QSpinBox, QListWidget, QListWidgetItem,
+                            QAbstractItemView, QTableWidget, QTableWidgetItem, QHeaderView)
 from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen, QColor
 from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, QThread, QTimer, QUrl
 from PyQt5.QtPrintSupport import QPrinter 
@@ -22,6 +23,8 @@ from utils import ImageLoader
 # Pokemon TCG SDK imports
 from pokemontcgsdk import Card, Set
 from pokemontcgsdk.restclient import RestClient, PokemonTcgException
+
+from difflib import SequenceMatcher
 
 
 # =============================================================================
@@ -133,10 +136,13 @@ class DatabaseManager:
             )
         """)
         
+        # Enhanced silver_tcg_sets table with display name and search terms
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS silver_tcg_sets (
                 set_id TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
+                display_name TEXT,  -- User-friendly display name
+                search_terms TEXT,  -- JSON array of searchable terms
                 series TEXT,
                 printed_total INTEGER,
                 total INTEGER,
@@ -149,6 +155,16 @@ class DatabaseManager:
                 FOREIGN KEY (source_bronze_id) REFERENCES bronze_tcg_sets(id)
             )
         """)
+
+        # Check if we need to add the new columns to existing tables
+        cursor.execute("PRAGMA table_info(silver_tcg_sets)")
+        columns = [column[1] for column in cursor.fetchall()]
+
+        if 'display_name' not in columns:
+            cursor.execute("ALTER TABLE silver_tcg_sets ADD COLUMN display_name TEXT")
+
+        if 'search_terms' not in columns:
+            cursor.execute("ALTER TABLE silver_tcg_sets ADD COLUMN search_terms TEXT")
         
         # =============================================================================
         # GOLD LAYER - Business-Ready Application Data
@@ -203,6 +219,8 @@ class DatabaseManager:
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_bronze_cards_timestamp ON bronze_tcg_cards(data_pull_timestamp)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_silver_cards_pokemon ON silver_tcg_cards(pokemon_name)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_silver_cards_set ON silver_tcg_cards(set_id)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_silver_sets_display_name ON silver_tcg_sets(display_name)")  # New index for set search functionality Issue 33
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_silver_sets_series ON silver_tcg_sets(series)")  # New index for set search functionality Issue 33
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_gold_collections_user ON gold_user_collections(user_id)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_s3_cache_entity ON s3_image_cache(entity_id, image_type)")
         
@@ -463,7 +481,7 @@ class DatabaseManager:
             raise
                 
     def process_bronze_to_silver_set(self, bronze_id, set_data):
-        """Process Bronze set data to Silver layer (cleaned/normalized)"""
+        """Process Bronze set data to Silver layer with enhanced display name and search terms"""
         conn = None
         try:
             conn = sqlite3.connect(self.db_path)
@@ -480,14 +498,20 @@ class DatabaseManager:
             # Handle nested data safely
             images = set_data.get('images', {})
             
+            # Generate display name and search terms
+            display_name = self.generate_set_display_name(set_id, name, series)
+            search_terms = self.generate_set_search_terms(set_id, name, series)
+            
             cursor.execute("""
                 INSERT OR REPLACE INTO silver_tcg_sets 
-                (set_id, name, series, printed_total, total, release_date, 
-                symbol_url, logo_url, source_bronze_id)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                (set_id, name, display_name, search_terms, series, printed_total, total, 
+                release_date, symbol_url, logo_url, source_bronze_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 set_id,
                 name,
+                display_name,
+                json.dumps(search_terms),
                 series,
                 printed_total,
                 total,
@@ -507,6 +531,216 @@ class DatabaseManager:
         finally:
             if conn:
                 conn.close()
+                
+    def generate_set_display_name(self, set_id, name, series):
+        """Generate user-friendly display name for a set"""
+        # Create a more readable display name
+        if series and name:
+            display_name = f"{series}: {name}"
+        else:
+            display_name = name
+        
+        # Add set code in parentheses for clarity
+        if set_id:
+            display_name += f" ({set_id})"
+        
+        return display_name
+
+    def generate_set_search_terms(self, set_id, name, series):
+        """Generate searchable terms for a set"""
+        terms = []
+        
+        # Add the set ID
+        if set_id:
+            terms.append(set_id.lower())
+        
+        # Add the full name
+        if name:
+            terms.append(name.lower())
+            # Add individual words from the name
+            words = name.split()
+            terms.extend([word.lower() for word in words if len(word) > 2])
+        
+        # Add the series
+        if series:
+            terms.append(series.lower())
+            # Add series abbreviations
+            if series == "Sword & Shield":
+                terms.extend(["swsh", "sword shield", "ss"])
+            elif series == "Sun & Moon":
+                terms.extend(["sm", "sun moon"])
+            elif series == "XY":
+                terms.extend(["xy", "x y", "x&y"])
+            elif series == "Black & White":
+                terms.extend(["bw", "black white"])
+            elif series == "Diamond & Pearl":
+                terms.extend(["dp", "diamond pearl"])
+            elif series == "Scarlet & Violet":
+                terms.extend(["sv", "scarlet violet"])
+        
+        # Add common variations
+        if "Base Set" in name:
+            terms.extend(["base", "base set", "original"])
+        if "Crown Zenith" in name:
+            terms.extend(["crown", "zenith", "cz"])
+        if "Hidden Fates" in name:
+            terms.extend(["hidden", "fates", "hf"])
+        if "Shining Fates" in name:
+            terms.extend(["shining", "fates", "sf"])
+        
+        # Remove duplicates
+        return list(set(terms))
+    
+    def search_sets(self, search_term):
+        """Search for sets using fuzzy matching"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        search_term_lower = search_term.lower()
+        
+        # First, try exact matches
+        cursor.execute("""
+            SELECT set_id, name, display_name, series, total, release_date, symbol_url
+            FROM silver_tcg_sets
+            WHERE LOWER(set_id) = ? OR LOWER(name) = ?
+            ORDER BY release_date DESC
+        """, (search_term_lower, search_term_lower))
+        
+        exact_matches = cursor.fetchall()
+        
+        # Then, search in search terms
+        cursor.execute("""
+            SELECT set_id, name, display_name, series, total, release_date, symbol_url, search_terms
+            FROM silver_tcg_sets
+        """)
+        
+        all_sets = cursor.fetchall()
+        conn.close()
+    
+        # Fuzzy match against search terms
+        fuzzy_matches = []
+        for set_data in all_sets:
+            set_id, name, display_name, series, total, release_date, symbol_url, search_terms_json = set_data
+            
+            # Skip if already in exact matches
+            if any(set_id == match[0] for match in exact_matches):
+                continue
+            
+            # Check search terms
+            search_terms = json.loads(search_terms_json) if search_terms_json else []
+            
+            # Calculate match score
+            max_score = 0
+            for term in search_terms:
+                # Check if search term is contained in any searchable term
+                if search_term_lower in term:
+                    max_score = max(max_score, 0.8)
+                else:
+                    # Use fuzzy matching
+                    score = SequenceMatcher(None, search_term_lower, term).ratio()
+                    max_score = max(max_score, score)
+            
+            # Also check against display name
+            if display_name:
+                display_name_lower = display_name.lower()
+                if search_term_lower in display_name_lower:
+                    max_score = max(max_score, 0.9)
+                else:
+                    score = SequenceMatcher(None, search_term_lower, display_name_lower).ratio()
+                    max_score = max(max_score, score)
+            
+            if max_score > 0.5:  # Threshold for fuzzy matching
+                fuzzy_matches.append((set_data[:7], max_score))
+        
+        # Sort fuzzy matches by score
+        fuzzy_matches.sort(key=lambda x: x[1], reverse=True)
+        
+        # Combine results
+        results = []
+        
+        # Add exact matches first
+        for match in exact_matches:
+            results.append({
+                'set_id': match[0],
+                'name': match[1],
+                'display_name': match[2],
+                'series': match[3],
+                'total': match[4],
+                'release_date': match[5],
+                'symbol_url': match[6],
+                'match_score': 1.0
+            })
+        
+        # Add fuzzy matches
+        for match_data, score in fuzzy_matches[:10]:  # Limit to top 10 fuzzy matches
+            results.append({
+                'set_id': match_data[0],
+                'name': match_data[1],
+                'display_name': match_data[2],
+                'series': match_data[3],
+                'total': match_data[4],
+                'release_date': match_data[5],
+                'symbol_url': match_data[6],
+                'match_score': score
+            })
+        
+        return results
+
+    def get_all_sets_grouped_by_series(self):
+        """Get all sets grouped by series"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT set_id, name, display_name, series, total, release_date, symbol_url
+            FROM silver_tcg_sets
+            ORDER BY series, release_date DESC
+        """)
+        
+        sets = cursor.fetchall()
+        conn.close()
+        
+        # Group by series
+        grouped = {}
+        for set_data in sets:
+            series = set_data[3] or "Other"
+            if series not in grouped:
+                grouped[series] = []
+            
+            grouped[series].append({
+                'set_id': set_data[0],
+                'name': set_data[1],
+                'display_name': set_data[2],
+                'series': set_data[3],
+                'total': set_data[4],
+                'release_date': set_data[5],
+                'symbol_url': set_data[6]
+            })
+        
+        return grouped
+
+    def get_set_autocomplete_suggestions(self, prefix):
+        """Get autocomplete suggestions for set search"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        prefix_lower = prefix.lower()
+        
+        # Search for sets that start with the prefix
+        cursor.execute("""
+            SELECT DISTINCT display_name, set_id
+            FROM silver_tcg_sets
+            WHERE LOWER(display_name) LIKE ? OR LOWER(set_id) LIKE ?
+            ORDER BY release_date DESC
+            LIMIT 20
+        """, (f"{prefix_lower}%", f"{prefix_lower}%"))
+        
+        suggestions = []
+        for row in cursor.fetchall():
+            suggestions.append(row[0])  # Use display name for suggestions
+        
+        conn.close()
+        return suggestions
     
     def extract_pokemon_name_from_card(self, card_name):
         """Extract Pokemon name from card name using improved logic"""
@@ -1060,6 +1294,334 @@ class TCGAPIClient:
 # =============================================================================
 # UI COMPONENTS - Updated for Bronze-Silver-Gold Architecture
 # =============================================================================
+class SetBrowseDialog(QDialog):
+    """Dialog for browsing and discovering TCG sets"""
+    
+    def __init__(self, db_manager, parent=None):
+        super().__init__(parent)
+        self.db_manager = db_manager
+        self.selected_set_id = None
+        self.setWindowTitle("Browse TCG Sets")
+        self.setMinimumSize(800, 600)
+        self.initUI()
+
+    def update_set_autocomplete(self):
+        """Update autocomplete suggestions based on current input"""
+        current_text = self.search_input.text()
+        
+        if len(current_text) >= 2:  # Only search after 2 characters
+            suggestions = self.db_manager.get_set_autocomplete_suggestions(current_text)
+            
+            # Update completer model
+            model = QStringListModel(suggestions)
+            self.set_completer.setModel(model)
+            
+            # Update preview if we have matches
+            if suggestions:
+                self.set_preview_label.setText(f"Found {len(suggestions)} matching sets")
+                self.set_preview_label.setStyleSheet("color: #3498db; font-size: 11px; padding: 5px;")
+            else:
+                self.set_preview_label.setText("No matching sets found. Try browsing all sets.")
+                self.set_preview_label.setStyleSheet("color: #e74c3c; font-size: 11px; padding: 5px;")
+        else:
+            self.set_preview_label.setText("")
+
+    def browse_sets(self):
+        """Open set browse dialog"""
+        dialog = SetBrowseDialog(self.db_manager, self)
+        if dialog.exec_() == QDialog.Accepted:
+            selected_set_id = dialog.get_selected_set()
+            if selected_set_id:
+                self.sync_set_by_id(selected_set_id)
+
+    def sync_searched_set(self):
+        """Sync set based on search input"""
+        search_term = self.set_search_input.text().strip()
+        if not search_term:
+            QMessageBox.warning(self, "Input Error", "Please enter a set name or ID")
+            return
+        
+        # Search for matching sets
+        matches = self.db_manager.search_sets(search_term)
+        
+        if not matches:
+            QMessageBox.warning(self, "No Match", 
+                f"No sets found matching '{search_term}'.\n"
+                "Try browsing all sets or sync more data.")
+            return
+        
+        if len(matches) == 1:
+            # Single match - sync directly
+            self.sync_set_by_id(matches[0]['set_id'])
+        else:
+            # Multiple matches - show selection dialog
+            self.show_set_selection_dialog(matches)
+
+    def show_set_selection_dialog(self, matches):
+        """Show dialog to select from multiple matching sets"""
+        dialog = QDialog(self)
+        dialog.setWindowTitle("Select Set to Sync")
+        dialog.setMinimumWidth(500)
+        
+        layout = QVBoxLayout(dialog)
+        
+        label = QLabel(f"Found {len(matches)} matching sets. Select one:")
+        layout.addWidget(label)
+        
+        # List widget for sets
+        list_widget = QListWidget()
+        for match in matches[:10]:  # Limit to 10 results
+            item_text = f"{match['display_name']} - {match['total']} cards"
+            item = QListWidgetItem(item_text)
+            item.setData(Qt.UserRole, match['set_id'])
+            list_widget.addItem(item)
+        
+        list_widget.setCurrentRow(0)
+        layout.addWidget(list_widget)
+        
+        # Buttons
+        button_layout = QHBoxLayout()
+        
+        sync_btn = QPushButton("Sync Selected")
+        sync_btn.clicked.connect(lambda: self.sync_selected_from_list(list_widget, dialog))
+        button_layout.addWidget(sync_btn)
+        
+        cancel_btn = QPushButton("Cancel")
+        cancel_btn.clicked.connect(dialog.reject)
+        button_layout.addWidget(cancel_btn)
+        
+        layout.addLayout(button_layout)
+        
+        dialog.exec_()
+
+    def sync_selected_from_list(self, list_widget, dialog):
+        """Sync the selected set from list"""
+        current_item = list_widget.currentItem()
+        if current_item:
+            set_id = current_item.data(Qt.UserRole)
+            dialog.accept()
+            self.sync_set_by_id(set_id)
+
+    def sync_popular_set(self, index):
+        """Sync a popular set from combo box"""
+        set_id = self.popular_sets_combo.currentData()
+        if set_id:
+            self.sync_set_by_id(set_id)
+            # Reset combo box
+            self.popular_sets_combo.setCurrentIndex(0)
+
+    def sync_set_by_id(self, set_id):
+        """Sync a specific set by its ID"""
+        self.disable_buttons()
+        self.progress_label.setText(f"Syncing set {set_id}...")
+        self.log_output.append(f"📦 Syncing set: {set_id}")
+        
+        try:
+            api_key = self.api_key_input.text().strip()
+            if api_key:
+                RestClient.configure(api_key)
+            
+            cards = self.tcg_client.get_cards_from_set(set_id)
+            
+            if cards:
+                self.log_output.append(f"✓ Set {set_id}: {len(cards)} cards synced")
+                self.progress_label.setText(f"Set {set_id} complete! {len(cards)} cards synced")
+                
+                # Clear search input on success
+                self.set_search_input.clear()
+            else:
+                self.log_output.append(f"⚠ No cards found for set {set_id}")
+                self.progress_label.setText(f"No cards found for set {set_id}")
+                
+        except Exception as e:
+            self.log_output.append(f"❌ Set sync failed: {str(e)}")
+            self.progress_label.setText("Set sync failed")
+        
+        self.enable_buttons()
+    
+    def initUI(self):
+        layout = QVBoxLayout(self)
+        
+        # Search bar
+        search_layout = QHBoxLayout()
+        search_layout.addWidget(QLabel("Search:"))
+        
+        self.search_input = QLineEdit()
+        self.search_input.setPlaceholderText("Type to search sets...")
+        self.search_input.textChanged.connect(self.filter_sets)
+        search_layout.addWidget(self.search_input)
+        
+        layout.addLayout(search_layout)
+        
+        # Sets table
+        self.sets_table = QTableWidget()
+        self.sets_table.setColumnCount(5)
+        self.sets_table.setHorizontalHeaderLabels(["Set Name", "Series", "Cards", "Release Date", "ID"])
+        self.sets_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.sets_table.setSelectionMode(QAbstractItemView.SingleSelection)
+        self.sets_table.itemSelectionChanged.connect(self.on_set_selected)
+        
+        # Style the table
+        self.sets_table.setStyleSheet("""
+            QTableWidget {
+                background-color: #2c3e50;
+                color: white;
+                gridline-color: #34495e;
+            }
+            QTableWidget::item:selected {
+                background-color: #3498db;
+            }
+            QHeaderView::section {
+                background-color: #34495e;
+                color: white;
+                padding: 5px;
+                border: none;
+            }
+        """)
+        
+        # Adjust column widths
+        header = self.sets_table.horizontalHeader()
+        header.setStretchLastSection(False)
+        header.setSectionResizeMode(0, QHeaderView.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(2, QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(3, QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
+        
+        layout.addWidget(self.sets_table)
+        
+        # Set preview
+        preview_group = QGroupBox("Set Preview")
+        preview_layout = QVBoxLayout()
+        
+        self.preview_label = QLabel("Select a set to see details")
+        self.preview_label.setAlignment(Qt.AlignCenter)
+        self.preview_label.setMinimumHeight(100)
+        preview_layout.addWidget(self.preview_label)
+        
+        preview_group.setLayout(preview_layout)
+        layout.addWidget(preview_group)
+        
+        # Buttons
+        button_layout = QHBoxLayout()
+        
+        self.select_button = QPushButton("Select Set")
+        self.select_button.setEnabled(False)
+        self.select_button.clicked.connect(self.accept)
+        button_layout.addWidget(self.select_button)
+        
+        cancel_button = QPushButton("Cancel")
+        cancel_button.clicked.connect(self.reject)
+        button_layout.addWidget(cancel_button)
+        
+        layout.addLayout(button_layout)
+        
+        # Load sets
+        self.load_all_sets()
+    
+    def load_all_sets(self):
+        """Load all sets grouped by series"""
+        self.sets_table.setRowCount(0)
+        
+        grouped_sets = self.db_manager.get_all_sets_grouped_by_series()
+        
+        # Sort series
+        series_order = ["Scarlet & Violet", "Sword & Shield", "Sun & Moon", "XY", 
+                       "Black & White", "Diamond & Pearl", "Platinum", "HeartGold & SoulSilver",
+                       "EX", "Base", "Other"]
+        
+        sorted_series = []
+        for series in series_order:
+            if series in grouped_sets:
+                sorted_series.append(series)
+        
+        # Add any remaining series
+        for series in grouped_sets:
+            if series not in sorted_series:
+                sorted_series.append(series)
+        
+        # Populate table
+        for series in sorted_series:
+            if series in grouped_sets:
+                for set_info in grouped_sets[series]:
+                    self.add_set_to_table(set_info)
+    
+    def add_set_to_table(self, set_info):
+        """Add a set to the table"""
+        row = self.sets_table.rowCount()
+        self.sets_table.insertRow(row)
+        
+        # Set Name
+        name_item = QTableWidgetItem(set_info['display_name'] or set_info['name'])
+        self.sets_table.setItem(row, 0, name_item)
+        
+        # Series
+        series_item = QTableWidgetItem(set_info['series'] or "Unknown")
+        self.sets_table.setItem(row, 1, series_item)
+        
+        # Card Count
+        card_count = set_info['total'] or 0
+        count_item = QTableWidgetItem(str(card_count))
+        count_item.setTextAlignment(Qt.AlignCenter)
+        self.sets_table.setItem(row, 2, count_item)
+        
+        # Release Date
+        release_date = set_info['release_date'] or "Unknown"
+        date_item = QTableWidgetItem(release_date)
+        self.sets_table.setItem(row, 3, date_item)
+        
+        # Set ID
+        id_item = QTableWidgetItem(set_info['set_id'])
+        id_item.setTextAlignment(Qt.AlignCenter)
+        self.sets_table.setItem(row, 4, id_item)
+        
+        # Store full set info in the first item
+        name_item.setData(Qt.UserRole, set_info)
+    
+    def filter_sets(self, text):
+        """Filter sets based on search text"""
+        search_text = text.lower()
+        
+        for row in range(self.sets_table.rowCount()):
+            show_row = False
+            
+            # Check all columns
+            for col in range(self.sets_table.columnCount()):
+                item = self.sets_table.item(row, col)
+                if item and search_text in item.text().lower():
+                    show_row = True
+                    break
+            
+            self.sets_table.setRowHidden(row, not show_row)
+    
+    def on_set_selected(self):
+        """Handle set selection"""
+        selected_items = self.sets_table.selectedItems()
+        
+        if selected_items:
+            # Get the set info from the first column
+            row = selected_items[0].row()
+            name_item = self.sets_table.item(row, 0)
+            set_info = name_item.data(Qt.UserRole)
+            
+            if set_info:
+                self.selected_set_id = set_info['set_id']
+                self.select_button.setEnabled(True)
+                
+                # Update preview
+                preview_text = f"<b>{set_info['display_name'] or set_info['name']}</b><br>"
+                preview_text += f"Series: {set_info['series'] or 'Unknown'}<br>"
+                preview_text += f"Cards: {set_info['total'] or 0}<br>"
+                preview_text += f"Release: {set_info['release_date'] or 'Unknown'}<br>"
+                preview_text += f"Set ID: {set_info['set_id']}"
+                
+                self.preview_label.setText(preview_text)
+                self.preview_label.setStyleSheet("color: white; padding: 10px;")
+    
+    def get_selected_set(self):
+        """Get the selected set ID"""
+        return self.selected_set_id
+
 
 class DataSyncDialog(QDialog):
     """Advanced data sync dialog for TCG data"""
@@ -1135,15 +1697,21 @@ class DataSyncDialog(QDialog):
         
         sync_layout.addLayout(gen_layout)
         
-        # Set sync
+        # Set sync - Dropdown style like Generation sync
         set_layout = QHBoxLayout()
-        set_layout.addWidget(QLabel("TCG Set ID:"))
-        self.set_input = QLineEdit()
-        self.set_input.setPlaceholderText("e.g., base1, xy1")
-        set_layout.addWidget(self.set_input)
+        set_layout.addWidget(QLabel("TCG Set:"))
+        
+        self.set_combo = QComboBox()
+        self.set_combo.setMinimumWidth(300)
+        self.set_combo.addItem("Select a Set", None)
+        
+        # DON'T LOAD SETS HERE - REMOVE THIS LINE
+        # self.load_sets_dropdown()
+        
+        set_layout.addWidget(self.set_combo)
         
         self.set_sync_btn = QPushButton("Sync Set")
-        self.set_sync_btn.clicked.connect(self.sync_set)
+        self.set_sync_btn.clicked.connect(self.sync_selected_set)
         set_layout.addWidget(self.set_sync_btn)
         
         sync_layout.addLayout(set_layout)
@@ -1190,6 +1758,172 @@ class DataSyncDialog(QDialog):
         button_layout.addWidget(self.close_button)
         
         layout.addLayout(button_layout)
+        
+        # NOW LOAD SETS - AT THE VERY END AFTER ALL WIDGETS ARE CREATED
+        self.load_sets_dropdown()
+    
+    def load_sets_dropdown(self):
+        """Load ALL available sets from API into the dropdown"""
+        # Clear existing items except the first one
+        while self.set_combo.count() > 1:
+            self.set_combo.removeItem(1)
+        
+        # Try to get all sets from API first
+        try:
+            self.log_output.append("📋 Loading available sets...")
+            
+            # Configure API key if provided
+            api_key = self.api_key_input.text().strip()
+            if api_key:
+                RestClient.configure(api_key)
+            
+            # Get all sets from API
+            all_sets = self.tcg_client.get_all_sets()
+            
+            if all_sets:
+                # Group by series
+                grouped = {}
+                for set_data in all_sets:
+                    series = set_data.get('series', 'Other')
+                    if series not in grouped:
+                        grouped[series] = []
+                    grouped[series].append(set_data)
+                
+                # Sort series
+                series_order = ["Scarlet & Violet", "Sword & Shield", "Sun & Moon", "XY", 
+                            "Black & White", "Diamond & Pearl", "Platinum", "HeartGold & SoulSilver",
+                            "EX", "Base", "Other"]
+                
+                sorted_series = []
+                for series in series_order:
+                    if series in grouped:
+                        sorted_series.append(series)
+                
+                # Add any remaining series
+                for series in grouped:
+                    if series not in sorted_series:
+                        sorted_series.append(series)
+                
+                # Populate combo box
+                for series in sorted_series:
+                    if series in grouped:
+                        # Add series as a separator/header
+                        self.set_combo.addItem(f"──── {series} ────", None)
+                        index = self.set_combo.count() - 1
+                        self.set_combo.model().item(index).setEnabled(False)
+                        
+                        # Add sets in this series
+                        for set_info in grouped[series]:
+                            set_id = set_info.get('id')
+                            name = set_info.get('name')
+                            total = set_info.get('total', 0)
+                            
+                            display_text = f"{name} ({set_id})"
+                            if total:
+                                display_text += f" - {total} cards"
+                            
+                            self.set_combo.addItem(display_text, set_id)
+                
+                self.log_output.append(f"✓ Loaded {len(all_sets)} available sets")
+            else:
+                self.log_output.append("⚠ No sets available from API")
+                
+        except Exception as e:
+            self.log_output.append(f"❌ Failed to load sets: {str(e)}")
+            # Fall back to loading from database
+            self.load_sets_from_database()
+            
+    def load_sets_from_database(self):
+        """Fallback to load sets from database if API fails"""
+        # Get sets that have already been synced to the database
+        grouped_sets = self.db_manager.get_all_sets_grouped_by_series()
+        
+        if grouped_sets:
+            # Sort series in a logical order
+            series_order = ["Scarlet & Violet", "Sword & Shield", "Sun & Moon", "XY", 
+                        "Black & White", "Diamond & Pearl", "Platinum", "HeartGold & SoulSilver",
+                        "EX", "Base", "Other"]
+            
+            sorted_series = []
+            for series in series_order:
+                if series in grouped_sets:
+                    sorted_series.append(series)
+            
+            # Add any remaining series
+            for series in grouped_sets:
+                if series not in sorted_series:
+                    sorted_series.append(series)
+            
+            # Populate combo box with synced sets
+            for series in sorted_series:
+                if series in grouped_sets:
+                    # Add series as a separator/header
+                    self.set_combo.addItem(f"──── {series} (Synced) ────", None)
+                    index = self.set_combo.count() - 1
+                    self.set_combo.model().item(index).setEnabled(False)
+                    
+                    # Add sets in this series
+                    for set_info in grouped_sets[series]:
+                        display_text = set_info['display_name'] or f"{set_info['name']} ({set_info['set_id']})"
+                        if set_info['total']:
+                            display_text += f" - {set_info['total']} cards"
+                        
+                        self.set_combo.addItem(display_text, set_info['set_id'])
+            
+            self.set_combo.addItem("──── Not Synced Yet ────", None)
+            index = self.set_combo.count() - 1
+            self.set_combo.model().item(index).setEnabled(False)
+            self.set_combo.addItem("⚠️ Could not load from API - showing synced sets only", None)
+        else:
+            self.set_combo.addItem("No sets available - sync some sets first", None)
+    
+    def filter_set_dropdown(self, text):
+        """Filter the dropdown based on search text"""
+        search_text = text.lower()
+        
+        # For now, just reload the dropdown
+        # A more sophisticated implementation would filter in place
+        if not search_text:
+            self.load_sets_dropdown()
+    
+    def sync_selected_set(self):
+        """Sync the selected set from dropdown"""
+        set_id = self.set_combo.currentData()
+        
+        if not set_id:
+            QMessageBox.warning(self, "No Selection", "Please select a set to sync")
+            return
+        
+        self.sync_set_by_id(set_id)
+    
+    def sync_set_by_id(self, set_id):
+        """Sync a specific set by its ID"""
+        self.disable_buttons()
+        self.progress_label.setText(f"Syncing set {set_id}...")
+        self.log_output.append(f"📦 Syncing set: {set_id}")
+        
+        try:
+            api_key = self.api_key_input.text().strip()
+            if api_key:
+                RestClient.configure(api_key)
+            
+            cards = self.tcg_client.get_cards_from_set(set_id)
+            
+            if cards:
+                self.log_output.append(f"✓ Set {set_id}: {len(cards)} cards synced")
+                self.progress_label.setText(f"Set {set_id} complete! {len(cards)} cards synced")
+                
+                # Reset combo to first item
+                self.set_combo.setCurrentIndex(0)
+            else:
+                self.log_output.append(f"⚠ No cards found for set {set_id}")
+                self.progress_label.setText(f"No cards found for set {set_id}")
+                
+        except Exception as e:
+            self.log_output.append(f"❌ Set sync failed: {str(e)}")
+            self.progress_label.setText("Set sync failed")
+        
+        self.enable_buttons()
     
     def search_pokemon_cards(self):
         """Search for cards by Pokemon name"""
@@ -1301,37 +2035,6 @@ class DataSyncDialog(QDialog):
             self.sync_generation()
             QApplication.processEvents()
     
-    def sync_set(self):
-        """Sync all cards from a specific set"""
-        set_id = self.set_input.text().strip()
-        if not set_id:
-            QMessageBox.warning(self, "Input Error", "Please enter a set ID")
-            return
-        
-        self.disable_buttons()
-        self.progress_label.setText(f"Syncing set {set_id}...")
-        self.log_output.append(f"📦 Syncing set: {set_id}")
-        
-        try:
-            api_key = self.api_key_input.text().strip()
-            if api_key:
-                RestClient.configure(api_key)
-            
-            cards = self.tcg_client.get_cards_from_set(set_id)
-            
-            if cards:
-                self.log_output.append(f"✓ Set {set_id}: {len(cards)} cards synced")
-                self.progress_label.setText(f"Set {set_id} complete! {len(cards)} cards synced")
-            else:
-                self.log_output.append(f"⚠ No cards found for set {set_id}")
-                self.progress_label.setText(f"No cards found for set {set_id}")
-                
-        except Exception as e:
-            self.log_output.append(f"❌ Set sync failed: {str(e)}")
-            self.progress_label.setText("Set sync failed")
-        
-        self.enable_buttons()
-    
     def sync_all_sets(self):
         """Sync all available TCG sets"""
         reply = QMessageBox.question(self, "Confirm", 
@@ -1388,21 +2091,23 @@ class DataSyncDialog(QDialog):
                 self.db_manager.init_database()
                 self.log_output.append("🗑️ Database reset complete")
                 self.progress_label.setText("Database reset")
+                # Reload sets dropdown
+                self.load_sets_dropdown()
             except Exception as e:
                 self.log_output.append(f"❌ Reset failed: {str(e)}")
     
     def disable_buttons(self):
-        """Disable all action buttons during operations"""
         self.pokemon_search_btn.setEnabled(False)
         self.gen_sync_btn.setEnabled(False)
+        self.set_combo.setEnabled(False)
         self.set_sync_btn.setEnabled(False)
         self.sync_all_sets_btn.setEnabled(False)
         self.reset_database_btn.setEnabled(False)
     
     def enable_buttons(self):
-        """Re-enable all action buttons"""
         self.pokemon_search_btn.setEnabled(True)
         self.gen_sync_btn.setEnabled(True)
+        self.set_combo.setEnabled(True)
         self.set_sync_btn.setEnabled(True)
         self.sync_all_sets_btn.setEnabled(True)
         self.reset_database_btn.setEnabled(True)
@@ -2265,18 +2970,17 @@ class PokemonDashboard(QMainWindow):
         # Browse options
         browse_layout = QHBoxLayout()
         
-        # Set filter
-        browse_layout.addWidget(QLabel("Set:"))
+        # Set filter - now shows SYNCED sets only
+        browse_layout.addWidget(QLabel("Synced Set:"))
         self.set_combo = QComboBox()
         self.set_combo.addItem("All Sets", "all")
         
-        # Load sets (with error handling)
+        # Load synced sets from database
         try:
             self.load_sets_combo()
         except Exception as e:
             print(f"Warning: Could not load sets - {e}")
-            # Add a message to sync sets first
-            self.set_combo.addItem("No sets found - Sync data first", "none")
+            self.set_combo.addItem("No sets synced yet", "none")
         
         browse_layout.addWidget(self.set_combo)
         
@@ -2301,6 +3005,11 @@ class PokemonDashboard(QMainWindow):
         
         tcg_layout.addLayout(browse_layout)
         
+        # Add info label
+        info_label = QLabel("This shows cards from sets you've synced. Use 'Sync Data' to add more sets.")
+        info_label.setStyleSheet("color: #95a5a6; font-size: 11px; padding: 5px;")
+        tcg_layout.addWidget(info_label)
+        
         # TCG cards display area
         self.tcg_scroll = QScrollArea()
         self.tcg_scroll.setWidgetResizable(True)
@@ -2312,7 +3021,6 @@ class PokemonDashboard(QMainWindow):
             self.apply_tcg_filters()
         except Exception as e:
             print(f"Warning: Could not apply initial filters - {e}")
-            # Show empty state
             self.show_empty_tcg_state()
         
         self.main_tabs.addTab(tcg_tab, "🃏 Browse TCG Cards")
@@ -2389,17 +3097,28 @@ class PokemonDashboard(QMainWindow):
         self.main_tabs.addTab(analytics_tab, "📊 Analytics")
     
     def load_sets_combo(self):
-        """Load available sets into combo box"""
+        """Load available sets into combo box with enhanced display names"""
         conn = sqlite3.connect(self.db_manager.db_path)
         cursor = conn.cursor()
         
         cursor.execute("""
-            SELECT DISTINCT set_id, name FROM silver_tcg_sets 
-            ORDER BY name
+            SELECT DISTINCT set_id, display_name, name, series 
+            FROM silver_tcg_sets 
+            ORDER BY series DESC, release_date DESC
         """)
         
+        current_series = None
         for row in cursor.fetchall():
-            self.set_combo.addItem(f"{row[1]} ({row[0]})", row[0])
+            set_id, display_name, name, series = row
+            # Add series separator
+            if series != current_series:
+                if current_series is not None:
+                    self.set_combo.insertSeparator(self.set_combo.count())
+                current_series = series
+            
+            # Use display name if available, otherwise fall back to name
+            combo_text = display_name if display_name else f"{name} ({set_id})"
+            self.set_combo.addItem(combo_text, set_id)
         
         conn.close()
     
