@@ -1024,7 +1024,7 @@ class ImageLoader(QObject):
         
         # Connect signals
         reply.finished.connect(lambda: self._on_image_loaded(reply))
-        reply.errorOccurred.connect(lambda: self._on_image_error(reply))
+        reply.error.connect(lambda: self._on_image_error(reply))
     
     def _on_image_loaded(self, reply):
         """Handle image loading completion"""
@@ -1424,7 +1424,7 @@ class SetBrowseDialog(QDialog):
     def browse_sets(self):
         """Open set browse dialog"""
         dialog = SetBrowseDialog(self.db_manager, self)
-        if dialog.exec() == QDialog.DialogCode.Accepted:
+        if dialog.exec_() == QDialog.DialogCode.Accepted:
             selected_set_id = dialog.get_selected_set()
             if selected_set_id:
                 self.sync_set_by_id(selected_set_id)
@@ -1487,7 +1487,7 @@ class SetBrowseDialog(QDialog):
         
         layout.addLayout(button_layout)
         
-        dialog.exec()
+        dialog.exec_()
 
     def sync_selected_from_list(self, list_widget, dialog):
         """Sync the selected set from list"""
@@ -1590,7 +1590,7 @@ class SetBrowseDialog(QDialog):
         preview_layout = QVBoxLayout()
         
         self.preview_label = QLabel("Select a set to see details")
-        self.preview_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.preview_label.setAlignment(Qt.Alignment.AlignCenter)
         self.preview_label.setMinimumHeight(100)
         preview_layout.addWidget(self.preview_label)
         
@@ -1657,7 +1657,7 @@ class SetBrowseDialog(QDialog):
         # Card Count
         card_count = set_info['total'] or 0
         count_item = QTableWidgetItem(str(card_count))
-        count_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        count_item.setTextAlignment(Qt.Alignment.AlignCenter)
         self.sets_table.setItem(row, 2, count_item)
         
         # Release Date
@@ -1667,7 +1667,7 @@ class SetBrowseDialog(QDialog):
         
         # Set ID
         id_item = QTableWidgetItem(set_info['set_id'])
-        id_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        id_item.setTextAlignment(Qt.Alignment.AlignCenter)
         self.sets_table.setItem(row, 4, id_item)
         
         # Store full set info in the first item
@@ -2246,7 +2246,7 @@ class PokemonCard(QFrame):
         
         # Image container - Enhanced
         self.image_label = QLabel()
-        self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.image_label.setAlignment(Qt.Alignment.AlignCenter)
         self.image_label.setMinimumHeight(220)  # Increased from 200
         self.image_label.setMaximumHeight(380)  # Increased from 350
         self.image_label.setScaledContents(False)
@@ -2255,7 +2255,7 @@ class PokemonCard(QFrame):
         # Load the card image
         self.refresh_card_display()
         
-        layout.addWidget(self.image_label, 1, Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(self.image_label, 1, Qt.Alignment.AlignCenter)
         
         # Pokemon info section - Enhanced
         info_container = QWidget()
@@ -2265,7 +2265,7 @@ class PokemonCard(QFrame):
         
         # Pokemon name with better styling
         name_label = QLabel(f"#{self.pokemon_data['id']} {self.pokemon_data['name']}")
-        name_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        name_label.setAlignment(Qt.Alignment.AlignCenter)
         name_label.setFont(QFont('Arial', 12, QFont.Weight.Bold))  # Slightly larger
         name_label.setStyleSheet("""
             color: white; 
@@ -2282,7 +2282,7 @@ class PokemonCard(QFrame):
         if card_count > 0:
             # Cards are available
             count_label = QLabel(f"🃏 {card_count} cards available")
-            count_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            count_label.setAlignment(Qt.Alignment.AlignCenter)
             count_label.setStyleSheet("""
                 color: #3498db; 
                 font-size: 10px; 
@@ -2293,7 +2293,7 @@ class PokemonCard(QFrame):
         else:
             # No cards available
             no_cards_label = QLabel("📭 No cards available")
-            no_cards_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            no_cards_label.setAlignment(Qt.Alignment.AlignCenter)
             no_cards_label.setStyleSheet("""
                 color: #7f8c8d; 
                 font-size: 10px; 
@@ -2402,7 +2402,7 @@ class PokemonCard(QFrame):
             parent=self
         )
         
-        if dialog.exec() == QDialog.DialogCode.Accepted:
+        if dialog.exec_() == QDialog.DialogCode.Accepted:
             selected_card_id = dialog.get_selected_card()
             if selected_card_id:
                 # Import the card
@@ -2567,7 +2567,7 @@ class CardSelectionDialog(QDialog):
         
         # Card image - Much larger
         image_label = QLabel()
-        image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        image_label.setAlignment(Qt.Alignment.AlignCenter)
         image_label.setFixedHeight(320)  # Much larger: was 220, now 320
         image_label.setScaledContents(False)
         image_label.setStyleSheet("""
@@ -2608,7 +2608,7 @@ class CardSelectionDialog(QDialog):
         
         # Card name - Larger typography
         name_label = QLabel(card_info['name'])
-        name_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        name_label.setAlignment(Qt.Alignment.AlignCenter)
         name_label.setFont(QFont('Arial', 12, QFont.Weight.Bold))  # Larger font: was 10, now 12
         name_label.setStyleSheet("color: white; background: transparent;")
         name_label.setWordWrap(True)
@@ -2617,7 +2617,7 @@ class CardSelectionDialog(QDialog):
         
         # Set info with larger styling
         set_label = QLabel(f"📦 Set: {card_info['set_name']}")
-        set_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        set_label.setAlignment(Qt.Alignment.AlignCenter)
         set_label.setStyleSheet("color: #3498db; font-size: 11px; font-weight: bold;")  # Larger font
         set_label.setWordWrap(True)
         info_layout.addWidget(set_label)
@@ -2625,7 +2625,7 @@ class CardSelectionDialog(QDialog):
         # Rarity with larger color coding
         if card_info['rarity']:
             rarity_label = QLabel(f"⭐ {card_info['rarity']}")
-            rarity_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            rarity_label.setAlignment(Qt.Alignment.AlignCenter)
             
             # Color code rarities
             rarity_colors = {
@@ -2643,7 +2643,7 @@ class CardSelectionDialog(QDialog):
         # Artist info with larger font
         if card_info['artist']:
             artist_label = QLabel(f"🎨 Artist: {card_info['artist']}")
-            artist_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            artist_label.setAlignment(Qt.Alignment.AlignCenter)
             artist_label.setStyleSheet("color: #95a5a6; font-size: 10px;")  # Larger font
             info_layout.addWidget(artist_label)
         
@@ -2758,7 +2758,7 @@ class GenerationTab(QWidget):
         
         # Stats
         self.stats_label = QLabel()
-        self.stats_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.stats_label.setAlignment(Qt.Alignment.AlignCenter)
         self.stats_label.setStyleSheet("color: #bdc3c7;")
         main_layout.addWidget(self.stats_label)
         
@@ -2843,7 +2843,7 @@ class GenerationTab(QWidget):
             pokemon_card.cardImported.connect(self.on_card_imported)
             
             self.pokemon_cards.append(pokemon_card)
-            grid_layout.addWidget(pokemon_card, row, col, Qt.AlignmentFlag.AlignCenter)
+            grid_layout.addWidget(pokemon_card, row, col, Qt.Alignment.AlignCenter)
             
             col += 1
             if col >= columns:
@@ -2856,12 +2856,12 @@ class GenerationTab(QWidget):
             no_data_layout = QVBoxLayout(no_data_widget)
             
             no_data_label = QLabel(f"No Pokemon data found for {self.gen_name}")
-            no_data_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            no_data_label.setAlignment(Qt.Alignment.AlignCenter)
             no_data_label.setStyleSheet("color: #7f8c8d; font-size: 16px;")
             no_data_layout.addWidget(no_data_label)
             
             sync_hint = QLabel("Use 'Sync Data' to fetch Pokemon card data from the TCG API")
-            sync_hint.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            sync_hint.setAlignment(Qt.Alignment.AlignCenter)
             sync_hint.setStyleSheet("color: #95a5a6; font-size: 12px;")
             no_data_layout.addWidget(sync_hint)
             
@@ -3148,12 +3148,12 @@ class PokemonDashboard(QMainWindow):
         empty_layout = QVBoxLayout(empty_widget)
         
         empty_label = QLabel("No TCG sets or cards found")
-        empty_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        empty_label.setAlignment(Qt.Alignment.AlignCenter)
         empty_label.setStyleSheet("color: #7f8c8d; font-size: 16px;")
         empty_layout.addWidget(empty_label)
         
         sync_hint = QLabel("Use 'Sync Data' to fetch TCG sets and cards")
-        sync_hint.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        sync_hint.setAlignment(Qt.Alignment.AlignCenter)
         sync_hint.setStyleSheet("color: #95a5a6; font-size: 12px;")
         empty_layout.addWidget(sync_hint)
         
@@ -3297,7 +3297,7 @@ class PokemonDashboard(QMainWindow):
         
         for card_data in cards:
             card_widget = self.create_tcg_card_widget(card_data, self.image_loader)
-            grid_layout.addWidget(card_widget, row, col, Qt.AlignmentFlag.AlignCenter)
+            grid_layout.addWidget(card_widget, row, col, Qt.Alignment.AlignCenter)
             
             col += 1
             if col >= columns:
@@ -3310,12 +3310,12 @@ class PokemonDashboard(QMainWindow):
             no_cards_layout = QVBoxLayout(no_cards_widget)
             
             no_cards_label = QLabel("🔍 No cards found with current filters")
-            no_cards_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            no_cards_label.setAlignment(Qt.Alignment.AlignCenter)
             no_cards_label.setStyleSheet("color: #7f8c8d; font-size: 16px; margin: 20px;")
             no_cards_layout.addWidget(no_cards_label)
             
             suggestion_label = QLabel("Try adjusting your filters or sync more data")
-            suggestion_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            suggestion_label.setAlignment(Qt.Alignment.AlignCenter)
             suggestion_label.setStyleSheet("color: #95a5a6; font-size: 12px;")
             no_cards_layout.addWidget(suggestion_label)
             
@@ -3354,7 +3354,7 @@ class PokemonDashboard(QMainWindow):
         
         # Card image - Much larger
         image_label = QLabel()
-        image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        image_label.setAlignment(Qt.Alignment.AlignCenter)
         image_label.setFixedHeight(320)  # Increased from 120
         image_label.setScaledContents(False)
         image_label.setStyleSheet("""
@@ -3389,7 +3389,7 @@ class PokemonDashboard(QMainWindow):
         
         # Card name with better typography
         name_label = QLabel(name)
-        name_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        name_label.setAlignment(Qt.Alignment.AlignCenter)
         name_label.setFont(QFont('Arial', 11, QFont.Weight.Bold))
         name_label.setStyleSheet("color: white; background: transparent;")
         name_label.setWordWrap(True)
@@ -3398,7 +3398,7 @@ class PokemonDashboard(QMainWindow):
         
         # Set info
         set_label = QLabel(f"📦 {set_name}")
-        set_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        set_label.setAlignment(Qt.Alignment.AlignCenter)
         set_label.setStyleSheet("color: #3498db; font-size: 10px; font-weight: bold;")
         set_label.setWordWrap(True)
         set_label.setMaximumHeight(30)
@@ -3408,7 +3408,7 @@ class PokemonDashboard(QMainWindow):
         if rarity:
             rarity_icon = "⭐" if "Rare" in rarity else "◆" if "Uncommon" in rarity else "●"
             rarity_label = QLabel(f"{rarity_icon} {rarity}")
-            rarity_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            rarity_label.setAlignment(Qt.Alignment.AlignCenter)
             
             # Color code rarities
             rarity_colors = {
@@ -3427,7 +3427,7 @@ class PokemonDashboard(QMainWindow):
         
         # Quick import hint
         hint_label = QLabel("Quick Import")
-        hint_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        hint_label.setAlignment(Qt.Alignment.AlignCenter)
         hint_label.setStyleSheet("""
             color: #7f8c8d; 
             font-size: 10px; 
@@ -3576,12 +3576,12 @@ class PokemonDashboard(QMainWindow):
         close_btn.clicked.connect(dialog.accept)
         layout.addWidget(close_btn)
         
-        dialog.exec()
+        dialog.exec_()
     
     def open_sync_dialog(self):
         """Open the data sync dialog"""
         dialog = DataSyncDialog(self.db_manager, self)
-        if dialog.exec() == QDialog.DialogCode.Accepted:
+        if dialog.exec_() == QDialog.DialogCode.Accepted:
             self.refresh_all_tabs()
             self.update_status_bar()
     
@@ -3753,7 +3753,7 @@ def main():
         print("Application ready! Use 'Sync Data' to fetch Pokemon TCG cards.")
         
         # Enter main loop
-        sys.exit(app.exec())
+        sys.exit(app.exec_())
         
     except Exception as e:
         print(f"CRITICAL APPLICATION ERROR: {e}")
