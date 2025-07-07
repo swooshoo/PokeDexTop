@@ -3,6 +3,7 @@ import os
 import json
 import sqlite3
 import hashlib
+from PyQt6 import sip
 import requests
 import time
 from datetime import datetime
@@ -18,14 +19,13 @@ from PyQt5.QtGui import QPixmap, QFont, QIcon, QPainter, QPen, QColor
 from PyQt5.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, QThread, QTimer, QUrl
 from PyQt5.QtPrintSupport import QPrinter 
 from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
-from utils import ImageLoader
+#from utils import ImageLoader removed for now
 
 # Pokemon TCG SDK imports
 from pokemontcgsdk import Card, Set
 from pokemontcgsdk.restclient import RestClient, PokemonTcgException
 
 from difflib import SequenceMatcher
-
 
 # =============================================================================
 # BRONZE-SILVER-GOLD DATA ARCHITECTURE
@@ -1034,6 +1034,21 @@ class ImageLoader(QObject):
         
         label, size, url = self._loading_images.pop(reply)
         
+        # Check if the label still exists
+        try:
+            if sip.isdeleted(label):
+                reply.deleteLater()
+                return
+        except:
+            # If sip is not available or check fails, try to access the label
+            try:
+                # Try to access a property to see if it's still valid
+                _ = label.objectName()
+            except RuntimeError:
+                # Label has been deleted
+                reply.deleteLater()
+                return
+        
         if reply.error() == QNetworkReply.NoError:
             data = reply.readAll()
             pixmap = QPixmap()
@@ -1041,11 +1056,19 @@ class ImageLoader(QObject):
             if pixmap.loadFromData(data):
                 # Cache the pixmap
                 self._image_cache[url] = pixmap
-                # Set on label
-                self._set_image_on_label(label, pixmap, size)
+                # Set on label - wrapped in try/except for safety
+                try:
+                    self._set_image_on_label(label, pixmap, size)
+                except RuntimeError:
+                    # Label was deleted between check and use
+                    pass
             else:
-                label.setText("Invalid\nImage")
-                label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+                try:
+                    label.setText("Invalid\nImage")
+                    label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+                except RuntimeError:
+                    # Label was deleted
+                    pass
         else:
             self._on_image_error(reply)
         
@@ -1055,28 +1078,59 @@ class ImageLoader(QObject):
         """Handle image loading errors"""
         if reply in self._loading_images:
             label, _, _ = self._loading_images.pop(reply)
-            label.setText("Failed to\nLoad Image")
-            label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+            
+            # Check if label still exists before using it
+            try:
+                if not sip.isdeleted(label):
+                    label.setText("Failed to\nLoad Image")
+                    label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+            except:
+                # If sip check fails, try direct access
+                try:
+                    label.setText("Failed to\nLoad Image")
+                    label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+                except RuntimeError:
+                    # Label was deleted
+                    pass
+                    
         reply.deleteLater()
     
     def _set_image_on_label(self, label, pixmap, size):
         """Set pixmap on label with optional scaling"""
-        if size:
-            scaled_pixmap = pixmap.scaled(size[0], size[1], 
-                                         Qt.KeepAspectRatio, 
-                                         Qt.SmoothTransformation)
-            label.setPixmap(scaled_pixmap)
-        else:
-            # Scale to label size
-            label_size = label.size()
-            scaled_pixmap = pixmap.scaled(label_size, 
-                                         Qt.KeepAspectRatio, 
-                                         Qt.SmoothTransformation)
-            label.setPixmap(scaled_pixmap)
+        try:
+            # Check if label is still valid
+            if sip.isdeleted(label):
+                return
+        except:
+            # If sip check is not available, continue and rely on exception handling
+            pass
+            
+        try:
+            if size:
+                scaled_pixmap = pixmap.scaled(size[0], size[1], 
+                                             Qt.KeepAspectRatio, 
+                                             Qt.SmoothTransformation)
+                label.setPixmap(scaled_pixmap)
+            else:
+                # Scale to label size
+                label_size = label.size()
+                scaled_pixmap = pixmap.scaled(label_size, 
+                                             Qt.KeepAspectRatio, 
+                                             Qt.SmoothTransformation)
+                label.setPixmap(scaled_pixmap)
+            
+            label.setStyleSheet("")  # Clear loading styles
+        except RuntimeError:
+            # Label was deleted - silently ignore
+            pass
+    
+    def cancel_all_requests(self):
+        """Cancel all pending image requests"""
+        for reply in list(self._loading_images.keys()):
+            reply.abort()
+            reply.deleteLater()
+        self._loading_images.clear()
         
-        label.setStyleSheet("")  # Clear loading styles
-
-
 # =============================================================================
 # TCG API CLIENT - Pokemon TCG SDK Integration
 # =============================================================================
@@ -2728,8 +2782,19 @@ class GenerationTab(QWidget):
     
     def refresh_data(self):
         """Refresh Pokemon data from Gold layer"""
+        # Cancel any pending image loads before clearing
+        if hasattr(self, 'image_loader'):
+            # If we want to be extra safe, we could cancel all pending requests
+            # self.image_loader.cancel_all_requests()  # Uncomment if you add this method
+            pass
+        
         # Clear existing cards
         self.pokemon_cards.clear()
+        
+        # Clear the scroll area widget to ensure old widgets are deleted
+        if self.scroll_area.widget():
+            self.scroll_area.widget().deleteLater()
+            QApplication.processEvents()  # Process deletion events
         
         # Get Pokemon for this generation
         pokemon_data = self.db_manager.get_pokemon_by_generation(self.generation_num)
