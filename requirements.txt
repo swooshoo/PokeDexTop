@@ -1,4 +1,4 @@
-PyQt5==5.15.9
+PyQt6==6.6.0
 pokemontcgsdk==3.4.0
 requests==2.31.0
 python-dotenv==1.0.0
