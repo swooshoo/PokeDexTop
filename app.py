@@ -2062,6 +2062,11 @@ class DataSyncDialog(QDialog):
             self.sync_all_generations()
             return
         
+        # Call the internal sync method directly
+        self._sync_generation_internal(generation)
+
+    def _sync_generation_internal(self, generation):
+        """Internal method to sync a specific generation without UI dependencies"""
         self.disable_buttons()
         
         # Get generation range
@@ -2108,6 +2113,7 @@ class DataSyncDialog(QDialog):
                     # If too many errors, pause briefly
                     if error_count > 5:
                         self.log_output.append("⏸️ Too many errors, pausing for 2 seconds...")
+                        import time
                         time.sleep(2)
                         error_count = 0
             
@@ -2119,16 +2125,80 @@ class DataSyncDialog(QDialog):
             self.progress_label.setText("Generation sync failed")
         
         self.enable_buttons()
-    
+
     def sync_all_generations(self):
-        """Sync all generations sequentially"""
+        """Sync all generations sequentially - FIXED VERSION"""
         self.disable_buttons()
         self.log_output.append("🚀 Starting full database sync (all generations)")
         
-        for gen in range(1, 10):
-            self.gen_combo.setCurrentText(f"Generation {gen}")
-            self.sync_generation()
-            QApplication.processEvents()
+        try:
+            # Configure API key once
+            api_key = self.api_key_input.text().strip()
+            if api_key:
+                RestClient.configure(api_key)
+            
+            total_cards_synced = 0
+            
+            # Sync each generation directly without touching the UI combo box
+            for gen in range(1, 10):
+                self.log_output.append(f"📖 Starting Generation {gen}...")
+                
+                # Call internal method directly to avoid recursion
+                gen_ranges = {
+                    1: (1, 151), 2: (152, 251), 3: (252, 386), 4: (387, 493), 5: (494, 649),
+                    6: (650, 721), 7: (722, 809), 8: (810, 905), 9: (906, 1025)
+                }
+                
+                start_id, end_id = gen_ranges.get(gen, (1, 151))
+                
+                self.progress_bar.setRange(0, end_id - start_id + 1)
+                self.progress_bar.setValue(0)
+                self.progress_label.setText(f"Syncing Generation {gen}...")
+                
+                gen_success_count = 0
+                gen_error_count = 0
+                
+                for pokedex_num in range(start_id, end_id + 1):
+                    try:
+                        cards = self.tcg_client.search_cards_by_pokedex_number(pokedex_num)
+                        if cards:
+                            gen_success_count += len(cards)
+                            total_cards_synced += len(cards)
+                            if len(cards) > 0:  # Only log if cards found
+                                self.log_output.append(f"✓ Gen {gen} #{pokedex_num}: {len(cards)} cards")
+                        
+                        self.progress_bar.setValue(pokedex_num - start_id + 1)
+                        QApplication.processEvents()
+                        
+                        # Small delay to prevent overwhelming the API/database
+                        import time
+                        time.sleep(0.1)
+                        
+                    except Exception as e:
+                        gen_error_count += 1
+                        self.log_output.append(f"❌ Gen {gen} #{pokedex_num}: {str(e)}")
+                        
+                        # Pause if too many errors
+                        if gen_error_count > 10:
+                            self.log_output.append("⏸️ Too many errors, pausing for 3 seconds...")
+                            import time
+                            time.sleep(3)
+                            gen_error_count = 0
+                
+                self.log_output.append(f"✅ Generation {gen} complete: {gen_success_count} cards synced")
+                
+                # Brief pause between generations
+                import time
+                time.sleep(0.5)
+            
+            self.progress_label.setText(f"All generations sync complete! {total_cards_synced} total cards synced")
+            self.log_output.append(f"🎉 FULL SYNC COMPLETE: {total_cards_synced} cards from all generations")
+            
+        except Exception as e:
+            self.log_output.append(f"❌ Full generation sync failed: {str(e)}")
+            self.progress_label.setText("Full sync failed")
+        
+        self.enable_buttons()
     
     def sync_all_sets(self):
         """Sync all available TCG sets"""
