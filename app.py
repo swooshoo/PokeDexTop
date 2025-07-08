@@ -980,25 +980,18 @@ class DatabaseManager:
 # =============================================================================
 
 class ImageLoader(QObject):
-    """Centralized image loading utility for the application"""
+    """Image loader with game sprite support"""
     
     imageLoaded = pyqtSignal(QPixmap)
     
     def __init__(self):
         super().__init__()
         self._network_manager = QNetworkAccessManager()
-        self._loading_images = {}  # Track ongoing requests
-        self._image_cache = {}  # Simple in-memory cache
+        self._loading_images = {}
+        self._image_cache = {}
     
     def load_image(self, url, label, size=None):
-        """
-        Load an image from URL and set it on a QLabel
-        
-        Args:
-            url: Image URL
-            label: QLabel to set the image on
-            size: Optional tuple (width, height) to scale the image
-        """
+        """Load image with sprite-aware styling"""
         if not url:
             label.setText("No Image")
             return
@@ -1006,11 +999,8 @@ class ImageLoader(QObject):
         # Check cache first
         if url in self._image_cache:
             self._set_image_on_label(label, self._image_cache[url], size)
+            self._apply_post_load_styling(label, url)
             return
-        
-        # Show loading state
-        label.setText("Loading...")
-        label.setStyleSheet("color: #7f8c8d; background-color: #2c3e50; border-radius: 4px;")
         
         # Create request
         request = QNetworkRequest(QUrl(url))
@@ -1027,7 +1017,7 @@ class ImageLoader(QObject):
         reply.errorOccurred.connect(lambda: self._on_image_error(reply))
     
     def _on_image_loaded(self, reply):
-        """Handle image loading completion"""
+        """Handle successful image loading"""
         if reply not in self._loading_images:
             reply.deleteLater()
             return
@@ -1040,12 +1030,9 @@ class ImageLoader(QObject):
                 reply.deleteLater()
                 return
         except:
-            # If sip is not available or check fails, try to access the label
             try:
-                # Try to access a property to see if it's still valid
                 _ = label.objectName()
             except RuntimeError:
-                # Label has been deleted
                 reply.deleteLater()
                 return
         
@@ -1056,18 +1043,16 @@ class ImageLoader(QObject):
             if pixmap.loadFromData(data):
                 # Cache the pixmap
                 self._image_cache[url] = pixmap
-                # Set on label - wrapped in try/except for safety
+                
                 try:
                     self._set_image_on_label(label, pixmap, size)
+                    self._apply_post_load_styling(label, url)
                 except RuntimeError:
-                    # Label was deleted between check and use
                     pass
             else:
                 try:
-                    label.setText("Invalid\nImage")
-                    label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+                    self._show_sprite_error(label)
                 except RuntimeError:
-                    # Label was deleted
                     pass
         else:
             self._on_image_error(reply)
@@ -1077,32 +1062,61 @@ class ImageLoader(QObject):
     def _on_image_error(self, reply):
         """Handle image loading errors"""
         if reply in self._loading_images:
-            label, _, _ = self._loading_images.pop(reply)
+            label, _, url = self._loading_images.pop(reply)
             
-            # Check if label still exists before using it
             try:
                 if not sip.isdeleted(label):
-                    label.setText("Failed to\nLoad Image")
-                    label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+                    self._show_sprite_error(label)
             except:
-                # If sip check fails, try direct access
                 try:
-                    label.setText("Failed to\nLoad Image")
-                    label.setStyleSheet("color: #e74c3c; background-color: #2c3e50; border-radius: 4px;")
+                    self._show_sprite_error(label)
                 except RuntimeError:
-                    # Label was deleted
                     pass
                     
         reply.deleteLater()
     
+    def _apply_post_load_styling(self, label, url):
+        """Apply appropriate styling after image loads"""
+        try:
+            if "pokemon/" in url and "official-artwork" not in url:
+                # Game sprite styling
+                label.setStyleSheet("""
+                    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #f0f8ff, stop: 1 #e6f3ff);
+                    border-radius: 6px; 
+                    border: 2px solid #4a90e2;
+                    padding: 8px;
+                """)
+            else:
+                # TCG card - keep clean dark styling, no changes
+                label.setStyleSheet("""
+                    background-color: #2c3e50; 
+                    border-radius: 6px;
+                """)
+        except RuntimeError:
+            pass
+    
+    def _show_sprite_error(self, label):
+        """Show error state for failed sprite loading"""
+        try:
+            label.setText("No Sprite\nAvailable")
+            label.setStyleSheet("""
+                background-color: #f8f9fa; 
+                border-radius: 6px; 
+                color: #6c757d;
+                font-size: 10px;
+                border: 2px dashed #dee2e6;
+                padding: 15px;
+            """)
+        except RuntimeError:
+            pass
+    
     def _set_image_on_label(self, label, pixmap, size):
         """Set pixmap on label with optional scaling"""
         try:
-            # Check if label is still valid
             if sip.isdeleted(label):
                 return
         except:
-            # If sip check is not available, continue and rely on exception handling
             pass
             
         try:
@@ -1112,16 +1126,12 @@ class ImageLoader(QObject):
                                              Qt.TransformationMode.SmoothTransformation)
                 label.setPixmap(scaled_pixmap)
             else:
-                # Scale to label size
                 label_size = label.size()
                 scaled_pixmap = pixmap.scaled(label_size, 
                                              Qt.AspectRatioMode.KeepAspectRatio, 
                                              Qt.TransformationMode.SmoothTransformation)
                 label.setPixmap(scaled_pixmap)
-            
-            label.setStyleSheet("")  # Clear loading styles
         except RuntimeError:
-            # Label was deleted - silently ignore
             pass
     
     def cancel_all_requests(self):
@@ -2385,46 +2395,54 @@ class PokemonCard(QFrame):
             self.setCursor(Qt.CursorShape.ArrowCursor)
     
     def refresh_card_display(self):
-        """Refresh the card display based on current collection state - Enhanced with larger images"""
-        pokemon_id = str(self.pokemon_data['id'])
-        user_card = self.user_collection.get(pokemon_id)
+        """Refresh the card display with proper TCG vs sprite loading"""
+        pokemon_id = self.pokemon_data['id']
+        pokemon_name = self.pokemon_data['name']
+        user_card = self.user_collection.get(str(pokemon_id))
         
         if user_card and user_card.get('image_url'):
-            # Load TCG card image with larger size
-            self.image_loader.load_image(user_card['image_url'], self.image_label, (260, 360))  # Increased from (240, 335)
-            
-            # Enhanced tooltip with more card info
-            tooltip_text = f"🃏 TCG Card: {user_card['card_name']}"
-            if user_card.get('set_name'):
-                tooltip_text += f"\n📦 Set: {user_card['set_name']}"
-            tooltip_text += f"\n\n💾 Imported for #{self.pokemon_data['id']} {self.pokemon_data['name']}"
-            tooltip_text += f"\n🔄 Click to change card"
-            
-            self.image_label.setToolTip(tooltip_text)
-            
-            # Clean styling for imported cards (no border)
+            # TCG card loading - keep it clean, no loading text
+            self.image_label.setText("")  # Clear any text
             self.image_label.setStyleSheet("""
                 background-color: #2c3e50; 
                 border-radius: 6px;
             """)
-        else:
-            # No cards exist - show Pokémon placeholder
-            pokemon_id = self.pokemon_data['id']
-            pokemon_name = self.pokemon_data['name']
             
-            self.image_label.setText(f"#{pokemon_id}\n\n{pokemon_name}\n\n📭\nNo TCG Cards")
+            # Load TCG card image directly without loading state text
+            self.image_loader.load_image(user_card['image_url'], self.image_label, (260, 360))
+            
+            tooltip_text = f"🃏 TCG Card: {user_card['card_name']}"
+            if user_card.get('set_name'):
+                tooltip_text += f"\n📦 Set: {user_card['set_name']}"
+            tooltip_text += f"\n\n💾 Imported for #{pokemon_id} {pokemon_name}"
+            tooltip_text += f"\n🔄 Click to change card"
+            
+            self.image_label.setToolTip(tooltip_text)
+            
+        else:
+            # No TCG cards - load Pokémon game sprite with loading state
+            sprite_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemon_id}.png"
+            
+            # Set initial loading state ONLY for sprites
+            self.image_label.setText(f"Loading\n#{pokemon_id}")
             self.image_label.setStyleSheet("""
-                background-color: #2c3e50; 
+                background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                        stop: 0 #f0f8ff, stop: 1 #e6f3ff);
                 border-radius: 6px; 
-                color: #5d6d7e;
-                font-size: 12px;
-                border: 1px solid #34495e;
-                padding: 20px;
+                color: #4a90e2;
+                font-size: 10px;
+                border: 2px dashed #87ceeb;
+                padding: 15px;
             """)
             
-            tooltip_text = f"#{pokemon_id} {pokemon_name}\n"
-            tooltip_text += f"📭 No TCG cards exist for this Pokémon\n"
-            tooltip_text += f"🔄 Use 'Sync Data' to check for new cards"
+            # Load game sprite
+            self.image_loader.load_image(sprite_url, self.image_label, (120, 120))
+            
+            # Set tooltip for sprite
+            tooltip_text = f"🎮 #{pokemon_id} {pokemon_name}\n"
+            tooltip_text += f"👾 Game Sprite\n"
+            tooltip_text += f"📭 No TCG cards available\n"
+            tooltip_text += f"🔄 Use 'Sync Data' to search for cards"
             self.image_label.setToolTip(tooltip_text)
     
     def show_card_selection(self, event):
