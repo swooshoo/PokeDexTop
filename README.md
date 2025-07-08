@@ -95,13 +95,6 @@ Completely revamping the desktop app by rebuilding the data infrastructure to ha
 - **Migration Challenges**: Moving users from local data to cloud-based system
 - **Backup Strategies**: Ensuring business continuity and disaster recovery
 
-### **User Transition Considerations**
-
-- **Feature Parity**: Ensuring redesigned system matches all current desktop functionality
-- **Migration Tool**: Helping existing users transfer their collections and preferences
-- **Backwards Compatibility**: Supporting users who prefer the standalone desktop version
-- **Change Management**: Communicating benefits and providing user support during transition
-
 ## Long-Term Strategic Benefits
 
 ### **Portfolio & Career Development**
@@ -117,24 +110,4 @@ Completely revamping the desktop app by rebuilding the data infrastructure to ha
 - **Mobile Application**: Native iOS/Android apps sharing the same backend infrastructure
 - **Marketplace Features**: Trading platform, auction integration, and collection valuation tools
 - **Community Platform**: User profiles, collection sharing, and social features
-
-
-## Pokémon TCG Sets
-
-| Scarlet & Violet Era | Sword & Shield Era (Incomplete) | 
-|----------------------|--------------------------------|
-| Journey Together | Astral Radiance Trainer Gallery |
-| Prismatic Evolutions | Brilliant Stars Trainer Gallery |
-| Surging Sparks | Lost Origin Trainer Gallery |
-| Stellar Crown | Silver Tempest Trainer Gallery |
-| Shrouded Fable | Crown Zenith Galarian Gallery |
-| Twilight Masquerade | Sword and Shield Black Star Promos |
-| Temporal Forces | Astral Radiance |
-| Paldean Fates | Brilliant Stars |
-| Paradox Rift | Lost Origin |
-| 151 | Silver Tempest |
-| Obsidian Flames | |
-| Paldea Evolved | |
-| Scarlet & Violet | |
-| Scarlet & Violet Black Star Promos | |
 

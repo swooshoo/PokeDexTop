@@ -131,45 +131,15 @@
 - **`migrate_data.py`**: Database migration management
 - **`backup_database.py`**: Automated backup procedures
 
-## 🚀 **Getting Started Commands**
-
-```bash
-# 1. Initial project setup
-mkdir pokedextop && cd pokedextop
-git init
-
-# 2. Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Initialize database
-python scripts/setup_database.py
-
-# 5. Run application
-python app/main.py
-
-# 6. Run tests
-pytest tests/
-
-# 7. Build for distribution
-python setup.py build
-```
-
 ## 📝 **Essential Configuration Files**
 
 ### **`requirements.txt`**
 ```
-PyQt5==5.15.9
+PyQt6==6.6.0
 pokemontcgsdk==3.4.0
 requests==2.31.0
-sqlite3
-boto3==1.34.0
-pydantic==2.5.0
-pytest==7.4.0
 python-dotenv==1.0.0
+pytest==7.4.0
 ```
 
 ### **`.env.example`**
