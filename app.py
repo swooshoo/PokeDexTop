@@ -3,10 +3,11 @@ import os
 import json
 import sqlite3
 import hashlib
-from PyQt6 import sip
-import requests
 import time
+from PyQt6 import sip
 from datetime import datetime
+from difflib import SequenceMatcher
+
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QHBoxLayout, QLabel, QPushButton, QScrollArea,
                             QGridLayout, QTabWidget, QSizePolicy, QFrame,
@@ -15,18 +16,858 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QCheckBox, QButtonGroup, QDialogButtonBox, QFileDialog,
                             QProgressBar, QTextEdit, QSpinBox, QListWidget, QListWidgetItem,
                             QAbstractItemView, QTableWidget, QTableWidgetItem, QHeaderView)
-from PyQt6.QtGui import QPixmap, QFont, QIcon, QPainter, QPen, QColor
-from PyQt6.QtCore import Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, QThread, QTimer, QUrl
+
+from PyQt6.QtGui import (QPixmap, QFont, QIcon, QPainter, QPen, QColor, QDrag)
+
+from PyQt6.QtCore import (Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, 
+                         QThread, QTimer, QUrl, QMimeData, QPoint)
+
 from PyQt6.QtPrintSupport import QPrinter 
 from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+
 #from utils import ImageLoader removed for now
 
 # Pokemon TCG SDK imports
 from pokemontcgsdk import Card, Set
 from pokemontcgsdk.restclient import RestClient, PokemonTcgException
 
-from difflib import SequenceMatcher
 
+# =============================================================================
+# BROWSE TAB ARCHITECTURE 
+# =============================================================================
+
+class SessionCartManager:
+    """Manages the import cart during the current session"""
+    
+    def __init__(self):
+        self.cart_items = {}  # card_id -> card_data
+        self.item_added_callback = None
+        self.item_removed_callback = None
+    
+    def add_card(self, card_id, card_data):
+        """Add a card to the cart"""
+        if card_id not in self.cart_items:
+            self.cart_items[card_id] = card_data
+            if self.item_added_callback:
+                self.item_added_callback(card_id, card_data)
+            return True
+        return False  # Already in cart
+    
+    def remove_card(self, card_id):
+        """Remove a card from the cart"""
+        if card_id in self.cart_items:
+            card_data = self.cart_items.pop(card_id)
+            if self.item_removed_callback:
+                self.item_removed_callback(card_id, card_data)
+            return True
+        return False
+    
+    def get_cart_items(self):
+        """Get all items in cart"""
+        return self.cart_items.copy()
+    
+    def get_cart_count(self):
+        """Get number of items in cart"""
+        return len(self.cart_items)
+    
+    def clear_cart(self):
+        """Clear all items from cart"""
+        self.cart_items.clear()
+        if self.item_removed_callback:
+            self.item_removed_callback(None, None)  # Signal that cart was cleared
+    
+    def is_in_cart(self, card_id):
+        """Check if card is in cart"""
+        return card_id in self.cart_items
+
+class ClickableTCGCard(QFrame):
+    """Enhanced TCG card widget with double-click functionality"""
+    
+    cardSelected = pyqtSignal(str, dict)  # card_id, card_data
+    
+    def __init__(self, card_data, image_loader=None, cart_manager=None):
+        super().__init__()
+        self.card_data = card_data
+        self.image_loader = image_loader
+        self.cart_manager = cart_manager
+        self.is_selected = False
+        self.initUI()
+    
+    def initUI(self):
+        self.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
+        self.setFixedSize(280, 420)
+        self.setStyleSheet("""
+            QFrame {
+                background-color: #34495e;
+                border: 2px solid #2c3e50;
+                border-radius: 6px;
+            }
+            QFrame:hover {
+                border: 2px solid #3498db;
+                background-color: #3d5a75;
+            }
+        """)
+        
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(12, 12, 12, 12)
+        layout.setSpacing(8)
+        
+        # Card image
+        self.image_label = QLabel()
+        self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.image_label.setFixedHeight(320)
+        self.image_label.setScaledContents(False)
+        self.image_label.setStyleSheet("""
+            QLabel {
+                background-color: #2c3e50;
+                border-radius: 6px;
+                border: 1px solid #34495e;
+            }
+        """)
+        layout.addWidget(self.image_label)
+        
+        # Load image
+        if self.card_data.get('image_url_large'):
+            self.image_loader.load_image(
+                self.card_data['image_url_large'], 
+                self.image_label, 
+                (260, 320)
+            )
+        elif self.card_data.get('image_url_small'):
+            self.image_loader.load_image(
+                self.card_data['image_url_small'], 
+                self.image_label, 
+                (260, 320)
+            )
+        else:
+            self.image_label.setText("No Image")
+        
+        # Card info
+        info_container = QWidget()
+        info_layout = QVBoxLayout(info_container)
+        info_layout.setContentsMargins(0, 0, 0, 0)
+        info_layout.setSpacing(2)
+        
+        # Card name
+        name_label = QLabel(self.card_data.get('name', 'Unknown'))
+        name_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        name_label.setFont(QFont('Arial', 11, QFont.Weight.Bold))
+        name_label.setStyleSheet("color: white; background: transparent;")
+        name_label.setWordWrap(True)
+        name_label.setMaximumHeight(45)
+        info_layout.addWidget(name_label)
+        
+        # Set info
+        set_label = QLabel(f"📦 {self.card_data.get('set_name', 'Unknown Set')}")
+        set_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        set_label.setStyleSheet("color: #3498db; font-size: 10px; font-weight: bold;")
+        set_label.setWordWrap(True)
+        info_layout.addWidget(set_label)
+        
+        layout.addWidget(info_container)
+        
+        # Add to cart indicator
+        self.cart_indicator = QLabel("Double-click to add to cart")
+        self.cart_indicator.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.cart_indicator.setStyleSheet("""
+            color: #7f8c8d; 
+            font-size: 10px; 
+            background-color: #2c3e50;
+            padding: 2px;
+            border-radius: 2px;
+        """)
+        layout.addWidget(self.cart_indicator)
+        
+        # Update cart indicator if already in cart
+        if self.cart_manager and self.cart_manager.is_in_cart(self.card_data['card_id']):
+            self.update_cart_indicator(True)
+    
+    def update_cart_indicator(self, in_cart):
+        """Update the cart indicator"""
+        if in_cart:
+            self.cart_indicator.setText("✓ In Cart")
+            self.cart_indicator.setStyleSheet("""
+                color: #27ae60; 
+                font-size: 10px; 
+                background-color: #2c3e50;
+                padding: 2px;
+                border-radius: 2px;
+                font-weight: bold;
+            """)
+        else:
+            self.cart_indicator.setText("Double-click to add to cart")
+            self.cart_indicator.setStyleSheet("""
+                color: #7f8c8d; 
+                font-size: 10px; 
+                background-color: #2c3e50;
+                padding: 2px;
+                border-radius: 2px;
+            """)
+    
+    def mouseDoubleClickEvent(self, event):
+        """Handle double-click to add to cart"""
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.add_to_cart()
+    
+    def add_to_cart(self):
+        """Add this card to the cart"""
+        if self.cart_manager:
+            success = self.cart_manager.add_card(self.card_data['card_id'], self.card_data)
+            if success:
+                self.update_cart_indicator(True)
+                self.cardSelected.emit(self.card_data['card_id'], self.card_data)
+            else:
+                # Card already in cart - maybe show a brief message
+                self.cart_indicator.setText("Already in cart!")
+                QTimer.singleShot(1500, lambda: self.update_cart_indicator(True))
+
+class CartItemWidget(QFrame):
+    """Widget for individual items in the cart"""
+    
+    removeRequested = pyqtSignal(str)  # card_id
+    
+    def __init__(self, card_data, image_loader):
+        super().__init__()
+        self.card_data = card_data
+        self.image_loader = image_loader
+        self.initUI()
+    
+    def initUI(self):
+        self.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
+        self.setFixedHeight(120)
+        self.setStyleSheet("""
+            QFrame {
+                background-color: #34495e;
+                border: 1px solid #2c3e50;
+                border-radius: 4px;
+                margin: 2px;
+            }
+        """)
+        
+        layout = QHBoxLayout(self)
+        layout.setContentsMargins(8, 8, 8, 8)
+        layout.setSpacing(8)
+        
+        # Card image (smaller)
+        self.image_label = QLabel()
+        self.image_label.setFixedSize(80, 100)
+        self.image_label.setScaledContents(False)
+        self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.image_label.setStyleSheet("""
+            QLabel {
+                background-color: #2c3e50;
+                border-radius: 4px;
+                border: 1px solid #34495e;
+            }
+        """)
+        layout.addWidget(self.image_label)
+        
+        # Load image
+        if self.card_data.get('image_url_large'):
+            self.image_loader.load_image(
+                self.card_data['image_url_large'], 
+                self.image_label, 
+                (80, 100)
+            )
+        elif self.card_data.get('image_url_small'):
+            self.image_loader.load_image(
+                self.card_data['image_url_small'], 
+                self.image_label, 
+                (80, 100)
+            )
+        else:
+            self.image_label.setText("No\nImage")
+            self.image_label.setStyleSheet("""
+                QLabel {
+                    background-color: #2c3e50;
+                    border-radius: 4px;
+                    color: #7f8c8d;
+                    font-size: 8px;
+                }
+            """)
+        
+        # Card info
+        info_layout = QVBoxLayout()
+        info_layout.setSpacing(2)
+        
+        # Card name
+        name_label = QLabel(self.card_data.get('name', 'Unknown'))
+        name_label.setFont(QFont('Arial', 10, QFont.Weight.Bold))
+        name_label.setStyleSheet("color: white;")
+        name_label.setWordWrap(True)
+        info_layout.addWidget(name_label)
+        
+        # Set name
+        set_label = QLabel(self.card_data.get('set_name', 'Unknown Set'))
+        set_label.setStyleSheet("color: #3498db; font-size: 9px;")
+        set_label.setWordWrap(True)
+        info_layout.addWidget(set_label)
+        
+        # Artist (if available)
+        if self.card_data.get('artist'):
+            artist_label = QLabel(f"Artist: {self.card_data['artist']}")
+            artist_label.setStyleSheet("color: #95a5a6; font-size: 8px;")
+            info_layout.addWidget(artist_label)
+        
+        info_layout.addStretch()
+        layout.addLayout(info_layout)
+        
+        # Remove button
+        remove_btn = QPushButton("✕")
+        remove_btn.setFixedSize(20, 20)
+        remove_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            QPushButton:hover {
+                background-color: #c0392b;
+            }
+        """)
+        remove_btn.clicked.connect(lambda: self.removeRequested.emit(self.card_data['card_id']))
+        layout.addWidget(remove_btn, alignment=Qt.AlignmentFlag.AlignTop)
+
+class PokemonNameCompleter(QCompleter):
+    """Custom completer for Pokemon names with fuzzy matching"""
+    
+    def __init__(self, db_manager, parent=None):
+        super().__init__(parent)
+        self.db_manager = db_manager
+        self.pokemon_names = self.load_pokemon_names()
+        self.setModel(QStringListModel(self.pokemon_names))
+        self.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
+        self.setFilterMode(Qt.MatchFlag.MatchContains)
+    
+    def load_pokemon_names(self):
+        """Load all unique Pokemon names from database"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT DISTINCT name FROM silver_pokemon_master 
+            ORDER BY name
+        """)
+        
+        names = [row[0] for row in cursor.fetchall()]
+        conn.close()
+        return names
+    
+    def find_best_match(self, input_text):
+        """Find the best fuzzy match for input text"""
+        if not input_text:
+            return None
+        
+        input_lower = input_text.lower()
+        best_match = None
+        best_ratio = 0
+        
+        for name in self.pokemon_names:
+            name_lower = name.lower()
+            
+            # Exact match gets priority
+            if input_lower == name_lower:
+                return name
+            
+            # Starts with gets high priority
+            if name_lower.startswith(input_lower):
+                ratio = 0.9 + (len(input_text) / len(name)) * 0.1
+            else:
+                # Use sequence matcher for fuzzy matching
+                ratio = SequenceMatcher(None, input_lower, name_lower).ratio()
+            
+            if ratio > best_ratio and ratio > 0.6:  # Minimum threshold
+                best_ratio = ratio
+                best_match = name
+        
+        return best_match
+
+class EnhancedBrowseTCGTab(QWidget):
+    """Enhanced Browse TCG Cards tab with cart functionality"""
+    
+    def __init__(self, db_manager, image_loader, cart_manager):
+        super().__init__()
+        self.db_manager = db_manager
+        self.image_loader = image_loader
+        self.cart_manager = cart_manager
+        self.current_cards = []
+        self.initUI()
+        
+        # Connect cart callbacks
+        self.cart_manager.item_added_callback = self.update_cart_display
+        self.cart_manager.item_removed_callback = self.update_cart_display
+    
+    def initUI(self):
+        main_layout = QHBoxLayout(self)
+        main_layout.setSpacing(15)
+        
+        # Left panel - Search and filters
+        left_panel = self.create_left_panel()
+        main_layout.addWidget(left_panel, 1)
+        
+        # Center panel - Card grid
+        center_panel = self.create_center_panel()
+        main_layout.addWidget(center_panel, 3)
+        
+        # Right panel - Cart and analytics
+        right_panel = self.create_right_panel()
+        main_layout.addWidget(right_panel, 1)
+        
+        # Load initial data
+        self.load_cards()
+    
+    def create_left_panel(self):
+        """Create the left search panel"""
+        panel = QFrame()
+        panel.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
+        panel.setFixedWidth(250)
+        panel.setStyleSheet("""
+            QFrame {
+                background-color: #34495e;
+                border-radius: 8px;
+                padding: 10px;
+            }
+        """)
+        
+        layout = QVBoxLayout(panel)
+        
+        # Search by name section
+        name_group = QGroupBox("Search By Name")
+        name_layout = QVBoxLayout(name_group)
+        
+        self.name_search_input = QLineEdit()
+        self.name_search_input.setPlaceholderText("Type Pokemon name...")
+        
+        # Set up completer
+        self.pokemon_completer = PokemonNameCompleter(self.db_manager)
+        self.name_search_input.setCompleter(self.pokemon_completer)
+        
+        self.name_search_input.textChanged.connect(self.on_search_changed)
+        name_layout.addWidget(self.name_search_input)
+        
+        layout.addWidget(name_group)
+        
+        # Search by set section
+        set_group = QGroupBox("Search By Set")
+        set_layout = QVBoxLayout(set_group)
+        
+        self.set_search_input = QLineEdit()
+        self.set_search_input.setPlaceholderText("Type or select set...")
+        
+        # Set up set completer
+        self.setup_set_completer()
+        self.set_search_input.textChanged.connect(self.on_search_changed)
+        
+        set_layout.addWidget(self.set_search_input)
+        layout.addWidget(set_group)
+        
+        # Search button
+        search_btn = QPushButton("🔍 Search")
+        search_btn.clicked.connect(self.perform_search)
+        layout.addWidget(search_btn)
+        
+        # Clear filters button
+        clear_btn = QPushButton("Clear Filters")
+        clear_btn.clicked.connect(self.clear_filters)
+        layout.addWidget(clear_btn)
+        
+        layout.addStretch()
+        
+        return panel
+    
+    def setup_set_completer(self):
+        """Setup autocompleter for sets"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT DISTINCT display_name, name FROM silver_tcg_sets 
+            ORDER BY display_name
+        """)
+        
+        set_names = []
+        for row in cursor.fetchall():
+            display_name, name = row
+            if display_name:
+                set_names.append(display_name)
+            else:
+                set_names.append(name)
+        
+        conn.close()
+        
+        set_completer = QCompleter(set_names)
+        set_completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
+        set_completer.setFilterMode(Qt.MatchFlag.MatchContains)
+        self.set_search_input.setCompleter(set_completer)
+    
+    def create_center_panel(self):
+        """Create the center card display panel"""
+        panel = QFrame()
+        panel.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
+        panel.setStyleSheet("""
+            QFrame {
+                background-color: #34495e;
+                border-radius: 8px;
+            }
+        """)
+        
+        layout = QVBoxLayout(panel)
+        
+        # Header with stats
+        header_layout = QHBoxLayout()
+        
+        self.results_label = QLabel("Browse TCG Cards")
+        self.results_label.setFont(QFont('Arial', 14, QFont.Weight.Bold))
+        self.results_label.setStyleSheet("color: white; padding: 10px;")
+        header_layout.addWidget(self.results_label)
+        
+        header_layout.addStretch()
+        
+        # Sort options
+        sort_label = QLabel("Sort by:")
+        sort_label.setStyleSheet("color: white;")
+        header_layout.addWidget(sort_label)
+        
+        self.sort_combo = QComboBox()
+        self.sort_combo.addItems([
+            "Name (A-Z)", "Name (Z-A)", 
+            "Set Name", "Newest First", "Oldest First"
+        ])
+        self.sort_combo.currentTextChanged.connect(self.apply_sort)
+        header_layout.addWidget(self.sort_combo)
+        
+        layout.addLayout(header_layout)
+        
+        # Card display area
+        self.card_scroll = QScrollArea()
+        self.card_scroll.setWidgetResizable(True)
+        self.card_scroll.setStyleSheet("background-color: #2c3e50; border: none;")
+        layout.addWidget(self.card_scroll)
+        
+        return panel
+    
+    def create_right_panel(self):
+        """Create the right panel with cart functionality"""
+        panel = QFrame()
+        panel.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
+        panel.setFixedWidth(300)
+        panel.setStyleSheet("""
+            QFrame {
+                background-color: #34495e;
+                border-radius: 8px;
+            }
+        """)
+        
+        layout = QVBoxLayout(panel)
+        
+        # Cart section
+        cart_group = QGroupBox("Import Cart")
+        cart_layout = QVBoxLayout(cart_group)
+        
+        # Cart counter
+        self.cart_counter_label = QLabel("0 cards in cart")
+        self.cart_counter_label.setStyleSheet("color: white; font-weight: bold;")
+        cart_layout.addWidget(self.cart_counter_label)
+        
+        # Import all button
+        self.import_all_btn = QPushButton("IMPORT ALL")
+        self.import_all_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #27ae60;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                padding: 10px;
+                border-radius: 6px;
+            }
+            QPushButton:hover {
+                background-color: #229954;
+            }
+            QPushButton:disabled {
+                background-color: #7f8c8d;
+            }
+        """)
+        self.import_all_btn.clicked.connect(self.import_all_cards)
+        self.import_all_btn.setEnabled(False)
+        cart_layout.addWidget(self.import_all_btn)
+        
+        # THIS IS THE MISSING PART - make sure you have this:
+        self.cart_status_label = QLabel("Double-click cards in the browse area to add them here")
+        self.cart_status_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.cart_status_label.setStyleSheet("""
+            color: #7f8c8d; 
+            font-size: 10px; 
+            padding: 5px;
+            background-color: #2c3e50;
+            border-radius: 4px;
+            margin: 5px 0px;
+        """)
+        self.cart_status_label.setWordWrap(True)
+        cart_layout.addWidget(self.cart_status_label)
+        
+        # Cart items scroll area
+        self.cart_scroll = QScrollArea()
+        self.cart_scroll.setWidgetResizable(True)
+        self.cart_scroll.setStyleSheet("background-color: #2c3e50; border: none;")
+        cart_layout.addWidget(self.cart_scroll)
+        
+        layout.addWidget(cart_group)
+        
+        # Initialize cart display - ONLY AFTER ALL WIDGETS ARE CREATED
+        self.update_cart_display()
+        
+        return panel
+    
+    def on_search_changed(self):
+        """Handle search input changes with debouncing"""
+        # Auto-search when user stops typing (could add QTimer for debouncing)
+        pass
+    
+    def perform_search(self):
+        """Perform the search based on current inputs"""
+        pokemon_name = self.name_search_input.text().strip()
+        set_name = self.set_search_input.text().strip()
+        
+        # Handle Pokemon name with fuzzy matching
+        if pokemon_name:
+            best_match = self.pokemon_completer.find_best_match(pokemon_name)
+            if best_match and best_match != pokemon_name:
+                # Auto-correct the input
+                self.name_search_input.setText(best_match)
+                pokemon_name = best_match
+        
+        self.load_cards(pokemon_name, set_name)
+    
+    def clear_filters(self):
+        """Clear all search filters"""
+        self.name_search_input.clear()
+        self.set_search_input.clear()
+        self.load_cards()
+    
+    def load_cards(self, pokemon_name=None, set_name=None):
+        """Load cards based on search criteria"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        # Build query
+        query = """
+            SELECT DISTINCT c.card_id, c.name, c.set_name, c.artist, c.rarity, 
+                   c.image_url_large, c.image_url_small, c.set_id
+            FROM silver_tcg_cards c
+            LEFT JOIN silver_team_up_cards t ON c.card_id = t.card_id
+            WHERE 1=1
+        """
+        params = []
+        
+        if pokemon_name:
+            query += " AND (c.pokemon_name = ? OR t.pokemon_name = ?)"
+            params.extend([pokemon_name, pokemon_name])
+        
+        if set_name:
+            query += " AND (c.set_name LIKE ? OR s.display_name LIKE ?)"
+            params.extend([f'%{set_name}%', f'%{set_name}%'])
+            query = query.replace("FROM silver_tcg_cards c", 
+                                "FROM silver_tcg_cards c LEFT JOIN silver_tcg_sets s ON c.set_id = s.set_id")
+        
+        query += " ORDER BY c.name LIMIT 100"
+        
+        cursor.execute(query, params)
+        results = cursor.fetchall()
+        conn.close()
+        
+        # Convert to card data format
+        self.current_cards = []
+        for row in results:
+            card_data = {
+                'card_id': row[0],
+                'name': row[1],
+                'set_name': row[2],
+                'artist': row[3],
+                'rarity': row[4],
+                'image_url_large': row[5],
+                'image_url_small': row[6],
+                'set_id': row[7]
+            }
+            self.current_cards.append(card_data)
+        
+        self.display_cards()
+        
+        # Update results label
+        result_text = f"Showing {len(self.current_cards)} cards"
+        if pokemon_name:
+            result_text += f" for {pokemon_name}"
+        if set_name:
+            result_text += f" from sets matching '{set_name}'"
+        self.results_label.setText(result_text)
+    
+    def apply_sort(self):
+        """Apply sorting to current cards"""
+        sort_option = self.sort_combo.currentText()
+        
+        if sort_option == "Name (A-Z)":
+            self.current_cards.sort(key=lambda x: x['name'])
+        elif sort_option == "Name (Z-A)":
+            self.current_cards.sort(key=lambda x: x['name'], reverse=True)
+        elif sort_option == "Set Name":
+            self.current_cards.sort(key=lambda x: x['set_name'])
+        # Add more sorting options as needed
+        
+        self.display_cards()
+    
+    def display_cards(self):
+        """Display the current cards in the grid"""
+        grid_widget = QWidget()
+        grid_widget.setStyleSheet("background-color: #2c3e50;")
+        grid_layout = QGridLayout(grid_widget)
+        grid_layout.setSpacing(15)
+        
+        columns = 3
+        row, col = 0, 0
+        
+        for card_data in self.current_cards:
+            card_widget = ClickableTCGCard(card_data, self.image_loader, self.cart_manager)
+            card_widget.cardSelected.connect(self.on_card_selected)
+            grid_layout.addWidget(card_widget, row, col, Qt.AlignmentFlag.AlignCenter)
+            
+            col += 1
+            if col >= columns:
+                col = 0
+                row += 1
+        
+        if not self.current_cards:
+            # Show empty state
+            empty_label = QLabel("No cards found.\nTry adjusting your search or sync more data.")
+            empty_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            empty_label.setStyleSheet("color: #7f8c8d; font-size: 16px; padding: 40px;")
+            grid_layout.addWidget(empty_label, 0, 0, 1, columns)
+        
+        self.card_scroll.setWidget(grid_widget)
+    
+    def on_card_selected(self, card_id, card_data):
+        """Handle card selection"""
+        self.update_cart_display()
+    
+    def update_cart_display(self, card_id=None, card_data=None):
+        """Update the cart display"""
+        cart_items = self.cart_manager.get_cart_items()
+        cart_count = len(cart_items)
+        
+        # Update counter
+        self.cart_counter_label.setText(f"{cart_count} cards in cart")
+        
+        # Update import button
+        self.import_all_btn.setEnabled(cart_count > 0)
+        
+        # Update cart status label
+        if cart_count > 0:
+            self.cart_status_label.setText(f"🛒 {cart_count} cards ready to import")
+            self.cart_status_label.setStyleSheet("""
+                color: #27ae60; 
+                font-size: 10px; 
+                padding: 5px;
+                background-color: #2c3e50;
+                border-radius: 4px;
+                margin: 5px 0px;
+                font-weight: bold;
+            """)
+        else:
+            self.cart_status_label.setText("Double-click cards in the browse area to add them here")
+            self.cart_status_label.setStyleSheet("""
+                color: #7f8c8d; 
+                font-size: 10px; 
+                padding: 5px;
+                background-color: #2c3e50;
+                border-radius: 4px;
+                margin: 5px 0px;
+            """)
+        
+        # Create cart items widget
+        cart_widget = QWidget()
+        cart_layout = QVBoxLayout(cart_widget)
+        cart_layout.setContentsMargins(5, 5, 5, 5)
+        cart_layout.setSpacing(5)
+        
+        for cart_card_id, cart_card_data in cart_items.items():
+            cart_item = CartItemWidget(cart_card_data, self.image_loader)
+            cart_item.removeRequested.connect(self.remove_from_cart)
+            cart_layout.addWidget(cart_item)
+        
+        cart_layout.addStretch()
+        self.cart_scroll.setWidget(cart_widget)
+    
+    def remove_from_cart(self, card_id):
+        """Remove a card from the cart"""
+        self.cart_manager.remove_card(card_id)
+        
+        # Update any card widgets to show they're no longer in cart
+        # This would require keeping track of card widgets, or refreshing the display
+        self.display_cards()  # Refresh to update cart indicators
+    
+    def import_all_cards(self):
+        """Import all cards in the cart"""
+        cart_items = self.cart_manager.get_cart_items()
+        
+        if not cart_items:
+            return
+        
+        success_count = 0
+        error_count = 0
+        
+        for card_id, card_data in cart_items.items():
+            try:
+                # Extract Pokemon name and find Pokemon ID
+                pokemon_name = self.extract_pokemon_name(card_data['name'])
+                if pokemon_name:
+                    pokemon_id = self.find_pokemon_id_by_name(pokemon_name)
+                    if pokemon_id:
+                        self.db_manager.add_to_user_collection('default', pokemon_id, card_id)
+                        success_count += 1
+                    else:
+                        error_count += 1
+                else:
+                    error_count += 1
+            except Exception as e:
+                print(f"Error importing {card_id}: {e}")
+                error_count += 1
+        
+        # Show results
+        if success_count > 0:
+            QMessageBox.information(self, "Import Complete", 
+                f"Successfully imported {success_count} cards!\n"
+                f"Errors: {error_count}")
+            
+            # Clear the cart
+            self.cart_manager.clear_cart()
+            
+            # Refresh card display to update indicators
+            self.display_cards()
+        else:
+            QMessageBox.warning(self, "Import Failed", 
+                "No cards were imported. Check that Pokemon names can be recognized.")
+    
+    def extract_pokemon_name(self, card_name):
+        """Extract Pokemon name from card name"""
+        # Use the same logic from your existing implementation
+        return self.db_manager.extract_pokemon_name_from_card(card_name)
+    
+    def find_pokemon_id_by_name(self, pokemon_name):
+        """Find Pokemon ID by name"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT pokemon_id FROM silver_pokemon_master 
+            WHERE LOWER(name) = LOWER(?)
+        """, (pokemon_name,))
+        
+        result = cursor.fetchone()
+        conn.close()
+        
+        return result[0] if result else None
+    
 # =============================================================================
 # BRONZE-SILVER-GOLD DATA ARCHITECTURE
 # =============================================================================
@@ -2983,6 +3824,9 @@ class PokemonDashboard(QMainWindow):
         # Initialize shared image loader
         self.image_loader = ImageLoader()
         
+        #Initialize session cart manager
+        self.session_cart = SessionCartManager()
+        
         # Set up generations (from database)
         self.load_generations()
         
@@ -3000,6 +3844,7 @@ class PokemonDashboard(QMainWindow):
         
         self.generations = cursor.fetchall()
         conn.close()
+    
     
     def initUI(self):
         self.setWindowTitle('PokéDextop - TCG Cloud Edition')
@@ -3105,6 +3950,10 @@ class PokemonDashboard(QMainWindow):
         # Create Analytics tab
         self.create_analytics_tab()
         
+        self.main_tabs.currentChanged.connect(self.on_main_tab_changed)
+    
+        main_layout.addWidget(self.main_tabs)
+    
         main_layout.addWidget(self.main_tabs)
         
         # Status bar
@@ -3124,26 +3973,6 @@ class PokemonDashboard(QMainWindow):
         sync_button.setToolTip("Sync Pokemon TCG data from API")
         sync_button.clicked.connect(self.open_sync_dialog)
         toolbar_layout.addWidget(sync_button)
-        
-        toolbar_layout.addSpacing(20)
-        
-        # Search box
-        search_label = QLabel("Search:")
-        search_label.setStyleSheet("color: white;")
-        toolbar_layout.addWidget(search_label)
-        
-        self.search_input = QLineEdit()
-        self.search_input.setPlaceholderText("Search Pokemon or cards...")
-        self.search_input.setMaximumWidth(200)
-        self.search_input.returnPressed.connect(self.perform_search)
-        toolbar_layout.addWidget(self.search_input)
-        
-        search_btn = QPushButton("🔍")
-        search_btn.setMaximumWidth(40)
-        search_btn.clicked.connect(self.perform_search)
-        toolbar_layout.addWidget(search_btn)
-        
-        toolbar_layout.addStretch()
         
         # Database stats
         self.stats_label = QLabel()
@@ -3168,67 +3997,21 @@ class PokemonDashboard(QMainWindow):
         self.main_tabs.addTab(pokedex_tab, "📚 My Pokédex")
     
     def create_tcg_browse_tab(self):
-        """Create TCG browsing tab"""
-        tcg_tab = QWidget()
-        tcg_layout = QVBoxLayout(tcg_tab)
+        """Replace the existing create_tcg_browse_tab method in PokemonDashboard"""
         
-        # Browse options
-        browse_layout = QHBoxLayout()
+        # Add session cart manager as an instance variable
+        if not hasattr(self, 'session_cart'):
+            self.session_cart = SessionCartManager()
         
-        # Set filter - now shows SYNCED sets only
-        browse_layout.addWidget(QLabel("Synced Set:"))
-        self.set_combo = QComboBox()
-        self.set_combo.addItem("All Sets", "all")
+        # Create enhanced browse tab
+        enhanced_browse_tab = EnhancedBrowseTCGTab(
+            self.db_manager, 
+            self.image_loader, 
+            self.session_cart
+        )
         
-        # Load synced sets from database
-        try:
-            self.load_sets_combo()
-        except Exception as e:
-            print(f"Warning: Could not load sets - {e}")
-            self.set_combo.addItem("No sets synced yet", "none")
-        
-        browse_layout.addWidget(self.set_combo)
-        
-        # Rarity filter
-        browse_layout.addWidget(QLabel("Rarity:"))
-        self.rarity_combo = QComboBox()
-        self.rarity_combo.addItem("All Rarities", "all")
-        
-        try:
-            self.load_rarities_combo()
-        except Exception as e:
-            print(f"Warning: Could not load rarities - {e}")
-        
-        browse_layout.addWidget(self.rarity_combo)
-        
-        # Apply filters button
-        filter_btn = QPushButton("Apply Filters")
-        filter_btn.clicked.connect(self.apply_tcg_filters)
-        browse_layout.addWidget(filter_btn)
-        
-        browse_layout.addStretch()
-        
-        tcg_layout.addLayout(browse_layout)
-        
-        # Add info label
-        info_label = QLabel("This shows cards from sets you've synced. Use 'Sync Data' to add more sets.")
-        info_label.setStyleSheet("color: #95a5a6; font-size: 11px; padding: 5px;")
-        tcg_layout.addWidget(info_label)
-        
-        # TCG cards display area
-        self.tcg_scroll = QScrollArea()
-        self.tcg_scroll.setWidgetResizable(True)
-        self.tcg_scroll.setStyleSheet("background-color: #2c3e50;")
-        tcg_layout.addWidget(self.tcg_scroll)
-        
-        # Load initial TCG data
-        try:
-            self.apply_tcg_filters()
-        except Exception as e:
-            print(f"Warning: Could not apply initial filters - {e}")
-            self.show_empty_tcg_state()
-        
-        self.main_tabs.addTab(tcg_tab, "🃏 Browse TCG Cards")
+        # Replace the existing tab or add as new tab
+        self.main_tabs.addTab(enhanced_browse_tab, "🃏 Browse TCG Cards")
 
     def show_empty_tcg_state(self):
         """Show empty state when no TCG data is available"""
@@ -3813,6 +4596,14 @@ class PokemonDashboard(QMainWindow):
                     f"Database backed up to {file_path}")
             except Exception as e:
                 QMessageBox.critical(self, "Backup Failed", f"Error: {str(e)}")
+                
+    def on_main_tab_changed(self, index):
+        """Handle main tab changes - auto-refresh Pokedex when switching back to it"""
+        # Index 0 is the "My Pokédex" tab
+        if index == 0:
+            # Refresh all generation tabs
+            self.refresh_all_tabs()
+            print("📚 Auto-refreshed Pokédex after tab switch")
 
 def center_window(window):
     """Center the window on the screen"""
