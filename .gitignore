@@ -45,3 +45,5 @@ data/cache/*
 # Backups
 data/backups/*
 !data/backups/.gitkeep
+
+migration_script.py
