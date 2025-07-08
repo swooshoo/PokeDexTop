@@ -94,7 +94,6 @@ Completely revamping the desktop app by rebuilding the data infrastructure to ha
 - **Data Retention Policies**: Managing storage costs while maintaining historical data
 - **Migration Challenges**: Moving users from local data to cloud-based system
 - **Backup Strategies**: Ensuring business continuity and disaster recovery
-
 ## Long-Term Strategic Benefits
 
 ### **Portfolio & Career Development**
