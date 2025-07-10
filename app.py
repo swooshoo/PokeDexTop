@@ -3889,9 +3889,23 @@ class PokemonDashboard(QMainWindow):
         conn.close()
     
     
-    def initUI(self):
-        self.setWindowTitle('PokéDextop - TCG Cloud Edition')
-        self.setGeometry(100, 100, 1400, 900)
+    def initUI(self):        
+        self.setWindowTitle('PokéDextop 1.0')
+    
+        # Get available screen area (excludes taskbar, dock, etc.)
+        screen = QApplication.primaryScreen()
+        available_geometry = screen.availableGeometry()
+        available_width = available_geometry.width()
+        available_height = available_geometry.height()
+        
+        print(f"Available screen area: {available_width}x{available_height}")
+        print(f"Position: x={available_geometry.x()}, y={available_geometry.y()}")
+        
+        # Lock to available screen dimensions
+        self.setFixedSize(available_width, available_height)
+        
+        # Position at available area start
+        self.move(available_geometry.x(), available_geometry.y())
         
         # Dark theme
         self.setStyleSheet("""
@@ -4660,21 +4674,16 @@ def main():
         print("==== STARTING POKEDEXTOP TCG CLOUD EDITION ====")
         print("Bronze-Silver-Gold Data Architecture Initialized")
         
-        # Create the application
         app = QApplication(sys.argv)
         app.setStyle('Fusion')
         
-        # Create the main window
         main_window = PokemonDashboard()
         
-        # Center and show window
-        main_window.resize(1400, 900)
+        # Center the fixed-size window
         center_window(main_window)
         main_window.show()
         
-        print("Application ready! Use 'Sync Data' to fetch Pokemon TCG cards.")
-        
-        # Enter main loop
+        print("Application ready! Window dimensions locked.")
         sys.exit(app.exec())
         
     except Exception as e:
