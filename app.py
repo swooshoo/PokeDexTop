@@ -2634,36 +2634,9 @@ class DataSyncDialog(QDialog):
     def initUI(self):
         layout = QVBoxLayout(self)
         
-        # API Key section
-        api_section = QGroupBox("API Configuration")
-        api_layout = QVBoxLayout()
-        
-        api_info = QLabel("Enter your Pokemon TCG API key for higher rate limits (optional):")
-        api_layout.addWidget(api_info)
-        
-        self.api_key_input = QLineEdit()
-        self.api_key_input.setPlaceholderText("API Key (optional)")
-        api_layout.addWidget(self.api_key_input)
-        
-        api_section.setLayout(api_layout)
-        layout.addWidget(api_section)
-        
         # Sync options
         sync_section = QGroupBox("Sync Options")
         sync_layout = QVBoxLayout()
-        
-        # Pokemon search
-        pokemon_layout = QHBoxLayout()
-        pokemon_layout.addWidget(QLabel("Pokemon Name:"))
-        self.pokemon_input = QLineEdit()
-        self.pokemon_input.setPlaceholderText("e.g., Pikachu, Charizard")
-        pokemon_layout.addWidget(self.pokemon_input)
-        
-        self.pokemon_search_btn = QPushButton("Search Cards")
-        self.pokemon_search_btn.clicked.connect(self.search_pokemon_cards)
-        pokemon_layout.addWidget(self.pokemon_search_btn)
-        
-        sync_layout.addLayout(pokemon_layout)
         
         # Generation sync
         gen_layout = QHBoxLayout()
@@ -2712,6 +2685,20 @@ class DataSyncDialog(QDialog):
         set_layout.addWidget(self.set_sync_btn)
         
         sync_layout.addLayout(set_layout)
+        
+        # API Key section
+        api_section = QGroupBox("API Configuration")
+        api_layout = QVBoxLayout()
+        
+        api_info = QLabel("Enter your Pokemon TCG API key for higher rate limits (optional):")
+        api_layout.addWidget(api_info)
+        
+        self.api_key_input = QLineEdit()
+        self.api_key_input.setPlaceholderText("API Key (optional)")
+        api_layout.addWidget(self.api_key_input)
+        
+        api_section.setLayout(api_layout)
+        layout.addWidget(api_section)
         
         # Bulk operations
         bulk_layout = QHBoxLayout()
@@ -3030,6 +3017,13 @@ class DataSyncDialog(QDialog):
 
     def sync_all_generations(self):
         """Sync all generations sequentially - FIXED VERSION"""
+        reply = QMessageBox.question(self, "Confirm", 
+            "This will sync TCG cards for EVERY pokemon and may take a very long time. Continue?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+        
+        if reply != QMessageBox.StandardButton.Yes:
+            return
+        
         self.disable_buttons()
         self.log_output.append("🚀 Starting full database sync (all generations)")
         
@@ -3164,7 +3158,6 @@ class DataSyncDialog(QDialog):
                 self.log_output.append(f"❌ Reset failed: {str(e)}")
     
     def disable_buttons(self):
-        self.pokemon_search_btn.setEnabled(False)
         self.gen_sync_btn.setEnabled(False)
         self.set_combo.setEnabled(False)
         self.set_sync_btn.setEnabled(False)
@@ -3172,7 +3165,6 @@ class DataSyncDialog(QDialog):
         self.reset_database_btn.setEnabled(False)
     
     def enable_buttons(self):
-        self.pokemon_search_btn.setEnabled(True)
         self.gen_sync_btn.setEnabled(True)
         self.set_combo.setEnabled(True)
         self.set_sync_btn.setEnabled(True)
@@ -4195,7 +4187,7 @@ class PokemonDashboard(QMainWindow):
             query += " AND rarity = ?"
             params.append(selected_rarity)
         
-        query += " ORDER BY name LIMIT 100"  # Limit for performance
+        query += " ORDER BY name LIMIT 200"  # Limit for performance
         
         # Execute query
         conn = sqlite3.connect(self.db_manager.db_path)
