@@ -699,7 +699,7 @@ class EnhancedBrowseTCGTab(QWidget):
             query = query.replace("FROM silver_tcg_cards c", 
                                 "FROM silver_tcg_cards c LEFT JOIN silver_tcg_sets s ON c.set_id = s.set_id")
         
-        query += " ORDER BY c.name LIMIT 100"
+        query += " ORDER BY c.name LIMIT 200"
         
         cursor.execute(query, params)
         results = cursor.fetchall()
