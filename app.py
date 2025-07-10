@@ -95,7 +95,7 @@ class ClickableTCGCard(QFrame):
     
     def initUI(self):
         self.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
-        self.setFixedSize(280, 420)
+        self.setFixedSize(270, 410)
         self.setStyleSheet("""
             QFrame {
                 background-color: #34495e;
@@ -115,7 +115,7 @@ class ClickableTCGCard(QFrame):
         # Card image
         self.image_label = QLabel()
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.image_label.setFixedHeight(320)
+        self.image_label.setFixedHeight(310)
         self.image_label.setScaledContents(False)
         self.image_label.setStyleSheet("""
             QLabel {
@@ -131,13 +131,13 @@ class ClickableTCGCard(QFrame):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
                 self.image_label, 
-                (260, 320)
+                (250, 310)
             )
         elif self.card_data.get('image_url_small'):
             self.image_loader.load_image(
                 self.card_data['image_url_small'], 
                 self.image_label, 
-                (260, 320)
+                (250, 310)
             )
         else:
             self.image_label.setText("No Image")
@@ -250,7 +250,7 @@ class CartItemWidget(QFrame):
         
         # Card image (smaller)
         self.image_label = QLabel()
-        self.image_label.setFixedSize(80, 100)
+        self.image_label.setFixedSize(75, 95)
         self.image_label.setScaledContents(False)
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.image_label.setStyleSheet("""
@@ -267,13 +267,13 @@ class CartItemWidget(QFrame):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
                 self.image_label, 
-                (80, 100)
+                (75, 95)
             )
         elif self.card_data.get('image_url_small'):
             self.image_loader.load_image(
                 self.card_data['image_url_small'], 
                 self.image_label, 
-                (80, 100)
+                (75, 95)
             )
         else:
             self.image_label.setText("No\nImage")
@@ -402,15 +402,15 @@ class EnhancedBrowseTCGTab(QWidget):
     
     def initUI(self):
         main_layout = QHBoxLayout(self)
-        main_layout.setSpacing(15)
+        main_layout.setSpacing(10)
         
-        # Left panel - Search and filters
+        # Left panel - Compact search and filters
         left_panel = self.create_left_panel()
-        main_layout.addWidget(left_panel, 1)
+        main_layout.addWidget(left_panel, 0)  # Fixed width, no stretch
         
-        # Center panel - Card grid
+        # Center panel - Expanded card grid
         center_panel = self.create_center_panel()
-        main_layout.addWidget(center_panel, 3)
+        main_layout.addWidget(center_panel, 4)  # More space for cards
         
         # Right panel - Cart and analytics
         right_panel = self.create_right_panel()
@@ -418,63 +418,84 @@ class EnhancedBrowseTCGTab(QWidget):
         
         # Load initial data
         self.load_cards()
-    
+        
     def create_left_panel(self):
-        """Create the left search panel"""
+        """Create a compact left search panel"""
         panel = QFrame()
         panel.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
-        panel.setFixedWidth(250)
+        panel.setFixedWidth(180)  # Reduced from 250
         panel.setStyleSheet("""
             QFrame {
                 background-color: #34495e;
                 border-radius: 8px;
-                padding: 10px;
+                padding: 8px;
             }
         """)
         
         layout = QVBoxLayout(panel)
+        layout.setContentsMargins(8, 8, 8, 8)  # Reduced padding
+        layout.setSpacing(8)  # Reduced spacing
         
-        # Search by name section
-        name_group = QGroupBox("Search By Name")
-        name_layout = QVBoxLayout(name_group)
+        # Compact title
+        title_label = QLabel("🔍 Search")
+        title_label.setFont(QFont('Arial', 12, QFont.Weight.Bold))
+        title_label.setStyleSheet("color: white; margin-bottom: 5px;")
+        layout.addWidget(title_label)
+        
+        # Pokemon name search - compact
+        name_label = QLabel("Pokemon:")
+        name_label.setStyleSheet("color: #bdc3c7; font-size: 10px; margin-bottom: 2px;")
+        layout.addWidget(name_label)
         
         self.name_search_input = QLineEdit()
-        self.name_search_input.setPlaceholderText("Type Pokemon name...")
+        self.name_search_input.setPlaceholderText("Type name...")
+        self.name_search_input.setFixedHeight(30)  # Smaller height
         
         # Set up completer
         self.pokemon_completer = PokemonNameCompleter(self.db_manager)
         self.name_search_input.setCompleter(self.pokemon_completer)
-        
         self.name_search_input.textChanged.connect(self.on_search_changed)
-        name_layout.addWidget(self.name_search_input)
+        layout.addWidget(self.name_search_input)
         
-        layout.addWidget(name_group)
-        
-        # Search by set section
-        set_group = QGroupBox("Search By Set")
-        set_layout = QVBoxLayout(set_group)
+        # Set search - compact
+        set_label = QLabel("Set:")
+        set_label.setStyleSheet("color: #bdc3c7; font-size: 10px; margin-top: 8px; margin-bottom: 2px;")
+        layout.addWidget(set_label)
         
         self.set_search_input = QLineEdit()
-        self.set_search_input.setPlaceholderText("Type or select set...")
+        self.set_search_input.setPlaceholderText("Type set...")
+        self.set_search_input.setFixedHeight(30)
         
         # Set up set completer
         self.setup_set_completer()
         self.set_search_input.textChanged.connect(self.on_search_changed)
+        layout.addWidget(self.set_search_input)
         
-        set_layout.addWidget(self.set_search_input)
-        layout.addWidget(set_group)
+        # Compact buttons
+        button_layout = QVBoxLayout()
+        button_layout.setSpacing(5)
         
-        # Search button
         search_btn = QPushButton("🔍 Search")
+        search_btn.setFixedHeight(30)
         search_btn.clicked.connect(self.perform_search)
-        layout.addWidget(search_btn)
+        button_layout.addWidget(search_btn)
         
-        # Clear filters button
-        clear_btn = QPushButton("Clear Filters")
+        clear_btn = QPushButton("Clear")
+        clear_btn.setFixedHeight(25)
+        clear_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #7f8c8d;
+                font-size: 10px;
+            }
+            QPushButton:hover {
+                background-color: #95a5a6;
+            }
+        """)
         clear_btn.clicked.connect(self.clear_filters)
-        layout.addWidget(clear_btn)
+        button_layout.addWidget(clear_btn)
         
-        layout.addStretch()
+        layout.addLayout(button_layout)
+        layout.addStretch()  # Push everything to top
         
         return panel
     
@@ -547,13 +568,16 @@ class EnhancedBrowseTCGTab(QWidget):
         self.card_scroll.setStyleSheet("background-color: #2c3e50; border: none;")
         layout.addWidget(self.card_scroll)
         
+        self.card_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.card_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        
         return panel
     
     def create_right_panel(self):
         """Create the right panel with cart functionality"""
         panel = QFrame()
         panel.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
-        panel.setFixedWidth(300)
+        panel.setFixedWidth(260)  # Reduced from 300
         panel.setStyleSheet("""
             QFrame {
                 background-color: #34495e;
@@ -562,25 +586,28 @@ class EnhancedBrowseTCGTab(QWidget):
         """)
         
         layout = QVBoxLayout(panel)
+        layout.setContentsMargins(8, 8, 8, 8)  # Reduced padding
         
         # Cart section
         cart_group = QGroupBox("Import Cart")
         cart_layout = QVBoxLayout(cart_group)
+        cart_layout.setSpacing(8)  # Reduced spacing
         
         # Cart counter
         self.cart_counter_label = QLabel("0 cards in cart")
-        self.cart_counter_label.setStyleSheet("color: white; font-weight: bold;")
+        self.cart_counter_label.setStyleSheet("color: white; font-weight: bold; font-size: 11px;")
         cart_layout.addWidget(self.cart_counter_label)
         
         # Import all button
         self.import_all_btn = QPushButton("IMPORT ALL")
+        self.import_all_btn.setFixedHeight(35)  # Slightly smaller
         self.import_all_btn.setStyleSheet("""
             QPushButton {
                 background-color: #27ae60;
                 color: white;
                 font-weight: bold;
-                font-size: 14px;
-                padding: 10px;
+                font-size: 12px;
+                padding: 8px;
                 border-radius: 6px;
             }
             QPushButton:hover {
@@ -594,16 +621,16 @@ class EnhancedBrowseTCGTab(QWidget):
         self.import_all_btn.setEnabled(False)
         cart_layout.addWidget(self.import_all_btn)
         
-        # THIS IS THE MISSING PART - make sure you have this:
+        # Cart status label
         self.cart_status_label = QLabel("Double-click cards in the browse area to add them here")
         self.cart_status_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.cart_status_label.setStyleSheet("""
             color: #7f8c8d; 
-            font-size: 10px; 
-            padding: 5px;
+            font-size: 9px; 
+            padding: 4px;
             background-color: #2c3e50;
             border-radius: 4px;
-            margin: 5px 0px;
+            margin: 3px 0px;
         """)
         self.cart_status_label.setWordWrap(True)
         cart_layout.addWidget(self.cart_status_label)
@@ -616,7 +643,7 @@ class EnhancedBrowseTCGTab(QWidget):
         
         layout.addWidget(cart_group)
         
-        # Initialize cart display - ONLY AFTER ALL WIDGETS ARE CREATED
+        # Initialize cart display
         self.update_cart_display()
         
         return panel
@@ -718,22 +745,42 @@ class EnhancedBrowseTCGTab(QWidget):
         self.display_cards()
     
     def display_cards(self):
-        """Display the current cards in the grid"""
+        """Display the current cards in perfectly centered grid"""
         grid_widget = QWidget()
         grid_widget.setStyleSheet("background-color: #2c3e50;")
-        grid_layout = QGridLayout(grid_widget)
-        grid_layout.setSpacing(15)
         
-        columns = 3
+        # Create a container to center the grid
+        main_layout = QVBoxLayout(grid_widget)
+        main_layout.setContentsMargins(0, 20, 0, 20)  # Only top/bottom margins
+        main_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        
+        # Create the actual card grid container
+        cards_container = QWidget()
+        cards_container.setStyleSheet("background-color: transparent;")
+        
+        # Calculate exact width needed for 3 cards
+        card_width = 270
+        cards_per_row = 3
+        card_spacing = 15
+        total_width = (cards_per_row * card_width) + ((cards_per_row - 1) * card_spacing)
+        
+        # Set fixed width for perfect centering
+        cards_container.setFixedWidth(total_width)  # 270*3 + 15*2 = 840px
+        
+        # Grid layout for the cards
+        grid_layout = QGridLayout(cards_container)
+        grid_layout.setContentsMargins(0, 0, 0, 0)  # No margins on grid itself
+        grid_layout.setSpacing(card_spacing)
+        
         row, col = 0, 0
         
         for card_data in self.current_cards:
             card_widget = ClickableTCGCard(card_data, self.image_loader, self.cart_manager)
             card_widget.cardSelected.connect(self.on_card_selected)
-            grid_layout.addWidget(card_widget, row, col, Qt.AlignmentFlag.AlignCenter)
+            grid_layout.addWidget(card_widget, row, col)
             
             col += 1
-            if col >= columns:
+            if col >= cards_per_row:
                 col = 0
                 row += 1
         
@@ -742,7 +789,11 @@ class EnhancedBrowseTCGTab(QWidget):
             empty_label = QLabel("No cards found.\nTry adjusting your search or sync more data.")
             empty_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
             empty_label.setStyleSheet("color: #7f8c8d; font-size: 16px; padding: 40px;")
-            grid_layout.addWidget(empty_label, 0, 0, 1, columns)
+            grid_layout.addWidget(empty_label, 0, 0, 1, cards_per_row)
+        
+        # Add the cards container to main layout and center it horizontally
+        main_layout.addWidget(cards_container, 0, Qt.AlignmentFlag.AlignHCenter)
+        main_layout.addStretch()  # Push content to top
         
         self.card_scroll.setWidget(grid_widget)
     
@@ -4161,7 +4212,7 @@ class PokemonDashboard(QMainWindow):
         grid_widget = QWidget()
         grid_widget.setStyleSheet("background-color: #2c3e50;")
         grid_layout = QGridLayout(grid_widget)
-        grid_layout.setSpacing(10)  # Increased spacing for larger cards
+        grid_layout.setSpacing(5)  # Increased spacing for larger cards
         
         columns = 3 # Reduced from 5 to 4 for larger cards
         row, col = 0, 0
@@ -4206,7 +4257,7 @@ class PokemonDashboard(QMainWindow):
         
         widget = QFrame()
         widget.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
-        widget.setFixedSize(280, 420)  # Increased from 150x220
+        widget.setFixedSize(270, 410)  # Increased from 150x220
         widget.setStyleSheet("""
             QFrame {
                 background-color: #34495e;
@@ -4226,7 +4277,7 @@ class PokemonDashboard(QMainWindow):
         # Card image - Much larger
         image_label = QLabel()
         image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        image_label.setFixedHeight(320)  # Increased from 120
+        image_label.setFixedHeight(310)  # Increased from 120
         image_label.setScaledContents(False)
         image_label.setStyleSheet("""
             QLabel {
