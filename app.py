@@ -4161,7 +4161,7 @@ class PokemonDashboard(QMainWindow):
         self.update_collection_stats()
         self.update_data_quality_stats()
         
-        self.main_tabs.addTab(analytics_tab, "📊 Analytics")
+        self.main_tabs.addTab(analytics_tab, "Share & Statistics")
     
     def load_sets_combo(self):
         """Load available sets into combo box with enhanced display names"""

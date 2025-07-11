@@ -1,0 +1,128 @@
+{
+  "3": {
+    "card_id": "cel25c-15_A1",
+    "card_name": "Venusaur",
+    "image_url": "https://images.pokemontcg.io/cel25c/15_A_hires.png",
+    "set_name": "Celebrations: Classic Collection"
+  },
+  "6": {
+    "card_id": "cel25c-4_A",
+    "card_name": "Charizard",
+    "image_url": "https://images.pokemontcg.io/cel25c/4_A_hires.png",
+    "set_name": "Celebrations: Classic Collection"
+  },
+  "9": {
+    "card_id": "cel25c-2_A",
+    "card_name": "Blastoise",
+    "image_url": "https://images.pokemontcg.io/cel25c/2_A_hires.png",
+    "set_name": "Celebrations: Classic Collection"
+  },
+  "12": {
+    "card_id": "swsh3-2",
+    "card_name": "Butterfree VMAX",
+    "image_url": "https://images.pokemontcg.io/swsh3/2_hires.png",
+    "set_name": "Darkness Ablaze"
+  },
+  "17": {
+    "card_id": "sv3-208",
+    "card_name": "Pidgeotto",
+    "image_url": "https://images.pokemontcg.io/sv3/208_hires.png",
+    "set_name": "Obsidian Flames"
+  },
+  "20": {
+    "card_id": "sv10-202",
+    "card_name": "Team Rocket's Raticate",
+    "image_url": "https://images.pokemontcg.io/sv10/202_hires.png",
+    "set_name": "Destined Rivals"
+  },
+  "23": {
+    "card_id": "base5-56",
+    "card_name": "Ekans",
+    "image_url": "https://images.pokemontcg.io/base5/56_hires.png",
+    "set_name": "Team Rocket"
+  },
+  "34": {
+    "card_id": "sv3pt5-174",
+    "card_name": "Nidoking",
+    "image_url": "https://images.pokemontcg.io/sv3pt5/174_hires.png",
+    "set_name": "151"
+  },
+  "92": {
+    "card_id": "base1-50",
+    "card_name": "Gastly",
+    "image_url": "https://images.pokemontcg.io/base1/50_hires.png",
+    "set_name": "Base"
+  },
+  "93": {
+    "card_id": "base3-21",
+    "card_name": "Haunter",
+    "image_url": "https://images.pokemontcg.io/base3/21_hires.png",
+    "set_name": "Fossil"
+  },
+  "94": {
+    "card_id": "base6-11",
+    "card_name": "Gengar",
+    "image_url": "https://images.pokemontcg.io/base6/11_hires.png",
+    "set_name": "Legendary Collection"
+  },
+  "122": {
+    "card_id": "sv3pt5-179",
+    "card_name": "Mr. Mime",
+    "image_url": "https://images.pokemontcg.io/sv3pt5/179_hires.png",
+    "set_name": "151"
+  },
+  "127": {
+    "card_id": "sv6-168",
+    "card_name": "Pinsir",
+    "image_url": "https://images.pokemontcg.io/sv6/168_hires.png",
+    "set_name": "Twilight Masquerade"
+  },
+  "131": {
+    "card_id": "swsh12pt5gg-GG05",
+    "card_name": "Lapras",
+    "image_url": "https://images.pokemontcg.io/swsh12pt5gg/GG05_hires.png",
+    "set_name": "Crown Zenith Galarian Gallery"
+  },
+  "133": {
+    "card_id": "svp-173",
+    "card_name": "Eevee",
+    "image_url": "https://images.pokemontcg.io/svp/173_hires.png",
+    "set_name": "Scarlet & Violet Promos"
+  },
+  "585": {
+    "card_id": "sv5-165",
+    "card_name": "Deerling",
+    "image_url": "https://images.pokemontcg.io/sv5/165_hires.png",
+    "set_name": "Temporal Forces"
+  },
+  "586": {
+    "card_id": "sv5-166",
+    "card_name": "Sawsbuck",
+    "image_url": "https://images.pokemontcg.io/sv5/166_hires.png",
+    "set_name": "Temporal Forces"
+  },
+  "19": {
+    "card_id": "sm1-76",
+    "card_name": "Alolan Rattata",
+    "image_url": "https://images.pokemontcg.io/sm1/76_hires.png",
+    "set_name": "Sun & Moon"
+  },
+  "18": {
+    "card_id": "sv3-225",
+    "card_name": "Pidgeot ex",
+    "image_url": "https://images.pokemontcg.io/sv3/225_hires.png",
+    "set_name": "Obsidian Flames"
+  },
+  "16": {
+    "card_id": "sv3-207",
+    "card_name": "Pidgey",
+    "image_url": "https://images.pokemontcg.io/sv3/207_hires.png",
+    "set_name": "Obsidian Flames"
+  },
+  "25": {
+    "card_id": "sv5-51",
+    "card_name": "Pikachu",
+    "image_url": "https://images.pokemontcg.io/sv5/51_hires.png",
+    "set_name": "Temporal Forces"
+  }
+}
