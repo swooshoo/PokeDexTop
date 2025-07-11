@@ -195,7 +195,7 @@ class ClickableTCGCard(QFrame):
                 font-weight: bold;
             """)
         else:
-            self.cart_indicator.setText("Double-click to add to cart")
+            self.cart_indicator.setText("Not Added")
             self.cart_indicator.setStyleSheet("""
                 color: #7f8c8d; 
                 font-size: 10px; 
@@ -224,7 +224,7 @@ class ClickableTCGCard(QFrame):
 class CartItemWidget(QFrame):
     """Widget for individual items in the cart"""
     
-    removeRequested = pyqtSignal(str)  # card_id
+    removeRequested = pyqtSignal(str)
     
     def __init__(self, card_data, image_loader):
         super().__init__()
@@ -234,7 +234,7 @@ class CartItemWidget(QFrame):
     
     def initUI(self):
         self.setFrameStyle(QFrame.Shape.Box | QFrame.Shadow.Raised)
-        self.setFixedHeight(120)
+        self.setFixedHeight(130)
         self.setStyleSheet("""
             QFrame {
                 background-color: #34495e;
@@ -248,9 +248,9 @@ class CartItemWidget(QFrame):
         layout.setContentsMargins(8, 8, 8, 8)
         layout.setSpacing(8)
         
-        # Card image (smaller)
+        # Card image (same as before)
         self.image_label = QLabel()
-        self.image_label.setFixedSize(75, 95)
+        self.image_label.setFixedSize(85, 105)
         self.image_label.setScaledContents(False)
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.image_label.setStyleSheet("""
@@ -262,7 +262,7 @@ class CartItemWidget(QFrame):
         """)
         layout.addWidget(self.image_label)
         
-        # Load image
+        # Load image (same as before)
         if self.card_data.get('image_url_large'):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
@@ -277,14 +277,6 @@ class CartItemWidget(QFrame):
             )
         else:
             self.image_label.setText("No\nImage")
-            self.image_label.setStyleSheet("""
-                QLabel {
-                    background-color: #2c3e50;
-                    border-radius: 4px;
-                    color: #7f8c8d;
-                    font-size: 8px;
-                }
-            """)
         
         # Card info
         info_layout = QVBoxLayout()
@@ -292,44 +284,74 @@ class CartItemWidget(QFrame):
         
         # Card name
         name_label = QLabel(self.card_data.get('name', 'Unknown'))
-        name_label.setFont(QFont('Arial', 10, QFont.Weight.Bold))
-        name_label.setStyleSheet("color: white;")
+        name_label.setFont(QFont('Arial', 11, QFont.Weight.Bold))
+        name_label.setStyleSheet("color: white; background: transparent; border: none;")
         name_label.setWordWrap(True)
         info_layout.addWidget(name_label)
         
+        #Card number
+        # num_label = QLabel(self.card_data.get('number', 'Unknown'))
+        # num_label.setFont(QFont('Arial', 10, QFont.Weight.Bold))
+        # num_label.setStyleSheet("color: white;")
+        # num_label.setWordWrap(True)
+        # info_layout.addWidget(name_label)
+        
         # Set name
         set_label = QLabel(self.card_data.get('set_name', 'Unknown Set'))
-        set_label.setStyleSheet("color: #3498db; font-size: 9px;")
+        set_label.setStyleSheet("color: #3498db; font-size: 10px; background: transparent; border: none;")
         set_label.setWordWrap(True)
         info_layout.addWidget(set_label)
         
         # Artist (if available)
         if self.card_data.get('artist'):
-            artist_label = QLabel(f"Artist: {self.card_data['artist']}")
-            artist_label.setStyleSheet("color: #95a5a6; font-size: 8px;")
+            artist_label = QLabel(f"{self.card_data['artist']}")
+            artist_label.setStyleSheet("color: white; font-size: 8px; background: transparent; border: none;")
             info_layout.addWidget(artist_label)
         
-        info_layout.addStretch()
-        layout.addLayout(info_layout)
+        # Clickable QLabel with Material icon
+        self.remove_label = QLabel()
         
-        # Remove button
-        remove_btn = QPushButton("✕")
-        remove_btn.setFixedSize(20, 20)
-        remove_btn.setStyleSheet("""
-            QPushButton {
-                background-color: #e74c3c;
-                color: white;
-                border: none;
+        # Try to load Material Design delete icon
+        icon_path = "assets/icons/delete.png"
+        
+        if os.path.exists(icon_path):
+            pixmap = QPixmap(icon_path)
+            # Tint the icon red
+            scaled_pixmap = pixmap.scaled(16, 16, Qt.AspectRatioMode.KeepAspectRatio, 
+                                         Qt.TransformationMode.SmoothTransformation)
+            self.remove_label.setPixmap(scaled_pixmap)
+        else:
+            # Fallback to emoji
+            self.remove_label.setText("🗑️")
+        
+        self.remove_label.setFixedSize(95, 25)
+        self.remove_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.remove_label.setStyleSheet("""
+            QLabel {
+                background-color: #a93226;
                 border-radius: 10px;
-                font-weight: bold;
-                font-size: 12px;
+                margin-top: 4px;
             }
-            QPushButton:hover {
+            QLabel:hover {
                 background-color: #c0392b;
             }
         """)
-        remove_btn.clicked.connect(lambda: self.removeRequested.emit(self.card_data['card_id']))
-        layout.addWidget(remove_btn, alignment=Qt.AlignmentFlag.AlignTop)
+        self.remove_label.setToolTip("Remove from cart")
+        self.remove_label.setCursor(Qt.CursorShape.PointingHandCursor)
+        
+        # Make it clickable
+        self.remove_label.mousePressEvent = self.on_remove_clicked
+        
+        # Add the remove label under the artist info
+        info_layout.addWidget(self.remove_label, alignment=Qt.AlignmentFlag.AlignLeft)
+        
+        info_layout.addStretch()
+        layout.addLayout(info_layout)
+    
+    def on_remove_clicked(self, event):
+        """Handle remove label click"""
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.removeRequested.emit(self.card_data['card_id'])
 
 class PokemonNameCompleter(QCompleter):
     """Custom completer for Pokemon names with fuzzy matching"""
@@ -475,7 +497,7 @@ class EnhancedBrowseTCGTab(QWidget):
         button_layout = QVBoxLayout()
         button_layout.setSpacing(5)
         
-        search_btn = QPushButton("🔍 Search")
+        search_btn = QPushButton("Search")
         search_btn.setFixedHeight(30)
         search_btn.clicked.connect(self.perform_search)
         button_layout.addWidget(search_btn)
@@ -3245,7 +3267,7 @@ class PokemonCard(QFrame):
 
         if card_count > 0:
             # Cards are available
-            count_label = QLabel(f"🃏 {card_count} cards available")
+            count_label = QLabel(f"{card_count} cards available")
             count_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
             count_label.setStyleSheet("""
                 color: #3498db; 
@@ -3256,7 +3278,7 @@ class PokemonCard(QFrame):
             info_layout.addWidget(count_label)
         else:
             # No cards available
-            no_cards_label = QLabel("📭 No cards available")
+            no_cards_label = QLabel("No cards available")
             no_cards_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
             no_cards_label.setStyleSheet("""
                 color: #7f8c8d; 
@@ -3297,9 +3319,9 @@ class PokemonCard(QFrame):
             
             tooltip_text = f"🃏 TCG Card: {user_card['card_name']}"
             if user_card.get('set_name'):
-                tooltip_text += f"\n📦 Set: {user_card['set_name']}"
-            tooltip_text += f"\n\n💾 Imported for #{pokemon_id} {pokemon_name}"
-            tooltip_text += f"\n🔄 Click to change card"
+                tooltip_text += f"\n Set: {user_card['set_name']}"
+            tooltip_text += f"\n\n Imported for #{pokemon_id} {pokemon_name}"
+            tooltip_text += f"\n Click to change card"
             
             self.image_label.setToolTip(tooltip_text)
             
