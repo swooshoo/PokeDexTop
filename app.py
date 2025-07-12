@@ -4,6 +4,8 @@ import json
 import sqlite3
 import hashlib
 import time
+import math
+import requests
 from PyQt6 import sip
 from datetime import datetime
 from difflib import SequenceMatcher
@@ -11,27 +13,921 @@ from difflib import SequenceMatcher
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QHBoxLayout, QLabel, QPushButton, QScrollArea,
                             QGridLayout, QTabWidget, QSizePolicy, QFrame,
-                            QComboBox, QLineEdit, QCompleter,
-                            QToolButton, QMessageBox, QDialog, QGroupBox, QRadioButton, 
-                            QCheckBox, QButtonGroup, QDialogButtonBox, QFileDialog,
+                            QComboBox, QLineEdit, QCompleter, QMessageBox, QDialog, QGroupBox, 
+                            QCheckBox, QFileDialog,
                             QProgressBar, QTextEdit, QSpinBox, QListWidget, QListWidgetItem,
-                            QAbstractItemView, QTableWidget, QTableWidgetItem, QHeaderView)
+                            QAbstractItemView, QTableWidget, QTableWidgetItem, QHeaderView, QProgressDialog)
 
-from PyQt6.QtGui import (QPixmap, QFont, QIcon, QPainter, QPen, QColor, QDrag)
+from PyQt6.QtGui import (QPixmap, QFont, QPainter, QPen, QColor)
 
-from PyQt6.QtCore import (Qt, QSize, QStringListModel, pyqtSignal, QObject, QRectF, 
-                         QThread, QTimer, QUrl, QMimeData, QPoint)
+from PyQt6.QtCore import (Qt, QStringListModel, pyqtSignal, QObject, QRect, 
+                         QThread, QTimer, QUrl)
 
-from PyQt6.QtPrintSupport import QPrinter 
 from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
-
-#from utils import ImageLoader removed for now
 
 # Pokemon TCG SDK imports
 from pokemontcgsdk import Card, Set
 from pokemontcgsdk.restclient import RestClient, PokemonTcgException
 
 
+# =============================================================================
+# ExPORT FUNCTION ARCHITECTURE
+# =============================================================================
+
+
+class CollectionExportOptionsDialog(QDialog):
+    """Dialog for configuring collection export options"""
+    
+    def __init__(self, db_manager, parent=None):
+        super().__init__(parent)
+        self.db_manager = db_manager
+        self.export_config = {
+            'custom_title': 'My Pokémon Collection',
+            'include_pokedex_info': True,
+            'include_set_label': True,
+            'include_artist_label': False,
+            'cards_per_row': 4,
+            'image_quality': 'high',
+            'generation_filter': 'all'
+        }
+        self.setWindowTitle("Export Collection")
+        self.setMinimumSize(450, 600)
+        self.initUI()
+    
+    def initUI(self):
+        layout = QVBoxLayout(self)
+        
+        # Title
+        title = QLabel("Export Your Collection - Options")
+        title.setFont(QFont('Arial', 16, QFont.Weight.Bold))
+        title.setStyleSheet("color: white; margin-bottom: 10px;")
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(title)
+        
+        # Collection info
+        collection_info = self.get_collection_info()
+        info_label = QLabel(f"Found {collection_info['total_cards']} cards across {collection_info['generations']} generations")
+        info_label.setStyleSheet("color: #bdc3c7; font-size: 12px; margin-bottom: 15px;")
+        info_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(info_label)
+        
+        # Generation filter
+        gen_group = QGroupBox("Generation Filter")
+        gen_layout = QVBoxLayout()
+        
+        self.gen_combo = QComboBox()
+        self.gen_combo.addItem("All Generations", "all")
+        
+        # Add individual generations
+        generations = self.get_available_generations()
+        for gen_num, gen_name, card_count in generations:
+            self.gen_combo.addItem(f"{gen_name} ({card_count} cards)", gen_num)
+        
+        self.gen_combo.currentTextChanged.connect(self.update_preview)
+        gen_layout.addWidget(self.gen_combo)
+        gen_group.setLayout(gen_layout)
+        layout.addWidget(gen_group)
+        
+        # Label options
+        labels_group = QGroupBox("Card Labels to Include")
+        labels_layout = QVBoxLayout()
+        
+        self.pokedex_checkbox = QCheckBox("Pokédex Number & Name")
+        self.pokedex_checkbox.setChecked(True)
+        self.pokedex_checkbox.setStyleSheet("color: white;")
+        self.pokedex_checkbox.toggled.connect(self.update_preview)
+        labels_layout.addWidget(self.pokedex_checkbox)
+        
+        self.set_checkbox = QCheckBox("Set Name")
+        self.set_checkbox.setChecked(True)
+        self.set_checkbox.setStyleSheet("color: white;")
+        self.set_checkbox.toggled.connect(self.update_preview)
+        labels_layout.addWidget(self.set_checkbox)
+        
+        self.artist_checkbox = QCheckBox("Artist Name")
+        self.artist_checkbox.setChecked(False)
+        self.artist_checkbox.setStyleSheet("color: white;")
+        self.artist_checkbox.toggled.connect(self.update_preview)
+        labels_layout.addWidget(self.artist_checkbox)
+        
+        labels_group.setLayout(labels_layout)
+        layout.addWidget(labels_group)
+        
+        # Custom title input
+        title_group = QGroupBox("Collection Title")
+        title_layout = QVBoxLayout()
+        
+        title_label = QLabel("Enter a custom title for your collection:")
+        title_label.setStyleSheet("color: white; font-size: 11px;")
+        title_layout.addWidget(title_label)
+        
+        self.title_input = QLineEdit()
+        self.title_input.setPlaceholderText("My Pokémon Collection")
+        self.title_input.setText("My Pokémon Collection")
+        self.title_input.setStyleSheet("padding: 8px; font-size: 12px;")
+        self.title_input.textChanged.connect(self.update_preview)
+        title_layout.addWidget(self.title_input)
+        
+        title_group.setLayout(title_layout)
+        layout.addWidget(title_group)
+        
+        # Layout options
+        layout_group = QGroupBox("Layout Options")
+        layout_layout = QVBoxLayout()
+        
+        # Cards per row
+        row_layout = QHBoxLayout()
+        row_layout.addWidget(QLabel("Cards per row:"))
+        self.cards_per_row_spin = QSpinBox()
+        self.cards_per_row_spin.setRange(2, 5)  # Min 2, Max 5 as requested
+        self.cards_per_row_spin.setValue(4)      # Default 4 as requested
+        self.cards_per_row_spin.valueChanged.connect(self.update_preview)
+        row_layout.addWidget(self.cards_per_row_spin)
+        row_layout.addStretch()
+        layout_layout.addLayout(row_layout)
+        
+        # Quality options
+        quality_layout = QHBoxLayout()
+        quality_layout.addWidget(QLabel("Image quality:"))
+        self.quality_combo = QComboBox()
+        self.quality_combo.addItem("High (Print Quality)", "high")
+        self.quality_combo.addItem("Medium (Web Sharing)", "medium")
+        self.quality_combo.addItem("Low (Quick Preview)", "low")
+        quality_layout.addWidget(self.quality_combo)
+        quality_layout.addStretch()
+        layout_layout.addLayout(quality_layout)
+        
+        layout_group.setLayout(layout_layout)
+        layout.addWidget(layout_group)
+        
+        # Preview section
+        preview_group = QGroupBox("Preview")
+        preview_layout = QVBoxLayout()
+        
+        self.preview_label = QLabel()
+        self.preview_label.setStyleSheet("""
+            background-color: #2c3e50; 
+            border: 1px solid #34495e; 
+            padding: 8px;
+            color: white;
+            font-size: 11px;
+        """)
+        self.preview_label.setMinimumHeight(120)
+        self.preview_label.setAlignment(Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignLeft)
+        preview_layout.addWidget(self.preview_label)
+        
+        preview_group.setLayout(preview_layout)
+        layout.addWidget(preview_group)
+        
+        # Buttons
+        button_layout = QHBoxLayout()
+        
+        cancel_btn = QPushButton("Cancel")
+        cancel_btn.clicked.connect(self.reject)
+        button_layout.addWidget(cancel_btn)
+        
+        self.export_btn = QPushButton("📸 Export Collection")
+        self.export_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #27ae60;
+                font-weight: bold;
+                padding: 10px 20px;
+            }
+            QPushButton:hover {
+                background-color: #229954;
+            }
+        """)
+        self.export_btn.clicked.connect(self.start_export)
+        button_layout.addWidget(self.export_btn)
+        
+        layout.addLayout(button_layout)
+        
+        # Initial preview update
+        self.update_preview()
+    
+    def get_collection_info(self):
+        """Get basic collection information"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT COUNT(*) as total_cards,
+                   COUNT(DISTINCT p.generation) as generations
+            FROM gold_user_collections uc
+            JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+        """)
+        
+        result = cursor.fetchone()
+        conn.close()
+        
+        return {
+            'total_cards': result[0] if result else 0,
+            'generations': result[1] if result else 0
+        }
+    
+    def get_available_generations(self):
+        """Get generations that have cards in the collection"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT p.generation, g.name, COUNT(*) as card_count
+            FROM gold_user_collections uc
+            JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+            JOIN gold_pokemon_generations g ON p.generation = g.generation
+            GROUP BY p.generation, g.name
+            ORDER BY p.generation
+        """)
+        
+        results = cursor.fetchall()
+        conn.close()
+        
+        return results
+    
+    def update_preview(self):
+        """Update the preview text"""
+        generation = self.gen_combo.currentData()
+        cards_per_row = self.cards_per_row_spin.value()
+        custom_title = self.title_input.text().strip() or "My Pokémon Collection"
+        
+        # Get card count for preview
+        if generation == "all":
+            card_count = self.get_collection_info()['total_cards']
+            gen_text = "All Generations"
+        else:
+            card_count = next((count for gen, name, count in self.get_available_generations() 
+                             if gen == generation), 0)
+            gen_text = f"Generation {generation}"
+        
+        if card_count == 0:
+            self.preview_label.setText("No cards found for selected generation.")
+            self.export_btn.setEnabled(False)
+            return
+        
+        self.export_btn.setEnabled(True)
+        
+        # Calculate grid dimensions
+        rows = math.ceil(card_count / cards_per_row)
+        
+        preview_text = f"Export Preview:\n\n"
+        preview_text += f"📋 Title: \"{custom_title}\"\n"
+        preview_text += f"🎯 Generation: {gen_text}\n"
+        preview_text += f"🃏 Cards: {card_count}\n"
+        preview_text += f"📐 Grid: {rows} rows × {cards_per_row} columns\n\n"
+        
+        preview_text += "Card Labels:\n"
+        labels = []
+        if self.pokedex_checkbox.isChecked():
+            labels.append("• Pokédex # & Name")
+        if self.set_checkbox.isChecked():
+            labels.append("• Set Name")
+        if self.artist_checkbox.isChecked():
+            labels.append("• Artist")
+        
+        if labels:
+            preview_text += "\n".join(labels)
+        else:
+            preview_text += "• No labels (cards only)"
+        
+        quality = self.quality_combo.currentText()
+        preview_text += f"\n\nQuality: {quality}"
+        preview_text += f"\n\nFooter: Export date + \"Exported by PokéDextop\""
+        
+        self.preview_label.setText(preview_text)
+    
+    def start_export(self):
+        """Start the export process"""
+        # Update config
+        self.export_config.update({
+            'custom_title': self.title_input.text().strip() or "My Pokémon Collection",
+            'include_pokedex_info': self.pokedex_checkbox.isChecked(),
+            'include_set_label': self.set_checkbox.isChecked(),
+            'include_artist_label': self.artist_checkbox.isChecked(),
+            'cards_per_row': self.cards_per_row_spin.value(),
+            'image_quality': self.quality_combo.currentData(),
+            'generation_filter': self.gen_combo.currentData()
+        })
+        
+        # Get export file path
+        # Create filename from custom title
+        safe_title = "".join(c for c in self.export_config['custom_title'] if c.isalnum() or c in (' ', '-', '_')).rstrip()
+        safe_title = safe_title.replace(' ', '_').lower()
+        
+        filename = f"{safe_title}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        
+        file_path, _ = QFileDialog.getSaveFileName(
+            self, "Export Collection", filename, "PNG Images (*.png)"
+        )
+        
+        if file_path:
+            self.export_config['file_path'] = file_path
+            self.accept()
+    
+    def get_export_config(self):
+        """Get the export configuration"""
+        return self.export_config
+
+
+class CollectionImageGenerator(QThread):
+    """Thread for generating collection image"""
+    
+    progress_updated = pyqtSignal(int, str)
+    generation_complete = pyqtSignal(str)
+    generation_error = pyqtSignal(str)
+    
+    def __init__(self, db_manager, export_config):
+        super().__init__()
+        self.db_manager = db_manager
+        self.config = export_config
+        self.network_manager = QNetworkAccessManager()
+        self.downloaded_images = {}
+    
+    def run(self):
+        """Generate the collection image"""
+        try:
+            # Step 1: Get collection data
+            self.progress_updated.emit(10, "Loading collection data...")
+            collection_data = self.get_collection_data()
+            
+            if not collection_data:
+                self.generation_error.emit("No cards found in collection.")
+                return
+            
+            # Step 2: Download images
+            self.progress_updated.emit(20, "Downloading card images...")
+            self.download_all_images(collection_data)
+            
+            # Step 3: Create composite image
+            self.progress_updated.emit(70, "Creating collection image...")
+            final_image = self.create_collection_image(collection_data)
+            
+            # Step 4: Save image
+            self.progress_updated.emit(90, "Saving image...")
+            success = final_image.save(self.config['file_path'], 'PNG', 95)
+            
+            if success:
+                self.progress_updated.emit(100, "Export complete!")
+                self.generation_complete.emit(self.config['file_path'])
+            else:
+                self.generation_error.emit("Failed to save image file.")
+                
+        except Exception as e:
+            self.generation_error.emit(f"Export failed: {str(e)}")
+    
+    def get_collection_data(self):
+        """Get collection data from database"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        # Build query based on generation filter
+        if self.config['generation_filter'] == 'all':
+            query = """
+                SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
+                       c.name as card_name, c.set_name, c.artist, c.image_url_large,
+                       c.image_url_small, p.generation
+                FROM gold_user_collections uc
+                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+                JOIN silver_tcg_cards c ON uc.card_id = c.card_id
+                ORDER BY p.pokemon_id
+            """
+            cursor.execute(query)
+        else:
+            query = """
+                SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
+                       c.name as card_name, c.set_name, c.artist, c.image_url_large,
+                       c.image_url_small, p.generation
+                FROM gold_user_collections uc
+                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+                JOIN silver_tcg_cards c ON uc.card_id = c.card_id
+                WHERE p.generation = ?
+                ORDER BY p.pokemon_id
+            """
+            cursor.execute(query, (self.config['generation_filter'],))
+        
+        results = cursor.fetchall()
+        conn.close()
+        
+        return [
+            {
+                'pokemon_id': row[0],
+                'card_id': row[1], 
+                'pokemon_name': row[2],
+                'card_name': row[3],
+                'set_name': row[4],
+                'artist': row[5],
+                'image_url': row[6] or row[7],  # Prefer large, fallback to small
+                'generation': row[8]
+            }
+            for row in results
+        ]
+    
+    def download_all_images(self, collection_data):
+        """Download all card images"""
+        total_cards = len(collection_data)
+        
+        for i, card_data in enumerate(collection_data):
+            if card_data['image_url']:
+                try:
+                    # Download image
+                    response = requests.get(card_data['image_url'], timeout=10)
+                    response.raise_for_status()
+                    
+                    # Create QPixmap from data
+                    pixmap = QPixmap()
+                    pixmap.loadFromData(response.content)
+                    
+                    if not pixmap.isNull():
+                        self.downloaded_images[card_data['card_id']] = pixmap
+                    
+                except Exception as e:
+                    print(f"Failed to download image for {card_data['card_name']}: {e}")
+                    # Create placeholder
+                    self.downloaded_images[card_data['card_id']] = self.create_placeholder_image()
+                
+                # Update progress
+                progress = 20 + int((i + 1) / total_cards * 50)
+                self.progress_updated.emit(progress, f"Downloaded {i + 1}/{total_cards} images...")
+            else:
+                # Create placeholder for missing image
+                self.downloaded_images[card_data['card_id']] = self.create_placeholder_image()
+    
+    def create_placeholder_image(self):
+        """Create a placeholder image for missing cards"""
+        pixmap = QPixmap(245, 342)  # Standard card dimensions
+        pixmap.fill(QColor(52, 73, 94))  # Dark gray
+        
+        painter = QPainter(pixmap)
+        painter.setPen(QPen(QColor(127, 140, 141)))
+        painter.setFont(QFont('Arial', 12, QFont.Weight.Bold))
+        
+        rect = pixmap.rect()
+        painter.drawText(rect, Qt.AlignmentFlag.AlignCenter, "No Image\nAvailable")
+        painter.end()
+        
+        return pixmap
+    
+    def create_collection_image(self, collection_data):
+        """Create the final collection image"""
+        # Calculate dimensions
+        cards_per_row = self.config['cards_per_row']
+        total_cards = len(collection_data)
+        rows = math.ceil(total_cards / cards_per_row)
+        
+        # Quality settings
+        if self.config['image_quality'] == 'high':
+            card_width, card_height = 245, 342
+            spacing = 20
+            font_size_title = 24
+            font_size_labels = 10
+        elif self.config['image_quality'] == 'medium':
+            card_width, card_height = 180, 252
+            spacing = 15
+            font_size_title = 20
+            font_size_labels = 9
+        else:  # low
+            card_width, card_height = 120, 168
+            spacing = 10
+            font_size_title = 16
+            font_size_labels = 8
+        
+        # Calculate label height
+        label_height = 0
+        if any([self.config['include_pokedex_info'], 
+                self.config['include_set_label'], 
+                self.config['include_artist_label']]):
+            label_height = 60
+        
+        # Calculate total dimensions
+        header_height = 80
+        footer_height = 60  # Space for footer with date and branding
+        total_width = (cards_per_row * card_width) + ((cards_per_row + 1) * spacing)
+        total_height = header_height + (rows * (card_height + label_height + spacing)) + spacing + footer_height
+        
+        # Create the final image
+        final_image = QPixmap(total_width, total_height)
+        final_image.fill(QColor(44, 62, 80))  # Dark blue background
+        
+        painter = QPainter(final_image)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        
+        # Draw header with custom title
+        self.draw_header(painter, total_width, header_height, collection_data, font_size_title)
+        
+        # Draw cards
+        current_y = header_height + spacing
+        for i, card_data in enumerate(collection_data):
+            row = i // cards_per_row
+            col = i % cards_per_row
+            
+            x = spacing + col * (card_width + spacing)
+            y = current_y + row * (card_height + label_height + spacing)
+            
+            # Draw card image
+            if card_data['card_id'] in self.downloaded_images:
+                card_image = self.downloaded_images[card_data['card_id']]
+                scaled_card = card_image.scaled(
+                    card_width, card_height, 
+                    Qt.AspectRatioMode.KeepAspectRatio, 
+                    Qt.TransformationMode.SmoothTransformation
+                )
+                
+                # Center the scaled image
+                card_x = x + (card_width - scaled_card.width()) // 2
+                card_y = y + (card_height - scaled_card.height()) // 2
+                painter.drawPixmap(card_x, card_y, scaled_card)
+            
+            # Draw labels
+            if label_height > 0:
+                self.draw_card_labels(
+                    painter, card_data, x, y + card_height + 5, 
+                    card_width, label_height, font_size_labels
+                )
+        
+        # Draw footer with date and branding
+        footer_y = total_height - footer_height
+        self.draw_footer(painter, total_width, footer_height, footer_y, font_size_title - 4)
+        
+        painter.end()
+        return final_image
+    
+    def draw_header(self, painter, width, height, collection_data, font_size):
+        """Draw the header section with custom title"""
+        painter.fillRect(0, 0, width, height, QColor(52, 73, 94))
+        
+        # Custom title
+        painter.setPen(QPen(QColor(255, 255, 255)))
+        title_font = QFont('Arial', font_size, QFont.Weight.Bold)
+        painter.setFont(title_font)
+        
+        custom_title = self.config['custom_title']
+        title_rect = QRect(0, 10, width, 35)
+        painter.drawText(title_rect, Qt.AlignmentFlag.AlignCenter, custom_title)
+        
+        # Subtitle with card count
+        subtitle_font = QFont('Arial', font_size - 6)
+        painter.setFont(subtitle_font)
+        painter.setPen(QPen(QColor(189, 195, 199)))  # Light gray
+        
+        total_cards = len(collection_data)
+        if self.config['generation_filter'] == 'all':
+            subtitle = f"{total_cards} cards from all generations"
+        else:
+            subtitle = f"{total_cards} cards from Generation {self.config['generation_filter']}"
+        
+        subtitle_rect = QRect(0, 45, width, 25)
+        painter.drawText(subtitle_rect, Qt.AlignmentFlag.AlignCenter, subtitle)
+    
+    def draw_footer(self, painter, width, height, y_position, font_size):
+        """Draw the footer section with export date and branding"""
+        # Footer background
+        painter.fillRect(0, y_position, width, height, QColor(52, 73, 94))
+        
+        # Export date
+        painter.setPen(QPen(QColor(189, 195, 199)))  # Light gray
+        date_font = QFont('Arial', font_size)
+        painter.setFont(date_font)
+        
+        export_date = datetime.now().strftime('%B %d, %Y')
+        date_text = f"Exported on {export_date}"
+        
+        date_rect = QRect(0, y_position + 10, width, 20)
+        painter.drawText(date_rect, Qt.AlignmentFlag.AlignCenter, date_text)
+        
+        # PokéDextop branding
+        branding_font = QFont('Arial', font_size - 2, QFont.Weight.Bold)
+        painter.setFont(branding_font)
+        painter.setPen(QPen(QColor(52, 152, 219)))  # Blue color
+        
+        branding_text = "Exported by PokéDextop"
+        branding_rect = QRect(0, y_position + 30, width, 20)
+        painter.drawText(branding_rect, Qt.AlignmentFlag.AlignCenter, branding_text)
+    
+    def draw_card_labels(self, painter, card_data, x, y, width, height, font_size):
+        """Draw labels for a card"""
+        painter.setPen(QPen(QColor(255, 255, 255)))
+        label_font = QFont('Arial', font_size, QFont.Weight.Bold)
+        painter.setFont(label_font)
+        
+        current_y = y
+        line_height = font_size + 2
+        
+        if self.config['include_pokedex_info']:
+            pokemon_text = f"#{card_data['pokemon_id']:03d} {card_data['pokemon_name']}"
+            painter.drawText(x, current_y, width, line_height, 
+                           Qt.AlignmentFlag.AlignCenter, pokemon_text)
+            current_y += line_height
+        
+        if self.config['include_set_label'] and card_data['set_name']:
+            set_font = QFont('Arial', max(6, font_size - 2))
+            painter.setFont(set_font)
+            painter.setPen(QPen(QColor(52, 152, 219)))  # Blue for set
+            
+            set_text = card_data['set_name']
+            if len(set_text) > 20:
+                set_text = set_text[:17] + "..."
+            
+            painter.drawText(x, current_y, width, line_height, 
+                           Qt.AlignmentFlag.AlignCenter, set_text)
+            current_y += line_height - 2
+        
+        if self.config['include_artist_label'] and card_data['artist']:
+            artist_font = QFont('Arial', max(6, font_size - 2))
+            painter.setFont(artist_font)
+            painter.setPen(QPen(QColor(149, 165, 166)))  # Gray for artist
+            
+            artist_text = f"Art: {card_data['artist']}"
+            if len(artist_text) > 25:
+                artist_text = artist_text[:22] + "..."
+            
+            painter.drawText(x, current_y, width, line_height, 
+                           Qt.AlignmentFlag.AlignCenter, artist_text)
+
+
+class EnhancedAnalyticsTab(QWidget):
+    """Enhanced analytics tab with new export functionality"""
+    
+    def __init__(self, db_manager, parent_window):
+        super().__init__()
+        self.db_manager = db_manager
+        self.parent_window = parent_window
+        self.initUI()
+    
+    def initUI(self):
+        layout = QVBoxLayout(self)
+        
+        # Collection statistics
+        stats_group = QGroupBox("Collection Statistics")
+        stats_layout = QVBoxLayout()
+        
+        self.collection_stats_label = QLabel()
+        self.collection_stats_label.setStyleSheet("color: white; font-size: 12px;")
+        stats_layout.addWidget(self.collection_stats_label)
+        
+        refresh_stats_btn = QPushButton("Refresh Statistics")
+        refresh_stats_btn.clicked.connect(self.update_collection_stats)
+        stats_layout.addWidget(refresh_stats_btn)
+        
+        stats_group.setLayout(stats_layout)
+        layout.addWidget(stats_group)
+        
+        # Data quality metrics
+        quality_group = QGroupBox("Data Quality")
+        quality_layout = QVBoxLayout()
+        
+        self.data_quality_label = QLabel()
+        self.data_quality_label.setStyleSheet("color: white; font-size: 12px;")
+        quality_layout.addWidget(self.data_quality_label)
+        
+        quality_group.setLayout(quality_layout)
+        layout.addWidget(quality_group)
+        
+        # Export & Backup section
+        export_group = QGroupBox("Export & Backup")
+        export_layout = QVBoxLayout()
+        
+        # Enhanced export collection button
+        export_collection_btn = QPushButton("Export Collection as PNG")
+        export_collection_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #27ae60;
+                font-weight: bold;
+                padding: 12px;
+                font-size: 14px;
+            }
+            QPushButton:hover {
+                background-color: #229954;
+            }
+        """)
+        export_collection_btn.clicked.connect(self.export_collection_image)
+        export_layout.addWidget(export_collection_btn)
+        
+        # Legacy JSON export (smaller button)
+        export_json_btn = QPushButton("Export as JSON (Legacy)")
+        export_json_btn.setStyleSheet("font-size: 11px; padding: 6px;")
+        export_json_btn.clicked.connect(self.export_collection_json)
+        export_layout.addWidget(export_json_btn)
+        
+        backup_db_btn = QPushButton("Backup Database")
+        export_json_btn.setStyleSheet("font-size: 11px; padding: 6px;")
+        backup_db_btn.clicked.connect(self.backup_database)
+        export_layout.addWidget(backup_db_btn)
+        
+        export_group.setLayout(export_layout)
+        layout.addWidget(export_group)
+        
+        layout.addStretch()
+        
+        # Update initial stats
+        self.update_collection_stats()
+        self.update_data_quality_stats()
+    
+    def export_collection_image(self):
+        """Export collection as high-quality image"""
+        # Check if user has any cards
+        collection_info = self.get_collection_info()
+        if collection_info['total_cards'] == 0:
+            QMessageBox.information(self, "No Collection", 
+                "You don't have any cards in your collection yet.\n"
+                "Import some cards first!")
+            return
+        
+        # Open export options dialog
+        options_dialog = CollectionExportOptionsDialog(self.db_manager, self)
+        if options_dialog.exec() == QDialog.DialogCode.Accepted:
+            export_config = options_dialog.get_export_config()
+            
+            # Show progress dialog
+            progress_dialog = QProgressDialog("Preparing export...", "Cancel", 0, 100, self)
+            progress_dialog.setWindowTitle("Exporting Collection")
+            progress_dialog.setWindowModality(Qt.WindowModality.WindowModal)
+            progress_dialog.show()
+            
+            # Create and start generator thread
+            self.generator_thread = CollectionImageGenerator(self.db_manager, export_config)
+            self.generator_thread.progress_updated.connect(progress_dialog.setValue)
+            self.generator_thread.progress_updated.connect(
+                lambda value, message: progress_dialog.setLabelText(message)
+            )
+            self.generator_thread.generation_complete.connect(
+                lambda file_path: self.on_export_complete(file_path, progress_dialog)
+            )
+            self.generator_thread.generation_error.connect(
+                lambda error: self.on_export_error(error, progress_dialog)
+            )
+            
+            # Handle cancel
+            progress_dialog.canceled.connect(self.generator_thread.terminate)
+            
+            # Start generation
+            self.generator_thread.start()
+    
+    def on_export_complete(self, file_path, progress_dialog):
+        """Handle successful export completion"""
+        progress_dialog.hide()
+        
+        # Show success message with option to open file
+        msg_box = QMessageBox(self)
+        msg_box.setWindowTitle("Export Complete")
+        msg_box.setText(f"Collection exported successfully!")
+        msg_box.setInformativeText(f"Saved to: {file_path}")
+        msg_box.setStandardButtons(
+            QMessageBox.StandardButton.Open | QMessageBox.StandardButton.Ok
+        )
+        msg_box.setDefaultButton(QMessageBox.StandardButton.Ok)
+        
+        result = msg_box.exec()
+        if result == QMessageBox.StandardButton.Open:
+            # Open file in default image viewer
+            import subprocess
+            import sys
+            try:
+                if sys.platform == "win32":
+                    os.startfile(file_path)
+                elif sys.platform == "darwin":
+                    subprocess.run(["open", file_path])
+                else:
+                    subprocess.run(["xdg-open", file_path])
+            except Exception as e:
+                QMessageBox.warning(self, "Cannot Open File", 
+                    f"Export successful but cannot open file: {str(e)}")
+    
+    def on_export_error(self, error_message, progress_dialog):
+        """Handle export error"""
+        progress_dialog.hide()
+        QMessageBox.critical(self, "Export Failed", 
+            f"Failed to export collection:\n{error_message}")
+    
+    def get_collection_info(self):
+        """Get basic collection information"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT COUNT(*) as total_cards,
+                   COUNT(DISTINCT p.generation) as generations
+            FROM gold_user_collections uc
+            JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+        """)
+        
+        result = cursor.fetchone()
+        conn.close()
+        
+        return {
+            'total_cards': result[0] if result else 0,
+            'generations': result[1] if result else 0
+        }
+    
+    def export_collection_json(self):
+        """Legacy JSON export functionality"""
+        file_path, _ = QFileDialog.getSaveFileName(
+            self, "Export Collection (JSON)", "my_pokemon_collection.json", 
+            "JSON files (*.json)"
+        )
+        
+        if file_path:
+            try:
+                collection = self.db_manager.get_user_collection()
+                
+                with open(file_path, 'w') as f:
+                    json.dump(collection, f, indent=2)
+                
+                QMessageBox.information(self, "Export Complete", 
+                    f"Collection exported to {file_path}")
+            except Exception as e:
+                QMessageBox.critical(self, "Export Failed", f"Error: {str(e)}")
+    
+    def backup_database(self):
+        """Create a backup of the database"""
+        file_path, _ = QFileDialog.getSaveFileName(
+            self, "Backup Database", 
+            f"pokedextop_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.db", 
+            "Database files (*.db)"
+        )
+        
+        if file_path:
+            try:
+                import shutil
+                shutil.copy2(self.db_manager.db_path, file_path)
+                QMessageBox.information(self, "Backup Complete", 
+                    f"Database backed up to {file_path}")
+            except Exception as e:
+                QMessageBox.critical(self, "Backup Failed", f"Error: {str(e)}")
+    
+    def update_collection_stats(self):
+        """Update detailed collection statistics"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        # Collection completion by generation
+        cursor.execute("""
+            SELECT g.generation, g.name, 
+                   COUNT(p.pokemon_id) as total_pokemon,
+                   COUNT(uc.pokemon_id) as imported_pokemon
+            FROM gold_pokemon_generations g
+            LEFT JOIN silver_pokemon_master p ON g.generation = p.generation
+            LEFT JOIN gold_user_collections uc ON p.pokemon_id = uc.pokemon_id
+            GROUP BY g.generation, g.name
+            ORDER BY g.generation
+        """)
+        
+        gen_stats = cursor.fetchall()
+        
+        # Build stats text
+        stats_text = "Collection Completion by Generation:\n\n"
+        total_pokemon = 0
+        total_imported = 0
+        
+        for gen_num, gen_name, pokemon_count, imported_count in gen_stats:
+            if pokemon_count > 0:
+                completion_rate = (imported_count / pokemon_count) * 100
+                stats_text += f"{gen_name}: {imported_count}/{pokemon_count} ({completion_rate:.1f}%)\n"
+                total_pokemon += pokemon_count
+                total_imported += imported_count
+        
+        if total_pokemon > 0:
+            overall_completion = (total_imported / total_pokemon) * 100
+            stats_text += f"\nOverall: {total_imported}/{total_pokemon} ({overall_completion:.1f}%)"
+        
+        self.collection_stats_label.setText(stats_text)
+        conn.close()
+    
+    def update_data_quality_stats(self):
+        """Update data quality metrics"""
+        conn = sqlite3.connect(self.db_manager.db_path)
+        cursor = conn.cursor()
+        
+        # Data freshness
+        cursor.execute("""
+            SELECT 
+                COUNT(*) as total_records,
+                COUNT(CASE WHEN datetime(data_pull_timestamp) > datetime('now', '-7 days') THEN 1 END) as recent_records
+            FROM bronze_tcg_cards
+        """)
+        
+        result = cursor.fetchone()
+        total_records, recent_records = result if result else (0, 0)
+        
+        # Missing images
+        cursor.execute("""
+            SELECT COUNT(*) FROM silver_tcg_cards 
+            WHERE image_url_large IS NULL OR image_url_small IS NULL
+        """)
+        
+        missing_images_result = cursor.fetchone()
+        missing_images = missing_images_result[0] if missing_images_result else 0
+        
+        quality_text = f"Data Quality Metrics:\n\n"
+        quality_text += f"Total Records: {total_records}\n"
+        quality_text += f"Recent (7 days): {recent_records}\n"
+        quality_text += f"Missing Images: {missing_images}\n"
+        
+        if total_records > 0:
+            freshness_rate = (recent_records / total_records) * 100
+            quality_text += f"Data Freshness: {freshness_rate:.1f}%"
+        
+        self.data_quality_label.setText(quality_text)
+        conn.close()
+        
 # =============================================================================
 # BROWSE TAB ARCHITECTURE 
 # =============================================================================
@@ -4110,58 +5006,10 @@ class PokemonDashboard(QMainWindow):
         self.tcg_scroll.setWidget(empty_widget)
     
     def create_analytics_tab(self):
-        """Create analytics and insights tab"""
-        analytics_tab = QWidget()
-        analytics_layout = QVBoxLayout(analytics_tab)
-        
-        # Collection statistics
-        stats_group = QGroupBox("Collection Statistics")
-        stats_layout = QVBoxLayout()
-        
-        self.collection_stats_label = QLabel()
-        self.collection_stats_label.setStyleSheet("color: white; font-size: 12px;")
-        stats_layout.addWidget(self.collection_stats_label)
-        
-        refresh_stats_btn = QPushButton("Refresh Statistics")
-        refresh_stats_btn.clicked.connect(self.update_collection_stats)
-        stats_layout.addWidget(refresh_stats_btn)
-        
-        stats_group.setLayout(stats_layout)
-        analytics_layout.addWidget(stats_group)
-        
-        # Data quality metrics
-        quality_group = QGroupBox("Data Quality")
-        quality_layout = QVBoxLayout()
-        
-        self.data_quality_label = QLabel()
-        self.data_quality_label.setStyleSheet("color: white; font-size: 12px;")
-        quality_layout.addWidget(self.data_quality_label)
-        
-        quality_group.setLayout(quality_layout)
-        analytics_layout.addWidget(quality_group)
-        
-        # Export options
-        export_group = QGroupBox("Export & Backup")
-        export_layout = QVBoxLayout()
-        
-        export_collection_btn = QPushButton("Export Collection")
-        export_collection_btn.clicked.connect(self.export_collection)
-        export_layout.addWidget(export_collection_btn)
-        
-        backup_db_btn = QPushButton("Backup Database")
-        backup_db_btn.clicked.connect(self.backup_database)
-        export_layout.addWidget(backup_db_btn)
-        
-        export_group.setLayout(export_layout)
-        analytics_layout.addWidget(export_group)
-        
-        analytics_layout.addStretch()
-        
-        # Update initial stats
-        self.update_collection_stats()
-        self.update_data_quality_stats()
-        
-        self.main_tabs.addTab(analytics_tab, "Share & Statistics")
+        """Create analytics and insights tab with enhanced export functionality"""
+        # Replace the old analytics tab with the new enhanced version
+        enhanced_analytics_tab = EnhancedAnalyticsTab(self.db_manager, self)
+        self.main_tabs.addTab(enhanced_analytics_tab, "📊 Analytics")
     
     def load_sets_combo(self):
         """Load available sets into combo box with enhanced display names"""
