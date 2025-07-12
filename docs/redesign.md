@@ -73,14 +73,14 @@
 - Update database schema to track local paths
 - Fallback to API for missing images
 
-*Priority 2: Background Pre-caching*
-- *Add background image downloading:*
+### Priority 2: Background Pre-caching*
+*Add background image downloading:*
 - Pre-cache images when cards are imported
 - Batch download optimization
 - Progress tracking for cache building
 
-*Priority 3: Database Image Storage*
-- *Alternative BLOB storage approach:*
+### Priority 3: Database Image Storage*
+*Alternative BLOB storage approach:*
 - Store images directly in SQLite
 - Utilize existing S3 integration layer
 - Single-file distribution benefits
