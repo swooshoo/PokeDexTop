@@ -48,7 +48,8 @@ class CollectionExportOptionsDialog(QDialog):
             'include_artist_label': False,
             'cards_per_row': 4,
             'image_quality': 'high',
-            'generation_filter': 'all'
+            'generation_filter': 'all',
+            'tcg_only_mode': False  # Default to Full Pokédex Grid
         }
         self.setWindowTitle("Export Collection")
         self.setMinimumSize(450, 600)
@@ -157,6 +158,13 @@ class CollectionExportOptionsDialog(QDialog):
         quality_layout.addStretch()
         layout_layout.addLayout(quality_layout)
         
+        # TCG Cards Only option
+        self.tcg_only_checkbox = QCheckBox("TCG Cards Only (exclude Pokémon without imported cards)")
+        self.tcg_only_checkbox.setChecked(False)  # Default to Full Pokédex Grid
+        self.tcg_only_checkbox.setStyleSheet("color: white;")
+        self.tcg_only_checkbox.toggled.connect(self.on_tcg_only_toggled)
+        layout_layout.addWidget(self.tcg_only_checkbox)
+
         layout_group.setLayout(layout_layout)
         layout.addWidget(layout_group)
         
@@ -206,16 +214,38 @@ class CollectionExportOptionsDialog(QDialog):
         self.update_preview()
     
     def get_collection_info(self):
-        """Get basic collection information"""
+        """Get collection information based on current mode"""
         conn = sqlite3.connect(self.db_manager.db_path)
         cursor = conn.cursor()
         
-        cursor.execute("""
-            SELECT COUNT(*) as total_cards,
-                   COUNT(DISTINCT p.generation) as generations
-            FROM gold_user_collections uc
-            JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
-        """)
+        # Check if checkbox exists yet (it might not during initial UI setup)
+        tcg_only_mode = hasattr(self, 'tcg_only_checkbox') and self.tcg_only_checkbox.isChecked()
+        
+        if tcg_only_mode:
+            # TCG Cards Only mode - only count imported cards
+            cursor.execute("""
+                SELECT COUNT(*) as total_cards,
+                    COUNT(DISTINCT p.generation) as generations
+                FROM gold_user_collections uc
+                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+            """)
+        else:
+            # Full Pokédex Grid mode - count all Pokémon in selected generation(s)
+            if hasattr(self, 'gen_combo') and self.gen_combo.currentData() != 'all':
+                # Specific generation
+                cursor.execute("""
+                    SELECT COUNT(*) as total_pokemon,
+                        1 as generations
+                    FROM silver_pokemon_master p
+                    WHERE p.generation = ?
+                """, (self.gen_combo.currentData(),))
+            else:
+                # All generations
+                cursor.execute("""
+                    SELECT COUNT(*) as total_pokemon,
+                        COUNT(DISTINCT p.generation) as generations
+                    FROM silver_pokemon_master p
+                """)
         
         result = cursor.fetchone()
         conn.close()
@@ -249,18 +279,22 @@ class CollectionExportOptionsDialog(QDialog):
         generation = self.gen_combo.currentData()
         cards_per_row = self.cards_per_row_spin.value()
         custom_title = self.title_input.text().strip() or "My Pokémon Collection"
+        tcg_only_mode = self.tcg_only_checkbox.isChecked()
         
         # Get card count for preview
+        collection_info = self.get_collection_info()
+        card_count = collection_info['total_cards']
+        
         if generation == "all":
-            card_count = self.get_collection_info()['total_cards']
             gen_text = "All Generations"
         else:
-            card_count = next((count for gen, name, count in self.get_available_generations() 
-                             if gen == generation), 0)
             gen_text = f"Generation {generation}"
         
         if card_count == 0:
-            self.preview_label.setText("No cards found for selected generation.")
+            if tcg_only_mode:
+                self.preview_label.setText("No imported TCG cards found for selected generation.")
+            else:
+                self.preview_label.setText("No Pokémon found for selected generation.")
             self.export_btn.setEnabled(False)
             return
         
@@ -272,7 +306,16 @@ class CollectionExportOptionsDialog(QDialog):
         preview_text = f"Export Preview:\n\n"
         preview_text += f"📋 Title: \"{custom_title}\"\n"
         preview_text += f"🎯 Generation: {gen_text}\n"
-        preview_text += f"🃏 Cards: {card_count}\n"
+        
+        # Different preview text based on mode
+        if tcg_only_mode:
+            preview_text += f"🃏 Mode: TCG Cards Only\n"
+            preview_text += f"🃏 Cards: {card_count} imported cards\n"
+        else:
+            preview_text += f"📖 Mode: Full Pokédex Grid\n"
+            preview_text += f"🎮 Pokémon: {card_count} total\n"
+            preview_text += f"   (Mix of imported cards + game sprites)\n"
+        
         preview_text += f"📐 Grid: {rows} rows × {cards_per_row} columns\n\n"
         
         preview_text += "Card Labels:\n"
@@ -294,6 +337,33 @@ class CollectionExportOptionsDialog(QDialog):
         preview_text += f"\n\nFooter: Export date + \"Exported by PokéDextop\""
         
         self.preview_label.setText(preview_text)
+        
+    def on_tcg_only_toggled(self, checked):
+        """Handle TCG Cards Only checkbox toggle with confirmation"""
+        if checked:
+            # Show confirmation dialog
+            msg_box = QMessageBox(self)
+            msg_box.setWindowTitle("TCG Cards Only Export")
+            msg_box.setText("TCG Cards Only Mode")
+            msg_box.setInformativeText(
+                "This mode will only include Pokémon that you have imported TCG cards for. "
+                "Pokémon without imported cards will be excluded from the export.\n\n"
+                "For a complete Pokédex grid showing your full collection progress "
+                "(including Pokémon without cards), leave this option unchecked.\n\n"
+                "Continue with TCG Cards Only export?"
+            )
+            msg_box.setStandardButtons(QMessageBox.StandardButton.Cancel | QMessageBox.StandardButton.Ok)
+            msg_box.setDefaultButton(QMessageBox.StandardButton.Cancel)
+            
+            result = msg_box.exec()
+            
+            if result == QMessageBox.StandardButton.Cancel:
+                # User cancelled, uncheck the box
+                self.tcg_only_checkbox.setChecked(False)
+                return
+        
+        # Update preview with new mode
+        self.update_preview()
     
     def start_export(self):
         """Start the export process"""
@@ -305,7 +375,8 @@ class CollectionExportOptionsDialog(QDialog):
             'include_artist_label': self.artist_checkbox.isChecked(),
             'cards_per_row': self.cards_per_row_spin.value(),
             'image_quality': self.quality_combo.currentData(),
-            'generation_filter': self.gen_combo.currentData()
+            'generation_filter': self.gen_combo.currentData(),
+            'tcg_only_mode': self.tcg_only_checkbox.isChecked()
         })
         
         # Get export file path
@@ -345,6 +416,13 @@ class CollectionImageGenerator(QThread):
     def run(self):
         """Generate the collection image"""
         try:
+            # DEBUG: Print export configuration
+            print(f"\n=== EXPORT DEBUG START ===")
+            print(f"TCG Only Mode: {self.config.get('tcg_only_mode', 'NOT SET')}")
+            print(f"Generation Filter: {self.config.get('generation_filter', 'NOT SET')}")
+            print(f"Cards per row: {self.config.get('cards_per_row', 'NOT SET')}")
+            print(f"Config keys: {list(self.config.keys())}")
+            
             # Step 1: Get collection data
             self.progress_updated.emit(10, "Loading collection data...")
             collection_data = self.get_collection_data()
@@ -352,6 +430,20 @@ class CollectionImageGenerator(QThread):
             if not collection_data:
                 self.generation_error.emit("No cards found in collection.")
                 return
+            
+            # DEBUG: Print collection data summary
+            print(f"\n--- COLLECTION DATA DEBUG ---")
+            print(f"Total items returned: {len(collection_data)}")
+            if collection_data:
+                content_types = {}
+                for item in collection_data:
+                    content_type = item.get('content_type', 'UNKNOWN')
+                    content_types[content_type] = content_types.get(content_type, 0) + 1
+                    
+                print(f"Content type breakdown: {content_types}")
+                print(f"First 3 items:")
+                for i, item in enumerate(collection_data[:3]):
+                    print(f"  [{i}] Pokemon #{item['pokemon_id']} {item['pokemon_name']} - Type: {item['content_type']} - Has URL: {bool(item.get('image_url'))}")
             
             # Step 2: Download images
             self.progress_updated.emit(20, "Downloading card images...")
@@ -375,37 +467,78 @@ class CollectionImageGenerator(QThread):
             self.generation_error.emit(f"Export failed: {str(e)}")
     
     def get_collection_data(self):
-        """Get collection data from database"""
+        """Get collection data from database based on export mode"""
         conn = sqlite3.connect(self.db_manager.db_path)
         cursor = conn.cursor()
         
-        # Build query based on generation filter
-        if self.config['generation_filter'] == 'all':
-            query = """
-                SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
-                       c.name as card_name, c.set_name, c.artist, c.image_url_large,
-                       c.image_url_small, p.generation
-                FROM gold_user_collections uc
-                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
-                JOIN silver_tcg_cards c ON uc.card_id = c.card_id
-                ORDER BY p.pokemon_id
-            """
-            cursor.execute(query)
+        # DEBUG: Print which branch we're taking
+        print(f"\n--- SQL QUERY DEBUG ---")
+        print(f"TCG Only Mode: {self.config['tcg_only_mode']}")
+        print(f"Generation Filter: {self.config['generation_filter']}")
+    
+        if self.config['tcg_only_mode']:
+            # TCG Cards Only mode - only get imported cards
+            if self.config['generation_filter'] == 'all':
+                print("EXECUTING: TCG Cards Only query")
+                
+                query = """
+                    SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
+                        c.name as card_name, c.set_name, c.artist, c.image_url_large,
+                        c.image_url_small, p.generation, 'tcg_card' as content_type
+                    FROM gold_user_collections uc
+                    JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+                    JOIN silver_tcg_cards c ON uc.card_id = c.card_id
+                    ORDER BY p.pokemon_id
+                """
+                cursor.execute(query)
+            else:
+                
+                query = """
+                    SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
+                        c.name as card_name, c.set_name, c.artist, c.image_url_large,
+                        c.image_url_small, p.generation, 'tcg_card' as content_type
+                    FROM gold_user_collections uc
+                    JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+                    JOIN silver_tcg_cards c ON uc.card_id = c.card_id
+                    WHERE p.generation = ?
+                    ORDER BY p.pokemon_id
+                """
+                cursor.execute(query, (self.config['generation_filter'],))
         else:
-            query = """
-                SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
-                       c.name as card_name, c.set_name, c.artist, c.image_url_large,
-                       c.image_url_small, p.generation
-                FROM gold_user_collections uc
-                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
-                JOIN silver_tcg_cards c ON uc.card_id = c.card_id
-                WHERE p.generation = ?
-                ORDER BY p.pokemon_id
-            """
-            cursor.execute(query, (self.config['generation_filter'],))
+            print("EXECUTING: Full Pokédex Grid query")
+            # Full Pokédex Grid mode - get all Pokémon, with or without cards
+            if self.config['generation_filter'] == 'all':
+                query = """
+                    SELECT p.pokemon_id, uc.card_id, p.name as pokemon_name,
+                        c.name as card_name, c.set_name, c.artist, c.image_url_large,
+                        c.image_url_small, p.generation,
+                        CASE WHEN uc.card_id IS NOT NULL THEN 'tcg_card' ELSE 'sprite' END as content_type
+                    FROM silver_pokemon_master p
+                    LEFT JOIN gold_user_collections uc ON p.pokemon_id = uc.pokemon_id
+                    LEFT JOIN silver_tcg_cards c ON uc.card_id = c.card_id
+                    ORDER BY p.pokemon_id
+                """
+                cursor.execute(query)
+            else:
+                query = """
+                    SELECT p.pokemon_id, uc.card_id, p.name as pokemon_name,
+                        c.name as card_name, c.set_name, c.artist, c.image_url_large,
+                        c.image_url_small, p.generation,
+                        CASE WHEN uc.card_id IS NOT NULL THEN 'tcg_card' ELSE 'sprite' END as content_type
+                    FROM silver_pokemon_master p
+                    LEFT JOIN gold_user_collections uc ON p.pokemon_id = uc.pokemon_id
+                    LEFT JOIN silver_tcg_cards c ON uc.card_id = c.card_id
+                    WHERE p.generation = ?
+                    ORDER BY p.pokemon_id
+                """
+                cursor.execute(query, (self.config['generation_filter'],))
         
         results = cursor.fetchall()
         conn.close()
+        print(f"Raw SQL results count: {len(results)}")
+        if results:
+            print(f"First raw result: {results[0]}")
+            print(f"Sample result fields: pokemon_id={results[0][0]}, content_type={results[0][9] if len(results[0]) > 9 else 'MISSING'}")
         
         return [
             {
@@ -416,40 +549,69 @@ class CollectionImageGenerator(QThread):
                 'set_name': row[4],
                 'artist': row[5],
                 'image_url': row[6] or row[7],  # Prefer large, fallback to small
-                'generation': row[8]
+                'generation': row[8],
+                'content_type': row[9]  # 'tcg_card' or 'sprite'
             }
             for row in results
         ]
     
     def download_all_images(self, collection_data):
-        """Download all card images"""
-        total_cards = len(collection_data)
+        """Download all images (TCG cards and sprites)"""
+        total_items = len(collection_data)
         
-        for i, card_data in enumerate(collection_data):
-            if card_data['image_url']:
-                try:
-                    # Download image
-                    response = requests.get(card_data['image_url'], timeout=10)
+        print(f"\n--- IMAGE DOWNLOAD DEBUG ---")
+        print(f"Starting download for {total_items} items")
+    
+        for i, item_data in enumerate(collection_data):
+            pokemon_id = item_data['pokemon_id']
+            content_type = item_data['content_type']
+            
+            print(f"\nDownloading [{i+1}/{total_items}] Pokemon #{pokemon_id} - Type: {content_type}")
+            
+            try:
+                if content_type == 'tcg_card' and item_data['image_url']:
+                    print(f"  TCG CARD: {item_data['image_url']}")
+                    # Download TCG card image
+                    response = requests.get(item_data['image_url'], timeout=10)
                     response.raise_for_status()
                     
-                    # Create QPixmap from data
                     pixmap = QPixmap()
                     pixmap.loadFromData(response.content)
                     
                     if not pixmap.isNull():
-                        self.downloaded_images[card_data['card_id']] = pixmap
+                        self.downloaded_images[pokemon_id] = pixmap
+                    else:
+                        self.downloaded_images[pokemon_id] = self.create_placeholder_image()
+                        
+                elif content_type == 'sprite':
                     
-                except Exception as e:
-                    print(f"Failed to download image for {card_data['card_name']}: {e}")
-                    # Create placeholder
-                    self.downloaded_images[card_data['card_id']] = self.create_placeholder_image()
+                    # Download Pokémon sprite
+                    sprite_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemon_id}.png"
+                    print(f"  SPRITE: {sprite_url}")
+                    response = requests.get(sprite_url, timeout=10)
+                    response.raise_for_status()
+                    
+                    pixmap = QPixmap()
+                    pixmap.loadFromData(response.content)
+                    
+                    if not pixmap.isNull():
+                        self.downloaded_images[pokemon_id] = pixmap
+                    else:
+                        self.downloaded_images[pokemon_id] = self.create_placeholder_image()
+                else:
+                    # Fallback to placeholder
+                    self.downloaded_images[pokemon_id] = self.create_placeholder_image()
+                    print(f"  PLACEHOLDER: No valid content_type or URL")
                 
-                # Update progress
-                progress = 20 + int((i + 1) / total_cards * 50)
-                self.progress_updated.emit(progress, f"Downloaded {i + 1}/{total_cards} images...")
-            else:
-                # Create placeholder for missing image
-                self.downloaded_images[card_data['card_id']] = self.create_placeholder_image()
+            except Exception as e:
+                print(f"Failed to download image for Pokemon #{pokemon_id}: {e}")
+                self.downloaded_images[pokemon_id] = self.create_placeholder_image()
+                print(f"  ERROR: {e}")
+            
+            # Update progress
+            progress = 20 + int((i + 1) / total_items * 50)
+            self.progress_updated.emit(progress, f"Downloaded {i + 1}/{total_items} images...")
+            
     
     def create_placeholder_image(self):
         """Create a placeholder image for missing cards"""
@@ -467,25 +629,30 @@ class CollectionImageGenerator(QThread):
         return pixmap
     
     def create_collection_image(self, collection_data):
-        """Create the final collection image"""
+        """Create the final collection image with mixed content support - Safe Version"""
+        print(f"\n--- IMAGE CREATION DEBUG ---")
+        print(f"Creating image for {len(collection_data)} items")
+        print(f"Downloaded images available: {len(self.downloaded_images)}")
+        print(f"Downloaded image keys: {list(self.downloaded_images.keys())[:10]}...")  # First 10 keys
+        
         # Calculate dimensions
         cards_per_row = self.config['cards_per_row']
-        total_cards = len(collection_data)
-        rows = math.ceil(total_cards / cards_per_row)
+        total_items = len(collection_data)
+        rows = math.ceil(total_items / cards_per_row)
         
-        # Quality settings
+        # Quality settings - standardized for mixed content
         if self.config['image_quality'] == 'high':
-            card_width, card_height = 245, 342
+            item_width, item_height = 200, 200  # Standardized square for mixed content
             spacing = 20
             font_size_title = 24
             font_size_labels = 10
         elif self.config['image_quality'] == 'medium':
-            card_width, card_height = 180, 252
+            item_width, item_height = 150, 150
             spacing = 15
             font_size_title = 20
             font_size_labels = 9
         else:  # low
-            card_width, card_height = 120, 168
+            item_width, item_height = 100, 100
             spacing = 10
             font_size_title = 16
             font_size_labels = 8
@@ -499,55 +666,107 @@ class CollectionImageGenerator(QThread):
         
         # Calculate total dimensions
         header_height = 80
-        footer_height = 60  # Space for footer with date and branding
-        total_width = (cards_per_row * card_width) + ((cards_per_row + 1) * spacing)
-        total_height = header_height + (rows * (card_height + label_height + spacing)) + spacing + footer_height
+        footer_height = 60
+        total_width = (cards_per_row * item_width) + ((cards_per_row + 1) * spacing)
+        total_height = header_height + (rows * (item_height + label_height + spacing)) + spacing + footer_height
         
         # Create the final image
         final_image = QPixmap(total_width, total_height)
         final_image.fill(QColor(44, 62, 80))  # Dark blue background
         
-        painter = QPainter(final_image)
-        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        # Create painter with proper error handling
+        painter = QPainter()
+        if not painter.begin(final_image):
+            print("ERROR: Failed to begin painting")
+            return final_image
         
-        # Draw header with custom title
-        self.draw_header(painter, total_width, header_height, collection_data, font_size_title)
-        
-        # Draw cards
-        current_y = header_height + spacing
-        for i, card_data in enumerate(collection_data):
-            row = i // cards_per_row
-            col = i % cards_per_row
+        try:
+            painter.setRenderHint(QPainter.RenderHint.Antialiasing)
             
-            x = spacing + col * (card_width + spacing)
-            y = current_y + row * (card_height + label_height + spacing)
+            # Draw header with custom title
+            self.draw_header(painter, total_width, header_height, collection_data, font_size_title)
             
-            # Draw card image
-            if card_data['card_id'] in self.downloaded_images:
-                card_image = self.downloaded_images[card_data['card_id']]
-                scaled_card = card_image.scaled(
-                    card_width, card_height, 
-                    Qt.AspectRatioMode.KeepAspectRatio, 
-                    Qt.TransformationMode.SmoothTransformation
-                )
+            # Draw items (cards/sprites)
+            current_y = header_height + spacing
+            for i, item_data in enumerate(collection_data):
+                row = i // cards_per_row
+                col = i % cards_per_row
                 
-                # Center the scaled image
-                card_x = x + (card_width - scaled_card.width()) // 2
-                card_y = y + (card_height - scaled_card.height()) // 2
-                painter.drawPixmap(card_x, card_y, scaled_card)
+                x = spacing + col * (item_width + spacing)
+                y = current_y + row * (item_height + label_height + spacing)
+                
+                # Draw item image (standardized size for both cards and sprites)
+                pokemon_id = item_data['pokemon_id']
+                
+                # DEBUG: Only debug first 5 items to avoid spam
+                if i < 5:
+                    print(f"  Drawing [{i}] Pokemon #{pokemon_id} - Available in downloads: {pokemon_id in self.downloaded_images}")
+                
+                # Safe image drawing with null checks
+                if pokemon_id in self.downloaded_images:
+                    try:
+                        item_image = self.downloaded_images[pokemon_id]
+                        if item_image and not item_image.isNull():
+                            content_type = item_data.get('content_type', 'sprite')
+                            
+                            # Apply different scaling based on content type
+                            if content_type == 'sprite':
+                                # For sprites, smaller scale with fast transformation
+                                target_width = min(item_width - 20, 100)
+                                target_height = min(item_height - 20, 100)
+                            else:
+                                # For TCG cards, larger scale
+                                target_width = item_width - 10
+                                target_height = item_height - 10
+                            
+                            # Safe scaling
+                            scaled_item = item_image.scaled(
+                                target_width, target_height,
+                                Qt.AspectRatioMode.KeepAspectRatio, 
+                                Qt.TransformationMode.SmoothTransformation
+                            )
+                            
+                            if not scaled_item.isNull():
+                                # Center the scaled image
+                                item_x = x + (item_width - scaled_item.width()) // 2
+                                item_y = y + (item_height - scaled_item.height()) // 2
+                                
+                                # Draw image
+                                painter.drawPixmap(item_x, item_y, scaled_item)
+                                
+                                # Simple border (removed complex border logic)
+                                if content_type == 'sprite':
+                                    painter.setPen(QPen(QColor(135, 206, 235), 1))  # Light blue, thinner
+                                else:
+                                    painter.setPen(QPen(QColor(52, 73, 94), 1))   # Dark, thinner
+                                
+                                painter.drawRect(item_x - 1, item_y - 1, scaled_item.width() + 2, scaled_item.height() + 2)
+                        
+                    except Exception as e:
+                        print(f"  ERROR drawing Pokemon #{pokemon_id}: {e}")
+                        # Continue to next item instead of crashing
+                        
+                # Draw labels (simplified)
+                if label_height > 0:
+                    try:
+                        self.draw_item_labels(
+                            painter, item_data, x, y + item_height + 5, 
+                            item_width, label_height, font_size_labels
+                        )
+                    except Exception as e:
+                        print(f"  ERROR drawing labels for Pokemon #{pokemon_id}: {e}")
             
-            # Draw labels
-            if label_height > 0:
-                self.draw_card_labels(
-                    painter, card_data, x, y + card_height + 5, 
-                    card_width, label_height, font_size_labels
-                )
+            # Draw footer with date and branding
+            footer_y = total_height - footer_height
+            self.draw_footer(painter, total_width, footer_height, footer_y, font_size_title - 4)
+            
+        except Exception as e:
+            print(f"PAINTING ERROR: {e}")
+        finally:
+            # Ensure painter is properly ended
+            painter.end()
         
-        # Draw footer with date and branding
-        footer_y = total_height - footer_height
-        self.draw_footer(painter, total_width, footer_height, footer_y, font_size_title - 4)
-        
-        painter.end()
+        print("Image creation completed successfully")
         return final_image
     
     def draw_header(self, painter, width, height, collection_data, font_size):
