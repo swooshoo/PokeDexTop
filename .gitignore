@@ -49,3 +49,6 @@ data/backups/*
 migration_script.py
 
 testexports/
+
+#pre modularized
+app.py
