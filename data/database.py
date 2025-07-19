@@ -36,8 +36,19 @@ class DatabaseManager:
         self.init_database()
         self.configure_database_for_concurrency()
         
+        self.collection_modified_callback = None  # NEW
+        
         # Cache manager will be injected later to avoid circular imports
         self._cache_manager = None
+        
+    def set_collection_modified_callback(self, callback):
+        """Set callback to be called when collection is modified"""
+        self.collection_modified_callback = callback
+        
+    def _notify_collection_modified(self):
+        """Notify that collection was modified"""
+        if self.collection_modified_callback:
+            self.collection_modified_callback()
     
     def set_cache_manager(self, cache_manager):
         """Set the cache manager for image caching integration"""
@@ -643,6 +654,9 @@ class DatabaseManager:
         
         conn.commit()
         conn.close()
+        
+        # NEW: Notify collection was modified
+        self._notify_collection_modified()
     
     # =============================================================================
     # CACHE INTEGRATION METHODS (NEW FOR HYBRID STRATEGY)

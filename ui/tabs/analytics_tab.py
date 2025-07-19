@@ -6,23 +6,14 @@ Provides collection analytics and export functionality including PNG exports
 import os
 import json
 import sqlite3
-import math
-from datetime import datetime
-from typing import Dict, Any, Optional
+from datetime import datetime, timedelta
 
 # PyQt6 imports
 from PyQt6.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QGroupBox,
-    QMessageBox, QDialog, QFileDialog, QProgressDialog, QTextEdit,
-    QComboBox, QLineEdit, QCheckBox, QSpinBox
-)
-from PyQt6.QtCore import Qt, QThread, pyqtSignal, QTimer
-from PyQt6.QtGui import QFont, QPixmap, QPainter, QPen, QColor
-from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
-
-# Internal imports - UPDATED
-from data.database import DatabaseManager
-from ui.dialogs.export_dialog import ExportOptionsDialog  # ✅ Fixed import
+    QWidget, QVBoxLayout, QLabel, QPushButton, QGroupBox,
+    QMessageBox, QDialog, QFileDialog, QProgressDialog)
+from PyQt6.QtCore import Qt
+from ui.dialogs.export_dialog import ExportOptionsDialog  
 from export.image_generator import CollectionImageGenerator
 
 
@@ -34,6 +25,11 @@ class EnhancedAnalyticsTab(QWidget):
         self.db_manager = db_manager
         self.cache_manager = cache_manager  # Store cache_manager
         self.parent_window = parent_window
+        
+        self.stats_cache_valid = False # NEW: Smart caching and throttling
+        self.last_refresh_time = None
+        self.min_refresh_interval = timedelta(seconds=5)  # Throttle to max once per 5 seconds
+        
         self.initUI()
     
     def initUI(self):
@@ -47,9 +43,9 @@ class EnhancedAnalyticsTab(QWidget):
         self.collection_stats_label.setStyleSheet("color: white; font-size: 12px;")
         stats_layout.addWidget(self.collection_stats_label)
         
-        refresh_stats_btn = QPushButton("Refresh Statistics")
-        refresh_stats_btn.clicked.connect(self.update_collection_stats)
-        stats_layout.addWidget(refresh_stats_btn)
+        # refresh_stats_btn = QPushButton("Refresh Statistics") REMOVED REFRESH BUTTON ENTIRELY
+        # refresh_stats_btn.clicked.connect(self.update_collection_stats)
+        # stats_layout.addWidget(refresh_stats_btn)
         
         stats_group.setLayout(stats_layout)
         layout.addWidget(stats_group)
@@ -311,3 +307,40 @@ class EnhancedAnalyticsTab(QWidget):
         
         self.data_quality_label.setText(quality_text)
         conn.close()
+        
+    def mark_stats_dirty(self):
+        """Mark statistics as needing refresh"""
+        self.stats_cache_valid = False
+        print("📊 Analytics stats marked as dirty")
+
+    def refresh_if_needed(self):
+        """Refresh stats only if needed (dirty) and not throttled"""
+        now = datetime.now()
+        
+        # Check if refresh is needed
+        if not self.stats_cache_valid:
+            # Check throttling - don't refresh if we just did recently
+            if (self.last_refresh_time is None or 
+                now - self.last_refresh_time >= self.min_refresh_interval):
+                
+                print("📊 Refreshing analytics stats (cache invalid)")
+                self.update_collection_stats()
+                self.update_data_quality_stats()
+                self.stats_cache_valid = True
+                self.last_refresh_time = now
+                return True
+            else:
+                time_remaining = self.min_refresh_interval - (now - self.last_refresh_time)
+                print(f"📊 Analytics refresh throttled ({time_remaining.seconds}s remaining)")
+                return False
+        else:
+            print("📊 Analytics stats cache valid, skipping refresh")
+            return False
+
+    def force_refresh_stats(self):
+        """Force refresh stats regardless of cache state (for sync operations)"""
+        print("📊 Force refreshing analytics stats")
+        self.update_collection_stats()
+        self.update_data_quality_stats()
+        self.stats_cache_valid = True
+        self.last_refresh_time = datetime.now()

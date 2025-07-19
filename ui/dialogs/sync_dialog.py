@@ -320,6 +320,10 @@ class DataSyncDialog(QDialog):
             if cards:
                 self.log_output.append(f"✓ Found {len(cards)} cards for {pokemon_name}")
                 self.progress_label.setText(f"Found {len(cards)} cards for {pokemon_name}")
+                
+                # NEW: Mark analytics dirty after Pokemon sync
+                if hasattr(self.parent(), 'mark_analytics_dirty'):
+                    self.parent().mark_analytics_dirty()
             else:
                 self.log_output.append(f"⚠ No cards found for {pokemon_name}")
                 self.progress_label.setText(f"No cards found for {pokemon_name}")
@@ -395,6 +399,10 @@ class DataSyncDialog(QDialog):
             
             self.progress_label.setText(f"Generation {generation} sync complete! {success_count} cards synced")
             self.log_output.append(f"✅ Generation {generation} complete: {success_count} total cards")
+            
+            # NEW: Mark analytics dirty after sync completes
+            if hasattr(self.parent(), 'mark_analytics_dirty'):
+                self.parent().mark_analytics_dirty()
             
         except Exception as e:
             self.log_output.append(f"❌ Generation sync failed: {str(e)}")
@@ -476,6 +484,10 @@ class DataSyncDialog(QDialog):
             
             self.progress_label.setText(f"All generations sync complete! {total_cards_synced} total cards synced")
             self.log_output.append(f"🎉 FULL SYNC COMPLETE: {total_cards_synced} cards from all generations")
+            
+            # NEW: Mark analytics dirty after all sync completes
+            if hasattr(self.parent(), 'mark_analytics_dirty'):
+                self.parent().mark_analytics_dirty()
             
         except Exception as e:
             self.log_output.append(f"❌ Full generation sync failed: {str(e)}")

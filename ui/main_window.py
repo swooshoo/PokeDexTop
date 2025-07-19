@@ -31,6 +31,8 @@ class PokemonDashboard(QMainWindow):
         
         # Initialize core systems
         self.db_manager = DatabaseManager()
+        # NEW: Set up collection modification callback
+        self.db_manager.set_collection_modified_callback(self.mark_analytics_dirty)
         self.cache_manager = CacheManager()
         self.image_loader = ImageLoader(self.cache_manager)
         self.session_cart = SessionCartManager()
@@ -180,6 +182,11 @@ class PokemonDashboard(QMainWindow):
             # Refresh all tabs after sync
             self.refresh_all_tabs()
             self.update_status_bar()
+            
+            # NEW: Mark analytics stats as dirty after sync
+            analytics_tab = self.get_analytics_tab()
+            if analytics_tab and hasattr(analytics_tab, 'mark_stats_dirty'):
+                analytics_tab.mark_stats_dirty()
     
     def refresh_all_tabs(self):
         """Refresh all generation tabs and other content"""
@@ -188,16 +195,37 @@ class PokemonDashboard(QMainWindow):
             gen_tab = self.gen_tabs.widget(i)
             if hasattr(gen_tab, 'refresh_data'):
                 gen_tab.refresh_data()
-        
-        # Refresh other tabs as needed
-        # (Browse and Analytics tabs can handle their own refresh)
     
+    def get_analytics_tab(self):
+        """Get reference to analytics tab widget"""
+        for i in range(self.main_tabs.count()):
+            tab = self.main_tabs.widget(i)
+            if isinstance(tab, EnhancedAnalyticsTab):
+                return tab
+        return None
+
+    def mark_analytics_dirty(self):
+        """Convenience method to mark analytics stats as dirty"""
+        analytics_tab = self.get_analytics_tab()
+        if analytics_tab:
+            analytics_tab.mark_stats_dirty()
+        
     def on_main_tab_changed(self, index):
         """Handle main tab changes - auto-refresh Pokédex when switching back"""
         # Index 0 is the "My Pokédex" tab
         if index == 0:
             self.refresh_all_tabs()
             print("📚 Auto-refreshed Pokédex after tab switch")
+            
+        # NEW: Index 2 is the "Analytics" tab (adjust index if needed)
+        elif index == 2:  # Verify this is correct analytics tab index
+            analytics_tab = self.main_tabs.widget(index)
+            if hasattr(analytics_tab, 'refresh_if_needed'):
+                refreshed = analytics_tab.refresh_if_needed()
+                if refreshed:
+                    print("📊 Auto-refreshed Analytics after tab switch")
+                else:
+                    print("📊 Analytics tab switch - no refresh needed")
     
     def update_status_bar(self):
         """Update the status bar with current statistics"""

@@ -1,6 +1,6 @@
 """
 Session Cart Manager - Extracted from app.py lines 350-450
-Manages the import cart during the current session
+Manages the     cart during the current session
 """
 
 from typing import Dict, Any, Callable, Optional
