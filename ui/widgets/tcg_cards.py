@@ -68,16 +68,18 @@ class ClickableTCGCard(QFrame):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
                 self.image_label, 
-                (250, 310)
+                (250, 310),
+                entity_id=self.card_data.get('id'),
+                cache_type='tcg_card'
             )
         elif self.card_data.get('image_url_small'):
             self.image_loader.load_image(
                 self.card_data['image_url_small'], 
                 self.image_label, 
-                (250, 310)
+                (250, 310),
+                entity_id=self.card_data.get('id'),
+                cache_type='tcg_card'
             )
-        else:
-            self.image_label.setText("No Image")
         
         # Card info
         info_container = QWidget()
@@ -205,16 +207,18 @@ class CartItemWidget(QFrame):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
                 self.image_label, 
-                (75, 95)
+                (75, 95),
+                entity_id=self.card_data.get('id'),
+                cache_type='tcg_card'
             )
         elif self.card_data.get('image_url_small'):
             self.image_loader.load_image(
                 self.card_data['image_url_small'], 
                 self.image_label, 
-                (75, 95)
+                (75, 95),
+                entity_id=self.card_data.get('id'),
+                cache_type='tcg_card'
             )
-        else:
-            self.image_label.setText("No\nImage")
         
         # Card info
         info_layout = QVBoxLayout()

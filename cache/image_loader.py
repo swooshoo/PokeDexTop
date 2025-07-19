@@ -6,7 +6,7 @@ Implements dual pipeline: fast UI loading + high-quality export caching
 from PyQt6 import sip
 from pathlib import Path
 from typing import Optional, Tuple, Dict, Any
-from PyQt6.QtCore import QObject, pyqtSignal, QUrl, QTimer
+from PyQt6.QtCore import QObject, pyqtSignal, QUrl, QTimer, Qt
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 from PyQt6.QtWidgets import QLabel
@@ -40,10 +40,41 @@ class ImageLoader(QObject):
     
     def load_image(self, url: str, label: QLabel, size: Optional[Tuple[int, int]] = None,
                    entity_id: Optional[str] = None, cache_type: str = 'tcg_card'):
-        """
-        Load image for UI display with sprite-aware styling
-        Uses fast pipeline for immediate UI feedback
-        """
+        
+        print(f"🔍 load_image: entity_id={entity_id}, cache_type={cache_type}, url={url[:50]}...")
+        
+        if cache_type == 'sprite' and entity_id:
+            from pathlib import Path
+            project_root = Path(__file__).parent.parent
+            sprite_path = project_root / 'assets' / 'sprites' / 'pokemon' / f"{entity_id}.png"
+            
+            if sprite_path.exists():
+                pixmap = QPixmap(str(sprite_path))
+                if not pixmap.isNull():
+                    if size:
+                        pixmap = pixmap.scaled(size[0], size[1], Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
+                    label.setPixmap(pixmap)
+                    # Apply sprite styling
+                    label.setStyleSheet("""
+                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                                stop: 0 #f0f8ff, stop: 1 #e6f3ff);
+                        border-radius: 6px; 
+                        border: 2px solid #4a90e2;
+                        padding: 8px;
+                    """)
+                    return
+            
+            # No local sprite - show clean placeholder and STOP (no download)
+            label.setText(f"#{entity_id}\nSprite\nMissing")
+            label.setStyleSheet("""
+                background-color: #f8f9fa; 
+                border-radius: 8px; 
+                color: #6c757d;
+                font-size: 10px;
+                border: 2px dashed #dee2e6;
+                padding: 15px;
+            """)
+        
         if not url:
             label.setText("No Image")
             return
