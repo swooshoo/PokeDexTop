@@ -1,56 +1,63 @@
-# export/image_generator.py
+# export/image_generator.py - UPDATED for Cache-First Export
 """
-Collection Image Generator - Extracted from app.py lines 200-500
-Thread for generating collection images
+Collection Image Generator - Cache-Aware Version
+Thread for generating collection images with cache integration
 """
 
 import os
 import sqlite3
 import math
-import requests
 from datetime import datetime
 from typing import Dict, Any, List
+from pathlib import Path
 
 from PyQt6.QtCore import QThread, pyqtSignal
 from PyQt6.QtGui import QPixmap, QPainter, QPen, QColor, QFont
 from PyQt6.QtCore import Qt
-from PyQt6.QtNetwork import QNetworkAccessManager
 
 from data.database import DatabaseManager
+from cache.manager import CacheManager
+from cache.image_loader import ImageLoader
 
 
 class CollectionImageGenerator(QThread):
-    """Thread for generating collection image"""
+    """Thread for generating collection image with cache integration"""
     
     progress_updated = pyqtSignal(int, str)
     generation_complete = pyqtSignal(str)
     generation_error = pyqtSignal(str)
     
-    def __init__(self, db_manager: DatabaseManager, export_config: Dict[str, Any]):
+    def __init__(self, db_manager: DatabaseManager, export_config: Dict[str, Any], 
+                 cache_manager: CacheManager, image_loader: ImageLoader):
         super().__init__()
         self.db_manager = db_manager
         self.config = export_config
-        self.network_manager = QNetworkAccessManager()
-        self.downloaded_images = {}
+        self.cache_manager = cache_manager
+        self.image_loader = image_loader
+        
+        # NO MORE in-memory image storage - stream from cache instead
+        self.image_paths = {}  # card_id -> cached_path
     
     def run(self):
         """Generate the collection image"""
         try:
             # Step 1: Get collection data
-            self.progress_updated.emit(10, "Loading collection data...")
+            self.progress_updated.emit(5, "Loading collection data...")
             collection_data = self.get_collection_data()
             
             if not collection_data:
                 self.generation_error.emit("No cards found in collection.")
                 return
             
-            # Step 2: Download images
-            self.progress_updated.emit(20, "Downloading card images...")
-            self.download_all_images(collection_data)
+            # Step 2: Ensure all images are cached (NEW CACHE-FIRST LOGIC)
+            self.progress_updated.emit(10, "Preparing image cache...")
+            if not self.prepare_image_cache(collection_data):
+                self.generation_error.emit("Failed to prepare image cache.")
+                return
             
-            # Step 3: Create composite image
+            # Step 3: Create composite image (streaming from cache)
             self.progress_updated.emit(70, "Creating collection image...")
-            final_image = self.create_collection_image(collection_data)
+            final_image = self.create_collection_image_from_cache(collection_data)
             
             # Step 4: Save image
             self.progress_updated.emit(90, "Saving image...")
@@ -63,35 +70,288 @@ class CollectionImageGenerator(QThread):
                 self.generation_error.emit("Failed to save image file.")
                 
         except Exception as e:
-            self.generation_error.emit(f"Export failed: {str(e)}")
+            self.generation_error.emit(f"Export error: {str(e)}")
+    
+    def prepare_image_cache(self, collection_data: List[Dict[str, Any]]) -> bool:
+        """
+        RESILIENT CACHE-FIRST METHOD: Handles API failures gracefully
+        Always succeeds - uses placeholders for failed images
+        """
+        total_cards = len(collection_data)
+        cached_count = 0
+        download_count = 0
+        failed_count = 0
+        
+        # Determine export quality based on config
+        quality_map = {
+            'high': 'export_high',
+            'medium': 'export_medium', 
+            'low': 'export_low'
+        }
+        export_quality = quality_map.get(self.config.get('image_quality', 'high'), 'export_high')
+        
+        for i, card_data in enumerate(collection_data):
+            entity_id = card_data['card_id']
+            
+            if not card_data.get('image_url'):
+                # No image URL - will use placeholder
+                self.image_paths[entity_id] = None
+                failed_count += 1
+                continue
+            
+            cache_type = 'tcg_card'
+            
+            # Check if already cached
+            cached_path = self.cache_manager.get_cached_path(entity_id, cache_type, export_quality)
+            
+            if cached_path and cached_path.exists():
+                # Already cached!
+                self.image_paths[entity_id] = cached_path
+                cached_count += 1
+                
+                progress = 10 + int((i + 1) / total_cards * 60)
+                self.progress_updated.emit(progress, f"Cache hit: {cached_count}, Failed: {failed_count}")
+                
+            else:
+                # Try to download and cache - with fallback to smaller image
+                cached_successfully = False
+                
+                # Try high-res image first
+                try:
+                    cached_path = self.cache_manager.cache_image(
+                        card_data['image_url'], 
+                        entity_id, 
+                        cache_type, 
+                        export_quality
+                    )
+                    
+                    if cached_path and cached_path.exists():
+                        self.image_paths[entity_id] = cached_path
+                        download_count += 1
+                        cached_successfully = True
+                        
+                except Exception as e:
+                    print(f"High-res cache failed for {card_data['card_name']}: {e}")
+                
+                # If high-res failed, try fallback to small image
+                if not cached_successfully and card_data.get('image_url') != card_data.get('image_url_small'):
+                    try:
+                        fallback_url = card_data['image_url'].replace('_hires.png', '.png')
+                        cached_path = self.cache_manager.cache_image(
+                            fallback_url, 
+                            entity_id, 
+                            cache_type, 
+                            export_quality
+                        )
+                        
+                        if cached_path and cached_path.exists():
+                            self.image_paths[entity_id] = cached_path
+                            download_count += 1
+                            cached_successfully = True
+                            print(f"✓ Fallback success for {card_data['card_name']}")
+                            
+                    except Exception as e:
+                        print(f"Fallback cache failed for {card_data['card_name']}: {e}")
+                
+                # If both failed, use placeholder
+                if not cached_successfully:
+                    self.image_paths[entity_id] = None
+                    failed_count += 1
+                
+                progress = 10 + int((i + 1) / total_cards * 60)
+                self.progress_updated.emit(progress, f"Downloaded: {download_count}, Failed: {failed_count}")
+        
+        # Summary - ALWAYS SUCCEED, even with failures
+        total_ready = cached_count + download_count
+        placeholder_count = failed_count
+        
+        if total_ready > 0:
+            self.progress_updated.emit(70, f"Cache ready: {total_ready}/{total_cards} images")
+        else:
+            self.progress_updated.emit(70, f"API issues: Using {placeholder_count} placeholders")
+        
+        # ALWAYS return True - export proceeds with placeholders for failed images
+        return True
+    
+    def create_collection_image_from_cache(self, collection_data: List[Dict[str, Any]]) -> QPixmap:
+        """
+        NEW STREAMING METHOD: Create composite image by streaming from cache
+        No bulk memory loading - process one image at a time
+        """
+        cards_per_row = self.config['cards_per_row']
+        rows = math.ceil(len(collection_data) / cards_per_row)
+        
+        # Calculate dimensions based on quality
+        quality_settings = {
+            'high': {'card_width': 400, 'card_height': 560},
+            'medium': {'card_width': 300, 'card_height': 420}, 
+            'low': {'card_width': 200, 'card_height': 280}
+        }
+        
+        settings = quality_settings.get(self.config.get('image_quality', 'high'), quality_settings['high'])
+        card_width = settings['card_width']
+        card_height = settings['card_height']
+        
+        padding = 20
+        title_height = 80
+        footer_height = 40
+        
+        # Calculate canvas size
+        canvas_width = cards_per_row * card_width + (cards_per_row + 1) * padding
+        canvas_height = title_height + rows * card_height + (rows + 1) * padding + footer_height
+        
+        # Create final canvas
+        final_image = QPixmap(canvas_width, canvas_height)
+        final_image.fill(QColor(245, 245, 245))
+        
+        painter = QPainter(final_image)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        
+        # Draw title
+        self._draw_title(painter, canvas_width, title_height)
+        
+        # Draw cards (STREAMING - one at a time)
+        for i, card_data in enumerate(collection_data):
+            row = i // cards_per_row
+            col = i % cards_per_row
+            
+            x = padding + col * (card_width + padding)
+            y = title_height + padding + row * (card_height + padding)
+            
+            # Load image from cache (streaming)
+            card_pixmap = self._load_card_from_cache(
+                card_data['card_id'], 
+                card_width, 
+                card_height,
+                card_data.get('card_name', 'Unknown')
+            )
+            
+            # Draw immediately and release from memory
+            painter.drawPixmap(x, y, card_pixmap)
+            
+            # Optional: Draw labels if enabled
+            if self.config.get('include_pokedex_info', False):
+                self._draw_card_labels(painter, x, y, card_width, card_height, card_data)
+        
+        # Draw footer
+        self._draw_footer(painter, canvas_width, canvas_height - footer_height)
+        
+        painter.end()
+        return final_image
+    
+    def _load_card_from_cache(self, card_id: str, width: int, height: int, card_name: str) -> QPixmap:
+        """
+        Load single card image from cache and scale appropriately
+        Memory efficient - only one image loaded at a time
+        """
+        cached_path = self.image_paths.get(card_id)
+        
+        if cached_path and cached_path.exists():
+            # Load from cache
+            pixmap = QPixmap(str(cached_path))
+            if not pixmap.isNull():
+                # Scale to export size
+                return pixmap.scaled(width, height, Qt.AspectRatioMode.KeepAspectRatio, 
+                                   Qt.TransformationMode.SmoothTransformation)
+        
+        # Create placeholder
+        return self._create_placeholder_image(width, height, card_name)
+    
+    def _create_placeholder_image(self, width: int, height: int, card_name: str) -> QPixmap:
+        """Create informative placeholder for missing images"""
+        placeholder = QPixmap(width, height)
+        placeholder.fill(QColor(240, 240, 240))
+        
+        painter = QPainter(placeholder)
+        painter.setPen(QPen(QColor(100, 100, 100), 2))
+        painter.drawRect(2, 2, width-4, height-4)
+        
+        # Add Pokemon card-like border
+        painter.setPen(QPen(QColor(200, 200, 200), 1))
+        painter.drawRoundedRect(10, 10, width-20, height-20, 15, 15)
+        
+        # Add text with better formatting
+        title_font = QFont("Arial", max(12, width // 25), QFont.Weight.Bold)
+        painter.setFont(title_font)
+        painter.setPen(QColor(60, 60, 60))
+        
+        # Draw card name (truncated if needed)
+        name_text = card_name[:15] + "..." if len(card_name) > 15 else card_name
+        painter.drawText(15, height//3, name_text)
+        
+        # Add status text
+        status_font = QFont("Arial", max(8, width // 35))
+        painter.setFont(status_font)
+        painter.setPen(QColor(120, 120, 120))
+        painter.drawText(15, height//2, "Image Unavailable")
+        painter.drawText(15, height//2 + 20, "API Server Issue")
+        
+        # Add small logo/icon area
+        painter.setPen(QPen(QColor(180, 180, 180), 1))
+        icon_size = min(width//4, height//4)
+        painter.drawEllipse(width//2 - icon_size//2, height*2//3, icon_size, icon_size)
+        
+        painter.end()
+        return placeholder
+        
+    def _draw_title(self, painter: QPainter, canvas_width: int, title_height: int):
+        """Draw collection title"""
+        title_font = QFont("Arial", 24, QFont.Weight.Bold)
+        painter.setFont(title_font)
+        painter.setPen(QColor(50, 50, 50))
+        
+        title_rect = painter.boundingRect(0, 0, canvas_width, title_height, 
+                                        Qt.AlignmentFlag.AlignCenter, 
+                                        self.config.get('custom_title', 'My Pokémon Collection'))
+        
+        painter.drawText(title_rect, Qt.AlignmentFlag.AlignCenter, 
+                        self.config.get('custom_title', 'My Pokémon Collection'))
+    
+    def _draw_card_labels(self, painter: QPainter, x: int, y: int, width: int, height: int, card_data: Dict[str, Any]):
+        """Draw card labels if enabled"""
+        if self.config.get('include_set_label', False):
+            label_font = QFont("Arial", 10)
+            painter.setFont(label_font)
+            painter.setPen(QColor(70, 70, 70))
+            painter.drawText(x + 5, y + height - 10, card_data.get('set_name', ''))
+    
+    def _draw_footer(self, painter: QPainter, canvas_width: int, footer_y: int):
+        """Draw export footer"""
+        footer_font = QFont("Arial", 10)
+        painter.setFont(footer_font)
+        painter.setPen(QColor(100, 100, 100))
+        
+        footer_text = f"Generated by PokéDextop on {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+        painter.drawText(10, footer_y + 20, footer_text)
     
     def get_collection_data(self) -> List[Dict[str, Any]]:
-        """Get collection data from database"""
+        """Get collection data from database - FIXED SCHEMA"""
         conn = sqlite3.connect(self.db_manager.db_path)
         cursor = conn.cursor()
         
-        # Build query based on generation filter
         if self.config['generation_filter'] == 'all':
             query = """
-                SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
-                       c.name as card_name, c.set_name, c.artist, c.image_url_large,
-                       c.image_url_small, p.generation
+                SELECT DISTINCT 
+                    uc.pokemon_id, uc.card_id, s.pokemon_name, s.name as card_name,
+                    s.set_name, s.artist, s.image_url_large, s.image_url_small,
+                    p.generation
                 FROM gold_user_collections uc
+                JOIN silver_tcg_cards s ON uc.card_id = s.card_id
                 JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
-                JOIN silver_tcg_cards c ON uc.card_id = c.card_id
-                ORDER BY p.pokemon_id
+                ORDER BY uc.pokemon_id
             """
             cursor.execute(query)
         else:
             query = """
-                SELECT uc.pokemon_id, uc.card_id, p.name as pokemon_name,
-                       c.name as card_name, c.set_name, c.artist, c.image_url_large,
-                       c.image_url_small, p.generation
+                SELECT DISTINCT 
+                    uc.pokemon_id, uc.card_id, s.pokemon_name, s.name as card_name,
+                    s.set_name, s.artist, s.image_url_large, s.image_url_small,
+                    p.generation
                 FROM gold_user_collections uc
+                JOIN silver_tcg_cards s ON uc.card_id = s.card_id
                 JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
-                JOIN silver_tcg_cards c ON uc.card_id = c.card_id
                 WHERE p.generation = ?
-                ORDER BY p.pokemon_id
+                ORDER BY uc.pokemon_id
             """
             cursor.execute(query, (self.config['generation_filter'],))
         
@@ -111,182 +371,3 @@ class CollectionImageGenerator(QThread):
             }
             for row in results
         ]
-    
-    def download_all_images(self, collection_data: List[Dict[str, Any]]):
-        """Download all card images"""
-        total_cards = len(collection_data)
-        
-        for i, card_data in enumerate(collection_data):
-            if card_data['image_url']:
-                try:
-                    # Download image
-                    response = requests.get(card_data['image_url'], timeout=10)
-                    response.raise_for_status()
-                    
-                    # Create QPixmap from data
-                    pixmap = QPixmap()
-                    pixmap.loadFromData(response.content)
-                    
-                    if not pixmap.isNull():
-                        self.downloaded_images[card_data['card_id']] = pixmap
-                    
-                except Exception as e:
-                    print(f"Failed to download image for {card_data['card_name']}: {e}")
-                    # Create placeholder
-                    self.downloaded_images[card_data['card_id']] = self.create_placeholder_image()
-                
-                # Update progress
-                progress = 20 + int((i + 1) / total_cards * 50)
-                self.progress_updated.emit(progress, f"Downloaded {i + 1}/{total_cards} images...")
-            else:
-                # Create placeholder for missing image
-                self.downloaded_images[card_data['card_id']] = self.create_placeholder_image()
-    
-    def create_placeholder_image(self) -> QPixmap:
-        """Create a placeholder image for missing cards"""
-        pixmap = QPixmap(245, 342)  # Standard card dimensions
-        pixmap.fill(QColor(52, 73, 94))  # Dark gray
-        
-        painter = QPainter(pixmap)
-        painter.setPen(QPen(QColor(127, 140, 141)))
-        painter.setFont(QFont('Arial', 12, QFont.Weight.Bold))
-        
-        rect = pixmap.rect()
-        painter.drawText(rect, Qt.AlignmentFlag.AlignCenter, "No Image\nAvailable")
-        painter.end()
-        
-        return pixmap
-    
-    def create_collection_image(self, collection_data: List[Dict[str, Any]]) -> QPixmap:
-        """Create the final collection image"""
-        # Calculate dimensions
-        cards_per_row = self.config['cards_per_row']
-        total_cards = len(collection_data)
-        rows = math.ceil(total_cards / cards_per_row)
-        
-        # Quality settings
-        if self.config['image_quality'] == 'high':
-            card_width, card_height = 245, 342
-            spacing = 20
-            font_size_title = 24
-            font_size_labels = 10
-        elif self.config['image_quality'] == 'medium':
-            card_width, card_height = 180, 252
-            spacing = 15
-            font_size_title = 20
-            font_size_labels = 9
-        else:  # low
-            card_width, card_height = 120, 168
-            spacing = 10
-            font_size_title = 16
-            font_size_labels = 8
-        
-        # Calculate label height
-        label_height = 0
-        if any([self.config['include_pokedex_info'], 
-                self.config['include_set_label'], 
-                self.config['include_artist_label']]):
-            label_height = 60
-        
-        # Calculate total dimensions
-        header_height = 80
-        footer_height = 60
-        total_width = (cards_per_row * card_width) + ((cards_per_row + 1) * spacing)
-        total_height = header_height + (rows * (card_height + label_height + spacing)) + spacing + footer_height
-        
-        # Create the final image
-        final_image = QPixmap(total_width, total_height)
-        final_image.fill(QColor(44, 62, 80))  # Dark blue background
-        
-        painter = QPainter(final_image)
-        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
-        
-        # Draw header with custom title
-        self.draw_header(painter, total_width, header_height, collection_data, font_size_title)
-        
-        # Draw cards
-        current_y = header_height + spacing
-        for i, card_data in enumerate(collection_data):
-            row = i // cards_per_row
-            col = i % cards_per_row
-            
-            x = spacing + col * (card_width + spacing)
-            y = current_y + row * (card_height + label_height + spacing)
-            
-            # Draw card image
-            if card_data['card_id'] in self.downloaded_images:
-                card_image = self.downloaded_images[card_data['card_id']]
-                scaled_card = card_image.scaled(
-                    card_width, card_height, 
-                    Qt.AspectRatioMode.KeepAspectRatio, 
-                    Qt.TransformationMode.SmoothTransformation
-                )
-                
-                # Center the scaled image
-                card_x = x + (card_width - scaled_card.width()) // 2
-                card_y = y + (card_height - scaled_card.height()) // 2
-                painter.drawPixmap(card_x, card_y, scaled_card)
-            
-            # Draw labels
-            if label_height > 0:
-                self.draw_card_labels(
-                    painter, card_data, x, y + card_height + 5, 
-                    card_width, label_height, font_size_labels
-                )
-        
-        # Draw footer
-        footer_y = total_height - footer_height
-        self.draw_footer(painter, total_width, footer_height, footer_y, font_size_title - 4)
-        
-        painter.end()
-        return final_image
-    
-    def draw_header(self, painter: QPainter, width: int, height: int, 
-                   collection_data: List[Dict[str, Any]], font_size: int):
-        """Draw the header section with custom title"""
-        painter.fillRect(0, 0, width, height, QColor(52, 73, 94))
-        
-        # Custom title
-        painter.setPen(QPen(QColor(255, 255, 255)))
-        title_font = QFont('Arial', font_size, QFont.Weight.Bold)
-        painter.setFont(title_font)
-        
-        custom_title = self.config['custom_title']
-        title_rect = painter.viewport()
-        title_rect.setHeight(35)
-        title_rect.moveTop(10)
-        painter.drawText(title_rect, Qt.AlignmentFlag.AlignCenter, custom_title)
-    
-    def draw_footer(self, painter: QPainter, width: int, height: int, 
-                   y_position: int, font_size: int):
-        """Draw the footer section with export date and branding"""
-        painter.fillRect(0, y_position, width, height, QColor(52, 73, 94))
-        
-        # Export date
-        painter.setPen(QPen(QColor(189, 195, 199)))
-        date_font = QFont('Arial', font_size)
-        painter.setFont(date_font)
-        
-        export_date = datetime.now().strftime('%B %d, %Y')
-        date_text = f"Exported on {export_date}"
-        
-        date_rect = painter.viewport()
-        date_rect.setHeight(20)
-        date_rect.moveTop(y_position + 10)
-        painter.drawText(date_rect, Qt.AlignmentFlag.AlignCenter, date_text)
-    
-    def draw_card_labels(self, painter: QPainter, card_data: Dict[str, Any], 
-                        x: int, y: int, width: int, height: int, font_size: int):
-        """Draw labels for a card"""
-        painter.setPen(QPen(QColor(255, 255, 255)))
-        label_font = QFont('Arial', font_size, QFont.Weight.Bold)
-        painter.setFont(label_font)
-        
-        current_y = y
-        line_height = font_size + 2
-        
-        if self.config['include_pokedex_info']:
-            pokemon_text = f"#{card_data['pokemon_id']:03d} {card_data['pokemon_name']}"
-            painter.drawText(x, current_y, width, line_height, 
-                           Qt.AlignmentFlag.AlignCenter, pokemon_text)
-            current_y += line_height

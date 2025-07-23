@@ -1,4 +1,8 @@
 """
+Enhanced Analytics Tab
+Provides collection analytics and export functionality including PNG exports
+"""
+"""
 Enhanced Analytics Tab - Extracted from app.py lines 274-550
 Provides collection analytics and export functionality including PNG exports
 """
@@ -6,29 +10,42 @@ Provides collection analytics and export functionality including PNG exports
 import os
 import json
 import sqlite3
+import sys  # ✅ ADD for file opening
 from datetime import datetime, timedelta
+from typing import Dict, Any, List, Optional
 
 # PyQt6 imports
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QPushButton, QGroupBox,
-    QMessageBox, QDialog, QFileDialog, QProgressDialog)
+    QMessageBox, QDialog, QFileDialog, QProgressDialog
+)
 from PyQt6.QtCore import Qt
+
+# Internal imports - ✅ ADD THESE LINES
+from data.database import DatabaseManager  # ✅ ADD THIS
+from cache.manager import CacheManager     # ✅ ADD THIS
+from cache.image_loader import ImageLoader # ✅ ADD THIS
 from ui.dialogs.export_dialog import ExportOptionsDialog  
 from export.image_generator import CollectionImageGenerator
 
 
 class EnhancedAnalyticsTab(QWidget):
-    """Enhanced analytics tab with new export functionality"""
+    """Enhanced analytics tab with cache-aware export functionality"""
     
-    def __init__(self, db_manager, cache_manager, parent_window):  # Added cache_manager parameter
+    def __init__(self, db_manager: DatabaseManager, cache_manager: CacheManager, 
+                 image_loader: ImageLoader, parent_window):  # ✅ UPDATED SIGNATURE
         super().__init__()
+        
+        # Store all dependencies
         self.db_manager = db_manager
-        self.cache_manager = cache_manager  # Store cache_manager
+        self.cache_manager = cache_manager      # ✅ Cache for export optimization
+        self.image_loader = image_loader        # ✅ Image loading with cache integration
         self.parent_window = parent_window
         
-        self.stats_cache_valid = False # NEW: Smart caching and throttling
+        # Analytics state management
+        self.stats_cache_valid = False
         self.last_refresh_time = None
-        self.min_refresh_interval = timedelta(seconds=5)  # Throttle to max once per 5 seconds
+        self.min_refresh_interval = timedelta(seconds=5)
         
         self.initUI()
     
@@ -102,28 +119,35 @@ class EnhancedAnalyticsTab(QWidget):
         self.update_data_quality_stats()
     
     def export_collection_image(self):
-        """Export collection as high-quality image"""
-        # Check if user has any cards
-        collection_info = self.get_collection_info()
-        if collection_info['total_cards'] == 0:
+        """Export collection as image using cache-first approach"""
+        # Check if we have any cards
+        collection_count = self.db_manager.get_user_collection()
+        
+        if collection_count == 0:
             QMessageBox.information(self, "No Collection", 
-                "You don't have any cards in your collection yet.\n"
-                "Import some cards first!")
+                                  "You don't have any cards in your collection to export.")
             return
         
-        # Open export options dialog - UPDATED
+        # Open export options dialog
         options_dialog = ExportOptionsDialog(self.db_manager, self)
         if options_dialog.exec() == QDialog.DialogCode.Accepted:
             export_config = options_dialog.get_export_config()
             
             # Show progress dialog
-            progress_dialog = QProgressDialog("Preparing export...", "Cancel", 0, 100, self)
+            progress_dialog = QProgressDialog("Preparing cache-first export...", "Cancel", 0, 100, self)
             progress_dialog.setWindowTitle("Exporting Collection")
             progress_dialog.setWindowModality(Qt.WindowModality.WindowModal)
             progress_dialog.show()
             
-            # Create and start generator thread
-            self.generator_thread = CollectionImageGenerator(self.db_manager, export_config)
+            # Create and start CACHE-AWARE generator thread
+            self.generator_thread = CollectionImageGenerator(
+                self.db_manager, 
+                export_config,
+                self.cache_manager,  # NEW: Pass cache manager
+                self.image_loader    # NEW: Pass image loader
+            )
+            
+            # Connect signals
             self.generator_thread.progress_updated.connect(progress_dialog.setValue)
             self.generator_thread.progress_updated.connect(
                 lambda value, message: progress_dialog.setLabelText(message)
@@ -142,34 +166,45 @@ class EnhancedAnalyticsTab(QWidget):
             self.generator_thread.start()
     
     def on_export_complete(self, file_path, progress_dialog):
-        """Handle successful export completion"""
+        """Handle successful export completion with API status info"""
         progress_dialog.hide()
         
-        # Show success message with option to open file
+        # Show success message with detailed info
         msg_box = QMessageBox(self)
         msg_box.setWindowTitle("Export Complete")
-        msg_box.setText(f"Collection exported successfully!")
-        msg_box.setInformativeText(f"Saved to: {file_path}")
-        msg_box.setStandardButtons(
-            QMessageBox.StandardButton.Open | QMessageBox.StandardButton.Ok
-        )
-        msg_box.setDefaultButton(QMessageBox.StandardButton.Ok)
         
-        result = msg_box.exec()
-        if result == QMessageBox.StandardButton.Open:
-            # Open file in default image viewer
-            import subprocess
-            import sys
-            try:
-                if sys.platform == "win32":
-                    os.startfile(file_path)
-                elif sys.platform == "darwin":
-                    subprocess.run(["open", file_path])
-                else:
-                    subprocess.run(["xdg-open", file_path])
-            except Exception as e:
-                QMessageBox.warning(self, "Cannot Open File", 
-                    f"Export successful but cannot open file: {str(e)}")
+        # Check if file was created successfully
+        if os.path.exists(file_path):
+            file_size = os.path.getsize(file_path) / (1024 * 1024)  # Size in MB
+            
+            msg_text = f"Collection exported successfully!\n\n"
+            msg_text += f"File: {os.path.basename(file_path)}\n"
+            msg_text += f"Size: {file_size:.1f} MB\n\n"
+            
+            # Note about potential placeholders due to API issues
+            msg_text += "Note: If Pokemon TCG API had server issues during export, "
+            msg_text += "some images may appear as placeholders. "
+            msg_text += "Try exporting again later for full image quality."
+            
+            msg_box.setText(msg_text)
+            msg_box.setStandardButtons(QMessageBox.StandardButton.Ok | QMessageBox.StandardButton.Open)
+            msg_box.setDefaultButton(QMessageBox.StandardButton.Open)
+            
+            result = msg_box.exec()
+            if result == QMessageBox.StandardButton.Open:
+                try:
+                    # Open the file with default application
+                    if sys.platform == "darwin":  # macOS
+                        os.system(f"open '{file_path}'")
+                    elif sys.platform == "win32":  # Windows
+                        os.startfile(file_path)
+                    else:  # Linux/Unix
+                        os.system(f"xdg-open '{file_path}'")
+                except Exception as e:
+                    print(f"Could not open file: {e}")
+        else:
+            msg_box.setText("Export completed but file not found. Please check the export location.")
+            msg_box.exec()
     
     def on_export_error(self, error_message, progress_dialog):
         """Handle export error"""

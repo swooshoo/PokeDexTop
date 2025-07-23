@@ -39,9 +39,9 @@ class ImageLoader(QObject):
         self._cache_timer.start(1000)  # Check every second
     
     def load_image(self, url: str, label: QLabel, size: Optional[Tuple[int, int]] = None,
-                   entity_id: Optional[str] = None, cache_type: str = 'tcg_card'):
-        
-        print(f"🔍 load_image: entity_id={entity_id}, cache_type={cache_type}, url={url[:50]}...")
+                entity_id: Optional[str] = None, cache_type: str = 'tcg_card'):
+        # REMOVE DEBUG SPAM - only log when debugging specific issues
+        # print(f"*load_image: entity_id={entity_id}, cache_type={cache_type}, url={url[:50]}...")
         
         if cache_type == 'sprite' and entity_id:
             from pathlib import Path
@@ -54,6 +54,7 @@ class ImageLoader(QObject):
                     if size:
                         pixmap = pixmap.scaled(size[0], size[1], Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
                     label.setPixmap(pixmap)
+                    
                     # Apply sprite styling
                     label.setStyleSheet("""
                         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
@@ -74,6 +75,7 @@ class ImageLoader(QObject):
                 border: 2px dashed #dee2e6;
                 padding: 15px;
             """)
+            return  # ✅ STOP HERE - no network requests for missing sprites
         
         if not url:
             label.setText("No Image")
@@ -97,8 +99,13 @@ class ImageLoader(QObject):
                     self._apply_post_load_styling(label, url)
                     return
         
-        # Download and display
-        self._download_for_ui(url, label, size, entity_id, cache_type)
+        # Only download for TCG cards and specific requests - NOT for missing sprites
+        if cache_type == 'tcg_card':
+            self._download_for_ui(url, label, size, entity_id, cache_type)
+        else:
+            # For other cache types, show placeholder instead of downloading
+            label.setText("Image Unavailable")
+            label.setStyleSheet("background-color: #f0f0f0; color: #666; padding: 10px;")
     
     def cache_for_export(self, url: str, entity_id: str, cache_type: str, 
                         quality: str = 'export_high', callback=None):

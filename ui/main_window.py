@@ -7,7 +7,6 @@ import sys
 from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                             QTabWidget, QPushButton, QLabel, QApplication)
 from PyQt6.QtCore import QTimer
-from PyQt6.QtGui import QFont
 
 from config.settings import DARK_THEME_STYLE
 from data.database import DatabaseManager
@@ -18,7 +17,6 @@ from ui.tabs.generation_tab import GenerationTab
 from ui.tabs.browse_tab import EnhancedBrowseTCGTab
 from ui.tabs.analytics_tab import EnhancedAnalyticsTab
 from ui.dialogs.sync_dialog import DataSyncDialog
-
 
 class PokemonDashboard(QMainWindow):
     """
@@ -146,8 +144,17 @@ class PokemonDashboard(QMainWindow):
             )
             self.gen_tabs.addTab(gen_tab, f"Gen {generation}")
         
+        # ✅ ADD: Connect tab change event for lazy loading
+        self.gen_tabs.currentChanged.connect(self.on_generation_tab_changed)
+        
         pokedex_layout.addWidget(self.gen_tabs)
         self.main_tabs.addTab(pokedex_tab, "📚 My Pokédex")
+        
+        # ✅ ADD: Load first tab when pokédex is first opened
+        if self.gen_tabs.count() > 0:
+            first_tab = self.gen_tabs.widget(0)
+            if hasattr(first_tab, 'on_tab_activated'):
+                first_tab.on_tab_activated()
     
     def create_tcg_browse_tab(self):
         """Create the TCG browsing tab"""
@@ -160,14 +167,34 @@ class PokemonDashboard(QMainWindow):
         self.main_tabs.addTab(browse_tab, "🃏 Browse TCG Cards")
     
     def create_analytics_tab(self):
-        """Create the analytics and export tab"""
+        """Create the analytics and export tab with cache dependencies"""
         analytics_tab = EnhancedAnalyticsTab(
             self.db_manager,
-            self.cache_manager,
+            self.cache_manager,    # NEW: Pass cache manager
+            self.image_loader,     # NEW: Pass image loader  
             self
         )
         
         self.main_tabs.addTab(analytics_tab, "📊 Analytics")
+    
+    def on_generation_tab_changed(self, index):
+        """Handle generation tab changes - trigger lazy loading"""
+        if index < 0:
+            return
+            
+        # Deactivate previous tab
+        for i in range(self.gen_tabs.count()):
+            if i != index:
+                tab = self.gen_tabs.widget(i)
+                if hasattr(tab, 'on_tab_deactivated'):
+                    tab.on_tab_deactivated()
+        
+        # Activate current tab
+        current_tab = self.gen_tabs.widget(index)
+        if hasattr(current_tab, 'on_tab_activated'):
+            current_tab.on_tab_activated()
+            
+        print(f"📊 Switched to generation tab: {current_tab.gen_name}")
     
     def setup_auto_refresh(self):
         """Set up auto-refresh timer for status updates"""
@@ -214,19 +241,25 @@ class PokemonDashboard(QMainWindow):
         """Handle main tab changes - auto-refresh Pokédex when switching back"""
         # Index 0 is the "My Pokédex" tab
         if index == 0:
-            self.refresh_all_tabs()
-            print("📚 Auto-refreshed Pokédex after tab switch")
+            # If switching to pokédex tab, activate current generation tab
+            if hasattr(self, 'gen_tabs') and self.gen_tabs.count() > 0:
+                current_gen_index = self.gen_tabs.currentIndex()
+                if current_gen_index >= 0:
+                    current_tab = self.gen_tabs.widget(current_gen_index)
+                    if hasattr(current_tab, 'on_tab_activated'):
+                        current_tab.on_tab_activated()
             
-        # NEW: Index 2 is the "Analytics" tab (adjust index if needed)
-        elif index == 2:  # Verify this is correct analytics tab index
+            print("📚 Auto-refreshed Pokédex after tab switch")
+
+        # Index 2 is the "Analytics" tab
+        elif index == 2:
             analytics_tab = self.main_tabs.widget(index)
             if hasattr(analytics_tab, 'refresh_if_needed'):
                 refreshed = analytics_tab.refresh_if_needed()
                 if refreshed:
                     print("📊 Auto-refreshed Analytics after tab switch")
                 else:
-                    print("📊 Analytics tab switch - no refresh needed")
-    
+                    print("📊 Analytics cache still valid")
     def update_status_bar(self):
         """Update the status bar with current statistics"""
         import sqlite3

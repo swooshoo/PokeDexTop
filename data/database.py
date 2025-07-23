@@ -34,12 +34,21 @@ class DatabaseManager:
             os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         
         self.init_database()
+        self.ensure_bronze_sets_table()
         self.configure_database_for_concurrency()
         
-        self.collection_modified_callback = None  # NEW
+        # ADD: Ensure bronze sets table exists
+        self.ensure_bronze_sets_table()
+        
+        self.collection_modified_callback = None
         
         # Cache manager will be injected later to avoid circular imports
         self._cache_manager = None
+    
+    # CALL this method in __init__ method after init_database()
+    def ensure_bronze_sets_table(self):
+        """Ensure bronze sets table exists"""
+        self.create_bronze_sets_table_if_missing()
         
     def set_collection_modified_callback(self, callback):
         """Set callback to be called when collection is modified"""
@@ -314,6 +323,7 @@ class DatabaseManager:
         finally:
             conn.close()
     
+    
     # =============================================================================
     # BRONZE LAYER OPERATIONS - Raw Data Storage
     # =============================================================================
@@ -359,6 +369,49 @@ class DatabaseManager:
             if conn:
                 conn.rollback()
             raise
+        finally:
+            if conn:
+                conn.close()
+                
+    def store_bronze_set_data(self, set_data):
+        """Store raw set data in Bronze layer with deduplication"""
+        conn = None
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            set_id = set_data.get('id')
+            raw_json = json.dumps(set_data, sort_keys=True)
+            content_hash = hashlib.sha256(raw_json.encode()).hexdigest()
+            
+            try:
+                cursor.execute("""
+                    INSERT INTO bronze_tcg_sets 
+                    (set_id, raw_json, data_hash)
+                    VALUES (?, ?, ?)
+                """, (set_id, raw_json, content_hash))
+                
+                bronze_id = cursor.lastrowid
+                conn.commit()
+                
+                # Process to Silver layer
+                self.process_bronze_to_silver_set(bronze_id, set_data)
+                
+                return bronze_id
+                
+            except sqlite3.IntegrityError:
+                # Duplicate hash - data already exists
+                cursor.execute("""
+                    SELECT id FROM bronze_tcg_sets 
+                    WHERE set_id = ? AND data_hash = ?
+                """, (set_id, content_hash))
+                
+                result = cursor.fetchone()
+                return result[0] if result else None
+                
+        except Exception as e:
+            print(f"Error storing bronze set data for {set_id}: {e}")
+            return None
         finally:
             if conn:
                 conn.close()
@@ -465,6 +518,37 @@ class DatabaseManager:
             if conn:
                 conn.close()
     
+    def process_bronze_to_silver_set(self, bronze_id: int, set_data: Dict[str, Any]):
+        """Process Bronze set data to Silver layer"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            set_id = set_data.get('id')
+            name = set_data.get('name')
+            series = set_data.get('series')
+            printed_total = set_data.get('printedTotal')
+            total = set_data.get('total')
+            release_date = set_data.get('releaseDate')
+            symbol_url = set_data.get('images', {}).get('symbol')
+            logo_url = set_data.get('images', {}).get('logo')
+            
+            cursor.execute("""
+                INSERT OR REPLACE INTO silver_tcg_sets 
+                (set_id, name, series, printed_total, total, release_date, 
+                 symbol_url, logo_url, source_bronze_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (set_id, name, series, printed_total, total, release_date,
+                  symbol_url, logo_url, bronze_id))
+            
+            conn.commit()
+            
+        except Exception as e:
+            print(f"Error processing set to silver layer: {e}")
+        finally:
+            if conn:
+                conn.close()
+
     def update_silver_pokemon_master_with_connection(self, cursor, pokemon_name, pokedex_numbers):
         """Update Pokemon master using existing connection"""
         try:
@@ -718,3 +802,221 @@ class DatabaseManager:
         if result and Path(result[0]).exists():
             return result[0]
         return None
+    
+    def get_total_collection_count(self) -> int:
+        """
+        Get total count of cards in user collection
+        ADDED: Missing method that analytics tab expects
+        """
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("SELECT COUNT(*) FROM gold_user_collections")
+            count = cursor.fetchone()[0]
+            
+            conn.close()
+            return count
+            
+        except Exception as e:
+            print(f"Error getting collection count: {e}")
+            return 0
+    
+    def get_collection_info(self) -> dict:
+        """
+        Get collection summary information
+        ADDED: For analytics and export dialog compatibility - FIXED SCHEMA
+        """
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # Get total cards and generations in collection
+            cursor.execute("""
+                SELECT COUNT(*) as total_cards,
+                       COUNT(DISTINCT p.generation) as generations
+                FROM gold_user_collections uc
+                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+            """)
+            
+            result = cursor.fetchone()
+            conn.close()
+            
+            return {
+                'total_cards': result[0] if result else 0,
+                'generations': result[1] if result else 0
+            }
+            
+        except Exception as e:
+            print(f"Error getting collection info: {e}")
+            return {'total_cards': 0, 'generations': 0}
+    
+    def get_available_generations(self) -> list:
+        """
+        Get generations that have cards in the collection
+        ADDED: For export dialog generation filtering - FIXED SCHEMA
+        """
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT p.generation, g.name, COUNT(*) as card_count
+                FROM gold_user_collections uc
+                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+                JOIN gold_pokemon_generations g ON p.generation = g.generation
+                GROUP BY p.generation, g.name
+                ORDER BY p.generation
+            """)
+            
+            results = cursor.fetchall()
+            conn.close()
+            
+            return results
+            
+        except Exception as e:
+            print(f"Error getting available generations: {e}")
+            return []
+    
+    def get_collection_by_generation(self, generation: int) -> list:
+        """
+        Get collection cards filtered by generation
+        ADDED: For generation-specific exports - FIXED SCHEMA
+        """
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT DISTINCT 
+                    uc.pokemon_id, uc.card_id, s.pokemon_name, s.name as card_name,
+                    s.set_name, s.artist, s.image_url_large, s.image_url_small,
+                    p.generation
+                FROM gold_user_collections uc
+                JOIN silver_tcg_cards s ON uc.card_id = s.card_id
+                JOIN silver_pokemon_master p ON uc.pokemon_id = p.pokemon_id
+                WHERE p.generation = ?
+                ORDER BY uc.pokemon_id
+            """, (generation,))
+            
+            results = cursor.fetchall()
+            conn.close()
+            
+            return [
+                {
+                    'pokemon_id': row[0],
+                    'card_id': row[1], 
+                    'pokemon_name': row[2],
+                    'card_name': row[3],
+                    'set_name': row[4],
+                    'artist': row[5],
+                    'image_url': row[6] or row[7],  # Prefer large, fallback to small
+                    'generation': row[8]
+                }
+                for row in results
+            ]
+            
+        except Exception as e:
+            print(f"Error getting collection by generation: {e}")
+            return []
+        
+    def get_all_sets_grouped_by_series(self) -> Dict[str, List[Dict[str, Any]]]:
+        """Get all sets grouped by series for UI display"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT set_id, name, series, printed_total, total, release_date
+                FROM silver_tcg_sets 
+                ORDER BY series, release_date DESC
+            """)
+            
+            results = cursor.fetchall()
+            conn.close()
+            
+            # Group by series
+            grouped = {}
+            for row in results:
+                set_id, name, series, printed_total, total, release_date = row
+                
+                if series not in grouped:
+                    grouped[series] = []
+                
+                grouped[series].append({
+                    'id': set_id,
+                    'name': name,
+                    'series': series,
+                    'printedTotal': printed_total,
+                    'total': total,
+                    'releaseDate': release_date
+                })
+            
+            return grouped
+            
+        except Exception as e:
+            print(f"Error getting sets grouped by series: {e}")
+            return {}
+    
+    def get_all_sets(self) -> List[Dict[str, Any]]:
+        """Get all sets from database"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT set_id, name, series, printed_total, total, release_date,
+                       symbol_url, logo_url
+                FROM silver_tcg_sets 
+                ORDER BY release_date DESC
+            """)
+            
+            results = cursor.fetchall()
+            conn.close()
+            
+            sets = []
+            for row in results:
+                set_id, name, series, printed_total, total, release_date, symbol_url, logo_url = row
+                
+                sets.append({
+                    'id': set_id,
+                    'name': name,
+                    'series': series,
+                    'printedTotal': printed_total,
+                    'total': total,
+                    'releaseDate': release_date,
+                    'images': {
+                        'symbol': symbol_url,
+                        'logo': logo_url
+                    }
+                })
+            
+            return sets
+            
+        except Exception as e:
+            print(f"Error getting all sets: {e}")
+            return []
+    
+    def create_bronze_sets_table_if_missing(self):
+        """Create bronze_tcg_sets table if it doesn't exist"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS bronze_tcg_sets (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    set_id TEXT NOT NULL,
+                    api_source TEXT DEFAULT 'pokemontcg.io',
+                    raw_json TEXT NOT NULL,
+                    data_pull_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    data_hash TEXT NOT NULL,
+                    UNIQUE(set_id, data_hash)
+                )
+            """)
+            
+            conn.commit()
+            conn.close()
+            
+        except Exception as e:
+            print(f"Error creating bronze sets table: {e}")

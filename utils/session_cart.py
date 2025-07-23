@@ -4,7 +4,7 @@ Manages the     cart during the current session
 """
 
 from typing import Dict, Any, Callable, Optional
-
+    
 class SessionCartManager:
     """Manages the import cart during the current session"""
     

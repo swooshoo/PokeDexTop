@@ -64,12 +64,16 @@ class ClickableTCGCard(QFrame):
         layout.addWidget(self.image_label)
         
         # Load image
+        entity_id = (self.card_data.get('card_id') or 
+             self.card_data.get('id') or 
+             self.card_data.get('card_name', 'unknown'))
+
         if self.card_data.get('image_url_large'):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
                 self.image_label, 
                 (250, 310),
-                entity_id=self.card_data.get('id'),
+                entity_id=entity_id,  # ✅ NEW - proper fallback
                 cache_type='tcg_card'
             )
         elif self.card_data.get('image_url_small'):
@@ -77,7 +81,7 @@ class ClickableTCGCard(QFrame):
                 self.card_data['image_url_small'], 
                 self.image_label, 
                 (250, 310),
-                entity_id=self.card_data.get('id'),
+                entity_id=entity_id,  # ✅ NEW - proper fallback
                 cache_type='tcg_card'
             )
         
@@ -202,13 +206,17 @@ class CartItemWidget(QFrame):
         """)
         layout.addWidget(self.image_label)
         
-        # Load image
+        #load image
+        entity_id = (self.card_data.get('card_id') or 
+                    self.card_data.get('id') or 
+                    self.card_data.get('card_name', 'unknown'))
+
         if self.card_data.get('image_url_large'):
             self.image_loader.load_image(
                 self.card_data['image_url_large'], 
                 self.image_label, 
                 (75, 95),
-                entity_id=self.card_data.get('id'),
+                entity_id=entity_id,  # ✅ NEW
                 cache_type='tcg_card'
             )
         elif self.card_data.get('image_url_small'):
@@ -216,7 +224,7 @@ class CartItemWidget(QFrame):
                 self.card_data['image_url_small'], 
                 self.image_label, 
                 (75, 95),
-                entity_id=self.card_data.get('id'),
+                entity_id=entity_id,  # ✅ NEW
                 cache_type='tcg_card'
             )
         

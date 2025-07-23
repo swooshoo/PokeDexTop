@@ -10,7 +10,7 @@ import time
 import shutil
 from pathlib import Path
 from datetime import datetime, timedelta
-from typing import Optional, Tuple, List
+from typing import Dict, Any, Optional, Tuple, List
 import requests
 from PyQt6.QtGui import QPixmap
 
@@ -412,3 +412,133 @@ class CacheManager:
         
         conn.commit()
         conn.close()
+        
+    def get_export_quality_path(self, entity_id: str, cache_type: str, export_quality: str) -> Optional[Path]:
+        """
+        Get cached path for export quality images
+        
+        Args:
+            entity_id: Card ID or Pokemon ID
+            cache_type: 'tcg_card', 'sprite', 'artwork'
+            export_quality: 'export_high', 'export_medium', 'export_low'
+        """
+        return self.get_cached_path(entity_id, cache_type, export_quality)
+    
+    def cache_for_export(self, url: str, entity_id: str, cache_type: str, 
+                        export_quality: str = 'export_high') -> Optional[Path]:
+        """
+        Cache image specifically for export use with appropriate quality
+        
+        Args:
+            url: Original image URL
+            entity_id: Card ID or Pokemon ID
+            cache_type: 'tcg_card', 'sprite', 'artwork'
+            export_quality: 'export_high', 'export_medium', 'export_low'
+        """
+        return self.cache_image(url, entity_id, cache_type, export_quality)
+    
+    def prepare_export_cache(self, collection_data: List[Dict], 
+                           export_quality: str = 'export_high',
+                           progress_callback=None) -> Dict[str, Optional[Path]]:
+        """
+        Prepare cache for entire collection export
+        
+        Args:
+            collection_data: List of collection items
+            export_quality: Quality level for export
+            progress_callback: Function to call with progress (current, total)
+            
+        Returns:
+            Dictionary mapping entity_id to cached_path (or None if failed)
+        """
+        results = {}
+        total_items = len(collection_data)
+        
+        for i, item in enumerate(collection_data):
+            entity_id = item.get('card_id') or str(item.get('pokemon_id'))
+            cache_type = 'tcg_card' if item.get('card_id') else 'sprite'
+            url = item.get('image_url') or item.get('image_url_large')
+            
+            if url and entity_id:
+                try:
+                    cached_path = self.cache_for_export(url, entity_id, cache_type, export_quality)
+                    results[entity_id] = cached_path
+                except Exception as e:
+                    print(f"Failed to cache {entity_id}: {e}")
+                    results[entity_id] = None
+            else:
+                results[entity_id] = None
+            
+            if progress_callback:
+                progress_callback(i + 1, total_items)
+        
+        return results
+    
+    def get_cache_statistics(self) -> Dict[str, Any]:
+        """Get cache usage statistics for monitoring"""
+        conn = sqlite3.connect(self.cache_db)
+        cursor = conn.cursor()
+        
+        # Get counts by cache type and quality
+        cursor.execute("""
+            SELECT cache_type, quality_level, COUNT(*) as count,
+                   SUM(file_size) as total_size
+            FROM cache_entries 
+            GROUP BY cache_type, quality_level
+        """)
+        
+        stats = {
+            'by_type_quality': cursor.fetchall(),
+            'total_entries': 0,
+            'total_size_mb': 0
+        }
+        
+        # Get totals
+        cursor.execute("SELECT COUNT(*), SUM(file_size) FROM cache_entries")
+        total_count, total_size = cursor.fetchone()
+        
+        stats['total_entries'] = total_count or 0
+        stats['total_size_mb'] = round((total_size or 0) / (1024 * 1024), 2)
+        
+        conn.close()
+        return stats
+    
+    def cleanup_old_cache(self, days_old: int = 30) -> int:
+        """
+        Clean up cache entries older than specified days
+        
+        Returns:
+            Number of entries cleaned up
+        """
+        conn = sqlite3.connect(self.cache_db)
+        cursor = conn.cursor()
+        
+        # Find old entries
+        cursor.execute("""
+            SELECT cached_path FROM cache_entries 
+            WHERE last_accessed < datetime('now', '-{} days')
+        """.format(days_old))
+        
+        old_paths = cursor.fetchall()
+        
+        # Delete files
+        deleted_count = 0
+        for (path_str,) in old_paths:
+            try:
+                path = Path(path_str)
+                if path.exists():
+                    path.unlink()
+                    deleted_count += 1
+            except Exception as e:
+                print(f"Failed to delete {path_str}: {e}")
+        
+        # Remove from database
+        cursor.execute("""
+            DELETE FROM cache_entries 
+            WHERE last_accessed < datetime('now', '-{} days')
+        """.format(days_old))
+        
+        conn.commit()
+        conn.close()
+        
+        return deleted_count

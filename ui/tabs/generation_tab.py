@@ -1,3 +1,5 @@
+# ui/tabs/generation_tab.py - REPLACE the entire class with proper lazy loading
+
 """
 Generation Tab - Extracted from original app.py lines 2100-2250
 Shows Pokemon by generation with collection status
@@ -20,8 +22,9 @@ from data.models import PokemonData, CollectionItem
 from cache.image_loader import ImageLoader
 from ui.widgets.pokemon_card import PokemonCard
 
+
 class GenerationTab(QWidget):
-    """Generation tab with Bronze-Silver-Gold data integration"""
+    """Generation tab with tab-level lazy loading"""
     
     def __init__(self, gen_name, generation_num, db_manager, image_loader=None):
         super().__init__()
@@ -29,7 +32,12 @@ class GenerationTab(QWidget):
         self.generation_num = generation_num
         self.db_manager = db_manager
         self.image_loader = image_loader or ImageLoader()
-        self.pokemon_cards = []  # Keep track of pokemon cards for updates
+        self.pokemon_cards = []
+        
+        # ✅ LAZY LOADING STATE
+        self.is_loaded = False
+        self.is_visible = False
+        
         self.initUI()
     
     def initUI(self):
@@ -47,64 +55,99 @@ class GenerationTab(QWidget):
         # Refresh button
         refresh_button = QPushButton("Refresh")
         refresh_button.setToolTip("Refresh Pokemon data from database")
-        refresh_button.clicked.connect(self.refresh_data)
+        refresh_button.clicked.connect(self.force_refresh)
         header_layout.addWidget(refresh_button, 1)
         
         main_layout.addLayout(header_layout)
         
-        # Stats
-        self.stats_label = QLabel()
+        # Stats label
+        self.stats_label = QLabel("Loading generation data...")
         self.stats_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.stats_label.setStyleSheet("color: #bdc3c7;")
+        self.stats_label.setStyleSheet("color: white; font-size: 12px; padding: 10px;")
         main_layout.addWidget(self.stats_label)
-        
-        # Separator
-        line = QFrame()
-        line.setFrameShape(QFrame.Shape.HLine)
-        line.setFrameShadow(QFrame.Shadow.Sunken)
-        line.setStyleSheet("color: #34495e;")
-        main_layout.addWidget(line)
         
         # Scroll area for Pokemon grid
         self.scroll_area = QScrollArea()
         self.scroll_area.setWidgetResizable(True)
-        self.scroll_area.setStyleSheet("background-color: #2c3e50;")
-        
-        # Load initial data
-        self.refresh_data()
+        self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scroll_area.setStyleSheet("""
+            QScrollArea {
+                background-color: #2c3e50;
+                border: none;
+            }
+            QScrollBar:vertical {
+                background-color: #34495e;
+                width: 12px;
+                border-radius: 6px;
+            }
+            QScrollBar::handle:vertical {
+                background-color: #3498db;
+                border-radius: 6px;
+                min-height: 20px;
+            }
+        """)
         
         main_layout.addWidget(self.scroll_area)
         self.setLayout(main_layout)
-    
-    def refresh_data(self):
-        """Refresh Pokemon data from Gold layer"""
-        # Cancel any pending image loads before clearing
-        if hasattr(self, 'image_loader'):
-            # If we want to be extra safe, we could cancel all pending requests
-            # self.image_loader.cancel_all_requests()  # Uncomment if you add this method
-            pass
         
+        # ✅ DON'T LOAD DATA YET - wait for tab activation
+        self.show_loading_placeholder()
+    
+    def show_loading_placeholder(self):
+        """Show placeholder until tab is activated"""
+        placeholder_widget = QWidget()
+        placeholder_layout = QVBoxLayout(placeholder_widget)
+        
+        loading_label = QLabel(f"Ready to load {self.gen_name}")
+        loading_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        loading_label.setStyleSheet("""
+            color: #95a5a6; 
+            font-size: 18px; 
+            font-weight: bold;
+            padding: 50px;
+        """)
+        placeholder_layout.addWidget(loading_label)
+        
+        hint_label = QLabel("Images will load when you switch to this tab")
+        hint_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        hint_label.setStyleSheet("color: #7f8c8d; font-size: 12px;")
+        placeholder_layout.addWidget(hint_label)
+        
+        self.scroll_area.setWidget(placeholder_widget)
+        
+        # Update stats to show we're ready but not loaded
+        pokemon_data = self.db_manager.get_pokemon_by_generation(self.generation_num)
+        total_pokemon = len(pokemon_data)
+        self.stats_label.setText(f"Ready to load: {total_pokemon} Pokemon (click tab to load images)")
+    
+    def on_tab_activated(self):
+        """Called when this tab becomes visible - triggers loading"""
+        self.is_visible = True
+        
+        if not self.is_loaded:
+            print(f"📊 Loading {self.gen_name} images...")
+            self.load_generation_data()
+            self.is_loaded = True
+    
+    def on_tab_deactivated(self):
+        """Called when tab becomes hidden"""
+        self.is_visible = False
+    
+    def load_generation_data(self):
+        """Load all Pokemon data and images for this generation"""
         # Clear existing cards
         self.pokemon_cards.clear()
         
-        # Clear the scroll area widget to ensure old widgets are deleted
-        if self.scroll_area.widget():
-            self.scroll_area.widget().deleteLater()
-            QApplication.processEvents()  # Process deletion events
-        
-        # Get Pokemon for this generation
+        # Get data
         pokemon_data = self.db_manager.get_pokemon_by_generation(self.generation_num)
         user_collection = self.db_manager.get_user_collection()
         
         # Update stats
         total_pokemon = len(pokemon_data)
         imported_count = len([p for p in pokemon_data.keys() if p in user_collection])
-        
-        # Count Pokemon that have cards available
         pokemon_with_cards = len([p for p in pokemon_data.values() if p.get('card_count', 0) > 0])
         total_cards = sum(p.get('card_count', 0) for p in pokemon_data.values())
         
-        # Enhanced stats display
         self.stats_label.setText(
             f"Pokédex: {total_pokemon} | With TCG Cards: {pokemon_with_cards} | "
             f"Imported: {imported_count} | Total Available Cards: {total_cards}"
@@ -121,10 +164,8 @@ class GenerationTab(QWidget):
         for i in range(columns):
             grid_layout.setColumnStretch(i, 1)
         
-        # Add ALL Pokemon cards in Pokédex order
+        # ✅ AUTO-LOAD: Create Pokemon cards with immediate image loading
         row, col = 0, 0
-        
-        # Ensure we show Pokemon in correct Pokédex order
         sorted_pokemon = sorted(pokemon_data.items(), key=lambda x: int(x[0]))
         
         for pokemon_id, pokemon_info in sorted_pokemon:
@@ -132,12 +173,11 @@ class GenerationTab(QWidget):
                 pokemon_info, 
                 user_collection, 
                 self.image_loader,
-                self.db_manager
+                self.db_manager,
+                auto_load=True  # ✅ AUTO-LOAD when tab is active
             )
             
-            # Connect the import signal to refresh just the stats
             pokemon_card.cardImported.connect(self.on_card_imported)
-            
             self.pokemon_cards.append(pokemon_card)
             grid_layout.addWidget(pokemon_card, row, col, Qt.AlignmentFlag.AlignCenter)
             
@@ -146,7 +186,7 @@ class GenerationTab(QWidget):
                 col = 0
                 row += 1
         
-        # If no Pokemon found, show message
+        # Handle empty generation
         if not pokemon_data:
             no_data_widget = QWidget()
             no_data_layout = QVBoxLayout(no_data_widget)
@@ -164,9 +204,28 @@ class GenerationTab(QWidget):
             grid_layout.addWidget(no_data_widget, 0, 0, 1, columns)
         
         self.scroll_area.setWidget(grid_widget)
+        print(f"✅ {self.gen_name} loaded: {total_pokemon} Pokemon with automatic image loading")
+    
+    def force_refresh(self):
+        """Force refresh generation data"""
+        self.is_loaded = False
+        if self.is_visible:
+            self.load_generation_data()
+            self.is_loaded = True
+        else:
+            self.show_loading_placeholder()
+    
+    def refresh_data(self):
+        """Legacy method - now calls proper loading logic"""
+        if self.is_visible and not self.is_loaded:
+            self.load_generation_data()
+            self.is_loaded = True
     
     def on_card_imported(self, pokemon_id, card_id):
         """Handle card import to update stats without full refresh"""
+        if not self.is_loaded:
+            return
+            
         # Update just the stats
         pokemon_data = self.db_manager.get_pokemon_by_generation(self.generation_num)
         user_collection = self.db_manager.get_user_collection()
