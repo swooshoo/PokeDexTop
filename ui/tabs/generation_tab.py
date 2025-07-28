@@ -1,4 +1,4 @@
-# ui/tabs/generation_tab.py - REPLACE the entire class with proper lazy loading
+# ui/tabs/generation_tab.py - lazy loading viewport oriented NEEDS TO BE removed or updated. 
 
 """
 Generation Tab - Extracted from original app.py lines 2100-2250

@@ -7,7 +7,7 @@ import sys
 import sqlite3
 
 from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
-                            QTabWidget, QPushButton, QLabel, QApplication)
+                            QTabWidget, QPushButton, QLabel, QApplication, QProgressDialog)
 from PyQt6.QtCore import QTimer
 
 from config.settings import DARK_THEME_STYLE
@@ -18,7 +18,8 @@ from core.session import SessionCartManager
 
 from ui.tabs.browse_tab import EnhancedBrowseTCGTab
 from ui.tabs.analytics_tab import EnhancedAnalyticsTab
-from ui.tabs.analytics_tab import GenerationTab
+from ui.tabs.preload_generation_tab import PreloadGenerationTab
+from ui.dialogs.generation_loading_dialog import GenerationLoadingDialog
 from ui.dialogs.sync_dialog import DataSyncDialog
 
 class PokemonDashboard(QMainWindow):
@@ -46,6 +47,10 @@ class PokemonDashboard(QMainWindow):
         
         # Set up auto-refresh
         self.setup_auto_refresh()
+        
+        # Add these new attributes for preload system
+        self.generation_tabs = {}
+        self.loading_dialogs = {}
     
     def load_generations(self):
         """Load generation data from database"""
@@ -139,7 +144,7 @@ class PokemonDashboard(QMainWindow):
         self.gen_tabs = QTabWidget()
         
         for generation, gen_name in self.generations:
-            gen_tab = GenerationTab(
+            gen_tab = PreloadGenerationTab(
                 gen_name, 
                 generation, 
                 self.db_manager, 
@@ -173,23 +178,101 @@ class PokemonDashboard(QMainWindow):
         self.main_tabs.addTab(analytics_tab, "📊 Analytics")
     
     def on_generation_tab_changed(self, index):
-        """Handle generation tab changes - trigger lazy loading"""
-        if index < 0:
+        """Handle generation tab changes with loading dialog"""
+        if index < 0 or index >= len(self.generations):
             return
-            
-        # Deactivate previous tab
-        for i in range(self.gen_tabs.count()):
-            if i != index:
-                tab = self.gen_tabs.widget(i)
-                if hasattr(tab, 'on_tab_deactivated'):
-                    tab.on_tab_deactivated()
         
-        # Activate current tab
-        current_tab = self.gen_tabs.widget(index)
-        if hasattr(current_tab, 'on_tab_activated'):
-            current_tab.on_tab_activated()
+        generation, gen_name = self.generations[index]
+        gen_tab = self.generation_tabs.get(generation)
+        
+        if not gen_tab:
+            return
+        
+        print(f"🔄 Switching to {gen_name} (Generation {generation})")
+        
+        # If tab is already loaded, no need for loading dialog
+        if gen_tab.is_loaded:
+            print(f"✅ {gen_name} already loaded - instant switch!")
+            return
+        
+        # If tab is currently loading, show existing dialog
+        if gen_tab.is_loading:
+            existing_dialog = self.loading_dialogs.get(generation)
+            if existing_dialog and existing_dialog.isVisible():
+                existing_dialog.raise_()
+                existing_dialog.activateWindow()
+            return
+        
+        # Show loading dialog for unloaded tab
+        self.show_generation_loading_dialog(generation, gen_name, gen_tab)
+    
+    def show_generation_loading_dialog(self, generation: int, gen_name: str, gen_tab):
+        """Show loading dialog for generation preloading"""
+        
+        # Count Pokemon for progress tracking
+        try:
+            pokemon_data = self.db_manager.get_pokemon_by_generation(generation)
+            total_cards = len(pokemon_data)
             
-        print(f"📊 Switched to generation tab: {current_tab.gen_name}")
+            if total_cards == 0:
+                # No cards to load
+                return
+            
+            print(f"📊 {gen_name} has {total_cards} Pokemon to preload")
+            
+            # Create loading dialog
+            loading_dialog = GenerationLoadingDialog(gen_name, total_cards, self)
+            self.loading_dialogs[generation] = loading_dialog
+            
+            # Connect tab signals to dialog
+            if hasattr(gen_tab, 'preloader'):
+                preloader = gen_tab.preloader
+                if preloader:
+                    preloader.progressUpdate.connect(loading_dialog.update_progress)
+                    preloader.preloadComplete.connect(loading_dialog.set_completed)
+                    preloader.preloadError.connect(loading_dialog.set_error)
+            
+            # Connect dialog cancel to tab
+            loading_dialog.cancelled.connect(lambda: self.cancel_generation_loading(generation))
+            
+            # Show dialog
+            loading_dialog.show()
+            
+            # Start preloading if not already started
+            if not gen_tab.is_loading:
+                gen_tab.start_preloading()
+            
+        except Exception as e:
+            print(f"❌ Error showing loading dialog for {gen_name}: {e}")
+            # Show simple loading dialog as fallback
+            simple_dialog = QProgressDialog(
+                f"Loading {gen_name}", 
+                "Preparing Pokemon cards...", 
+                self
+            )
+            simple_dialog.show()
+            simple_dialog.auto_close(3000)
+
+
+    def cancel_generation_loading(self, generation: int):
+        """Cancel generation loading"""
+        gen_tab = self.generation_tabs.get(generation)
+        if gen_tab:
+            gen_tab.stop_preloading()
+            print(f"⏹️  Cancelled loading for Generation {generation}")
+        
+        # Clean up loading dialog
+        loading_dialog = self.loading_dialogs.pop(generation, None)
+        if loading_dialog:
+            loading_dialog.deleteLater()
+
+
+    def cleanup_loading_dialogs(self):
+        """Clean up any remaining loading dialogs"""
+        for dialog in self.loading_dialogs.values():
+            if dialog and dialog.isVisible():
+                dialog.close()
+        self.loading_dialogs.clear()
     
     def setup_auto_refresh(self):
         """Set up auto-refresh timer for status updates"""
@@ -295,3 +378,44 @@ class PokemonDashboard(QMainWindow):
         
         # Accept the close event
         event.accept()
+        
+    def closeEvent(self, event):
+        """Handle application closing"""
+        # Stop any ongoing preloading
+        for gen_tab in self.generation_tabs.values():
+            if gen_tab and gen_tab.is_loading:
+                gen_tab.stop_preloading()
+        
+        # Clean up loading dialogs
+        self.cleanup_loading_dialogs()
+        
+        # Call parent close event
+        super().closeEvent(event)
+        
+    def update_status_bar(self):
+        """Update status bar with current stats (ENHANCED)"""
+        try:
+            # Get basic stats
+            total_pokemon = len(self.db_manager.get_all_pokemon())
+            user_collection = self.db_manager.get_user_collection()
+            imported_count = len(user_collection)
+            
+            # Check for any ongoing preloading
+            loading_generations = []
+            for gen, tab in self.generation_tabs.items():
+                if tab and tab.is_loading:
+                    loading_generations.append(f"Gen {gen}")
+            
+            status_text = (
+                f"Ready | Total Pokémon: {total_pokemon} | "
+                f"Imported Cards: {imported_count} | "
+                f"Bronze-Silver-Gold Active"
+            )
+            
+            if loading_generations:
+                status_text += f" | Loading: {', '.join(loading_generations)}"
+            
+            self.statusBar().showMessage(status_text)
+            
+        except Exception as e:
+            self.statusBar().showMessage(f"Status Update Error: {e}")
