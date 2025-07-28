@@ -4,6 +4,8 @@ Extracted and cleaned from the monolithic app.py
 """
 
 import sys
+import sqlite3
+
 from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                             QTabWidget, QPushButton, QLabel, QApplication)
 from PyQt6.QtCore import QTimer
@@ -13,9 +15,10 @@ from data.database import DatabaseManager
 from cache.manager import CacheManager
 from cache.image_loader import ImageLoader
 from core.session import SessionCartManager
-from ui.tabs.generation_tab import GenerationTab
+
 from ui.tabs.browse_tab import EnhancedBrowseTCGTab
 from ui.tabs.analytics_tab import EnhancedAnalyticsTab
+from ui.tabs.analytics_tab import GenerationTab
 from ui.dialogs.sync_dialog import DataSyncDialog
 
 class PokemonDashboard(QMainWindow):
@@ -142,19 +145,11 @@ class PokemonDashboard(QMainWindow):
                 self.db_manager, 
                 self.image_loader
             )
+            
             self.gen_tabs.addTab(gen_tab, f"Gen {generation}")
-        
-        # ✅ ADD: Connect tab change event for lazy loading
-        self.gen_tabs.currentChanged.connect(self.on_generation_tab_changed)
         
         pokedex_layout.addWidget(self.gen_tabs)
         self.main_tabs.addTab(pokedex_tab, "📚 My Pokédex")
-        
-        # ✅ ADD: Load first tab when pokédex is first opened
-        if self.gen_tabs.count() > 0:
-            first_tab = self.gen_tabs.widget(0)
-            if hasattr(first_tab, 'on_tab_activated'):
-                first_tab.on_tab_activated()
     
     def create_tcg_browse_tab(self):
         """Create the TCG browsing tab"""
@@ -216,12 +211,11 @@ class PokemonDashboard(QMainWindow):
                 analytics_tab.mark_stats_dirty()
     
     def refresh_all_tabs(self):
-        """Refresh all generation tabs and other content"""
-        # Refresh Pokédex generation tabs
+        """Refresh all generation tabs"""
         for i in range(self.gen_tabs.count()):
-            gen_tab = self.gen_tabs.widget(i)
-            if hasattr(gen_tab, 'refresh_data'):
-                gen_tab.refresh_data()
+            tab = self.gen_tabs.widget(i)
+            if hasattr(tab, 'refresh_data'):
+                tab.refresh_data()
     
     def get_analytics_tab(self):
         """Get reference to analytics tab widget"""
@@ -240,6 +234,9 @@ class PokemonDashboard(QMainWindow):
     def on_main_tab_changed(self, index):
         """Handle main tab changes - auto-refresh Pokédex when switching back"""
         # Index 0 is the "My Pokédex" tab
+        tab_name = self.main_tabs.tabText(index)
+        self.statusBar().showMessage(f"Viewing: {tab_name}")
+
         if index == 0:
             # If switching to pokédex tab, activate current generation tab
             if hasattr(self, 'gen_tabs') and self.gen_tabs.count() > 0:
@@ -260,40 +257,23 @@ class PokemonDashboard(QMainWindow):
                     print("📊 Auto-refreshed Analytics after tab switch")
                 else:
                     print("📊 Analytics cache still valid")
+                    
     def update_status_bar(self):
-        """Update the status bar with current statistics"""
-        import sqlite3
-        
-        conn = sqlite3.connect(self.db_manager.db_path)
-        cursor = conn.cursor()
-        
-        # Get counts
-        cursor.execute("SELECT COUNT(*) FROM silver_pokemon_master")
-        pokemon_count = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM silver_tcg_cards")
-        card_count = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM gold_user_collections")
-        imported_count = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(DISTINCT set_id) FROM silver_tcg_sets")
-        set_count = cursor.fetchone()[0]
-        
-        conn.close()
-        
-        # Update displays
-        status_text = f"Pokemon: {pokemon_count} | Cards: {card_count} | Sets: {set_count} | Imported: {imported_count}"
-        
-        # Update status bar
-        if not hasattr(self, '_status_bar_initialized'):
-            self.statusBar().showMessage(status_text)
-            self._status_bar_initialized = True
-        else:
-            self.statusBar().showMessage(status_text)
-        
-        # Update toolbar stats
-        self.stats_label.setText(status_text)
+        """Update status bar with current stats"""
+        try:
+            # Get basic stats
+            total_pokemon = len(self.db_manager.get_all_pokemon())
+            user_collection = self.db_manager.get_user_collection()
+            imported_count = len(user_collection)
+            
+            self.statusBar().showMessage(
+                f"Ready | Total Pokémon: {total_pokemon} | "
+                f"Imported Cards: {imported_count} | "
+                f"Bronze-Silver-Gold Active"
+            )
+        except Exception as e:
+            self.statusBar().showMessage(f"Status Update Error: {e}")
+
     
     def get_cache_stats(self):
         """Get cache statistics for display"""
